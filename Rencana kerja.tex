@@ -26,9 +26,9 @@
 \author{\nama \textendash \@npm} 
 
 %tulis nama dan NPM anda di sini:
-\newcommand{\nama}{Lionov}
-\newcommand{\@npm}{1997730020}
-\newcommand{\@judultopik}{Simulasi Kerumunan di Museum} % Judul/topik anda
+\newcommand{\nama}{Vanessa Sukamto}
+\newcommand{\@npm}{2014730010}
+\newcommand{\@judultopik}{Simulator Pertumbuhan Wirausaha Berbasis Cellular Automata} % Judul/topik anda
 \newcommand{\jumpemb}{1} % Jumlah pembimbing, 1 atau 2
 \newcommand{\tanggal}{01/01/1900}
 
@@ -42,79 +42,58 @@
 Pada saat ini, lapangan kerja pada suatu negara tidak bisa kita prediksi, tetapi kenyataan yang kita ketahui adalah lapangan kerja dari tahun ke tahun semakin terbatas. Dengan melihat situasi tersebut maka bisa dipastikan tingkat pengangguran di suatu negara akan semakin tinggi. Solusi terbaik untuk mengurangi permasalahan tersebut adalah dengan berwirausaha. Kewirausahaan adalah kemampuan seseorang untuk membuat suatu usaha yang dimulai dari 0 atau dimulai dari bawah yang dirintis hingga usaha tersebut benar-benar sukses. Tentu saja hal ini memberikan pengaruh positif terhadap pertumbuhan ekonomi suatu negara, karena kewirausahaan juga sekaligus membuka lapangan kerja bagi masyarakat lainnya.
 
  
-Pada jaman sekarang, sudah banyak sekali orang yang lebih memilih untuk berwirausaha daripada bekerja di kantor atau di sebuah perusahaan. Seperti di Indonesia contohnya, Indonesia memiliki kemampuan yang tinggi untuk memulai bisnis baru. Alasan mengapa banyak orang lebih memilih berwirausaha pun bervariasi contohnya orang tersebut tidak terlalu menyukai waktu kerjanya diatur oleh orang lain melainkan ia lebih menyukai waktu kerjanya diatur oleh dirinya sendiri. Tidak hanya pada jaman sekarang, dari jaman dahulu juga sudah ada wirausaha yang namanya tidak asing lagi didengar oleh telinga kita salah satunya yaitu Bob Sadino.
+Pada jaman sekarang, sudah banyak sekali orang yang lebih memilih untuk berwirausaha daripada bekerja di kantor atau di sebuah perusahaan.  Alasan mengapa banyak orang lebih memilih berwirausaha pun bervariasi contohnya orang tersebut tidak terlalu menyukai waktu kerjanya diatur oleh orang lain melainkan ia lebih menyukai waktu kerjanya diatur oleh dirinya sendiri. Tidak hanya pada jaman sekarang, dari jaman dahulu juga sudah ada wirausaha yang namanya tidak asing lagi didengar oleh telinga kita salah satunya yaitu Bob Sadino. Untuk menjadi sukses seperti Bob Sadino dibutuhkan proses untuk meraih usaha tersebut yang tentunya mengalami jatuh-bangun, sehingga keuletan dan semangat juang yang tinggi sangat diperlukan dalam berwirausaha.Akan tetapi, usaha yang sudah sukses juga harus terus dijaga kekonsistenannya. Jika tidak dijaga, usaha tersebut akan mengalami kebangkrutan. Selain itu, kebangkrutan juga bisa disebabkan oleh banyak faktor, baik yang berasal dari dalam maupun luar.
 
 
-Kesuksesan dalam berwirausaha juga dapat dilihat dari usaha yang sudah dilakukan. Proses untuk meraih usaha tersebut tentunya mengalami jatuh-bangun, sehingga keuletan dan semangat juang yang tinggi sangat diperlukan dalam berwirausaha. Akan tetapi, usaha yang sudah sukses juga harus terus dijaga kekonsistenannya. Jika tidak dijaga, usaha tersebut akan mengalami kebangkrutan. 
+Kondisi wirausaha perlu dipantau terus-menerus perkembangannya. Pemantauan ini dilakukan oleh lembaga-lembaga swasta yang berkepentingan. Salah satu lembaga yang memantau adalah GEM (Global Entrepreneurship Monitor). GEM merupakan konsorsium yang bertujuan untuk mengukur dan memantau kegiatan kewirausahaan. Selain pemantauan terhadap kondisi riil, salah satu kegiatan yang mendukung pemantauan adalah pengamatan secara tidak langsung. Melalui \textit{Cellular Automata} (CA) ini dapat dikembangkan sebuah model untuk mempelajari perilaku dari wirausaha dan berbagai faktor yang mempengaruhi pertumbuhan kewirausahaan. Selain menggunakan \textit{Cellular Automata} , digunakan juga parameter yang digunakan untuk membangun model yaitu indikator fase kewirausahaan dari GEM. Demikian juga untuk data uji akan digunakan data yang disediakan oleh GEM. 
 
-
-Melalui \textit{Cellular Automata} (CA) ini dapat dibuat sebuah model untuk mengetahui hubungan antara berbagai faktor yang mempengaruhi pertumbuhan kewirausahaan di suatu negara. Selain menggunakan \textit{Cellular Automata} , digunakan juga parameter yang digunakan untuk membangun model yaitu indikator fase kewirausahaan dari GEM (Global Entrepreneurship Monitor). Demikian juga untuk data uji akan digunakan data yang disediakan oleh GEM. 
-
-
-\textit{Cellular Automata} (CA) menurut John von Neumann merupakan sistem dinamis diskrit yang memodelkan perilaku kompleks berdasarkan peraturan lokal sederhana yang menggerakkan sel pada kisi. Sebuah CA terdiri atas sekumpulan sel, tersusun dalam larik-larik (\textit{grid}). Setiap sel mempunyai satu dari sejumlah \textit{state} (kondisi) yang mungkin. \textit{State} dapat berubah menurut aturan tertentu. Perubahan \textit{state} dari sebuah sel dipengaruhi oleh \textit{state} dari sel-sel disekitarnya atau bisa disebut dengan sel tetangga. \textit{Cellular Automata} yang akan digunakan pada penelitian ini adalah CA multi dimensi.
 
 \section{Rumusan Masalah}
 \begin{itemize}
 	\item Faktor apa saja yang mempengaruhi keberlangsungan wirausaha?
-	\item Informasi apa saja yang disediakan oleh GEM yang berguna dalam pengembangan model pertumbuhan wirausaha?
 	\item Bagaimana memodelkan pertumbuhan wirausaha dengan \textit{cellular automata}?
 \end{itemize}
 
 \section{Tujuan}
 \begin{itemize}
 	\item Mempelajari faktor yang berpengaruh pada keberlangsungan wirausaha.
-	\item Mempelajari informasi yang disediakan oleh GEM, khususnya yang berhubungan dengan pertumbuhan wirausaha.
 	\item Mengembangkan model keberlangsungan wirausaha dengan \textit{cellular automata}.
 \end{itemize}
 
 \section{Deskripsi Perangkat Lunak}
 Perangkat lunak akhir yang akan dibuat memiliki fitur minimal sebagai berikut:
 \begin{itemize}
-	\item Pengguna dapat melihat pertumbuhan wirausaha dari waktu ke waktu.
-		
+	\item Pengguna dapat memasukkan masukkan (\textit{input}) berupa data dari GEM.
+	\item Pengguna dapat melihat hasil keluaran (\textit{output}) yang dihasilkan setelah memasukkan (\textit{input}) masukkan.
+  \item PL dapat menerima data dari GEM.
+	\item PL dapat menampilkan hasil keluaran (\textit{output}) berupa grafik pertumbuhan wirausaha.
 \end{itemize}
 
 \section{Detail Pengerjaan Skripsi}
 Bagian-bagian pekerjaan skripsi ini adalah sebagai berikut :
 	\begin{enumerate}
 		\item Mempelajari kewirausahaan secara umum.
-		\item Mempelajari GEM
-		\item Membaca laporan akhir ECA
-		\item Mempelajari teori tentang\textit{Cellular Automata}
-		\item Mempelajari aplikasi \textit{Cellular Automata}
-		\item Mengembangkan model pertumbuhan wirausaha dengan\textit{Cellular Automata}
-		\item Mengembangkan perangkat lunak yang mengimplementasikan model \textit{Cellular Automata} yang telah didefinisikan
-		\item Menguji perangkat lunak menggunakan data dari GEM
+		\item Mempelajari GEM.
+		\item Membaca laporan akhir ECA.
+		\item Mempelajari teori tentang\textit{Cellular Automata}.
+		\item Mempelajari aplikasi \textit{Cellular Automata}.
+		\item Mengembangkan model pertumbuhan wirausaha dengan\textit{Cellular Automata}.
+		\item Mengembangkan perangkat lunak yang mengimplementasikan model \textit{Cellular Automata} yang telah didefinisikan.
+		\item Menguji perangkat lunak menggunakan data dari GEM.
 		\item Mengambil kesimpulan tentang model yang telah dikembangkan.
+		\item Menulis dokumen skripsi.
 	\end{enumerate}
 
 \section{Rencana Kerja}
-Tuliskan rencana anda untuk menyelesaikan skripsi. Rencana kerja dibagi menjadi dua bagian yaitu yang akan dilakukan pada saat mengambil kuliah AIF401 Skripsi 1 dan pada saat mengambil kuliah AIF402 Skripsi 2. Perhatikan contoh berikut ini :
+Rincian capaian yang direncanakan di Skripsi 1 adalah sebagai berikut:
+\begin{enumerate}
+	\item
+\end{enumerate}
+Sedangkan yang akan diselesaikan di Skripsi 2 adalah sebagai berikut:
+\begin{enumerate}
+	\item
+\end{enumerate}
 
-
-\begin{center}
-  \begin{tabular}{ | c | c | c | c | l |}
-    \hline
-    1*  & 2*(\%) & 3*(\%) & 4*(\%) &5*\\ \hline \hline
-    1   & 5  & 5  &  &  \\ \hline
-    2   & 5 & 5  &   & \\ \hline
-    3   & 10  & 7  & 3 & {\footnotesize sebagian kecil teknik {\it flow tiles} di S2}  \\ \hline
-    4   & 15  & 10  &  5 & {\footnotesize teknik lanjut OOP di C++ di S2} \\ \hline
-    5   & 20  & 5  & 15 & {\footnotesize perancangan awal SFM, pathway dan waypoint di S1} \\ \hline
-    6   & 5 &   & 5  & \\ \hline
-    7   & 20  & 5  & 15 &  {\footnotesize implementasi denah dan rancangan awal SFM di S1}\\ \hline
-    8   & 5  &   &  5  & \\ \hline
-    9   & 15  & 3  & 12  & {\footnotesize sebagian Bab 1 dan 2, serta bagian awal analisis di S1}\\ \hline
-    Total  & 100  & 40  & 60 &  \\ \hline
-                          \end{tabular}
-\end{center}
-
-Keterangan (*)\\
-1 : Bagian pengerjaan Skripsi (nomor disesuaikan dengan detail pengerjaan di bagian 5)\\
-2 : Persentase total \\
-3 : Persentase yang akan diselesaikan di Skripsi 1 \\
-4 : Persentase yang akan diselesaikan di Skripsi 2 \\
-5 : Penjelasan singkat apa yang dilakukan di S1 (Skripsi 1) atau S2 (Skripsi 2)
 
 \vspace{1cm}
 \centering Bandung, \tanggal\\
