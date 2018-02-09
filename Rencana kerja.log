@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  5 FEB 2018 11:45
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  9 FEB 2018 14:04
 entering extended mode
 **Rencana*kerja.tex
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Rencana kerja.tex"
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Rencana kerja.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -143,7 +143,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks17
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-No file Rencana*kerja.aux.
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Rencana kerja.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
@@ -156,6 +156,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
+
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count96
@@ -204,12 +205,12 @@ LaTeX Font Info:    ... okay on input line 23.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 55.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 53.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
 
 Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 
@@ -221,37 +222,30 @@ Overfull \vbox (6.4151pt too high) has occurred while \output is active []
 
 
 [2]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 104.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 104.
-
 Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 
 
-[3] ("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Rencana kerja.aux") ) 
+[3] ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Rencana kerja.aux") ) 
 Here is how much of TeX's memory you used:
- 2827 strings out of 493921
- 35894 string characters out of 3147276
- 201524 words of memory out of 3000000
- 6100 multiletter control sequences out of 15000+200000
- 14884 words of font info for 29 fonts, out of 3000000 for 9000
+ 2823 strings out of 493921
+ 35930 string characters out of 3147276
+ 200524 words of memory out of 3000000
+ 6096 multiletter control sequences out of 15000+200000
+ 13434 words of font info for 27 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,7n,19p,850b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Vanessa\A
-ppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk> <C:\Use
-rs\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800
-.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
-600\ecti1000.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
-appen\ec\dpi600\ecbx1440.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\p
-k\ljfour\jknappen\ec\dpi600\ecxc1200.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1728.pk> <C:\Users\Vanessa\AppData\
-Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Vane
-ssa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1000.pk><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Rencana kerja.pdf" (3 pages, 88159 bytes).
+ 27i,5n,19p,1013b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Vanessa\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Us
+ers\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx144
+0.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
+i600\ecxc1200.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecxc1728.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Vanessa\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1000.pk><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Rencana kerja.pdf" (3 pages, 73879 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
+ 208 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
