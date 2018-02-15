@@ -16,7 +16,7 @@
 \makeatletter
 \renewcommand{\@maketitle} {\begin{center} {\LARGE \textbf{ \textsc{\@title}} \par} \bigskip {\large \textbf{\textsc{\@author}} }\end{center} }
 \renewcommand{\thispagestyle}[1]{}
-\markright{\textbf{\textsc{AIF401/AIF402 \textemdash Rencana Kerja Skripsi \textemdash Sem. Genap 2016/2017}}}
+\markright{\textbf{\textsc{AIF401/AIF402 \textemdash Rencana Kerja Skripsi \textemdash Sem. Genap 2017/2018}}}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.4mm}}
 \renewcommand{\baselinestretch}{1}
@@ -35,7 +35,7 @@
 \newcommand{\@npm}{2014730010}
 \newcommand{\@judultopik}{Simulator Pertumbuhan Wirausaha Berbasis Cellular Automata} % Judul/topik anda
 \newcommand{\jumpemb}{1} % Jumlah pembimbing, 1 atau 2
-\newcommand{\tanggal}{01/01/1900}
+\newcommand{\tanggal}{14/02/2018}
 
 % Dokumen hasil template ini harus dicetak bolak-balik !!!!
 
@@ -44,16 +44,26 @@
 \pagenumbering{arabic}
 
 \section{Deskripsi}
-Pada saat ini, lapangan kerja pada suatu negara tidak bisa kita prediksi, tetapi kenyataan yang kita ketahui adalah lapangan kerja dari tahun ke tahun semakin terbatas. Dengan melihat situasi tersebut maka bisa dipastikan tingkat pengangguran di suatu negara akan semakin tinggi. Solusi terbaik untuk mengurangi permasalahan tersebut adalah dengan berwirausaha. Wirausaha adalah kemampuan seseorang untuk membuat suatu usaha yang dimulai dari 0 atau dimulai dari bawah yang dirintis hingga usaha tersebut benar-benar sukses. Tentu saja hal ini memberikan pengaruh positif terhadap pertumbuhan ekonomi suatu negara, karena kewirausahaan juga sekaligus membuka lapangan kerja bagi masyarakat lainnya.
-
- 
-Pada jaman sekarang, sudah banyak sekali orang yang lebih memilih untuk berwirausaha daripada bekerja di kantor atau di sebuah perusahaan.  Alasan mengapa banyak orang lebih memilih berwirausaha pun bervariasi contohnya orang tersebut tidak terlalu menyukai waktu kerjanya diatur oleh orang lain melainkan ia lebih menyukai waktu kerjanya diatur oleh dirinya sendiri. Tidak hanya pada jaman sekarang, dari jaman dahulu juga sudah ada wirausaha yang namanya tidak asing lagi didengar oleh telinga kita salah satunya yaitu Bob Sadino. Untuk menjadi sukses seperti Bob Sadino dibutuhkan proses untuk meraih usaha tersebut yang tentunya mengalami jatuh-bangun, sehingga keuletan dan semangat juang yang tinggi sangat diperlukan dalam berwirausaha. Akan tetapi, usaha yang sudah sukses juga harus terus dijaga kekonsistenannya. Jika tidak dijaga, usaha tersebut akan mengalami kebangkrutan. Selain itu, kebangkrutan juga bisa disebabkan oleh banyak faktor, baik yang berasal dari dalam maupun luar.
+Pada jaman sekarang, sudah banyak sekali orang yang lebih memilih untuk berwirausaha daripada bekerja di kantor atau di sebuah perusahaan.  Alasan mengapa banyak orang lebih memilih berwirausaha pun bervariasi salah satu contohnya yaitu orang tersebut tidak terlalu menyukai waktu kerjanya diatur oleh orang lain melainkan ia lebih menyukai waktu kerjanya diatur oleh dirinya sendiri. Wirausaha merupakan kemampuan seseorang untuk membuat suatu usaha yang dimulai dari 0 atau dimulai dari bawah yang dirintis hingga usaha tersebut benar-benar sukses. Proses dalam berwirausaha tentunya tidak akan berjalan dengan mulus, pasti ada beberapa faktor baik faktor dari luar maupun dalam yang mempengaruhi keberlangsungan wirausaha.
 
 
-Kewirausahaan sangat diperlukan gu
+Kewirausahaan sangat diperlukan guna mendorong perekonomian suatu negara karena dapat mengurangi tingkat pengangguran di Indonesia.  Ideal besarnya populasi wirausaha dalam suatu negara adalah 2\% dari total penduduk suatu negara. Saat ini Indonesia baru mencapai 1,5\% pengusaha dari total penduduk. Maka dari itu, kondisi wirausaha ini perlu dipantau terus-menerus perkembangannya agar dapat memajukan perekonomian di Indonesia. Pemantauan ini dilakukan oleh pemerintah dan lembaga-lembaga swasta yang berkepentingan. Salah satu lembaga yang memantau adalah GEM (Global Entrepreneurship Monitor). GEM merupakan konsorsium yang bertujuan untuk mengukur dan memantau kegiatan kewirausahaan. 
+
+Selain pemantauan terhadap kondisi riil, salah satu kegiatan yang mendukung pemantauan adalah pengamatan secara tidak langsung. Salah satu pengamatan tidak langsung adalah dengan membuat model matematika dari pertumbuhan wirausaha dan kemudian melakukan simulasi terhadap model tersebut. Salah satu model matematika yang dapat digunakan untuk memodelkan pertumbuhan wirausaha adalah Entrepreneurial Cellular Automata (ECA) yang diusulkan oleh Nugraheni dan Natali \footnotemark. ECA adalah pengembangan dari Cellular Automata standar dari Ulam dan New Neuman. Pada \footnotemark[\value{footnote}
+] dijelaskan bagaimana struktur dari ECA dan diberikan illustrasi bagaimana menggunakan ECA untuk memprediksi pertumbuhan wirausaha berdasarkan parameter wirausaha dari GEM. 
 
 
-Kondisi wirausaha perlu dipantau terus-menerus perkembangannya. Pemantauan ini dilakukan oleh lembaga-lembaga swasta yang berkepentingan. Salah satu lembaga yang memantau adalah GEM (Global Entrepreneurship Monitor). GEM merupakan konsorsium yang bertujuan untuk mengukur dan memantau kegiatan kewirausahaan. Selain pemantauan terhadap kondisi riil, salah satu kegiatan yang mendukung pemantauan adalah pengamatan secara tidak langsung. Melalui \textit{Cellular Automata} (CA) ini dapat dikembangkan sebuah model untuk mempelajari perilaku dari wirausaha dan berbagai faktor yang mempengaruhi pertumbuhan kewirausahaan. Selain menggunakan \textit{Cellular Automata} , digunakan juga parameter yang digunakan untuk membangun model yaitu indikator fase kewirausahaan dari GEM. Demikian juga untuk data uji akan digunakan data yang disediakan oleh GEM. 
+Skripsi ini bertujuan untuk mengembangkan ECA dengan memperhitungkan beberapa parameter yang belum diperhatikan pada ECA dan mengembangkan perangkat lunak simulator yang dapat menampilkan visualisasi dari simulasi. Selain menambahkan parameter yang berhubungan dengan pertumbuhan wirausaha, pengembangan ini juga akan memperhatikan pertumbuhan penduduk. Di samping itu, simulasi pada data nyata juga perlu dilakukan untuk membuktikan kebenaran dari model yang dibuat.
+
+\footnotetext{Cecilia E. Nugraheni dan Vania Natali. Pengembangan Model Keberlangsungan Wirausaha Dengan Cellular Automata. Laporan Penelitian. Lembaga Penelitian dan Pengabdian Masyarakat UNPAR. 2017. }
+
+% Melalui \textit{Cellular Automata} (CA) ini dapat dikembangkan sebuah model untuk mempelajari perilaku dari wirausaha dan berbagai faktor yang mempengaruhi pertumbuhan kewirausahaan. Selain menggunakan \textit{Cellular Automata} , digunakan juga parameter yang digunakan untuk membangun model yaitu indikator fase kewirausahaan dari GEM. Demikian juga untuk data uji akan digunakan data yang disediakan oleh GEM. 
+
+
+%Selain menggunakan CA, terdapat juga pengembangan dari CA yaitu ECA (\textit{Entrepreneur Cellular Automata}) yang diusulkan oleh Ulam dan von Neumann. ECA ini mengusulkan CA untuk memantau pertumbuhan wirausaha suatu negara. Pengembangan meliputi ketetanggaan, fungsi transisi state dan fungsi transformasi ketetanggaan.  Pada ECA ini, digunakan atribut dinamis yaitu \textit{Continuity Index} yang digunakan untuk menentukan apakah seorang wirausaha pada suatu saat tertentu akan meneruskan usahanya pada waktu selanjutnya.
+
+
+%Pada saat ini, lapangan kerja pada suatu negara tidak bisa kita prediksi, tetapi kenyataan yang kita ketahui adalah lapangan kerja dari tahun ke tahun semakin terbatas. Melihat situasi tersebut maka bisa dipastikan tingkat pengangguran di suatu negara akan semakin tinggi. Solusi terbaik untuk mengurangi permasalahan tersebut adalah dengan berwirausaha. Wirausaha adalah kemampuan seseorang untuk membuat suatu usaha yang dimulai dari 0 atau dimulai dari bawah yang dirintis hingga usaha tersebut benar-benar sukses. Tentu saja hal ini memberikan pengaruh positif terhadap pertumbuhan ekonomi suatu negara, karena kewirausahaan juga sekaligus membuka lapangan kerja bagi masyarakat lainnya.
 
 
 \section{Rumusan Masalah}
@@ -73,7 +83,7 @@ Kondisi wirausaha perlu dipantau terus-menerus perkembangannya. Pemantauan ini d
 \section{Deskripsi Perangkat Lunak}
 Perangkat lunak akhir yang akan dibuat memiliki fitur minimal sebagai berikut:
 \begin{itemize}
-	\item Pengguna dapat memasukkan masukkan (\textit{input}) berupa parameter yang berhubungan dengan wirausaha.
+	\item Pengguna dapat memasukkan masukkan (\textit{input}) berupa parameter yang digunakan untuk mensimulasikan pertumbuhan wirausaha.
 	\item Pengguna dapat melihat hasil keluaran (\textit{output}) yang dihasilkan setelah memasukkan (\textit{input}) masukkan.
 \end{itemize}
 
@@ -81,10 +91,11 @@ Perangkat lunak akhir yang akan dibuat memiliki fitur minimal sebagai berikut:
 Bagian-bagian pekerjaan skripsi ini adalah sebagai berikut :
 	\begin{enumerate}
 		\item Mempelajari kewirausahaan secara umum khususnya GEM.
-		\item Mempelajari teori tentang \textit{Cellular Automata} melalui ECA.
-		\item Melakukan analisis model pertumbuhan wirausaha dengan \textit{Cellular Automata}.
-		\item Mengembangkan perangkat lunak yang mengimplementasikan model \textit{Cellular Automata} yang telah didefinisikan.
-		\item Menguji perangkat lunak dengan parameter yang berhubungan dengan kewirausahaan.
+		\item Mempelajari teori tentang \textit{Cellular Automata} yang khususnya \textit{Entrepreneur Cellular Automata} (ECA).
+		\item Melakukan analisis kebutuhan perangkat lunak.
+		\item Merancang perangkat lunak.
+		\item Mengimplementasikan perangkat lunak.
+		\item Menguji dan mensimulasikan perangkat lunak dengan parameter yang digunakan untuk mensimulasikan pertumbuhan wirausaha.
 		\item Mengambil kesimpulan tentang model yang telah dikembangkan.
 		\item Menulis dokumen skripsi.
 	\end{enumerate}
@@ -92,18 +103,18 @@ Bagian-bagian pekerjaan skripsi ini adalah sebagai berikut :
 \section{Rencana Kerja}
 Rincian capaian yang direncanakan di Skripsi 1 adalah sebagai berikut:
 \begin{enumerate}
-	\item Melakukan studi literatur.
+	\item Melakukan studi literatur tentang GEM (Global Entrepreneurship Monitor) dan ECA (Entrepreneur Cellular Automata).
 	\item Melakukan analisis model pertumbuhan wirausaha dengan \textit{cellular automata}.
-	\item Merancang perangkat lunak sebagian.
-	\item Menulis dokumen skripsi yaitu bab 1 dan bab 2
+	\item Menulis dokumen skripsi sampai bab 2.
 \end{enumerate}
 
 Sedangkan yang akan diselesaikan di Skripsi 2 adalah sebagai berikut:
 \begin{enumerate}
-	\item Melanjutkan perancangan perangkat lunak
-	\item Menguji perangkat lunak dengan menggunakan parameter
-	\item Mengambil kesimpulan tentang model yang telah dikembangkan
-	\item Melanjutkan menulis dokumen skripsi yaitu bab 3 sampai bab 6
+	\item Merancang perangkat lunak.
+	\item Mengimplementasikan perangkat lunak.
+	\item Menguji dan mensimulasikan perangkat lunak dengan parameter yang digunakan untuk mensimulasikan pertumbuhan wirausaha.
+	\item Mengambil kesimpulan tentang model yang telah dikembangkan.
+	\item Melanjutkan menulis dokumen skripsi sampai bab 6.
 \end{enumerate}
 
 \vspace{1cm}

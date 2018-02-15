@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  12 FEB 2018 19:35
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  13 FEB 2018 16:05
 entering extended mode
 **Rencana*Kerja*v44.tex
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Rencana Kerja v44.tex"
@@ -143,7 +143,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks17
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-No file Rencana*Kerja*v44.aux.
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Rencana Kerja v44.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
@@ -156,6 +156,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
+
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count96
@@ -204,18 +205,20 @@ LaTeX Font Info:    ... okay on input line 28.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-Overfull \hbox (0.26666pt too wide) in paragraph at lines 56--57
-[]\T1/cmr/m/n/10 Kondisi wi-ra-u-sa-ha per-lu di-pan-tau terus-menerus per-kem-
-ba-ngan-nya. Pe-man-ta-u-an ini di-la-kuk-an oleh lembaga-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 61.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 52.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 52.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 58.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 58.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 71.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
 
 Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 
@@ -232,25 +235,29 @@ Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 
 [3] ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Rencana Kerja v44.aux") ) 
 Here is how much of TeX's memory you used:
- 2822 strings out of 493921
- 35867 string characters out of 3147276
+ 2846 strings out of 493921
+ 36201 string characters out of 3147276
  200539 words of memory out of 3000000
- 6097 multiletter control sequences out of 15000+200000
- 13434 words of font info for 27 fonts, out of 3000000 for 9000
+ 6110 multiletter control sequences out of 15000+200000
+ 17555 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,4n,19p,1018b,256s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,7n,19p,803b,256s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Vane
-ssa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C
-:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
-x1440.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
-c\dpi600\ecxc1200.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecxc1728.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fo
-nts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Vanessa\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1000.pk><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Rencana Kerja v44.pdf" (3 pages, 74075 bytes).
+ssa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C
+:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecr
+m0600.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecti1000.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fo
+nts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Vanessa\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk> <C:\Users\Vanessa\App
+Data\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1728.pk> <C:\Users
+\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.p
+k> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecxc1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb>
+Output written on "Rencana Kerja v44.pdf" (3 pages, 88448 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
+ 260 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
