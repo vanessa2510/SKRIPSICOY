@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  1 FEB 2018 21:02
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  20 FEB 2018 20:34
 entering extended mode
 **skripsi.tex
 
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\skripsi.tex"
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\skripsi.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -555,8 +555,8 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 ))
 \@input{dosen.aux}
 
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\dosen.tex")
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\dosen.tex")
 Package hyperref Info: Option `unicode' set `true' on input line 199.
 Package hyperref Info: Option `colorlinks' set `true' on input line 199.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 207.
@@ -565,8 +565,8 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \@input{data.aux}
 
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\data.tex" ("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\data.tex" ("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen148
 \lightrulewidth=\dimen149
@@ -585,8 +585,7 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@thisruleclass=\count137
 \@lastruleclass=\count138
 \@thisrulewidth=\dimen160
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip98
 \LTright=\skip99
@@ -943,16 +942,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 198.
 
 )
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\skripsi.aux"
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Bab/bab1.aux")
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Bab/bab2.aux")
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Lampiran/lampA.aux")
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Lampiran/lampB.aux"))
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\skripsi.aux"
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Bab/bab1.aux")
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Bab/bab2.aux")
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Lampiran/lampA.aux")
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Lampiran/lampB.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 242.
 LaTeX Font Info:    ... okay on input line 242.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 242.
@@ -1033,10 +1032,10 @@ LaTeX Info: Redefining \ref on input line 242.
 LaTeX Info: Redefining \pageref on input line 242.
 LaTeX Info: Redefining \nameref on input line 242.
 
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\skripsi.out")
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\skripsi.out")
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\skripsi.out")
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\skripsi.out")
 \@outlinefile=\write5
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1057,7 +1056,7 @@ FTIS\skripsi.out")
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 
-<./Gambar/Logo-UNPAR.png, id=78, 180.31364pt x 177.42285pt>
+<./Gambar/Logo-UNPAR.png, id=90, 180.31364pt x 177.42285pt>
 File: ./Gambar/Logo-UNPAR.png Graphic file (type png)
 
 <use ./Gambar/Logo-UNPAR.png>
@@ -1070,8 +1069,8 @@ Package pdftex.def Info: ./Gambar/Logo-UNPAR.png used on input line 401.
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Vanessa/Data/SMT 8/SKR
-IPSI 1/Template Skripsi FTIS v12-0/Template Skripsi FTIS/Gambar/Logo-UNPAR.png>
-] [2
+IPSICOY/Template Skripsi FTIS v12-0/Template Skripsi FTIS/Gambar/Logo-UNPAR.png
+>] [2
 
 ]
 File: ./Gambar/Logo-UNPAR.png Graphic file (type png)
@@ -1142,8 +1141,8 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ] [16
 
 ]
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\skripsi.toc"
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\skripsi.toc"
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1154,31 +1153,39 @@ LaTeX Font Info:    Font shape `T1/lmr/bx/sc' in size <10.95> not available
  [17] [18
 
 ]
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\skripsi.lof")
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\skripsi.lof")
 \tf@lof=\write7
  [19] [20
 
 ]
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\skripsi.lot")
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\skripsi.lot")
 \tf@lot=\write8
  [21] [22
 
 ]
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Bab/bab1.tex"
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Bab/bab1.tex"
 Bab 1.
 [1
 
 
-])
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 23.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 23.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [2]
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Bab/bab2.tex"
+ [2]) [3]
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Bab/bab2.tex" [4
+
+
+
+]
 Bab 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 12.
@@ -1186,11 +1193,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 12.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 12.
-[3
-
-
-
-]
+[5]
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 100.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
@@ -1198,33 +1201,33 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 100.
- [4]
-<./Gambar/ular-png.png, id=278, 166.37157pt x 194.22563pt>
+ [6]
+<./Gambar/ular-png.png, id=316, 166.37157pt x 194.22563pt>
 File: ./Gambar/ular-png.png Graphic file (type png)
 
 <use ./Gambar/ular-png.png>
 Package pdftex.def Info: ./Gambar/ular-png.png used on input line 138.
 (pdftex.def)             Requested size: 166.37114pt x 194.22514pt.
- [5]
-<./Gambar/ular-jpg.jpg, id=294, 166.37157pt x 194.22563pt>
+ [7]
+<./Gambar/ular-jpg.jpg, id=332, 166.37157pt x 194.22563pt>
 File: ./Gambar/ular-jpg.jpg Graphic file (type jpg)
 
 <use ./Gambar/ular-jpg.jpg>
 Package pdftex.def Info: ./Gambar/ular-jpg.jpg used on input line 146.
 (pdftex.def)             Requested size: 83.18556pt x 97.11256pt.
- [6 <D:/Vanessa/Data/SMT 8/SKRIPSI 1/Template Skripsi FTIS v12-0/Template Skrip
-si FTIS/Gambar/ular-png.png> <D:/Vanessa/Data/SMT 8/SKRIPSI 1/Template Skripsi 
-FTIS v12-0/Template Skripsi FTIS/Gambar/ular-jpg.jpg>] <./Gambar/ular-pdf.pdf, 
-id=300, 166.35149pt x 194.20154pt>
+ [8 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
+psi FTIS/Gambar/ular-png.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skrips
+i FTIS v12-0/Template Skripsi FTIS/Gambar/ular-jpg.jpg>] <./Gambar/ular-pdf.pdf
+, id=338, 166.35149pt x 194.20154pt>
 File: ./Gambar/ular-pdf.pdf Graphic file (type pdf)
 
 <use ./Gambar/ular-pdf.pdf>
 Package pdftex.def Info: ./Gambar/ular-pdf.pdf used on input line 154.
 (pdftex.def)             Requested size: 166.35106pt x 194.20105pt.
-) [7 <D:/Vanessa/Data/SMT 8/SKRIPSI 1/Template Skripsi FTIS v12-0/Template Skri
-psi FTIS/Gambar/ular-pdf.pdf>]
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\skripsi.bbl" [8
+) [9 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skr
+ipsi FTIS/Gambar/ular-pdf.pdf>]
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\skripsi.bbl" [10
 
 
 ]
@@ -1237,9 +1240,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-[9]) [10]
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Lampiran/lampA.tex"
+[11]) [12]
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Lampiran/lampA.tex"
 Lampiran A.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1268,42 +1271,42 @@ LaTeX Font Warning: Font shape `OMS/fvm/m/n' undefined
 (Font)              for symbol `textasteriskcentered' on input line 25.
 
 
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Lampiran\MyCode.java"
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Lampiran\MyCode.java"
 
 LaTeX Font Warning: Font shape `OMS/fvm/m/it' undefined
 (Font)              using `OMS/fvm/m/n' instead
 (Font)              for symbol `textasteriskcentered' on input line 15.
 
-)) [11
+)) [13
 
 
 ]
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Lampiran/lampB.tex" [12
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Lampiran/lampB.tex" [14
 
 
 
 ]
 Lampiran B.
-) [13]
+) [15]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
 
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\skripsi.aux"
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Bab/bab1.aux")
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Bab/bab2.aux")
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Lampiran/lampA.aux")
-("D:\Vanessa\Data\SMT 8\SKRIPSI 1\Template Skripsi FTIS v12-0\Template Skripsi 
-FTIS\Lampiran/lampB.aux"))
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\skripsi.aux"
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Bab/bab1.aux")
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Bab/bab2.aux")
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Lampiran/lampA.aux")
+("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
+ FTIS\Lampiran/lampB.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
 Package rerunfilecheck Info: File `skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: D176608F5B7F4286F9F902462859FC6F;2017.
+(rerunfilecheck)             Checksum: 6569DE88B3F2B877C153E88383E3040E;2426.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1311,34 +1314,38 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
  ) 
 Here is how much of TeX's memory you used:
- 35172 strings out of 493921
- 772142 string characters out of 3147276
- 1308802 words of memory out of 3000000
- 37535 multiletter control sequences out of 15000+200000
- 87343 words of font info for 142 fonts, out of 3000000 for 9000
+ 35234 strings out of 493921
+ 772933 string characters out of 3147276
+ 1308991 words of memory out of 3000000
+ 37567 multiletter control sequences out of 15000+200000
+ 98349 words of font info for 155 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 78i,14n,130p,944b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
-es/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files/MiKTeX 2.9/font
-s/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.
-enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc} <C:\Users\Va
-nessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/bera/fvmb8a.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/bera/fvmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/bera/fvmro8a.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/lm/lmtt10.pfb>
-Output written on skripsi.pdf (35 pages, 703735 bytes).
+ 78i,14n,130p,1052b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
+st, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files
+/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files/MiKTeX 2.9/fonts/
+enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
+c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc} <C:\Users\Vane
+ssa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/bera/fvmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/bera/fvmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/bera/fvmro8a.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
+mtt10.pfb>
+Output written on skripsi.pdf (37 pages, 740627 bytes).
 PDF statistics:
- 531 PDF objects out of 1000 (max. 8388607)
- 148 named destinations out of 1000 (max. 500000)
- 27825 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 577 PDF objects out of 1000 (max. 8388607)
+ 165 named destinations out of 1000 (max. 500000)
+ 32457 words of extra memory for PDF output out of 35830 (max. 10000000)
 

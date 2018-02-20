@@ -8,13 +8,23 @@
 Pada saat ini, lapangan kerja pada suatu negara tidak bisa kita prediksi, tetapi kenyataan yang kita ketahui adalah lapangan kerja dari tahun ke tahun semakin terbatas. Dengan melihat situasi tersebut maka bisa dipastikan tingkat pengangguran di suatu negara akan semakin tinggi. Solusi terbaik untuk mengurangi permasalahan tersebut adalah dengan berwirausaha. Kewirausahaan adalah kemampuan seseorang untuk membuat suatu usaha yang dimulai dari 0 atau dimulai dari bawah yang dirintis hingga usaha tersebut benar-benar sukses. Tentu saja hal ini memberikan pengaruh positif terhadap pertumbuhan ekonomi suatu negara, karena kewirausahaan juga sekaligus membuka lapangan kerja bagi masyarakat dengan terbentuknya usaha yang semakin besar maka pasti dibutuhkan pekerja-pekerja untuk membantu usaha tersebut menjadi semakin besar.
 
  
-Pada jaman sekarang, sudah banyak sekali orang yang lebih memilih untuk berwirausaha daripada bekerja di kantor atau di sebuah perusahaan. Seperti di Indonesia contohnya, Indonesia memiliki kemampuan yang tinggi untuk memulai bisnis baru. Alasan mengapa banyak orang lebih memilih berwirausaha pun bervariasi contohnya orang tersebut tidak terlalu menyukai waktu kerjanya diatur oleh orang lain melainkan ia lebih menyukai waktu kerjanya diatur oleh dirinya sendiri. Tidak hanya pada jaman sekarang, dari jaman dahulu juga sudah ada wirausaha yang namanya tidak asing lagi didengar oleh telinga kita salah satunya yaitu Bob Sadino.
+Pada jaman sekarang, sudah banyak sekali orang yang lebih memilih untuk berwirausaha daripada bekerja di kantor atau di sebuah perusahaan. Seperti di Indonesia contohnya, Indonesia memiliki kemampuan yang tinggi untuk memulai bisnis baru. Alasan mengapa banyak orang lebih memilih berwirausaha pun bervariasi contohnya orang tersebut tidak terlalu menyukai waktu kerjanya diatur oleh orang lain melainkan ia lebih menyukai waktu kerjanya diatur oleh dirinya sendiri. Tidak hanya pada jaman sekarang, dari jaman dahulu juga sudah ada wirausaha yang namanya tidak asing lagi didengar oleh telinga kita salah satunya yaitu Bob Sadino. Untuk menjadi wirausaha yang sukses seperti Bob Sadino tidaklah mudah, pasti ada beberapa faktor dari luar maupun dalam yang mempengaruhi keberlangsungan wirausaha. Dalam berwirausaha dibutuhkan usaha yang besar untuk menjadi sukses, usaha tersebut juga harus dijaga kekonsistenannya agar tidak mengalami kebangkrutan.
 
 
-Kesuksesan dalam berwirausaha juga dapat dilihat dari usaha yang sudah dilakukan. Proses untuk meraih usaha tersebut tentunya mengalami jatuh-bangun, sehingga keuletan dan semangat juang yang tinggi sangat diperlukan dalam berwirausaha. Akan tetapi, usaha yang sudah sukses juga harus terus dijaga kekonsistenannya. Jika tidak dijaga, usaha tersebut akan mengalami kebangkrutan. 
+Kewirausahaan sangat diperlukan guna mendorong perekonomian suatu negara karena dapat mengurangi tingkat pengangguran di Indonesia.  Ideal besarnya populasi wirausaha dalam suatu negara adalah 2\% dari total penduduk suatu negara. Saat ini Indonesia baru mencapai 1,5\% pengusaha dari total penduduk. Maka dari itu, kondisi wirausaha ini perlu dipantau terus-menerus perkembangannya agar dapat memajukan perekonomian di Indonesia. Pemantauan ini dilakukan oleh pemerintah dan lembaga-lembaga swasta yang berkepentingan. Salah satu lembaga yang memantau adalah GEM (Global Entrepreneurship Monitor). GEM merupakan konsorsium yang bertujuan untuk mengukur dan memantau kegiatan kewirausahaan. 
 
 
-Melalui \textit{Cellular Automata} (CA) ini dapat dibuat sebuah model untuk mengetahui hubungan antara berbagai faktor yang mempengaruhi pertumbuhan kewirausahaan di suatu negara. \textit{Cellular Automata} menurut John von Neumann merupakan sistem dinamis diskrit yang memodelkan perilaku kompleks berdasarkan peraturan lokal sederhana yang menggerakkan sel pada kisi. Sebuah CA terdiri atas sekumpulan sel, tersusun dalam larik-larik (\textit{grid}). Setiap sel mempunyai satu dari sejumlah \textit{state} (kondisi) yang mungkin. \textit{State} dapat berubah menurut aturan tertentu. Perubahan \textit{state} dari sebuah sel dipengaruhi oleh \textit{state} dari sel-sel disekitarnya atau bisa disebut dengan sel tetangga.
+Selain pemantauan terhadap kondisi riil, salah satu kegiatan yang mendukung pemantauan adalah pengamatan secara tidak langsung. Salah satu pengamatan tidak langsung adalah dengan membuat model matematika dari pertumbuhan wirausaha dan kemudian melakukan simulasi terhadap model tersebut. Salah satu model matematika yang dapat digunakan untuk memodelkan pertumbuhan wirausaha adalah Entrepreneurial Cellular Automata (ECA) yang diusulkan oleh Nugraheni dan Natali \footnotemark. ECA adalah pengembangan dari Cellular Automata standar dari Ulam dan New Neuman. Pada \footnotemark[\value{footnote}
+] dijelaskan bagaimana struktur dari ECA dan diberikan illustrasi bagaimana menggunakan ECA untuk memprediksi pertumbuhan wirausaha berdasarkan parameter wirausaha dari GEM. 
+
+
+Skripsi ini bertujuan untuk mengembangkan ECA dengan memperhitungkan beberapa parameter yang belum diperhatikan pada ECA dan mengembangkan perangkat lunak simulator yang dapat menampilkan visualisasi dari simulasi. Selain menambahkan parameter yang berhubungan dengan pertumbuhan wirausaha, pengembangan ini juga akan memperhatikan pertumbuhan penduduk. Di samping itu, simulasi pada data nyata juga perlu dilakukan untuk membuktikan kebenaran dari model yang dibuat.
+
+\footnotetext{Cecilia E. Nugraheni dan Vania Natali. Pengembangan Model Keberlangsungan Wirausaha Dengan Cellular Automata. Laporan Penelitian. Lembaga Penelitian dan Pengabdian Masyarakat UNPAR. 2017. }
+
+
+
+
 
 
 \section{Rumusan Masalah}
@@ -23,9 +33,9 @@ Berikut adalah susunan permasalahan yang akan dibahas pada penelitian ini:
 
 
 \begin{enumerate}
-	\item Faktor apa saja yang mempengaruhi pertumbuhan kewirausahaan di suatu negara?
-	\item Informasi apa saja yang disediakan oleh GEM yang berguna dalam pengembangan model pertumbuhan wirausaha?
-	\item Bagaimana memodelkan pertumbuhan wirausaha dengan \textit{cellular automata}?
+	\item Faktor apa saja yang mempengaruhi keberlangsungan wirausaha?
+	\item Bagaimana memodelkan pertumbuhan wirausaha dengan \textit{cellular automata}
+	\item Bagaimana mengembangkan model keberlangsungan wirausaha dengan \textit{cellular automata}?
 \end{enumerate}
 
 
@@ -36,9 +46,41 @@ Berdasarkan rumusan masalah yang telah dibuat, maka tujuan penelitian ini dijela
 
 
 \begin{enumerate}
-	\item Mengetahui faktor apa saja yang mempengaruhi pertumbuhan kewirausahaan di suatu negara.
-	\item Mengetahui cara kerja algoritma \textit{Cellular Automata}.
-	\item Memodelkan \textit{Cellular Automata} untuk meningkatkan pertumbuhan kewirausahaan di suatu negara.
+	\item Mempelajari faktor yang berpengaruh pada keberlangsungan wirausaha.
+	\item Memodelkan pertumbuhan wirausaha dengan \textit{cellular automata}.
+	\item Mengembangkan model keberlangsungan wirausaha dengan \textit{cellular automata}.
+\end{enumerate}
+
+\section{Batasan Masalah}
+\label{sec:batasan}
+\begin{enumerate}
+	\item Perangkat lunak yang dibuat dijalankan pada komputer
+	\item Tidak memodelkan umur
+\end{enumerate}
+
+
+\section{Metodologi}
+\label{sec:metlit}
+Langkah-langkah yang akan dijalani untuk menyelesaikan penelitian ini :
+\begin{enumerate}
+	\item Melakukan studi pustaka untuk hal-hal berikut :
+		\begin{enumerate}
+			\item \textit{Cellular Automata} khususnya ECA
+			\item Kewirausahaan khususnya GEM
+		\end{enumerate}
+	\item Menganalisis masalah kewirausahaan untuk mengembangkan model keberlangsungan wirausaha menggunakan \textit{cellular automata}.
+	\item Merancang perangkat lunak berdasarkan hasil pemodelan.
+	\item Mengimplementasikan perangkat lunak sesuai rancangan.
+	\item Menguji perangkat lunak yang dibuat.
+	\item Menulis dokumen skripsi.
+\end{enumerate}
+
+
+\section{Sistematika Pembahasan}
+\label{sec:sispem}
+Setiap bab dalam penelitian ini memiliki sistematika penulisan yang dijelasan ke dalam poin-poin sebagai berikut :
+\begin{enumerate}
+	\item Bab 1: Pendahuluan berisi latar belakang masalah, rumusan masalah, tujuan, batasan masalah, metodologi dan sistematika penulisan.
 \end{enumerate}
 
 
