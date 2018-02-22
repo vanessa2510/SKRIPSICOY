@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  20 FEB 2018 20:34
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  22 FEB 2018 21:03
 entering extended mode
 **skripsi.tex
 
@@ -1173,9 +1173,9 @@ Bab 1.
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 23.
+(Font)              <9> on input line 28.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 23.
+(Font)              <5> on input line 28.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1202,14 +1202,14 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 100.
  [6]
-<./Gambar/ular-png.png, id=316, 166.37157pt x 194.22563pt>
+<./Gambar/ular-png.png, id=321, 166.37157pt x 194.22563pt>
 File: ./Gambar/ular-png.png Graphic file (type png)
 
 <use ./Gambar/ular-png.png>
 Package pdftex.def Info: ./Gambar/ular-png.png used on input line 138.
 (pdftex.def)             Requested size: 166.37114pt x 194.22514pt.
  [7]
-<./Gambar/ular-jpg.jpg, id=332, 166.37157pt x 194.22563pt>
+<./Gambar/ular-jpg.jpg, id=337, 166.37157pt x 194.22563pt>
 File: ./Gambar/ular-jpg.jpg Graphic file (type jpg)
 
 <use ./Gambar/ular-jpg.jpg>
@@ -1218,7 +1218,7 @@ Package pdftex.def Info: ./Gambar/ular-jpg.jpg used on input line 146.
  [8 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
 psi FTIS/Gambar/ular-png.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skrips
 i FTIS v12-0/Template Skripsi FTIS/Gambar/ular-jpg.jpg>] <./Gambar/ular-pdf.pdf
-, id=338, 166.35149pt x 194.20154pt>
+, id=343, 166.35149pt x 194.20154pt>
 File: ./Gambar/ular-pdf.pdf Graphic file (type pdf)
 
 <use ./Gambar/ular-pdf.pdf>
@@ -1314,11 +1314,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
  ) 
 Here is how much of TeX's memory you used:
- 35234 strings out of 493921
- 772933 string characters out of 3147276
+ 35247 strings out of 493921
+ 773054 string characters out of 3147276
  1308991 words of memory out of 3000000
  37567 multiletter control sequences out of 15000+200000
- 98349 words of font info for 155 fonts, out of 3000000 for 9000
+ 98728 words of font info for 159 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  78i,14n,130p,1052b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
@@ -1343,9 +1343,9 @@ public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb>
 /MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
 mtt10.pfb>
-Output written on skripsi.pdf (37 pages, 740627 bytes).
+Output written on skripsi.pdf (37 pages, 743482 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 165 named destinations out of 1000 (max. 500000)
+ 583 PDF objects out of 1000 (max. 8388607)
+ 170 named destinations out of 1000 (max. 500000)
  32457 words of extra memory for PDF output out of 35830 (max. 10000000)
 
