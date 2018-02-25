@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  22 FEB 2018 21:03
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  25 FEB 2018 14:43
 entering extended mode
 **skripsi.tex
 
@@ -939,7 +939,7 @@ File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
 )))
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 198.
+(hyperref)                removing `\@ifnextchar' on input line 199.
 
 )
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
@@ -1056,7 +1056,7 @@ LaTeX Info: Redefining \nameref on input line 242.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 
-<./Gambar/Logo-UNPAR.png, id=90, 180.31364pt x 177.42285pt>
+<./Gambar/Logo-UNPAR.png, id=74, 180.31364pt x 177.42285pt>
 File: ./Gambar/Logo-UNPAR.png Graphic file (type png)
 
 <use ./Gambar/Logo-UNPAR.png>
@@ -1187,62 +1187,27 @@ Package microtype Info: Character `029' is missing
 
 ]
 Bab 2.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 12.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 12.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 12.
-[5]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 100.
-
- ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 100.
- [6]
-<./Gambar/ular-png.png, id=321, 166.37157pt x 194.22563pt>
-File: ./Gambar/ular-png.png Graphic file (type png)
-
-<use ./Gambar/ular-png.png>
-Package pdftex.def Info: ./Gambar/ular-png.png used on input line 138.
-(pdftex.def)             Requested size: 166.37114pt x 194.22514pt.
- [7]
-<./Gambar/ular-jpg.jpg, id=337, 166.37157pt x 194.22563pt>
-File: ./Gambar/ular-jpg.jpg Graphic file (type jpg)
-
-<use ./Gambar/ular-jpg.jpg>
-Package pdftex.def Info: ./Gambar/ular-jpg.jpg used on input line 146.
-(pdftex.def)             Requested size: 83.18556pt x 97.11256pt.
- [8 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
-psi FTIS/Gambar/ular-png.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skrips
-i FTIS v12-0/Template Skripsi FTIS/Gambar/ular-jpg.jpg>] <./Gambar/ular-pdf.pdf
-, id=343, 166.35149pt x 194.20154pt>
-File: ./Gambar/ular-pdf.pdf Graphic file (type pdf)
-
-<use ./Gambar/ular-pdf.pdf>
-Package pdftex.def Info: ./Gambar/ular-pdf.pdf used on input line 154.
-(pdftex.def)             Requested size: 166.35106pt x 194.20105pt.
-) [9 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skr
-ipsi FTIS/Gambar/ular-pdf.pdf>]
+<Capture.png, id=246, 797.98125pt x 389.20406pt>
+File: Capture.png Graphic file (type png)
+ <use Capture.png>
+Package pdftex.def Info: Capture.png used on input line 23.
+(pdftex.def)             Requested size: 398.33212pt x 170.72176pt.
+) [5 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skr
+ipsi FTIS/Capture.png>]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
- FTIS\skripsi.bbl" [10
+ FTIS\skripsi.bbl" [6
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 48.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 
-[11]) [12]
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [7]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
- FTIS\Lampiran/lampA.tex"
+ FTIS\Lampiran/lampA.tex" [8
+
+
+]
 Lampiran A.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1278,18 +1243,15 @@ LaTeX Font Warning: Font shape `OMS/fvm/m/it' undefined
 (Font)              using `OMS/fvm/m/n' instead
 (Font)              for symbol `textasteriskcentered' on input line 15.
 
-)) [13
-
-
-]
+)) [9]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
- FTIS\Lampiran/lampB.tex" [14
+ FTIS\Lampiran/lampB.tex" [10
 
 
 
 ]
 Lampiran B.
-) [15]
+) [11]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
 
@@ -1306,28 +1268,31 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
 Package rerunfilecheck Info: File `skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 6569DE88B3F2B877C153E88383E3040E;2426.
+(rerunfilecheck)             Checksum: 137A952726B99F1B5690CAABADFE7926;2015.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
  ) 
 Here is how much of TeX's memory you used:
- 35247 strings out of 493921
- 773054 string characters out of 3147276
- 1308991 words of memory out of 3000000
- 37567 multiletter control sequences out of 15000+200000
- 98728 words of font info for 159 fonts, out of 3000000 for 9000
+ 35032 strings out of 493921
+ 769651 string characters out of 3147276
+ 1307636 words of memory out of 3000000
+ 37434 multiletter control sequences out of 15000+200000
+ 84631 words of font info for 125 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 78i,14n,130p,1052b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 78i,13n,130p,1052b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files
-/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files/MiKTeX 2.9/fonts/
-enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
-c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc} <C:\Users\Vane
+/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts
+/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8
+r.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc} <C:\Users\Vane
 ssa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/bera/fvmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
@@ -1340,12 +1305,10 @@ Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
-mtt10.pfb>
-Output written on skripsi.pdf (37 pages, 743482 bytes).
+/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
+Output written on skripsi.pdf (33 pages, 627948 bytes).
 PDF statistics:
- 583 PDF objects out of 1000 (max. 8388607)
- 170 named destinations out of 1000 (max. 500000)
- 32457 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 465 PDF objects out of 1000 (max. 8388607)
+ 140 named destinations out of 1000 (max. 500000)
+ 28831 words of extra memory for PDF output out of 29859 (max. 10000000)
 
