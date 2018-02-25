@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  25 FEB 2018 14:43
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  25 FEB 2018 21:54
 entering extended mode
 **skripsi.tex
 
@@ -1056,7 +1056,7 @@ LaTeX Info: Redefining \nameref on input line 242.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 
-<./Gambar/Logo-UNPAR.png, id=74, 180.31364pt x 177.42285pt>
+<./Gambar/Logo-UNPAR.png, id=70, 180.31364pt x 177.42285pt>
 File: ./Gambar/Logo-UNPAR.png Graphic file (type png)
 
 <use ./Gambar/Logo-UNPAR.png>
@@ -1173,9 +1173,9 @@ Bab 1.
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 28.
+(Font)              <9> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 28.
+(Font)              <5> on input line 29.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1187,22 +1187,22 @@ Package microtype Info: Character `029' is missing
 
 ]
 Bab 2.
-<Capture.png, id=246, 797.98125pt x 389.20406pt>
+<Capture.png, id=241, 797.98125pt x 389.20406pt>
 File: Capture.png Graphic file (type png)
  <use Capture.png>
-Package pdftex.def Info: Capture.png used on input line 23.
+Package pdftex.def Info: Capture.png used on input line 21.
 (pdftex.def)             Requested size: 398.33212pt x 170.72176pt.
-) [5 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skr
-ipsi FTIS/Capture.png>]
+ [5 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
+psi FTIS/Capture.png>]) [6]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
- FTIS\skripsi.bbl" [6
-
-
-]
+ FTIS\skripsi.bbl"
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [7]
+) [7
+
+
+]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
  FTIS\Lampiran/lampA.tex" [8
 
@@ -1268,7 +1268,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
 Package rerunfilecheck Info: File `skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 137A952726B99F1B5690CAABADFE7926;2015.
+(rerunfilecheck)             Checksum: 704ECA6E5B16340E09796AE7D4EFF227;1924.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1279,13 +1279,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
  ) 
 Here is how much of TeX's memory you used:
- 35032 strings out of 493921
- 769651 string characters out of 3147276
- 1307636 words of memory out of 3000000
- 37434 multiletter control sequences out of 15000+200000
- 84631 words of font info for 125 fonts, out of 3000000 for 9000
+ 35029 strings out of 493921
+ 769616 string characters out of 3147276
+ 1307602 words of memory out of 3000000
+ 37432 multiletter control sequences out of 15000+200000
+ 84678 words of font info for 125 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 78i,13n,130p,1052b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 78i,13n,130p,966b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1306,9 +1306,9 @@ eX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on skripsi.pdf (33 pages, 627948 bytes).
+Output written on skripsi.pdf (33 pages, 630124 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
- 140 named destinations out of 1000 (max. 500000)
- 28831 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 461 PDF objects out of 1000 (max. 8388607)
+ 139 named destinations out of 1000 (max. 500000)
+ 28823 words of extra memory for PDF output out of 29859 (max. 10000000)
 
