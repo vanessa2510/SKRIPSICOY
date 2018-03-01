@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  25 FEB 2018 21:54
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  1 MAR 2018 22:38
 entering extended mode
 **skripsi.tex
 
@@ -1168,14 +1168,14 @@ LaTeX Font Info:    Font shape `T1/lmr/bx/sc' in size <10.95> not available
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
  FTIS\Bab/bab1.tex"
 Bab 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 8.
 [1
 
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 29.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 29.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1187,24 +1187,57 @@ Package microtype Info: Character `029' is missing
 
 ]
 Bab 2.
-<Capture.png, id=241, 797.98125pt x 389.20406pt>
+<Capture.png, id=254, 797.98125pt x 389.20406pt>
 File: Capture.png Graphic file (type png)
  <use Capture.png>
 Package pdftex.def Info: Capture.png used on input line 21.
 (pdftex.def)             Requested size: 398.33212pt x 170.72176pt.
  [5 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
-psi FTIS/Capture.png>]) [6]
+psi FTIS/Capture.png>] <POumur.png, id=262, 417.05812pt x 161.85469pt>
+File: POumur.png Graphic file (type png)
+ <use POumur.png>
+Package pdftex.def Info: POumur.png used on input line 35.
+(pdftex.def)             Requested size: 398.36029pt x 170.72543pt.
+
+
+LaTeX Warning: Reference `fig:POPendidikan' on page 6 undefined on input line 4
+0.
+
+<POPendidikan.png, id=265, 390.70969pt x 208.52907pt>
+File: POPendidikan.png Graphic file (type png)
+ <use POPendidikan.png>
+Package pdftex.def Info: POPendidikan.png used on input line 44.
+(pdftex.def)             Requested size: 398.35764pt x 170.72447pt.
+
+[6 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skrip
+si FTIS/POumur.png>] <POdomisili.png, id=271, 397.485pt x 283.0575pt>
+File: POdomisili.png Graphic file (type png)
+
+<use POdomisili.png>
+Package pdftex.def Info: POdomisili.png used on input line 51.
+(pdftex.def)             Requested size: 426.80283pt x 284.5512pt.
+ <POpendapatan.png, id=272, 393.72093pt x 195.73125pt>
+File: POpendapatan.png Graphic file (type png)
+
+<use POpendapatan.png>
+Package pdftex.def Info: POpendapatan.png used on input line 58.
+(pdftex.def)             Requested size: 398.33386pt x 199.1803pt.
+ [7 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
+psi FTIS/POPendidikan.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi F
+TIS v12-0/Template Skripsi FTIS/POdomisili.png>])
+[8 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skrip
+si FTIS/POpendapatan.png>]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
  FTIS\skripsi.bbl"
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [7
+) [9
 
 
 ]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
- FTIS\Lampiran/lampA.tex" [8
+ FTIS\Lampiran/lampA.tex" [10
 
 
 ]
@@ -1243,15 +1276,15 @@ LaTeX Font Warning: Font shape `OMS/fvm/m/it' undefined
 (Font)              using `OMS/fvm/m/n' instead
 (Font)              for symbol `textasteriskcentered' on input line 15.
 
-)) [9]
+)) [11]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
- FTIS\Lampiran/lampB.tex" [10
+ FTIS\Lampiran/lampB.tex" [12
 
 
 
 ]
 Lampiran B.
-) [11]
+) [13]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
 
@@ -1274,20 +1307,26 @@ Package rerunfilecheck Info: File `skripsi.out' has not changed.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
  ) 
 Here is how much of TeX's memory you used:
- 35029 strings out of 493921
- 769616 string characters out of 3147276
- 1307602 words of memory out of 3000000
- 37432 multiletter control sequences out of 15000+200000
- 84678 words of font info for 125 fonts, out of 3000000 for 9000
+ 35081 strings out of 493921
+ 770345 string characters out of 3147276
+ 1308200 words of memory out of 3000000
+ 37453 multiletter control sequences out of 15000+200000
+ 85566 words of font info for 134 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 78i,13n,130p,966b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
+ 78i,13n,130p,1205b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
 
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files
 /MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts
@@ -1306,9 +1345,9 @@ eX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on skripsi.pdf (33 pages, 630124 bytes).
+Output written on skripsi.pdf (35 pages, 700600 bytes).
 PDF statistics:
- 461 PDF objects out of 1000 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
- 28823 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 495 PDF objects out of 1000 (max. 8388607)
+ 148 named destinations out of 1000 (max. 500000)
+ 28843 words of extra memory for PDF output out of 29859 (max. 10000000)
 
