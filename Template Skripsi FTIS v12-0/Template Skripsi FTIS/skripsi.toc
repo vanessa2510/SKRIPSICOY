@@ -12,6 +12,7 @@
 \contentsline {section}{\numberline {1.6}Sistematika Pembahasan}{3}{section.1.6}
 \contentsline {chapter}{\numberline {2}Landasan Teori}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Arti Kewirausahaan}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Cellular Automata}{11}{section.2.2}
 \contentsline {chapter}{Daftar Referensi}{13}{chapter*.5}
 \contentsline {chapter}{\numberline {A}Kode Program}{15}{appendix.A}
 \contentsline {chapter}{\numberline {B}Hasil Eksperimen}{17}{appendix.B}
