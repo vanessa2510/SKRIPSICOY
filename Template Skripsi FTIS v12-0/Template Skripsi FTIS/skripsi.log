@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  5 MAR 2018 21:11
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  6 MAR 2018 10:12
 entering extended mode
 **skripsi.tex
 
@@ -1056,7 +1056,7 @@ LaTeX Info: Redefining \nameref on input line 242.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 
-<./Gambar/Logo-UNPAR.png, id=70, 180.31364pt x 177.42285pt>
+<./Gambar/Logo-UNPAR.png, id=74, 180.31364pt x 177.42285pt>
 File: ./Gambar/Logo-UNPAR.png Graphic file (type png)
 
 <use ./Gambar/Logo-UNPAR.png>
@@ -1187,13 +1187,13 @@ Package microtype Info: Character `029' is missing
 
 ]
 Bab 2.
-<Capture.png, id=267, 797.98125pt x 389.20406pt>
+<Capture.png, id=272, 797.98125pt x 389.20406pt>
 File: Capture.png Graphic file (type png)
  <use Capture.png>
 Package pdftex.def Info: Capture.png used on input line 24.
 (pdftex.def)             Requested size: 398.33212pt x 170.72176pt.
  [5]
-<POumur.png, id=274, 417.05812pt x 161.85469pt>
+<POumur.png, id=279, 417.05812pt x 161.85469pt>
 File: POumur.png Graphic file (type png)
  <use POumur.png>
 Package pdftex.def Info: POumur.png used on input line 38.
@@ -1206,19 +1206,19 @@ LaTeX Warning: Reference `fig:POPendidikan' on page 6 undefined on input line 4
 [6 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skrip
 si FTIS/Capture.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v1
 2-0/Template Skripsi FTIS/POumur.png>]
-<POPendidikan.png, id=283, 390.70969pt x 208.52907pt>
+<POPendidikan.png, id=288, 390.70969pt x 208.52907pt>
 File: POPendidikan.png Graphic file (type png)
  <use POPendidikan.png>
 Package pdftex.def Info: POPendidikan.png used on input line 47.
 (pdftex.def)             Requested size: 398.35764pt x 170.72447pt.
 
-<POdomisili.png, id=284, 397.485pt x 283.0575pt>
+<POdomisili.png, id=289, 397.485pt x 283.0575pt>
 File: POdomisili.png Graphic file (type png)
  <use POdomisili.png>
 Package pdftex.def Info: POdomisili.png used on input line 54.
 (pdftex.def)             Requested size: 426.80283pt x 284.5512pt.
 
-<POpendapatan.png, id=285, 393.72093pt x 195.73125pt>
+<POpendapatan.png, id=290, 393.72093pt x 195.73125pt>
 File: POpendapatan.png Graphic file (type png)
  <use POpendapatan.png>
 Package pdftex.def Info: POpendapatan.png used on input line 61.
@@ -1227,13 +1227,13 @@ Package pdftex.def Info: POpendapatan.png used on input line 61.
 [7 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skrip
 si FTIS/POPendidikan.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FT
 IS v12-0/Template Skripsi FTIS/POdomisili.png>]
-<PCumur.png, id=293, 592.46344pt x 341.02406pt>
+<PCumur.png, id=298, 592.46344pt x 341.02406pt>
 File: PCumur.png Graphic file (type png)
  <use PCumur.png>
 Package pdftex.def Info: PCumur.png used on input line 70.
 (pdftex.def)             Requested size: 398.34969pt x 199.17303pt.
 
-<PCpendidikan.png, id=296, 642.14906pt x 310.15875pt>
+<PCpendidikan.png, id=301, 642.14906pt x 310.15875pt>
 File: PCpendidikan.png Graphic file (type png)
  <use PCpendidikan.png>
 Package pdftex.def Info: PCpendidikan.png used on input line 79.
@@ -1242,13 +1242,13 @@ Package pdftex.def Info: PCpendidikan.png used on input line 79.
 [8 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skrip
 si FTIS/POpendapatan.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FT
 IS v12-0/Template Skripsi FTIS/PCumur.png>]
-<PCpendapatan.png, id=303, 511.15968pt x 289.83281pt>
+<PCpendapatan.png, id=308, 511.15968pt x 289.83281pt>
 File: PCpendapatan.png Graphic file (type png)
  <use PCpendapatan.png>
 Package pdftex.def Info: PCpendapatan.png used on input line 87.
 (pdftex.def)             Requested size: 398.33635pt x 199.17111pt.
 
-<PCdomisili.png, id=305, 457.71pt x 408.77719pt>
+<PCdomisili.png, id=310, 457.71pt x 408.77719pt>
 File: PCdomisili.png Graphic file (type png)
  <use PCdomisili.png>
 Package pdftex.def Info: PCdomisili.png used on input line 96.
@@ -1256,7 +1256,7 @@ Package pdftex.def Info: PCdomisili.png used on input line 96.
  [9 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
 psi FTIS/PCpendidikan.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi F
 TIS v12-0/Template Skripsi FTIS/PCpendapatan.png>]
-<RMusia.png, id=314, 302.63063pt x 175.40532pt>
+<RMusia.png, id=319, 302.63063pt x 175.40532pt>
 File: RMusia.png Graphic file (type png)
  <use RMusia.png>
 Package pdftex.def Info: RMusia.png used on input line 106.
@@ -1264,7 +1264,7 @@ Package pdftex.def Info: RMusia.png used on input line 106.
  [10 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skr
 ipsi FTIS/PCdomisili.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FT
 IS v12-0/Template Skripsi FTIS/RMusia.png>]
-<RMpendapatan.png, id=322, 442.65375pt x 248.42813pt>
+<RMpendapatan.png, id=327, 442.65375pt x 248.42813pt>
 File: RMpendapatan.png Graphic file (type png)
  <use RMpendapatan.png>
 Package pdftex.def Info: RMpendapatan.png used on input line 115.
@@ -1352,29 +1352,29 @@ Package rerunfilecheck Warning: File `skripsi.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `skripsi.out':
-(rerunfilecheck)             Before: 704ECA6E5B16340E09796AE7D4EFF227;1924
-(rerunfilecheck)             After:  495432C5CC9CC7E3165D967937EEE171;2068.
+(rerunfilecheck)             Before: 495432C5CC9CC7E3165D967937EEE171;2068
+(rerunfilecheck)             After:  9DE989B41085C93B092B3CBFBB4E547B;2214.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
  ) 
 Here is how much of TeX's memory you used:
- 35135 strings out of 493921
- 771152 string characters out of 3147276
- 1309150 words of memory out of 3000000
- 37484 multiletter control sequences out of 15000+200000
- 85815 words of font info for 137 fonts, out of 3000000 for 9000
+ 35146 strings out of 493921
+ 771316 string characters out of 3147276
+ 1309214 words of memory out of 3000000
+ 37491 multiletter control sequences out of 15000+200000
+ 85945 words of font info for 138 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  78i,13n,130p,1205b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -1399,9 +1399,9 @@ eX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on skripsi.pdf (39 pages, 833533 bytes).
+Output written on skripsi.pdf (39 pages, 835780 bytes).
 PDF statistics:
- 548 PDF objects out of 1000 (max. 8388607)
- 159 named destinations out of 1000 (max. 500000)
- 28873 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 555 PDF objects out of 1000 (max. 8388607)
+ 161 named destinations out of 1000 (max. 500000)
+ 28881 words of extra memory for PDF output out of 29859 (max. 10000000)
 
