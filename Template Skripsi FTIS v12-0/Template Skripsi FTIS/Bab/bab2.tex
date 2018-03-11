@@ -124,7 +124,64 @@ Berdasarkan perbedaan tingkat pendapatan, Role Model memiliki peran penting untu
 Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada tahun 1940. Cellular Automata sendiri merupakan model matematis untuk sistem dimana banyak komponen sederhana bertindak bersama untuk menghasilkan pola perilaku yang rumit \footnote{CASurvey}. Sebuah CA terdiri atas sekumpulan sel, tersusun dalam larik-larik (\textit{grid}). Setiap sel mempunyai satu dari sejumlah \textit{state} (kondisi) yang mungkin. \textit{State} dapat berubah sesuai dengan aturan tertentu. Perubahan \textit{state} dari sebuah sel dipengaruhi oleh \textit{state} dari sel-sel di sekitarnya atau disebut dengan sel tetangga.
 
 \subsection{Karakteristik CA}
+\begin{enumerate}
+	\item Dimensi pada CA
+		\begin{enumerate}
+			\item CA Satu Dimensi
+			
+				\begin{figure} [H]
+					\centering  
+					\includegraphics[width=4cm, height=2cm]{CA1D} 
+					\caption[CA 1 Dimensi]{CA 1 Dimensi} 
+					\label{fig:CA1D} 
+				\end{figure}
+			
+			Cellular Automata satu dimensi adalah cellular automata yang ruang selnya berupa array satu dimensi, sehingga masing-masing sel hanya memiliki dua tetangga yang tepat bersebelahan, kecuali sel paling pinggir yang hanya mempunyai satu tetangga.
+			
+			\item CA Dua Dimensi
+			
+			\begin{figure} [H]
+					\centering  
+					\includegraphics[width=4cm, height=2cm]{CA2D} 
+					\caption[CA 2 Dimensi]{CA 2 Dimensi} 
+					\label{fig:CA2D} 
+				\end{figure}
+			
+			Cellular Automata dua dimensi adalah cellular automata yang ruang selnya biasanya berupa matriks, sehingga masing-masing sel memiliki lebih dari dua tetangga. CA dua dimensi yang sangat terkenal adalah Conway's \textit{Game of Life}. Setiap sel pada CA menggambarkan suatu individu yang dapat berada pada \textit{state} hidup atau mati.
+			
+			\item CA Tiga Dimensi
+			
+			\begin{figure} [H]
+					\centering  
+					\includegraphics[width=4cm, height=4cm]{CA3D} 
+					\caption[CA 3 Dimensi]{CA 3 Dimensi} 
+					\label{fig:CA3D} 
+				\end{figure}
+			
+			Cellular Automata tiga dimensi adalah cellular automata yang ruang selnya memiliki baris, kolom dan kedalaman, sehingga jumlah tetangga setiap sel bisa lebih banyak lagi.
+		\end{enumerate}
+		
+	\item Aplikasi CA
+		
+		\begin{enumerate}
+			\item Bidang Transportasi
+			
+			CA banyak digunakan untuk memodelkan lalu lintas, dengan tujuan utama biasanya adalah untuk mempelajari beban dari jalan-jalan di area tertentu.
+			
+			\item Bidang Kesehatan
+			
+			Pada bidang kesehatan, CA juga sering digunakan untuk pemodelan penyebaran penyakit. Biasanya masalah penyebaran penyakit dimodelkan dengan CA dua dimensi dan menggunakan aturan Game of Life dari Conway.
+			
+			\item Bidang Lingkungan / Ekologi
+			
+			CA juga dapat digunakan untuk pemodelan pada bidang lingkungan. Sebagai contoh Guy Engelen menggunakan CA dua dimensi untuk memodelkan perubahan penggunaan lahan akibat dorongan sosial-ekonomi, lingkungan dan kebijakan.
+			
+			\item Bidang Sains
+			
+			Pada bidang sains, khususnya fisika CA dapat digunakan untuk memodelkan pergerakan partikel dan juga permasalahan lainnya terkait dengan fisika kuantum. Pada bidang biologi, CA digunakan untuk memodelkan sel biologis.
+		\end{enumerate}
+		
+\end{enumerate}
 
 
-\textbf{Dimensi Pada CA}
-Cellular Automata satu dimensi adalah cellular automata yang ruang selnya berupa array satu dimensi.
+
