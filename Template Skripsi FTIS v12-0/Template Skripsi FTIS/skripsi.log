@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  22 MAR 2018 20:30
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  23 MAR 2018 13:34
 entering extended mode
 **skripsi.tex
 
@@ -1183,14 +1183,14 @@ Package microtype Info: Character `029' is missing
 
 ]
 Bab 2.
-<GEM2016-wirausaha.png, id=279, 586.44093pt x 293.59688pt>
+<GEM2016-wirausaha.png, id=280, 586.44093pt x 293.59688pt>
 File: GEM2016-wirausaha.png Graphic file (type png)
 
 <use GEM2016-wirausaha.png>
 Package pdftex.def Info: GEM2016-wirausaha.png used on input line 26.
 (pdftex.def)             Requested size: 398.33607pt x 170.71637pt.
  [5]
-<PCPendidikan.png, id=289, 379.4175pt x 193.47281pt>
+<PCPendidikan.png, id=290, 379.4175pt x 193.47281pt>
 File: PCPendidikan.png Graphic file (type png)
  <use PCPendidikan.png>
 Package pdftex.def Info: PCPendidikan.png used on input line 60.
@@ -1198,90 +1198,92 @@ Package pdftex.def Info: PCPendidikan.png used on input line 60.
 
 [6 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skrip
 si FTIS/GEM2016-wirausaha.png>]
-<PCRegion.png, id=296, 319.94531pt x 182.18062pt>
+<PCRegion.png, id=298, 319.94531pt x 182.18062pt>
 File: PCRegion.png Graphic file (type png)
  <use PCRegion.png>
-Package pdftex.def Info: PCRegion.png used on input line 67.
-(pdftex.def)             Requested size: 341.4398pt x 170.72162pt.
+Package pdftex.def Info: PCRegion.png used on input line 69.
+(pdftex.def)             Requested size: 312.98283pt x 170.72162pt.
 
-<RMfemalemale.png, id=297, 353.82187pt x 212.29312pt>
+<RMfemalemale.png, id=300, 353.82187pt x 212.29312pt>
 File: RMfemalemale.png Graphic file (type png)
  <use RMfemalemale.png>
-Package pdftex.def Info: RMfemalemale.png used on input line 76.
-(pdftex.def)             Requested size: 398.34555pt x 170.72554pt.
-
-<RMpendidikan.png, id=298, 350.05782pt x 180.675pt>
-File: RMpendidikan.png Graphic file (type png)
- <use RMpendidikan.png>
-Package pdftex.def Info: RMpendidikan.png used on input line 82.
-(pdftex.def)             Requested size: 398.36497pt x 170.7167pt.
+Package pdftex.def Info: RMfemalemale.png used on input line 78.
+(pdftex.def)             Requested size: 341.43596pt x 199.1798pt.
 
 [7 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skrip
 si FTIS/PCPendidikan.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FT
-IS v12-0/Template Skripsi FTIS/PCRegion.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/
-Template Skripsi FTIS v12-0/Template Skripsi FTIS/RMfemalemale.png>]
-<POfemalemale.png, id=306, 316.93407pt x 150.5625pt>
+IS v12-0/Template Skripsi FTIS/PCRegion.png>]
+<RMpendidikan.png, id=308, 350.05782pt x 180.675pt>
+File: RMpendidikan.png Graphic file (type png)
+ <use RMpendidikan.png>
+Package pdftex.def Info: RMpendidikan.png used on input line 89.
+(pdftex.def)             Requested size: 369.91109pt x 199.17041pt.
+
+<POfemalemale.png, id=310, 316.93407pt x 150.5625pt>
 File: POfemalemale.png Graphic file (type png)
  <use POfemalemale.png>
-Package pdftex.def Info: POfemalemale.png used on input line 91.
-(pdftex.def)             Requested size: 398.37183pt x 170.73325pt.
-
-<POpendidikan.png, id=307, 369.63094pt x 160.34906pt>
-File: POpendidikan.png Graphic file (type png)
- <use POpendidikan.png>
-Package pdftex.def Info: POpendidikan.png used on input line 98.
-(pdftex.def)             Requested size: 398.3438pt x 170.72032pt.
-
-<FOFfemalemale.png, id=308, 317.68687pt x 183.68625pt>
-File: FOFfemalemale.png Graphic file (type png)
- <use FOFfemalemale.png>
-Package pdftex.def Info: FOFfemalemale.png used on input line 107.
-(pdftex.def)             Requested size: 398.37279pt x 170.72832pt.
+Package pdftex.def Info: POfemalemale.png used on input line 99.
+(pdftex.def)             Requested size: 341.46156pt x 170.73325pt.
 
 [8 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skrip
-si FTIS/RMpendidikan.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FT
-IS v12-0/Template Skripsi FTIS/POfemalemale.png> <D:/Vanessa/Data/SMT 8/SKRIPSI
-COY/Template Skripsi FTIS v12-0/Template Skripsi FTIS/POpendidikan.png>]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 202.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 202.
+si FTIS/RMfemalemale.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FT
+IS v12-0/Template Skripsi FTIS/RMpendidikan.png>]
+<POpendidikan.png, id=318, 369.63094pt x 160.34906pt>
+File: POpendidikan.png Graphic file (type png)
+ <use POpendidikan.png>
+Package pdftex.def Info: POpendidikan.png used on input line 108.
+(pdftex.def)             Requested size: 398.3438pt x 170.72032pt.
 
-<CA1D.png, id=317, 157.33781pt x 54.2025pt>
+<FOFfemalemale.png, id=320, 317.68687pt x 183.68625pt>
+File: FOFfemalemale.png Graphic file (type png)
+ <use FOFfemalemale.png>
+Package pdftex.def Info: FOFfemalemale.png used on input line 117.
+(pdftex.def)             Requested size: 369.91794pt x 170.72832pt.
+
+[9 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skrip
+si FTIS/POfemalemale.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FT
+IS v12-0/Template Skripsi FTIS/POpendidikan.png>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 214.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 214.
+
+<CA1D.png, id=330, 157.33781pt x 54.2025pt>
 File: CA1D.png Graphic file (type png)
  <use CA1D.png>
-Package pdftex.def Info: CA1D.png used on input line 212.
+Package pdftex.def Info: CA1D.png used on input line 224.
 (pdftex.def)             Requested size: 113.8113pt x 56.90851pt.
 
-<CA2D.png, id=318, 140.77594pt x 127.97812pt>
+<CA2D.png, id=331, 140.77594pt x 127.97812pt>
 File: CA2D.png Graphic file (type png)
  <use CA2D.png>
-Package pdftex.def Info: CA2D.png used on input line 223.
+Package pdftex.def Info: CA2D.png used on input line 235.
 (pdftex.def)             Requested size: 113.81091pt x 56.90419pt.
- [9 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
-psi FTIS/FOFfemalemale.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi 
-FTIS v12-0/Template Skripsi FTIS/CA1D.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Te
-mplate Skripsi FTIS v12-0/Template Skripsi FTIS/CA2D.png>]
-<CA3D.png, id=334, 102.3825pt x 124.96687pt>
+ [10 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skr
+ipsi FTIS/FOFfemalemale.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi
+ FTIS v12-0/Template Skripsi FTIS/CA1D.png>] <CA3D.png, id=345, 102.3825pt x 12
+4.96687pt>
 File: CA3D.png Graphic file (type png)
- <use CA3D.png>
-Package pdftex.def Info: CA3D.png used on input line 234.
+
+<use CA3D.png>
+Package pdftex.def Info: CA3D.png used on input line 246.
 (pdftex.def)             Requested size: 113.81776pt x 113.81537pt.
-) [10 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Sk
-ripsi FTIS/CA3D.png>]
+) [11 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Sk
+ripsi FTIS/CA2D.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v1
+2-0/Template Skripsi FTIS/CA3D.png>]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
- FTIS\skripsi.bbl"
+ FTIS\skripsi.bbl" [12
+
+
+]
 Underfull \hbox (badness 4479) in paragraph at lines 21--26
 []\T1/lmr/m/n/10.95 (+20) Fery Agus Pri-a-na (2012) Pe-nger-ti-an dan de-fi-ni-
 si wi-ra-u-sa-ha me-nu-rut pa-ra ah-li.
  []
 
-) [11
-
-
-]
+) [13]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
- FTIS\Lampiran/lampA.tex" [12
+ FTIS\Lampiran/lampA.tex" [14
 
 
 ]
@@ -1320,15 +1322,15 @@ LaTeX Font Warning: Font shape `OMS/fvm/m/it' undefined
 (Font)              using `OMS/fvm/m/n' instead
 (Font)              for symbol `textasteriskcentered' on input line 15.
 
-)) [13]
+)) [15]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
- FTIS\Lampiran/lampB.tex" [14
+ FTIS\Lampiran/lampB.tex" [16
 
 
 
 ]
 Lampiran B.
-) [15]
+) [17]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
 
@@ -1353,11 +1355,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
  ) 
 Here is how much of TeX's memory you used:
- 35158 strings out of 493921
- 771440 string characters out of 3147276
- 1309143 words of memory out of 3000000
+ 35166 strings out of 493921
+ 771518 string characters out of 3147276
+ 1309147 words of memory out of 3000000
  37500 multiletter control sequences out of 15000+200000
- 85519 words of font info for 134 fonts, out of 3000000 for 9000
+ 85768 words of font info for 137 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  78i,13n,130p,1253b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
@@ -1380,9 +1382,9 @@ eX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on skripsi.pdf (37 pages, 679726 bytes).
+Output written on skripsi.pdf (39 pages, 685671 bytes).
 PDF statistics:
- 563 PDF objects out of 1000 (max. 8388607)
- 172 named destinations out of 1000 (max. 500000)
+ 579 PDF objects out of 1000 (max. 8388607)
+ 174 named destinations out of 1000 (max. 500000)
  28889 words of extra memory for PDF output out of 29859 (max. 10000000)
 
