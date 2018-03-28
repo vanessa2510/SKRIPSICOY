@@ -48,6 +48,8 @@
 {Septian Nugraha Kudrat, Yuliant Sibaroni dan Erwin Budi Setiawan} (2015)
   {Simulasi Pengaturan Lampu Lalu Lintas Menggunakan Cellular Automata dan
   Fuzzy Inference System}.
+\newblock
+  {http://socj.telkomuniversity.ac.id/ocs/index.php/indosc/indosc15/paper/viewFile/34/20}.
 \newblock [Online, diakses 26-Maret-2018].
 
 \bibitem{referensiCA4}
@@ -56,5 +58,10 @@
 \newblock
   {https://www.slideshare.net/bramantiyomarjuki/a-translation-paper-about-cellular-automata}.
 \newblock [Online, diakses 27-Maret-2018].
+
+\bibitem{referensiCA5}
+{Dany Satrio Kintoko} (2013) {Teori Dasar Graf}.
+\newblock {http://danysatriokintoko.blogspot.co.id/}.
+\newblock [Online, diakses 28-Maret-2018].
 
 \end{thebibliography}

@@ -235,6 +235,43 @@ Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada
 \label{sec:ECA}
 Entrepreneurial Cellular Automata merupakan pengembangan model dari Cellular Automata yang digunakan untuk mensimulasikan pertumbuhan kewirausahaan di Indonesia. Dalam kasus Entrepreneurial Cellular Automata (ECA), sel akan merepresentasikan wirausahawan dan ketetanggaannya akan merepresentasikan hubungan antar wirausahawan. Setiap wirausahawan mempunyai dua sifat atribut yaitu statis (nilainya tidak berubah) dan dinamis (nilainya dapat berubah). Contoh atribut statis adalah bidang usaha, kategori usaha, lokasi geografis dan jenis kelamin. Contoh atribut dinamis adalah usia, level wirausaha dan usia usaha.  
 
+Perubahan atribut dinamis dari waktu ke waktu didefinisikan dengan fungsi transisi. Fungsi transisi terdiri dari beberapa aturan. Atribut penting dalam kewirausahaan yaitu level wirausaha karena atribut ini digunakan untuk menentukan perkembangan dari kewirausahaan. Cara menentukan seorang wirausaha akan meneruskan usahanya diketahui dari sebuah angka yang disebut \textit{Continuity Index} (\textit{CIdx}). \textit{CIdx} dari seorang wirausaha tidak hanya dipengaruhi oleh faktor dari dalam tetapi juga dipengaruhi oleh faktor dari luar. Faktor luar dipengaruhi oleh tetangga-tetangganya seperti kebijakan pemerintah, kondisi perekonomian dunia, dsb. Seorang wirausahawan akan meneruskan usahanya jika \textit{CIdx}-nya memenuhi nilai ambang tertentu.
+
+Atribut dari seorang wirausahawan dapat berubah dari waktu ke waktu, hal ini menyebabkan ketetanggaan juga dapat berubah dari waktu ke waktu. Sebagai contoh, diasumsikan terdapat wirausahawan $e1$ dan $e2$ bertetanggaan pada waktu $t$, jika $e1$ berubah keadaannya pada $t+1$ maka $e1$ dan $e2$ tidak lagi bertetanggaan pada saat $t+1$.
+
+
+\section{Graf}
+\label{sec:graf}
+Graf dalam matematika dan ilmu komputer adalah himpunan benda-benda yang disebut simpul (\textit{vertex} atau \textit{node}) yang terhubung oleh sisi (\textit{edge}). Sebuah graf biasanya digambarkan dengan sekumpulan titik-titik yang dihubungkan oleh garis-garis. Suatu sisi dapat menghubungkan suatu simpul dengan simpul yang sama, sisi ini disebut dengan \textit{loop}.
+
+Graf biasanya dinyatakan sebagai $G = <V,E>$, dimana V adalah simpul pada graf sedangkan E adalah sisi pada graf. Sebagai contoh definisi dari graf terdapat $V = {1,2,3,4,5,6}$ dan $E = {(1,2),(1,5),(2,3),(3,4),(4,5),(5,2),(4,6)}$ berikut gambar graf sesuai dengan pernyataan V dan E di atas :
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=8cm, height=4cm]{graf1} 
+		\label{fig:graf1} 
+	\end{figure}
+	
+Graf memiliki banyak jenis, jenis-jenis graf ini didasarkan pada ada tidaknya \textit{loop} pada suatu graf dan sisi pada graf yang mempunyai orientasi arah. Berdasarkan ada tidaknya \textit{loop} pada suatu graf digolongkan menjadi dua jenis :
+\begin{enumerate}
+	\item Graf Sederhana
+	
+	Graf ini tidak mempunyai sisi ganda.
+	\item Graf tak-sederhana
+	
+	Graf ini mempunyai sisi ganda.
+\end{enumerate}
+
+Berdasarkan orientasi arah pada sisi, secara umum graf dibedakan menjadi 2 jenis :
+\begin{enumerate}
+	\item Graf tak-berarah
+	
+	Graf yang sisinya tidak mempunyai arah. Pada graf ini urutan sisi tidak diperhatikan.
+	\item Graf berarah
+	
+	Graf yang sisinya mempunyai arah. Pada graf ini urutan sisi diperhatikan. \cite{referensiCA5}
+\end{enumerate}
+
 
 
 
