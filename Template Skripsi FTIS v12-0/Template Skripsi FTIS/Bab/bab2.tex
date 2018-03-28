@@ -189,11 +189,40 @@ Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada
 			
 			\item Bidang Kesehatan
 			
-			Pada bidang kesehatan, CA juga sering digunakan untuk pemodelan penyebaran penyakit. Biasanya masalah penyebaran penyakit dimodelkan dengan CA dua dimensi dan menggunakan aturan Game of Life dari Conway.
-			
+			Pada bidang kesehatan, CA juga sering digunakan untuk pemodelan penyebaran penyakit. Biasanya masalah penyebaran penyakit dimodelkan dengan CA dua dimensi dan menggunakan aturan Game of Life dari Conway. Contoh aplikasi yang diterapkan di dunia nyata yaitu simulasi infeksi virus influenza A menggunakn cellular automaton. Pada penelitian ini cellular automata yang digunakan adalah CA dua dimensi. Parameter-parameter masukan yang digunakan adalah sebagai berikut
+			\begin{enumerate}
+				\item \textit{gridWidth} dan \textit{gridHeight} yang berfungsi mendefinisikan lebar dan tinggi dari \textit{grid} yang digunakan.
+				\item \textit{cellLifespan} merupakan parameter yang menyimpan lama waktu hidup dari sel epitel sehat.
+				\item \textit{infectLifespan} merupakan parameter yang menyimpan lama waktu hidup dari sel epitel yang sakit.
+				\item \textit{divisionTime} merupakan durasi pembelahan sel epitel yang sehat.
+				\item \textit{infectInit} merupakan proporsi inisialisasi sel epitel yang terinfeksi dari keseluruhan sel epitel yang ada.
+				\item \textit{infectRate} merupakan banyaknya tetangga yang dapat ditulari sel epitel yang berpenyakit dalam waktu satu jam.
+				\item \textit{expressDelay} merupakan lama waktu tunggu perubahan status sel epitel \textit{infected} menjadi \textit{expressing}
+				\item \textit{infectDelay} merupakan lama waktu tunggu perubahan status sel epitel \textit{infected} menjadi \textit{infectious}
+				\item \textit{baseImmCell} merupakan proporsi minimal sel imun virgin dari keseluruhan sel epitel.
+				\item \textit{immLifespan} adalah jangka waktu hidup sel imun.
+				\item \textit{recruitChance} adalah kemungkinan penambahan sel imun \textit{mature} ke dalam \textit{grid}.
+				\item \textit{recruitDelay} adalah jeda waktu pengenalan sel imun terhadap sel epitel yang mengandung virus sampai sel imun \textit{mature} ditambahkan ke dalam \textit{grid}.
+				\item \textit{flowrate} adalah perkiraan kecepatan sel imun berpindah dari satu sel epitel ke epitel lain dalam waktu satu jam. \cite{referensiCA1}
+			\end{enumerate}
+			Aturan dalam penelitian ini ada dua jenis aturan yaitu aturan transisi dalam kelas \textit{EpithelialCell} dan kelas \textit{ImmuneCell}.
 			\item Bidang Lingkungan / Ekologi
 			
-			CA juga dapat digunakan untuk pemodelan pada bidang lingkungan. Sebagai contoh Guy Engelen menggunakan CA dua dimensi untuk memodelkan perubahan penggunaan lahan akibat dorongan sosial-ekonomi, lingkungan dan kebijakan.
+			CA juga dapat digunakan untuk pemodelan pada bidang lingkungan. Contoh penerapan cellular automata pada bidang lingkungan adalah simulasi dan pemodelan perubahan penggunaan lahan. Penelitian ini menggunakan algoritma DINAMICA, algoritma ini merupakan algoritma cellular automata hibrida yang mendukung pemodelan statistik untuk menemukan area yang berpotensi mengalami perubahan berdasarkan faktor pemicu yang telah ditentukan. Algoritma DINAMICA ini memerlukan beberapa parameter berupa :
+			\begin{enumerate}
+				\item Variabel statis dan dinamis
+				
+				Variabel statis yang dimaksud adalah data penggunaan lahan multiwaktu yang dijadikan referensi fakta dalam pemodelan. Variabel dinamis adalah jarak setiap piksel dari penggunaan lahan perkotaan ke lahan bukan perkotaan terdekat.
+				\item Matriks transisi
+				
+				Matriks transisi diperoleh dari persilangan tabulasi penggunaan lahan. Hasil dari persilangan ini adalah tingkat perubahan penggunaan lahan dalam satuan persen yang memperlihatkan banyaknya piksel yang terkonversi dari penggunaan lahan yang satu ke penggunaan lahan yang lain (bukan perkotaan ke perkotaan).
+				\item Probabilitas Transisi Spasial
+				
+				Probabilitas Transisi Spasial adalah kemungkinan perubahan dari penggunaan lahan bukan perkotaan ke penggunaan lahan perkotaan.
+				\item Fungsi Transisi
+				
+				Fungsi kalkulasi melakukan kalkulasi pemilihan piksel yang akan berubah dalam dua prosedur yaitu fungsi perluasan yang diaplikasikan pada \textit{path dependent} dan fungsi tapak yang diaplikasikan pada kejadian spontan (random). \cite{referensiCA4}
+			\end{enumerate}
 			
 			\item Bidang Sains
 			
@@ -201,6 +230,10 @@ Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada
 		\end{enumerate}
 		
 \end{enumerate}
+
+\section{Entrepreneurial Cellular Automata}
+\label{sec:ECA}
+Entrepreneurial Cellular Automata merupakan pengembangan model dari Cellular Automata yang digunakan untuk mensimulasikan pertumbuhan kewirausahaan di Indonesia. Dalam kasus Entrepreneurial Cellular Automata (ECA), sel akan merepresentasikan wirausahawan dan ketetanggaannya akan merepresentasikan hubungan antar wirausahawan. Setiap wirausahawan mempunyai dua sifat atribut yaitu statis (nilainya tidak berubah) dan dinamis (nilainya dapat berubah). Contoh atribut statis adalah bidang usaha, kategori usaha, lokasi geografis dan jenis kelamin. Contoh atribut dinamis adalah usia, level wirausaha dan usia usaha.  
 
 
 

@@ -14,6 +14,7 @@
 \contentsline {section}{\numberline {2.1}Arti Kewirausahaan}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Cellular Automata}{10}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Karakteristik CA}{10}{subsection.2.2.1}
-\contentsline {chapter}{Daftar Referensi}{13}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Kode Program}{15}{appendix.A}
-\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{17}{appendix.B}
+\contentsline {section}{\numberline {2.3}Entrepreneurial Cellular Automata}{13}{section.2.3}
+\contentsline {chapter}{Daftar Referensi}{15}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Kode Program}{17}{appendix.A}
+\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{19}{appendix.B}
