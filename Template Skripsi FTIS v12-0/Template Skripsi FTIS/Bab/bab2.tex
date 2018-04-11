@@ -239,6 +239,30 @@ Perubahan atribut dinamis dari waktu ke waktu didefinisikan dengan fungsi transi
 
 Atribut dari seorang wirausahawan dapat berubah dari waktu ke waktu, hal ini menyebabkan ketetanggaan juga dapat berubah dari waktu ke waktu. Sebagai contoh, diasumsikan terdapat wirausahawan $e1$ dan $e2$ bertetanggaan pada waktu $t$, jika $e1$ berubah keadaannya pada $t+1$ maka $e1$ dan $e2$ tidak lagi bertetanggaan pada saat $t+1$.
 
+\subsection{Definisi ECA}
+Diberikan \textit{p} himpunan nilai atribut: $A_{1}, ..., A_{p}$ dan sebuah indikator $Pub$ = ${p_{1}, ..., p_{m}}$, sebuah ECA $M$ adalah sebuah tupel
+\begin{displaymath}
+	M = (E, \alpha, N, \omega, \rho, \delta, \sigma)
+\end{displaymath}
+dimana :
+\begin{itemize}
+	\item $E = {e_{1}, ..., e_{n}}$ adalah himpunan berhingga wirausahaan,
+	\item $\alpha = {\alpha_{1}, ..., \alpha_{p}}$ adalah himpunan berhingga atribut dimana setiap $\alpha_{i}$ didefinisikan sebagai $\alpha_{i} : E \rightarrow A_{i}$,
+	\item $N = {N_{1}, ..., N_{k}}$ adalah himpunan berhingga ketetanggaan dimana setiap $N_{i}$ didefinisikan sebagai $N_{i}:E x E \rightarrow $
+\end{itemize}
+
+
+Berdasarkan model kewirausahaan terdapat empat tingkatan wirausaha yaitu \textit{potential}, \textit{nascent}, \textit{new business manager} dan \textit{manager of established business}. Akan ditambahkan pula tingkatan wirausaha yang menyatakan wirausahawan di atas umur 64 tahun yaitu \textit{retired}. Pada gambar \ref{fig:tingkatwirausaha} akan ditunjukkan secara lebih lanjut, \textit{new\_bm} dan \textit{est\_bm} dinyatakan sebagai \textit{new business manager} dan \textit{manager of established business}.
+
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=9cm, height=5cm]{tingkatwirausaha} 
+		\caption[Diagram Transisi Level Wirausaha]{Diagram Transisi Level Wirausaha} 
+		\label{fig:tingkatwirausaha} 
+	\end{figure}
+
+
 
 \section{Graf}
 \label{sec:graf}
@@ -272,6 +296,70 @@ Berdasarkan orientasi arah pada sisi, secara umum graf dibedakan menjadi 2 jenis
 	Graf yang sisinya mempunyai arah. Pada graf ini urutan sisi diperhatikan. \cite{referensiCA5}
 \end{enumerate}
 
+Sebuah graf dinyatakan sebagai struktur data yang terdiri dari simpul dan sisi yang membangun hubungan antar simpul. Terdapat dua macam representasi graf yaitu \textit{adjacency list} dan \textit{adjacency matrix}.
+\subsection{Adjacency List}
+Adjacency list merupakan bentuk representasi dari seluruh sisi dalam sebuah graf sebagai suatu senarai (\textit{linked list}). Simpul-simpul yang dihubungkan merupakan simpul-simpul yang saling terkait. Dalam implementasinya, adjacency list menggunakan \textit{hash table} untuk menghubungkan satu simpul dengan simpul lain yang saling terkait. Contoh implementasi adjacency list yaitu sebagai berikut :
+
+ 	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=4cm, height=4cm]{adjacencylist} 
+		\caption[\textit{Undirected Cyclic Graph}]{\textit{Undirected Cyclic Graph}}
+		\label{fig:GambarAL} 
+	\end{figure}
+	
+	Graf pada gambar \ref{fig:GambarAL} dapat direpresentasikan melalui tabel \ref{tabelAL} :
+	
+	
+	\begin{table}[H]
+\centering
+\caption{Tabel Representasi Adjacency List}
+\begin{tabular}{|c|p{2cm}|c|}
+\hline
+Vertex & Adjacency & Array of Adjacent\\
+\hline
+a & adjacent to & b,c \\
+\hline
+b & adjacent to & a,c \\
+\hline
+c & adjacent to & a,b\\
+\hline
+\end{tabular}
+\label{tabelAL}
+\end{table}
+
+\subsection{Adjacency Matrix}
+Adjacency Matrix merupakan representasi matrix $N*N$ yang menyatakan hubungan antar simpul dalam suatu graf. Kolom dan baris menyatakan simpul-simpul, sedangkan nilai entri dari matrix menyatakan hubungan antar simpul. Contoh implementasi adjacency matrix yaitu sebagai berikut :
+
+\begin{figure} [H]
+		\centering  
+		\includegraphics[width=5cm, height=4cm]{adjacencymatrix} 
+		\caption[\textit{Undirected Cyclic Graph}]{\textit{Undirected Cyclic Graph}}
+		\label{fig:GambarAM} 
+	\end{figure}
 
 
+Graf pada gambar \ref{fig:GambarAM} dapat direpresentasikan melalui tabel \ref{tabelAM} :
 
+
+\begin{table}[H]
+\centering
+\caption{Tabel Representasi Adjacency Matrix}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+v & 1 & 2 & 3 & 4 & 5 & 6 \\
+\hline
+1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+\hline
+2 & 1 & 0 & 1 & 1 & 0 & 1 \\
+\hline
+3 & 0 & 1 & 0 & 1 & 0 & 0 \\
+\hline
+4 & 0 & 1 & 1 & 0 & 1 & 0 \\
+\hline
+5 & 0 & 0 & 0 & 1 & 0 & 1 \\
+\hline
+6 & 0 & 1 & 0 & 0 & 1 & 0 \\
+\hline
+\end{tabular}
+\label{tabelAM}
+\end{table}
