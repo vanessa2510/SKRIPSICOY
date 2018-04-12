@@ -39,11 +39,6 @@
 {Niloy Ganguly} {A Survey on Cellular Automata}.
 \newblock [Diakses 26-Maret-2018].
 
-\bibitem{referensiCA1}
-{Amanda, Valentina W} (2014) {Simulasi Infeksi Virus Influenza A Menggunakan
-  Cellular Automaton}.
-\newblock [Diakses 26-Maret-2018].
-
 \bibitem{referensiCA3}
 {Septian Nugraha Kudrat, Yuliant Sibaroni dan Erwin Budi Setiawan} (2015)
   {Simulasi Pengaturan Lampu Lalu Lintas Menggunakan Cellular Automata dan
@@ -63,5 +58,10 @@
 {Dany Satrio Kintoko} (2013) {Teori Dasar Graf}.
 \newblock {http://danysatriokintoko.blogspot.co.id/}.
 \newblock [Online, diakses 28-Maret-2018].
+
+\bibitem{referensiGraph1}
+{Wisnu Suhoko} (2011) {Struktur Data Graf}.
+\newblock {https://wisnusuhoko.wordpress.com/2011/01/16/struktur-data-graf/}.
+\newblock [Online, diakses 12-April-2018].
 
 \end{thebibliography}

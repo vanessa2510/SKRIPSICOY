@@ -46,6 +46,8 @@ Entreprenurial Intention & Persentase penduduk antara usia 18-64 tahun (selain o
 \hline
 Fear of Failure Rate & Persentase penduduk antara usia 18-64 tahun dapat melihat peluang baik yang mengindikasikan bahwa takut akan gagal akan menjauhkan mereka dari mendirikan usaha. \\
 \hline
+Role Model & Persentase penduduk antara usia 18-64 tahun yang memulai bisnis pada dua tahun terakhir.\\
+\hline
 \end{tabular}
 \label{tabelindikator}
 \end{table}
@@ -139,8 +141,27 @@ Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada
 					\label{fig:CA1D} 
 				\end{figure}
 			
-			Cellular Automata satu dimensi adalah cellular automata yang ruang selnya berupa array satu dimensi, sehingga masing-masing sel hanya memiliki dua tetangga yang tepat bersebelahan, kecuali sel paling pinggir yang hanya mempunyai satu tetangga.
+			Cellular Automata satu dimensi adalah cellular automata yang ruang selnya berupa array satu dimensi, sehingga masing-masing sel hanya memiliki dua tetangga yang tepat bersebelahan, kecuali sel paling pinggir yang hanya mempunyai satu tetangga. CA satu dimensi biasanya memakai aturan yang diusulkan oleh Wolfram. Sebagai contoh berikut aturan no. 30 diberikan pada gambar \ref{fig:wolfram}
 			
+			
+			\begin{figure} [H]
+					\centering  
+					\includegraphics[width=10cm, height=2cm]{wolfram} 
+					\caption[Aturan 30 dari Wolfram]{Aturan 30 dari Wolfram} 
+					\label{fig:wolfram} 
+				\end{figure}
+				
+				Cara membaca aturan tersebut adalah pada baris pertama terdapat 3 sel pada suatu saat (iterasi) tertentu, sel yang ditinjau adalah sel yang berada di tengah. Tetangga dari sel tersebut yaitu tetangga kiri dan kanan. Baris kedua menunjukkan keadaan sel pada \textit{state} berikutnya. Sebagai contoh pada gambar paling kiri, sel pada bagian tengah (gelap) mempunyai tetangga kiri gelap dan tetangga kanan gelap maka iterasi berikutnya \textit{state} sel tersebut berubah menjadi putih.
+				
+				Sebagai ilustrasi, pada gambar \ref{fig:penerapanwolfram} diberikan contoh penerapan aturan 30 dari Wolfram yang dimulai dari kondisi awal (t=0) dengan sel gelap yang berada di tengah hingga t=9. \cite{ECA}
+				
+				\begin{figure} [H]
+					\centering  
+					\includegraphics[width=10cm, height=6cm]{penerapanwolfram} 
+					\caption[Ilustrasi penerapan aturan 30 dari Wolfram]{Ilustrasi penerapan aturan 30 dari Wolfram} 
+					\label{fig:penerapanwolfram} 
+				\end{figure}
+				
 			\item CA Dua Dimensi
 			
 			\begin{figure} [H]
@@ -150,19 +171,26 @@ Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada
 					\label{fig:CA2D} 
 				\end{figure}
 			
-			Cellular Automata dua dimensi adalah cellular automata yang ruang selnya biasanya berupa matriks, sehingga masing-masing sel memiliki lebih dari dua tetangga. CA dua dimensi yang sangat terkenal adalah Conway's \textit{Game of Life}. Setiap sel pada CA menggambarkan suatu individu yang dapat berada pada \textit{state} hidup atau mati.
+			Cellular Automata dua dimensi adalah cellular automata yang ruang selnya biasanya berupa matriks, sehingga masing-masing sel memiliki lebih dari dua tetangga. CA dua dimensi yang sangat terkenal adalah Conway's \textit{Game of Life}. Setiap sel pada CA menggambarkan suatu individu yang dapat berada pada \textit{state} hidup atau mati. Sel hidup dapat berubah menjadi mati dan sel mati dapat berubah menjadi sel hidup. Aturan dasar Conway's diberikan pada gambar \ref{fig:conway}
 			
-			\item CA Tiga Dimensi
 			
 			\begin{figure} [H]
 					\centering  
-					\includegraphics[width=4cm, height=4cm]{CA3D} 
-					\caption[CA 3 Dimensi]{CA 3 Dimensi} 
-					\label{fig:CA3D} 
+					\includegraphics[width=12cm, height=8cm]{conway} 
+					\caption[Aturan Dasar Conway's Game of Life]{Aturan Dasar Conway's Game of Life} 
+					\label{fig:conway} 
 				\end{figure}
 			
-			Cellular Automata tiga dimensi adalah cellular automata yang ruang selnya memiliki baris, kolom dan kedalaman, sehingga jumlah tetangga setiap sel bisa lebih banyak lagi. \cite{referensiCA1}
-		\end{enumerate}
+			Berikut ilustrasi Conway yang menggambarkan perubahan yang terjadi pada sekumpulan sel mulai dari kondisi awal (t=0) sampai dengan kondisi akhir (t=3) yang dilakukan secara iteratif. Banyaknya sel hidup pada kondisi awal berkurang sedikit demi sedikit sampai pada kondisi akhir tidak ada lagi sel hidup. \cite{ECA}
+			
+			
+			\begin{figure} [H]
+					\centering  
+					\includegraphics[width=10cm, height=3cm]{contohconway} 
+					\caption[Ilustrasi Conway's Game of Life]{Ilustrasi Conway's Game of Life} 
+					\label{fig:contohconway} 
+				\end{figure}
+			
 		
 	\item Aplikasi CA
 		
@@ -190,21 +218,6 @@ Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada
 			\item Bidang Kesehatan
 			
 			Pada bidang kesehatan, CA juga sering digunakan untuk pemodelan penyebaran penyakit. Biasanya masalah penyebaran penyakit dimodelkan dengan CA dua dimensi dan menggunakan aturan Game of Life dari Conway. Contoh aplikasi yang diterapkan di dunia nyata yaitu simulasi infeksi virus influenza A menggunakn cellular automaton. Pada penelitian ini cellular automata yang digunakan adalah CA dua dimensi. Parameter-parameter masukan yang digunakan adalah sebagai berikut
-			\begin{enumerate}
-				\item \textit{gridWidth} dan \textit{gridHeight} yang berfungsi mendefinisikan lebar dan tinggi dari \textit{grid} yang digunakan.
-				\item \textit{cellLifespan} merupakan parameter yang menyimpan lama waktu hidup dari sel epitel sehat.
-				\item \textit{infectLifespan} merupakan parameter yang menyimpan lama waktu hidup dari sel epitel yang sakit.
-				\item \textit{divisionTime} merupakan durasi pembelahan sel epitel yang sehat.
-				\item \textit{infectInit} merupakan proporsi inisialisasi sel epitel yang terinfeksi dari keseluruhan sel epitel yang ada.
-				\item \textit{infectRate} merupakan banyaknya tetangga yang dapat ditulari sel epitel yang berpenyakit dalam waktu satu jam.
-				\item \textit{expressDelay} merupakan lama waktu tunggu perubahan status sel epitel \textit{infected} menjadi \textit{expressing}
-				\item \textit{infectDelay} merupakan lama waktu tunggu perubahan status sel epitel \textit{infected} menjadi \textit{infectious}
-				\item \textit{baseImmCell} merupakan proporsi minimal sel imun virgin dari keseluruhan sel epitel.
-				\item \textit{immLifespan} adalah jangka waktu hidup sel imun.
-				\item \textit{recruitChance} adalah kemungkinan penambahan sel imun \textit{mature} ke dalam \textit{grid}.
-				\item \textit{recruitDelay} adalah jeda waktu pengenalan sel imun terhadap sel epitel yang mengandung virus sampai sel imun \textit{mature} ditambahkan ke dalam \textit{grid}.
-				\item \textit{flowrate} adalah perkiraan kecepatan sel imun berpindah dari satu sel epitel ke epitel lain dalam waktu satu jam. \cite{referensiCA1}
-			\end{enumerate}
 			Aturan dalam penelitian ini ada dua jenis aturan yaitu aturan transisi dalam kelas \textit{EpithelialCell} dan kelas \textit{ImmuneCell}.
 			\item Bidang Lingkungan / Ekologi
 			
@@ -248,7 +261,11 @@ dimana :
 \begin{itemize}
 	\item $E = {e_{1}, ..., e_{n}}$ adalah himpunan berhingga wirausahaan,
 	\item $\alpha = {\alpha_{1}, ..., \alpha_{p}}$ adalah himpunan berhingga atribut dimana setiap $\alpha_{i}$ didefinisikan sebagai $\alpha_{i} : E \rightarrow A_{i}$,
-	\item $N = {N_{1}, ..., N_{k}}$ adalah himpunan berhingga ketetanggaan dimana setiap $N_{i}$ didefinisikan sebagai $N_{i}:E x E \rightarrow $
+	\item $N = {N_{1}, ..., N_{k}}$ adalah himpunan berhingga ketetanggaan dimana setiap $N_{i}$ didefinisikan sebagai $N_{i}:E \times E \rightarrow \Re$,
+	\item $\omega = {\omega_{1}, ..., \omega_{k}}$ adalah himpunan fungsi bobot atau nilai ketetanggaan dimana $\omega_{i} : N_{i} \rightarrow \Re$ memetakan setiap fungsi ketetanggaan ke sebuah bilangan riil,
+	\item $\rho = {\rho_{1}, ..., \rho_{p}}$ adalah himpunan indikator publik dimana setiap $\rho_{i}$ didefinisikan sebagai $\rho_{i} : p_{i} \rightarrow \Re$,
+	\item $\delta : \beta \rightarrow \beta$ adalah fungsi transisi state, dan
+	\item $\sigma : N \rightarrow N$ adalah sebuah fungsi transformasi ketetanggaan.
 \end{itemize}
 
 
@@ -296,7 +313,7 @@ Berdasarkan orientasi arah pada sisi, secara umum graf dibedakan menjadi 2 jenis
 	Graf yang sisinya mempunyai arah. Pada graf ini urutan sisi diperhatikan. \cite{referensiCA5}
 \end{enumerate}
 
-Sebuah graf dinyatakan sebagai struktur data yang terdiri dari simpul dan sisi yang membangun hubungan antar simpul. Terdapat dua macam representasi graf yaitu \textit{adjacency list} dan \textit{adjacency matrix}.
+Sebuah graf dinyatakan sebagai struktur data yang terdiri dari simpul dan sisi yang membangun hubungan antar simpul. Terdapat dua macam representasi graf yaitu \textit{adjacency list} dan \textit{adjacency matrix}. \cite{referensiGraph1}
 \subsection{Adjacency List}
 Adjacency list merupakan bentuk representasi dari seluruh sisi dalam sebuah graf sebagai suatu senarai (\textit{linked list}). Simpul-simpul yang dihubungkan merupakan simpul-simpul yang saling terkait. Dalam implementasinya, adjacency list menggunakan \textit{hash table} untuk menghubungkan satu simpul dengan simpul lain yang saling terkait. Contoh implementasi adjacency list yaitu sebagai berikut :
 
@@ -328,7 +345,7 @@ c & adjacent to & a,b\\
 \end{table}
 
 \subsection{Adjacency Matrix}
-Adjacency Matrix merupakan representasi matrix $N*N$ yang menyatakan hubungan antar simpul dalam suatu graf. Kolom dan baris menyatakan simpul-simpul, sedangkan nilai entri dari matrix menyatakan hubungan antar simpul. Contoh implementasi adjacency matrix yaitu sebagai berikut :
+Adjacency Matrix merupakan representasi matrix $N \times N$ yang menyatakan hubungan antar simpul dalam suatu graf. Kolom dan baris menyatakan simpul-simpul, sedangkan nilai entri dari matrix menyatakan hubungan antar simpul. Contoh implementasi adjacency matrix yaitu sebagai berikut :
 
 \begin{figure} [H]
 		\centering  
