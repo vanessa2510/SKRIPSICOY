@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  12 APR 2018 16:11
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  16 APR 2018 11:51
 entering extended mode
 **skripsi.tex
 
@@ -1302,14 +1302,14 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 262.
-
-<tingkatwirausaha.png, id=433, 379.4175pt x 242.40562pt>
+ [14]
+<tingkatwirausaha.png, id=443, 379.4175pt x 242.40562pt>
 File: tingkatwirausaha.png Graphic file (type png)
 
 <use tingkatwirausaha.png>
 Package pdftex.def Info: tingkatwirausaha.png used on input line 277.
 (pdftex.def)             Requested size: 256.07838pt x 142.2709pt.
- [14] <graf1.png, id=442, 261.97874pt x 179.92218pt>
+ <graf1.png, id=444, 261.97874pt x 179.92218pt>
 File: graf1.png Graphic file (type png)
 
 <use graf1.png>
@@ -1318,13 +1318,13 @@ Package pdftex.def Info: graf1.png used on input line 292.
  [15 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skr
 ipsi FTIS/tingkatwirausaha.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skri
 psi FTIS v12-0/Template Skripsi FTIS/graf1.png>]
-<adjacencylist.png, id=455, 261.22594pt x 225.09094pt>
+<adjacencylist.png, id=456, 261.22594pt x 225.09094pt>
 File: adjacencylist.png Graphic file (type png)
  <use adjacencylist.png>
 Package pdftex.def Info: adjacencylist.png used on input line 322.
 (pdftex.def)             Requested size: 113.81172pt x 113.81255pt.
 
-<adjacencymatrix.png, id=458, 170.13562pt x 147.55125pt>
+<adjacencymatrix.png, id=459, 170.13562pt x 147.55125pt>
 File: adjacencymatrix.png Graphic file (type png)
 
 <use adjacencymatrix.png>
@@ -1338,31 +1338,31 @@ kripsi FTIS v12-0/Template Skripsi FTIS/adjacencymatrix.png>]
 
 
 ]
-Underfull \hbox (badness 4479) in paragraph at lines 21--26
+Underfull \hbox (badness 4479) in paragraph at lines 22--27
 []\T1/lmr/m/n/10.95 (+20) Fery Agus Pri-a-na (2012) Pe-nger-ti-an dan de-fi-ni-
 si wi-ra-u-sa-ha me-nu-rut pa-ra ah-li.
  []
 
 
-Underfull \hbox (badness 3623) in paragraph at lines 51--56
+Underfull \hbox (badness 3623) in paragraph at lines 57--62
 []\T1/lmr/m/n/10.95 (+20) Bramantiyo Mar-ju-ki (2016) How Wi-ll Dha-ka Grow Spa
 -ti-a-lly In Fu-tu-re? Mo-
  []
 
 
-Underfull \hbox (badness 6859) in paragraph at lines 51--56
+Underfull \hbox (badness 6859) in paragraph at lines 57--62
 \T1/lmr/m/n/10.95 (+20) de-lling Its Urb-an Grow-th Wi-th A Near-Future Plan-ni
 ng Sce-na-rio Per-s-pe-cti-ve.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
+Underfull \hbox (badness 10000) in paragraph at lines 57--62
 \T1/lmr/m/n/10.95 (+6) https://www.slideshare.net/bramantiyomarjuki/a-translati
 on-paper-about-cellular-automata.
  []
 
 
-Overfull \hbox (22.23317pt too wide) in paragraph at lines 63--66
+Overfull \hbox (22.23317pt too wide) in paragraph at lines 69--72
 []\T1/lmr/m/n/10.95 (-20) Wisnu Su-ho-ko (2011) Struk-tur Da-ta Graf.  https://
 wisnusuhoko.wordpress.com/2011/01/16/struktur-
  []
@@ -1438,9 +1438,6 @@ Package rerunfilecheck Info: File `skripsi.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
  )
 (\end occurred inside a group at level 1)
@@ -1448,11 +1445,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
 ### semi simple group (level 1) entered at line 413 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 35255 strings out of 493921
- 772904 string characters out of 3147276
+ 35258 strings out of 493921
+ 772943 string characters out of 3147276
  1310720 words of memory out of 3000000
  37542 multiletter control sequences out of 15000+200000
- 72445 words of font info for 130 fonts, out of 3000000 for 9000
+ 72575 words of font info for 131 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  78i,13n,130p,1253b,2231s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{
@@ -1472,9 +1469,9 @@ ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX
 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on skripsi.pdf (45 pages, 829325 bytes).
+Output written on skripsi.pdf (45 pages, 931380 bytes).
 PDF statistics:
- 700 PDF objects out of 1000 (max. 8388607)
- 210 named destinations out of 1000 (max. 500000)
+ 703 PDF objects out of 1000 (max. 8388607)
+ 211 named destinations out of 1000 (max. 500000)
  23849 words of extra memory for PDF output out of 24883 (max. 10000000)
 
