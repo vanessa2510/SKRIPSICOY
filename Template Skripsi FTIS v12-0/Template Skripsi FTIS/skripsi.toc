@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {2.3.1}Definisi ECA}{14}{subsection.2.3.1}
 \contentsline {section}{\numberline {2.4}Graf}{15}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Adjacency List}{16}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Adjacency Matrix}{16}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.2}Adjacency Matrix}{17}{subsection.2.4.2}
 \contentsline {chapter}{Daftar Referensi}{19}{chapter*.5}
 \contentsline {chapter}{\numberline {A}Kode Program}{21}{appendix.A}
 \contentsline {chapter}{\numberline {B}Hasil Eksperimen}{23}{appendix.B}
