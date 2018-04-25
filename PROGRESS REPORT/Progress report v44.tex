@@ -1,0 +1,211 @@
+\documentclass[a4paper,twoside]{article}
+\usepackage[T1]{fontenc}
+\usepackage[bahasa]{babel}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{float}
+\usepackage[cm]{fullpage}
+\pagestyle{myheadings}
+\usepackage{etoolbox}
+\usepackage{setspace} 
+\usepackage{lipsum} 
+\setlength{\headsep}{30pt}
+\usepackage[inner=2cm,outer=2.5cm,top=2.5cm,bottom=2cm]{geometry} %margin
+% \pagestyle{empty}
+
+\makeatletter
+\renewcommand{\@maketitle} {\begin{center} {\LARGE \textbf{ \textsc{\@title}} \par} \bigskip {\large \textbf{\textsc{\@author}} }\end{center} }
+\renewcommand{\thispagestyle}[1]{}
+\markright{\textbf{\textsc{Laporan Perkembangan Pengerjaan Skripsi\textemdash Sem. Genap 2017/2018}}}
+
+\onehalfspacing
+ 
+\begin{document}
+
+\title{\@judultopik}
+\author{\nama \textendash \@npm} 
+
+%ISILAH DATA BERIKUT INI:
+\newcommand{\nama}{Vanessa Sukamto}
+\newcommand{\@npm}{2014730010}
+\newcommand{\tanggal}{25/04/2018} %Tanggal pembuatan dokumen
+\newcommand{\@judultopik}{Simulator Pertumbuhan Wirausaha Berbasis Cellular Automata} % Judul/topik anda
+\newcommand{\kodetopik}{CEN4402}
+\newcommand{\jumpemb}{1} % Jumlah pembimbing, 1 atau 2
+\newcommand{\pembA}{Cecilia Esti Nugraheni}
+\newcommand{\pembB}{-}
+\newcommand{\semesterPertama}{8 - Genap 17/18} % semester pertama kali topik diambil, angka 1 dimulai dari sem Ganjil 96/97
+\newcommand{\lamaSkripsi}{1} % Jumlah semester untuk mengerjakan skripsi s.d. dokumen ini dibuat
+\newcommand{\kulPertama}{Skripsi 1} % Kuliah dimana topik ini diambil pertama kali
+\newcommand{\tipePR}{B} % tipe progress report :
+% A : dokumen pendukung untuk pengambilan ke-2 di Skripsi 1
+% B : dokumen untuk reviewer pada presentasi dan review Skripsi 1
+% C : dokumen pendukung untuk pengambilan ke-2 di Skripsi 2
+
+% Dokumen hasil template ini harus dicetak bolak-balik !!!!
+
+\maketitle
+
+\pagenumbering{arabic}
+
+\section{Data Skripsi} %TIDAK PERLU MENGUBAH BAGIAN INI !!!
+Pembimbing utama/tunggal: {\bf \pembA}\\
+Pembimbing pendamping: {\bf \pembB}\\
+Kode Topik : {\bf \kodetopik}\\
+Topik ini sudah dikerjakan selama : {\bf \lamaSkripsi} semester\\
+Pengambilan pertama kali topik ini pada : Semester {\bf \semesterPertama} \\
+Pengambilan pertama kali topik ini di kuliah : {\bf \kulPertama} \\
+Tipe Laporan : {\bf \tipePR} -
+\ifdefstring{\tipePR}{A}{
+			Dokumen pendukung untuk {\BF pengambilan ke-2 di Skripsi 1} }
+		{
+		\ifdefstring{\tipePR}{B} {
+				Dokumen untuk reviewer pada presentasi dan {\bf review Skripsi 1}}
+			{	Dokumen pendukung untuk {\bf pengambilan ke-2 di Skripsi 2}}
+		}
+		
+\section{Latar Belakang}
+
+Pada saat ini, lapangan kerja pada suatu negara tidak bisa kita prediksi, tetapi kenyataan yang kita ketahui adalah lapangan kerja dari tahun ke tahun semakin terbatas \cite{LBwirausaha}. Dengan melihat situasi tersebut maka bisa dipastikan tingkat pengangguran di suatu negara akan semakin tinggi. Solusi terbaik untuk mengurangi permasalahan tersebut adalah dengan berwirausaha. Kewirausahaan adalah kemampuan seseorang untuk membuat suatu usaha yang dimulai dari 0 atau dimulai dari bawah yang dirintis hingga usaha tersebut benar-benar sukses. Tentu saja hal ini memberikan pengaruh positif terhadap pertumbuhan ekonomi suatu negara, karena kewirausahaan juga sekaligus membuka lapangan kerja bagi masyarakat. Jika usaha yang dirintis semakin besar, otomatis perusahaan tersebut akan merekrut tenaga kerja yang semakin banyak lagi. 
+
+ 
+Pada jaman sekarang, sudah banyak sekali orang yang lebih memilih untuk berwirausaha daripada bekerja di kantor atau di sebuah perusahaan. Alasan mengapa banyak orang lebih memilih berwirausaha pun bervariasi contohnya orang tersebut tidak terlalu menyukai waktu kerjanya diatur oleh orang lain melainkan ia lebih menyukai waktu kerjanya diatur oleh dirinya sendiri. Tidak hanya pada jaman sekarang, dari jaman dahulu juga sudah ada wirausaha yang namanya tidak asing lagi didengar oleh telinga kita salah satunya yaitu Bob Sadino. Untuk menjadi wirausaha yang sukses seperti Bob Sadino tidaklah mudah, pasti ada beberapa faktor dari luar maupun dalam yang mempengaruhi keberlangsungan wirausaha. Dalam berwirausaha dibutuhkan usaha yang besar untuk menjadi sukses, usaha tersebut juga harus dijaga kekonsistenannya agar tidak mengalami kebangkrutan.
+
+
+Kewirausahaan sangat diperlukan guna mendorong perekonomian suatu negara karena dapat mengurangi tingkat pengangguran di Indonesia. Secara ekonomis, kewirausahaan akan membantu meningkatkan pendapatan masyarakat atau meningkatkan kesejahteraan melalui penciptaan produk baru, serta mengurangi kemiskinan.  Ideal besarnya populasi wirausaha dalam suatu negara adalah 2\% dari total penduduk suatu negara. Saat ini Indonesia baru mencapai pengusaha dari total penduduk. Maka dari itu, kondisi wirausaha ini perlu dipantau terus-menerus perkembangannya agar dapat memajukan perekonomian di Indonesia. Pemantauan ini dilakukan oleh pemerintah dan lembaga-lembaga swasta yang berkepentingan. Salah satu lembaga yang memantau adalah GEM (Global Entrepreneurship Monitor). GEM merupakan konsorsium yang bertujuan untuk mengukur dan memantau kegiatan kewirausahaan. 
+
+
+GEM mengilustrasikan kewirausahaan menjadi 3 fase \cite{GEM2013}, fase pertama yaitu wirausaha \textit{nascent}, yaitu mereka yang baru memulai suatu usaha (<3 bulan). Fase kedua yaitu pemilik usaha baru (\textit{new business owners}), yaitu wirausaha \textit{nascent} yang sudah menjalani usaha lebih dari tiga bulan tetapi tidak lebih dari tiga setengah tahun. Fase ketiga yaitu wirausaha mapan (\textit{established entrepreneurs}), yaitu wirausaha yang sudah menjalankan sebuah usaha lebih dari tiga setengah tahun.
+
+
+Selain pemantauan terhadap kondisi riil, salah satu kegiatan yang mendukung pemantauan adalah pengamatan secara tidak langsung. Salah satu pengamatan tidak langsung adalah dengan membuat model matematika dari pertumbuhan wirausaha dan kemudian melakukan simulasi terhadap model tersebut. Salah satu model matematika yang dapat digunakan untuk memodelkan pertumbuhan wirausaha adalah Entrepreneurial Cellular Automata (ECA) yang diusulkan oleh Nugraheni dan Natali. ECA adalah pengembangan dari Cellular Automata standar dari Ulam dan New Neuman. Cellular Automata (CA) sendiri merupakan suatu model matematika yang digunakan untuk memodelkan suatu sistem dinamis. Pada \cite{ECA} dijelaskan bagaimana struktur dari ECA dan diberikan illustrasi bagaimana menggunakan ECA untuk memprediksi pertumbuhan wirausaha berdasarkan parameter wirausaha dari GEM. 
+
+
+Dalam hasil penelitian ECA setiap wirausahawan mempunyai beberapa atribut yang bersifat statis maupun dinamis. Contoh atribut yang bersifat statis yaitu bidang usaha, kategori usaha, lokasi geografis dan jenis kelamin. Sementara contoh untuk atribut dinamis adalah usia, level wirausaha dan usia usaha. Diantara atribut dinamis, level wirausaha menjadi atribut penting karena atribut ini yang akan menjadi acuan untuk menentukan perkembangan dari kewirausahaan. \textit{Continuity Index} digunakan untuk menentukan apakah seorang wirausahawan pada suatu saat tertentu akan meneruskan usahanya pada waktu selanjutnya.
+
+
+Skripsi ini bertujuan untuk mengembangkan ECA dengan memperhitungkan beberapa parameter yang belum diperhatikan pada ECA dan mengembangkan perangkat lunak simulator yang dapat menampilkan visualisasi dari simulasi. Selain menambahkan parameter yang berhubungan dengan pertumbuhan wirausaha, pengembangan ini juga akan memperhatikan pertumbuhan penduduk. Di samping itu, simulasi pada data nyata juga perlu dilakukan untuk membuktikan kebenaran dari model yang dibuat.
+
+
+\section{Tujuan}
+
+Berdasarkan rumusan masalah yang telah dibuat, maka tujuan penelitian ini dijelaskan ke dalam poin-poin sebagai berikut :
+
+
+\begin{enumerate}
+	\item Mempelajari faktor yang berpengaruh pada keberlangsungan wirausaha.
+	\item Memodelkan pertumbuhan wirausaha dengan \textit{cellular automata}.
+	\item Mengembangkan model keberlangsungan wirausaha dengan \textit{cellular automata}.
+\end{enumerate}
+
+\section{Rumusan Masalah}
+
+Berikut adalah susunan permasalahan yang akan dibahas pada penelitian ini:
+
+
+\begin{enumerate}
+	\item Faktor apa saja yang mempengaruhi keberlangsungan wirausaha?
+	\item Bagaimana memodelkan pertumbuhan wirausaha dengan \textit{cellular automata}
+	\item Bagaimana mengembangkan model keberlangsungan wirausaha dengan \textit{cellular automata}?
+\end{enumerate}
+
+\section{Detail Perkembangan Pengerjaan Skripsi}
+Detail bagian pekerjaan skripsi sesuai dengan rencan kerja/laporan perkembangan terkahir :
+	\begin{enumerate}
+		\item Melakukan studi literatur tentang GEM (Global Entrepreneurship Monitor) dan ECA (Entrepreneur Cellular Automata).
+		
+		
+		{\bf Status :} Ada sejak rencana kerja skripsi.\\
+		{\bf Hasil :} Pertama, studi literatur tentang GEM mengenai faktor atau atribut yang mempengaruhi berlangsungnya kegiatan kewirausahaan di Indonesia. Atribut-atribut ini dibedakan menjadi atribut statis (nilainya tidak berubah) dan atribut dinamis (nilainya dapat berubah). Berikut merupakan atribut-atribut yang mempengaruhi berlangsungnya kegiatan kewirausahaan:
+		\begin{enumerate}
+			\item Atribut Dinamis
+				\begin{itemize}
+					\item Umur : usia dari wirausaha itu sendiri.
+					\item Level Wirausaha : tingkat wirausaha dilihat dari berapa lama usaha itu dilakukan.
+					\item Usia usaha : usia dari usaha yang dilakukan wirausahawan.
+				\end{itemize}
+			\item Atribut Statis
+				\begin{itemize}
+					\item Bidang usaha : bidang usaha yang ditekuni oleh wirausahawan.
+					\item Kategori usaha : kategori usaha yang dipilih oleh wirausahawan (kecil,menengah dan besar).
+					\item Jenis kelamin : jenis kelamin wirausahawan tersebut.
+					\item Lokasi geografis : lokasi berdirinya usaha tersebut.
+				\end{itemize}
+		\end{enumerate}
+
+
+Terdapat juga atribut berdasarkan faktor psikologi yang dijelaskan pada tabel \ref{tabelindikator} :
+
+\begin{table}[H]
+\centering
+\caption{Tabel Indikator GEM}
+\begin{tabular}{|c|p{8cm}|}
+\hline
+Indikator & Deskripsi\\
+\hline
+Perceived Opportunities & Persentase penduduk antara usia 18-64 tahun yang melihat peluang baik untuk memulai usaha. \\
+\hline
+Perceived Capabilities & Persentase penduduk antara usia 18-64 tahun yang percaya bahwa mereka mempunyai kemampuan untuk memulai suatu usaha. \\
+\hline
+Entreprenurial Intention & Persentase penduduk antara usia 18-64 tahun (selain orang yang berwirausaha) yang bertekad untuk mendirikan usaha dalam waktu tiga tahun kedepan.\\
+\hline
+Fear of Failure Rate & Persentase penduduk antara usia 18-64 tahun dapat melihat peluang baik yang mengindikasikan bahwa takut akan gagal akan menjauhkan mereka dari mendirikan usaha. \\
+\hline
+Role Model & Persentase penduduk antara usia 18-64 tahun yang memulai bisnis pada dua tahun terakhir.\\
+\hline
+\end{tabular}
+\label{tabelindikator}
+\end{table}
+
+
+Kedua, mempelajari kelompok-kelompok wirausaha atau fase wirausaha. Kelompok wirausaha tersebut yang pertama adalah wirausaha \textit{nascent} merupakan tahapan dimana seseorang memulai usahanya yang waktunya kurang dari tiga bulan. Kedua wirausaha yang sedang menjalankan usahanya dan sudah bisa menggaji orang lain, waktunya lebih dari tiga bulan tetapi kurang dari tiga tahun. Terakhir, wirausaha mapan (\textit{established entrepreneur}) yaitu seseorang yang sudah menjalankan usahanya lebih dari tiga tahun dan tentunya sudah bisa menggaji orang.
+
+Ketiga, mempelajari data dari GEM
+		
+
+	\end{enumerate}
+
+\section{Pencapaian Rencana Kerja}
+Langkah-langkah kerja yang berhasil diselesaikan dalam Skripsi 1 ini adalah sebagai berikut:
+\begin{enumerate}
+\item
+\item
+\item
+\end{enumerate}
+
+
+
+\section{Kendala yang Dihadapi}
+%TULISKAN BAGIAN INI JIKA DOKUMEN ANDA TIPE A ATAU C
+Kendala - kendala yang dihadapi selama mengerjakan skripsi :
+\begin{itemize}
+	%\item Terlalu banyak melakukan prokratinasi
+	\item Terlalu banyak godaan berupa hiburan (gadget, film, dll)
+	\item Skripsi diambil bersamaan dengan banyak mata kuliah yang masing-masing memiliki tugas besar.
+	\item Mengalami kesulitan pada saat sudah mulai membuat program komputer karena selama ini selalu dibantu teman
+\end{itemize}
+
+\vspace{1cm}
+\centering Bandung, \tanggal\\
+\vspace{2cm} \nama \\ 
+\vspace{1cm}
+
+Menyetujui, \\
+\ifdefstring{\jumpemb}{2}{
+\vspace{1.5cm}
+\begin{centering} Menyetujui,\\ \end{centering} \vspace{0.75cm}
+\begin{minipage}[b]{0.45\linewidth}
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013 \\
+\vspace{2cm} Nama: \pembA \\ Pembimbing Utama
+\end{minipage} \hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013\\
+\vspace{2cm} Nama: \pemB \\ Pembimbing Pendamping
+\end{minipage}
+\vspace{0.5cm}
+}{
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013\\
+\vspace{2cm} Nama: \pembA \\ Pembimbing Tunggal
+}
+\end{document}
+
