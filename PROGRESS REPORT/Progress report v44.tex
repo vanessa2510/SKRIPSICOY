@@ -150,7 +150,7 @@ Terdapat juga indikator-indikator berdasarkan faktor psikologi individu yang men
 \begin{table}[H]
 \centering
 \caption{Tabel Indikator GEM}
-\begin{tabular}{|c|p{8cm}|}
+\begin{tabular}{|p{4cm}|p{12cm}|}
 \hline
 Indikator & Deskripsi\\
 \hline
@@ -163,6 +163,36 @@ Entreprenurial Intention & Persentase penduduk antara usia 18-64 tahun (selain o
 Fear of Failure Rate & Persentase penduduk antara usia 18-64 tahun dapat melihat peluang baik yang mengindikasikan bahwa takut akan gagal akan menjauhkan mereka dari mendirikan usaha. \\
 \hline
 Role Model & Persentase penduduk antara usia 18-64 tahun yang memulai bisnis pada dua tahun terakhir.\\
+\hline
+New Product Early-Stage Entrepreneurial (TEA) Activity & Persentase dari TEA yang mengindikasikan bahwa produk atau jasa mereka masih baru (untuk beberapa konsumen).\\
+\hline
+Growth Expectation Early-stage Entrepreneurial Activity : Relative Prevalence & Persentase dari TEA yang berharap untuk mempekerjakan paling sedikit lima karyawan dalam waktu lima tahun kedepan\\
+\hline
+Informal Investors Rate & Persentase dari populasi berusia 18-64 yang telah menyediakan dana untuk sebuah usaha baru, didirikan oleh orang lain dalam waktu tiga tahun terakhir.\\
+\hline
+Totaly Early-stage Entrepreneurial Activity for Female Working Age Population & Persentase dari populasi wanita berusia 18-64 yang merupakan seorang wirausaha nascent (pemilik usaha baru).\\
+\hline
+Totaly Early-stage Entrepreneurial Activity for Male Working Age Population & Persentase dari populasi pria berusia 18-64 yang merupakan seorang wirausaha nascent (pemilik usaha baru).\\
+\hline
+Improvement-Driven Opportunity Entrepreneurial Activity : Relative Prevalence & persentase orang yang terlibat dalam TEA yang mengklaim bahwa mereka didorong oleh kesempatan bukan karena kurangnya pilihan pekerjaan\\
+\hline
+Necessity-Driven Entrepreneurial Activity : Relative Prevalence & persentase orang yang terlibat dalam TEA yang berwirausaha karena mereka tidak punya pilihan pekerjaan lain.\\
+\hline
+Established Business Ownership Rate & Persentase dari populasi berusia 18-64 yang merupakan pemilik manager dari sebuah usaha mapan dan sudah menghasilkan gaji atau untung apapun ke pemiliknya selama lebih dari 42 bulan.\\
+\hline
+Total Early-stage Entrepreneurial Activity & persentase dari populasi berusia 18-64 yang merupakan wirausaha nascent.\\
+\hline
+New Business Ownership Rate & Persentase dari populasi 18-64 yang merupakan pemilik manager dari sebuah usaha mapan yang sudah menghasilkan gaji atau untung selama lebih dari 3 bulan tetapi tidak lebih dari 42 bulan.\\
+\hline
+Nascent Entrepreneurship Rate & Persentase dari populasi 18-64 yang merupakan wirausaha nascent terlibat secara aktif memulai suatu usaha yang mereka miliki sendiri/bersama.\\
+\hline
+Media Attention for Entrepreneurship & persentase dari populasi berusia 18-64 yang setuju dengan pernyataan bahwa di negara mereka, mereka sering melihat atau mendengar di media tentang usaha baru yang sukses.\\
+\hline
+High status successful Entrepreneur & persentase dari populasi berusia 18-64 yang setuju dengan pernyataan bahwa di negara mereka, wirausaha yang sukses dihormati dan bercitra tinggi.\\
+\hline
+Entrepreneurship as Desirable Care & persentase dari populasi berusia 18-64 yang setuju dengan pernyataan bahwa di negara mereka, kebanyakan orang mempertimbangkan untuk memulai usaha baru sebagai karir yang diinginkan.\\
+\hline
+Know Startup Entrepreneur Rate & persentase dari populasi berusia 18-64 yang kenal seseorang yang mendirikan suatu usaha dalam waktu 2 tahun terakhir secara pribadi.\\
 \hline
 \end{tabular}
 \label{tabelindikator}
@@ -385,6 +415,7 @@ Waktu sekarang & Waktu berikutnya \\
 \label{tabelLW}
 \end{table}
 
+Untuk memberikan gambaran bagaimana penggunaan model untuk memantau pertumbuhan wirausaha, dilakukan simulasi menggunakan data yang tidak nyata. Simulasi ini menggunakan atribut berupa umur, level wirausaha dan jenis kelamin.
 
 
 %rumus CIdx
@@ -433,9 +464,206 @@ Cultural, social norms and society support & 3.29\\
 \label{tabelFaktorPublik}
 \end{table}
 	
-
-\end{enumerate}
 	
+	Terdapat beberapa simulasi yang bertujuan untuk menunjukkan pengaruh dari komposisi a,b dan c pada rumus CIdx dan pengaruh dari nilai ambang. Dilakukan simulasi sebanyak enam kali dengan parameter seperti yang diberikan pada tabel \ref{tabelParameter}
+	
+	\begin{table} [H]
+	\centering
+	\caption{Parameter settings}
+	\begin{tabular} {|c|c|c|c|c|}
+	\hline
+	Simulasi & a & b & c & threshold\\
+	\hline
+	1 & 0.7 & 0.2 & 0.1 & 20\\
+	\hline
+	2 & 0.6 & 0.3 & 0.1 & 20\\
+	\hline
+	3 & 0.5 & 0.4 & 0.1 & 20\\
+	\hline
+	4 & 0.5 & 0.3 & 0.2 & 20\\
+	\hline
+	5 & 0.5 & 0.3 & 0.2 & 15\\
+	\hline
+	6 & 0.5 & 0.3 & 0.2 & 10\\
+	\hline
+	\end{tabular}
+	\label{tabelParameter}
+	\end{table}
+
+
+	Dari tabel \ref{tabelParameter} bisa disimpulkan bahwa semakin besarnya pengaruh tetangga akan semakin lambat pertumbuhan kewirausahaan.
+\end{enumerate}
+
+	\item Melakukan analisis model pertumbuhan wirausaha dengan \textit{cellular automata}.
+	
+				{\bf Status :} Ada sejak rencana skripsi.\\
+		    {\bf Hasil :}
+				
+				Dalam analisis ini hanya mengambil salah satu dari enam simulasi yaitu simulasi keenam. Nilai a = 0.5, b = 0.3 dan c = 0.2 dan nilai ambangnya 10. Nilai dari kondisi internal wirausaha diambil dari Nawangpalupi (Perceived Opportunities = 0.47, Perceived Capabilities = 0.62, Entrepreneurial Intention = 0.35 dan Fear of Failure = 0.35). Diasumsikan terdapat tiga wirausahawan dan masing-masing wirausahawan memiliki tiga atribut yaitu level wirausaha, umur dan jenis kelamin. Penjelasan lebih lanjut yaitu sebagai berikut :
+				
+\begin{table} [H]
+\centering
+\caption{Data wirausahawan}
+\begin{tabular}{|c|c|c|c|}
+\hline
+& Umur & Level Wirausaha & Jenis kelamin\\
+\hline
+Entrepreneur 1 & 19 tahun (228 bulan) & nascent & Male\\
+\hline
+Entrepreneur 2 & 24 tahun (288 bulan) & new\_bm & Male\\
+\hline
+Entrepreneur 3 & 30 tahun (360 bulan) & new\_bm & Female\\
+\hline
+\end{tabular}
+\end{table}
+
+
+Berikut data bobot untuk masing-masing atribut :
+
+\begin{table} [H]
+\centering
+\caption{Data Bobot Atribut Level Usaha}
+\begin{tabular}{|c|c|}
+\hline
+& Bobot\\
+\hline
+Potential & 7.0\\
+\hline
+Nascent & 7.4\\
+\hline
+New\_bm & 7.6\\
+\hline
+Est\_bm & 7.8\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table} [H]
+\centering
+\caption{Data Bobot Atribut Umur}
+\begin{tabular}{|c|c|}
+\hline
+& Bobot\\
+\hline
+(18-24 tahun) & 7.0\\
+\hline
+(25-34 tahun) & 7.5\\
+\hline
+(35-44 tahun) & 7.8\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table} [H]
+\centering
+\caption{Data Bobot Atribut Jenis Kelamin}
+\begin{tabular}{|c|c|}
+\hline
+& Bobot\\
+\hline
+Male & 0.6\\
+\hline
+Female & 0.4\\
+\hline
+\end{tabular}
+\end{table}
+				
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{t0} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 0]{Gambar ketetanggaan tiga entrepreneur pada saat t = 0} 
+		\label{fig:t0} 
+	\end{figure}
+
+
+Dalam simulasi ini diasumsikan terdapat dua kondisi publik yaitu financial environment related with entrepreneurship yang memiliki bobot 3.06 dan cultural, social norms and society support yang memiliki bobot 3.29. Perhitungan masing-masing entrepreneur 1, entrepreneur 2 dan entrepreneur 3 (E1,E2,E3) pada saat t=0 yaitu sebagai berikut :
+	
+
+\begin{equation}
+	CIdx_{1}(t=0) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {1} {2} + 0) + 0.2 \times (3.06 + 3.29) = 9.305
+\end{equation}	
+
+\begin{equation}
+	CIdx_{2}(t=0) = 0.5 \times (7.6 + 7.0 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + \frac {1} {2} + \frac {1} {2}) + 0.2 \times (3.06 + 3.29) = 9.63
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=0) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {1} {2} + 0) + 0.2 \times (3.06 + 3.29) = 9.345
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{t0(2)} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 0]{Gambar ketetanggaan tiga entrepreneur pada saat t = 0} 
+		\label{fig:t0} 
+	\end{figure}
+
+Perhitungan masing-masing entrepreneur 1, entrepreneur 2 dan entrepreneur 3 (E1,E2,E3) pada saat t=1 yaitu sebagai berikut :
+
+\begin{equation}
+	CIdx_{1}(t=1) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {2} {6}  + 0) + 0.2 \times (3.06 + 3.29) = 9.254
+\end{equation}
+
+\begin{equation}
+	CIdx_{2}(t=1) = 0.5 \times (7.6 + 7.5 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29) = 9.68
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=1) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29) = 9.295
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{t1} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 1]{Gambar ketetanggaan tiga entrepreneur pada saat t = 1} 
+		\label{fig:t0} 
+	\end{figure}
+
+Pada saat t=2 terdapat 1 kondisi publik baru yaitu physical infrastructures and services access
+
+
+\begin{equation}
+	CIdx_{1}(t=2) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {2} {6}  + 0) + 0.2 \times (3.06 + 3.29 + 3.45) = 9.945
+\end{equation}
+
+\begin{equation}
+	CIdx_{2}(t=2) = 0.5 \times (7.6 + 7.5 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29 + 3.45) = 10.37
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=2) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29+ 3.45) = 9.985
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{t2} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 2]{Gambar ketetanggaan tiga entrepreneur pada saat t = 2} 
+		\label{fig:t0} 
+	\end{figure}
+	
+	Pada saat t=3 terdapat satu kondisi publik baru yaitu internal market dynamic.
+	
+\begin{equation}
+	CIdx_{1}(t=3) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {1} {2}  + 0) + 0.2 \times (3.06 + 3.29 + 3.45 + 3.92) = 10.779
+\end{equation}
+
+\begin{equation}
+	CIdx_{2}(t=3) = 0.5 \times (7.6 + 7.5 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + 0 + 0) + 0.2 \times (3.06 + 3.29 + 3.45 + 3.92) = 11.054
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=3) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {1} {2} + 0) + 0.2 \times (3.06 + 3.29+ 3.45 + 3.92) = 10.819
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{t3} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 3]{Gambar ketetanggaan tiga entrepreneur pada saat t = 3} 
+		\label{fig:t0} 
+	\end{figure}
+ 
 	\item Mempelajari teori tentang graf
 				
 				
@@ -584,7 +812,7 @@ Kendala - kendala yang dihadapi selama mengerjakan skripsi :
 	%\item Terlalu banyak melakukan prokratinasi
 	\item Terlalu banyak godaan berupa hiburan (gadget, film, dll)
 	\item Skripsi diambil bersamaan dengan banyak mata kuliah yang masing-masing memiliki tugas besar.
-	\item Mengalami kesulitan pada saat mempelajari struktur ECA.
+	\item Mengalami kesulitan pada saat mempelajari struktur ECA dan perhitungannya.
 \end{itemize}
 
 \vspace{1cm}
