@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  7 MAY 2018 15:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  11 MAY 2018 21:00
 entering extended mode
 **Progress*report*v44.tex
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\PROGRESS REPORT\Progress report v44.tex"
@@ -224,140 +224,282 @@ Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 81.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 81.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 89.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 89.
+
 Overfull \vbox (6.4151pt too high) has occurred while \output is active []
 
 
-[2] <GEM2016-wirausaha.png, id=15, 586.44093pt x 293.59688pt>
+[2] <GEM2016-wirausaha.png, id=18, 586.44093pt x 293.59688pt>
 File: GEM2016-wirausaha.png Graphic file (type png)
 
 <use GEM2016-wirausaha.png>
-Package pdftex.def Info: GEM2016-wirausaha.png used on input line 124.
+Package pdftex.def Info: GEM2016-wirausaha.png used on input line 129.
 (pdftex.def)             Requested size: 455.23868pt x 227.62033pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 134.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 139.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 134.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 153.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 153.
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
-\T1/cmr/m/n/10 En-trep-re-ne-u-ri-al (TEA)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
-[]\T1/cmr/m/n/10 Growth Expe-cta-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
-\T1/cmr/m/n/10 Early-stage En-trep-re-ne-
- []
-
-
-Underfull \hbox (badness 7012) in paragraph at lines 173--173
-[]\T1/cmr/m/n/10 Totaly Early-stage En-
- []
-
-
-Underfull \hbox (badness 7012) in paragraph at lines 175--175
-[]\T1/cmr/m/n/10 Totaly Early-stage En-
- []
-
-
-Underfull \hbox (badness 1043) in paragraph at lines 177--177
-[]\T1/cmr/m/n/10 Improvement-Driven Op-
- []
-
-
-Underfull \hbox (badness 1629) in paragraph at lines 179--179
-[]\T1/cmr/m/n/10 Necessity-Driven En-trep-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
-[]\T1/cmr/m/n/10 Established Bu-si-ness
- []
-
-
-Overfull \hbox (9.77359pt too wide) in paragraph at lines 153--199
- [][] 
- []
-
-
-Underfull \vbox (badness 1237) has occurred while \output is active []
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 139.
 
 Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 
 
 [3 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/GEM2016-wirausaha.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+[]\T1/cmr/m/n/10 Perceived
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\T1/cmr/m/n/10 Op-por-tu-ni-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+[]\T1/cmr/m/n/10 Perceived
+ []
+
+
+Overfull \hbox (6.63454pt too wide) in paragraph at lines 165--165
+[]\T1/cmr/m/n/10 Entreprenurial
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+\T1/cmr/m/n/10 Early-Stage
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+\T1/cmr/m/n/10 En-trep-re-ne-
+ []
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 171--171
+\T1/cmr/m/n/10 u-ri-al (TEA)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]\T1/cmr/m/n/10 Growth
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\T1/cmr/m/n/10 Expe-cta-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\T1/cmr/m/n/10 Early-stage
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\T1/cmr/m/n/10 En-trep-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\T1/cmr/m/n/10 re-ne-u-ri-al
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\T1/cmr/m/n/10 Acti-vi-ty
+ []
+
+
+Underfull \hbox (badness 7397) in paragraph at lines 173--173
+\T1/cmr/m/n/10 : Re-la-ti-ve
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 175--175
+[]\T1/cmr/m/n/10 Informal In-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
+[]\T1/cmr/m/n/10 Totaly
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
+\T1/cmr/m/n/10 Early-stage
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
+\T1/cmr/m/n/10 En-trep-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
+\T1/cmr/m/n/10 re-ne-u-ri-al
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
+\T1/cmr/m/n/10 Acti-vi-ty
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
+\T1/cmr/m/n/10 for Fe-ma-le
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+[]\T1/cmr/m/n/10 Totaly
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+\T1/cmr/m/n/10 Early-stage
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+\T1/cmr/m/n/10 En-trep-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+\T1/cmr/m/n/10 re-ne-u-ri-al
+ []
+
+
+Underfull \hbox (badness 5490) in paragraph at lines 179--179
+\T1/cmr/m/n/10 Acti-vi-ty for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+\T1/cmr/m/n/10 Ma-le Wor-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+\T1/cmr/m/n/10 king Age
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
+[]\T1/cmr/m/n/10 Improvement-
+ []
+
+
+Underfull \hbox (badness 2503) in paragraph at lines 191--191
+\T1/cmr/m/n/10 ty En-trep-re-ne-u-ri-al
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
+[]\T1/cmr/m/n/10 Necessity-Driven
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
+\T1/cmr/m/n/10 En-trep-re-ne-u-ri-al
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
+[]\T1/cmr/m/n/10 Established Bu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
+\T1/cmr/m/n/10 si-ness Owner-ship
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--197
+[]\T1/cmr/m/n/10 Total Early-stage
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--197
+\T1/cmr/m/n/10 En-trep-re-ne-u-ri-al
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+[]\T1/cmr/m/n/10 New Bu-si-ness
+ []
+
+
+Underfull \hbox (badness 4569) in paragraph at lines 201--201
+[]\T1/cmr/m/n/10 Nascent En-trep-re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+[]\T1/cmr/m/n/10 Entrepreneurship
+ []
+
+
+Underfull \vbox (badness 3128) has occurred while \output is active []
 
 
 Overfull \vbox (6.4151pt too high) has occurred while \output is active []
 
 
-[4] <PCPendidikan.png, id=25, 379.4175pt x 193.47281pt>
+[4] <PCPendidikan.png, id=28, 379.4175pt x 193.47281pt>
 File: PCPendidikan.png Graphic file (type png)
  <use PCPendidikan.png>
-Package pdftex.def Info: PCPendidikan.png used on input line 206.
+Package pdftex.def Info: PCPendidikan.png used on input line 219.
 (pdftex.def)             Requested size: 398.34802pt x 199.17294pt.
 
-<PCRegion.png, id=26, 319.94531pt x 182.18062pt>
+Overfull \vbox (7.49817pt too high) has occurred while \output is active []
+
+
+[5 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/PCPendidikan.png>]
+<PCRegion.png, id=33, 319.94531pt x 182.18062pt>
 File: PCRegion.png Graphic file (type png)
  <use PCRegion.png>
-Package pdftex.def Info: PCRegion.png used on input line 215.
+Package pdftex.def Info: PCRegion.png used on input line 228.
 (pdftex.def)             Requested size: 312.98283pt x 170.72162pt.
 
-<RMfemalemale.png, id=27, 353.82187pt x 212.29312pt>
+<RMfemalemale.png, id=34, 353.82187pt x 212.29312pt>
 File: RMfemalemale.png Graphic file (type png)
  <use RMfemalemale.png>
-Package pdftex.def Info: RMfemalemale.png used on input line 224.
+Package pdftex.def Info: RMfemalemale.png used on input line 237.
 (pdftex.def)             Requested size: 341.43596pt x 199.1798pt.
 
-Overfull \vbox (7.49817pt too high) has occurred while \output is active []
-
-
-[5 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/PCPendidikan.png> <D:/Vane
-ssa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/PCRegion.png>]
-<RMpendidikan.png, id=33, 350.05782pt x 180.675pt>
+<RMpendidikan.png, id=35, 350.05782pt x 180.675pt>
 File: RMpendidikan.png Graphic file (type png)
  <use RMpendidikan.png>
-Package pdftex.def Info: RMpendidikan.png used on input line 235.
+Package pdftex.def Info: RMpendidikan.png used on input line 248.
 (pdftex.def)             Requested size: 369.91109pt x 199.17041pt.
-
-<POfemalemale.png, id=34, 316.93407pt x 150.5625pt>
-File: POfemalemale.png Graphic file (type png)
- <use POfemalemale.png>
-Package pdftex.def Info: POfemalemale.png used on input line 245.
-(pdftex.def)             Requested size: 341.46156pt x 170.73325pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 Overfull \vbox (6.4151pt too high) has occurred while \output is active []
 
 
-[6 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/RMfemalemale.png> <D:/Vane
-ssa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/RMpendidikan.png>]
-<POpendidikan.png, id=40, 369.63094pt x 160.34906pt>
+[6 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/PCRegion.png> <D:/Vanessa/
+Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/RMfemalemale.png>]
+<POfemalemale.png, id=41, 316.93407pt x 150.5625pt>
+File: POfemalemale.png Graphic file (type png)
+ <use POfemalemale.png>
+Package pdftex.def Info: POfemalemale.png used on input line 258.
+(pdftex.def)             Requested size: 341.46156pt x 170.73325pt.
+
+<POpendidikan.png, id=42, 369.63094pt x 160.34906pt>
 File: POpendidikan.png Graphic file (type png)
  <use POpendidikan.png>
-Package pdftex.def Info: POpendidikan.png used on input line 254.
+Package pdftex.def Info: POpendidikan.png used on input line 267.
 (pdftex.def)             Requested size: 398.3438pt x 170.72032pt.
-
-<FOFfemalemale.png, id=41, 317.68687pt x 183.68625pt>
-File: FOFfemalemale.png Graphic file (type png)
- <use FOFfemalemale.png>
-Package pdftex.def Info: FOFfemalemale.png used on input line 263.
-(pdftex.def)             Requested size: 369.91794pt x 170.72832pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -365,143 +507,142 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 
 
-[7 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/POfemalemale.png> <D:/Vane
-ssa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/POpendidikan.png>]
-<CA1D.png, id=48, 157.33781pt x 54.2025pt>
-File: CA1D.png Graphic file (type png)
- <use CA1D.png>
-Package pdftex.def Info: CA1D.png used on input line 284.
-(pdftex.def)             Requested size: 113.8113pt x 56.90851pt.
-
-<wolfram.png, id=49, 384.6872pt x 38.39343pt>
-File: wolfram.png Graphic file (type png)
- <use wolfram.png>
-Package pdftex.def Info: wolfram.png used on input line 294.
-(pdftex.def)             Requested size: 284.54666pt x 56.90924pt.
+[7 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/RMpendidikan.png> <D:/Vane
+ssa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/POfemalemale.png>]
+<FOFfemalemale.png, id=49, 317.68687pt x 183.68625pt>
+File: FOFfemalemale.png Graphic file (type png)
+ <use FOFfemalemale.png>
+Package pdftex.def Info: FOFfemalemale.png used on input line 276.
+(pdftex.def)             Requested size: 369.91794pt x 170.72832pt.
 
 Overfull \vbox (6.4151pt too high) has occurred while \output is active []
 
 
-[8 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/FOFfemalemale.png> <D:/Van
-essa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/CA1D.png> <D:/Vanessa/Data/SMT 8/SKR
-IPSICOY/PROGRESS REPORT/wolfram.png>]
+[8 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/POpendidikan.png> <D:/Vane
+ssa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/FOFfemalemale.png>]
+<CA1D.png, id=55, 157.33781pt x 54.2025pt>
+File: CA1D.png Graphic file (type png)
+ <use CA1D.png>
+Package pdftex.def Info: CA1D.png used on input line 297.
+(pdftex.def)             Requested size: 113.8113pt x 56.90851pt.
 
-LaTeX Warning: Citation `ECA' on page 9 undefined on input line 301.
+<wolfram.png, id=56, 384.6872pt x 38.39343pt>
+File: wolfram.png Graphic file (type png)
+ <use wolfram.png>
+Package pdftex.def Info: wolfram.png used on input line 307.
+(pdftex.def)             Requested size: 313.00368pt x 56.90924pt.
 
-<penerapanwolfram.png, id=56, 357.58594pt x 158.84344pt>
+<penerapanwolfram.png, id=57, 357.58594pt x 158.84344pt>
 File: penerapanwolfram.png Graphic file (type png)
 
 <use penerapanwolfram.png>
-Package pdftex.def Info: penerapanwolfram.png used on input line 305.
+Package pdftex.def Info: penerapanwolfram.png used on input line 318.
 (pdftex.def)             Requested size: 284.54135pt x 170.73155pt.
- <CA2D.png, id=57, 140.77594pt x 127.97812pt>
+ <CA2D.png, id=58, 140.77594pt x 127.97812pt>
 File: CA2D.png Graphic file (type png)
 
 <use CA2D.png>
-Package pdftex.def Info: CA2D.png used on input line 314.
+Package pdftex.def Info: CA2D.png used on input line 327.
 (pdftex.def)             Requested size: 113.81091pt x 56.90419pt.
- <conway.png, id=58, 403.5075pt x 246.9225pt>
-File: conway.png Graphic file (type png)
- <use conway.png>
-Package pdftex.def Info: conway.png used on input line 324.
-(pdftex.def)             Requested size: 341.43758pt x 227.6198pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3557) has occurred while \output is active []
 
 
 Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 
 
-[9 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/penerapanwolfram.png> <D:/
-Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/CA2D.png>]
+[9 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/CA1D.png> <D:/Vanessa/Data
+/SMT 8/SKRIPSICOY/PROGRESS REPORT/wolfram.png> <D:/Vanessa/Data/SMT 8/SKRIPSICO
+Y/PROGRESS REPORT/penerapanwolfram.png>]
+<conway.png, id=65, 403.5075pt x 246.9225pt>
+File: conway.png Graphic file (type png)
+ <use conway.png>
+Package pdftex.def Info: conway.png used on input line 337.
+(pdftex.def)             Requested size: 341.43758pt x 227.6198pt.
 
-LaTeX Warning: Citation `ECA' on page 10 undefined on input line 329.
-
-<contohconway.png, id=64, 319.94531pt x 87.32625pt>
+<contohconway.png, id=66, 319.94531pt x 87.32625pt>
 File: contohconway.png Graphic file (type png)
  <use contohconway.png>
-Package pdftex.def Info: contohconway.png used on input line 334.
+Package pdftex.def Info: contohconway.png used on input line 347.
 (pdftex.def)             Requested size: 284.53073pt x 85.36327pt.
 
 Overfull \vbox (6.4151pt too high) has occurred while \output is active []
 
 
-[10 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/conway.png> <D:/Vanessa/D
-ata/SMT 8/SKRIPSICOY/PROGRESS REPORT/contohconway.png>]
-<tingkatwirausaha.png, id=70, 379.4175pt x 242.40562pt>
+[10 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/CA2D.png> <D:/Vanessa/Dat
+a/SMT 8/SKRIPSICOY/PROGRESS REPORT/conway.png> <D:/Vanessa/Data/SMT 8/SKRIPSICO
+Y/PROGRESS REPORT/contohconway.png>]
+<tingkatwirausaha.png, id=73, 379.4175pt x 242.40562pt>
 File: tingkatwirausaha.png Graphic file (type png)
 
 <use tingkatwirausaha.png>
-Package pdftex.def Info: tingkatwirausaha.png used on input line 373.
+Package pdftex.def Info: tingkatwirausaha.png used on input line 386.
 (pdftex.def)             Requested size: 256.07838pt x 142.2709pt.
 
-Underfull \vbox (badness 4467) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 
 
-[11 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/tingkatwirausaha.png>]
+[11]
+Underfull \vbox (badness 3260) has occurred while \output is active []
+
+
 Overfull \vbox (6.4151pt too high) has occurred while \output is active []
 
 
-[12] <t0.png, id=83, 1069.9975pt x 773.89125pt>
-File: t0.png Graphic file (type png)
- <use t0.png>
-Package pdftex.def Info: t0.png used on input line 575.
-(pdftex.def)             Requested size: 512.17253pt x 341.43427pt.
-
-Overfull \hbox (42.70204pt too wide) in paragraph at lines 575--576
- [][] 
- []
-
-
+[12 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/tingkatwirausaha.png>]
 Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 
 
-[13] <t0(2).png, id=88, 1069.9975pt x 773.89125pt>
-File: t0(2).png Graphic file (type png)
- <use t0(2).png>
-Package pdftex.def Info: t0(2).png used on input line 598.
+[13] <t0.png, id=89, 1069.9975pt x 773.89125pt>
+File: t0.png Graphic file (type png)
+ <use t0.png>
+Package pdftex.def Info: t0.png used on input line 590.
 (pdftex.def)             Requested size: 512.17253pt x 341.43427pt.
 
-Overfull \hbox (42.70204pt too wide) in paragraph at lines 598--599
+Overfull \hbox (42.70204pt too wide) in paragraph at lines 590--591
  [][] 
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (6.4151pt too high) has occurred while \output is active []
 
 
 [14 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/t0.png>]
-<t1.png, id=93, 1069.9975pt x 773.89125pt>
-File: t1.png Graphic file (type png)
- <use t1.png>
-Package pdftex.def Info: t1.png used on input line 619.
+<t0(2).png, id=94, 1069.9975pt x 773.89125pt>
+File: t0(2).png Graphic file (type png)
+ <use t0(2).png>
+Package pdftex.def Info: t0(2).png used on input line 613.
 (pdftex.def)             Requested size: 512.17253pt x 341.43427pt.
 
-Overfull \hbox (42.70204pt too wide) in paragraph at lines 619--620
+Overfull \hbox (42.70204pt too wide) in paragraph at lines 613--614
  [][] 
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 
 
 [15 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/t0(2).png>]
-<t2.png, id=98, 1069.9975pt x 773.89125pt>
-File: t2.png Graphic file (type png)
- <use t2.png>
-Package pdftex.def Info: t2.png used on input line 641.
+<t1.png, id=99, 1069.9975pt x 773.89125pt>
+File: t1.png Graphic file (type png)
+ <use t1.png>
+Package pdftex.def Info: t1.png used on input line 634.
 (pdftex.def)             Requested size: 512.17253pt x 341.43427pt.
 
-Overfull \hbox (42.70204pt too wide) in paragraph at lines 641--642
+Overfull \hbox (42.70204pt too wide) in paragraph at lines 634--635
+ [][] 
+ []
+
+<t2(1).png, id=100, 1069.9975pt x 773.89125pt>
+File: t2(1).png Graphic file (type png)
+ <use t2(1).png>
+Package pdftex.def Info: t2(1).png used on input line 656.
+(pdftex.def)             Requested size: 512.17253pt x 341.43427pt.
+
+Overfull \hbox (42.70204pt too wide) in paragraph at lines 656--657
  [][] 
  []
 
@@ -513,13 +654,13 @@ Overfull \vbox (6.4151pt too high) has occurred while \output is active []
 
 
 [16 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/t1.png>]
-<t3.png, id=103, 1069.9975pt x 773.89125pt>
+<t3.png, id=105, 1069.9975pt x 773.89125pt>
 File: t3.png Graphic file (type png)
  <use t3.png>
-Package pdftex.def Info: t3.png used on input line 662.
+Package pdftex.def Info: t3.png used on input line 677.
 (pdftex.def)             Requested size: 512.17253pt x 341.43427pt.
 
-Overfull \hbox (42.70204pt too wide) in paragraph at lines 662--663
+Overfull \hbox (42.70204pt too wide) in paragraph at lines 677--678
  [][] 
  []
 
@@ -530,11 +671,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 
 
-[17 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/t2.png>]
-<graf1.png, id=108, 261.97874pt x 179.92218pt>
+[17 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/t2(1).png>]
+<graf1.png, id=110, 261.97874pt x 179.92218pt>
 File: graf1.png Graphic file (type png)
  <use graf1.png>
-Package pdftex.def Info: graf1.png used on input line 677.
+Package pdftex.def Info: graf1.png used on input line 692.
 (pdftex.def)             Requested size: 227.62785pt x 113.81554pt.
 
 Overfull \vbox (6.4151pt too high) has occurred while \output is active []
@@ -542,28 +683,23 @@ Overfull \vbox (6.4151pt too high) has occurred while \output is active []
 
 [18 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/t3.png> <D:/Vanessa/Data/
 SMT 8/SKRIPSICOY/PROGRESS REPORT/graf1.png>]
-<adjacencylist.png, id=114, 261.22594pt x 225.09094pt>
+<adjacencylist.png, id=116, 261.22594pt x 225.09094pt>
 File: adjacencylist.png Graphic file (type png)
  <use adjacencylist.png>
-Package pdftex.def Info: adjacencylist.png used on input line 707.
+Package pdftex.def Info: adjacencylist.png used on input line 722.
 (pdftex.def)             Requested size: 113.81172pt x 113.81255pt.
 
-<adjacencymatrix.png, id=115, 170.13562pt x 147.55125pt>
+<adjacencymatrix.png, id=117, 170.13562pt x 147.55125pt>
 File: adjacencymatrix.png Graphic file (type png)
 
 <use adjacencymatrix.png>
-Package pdftex.def Info: adjacencymatrix.png used on input line 737.
+Package pdftex.def Info: adjacencymatrix.png used on input line 752.
 (pdftex.def)             Requested size: 142.2717pt x 113.81293pt.
 
 Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 
 
 [19 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/PROGRESS REPORT/adjacencylist.png>]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 795.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 795.
-
 Overfull \vbox (6.4151pt too high) has occurred while \output is active []
 
 
@@ -574,24 +710,21 @@ Overfull \vbox (7.49817pt too high) has occurred while \output is active []
 [21] ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\PROGRESS REPORT\Progress report v44.aux
 ")
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3002 strings out of 493921
- 38780 string characters out of 3147276
- 209795 words of memory out of 3000000
- 6241 multiletter control sequences out of 15000+200000
+ 3001 strings out of 493921
+ 38790 string characters out of 3147276
+ 208796 words of memory out of 3000000
+ 6240 multiletter control sequences out of 15000+200000
  18331 words of font info for 37 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,10n,19p,887b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,10n,19p,967b,442s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecrm0800.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecrm0600.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2
+0\ecbx1200.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\ecrm0800.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Vanessa\AppData\Local\MiKTeX\2
 .9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Vanessa\AppData\Lo
 cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\Vaness
 a\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\
@@ -606,9 +739,9 @@ ts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb>
-Output written on "Progress report v44.pdf" (21 pages, 744391 bytes).
+Output written on "Progress report v44.pdf" (21 pages, 747384 bytes).
 PDF statistics:
- 471 PDF objects out of 1000 (max. 8388607)
+ 490 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

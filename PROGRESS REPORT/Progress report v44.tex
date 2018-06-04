@@ -28,7 +28,7 @@
 %ISILAH DATA BERIKUT INI:
 \newcommand{\nama}{Vanessa Sukamto}
 \newcommand{\@npm}{2014730010}
-\newcommand{\tanggal}{25/04/2018} %Tanggal pembuatan dokumen
+\newcommand{\tanggal}{07/05/2018} %Tanggal pembuatan dokumen
 \newcommand{\@judultopik}{Simulator Pertumbuhan Wirausaha Berbasis Cellular Automata} % Judul/topik anda
 \newcommand{\kodetopik}{CEN4402}
 \newcommand{\jumpemb}{1} % Jumlah pembimbing, 1 atau 2
@@ -72,20 +72,21 @@ Pada saat ini, lapangan kerja pada suatu negara tidak bisa kita prediksi, tetapi
 Pada jaman sekarang, sudah banyak sekali orang yang lebih memilih untuk berwirausaha daripada bekerja di kantor atau di sebuah perusahaan. Alasan mengapa banyak orang lebih memilih berwirausaha pun bervariasi contohnya orang tersebut tidak terlalu menyukai waktu kerjanya diatur oleh orang lain melainkan ia lebih menyukai waktu kerjanya diatur oleh dirinya sendiri. Tidak hanya pada jaman sekarang, dari jaman dahulu juga sudah ada wirausaha yang namanya tidak asing lagi didengar oleh telinga kita salah satunya yaitu Bob Sadino. Untuk menjadi wirausaha yang sukses seperti Bob Sadino tidaklah mudah, pasti ada beberapa faktor dari luar maupun dalam yang mempengaruhi keberlangsungan wirausaha. Dalam berwirausaha dibutuhkan usaha yang besar untuk menjadi sukses, usaha tersebut juga harus dijaga kekonsistenannya agar tidak mengalami kebangkrutan.
 
 
-Kewirausahaan sangat diperlukan guna mendorong perekonomian suatu negara karena dapat mengurangi tingkat pengangguran di Indonesia. Secara ekonomis, kewirausahaan akan membantu meningkatkan pendapatan masyarakat atau meningkatkan kesejahteraan melalui penciptaan produk baru, serta mengurangi kemiskinan.  Ideal besarnya populasi wirausaha dalam suatu negara adalah 2\% dari total penduduk suatu negara. Saat ini Indonesia baru mencapai pengusaha dari total penduduk. Maka dari itu, kondisi wirausaha ini perlu dipantau terus-menerus perkembangannya agar dapat memajukan perekonomian di Indonesia. Pemantauan ini dilakukan oleh pemerintah dan lembaga-lembaga swasta yang berkepentingan. Salah satu lembaga yang memantau adalah GEM (Global Entrepreneurship Monitor). GEM merupakan konsorsium yang bertujuan untuk mengukur dan memantau kegiatan kewirausahaan. 
+Kewirausahaan sangat diperlukan guna mendorong perekonomian suatu negara karena dapat mengurangi tingkat pengangguran di Indonesia. Secara ekonomis, kewirausahaan akan membantu meningkatkan pendapatan masyarakat atau meningkatkan kesejahteraan melalui penciptaan produk baru, serta mengurangi kemiskinan.  Ideal besarnya populasi wirausaha dalam suatu negara adalah 2\% dari total penduduk suatu negara. Saat ini Indonesia baru memiliki 1.5\% pengusaha dari total penduduk. Masih diperlukan 1.7 juta pengusaha untuk mencapai angka 2\%. Maka dari itu, kondisi wirausaha ini perlu dipantau terus-menerus perkembangannya agar dapat memajukan perekonomian di Indonesia. Pemantauan ini dilakukan oleh pemerintah dan lembaga-lembaga swasta yang berkepentingan. Salah satu lembaga yang memantau adalah GEM (Global Entrepreneurship Monitor). GEM merupakan konsorsium yang bertujuan untuk mengukur dan memantau kegiatan kewirausahaan. 
 
 
 GEM mengilustrasikan kewirausahaan menjadi 3 fase, fase pertama yaitu wirausaha \textit{nascent}, yaitu mereka yang baru memulai suatu usaha (<3 bulan). Fase kedua yaitu pemilik usaha baru (\textit{new business owners}), yaitu wirausaha \textit{nascent} yang sudah menjalani usaha lebih dari tiga bulan tetapi tidak lebih dari tiga setengah tahun. Fase ketiga yaitu wirausaha mapan (\textit{established entrepreneurs}), yaitu wirausaha yang sudah menjalankan sebuah usaha lebih dari tiga setengah tahun.
 
 
-Selain pemantauan terhadap kondisi riil, salah satu kegiatan yang mendukung pemantauan adalah pengamatan secara tidak langsung. Salah satu pengamatan tidak langsung adalah dengan membuat model matematika dari pertumbuhan wirausaha dan kemudian melakukan simulasi terhadap model tersebut. Salah satu model matematika yang dapat digunakan untuk memodelkan pertumbuhan wirausaha adalah Entrepreneurial Cellular Automata (ECA) yang diusulkan oleh Nugraheni dan Natali. ECA adalah pengembangan dari Cellular Automata standar dari Ulam dan New Neuman. Cellular Automata (CA) sendiri merupakan suatu model matematika yang digunakan untuk memodelkan suatu sistem dinamis. Pada ECA dijelaskan bagaimana struktur dari ECA dan diberikan illustrasi bagaimana menggunakan ECA untuk memprediksi pertumbuhan wirausaha berdasarkan parameter wirausaha dari GEM. 
-
+Selain pemantauan terhadap kondisi riil, salah satu kegiatan yang mendukung pemantauan adalah pengamatan secara tidak langsung. Salah satu pengamatan tidak langsung adalah dengan membuat model matematika dari pertumbuhan wirausaha dan kemudian melakukan simulasi terhadap model tersebut. Salah satu model matematika yang dapat digunakan untuk memodelkan pertumbuhan wirausaha adalah Entrepreneurial Cellular Automata (ECA) yang diusulkan oleh Nugraheni dan Natali \footnotemark. ECA adalah pengembangan dari Cellular Automata standar dari Ulam dan New Neuman. Pada \footnotemark[\value{footnote}
+] dijelaskan bagaimana struktur dari ECA dan diberikan illustrasi bagaimana menggunakan ECA untuk memprediksi pertumbuhan wirausaha berdasarkan parameter wirausaha dari GEM. 
 
 Dalam hasil penelitian ECA setiap wirausahawan mempunyai beberapa atribut yang bersifat statis maupun dinamis. Contoh atribut yang bersifat statis yaitu bidang usaha, kategori usaha, lokasi geografis dan jenis kelamin. Sementara contoh untuk atribut dinamis adalah usia, level wirausaha dan usia usaha. Diantara atribut dinamis, level wirausaha menjadi atribut penting karena atribut ini yang akan menjadi acuan untuk menentukan perkembangan dari kewirausahaan. \textit{Continuity Index} digunakan untuk menentukan apakah seorang wirausahawan pada suatu saat tertentu akan meneruskan usahanya pada waktu selanjutnya.
 
 
 Skripsi ini bertujuan untuk mengembangkan ECA dengan memperhitungkan beberapa parameter yang belum diperhatikan pada ECA dan mengembangkan perangkat lunak simulator yang dapat menampilkan visualisasi dari simulasi. Selain menambahkan parameter yang berhubungan dengan pertumbuhan wirausaha, pengembangan ini juga akan memperhatikan pertumbuhan penduduk. Di samping itu, simulasi pada data nyata juga perlu dilakukan untuk membuktikan kebenaran dari model yang dibuat.
 
+\footnotetext{Cecilia E. Nugraheni dan Vania Natali. Pengembangan Model Keberlangsungan Wirausaha Dengan Cellular Automata. Laporan Penelitian. Lembaga Penelitian dan Pengabdian Masyarakat UNPAR. 2017. }
 
 \section{Tujuan}
 
@@ -117,7 +118,11 @@ Detail bagian pekerjaan skripsi sesuai dengan rencana kerja/laporan perkembangan
 		
 		{\bf Status :} Ada sejak rencana kerja skripsi.\\
 		{\bf Hasil :} 
-		Menurut penelitian GEM, kewirausahaan dibagi menjadi beberapa tahapan. Pertama, individu yang mulai terlibat dalam dunia kewirausahaan yang memiliki kemampuan untuk membuka usaha, mampu melihat peluang dan tidak takut akan kegagalan dalam membuka suatu usaha (\textit{Potential Entrepreneur}). Kedua, individu yang sudah menjalankan usahanya dalam waktu kurang dari tiga bulan (\textit{Nascent Entrepreneur}). Ketiga, individu yang sudah menjalankan usahanya lebih dari tiga bulan tetapi kurang dari tiga setengah tahun (\textit{New Business Owners}). Wirausaha \textit{nascent} dan \textit{New Business Owners} ini masuk dalam TEA (Totally Early-Stage Entrepreneurial Activity) dalam sebuah ekonomi. Tahapan terakhir yaitu individu yang sudah menjalankan usahanya lebih dari tiga setengah tahun (\textit{Established Entrepreneurs}).
+		
+		Arti kewirausahaan secara umum adalah suatu ilmu yang mempelajari tentang kemampuan seseorang dalam menghadapi tantangan hidup untuk memperoleh peluang dan menghadapi segala risiko yang ada dengan mengandalkan kekuatan diri sendiri tanpa bergantung pada orang lain. Wirausaha merupakan orang yang memperjuangkan kemajuan terutama pada bidang ekonomi demi masyarakat seperti menciptakan lapangan pekerjaan, membantu memenuhi kebutuhan masyarakat yang semakin meningkat dan berusaha mengurangi ketergantungan dari luar negeri.
+		
+		
+		Kewirausahaan menurut penelitian GEM merupakan sebuah proses yang memiliki tahapan-tahapan yang berbeda ( Gambar \ref{fig:fasewirausaha}). Tahapan yang pertama yaitu individu yang mulai terlibat dalam dunia kewirausahaan yang memiliki kemampuan untuk membuka usaha, mampu melihat peluang dan tidak takut akan kegagalan dalam membuka suatu usaha (\textit{Potential Entrepreneur}). Kedua, individu yang sudah menjalankan usahanya dalam waktu kurang dari tiga bulan (\textit{Nascent Entrepreneur}). Ketiga, individu yang sudah menjalankan usahanya lebih dari tiga bulan tetapi kurang dari tiga setengah tahun (\textit{New Business Owners}). Wirausaha \textit{nascent} dan \textit{New Business Owners} ini masuk dalam TEA (Totally Early-Stage Entrepreneurial Activity) dalam sebuah ekonomi. Tahapan terakhir yaitu individu yang sudah menjalankan usahanya lebih dari tiga setengah tahun (\textit{Established Entrepreneurs}).
 		
 \begin{figure} [H]
 	\centering  
@@ -144,13 +149,12 @@ Tahapan dari wirausaha juga dipengaruhi oleh atribut internal dari wirausahawan 
 					\end{itemize}
 			\end{enumerate}
 
-
 Terdapat juga indikator-indikator berdasarkan faktor psikologi individu yang menjalankan usaha. Untuk lebih jelasnya dapat dilihat pada tabel \ref{tabelindikator} :
 
 \begin{table}[H]
 \centering
 \caption{Tabel Indikator GEM}
-\begin{tabular}{|p{4cm}|p{12cm}|}
+\begin{tabular}{|p{2cm}|p{11cm}|}
 \hline
 Indikator & Deskripsi\\
 \hline
@@ -174,6 +178,16 @@ Totaly Early-stage Entrepreneurial Activity for Female Working Age Population & 
 \hline
 Totaly Early-stage Entrepreneurial Activity for Male Working Age Population & Persentase dari populasi pria berusia 18-64 yang merupakan seorang wirausaha nascent (pemilik usaha baru).\\
 \hline
+\end{tabular}
+\label{tabelindikator}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{3cm}|p{10cm}|}
+\hline
+Indikator & Deskripsi\\
+\hline
 Improvement-Driven Opportunity Entrepreneurial Activity : Relative Prevalence & persentase orang yang terlibat dalam TEA yang mengklaim bahwa mereka didorong oleh kesempatan bukan karena kurangnya pilihan pekerjaan\\
 \hline
 Necessity-Driven Entrepreneurial Activity : Relative Prevalence & persentase orang yang terlibat dalam TEA yang berwirausaha karena mereka tidak punya pilihan pekerjaan lain.\\
@@ -195,7 +209,6 @@ Entrepreneurship as Desirable Care & persentase dari populasi berusia 18-64 yang
 Know Startup Entrepreneur Rate & persentase dari populasi berusia 18-64 yang kenal seseorang yang mendirikan suatu usaha dalam waktu 2 tahun terakhir secara pribadi.\\
 \hline
 \end{tabular}
-\label{tabelindikator}
 \end{table}
 
 
@@ -291,14 +304,14 @@ Gambar \ref{fig:FOF} menjelaskan perbedaan Fear of Failure antara pria dan wanit
 			
 			\begin{figure} [H]
 					\centering  
-					\includegraphics[width=10cm, height=2cm]{wolfram} 
+					\includegraphics[width=11cm, height=2cm]{wolfram} 
 					\caption[Aturan 30 dari Wolfram]{Aturan 30 dari Wolfram} 
 					\label{fig:wolfram} 
 				\end{figure}
 				
 				Cara membaca aturan tersebut adalah pada baris pertama terdapat 3 sel pada suatu saat (iterasi) tertentu, sel yang ditinjau adalah sel yang berada di tengah. Tetangga dari sel tersebut yaitu tetangga kiri dan kanan. Baris kedua menunjukkan keadaan sel pada \textit{state} berikutnya. Sebagai contoh pada gambar paling kiri, sel pada bagian tengah (gelap) mempunyai tetangga kiri gelap dan tetangga kanan gelap maka iterasi berikutnya \textit{state} sel tersebut berubah menjadi putih.
 				
-				Sebagai ilustrasi, pada gambar \ref{fig:penerapanwolfram} diberikan contoh penerapan aturan 30 dari Wolfram yang dimulai dari kondisi awal (t=0) dengan sel gelap yang berada di tengah hingga t=9. \cite{ECA}
+				Sebagai ilustrasi, pada gambar \ref{fig:penerapanwolfram} diberikan contoh penerapan aturan 30 dari Wolfram yang dimulai dari kondisi awal (t=0) dengan sel gelap yang berada di tengah hingga t=9.
 				
 				\begin{figure} [H]
 					\centering  
@@ -326,7 +339,7 @@ Gambar \ref{fig:FOF} menjelaskan perbedaan Fear of Failure antara pria dan wanit
 					\label{fig:conway} 
 				\end{figure}
 			
-			Berikut ilustrasi Conway yang menggambarkan perubahan yang terjadi pada sekumpulan sel mulai dari kondisi awal (t=0) sampai dengan kondisi akhir (t=3) yang dilakukan secara iteratif. Banyaknya sel hidup pada kondisi awal berkurang sedikit demi sedikit sampai pada kondisi akhir tidak ada lagi sel hidup. \cite{ECA}
+			Berikut ilustrasi Conway yang menggambarkan perubahan yang terjadi pada sekumpulan sel mulai dari kondisi awal (t=0) sampai dengan kondisi akhir (t=3) yang dilakukan secara iteratif. Banyaknya sel hidup pada kondisi awal berkurang sedikit demi sedikit sampai pada kondisi akhir tidak ada lagi sel hidup.
 			
 			
 			\begin{figure} [H]
@@ -415,10 +428,12 @@ Waktu sekarang & Waktu berikutnya \\
 \label{tabelLW}
 \end{table}
 
-Untuk memberikan gambaran bagaimana penggunaan model untuk memantau pertumbuhan wirausaha, dilakukan simulasi menggunakan data yang tidak nyata. Simulasi ini menggunakan atribut berupa umur, level wirausaha dan jenis kelamin.
+%Untuk memberikan gambaran bagaimana penggunaan model untuk memantau pertumbuhan wirausaha, dilakukan simulasi menggunakan data yang tidak nyata. Simulasi ini menggunakan atribut berupa umur, level wirausaha dan jenis kelamin.
 
 
-%rumus CIdx
+\textbf{Rumus CIdx}
+
+
 Misal $Cint_{i}(t)$ dan $Cneg_{i}(t)$ melambangkan kondisi internal dan kondisi ketetanggaan dari sebuah individu i pada saat t dan $Cpub(t)$ melambangkan kondisi publik pada saat t nilai dari $CIdx$ dari individu i pada saat t, dapat dinyatakan dalam rumus berikut :
 \begin{displaymath}
 	CIdx_{i}(t) = a.Cint_{i}(t) + b.Cneg_{i}(t) + c.Cpub(t)
@@ -465,7 +480,7 @@ Cultural, social norms and society support & 3.29\\
 \end{table}
 	
 	
-	Terdapat beberapa simulasi yang bertujuan untuk menunjukkan pengaruh dari komposisi a,b dan c pada rumus CIdx dan pengaruh dari nilai ambang. Dilakukan simulasi sebanyak enam kali dengan parameter seperti yang diberikan pada tabel \ref{tabelParameter}
+	Terdapat beberapa simulasi yang bertujuan untuk menunjukkan pengaruh dari komposisi a,b dan c pada rumus CIdx dan pengaruh dari nilai ambang. Dilakukan simulasi sebanyak enam kali dengan parameter seperti yang diberikan pada tabel \ref{tabelParameter}. Masing-masing simulasi terdiri atas 600 iterasi yang merepresentasikan 600 bulan atau 50 tahun.
 	
 	\begin{table} [H]
 	\centering
@@ -582,7 +597,7 @@ Dalam simulasi ini diasumsikan terdapat dua kondisi publik yaitu financial envir
 	
 
 \begin{equation}
-	CIdx_{1}(t=0) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {1} {2} + 0) + 0.2 \times (3.06 + 3.29) = 9.305
+	CIdx_{1}(t=0) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + 0 +  \frac {1} {2}) + 0.2 \times (3.06 + 3.29) = 9.305
 \end{equation}	
 
 \begin{equation}
@@ -621,7 +636,7 @@ Perhitungan masing-masing entrepreneur 1, entrepreneur 2 dan entrepreneur 3 (E1,
 		\label{fig:t0} 
 	\end{figure}
 
-Pada saat t=2 terdapat 1 kondisi publik baru yaitu physical infrastructures and services access
+Pada saat t=2 terdapat 1 kondisi publik baru yaitu physical infrastructures and services access yang memiliki bobot 3.45.
 
 
 \begin{equation}
@@ -638,12 +653,12 @@ Pada saat t=2 terdapat 1 kondisi publik baru yaitu physical infrastructures and 
 
 	\begin{figure} [H]
 		\centering  
-		\includegraphics[width=18cm, height=12cm]{t2} 
+		\includegraphics[width=18cm, height=12cm]{t2(1)} 
 		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 2]{Gambar ketetanggaan tiga entrepreneur pada saat t = 2} 
 		\label{fig:t0} 
 	\end{figure}
 	
-	Pada saat t=3 terdapat satu kondisi publik baru yaitu internal market dynamic.
+	Pada saat t=3 terdapat satu kondisi publik baru yaitu internal market dynamic yang memiliki bobot 3.92.
 	
 \begin{equation}
 	CIdx_{1}(t=3) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {1} {2}  + 0) + 0.2 \times (3.06 + 3.29 + 3.45 + 3.92) = 10.779
@@ -799,8 +814,8 @@ Langkah-langkah kerja yang berhasil diselesaikan dalam Skripsi 1 ini adalah seba
 \begin{enumerate}
 \item Melakukan studi literatur tentang GEM (Global Entrepreneurship Monitor).
 \item Mempelajari teori tentang \textit{Cellular Automata} yang khususnya \textit{Entrepreneur Cellular Automata}.
+\item Melakukan analisis model pertumbuhan wirausaha dengan \textit{cellular automata}.
 \item Mempelajari teori tentang graf.
-\item
 \end{enumerate}
 
 

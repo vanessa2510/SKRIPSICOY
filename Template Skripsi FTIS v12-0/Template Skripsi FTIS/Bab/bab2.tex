@@ -33,23 +33,31 @@ GEM mempertimbangkan beberapa atribut atau indikator yang mempengaruhi berlangsu
 
 \begin{table}[H]
 \centering
-\caption{Tabel Indikator GEM}
-\begin{tabular}{|c|p{8cm}|}
+\begin{tabular}{|p{3cm}|p{10cm}|}
 \hline
 Indikator & Deskripsi\\
 \hline
-Perceived Opportunities & Persentase penduduk antara usia 18-64 tahun yang melihat peluang baik untuk memulai usaha. \\
+Improvement-Driven Opportunity Entrepreneurial Activity : Relative Prevalence & persentase orang yang terlibat dalam TEA yang mengklaim bahwa mereka didorong oleh kesempatan bukan karena kurangnya pilihan pekerjaan\\
 \hline
-Perceived Capabilities & Persentase penduduk antara usia 18-64 tahun yang percaya bahwa mereka mempunyai kemampuan untuk memulai suatu usaha. \\
+Necessity-Driven Entrepreneurial Activity : Relative Prevalence & persentase orang yang terlibat dalam TEA yang berwirausaha karena mereka tidak punya pilihan pekerjaan lain.\\
 \hline
-Entreprenurial Intention & Persentase penduduk antara usia 18-64 tahun (selain orang yang berwirausaha) yang bertekad untuk mendirikan usaha dalam waktu tiga tahun kedepan.\\
+Established Business Ownership Rate & Persentase dari populasi berusia 18-64 yang merupakan pemilik manager dari sebuah usaha mapan dan sudah menghasilkan gaji atau untung apapun ke pemiliknya selama lebih dari 42 bulan.\\
 \hline
-Fear of Failure Rate & Persentase penduduk antara usia 18-64 tahun dapat melihat peluang baik yang mengindikasikan bahwa takut akan gagal akan menjauhkan mereka dari mendirikan usaha. \\
+Total Early-stage Entrepreneurial Activity & persentase dari populasi berusia 18-64 yang merupakan wirausaha nascent.\\
 \hline
-Role Model & Persentase penduduk antara usia 18-64 tahun yang memulai bisnis pada dua tahun terakhir.\\
+New Business Ownership Rate & Persentase dari populasi 18-64 yang merupakan pemilik manager dari sebuah usaha mapan yang sudah menghasilkan gaji atau untung selama lebih dari 3 bulan tetapi tidak lebih dari 42 bulan.\\
+\hline
+Nascent Entrepreneurship Rate & Persentase dari populasi 18-64 yang merupakan wirausaha nascent terlibat secara aktif memulai suatu usaha yang mereka miliki sendiri/bersama.\\
+\hline
+Media Attention for Entrepreneurship & persentase dari populasi berusia 18-64 yang setuju dengan pernyataan bahwa di negara mereka, mereka sering melihat atau mendengar di media tentang usaha baru yang sukses.\\
+\hline
+High status successful Entrepreneur & persentase dari populasi berusia 18-64 yang setuju dengan pernyataan bahwa di negara mereka, wirausaha yang sukses dihormati dan bercitra tinggi.\\
+\hline
+Entrepreneurship as Desirable Care & persentase dari populasi berusia 18-64 yang setuju dengan pernyataan bahwa di negara mereka, kebanyakan orang mempertimbangkan untuk memulai usaha baru sebagai karir yang diinginkan.\\
+\hline
+Know Startup Entrepreneur Rate & persentase dari populasi berusia 18-64 yang kenal seseorang yang mendirikan suatu usaha dalam waktu 2 tahun terakhir secara pribadi.\\
 \hline
 \end{tabular}
-\label{tabelindikator}
 \end{table}
 
 
@@ -322,12 +330,12 @@ Waktu sekarang & Waktu berikutnya \\
 \label{sec:graf}
 Graf dalam matematika dan ilmu komputer adalah himpunan benda-benda yang disebut simpul (\textit{vertex} atau \textit{node}) yang terhubung oleh sisi (\textit{edge}). Sebuah graf biasanya digambarkan dengan sekumpulan titik-titik yang dihubungkan oleh garis-garis. Suatu sisi dapat menghubungkan suatu simpul dengan simpul yang sama, sisi ini disebut dengan \textit{loop}.
 
-Graf biasanya dinyatakan sebagai $G = <V,E>$, dimana V adalah simpul pada graf sedangkan E adalah sisi pada graf. Sebagai contoh definisi dari graf terdapat $V = {1,2,3,4,5,6}$ dan $E = {(1,2),(1,5),(2,3),(3,4),(4,5),(5,2),(4,6)}$ berikut gambar graf sesuai dengan pernyataan V dan E di atas :
+Graf biasanya dinyatakan sebagai $G = <V,E>$, dimana V adalah simpul pada graf sedangkan E adalah sisi pada graf. Sebagai contoh definisi dari graf terdapat $V = {A,B,C,D,E,F,G,H,I}$ dan $E = {{A,B},{A,C},{B,D},{C,D},{C,E},{E,F},{E,G},{H,I}}$ berikut gambar graf sesuai dengan pernyataan V dan E di atas :
 
 	\begin{figure} [H]
 		\centering  
-		\includegraphics[width=8cm, height=4cm]{graf1} 
-		\label{fig:graf1} 
+		\includegraphics[width=8cm, height=4cm]{graf5} 
+		\label{fig:graf5} 
 	\end{figure}
 	
 Graf memiliki banyak jenis, jenis-jenis graf ini didasarkan pada ada tidaknya \textit{loop} pada suatu graf dan sisi pada graf yang mempunyai orientasi arah. Berdasarkan ada tidaknya \textit{loop} pada suatu graf digolongkan menjadi dua jenis :
@@ -382,7 +390,7 @@ c & adjacent to & a,b\\
 \end{table}
 
 \subsection{Adjacency Matrix}
-Adjacency Matrix merupakan representasi matrix $N \times N$ yang menyatakan hubungan antar simpul dalam suatu graf. Kolom dan baris menyatakan simpul-simpul, sedangkan nilai entri dari matrix menyatakan hubungan antar simpul. Contoh implementasi adjacency matrix yaitu sebagai berikut :
+Adjacency Matrix merupakan representasi matrix $N \times N$ yang menyatakan hubungan antar simpul dalam suatu graf. Kolom dan baris menyatakan simpul-simpul, sedangkan nilai entri dari matrix menyatakan hubungan antar simpul. Contoh implementasi adjacency matrix pada graf tidak berarah yaitu sebagai berikut :
 
 \begin{figure} [H]
 		\centering  
@@ -416,4 +424,38 @@ v & 1 & 2 & 3 & 4 & 5 & 6 \\
 \hline
 \end{tabular}
 \label{tabelAM}
+\end{table}
+
+Contoh adjacency matrix pada graf berarah yaitu sebagai berikut :
+
+\begin{figure} [H]
+		\centering  
+		\includegraphics[width=5cm, height=4cm]{graf3} 
+		\caption[\textit{Directed Cyclic Graph}]{\textit{Directed Cyclic Graph}}
+		\label{fig:GambarDCG} 
+	\end{figure}
+	
+Graf pada gambar \ref{fig:GambarDCG} dapat direpresentasikan melalui tabel \ref{tabelDCG} :
+
+\begin{table}[H]
+\centering
+\caption{Tabel Representasi Adjacency Matrix}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+v & 1 & 2 & 3 & 4 & 5 & 6 \\
+\hline
+1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+\hline
+2 & 0 & 0 & 0 & 0 & 0 & 1 \\
+\hline
+3 & 0 & 1 & 0 & 1 & 0 & 0 \\
+\hline
+4 & 0 & 1 & 0 & 0 & 1 & 0 \\
+\hline
+5 & 0 & 0 & 0 & 0 & 0 & 1 \\
+\hline
+6 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hline
+\end{tabular}
+\label{tabelDCG}
 \end{table}
