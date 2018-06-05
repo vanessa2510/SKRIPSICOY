@@ -1,0 +1,195 @@
+\chapter{Analisis}
+\label{chap:analisis}
+
+
+Pada bab ini akan dilakukan analisis mengenai pembuatan model pertumbuhan wirausaha dengan Cellular Automata. Pembahasan akan dimulai dari analisa pertumbuhan wirausaha di Indonesia yang menjadi pokok permasalahan. Lalu dari analisis ini akan dilanjutkan dengan analisis kebutuhan perangkat lunak agar mampu memodelkan pertumbuhan wirausaha di Indonesia.
+
+\section{Analisis Pertumbuhan Wirausaha}
+\label{sec:analisisPertumbuhanWirausaha}
+
+Seperti yang sudah dijelaskan pada bab \ref{chap:teori} kewirausahaan dalam negara berkembang seperti Indonesia memang sangat diperlukan untuk membantu meningkatkan pertumbuhan ekonomi. GEM melakukan penelitiannya berdasarkan :
+\begin{enumerate}
+	\item Keadaan ekonomi negara,
+	\item Kemampuan dan motivasi individu serta cara pandang masyarakat mengenai wirausaha,
+	\item Pertumbuhan kewirausahaan dan persaingan antar negara tentang seberapa inovatif usaha tersebut.
+\end{enumerate}  
+
+
+GEM mempertimbangkan beberapa atribut atau indikator. Atribut yang paling berpengaruh dalam pertumbuhan wirausaha adalah Perceived Opportunities, Perceived Capabilities, Entrepreneurial Intention dan Fear of Failure Rate.
+
+%Kewirausahaan juga secara tidak langsung dapat menjadikan masyarakatnya lebih kreatif dan mandiri, dengan begitu masyarakat tidak perlu lagi sepenuhnya bergantung terhadap pemerintah seperti tenaga kerja negri (PNS) yang masih digaji oleh pemerintah. Hal positif lainnya yang kita dapatkan yaitu menarik investor asing untuk berinvestasi atau menanamkan modalnya di Indonesia.
+
+%Contohnya seorang wirausaha membuka usaha hotel di dekat pantai Kuta, Bali. Dengan adanya hotel di dekat pantai Kuta maka akan mengundang para turis asing untuk mengunjungi pantai Kuta selain karena devisa negara bertambah, wirausahawan akan membayar pajak dari jumlah pendapatan yang dia peroleh dari usahanya.
+
+\section{Analisis Pemodelan Cellular Automata}
+\label{analisisCA}
+
+
+
+\section{Analisis Model Pertumbuhan Wirausaha dengan Cellular Automata}
+\label{analisismodelCA}
+
+Dalam analisis ini hanya mengambil salah satu dari enam simulasi yaitu simulasi keenam. Nilai a = 0.5, b = 0.3 dan c = 0.2 dan nilai ambangnya 10. Nilai dari kondisi internal wirausaha diambil dari Nawangpalupi (Perceived Opportunities = 0.47, Perceived Capabilities = 0.62, Entrepreneurial Intention = 0.35 dan Fear of Failure = 0.35). Diasumsikan terdapat tiga wirausahawan dan masing-masing wirausahawan memiliki tiga atribut yaitu level wirausaha, umur dan jenis kelamin. Penjelasan lebih lanjut yaitu sebagai berikut :
+				
+\begin{table} [H]
+\centering
+\caption{Data wirausahawan}
+\begin{tabular}{|c|c|c|c|}
+\hline
+& Umur & Level Wirausaha & Jenis kelamin\\
+\hline
+Entrepreneur 1 & 19 tahun (228 bulan) & nascent & Male\\
+\hline
+Entrepreneur 2 & 24 tahun (288 bulan) & new\_bm & Male\\
+\hline
+Entrepreneur 3 & 30 tahun (360 bulan) & new\_bm & Female\\
+\hline
+\end{tabular}
+\end{table}
+
+
+Berikut data bobot untuk masing-masing atribut :
+
+\begin{table} [H]
+\centering
+\caption{Data Bobot Atribut Level Usaha}
+\begin{tabular}{|c|c|}
+\hline
+& Bobot\\
+\hline
+Potential & 7.0\\
+\hline
+Nascent & 7.4\\
+\hline
+New\_bm & 7.6\\
+\hline
+Est\_bm & 7.8\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table} [H]
+\centering
+\caption{Data Bobot Atribut Umur}
+\begin{tabular}{|c|c|}
+\hline
+& Bobot\\
+\hline
+(18-24 tahun) & 7.0\\
+\hline
+(25-34 tahun) & 7.5\\
+\hline
+(35-44 tahun) & 7.8\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table} [H]
+\centering
+\caption{Data Bobot Atribut Jenis Kelamin}
+\begin{tabular}{|c|c|}
+\hline
+& Bobot\\
+\hline
+Male & 0.6\\
+\hline
+Female & 0.4\\
+\hline
+\end{tabular}
+\end{table}
+				
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{gambarwirausahaawal} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 0]{Gambar ketetanggaan tiga entrepreneur pada saat t = 0} 
+		\label{fig:t0} 
+	\end{figure}
+
+
+Dalam simulasi ini diasumsikan terdapat dua kondisi publik yaitu financial environment related with entrepreneurship yang memiliki bobot 3.06 dan cultural, social norms and society support yang memiliki bobot 3.29. Perhitungan masing-masing entrepreneur 1, entrepreneur 2 dan entrepreneur 3 (E1,E2,E3) pada saat t=0 yaitu sebagai berikut :
+	
+
+\begin{equation}
+	CIdx_{1}(t=0) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + 0 +  \frac {1} {2}) + 0.2 \times (3.06 + 3.29) = 9.305
+\end{equation}	
+
+\begin{equation}
+	CIdx_{2}(t=0) = 0.5 \times (7.6 + 7.0 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + \frac {1} {2} + \frac {1} {2}) + 0.2 \times (3.06 + 3.29) = 9.63
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=0) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {1} {2} + 0) + 0.2 \times (3.06 + 3.29) = 9.345
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{gambarwirausaha(t=0)} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 0]{Gambar ketetanggaan tiga entrepreneur pada saat t = 0} 
+		\label{fig:t0} 
+	\end{figure}
+
+Perhitungan masing-masing entrepreneur 1, entrepreneur 2 dan entrepreneur 3 (E1,E2,E3) pada saat t=1 yaitu sebagai berikut :
+
+\begin{equation}
+	CIdx_{1}(t=1) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {2} {6}  + 0) + 0.2 \times (3.06 + 3.29) = 9.254
+\end{equation}
+
+\begin{equation}
+	CIdx_{2}(t=1) = 0.5 \times (7.6 + 7.5 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29) = 9.68
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=1) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29) = 9.295
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{gambarwirausaha(t=1)} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 1]{Gambar ketetanggaan tiga entrepreneur pada saat t = 1} 
+		\label{fig:t0} 
+	\end{figure}
+
+Pada saat t=2 terdapat 1 kondisi publik baru yaitu physical infrastructures and services access yang memiliki bobot 3.45.
+
+
+\begin{equation}
+	CIdx_{1}(t=2) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {2} {6}  + 0) + 0.2 \times (3.06 + 3.29 + 3.45) = 9.945
+\end{equation}
+
+\begin{equation}
+	CIdx_{2}(t=2) = 0.5 \times (7.6 + 7.5 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29 + 3.45) = 10.37
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=2) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29+ 3.45) = 9.985
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{gambarwirausaha(t=2)} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 2]{Gambar ketetanggaan tiga entrepreneur pada saat t = 2} 
+		\label{fig:t0} 
+	\end{figure}
+	
+	Pada saat t=3 terdapat satu kondisi publik baru yaitu internal market dynamic yang memiliki bobot 3.92.
+	
+\begin{equation}
+	CIdx_{1}(t=3) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {1} {2}  + 0) + 0.2 \times (3.06 + 3.29 + 3.45 + 3.92) = 10.779
+\end{equation}
+
+\begin{equation}
+	CIdx_{2}(t=3) = 0.5 \times (7.6 + 7.5 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + 0 + 0) + 0.2 \times (3.06 + 3.29 + 3.45 + 3.92) = 11.054
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=3) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {1} {2} + 0) + 0.2 \times (3.06 + 3.29+ 3.45 + 3.92) = 10.819
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{gambarwirausaha(t=3)} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 3]{Gambar ketetanggaan tiga entrepreneur pada saat t = 3} 
+		\label{fig:t0} 
+	\end{figure}

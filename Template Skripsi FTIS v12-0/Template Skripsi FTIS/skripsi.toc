@@ -22,7 +22,8 @@
 \contentsline {subsection}{\numberline {2.4.2}Adjacency Matrix}{18}{subsection.2.4.2}
 \contentsline {chapter}{\numberline {3}Analisis}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Analisis Pertumbuhan Wirausaha}{21}{section.3.1}
-\contentsline {section}{\numberline {3.2}Analisis Model Pertumbuhan Wirausaha dengan Cellular Automata}{21}{section.3.2}
+\contentsline {section}{\numberline {3.2}Analisis Pemodelan Cellular Automata}{21}{section.3.2}
+\contentsline {section}{\numberline {3.3}Analisis Model Pertumbuhan Wirausaha dengan Cellular Automata}{21}{section.3.3}
 \contentsline {chapter}{Daftar Referensi}{27}{chapter*.5}
 \contentsline {chapter}{\numberline {A}Kode Program}{29}{appendix.A}
 \contentsline {chapter}{\numberline {B}Hasil Eksperimen}{31}{appendix.B}
