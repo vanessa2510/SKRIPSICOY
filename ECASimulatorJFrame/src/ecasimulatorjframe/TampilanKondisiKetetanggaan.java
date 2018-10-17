@@ -692,15 +692,18 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
         boolean checker = true;
-
+        int jmlCheckList = 0;
         //umur
         if (umurCBNeg.isSelected()) {
+            jmlCheckList += 1;
             // kalo radio button umurKrgDr ga diisi, check umurSmDgn
-            if (umurKrgDr.getText().equals("")) {
+            if (!umurKrgDr.isSelected()) {
+                checker = false;
                 // kalo radio button umurSmDgn ga diisi, check umurLbhDr
-                if (umurSmDgn.getText().equals("")) {
+                if (!umurSmDgn.isSelected()) {
+                    checker = false;
                     // kalo radio button umurLbhDr ga diisi, checker = false
-                    if (umurLbhDr.getText().equals("")) {
+                    if (!umurLbhDr.isSelected()) {
                         checker = false;
                     } // kalo radio button umurLbhDr diisi lsg dimasukin datanya ke data handler
                     else {
@@ -717,15 +720,18 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 InputDataHandler.inputDataKetetanggaan("umurKurangDari", umurKrgDr.getText());
                 checker = true;
             }
+
         }
+
         // level
         if (levelCBNeg.isSelected()) {
+            jmlCheckList += 1;
             // kalo radio button levelKrgDr ga diisi, check levelSmDgn
-            if (levelKrgDr.getText().equals("")) {
+            if (!levelKrgDr.isSelected()) {
                 // kalo radio button levelSmDgn ga diisi, check levelLbhDr
-                if (levelSmDgn.getText().equals("")) {
+                if (!levelSmDgn.isSelected()) {
                     // kalo radio button levelLbhDr ga diisi, checker = false
-                    if (levelLbhDr.getText().equals("")) {
+                    if (!levelLbhDr.isSelected()) {
                         checker = false;
                     } // kalo radio button levelLbhDr diisi lsg dimasukin datanya ke data handler
                     else {
@@ -746,12 +752,13 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
         //pendidikan
         if (pendidikanCBNeg.isSelected()) {
+            jmlCheckList += 1;
             // kalo radio button pendidikanKrgDr ga diisi, check pendidikanSmDgn
-            if (pendidikanKrgDr.getText().equals("")) {
+            if (!pendidikanKrgDr.isSelected()) {
                 // kalo radio button pendidikanSmDgn ga diisi, check pendidikanLbhDr
-                if (pendidikanSmDgn.getText().equals("")) {
+                if (!pendidikanSmDgn.isSelected()) {
                     // kalo radio button pendidikanLbhDr ga diisi, checker = false
-                    if (pendidikanLbhDr.getText().equals("")) {
+                    if (!pendidikanLbhDr.isSelected()) {
                         checker = false;
                     } // kalo radio button pendidikanLbhDr diisi lsg dimasukin datanya ke data handler
                     else {
@@ -772,12 +779,13 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
         //pendapatan
         if (pendapatanCBNeg.isSelected()) {
+            jmlCheckList += 1;
             // kalo radio button pendapatanKrgDr ga diisi, check pendapatanSmDgn
-            if (pendapatanKrgDr.getText().equals("")) {
+            if (!pendapatanKrgDr.isSelected()) {
                 // kalo radio button pendapatanSmDgn ga diisi, check pendapatanLbhDr
-                if (pendapatanSmDgn.getText().equals("")) {
+                if (!pendapatanSmDgn.isSelected()) {
                     // kalo radio button pendapatanLbhDr ga diisi, checker = false
-                    if (pendapatanLbhDr.getText().equals("")) {
+                    if (!pendapatanLbhDr.isSelected()) {
                         checker = false;
                     } // kalo radio button pendapatanLbhDr diisi lsg dimasukin datanya ke data handler
                     else {
@@ -795,14 +803,15 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 checker = true;
             }
         }
-
+        if (jmlCheckList == 0) {
+            checker = false;
+        }
         if (checker == true) {
             this.hide();
             TampilanKondisiEksternal ke = new TampilanKondisiEksternal();
             ke.setVisible(true);
-        }
-        else{
-        
+        } else {
+            System.out.println("error");
         }
     }//GEN-LAST:event_nextButtonMouseClicked
 
