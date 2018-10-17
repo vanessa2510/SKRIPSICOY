@@ -6,6 +6,7 @@
 package ecasimulatorjframe;
 
 import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -707,17 +708,18 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                         checker = false;
                     } // kalo radio button umurLbhDr diisi lsg dimasukin datanya ke data handler
                     else {
-                        InputDataHandler.inputDataKetetanggaan("umurLbhDr", umurLbhDr.getText());
+                        // set umurLbhDr jadi 0 biar ga susah deskripsiinnya
+                        InputDataHandler.inputDataKetetanggaan("umurLbhDr", "2");
                         checker = true;
                     }
                 } // kalo radio button umurSmDgn diisi, lsg masukin datanya ke data handler
                 else {
-                    InputDataHandler.inputDataKetetanggaan("umurSmDgn", umurSmDgn.getText());
+                    InputDataHandler.inputDataKetetanggaan("umurSmDgn", "1");
                     checker = true;
                 }
             } // kalo radio button umurKrgDr diisi lsg true n nilainya dimasukin ke data handler
             else {
-                InputDataHandler.inputDataKetetanggaan("umurKurangDari", umurKrgDr.getText());
+                InputDataHandler.inputDataKetetanggaan("umurKurangDari", "0");
                 checker = true;
             }
 
@@ -735,17 +737,17 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                         checker = false;
                     } // kalo radio button levelLbhDr diisi lsg dimasukin datanya ke data handler
                     else {
-                        InputDataHandler.inputDataKetetanggaan("levelLbhDr", levelLbhDr.getText());
+                        InputDataHandler.inputDataKetetanggaan("levelLbhDr", "2");
                         checker = true;
                     }
                 } // kalo radio button levelSmDgn diisi, lsg masukin datanya ke data handler
                 else {
-                    InputDataHandler.inputDataKetetanggaan("levelSmDgn", levelSmDgn.getText());
+                    InputDataHandler.inputDataKetetanggaan("levelSmDgn", "1");
                     checker = true;
                 }
             } // kalo radio button levelKrgDr diisi lsg true n nilainya dimasukin ke data handler
             else {
-                InputDataHandler.inputDataKetetanggaan("levelKurangDari", levelKrgDr.getText());
+                InputDataHandler.inputDataKetetanggaan("levelKurangDari", "0");
                 checker = true;
             }
         }
@@ -762,17 +764,17 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                         checker = false;
                     } // kalo radio button pendidikanLbhDr diisi lsg dimasukin datanya ke data handler
                     else {
-                        InputDataHandler.inputDataKetetanggaan("pendidikanLbhDr", pendidikanLbhDr.getText());
+                        InputDataHandler.inputDataKetetanggaan("pendidikanLbhDr", "2");
                         checker = true;
                     }
                 } // kalo radio button pendidikanSmDgn diisi, lsg masukin datanya ke data handler
                 else {
-                    InputDataHandler.inputDataKetetanggaan("pendidikanSmDgn", pendidikanSmDgn.getText());
+                    InputDataHandler.inputDataKetetanggaan("pendidikanSmDgn", "1");
                     checker = true;
                 }
             } // kalo radio button pendidikanKrgDr diisi lsg true n nilainya dimasukin ke data handler
             else {
-                InputDataHandler.inputDataKetetanggaan("pendidikanKurangDari", pendidikanKrgDr.getText());
+                InputDataHandler.inputDataKetetanggaan("pendidikanKurangDari", "0");
                 checker = true;
             }
         }
@@ -789,29 +791,30 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                         checker = false;
                     } // kalo radio button pendapatanLbhDr diisi lsg dimasukin datanya ke data handler
                     else {
-                        InputDataHandler.inputDataKetetanggaan("pendapatanLbhDr", pendapatanLbhDr.getText());
+                        InputDataHandler.inputDataKetetanggaan("pendapatanLbhDr", "2");
                         checker = true;
                     }
                 } // kalo radio button pendapatanSmDgn diisi, lsg masukin datanya ke data handler
                 else {
-                    InputDataHandler.inputDataKetetanggaan("pendapatanSmDgn", pendapatanSmDgn.getText());
+                    InputDataHandler.inputDataKetetanggaan("pendapatanSmDgn", "1");
                     checker = true;
                 }
             } // kalo radio button pendapatanKrgDr diisi lsg true n nilainya dimasukin ke data handler
             else {
-                InputDataHandler.inputDataKetetanggaan("pendapatanKurangDari", pendapatanKrgDr.getText());
+                InputDataHandler.inputDataKetetanggaan("pendapatanKurangDari", "0");
                 checker = true;
             }
         }
         if (jmlCheckList == 0) {
             checker = false;
+            //JOptionPane.showMessageDialog(null, "Check box is empty, you must fill it first!");
         }
         if (checker == true) {
             this.hide();
             TampilanKondisiEksternal ke = new TampilanKondisiEksternal();
             ke.setVisible(true);
         } else {
-            System.out.println("error");
+            JOptionPane.showMessageDialog(null, "You cannot move to the other page because you must fill checkbox or radio button first!");
         }
     }//GEN-LAST:event_nextButtonMouseClicked
 

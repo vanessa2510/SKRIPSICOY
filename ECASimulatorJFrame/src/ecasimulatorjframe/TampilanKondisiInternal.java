@@ -5,6 +5,8 @@
  */
 package ecasimulatorjframe;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Vanessa
@@ -434,6 +436,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
        // n.setNumNeighbor(jumlahCheckList);
         if (jumlahCheckList == 0) {
             checker = false;
+           // JOptionPane.showMessageDialog(null, "Check box is empty, you must fill it first!");
         }
 
         if (checker == true) {
@@ -441,7 +444,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
             TampilanKondisiKetetanggaan kk = new TampilanKondisiKetetanggaan();
             kk.setVisible(true);
         } else {
-            //cari tampilan popup window
+            JOptionPane.showMessageDialog(null,"You cannot move to the other page because you must fill checkbox or text field first!");
         }
 
 

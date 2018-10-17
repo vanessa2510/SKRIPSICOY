@@ -5,6 +5,8 @@
  */
 package ecasimulatorjframe;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Vanessa
@@ -277,31 +279,41 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
     }//GEN-LAST:event_nilaiIFAActionPerformed
 
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
+        boolean checker = true;
         if (nilaiDP.getText().equals("")) {
             InputDataHandler.inputDataEksternal("dinamikaPasar", null);
-        } else {
-            InputDataHandler.inputDataEksternal("dinamikaPasar", nilaiDP.getText());
-        }
-        
-        if (nilaiIFA.getText().equals("")) {
+            checker = false;
+        } else if (nilaiIFA.getText().equals("")) {
             InputDataHandler.inputDataEksternal("InfrastrukturListrik", null);
-        }
-        else{
-            InputDataHandler.inputDataEksternal("InfrastrukturListrik", nilaiIFA.getText());
-        }
-        
-        if (nilaiNSB.getText().equals("")) {
+            checker = false;
+        } else if (nilaiNSB.getText().equals("")) {
             InputDataHandler.inputDataEksternal("NormaSosialBudaya", null);
-        }
-        else{
-            InputDataHandler.inputDataEksternal("NormaSosialBudaya", nilaiNSB.getText());
-        }
-        
-        if (nilaiPP.getText().equals("")) {
+            checker = false;
+        } else if (nilaiPP.getText().equals("")) {
             InputDataHandler.inputDataEksternal("ProgramPemerintah", null);
+            checker = false;
+        } else {
+            if (!nilaiDP.getText().equals("")) {
+                InputDataHandler.inputDataEksternal("dinamikaPasar", nilaiDP.getText());
+                checker = true;
+            } else if (!nilaiIFA.getText().equals("")) {
+                InputDataHandler.inputDataEksternal("InfrastrukturListrik", nilaiIFA.getText());
+                checker = true;
+            } else if (!nilaiNSB.getText().equals("")) {
+                InputDataHandler.inputDataEksternal("NormaSosialBudaya", nilaiNSB.getText());
+                checker = true;
+            } else {
+                InputDataHandler.inputDataEksternal("ProgramPemerintah", nilaiPP.getText());
+                checker = true;
+            }
         }
-        else{
-            InputDataHandler.inputDataEksternal("ProgramPemerintah", nilaiPP.getText());
+
+        if (checker == true) {
+            this.hide();
+            TampilanDataWirausaha ks = new TampilanDataWirausaha();
+            ks.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "You must fill the text field first!");
         }
     }//GEN-LAST:event_nextButtonMouseClicked
 
