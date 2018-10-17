@@ -34,7 +34,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         pendapatanKrgDr.setEnabled(false);
         pendapatanSmDgn.setEnabled(false);
         pendapatanLbhDr.setEnabled(false);
-        
+
         kumpulanJPanel = new JPanel[]{jUmur, jLevel, jPendidikan, jPendapatan, jJenisKelamin, jLokasi, jbidangUsaha};
         // System.out.println(jUmur.getLocation().getX());
         // System.out.println(jUmur.getLocation().getY());
@@ -595,9 +595,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
         // TODO add your handling code here:
-        this.hide();
-        TampilanKondisiEksternal ke = new TampilanKondisiEksternal();
-        ke.setVisible(true);
+
     }//GEN-LAST:event_nextButtonActionPerformed
 
     private void umurCBNegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_umurCBNegActionPerformed
@@ -693,10 +691,118 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
     }//GEN-LAST:event_pendapatanCBNegMouseClicked
 
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
+        boolean checker = true;
+
+        //umur
         if (umurCBNeg.isSelected()) {
-            if (umurKrgDr.getText().equals("") && umurSmDgn.getText().equals("") && umurLbhDr.getText().equals("")) {
-                InputDataHandler.inputDataKetetanggaan("umurKetetanggaan", null);
+            // kalo radio button umurKrgDr ga diisi, check umurSmDgn
+            if (umurKrgDr.getText().equals("")) {
+                // kalo radio button umurSmDgn ga diisi, check umurLbhDr
+                if (umurSmDgn.getText().equals("")) {
+                    // kalo radio button umurLbhDr ga diisi, checker = false
+                    if (umurLbhDr.getText().equals("")) {
+                        checker = false;
+                    } // kalo radio button umurLbhDr diisi lsg dimasukin datanya ke data handler
+                    else {
+                        InputDataHandler.inputDataKetetanggaan("umurLbhDr", umurLbhDr.getText());
+                        checker = true;
+                    }
+                } // kalo radio button umurSmDgn diisi, lsg masukin datanya ke data handler
+                else {
+                    InputDataHandler.inputDataKetetanggaan("umurSmDgn", umurSmDgn.getText());
+                    checker = true;
+                }
+            } // kalo radio button umurKrgDr diisi lsg true n nilainya dimasukin ke data handler
+            else {
+                InputDataHandler.inputDataKetetanggaan("umurKurangDari", umurKrgDr.getText());
+                checker = true;
             }
+        }
+        // level
+        if (levelCBNeg.isSelected()) {
+            // kalo radio button levelKrgDr ga diisi, check levelSmDgn
+            if (levelKrgDr.getText().equals("")) {
+                // kalo radio button levelSmDgn ga diisi, check levelLbhDr
+                if (levelSmDgn.getText().equals("")) {
+                    // kalo radio button levelLbhDr ga diisi, checker = false
+                    if (levelLbhDr.getText().equals("")) {
+                        checker = false;
+                    } // kalo radio button levelLbhDr diisi lsg dimasukin datanya ke data handler
+                    else {
+                        InputDataHandler.inputDataKetetanggaan("levelLbhDr", levelLbhDr.getText());
+                        checker = true;
+                    }
+                } // kalo radio button levelSmDgn diisi, lsg masukin datanya ke data handler
+                else {
+                    InputDataHandler.inputDataKetetanggaan("levelSmDgn", levelSmDgn.getText());
+                    checker = true;
+                }
+            } // kalo radio button levelKrgDr diisi lsg true n nilainya dimasukin ke data handler
+            else {
+                InputDataHandler.inputDataKetetanggaan("levelKurangDari", levelKrgDr.getText());
+                checker = true;
+            }
+        }
+
+        //pendidikan
+        if (pendidikanCBNeg.isSelected()) {
+            // kalo radio button pendidikanKrgDr ga diisi, check pendidikanSmDgn
+            if (pendidikanKrgDr.getText().equals("")) {
+                // kalo radio button pendidikanSmDgn ga diisi, check pendidikanLbhDr
+                if (pendidikanSmDgn.getText().equals("")) {
+                    // kalo radio button pendidikanLbhDr ga diisi, checker = false
+                    if (pendidikanLbhDr.getText().equals("")) {
+                        checker = false;
+                    } // kalo radio button pendidikanLbhDr diisi lsg dimasukin datanya ke data handler
+                    else {
+                        InputDataHandler.inputDataKetetanggaan("pendidikanLbhDr", pendidikanLbhDr.getText());
+                        checker = true;
+                    }
+                } // kalo radio button pendidikanSmDgn diisi, lsg masukin datanya ke data handler
+                else {
+                    InputDataHandler.inputDataKetetanggaan("pendidikanSmDgn", pendidikanSmDgn.getText());
+                    checker = true;
+                }
+            } // kalo radio button pendidikanKrgDr diisi lsg true n nilainya dimasukin ke data handler
+            else {
+                InputDataHandler.inputDataKetetanggaan("pendidikanKurangDari", pendidikanKrgDr.getText());
+                checker = true;
+            }
+        }
+
+        //pendapatan
+        if (pendapatanCBNeg.isSelected()) {
+            // kalo radio button pendapatanKrgDr ga diisi, check pendapatanSmDgn
+            if (pendapatanKrgDr.getText().equals("")) {
+                // kalo radio button pendapatanSmDgn ga diisi, check pendapatanLbhDr
+                if (pendapatanSmDgn.getText().equals("")) {
+                    // kalo radio button pendapatanLbhDr ga diisi, checker = false
+                    if (pendapatanLbhDr.getText().equals("")) {
+                        checker = false;
+                    } // kalo radio button pendapatanLbhDr diisi lsg dimasukin datanya ke data handler
+                    else {
+                        InputDataHandler.inputDataKetetanggaan("pendapatanLbhDr", pendapatanLbhDr.getText());
+                        checker = true;
+                    }
+                } // kalo radio button pendapatanSmDgn diisi, lsg masukin datanya ke data handler
+                else {
+                    InputDataHandler.inputDataKetetanggaan("pendapatanSmDgn", pendapatanSmDgn.getText());
+                    checker = true;
+                }
+            } // kalo radio button pendapatanKrgDr diisi lsg true n nilainya dimasukin ke data handler
+            else {
+                InputDataHandler.inputDataKetetanggaan("pendapatanKurangDari", pendapatanKrgDr.getText());
+                checker = true;
+            }
+        }
+
+        if (checker == true) {
+            this.hide();
+            TampilanKondisiEksternal ke = new TampilanKondisiEksternal();
+            ke.setVisible(true);
+        }
+        else{
+        
         }
     }//GEN-LAST:event_nextButtonMouseClicked
 
