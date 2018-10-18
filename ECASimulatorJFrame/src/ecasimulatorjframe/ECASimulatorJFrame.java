@@ -58,6 +58,9 @@ public class ECASimulatorJFrame {
         
         // Faktor Publik
         double[] pf = new double[] {2.53, 3.92, 3.29, 3.45};
+        
+        //bobot ketetanggaan
+        
     }
     
 }

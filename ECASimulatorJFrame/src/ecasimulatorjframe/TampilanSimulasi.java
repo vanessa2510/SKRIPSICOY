@@ -5,6 +5,8 @@
  */
 package ecasimulatorjframe;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Vanessa
@@ -107,6 +109,11 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         jLabel7.setText("Periode :");
 
         jButton1.setText("SIMULATE");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -213,6 +220,50 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         String masukanPeriode = nilaiPeriode.getText();
         int p = Integer.parseInt(masukanPeriode);
     }//GEN-LAST:event_nilaiPeriodeActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        boolean checker = true;
+        if (nilaiA.getText().equals("")) {
+            InputDataHandler.inputDataSimulasi("nilaiA", null);
+            checker = false;
+        } else if (nilaiB.getText().equals("")) {
+            InputDataHandler.inputDataSimulasi("nilaiB", null);
+            checker = false;
+        } else if (nilaiC.getText().equals("")) {
+            InputDataHandler.inputDataSimulasi("nilaiC", null);
+            checker = false;
+        } else if (nilaiPeriode.getText().equals("")) {
+            InputDataHandler.inputDataSimulasi("periode", null);
+            checker = false;
+        } else if (nilaiThreshold.getText().equals("")) {
+            InputDataHandler.inputDataSimulasi("threshold", null);
+            checker = false;
+        } else {
+            if (!nilaiA.getText().equals("")) {
+                InputDataHandler.inputDataSimulasi("nilaiA", nilaiA.getText());
+                checker = true;
+            } else if (!nilaiB.getText().equals("")) {
+                InputDataHandler.inputDataSimulasi("nilaiB", nilaiB.getText());
+                checker = true;
+            } else if (!nilaiC.getText().equals("")) {
+                InputDataHandler.inputDataSimulasi("nilaiC", nilaiC.getText());
+                checker = true;
+            } else if (!nilaiPeriode.getText().equals("")) {
+                InputDataHandler.inputDataSimulasi("periode", nilaiPeriode.getText());
+                checker = true;
+            } else {
+                InputDataHandler.inputDataSimulasi("threshold", nilaiThreshold.getText());
+                checker = true;
+            }
+        }
+        if (checker == true) {
+            this.hide();
+            TampilanDataWirausaha ks = new TampilanDataWirausaha();
+            ks.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "You must fill the text field first!");
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
