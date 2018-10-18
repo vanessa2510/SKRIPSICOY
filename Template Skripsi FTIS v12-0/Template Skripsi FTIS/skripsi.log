@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  25 JUN 2018 20:48
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  18 OCT 2018 21:59
 entering extended mode
 **skripsi.tex
 
@@ -951,6 +951,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS v12-0\Template Skripsi
  FTIS\Bab/bab3.aux"
 
+LaTeX Warning: Label `tabelLW' multiply defined.
+
+
 LaTeX Warning: Label `fig:t0' multiply defined.
 
 
@@ -1071,7 +1074,7 @@ LaTeX Info: Redefining \nameref on input line 242.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 
-<./Gambar/Logo-UNPAR.png, id=134, 180.31364pt x 177.42285pt>
+<./Gambar/Logo-UNPAR.png, id=138, 180.31364pt x 177.42285pt>
 File: ./Gambar/Logo-UNPAR.png Graphic file (type png)
 
 <use ./Gambar/Logo-UNPAR.png>
@@ -1198,7 +1201,7 @@ Package microtype Info: Character `029' is missing
 
 ]
 Bab 2.
-<GEM2016-wirausaha.png, id=390, 586.44093pt x 293.59688pt>
+<GEM2016-wirausaha.png, id=397, 586.44093pt x 293.59688pt>
 File: GEM2016-wirausaha.png Graphic file (type png)
 
 <use GEM2016-wirausaha.png>
@@ -1271,19 +1274,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--56
 
 [6 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skrip
 si FTIS/GEM2016-wirausaha.png>]
-<PCPendidikan.png, id=404, 379.4175pt x 193.47281pt>
+<PCPendidikan.png, id=411, 379.4175pt x 193.47281pt>
 File: PCPendidikan.png Graphic file (type png)
  <use PCPendidikan.png>
 Package pdftex.def Info: PCPendidikan.png used on input line 70.
 (pdftex.def)             Requested size: 398.34802pt x 199.17294pt.
 
-[7] <PCRegion.png, id=411, 319.94531pt x 182.18062pt>
+[7] <PCRegion.png, id=418, 319.94531pt x 182.18062pt>
 File: PCRegion.png Graphic file (type png)
  <use PCRegion.png>
 Package pdftex.def Info: PCRegion.png used on input line 79.
 (pdftex.def)             Requested size: 312.98283pt x 170.72162pt.
 
-<RMfemalemale.png, id=413, 353.82187pt x 212.29312pt>
+<RMfemalemale.png, id=420, 353.82187pt x 212.29312pt>
 File: RMfemalemale.png Graphic file (type png)
  <use RMfemalemale.png>
 Package pdftex.def Info: RMfemalemale.png used on input line 88.
@@ -1292,13 +1295,13 @@ Package pdftex.def Info: RMfemalemale.png used on input line 88.
 [8 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skrip
 si FTIS/PCPendidikan.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FT
 IS v12-0/Template Skripsi FTIS/PCRegion.png>]
-<RMpendidikan.png, id=421, 350.05782pt x 180.675pt>
+<RMpendidikan.png, id=428, 350.05782pt x 180.675pt>
 File: RMpendidikan.png Graphic file (type png)
  <use RMpendidikan.png>
 Package pdftex.def Info: RMpendidikan.png used on input line 99.
 (pdftex.def)             Requested size: 369.91109pt x 199.17041pt.
 
-<POfemalemale.png, id=423, 316.93407pt x 150.5625pt>
+<POfemalemale.png, id=430, 316.93407pt x 150.5625pt>
 File: POfemalemale.png Graphic file (type png)
  <use POfemalemale.png>
 Package pdftex.def Info: POfemalemale.png used on input line 109.
@@ -1307,13 +1310,13 @@ Package pdftex.def Info: POfemalemale.png used on input line 109.
 [9 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skrip
 si FTIS/RMfemalemale.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FT
 IS v12-0/Template Skripsi FTIS/RMpendidikan.png>]
-<POpendidikan.png, id=432, 369.63094pt x 160.34906pt>
+<POpendidikan.png, id=439, 369.63094pt x 160.34906pt>
 File: POpendidikan.png Graphic file (type png)
  <use POpendidikan.png>
 Package pdftex.def Info: POpendidikan.png used on input line 118.
 (pdftex.def)             Requested size: 398.3438pt x 170.72032pt.
 
-<FOFfemalemale.png, id=434, 317.68687pt x 183.68625pt>
+<FOFfemalemale.png, id=441, 317.68687pt x 183.68625pt>
 File: FOFfemalemale.png Graphic file (type png)
  <use FOFfemalemale.png>
 Package pdftex.def Info: FOFfemalemale.png used on input line 127.
@@ -1322,13 +1325,13 @@ Package pdftex.def Info: FOFfemalemale.png used on input line 127.
 [10 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
 psi FTIS/POfemalemale.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi F
 TIS v12-0/Template Skripsi FTIS/POpendidikan.png>]
-<CA1D.png, id=443, 157.33781pt x 54.2025pt>
+<CA1D.png, id=450, 157.33781pt x 54.2025pt>
 File: CA1D.png Graphic file (type png)
  <use CA1D.png>
 Package pdftex.def Info: CA1D.png used on input line 145.
 (pdftex.def)             Requested size: 113.8113pt x 56.90851pt.
 
-<wolfram.png, id=445, 384.6872pt x 38.39343pt>
+<wolfram.png, id=452, 384.6872pt x 38.39343pt>
 File: wolfram.png Graphic file (type png)
  <use wolfram.png>
 Package pdftex.def Info: wolfram.png used on input line 155.
@@ -1336,19 +1339,19 @@ Package pdftex.def Info: wolfram.png used on input line 155.
  [11 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skr
 ipsi FTIS/FOFfemalemale.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi
  FTIS v12-0/Template Skripsi FTIS/CA1D.png>]
-<penerapanwolfram.png, id=456, 357.58594pt x 158.84344pt>
+<penerapanwolfram.png, id=463, 357.58594pt x 158.84344pt>
 File: penerapanwolfram.png Graphic file (type png)
 
 <use penerapanwolfram.png>
 Package pdftex.def Info: penerapanwolfram.png used on input line 166.
 (pdftex.def)             Requested size: 284.54135pt x 170.73155pt.
- <CA2D.png, id=457, 140.77594pt x 127.97812pt>
+ <CA2D.png, id=464, 140.77594pt x 127.97812pt>
 File: CA2D.png Graphic file (type png)
 
 <use CA2D.png>
 Package pdftex.def Info: CA2D.png used on input line 175.
 (pdftex.def)             Requested size: 113.81091pt x 56.90419pt.
- <conway.png, id=459, 403.5075pt x 246.9225pt>
+ <conway.png, id=466, 403.5075pt x 246.9225pt>
 File: conway.png Graphic file (type png)
  <use conway.png>
 Package pdftex.def Info: conway.png used on input line 185.
@@ -1358,13 +1361,13 @@ Package pdftex.def Info: conway.png used on input line 185.
 psi FTIS/wolfram.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v
 12-0/Template Skripsi FTIS/penerapanwolfram.png> <D:/Vanessa/Data/SMT 8/SKRIPSI
 COY/Template Skripsi FTIS v12-0/Template Skripsi FTIS/CA2D.png>]
-<contohconway.png, id=469, 319.94531pt x 87.32625pt>
+<contohconway.png, id=476, 319.94531pt x 87.32625pt>
 File: contohconway.png Graphic file (type png)
  <use contohconway.png>
 Package pdftex.def Info: contohconway.png used on input line 195.
 (pdftex.def)             Requested size: 284.53073pt x 85.36327pt.
 
-<aplikasi1.png, id=470, 371.88937pt x 101.62968pt>
+<aplikasi1.png, id=477, 371.88937pt x 101.62968pt>
 File: aplikasi1.png Graphic file (type png)
  <use aplikasi1.png>
 Package pdftex.def Info: aplikasi1.png used on input line 210.
@@ -1382,7 +1385,7 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 268.
  [15]
-<tingkatwirausaha.png, id=512, 379.4175pt x 242.40562pt>
+<tingkatwirausaha.png, id=519, 379.4175pt x 242.40562pt>
 File: tingkatwirausaha.png Graphic file (type png)
 
 <use tingkatwirausaha.png>
@@ -1390,26 +1393,26 @@ Package pdftex.def Info: tingkatwirausaha.png used on input line 283.
 (pdftex.def)             Requested size: 256.07838pt x 142.2709pt.
  [16 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skr
 ipsi FTIS/tingkatwirausaha.png>]
-<graf5.png, id=519, 441.14813pt x 173.89969pt>
+<graf5.png, id=526, 441.14813pt x 173.89969pt>
 File: graf5.png Graphic file (type png)
  <use graf5.png>
 Package pdftex.def Info: graf5.png used on input line 337.
 (pdftex.def)             Requested size: 227.62126pt x 113.81091pt.
 
-<adjacencylist.png, id=522, 261.22594pt x 225.09094pt>
+<adjacencylist.png, id=529, 261.22594pt x 225.09094pt>
 File: adjacencylist.png Graphic file (type png)
  <use adjacencylist.png>
 Package pdftex.def Info: adjacencylist.png used on input line 367.
 (pdftex.def)             Requested size: 113.81172pt x 113.81255pt.
 
 [17 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
-psi FTIS/graf5.png>] <adjacencymatrix.png, id=536, 170.13562pt x 147.55125pt>
+psi FTIS/graf5.png>] <adjacencymatrix.png, id=543, 170.13562pt x 147.55125pt>
 File: adjacencymatrix.png Graphic file (type png)
 
 <use adjacencymatrix.png>
 Package pdftex.def Info: adjacencymatrix.png used on input line 397.
 (pdftex.def)             Requested size: 142.2717pt x 113.81293pt.
- <graf3.png, id=539, 161.10187pt x 140.77594pt>
+ <graf3.png, id=546, 161.10187pt x 140.77594pt>
 File: graf3.png Graphic file (type png)
 
 <use graf3.png>
@@ -1427,64 +1430,69 @@ psi FTIS/graf3.png>]
 
 ]
 Bab 3.
-[21] [22] <gambarwirausahaawal.png, id=573, 2138.99126pt x 1232.605pt>
+File: tingkatwirausaha.png Graphic file (type png)
+<use tingkatwirausaha.png>
+Package pdftex.def Info: tingkatwirausaha.png used on input line 21.
+(pdftex.def)             Requested size: 398.34802pt x 199.18076pt.
+ [21] [22] [23]
+<gambarwirausahaawal.png, id=592, 2138.99126pt x 1232.605pt>
 File: gambarwirausahaawal.png Graphic file (type png)
 
 <use gambarwirausahaawal.png>
-Package pdftex.def Info: gambarwirausahaawal.png used on input line 158.
+Package pdftex.def Info: gambarwirausahaawal.png used on input line 180.
 (pdftex.def)             Requested size: 512.16078pt x 341.42186pt.
 
-Overfull \hbox (42.69029pt too wide) in paragraph at lines 158--159
- [][] 
- []
-
-[23] <gambarwirausaha(t=0).png, id=579, 2138.99126pt x 1232.605pt>
-File: gambarwirausaha(t=0).png Graphic file (type png)
-
-<use gambarwirausaha(t=0).png>
-Package pdftex.def Info: gambarwirausaha(t=0).png used on input line 181.
-(pdftex.def)             Requested size: 512.16078pt x 341.42186pt.
-
-Overfull \hbox (42.69029pt too wide) in paragraph at lines 181--182
+Overfull \hbox (42.69029pt too wide) in paragraph at lines 180--181
  [][] 
  []
 
 [24 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
 psi FTIS/gambarwirausahaawal.png>]
-<gambarwirausaha(t=1).png, id=588, 2138.99126pt x 1232.605pt>
-File: gambarwirausaha(t=1).png Graphic file (type png)
+<gambarwirausaha(t=0).png, id=598, 2138.99126pt x 1232.605pt>
+File: gambarwirausaha(t=0).png Graphic file (type png)
 
-<use gambarwirausaha(t=1).png>
-Package pdftex.def Info: gambarwirausaha(t=1).png used on input line 202.
+<use gambarwirausaha(t=0).png>
+Package pdftex.def Info: gambarwirausaha(t=0).png used on input line 203.
 (pdftex.def)             Requested size: 512.16078pt x 341.42186pt.
 
-Overfull \hbox (42.69029pt too wide) in paragraph at lines 202--203
+Overfull \hbox (42.69029pt too wide) in paragraph at lines 203--204
  [][] 
  []
 
-[25 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
-psi FTIS/gambarwirausaha(t=0).png>]
-<gambarwirausaha(t=2).png, id=597, 2138.99126pt x 1232.605pt>
-File: gambarwirausaha(t=2).png Graphic file (type png)
+<gambarwirausaha(t=1).png, id=599, 2138.99126pt x 1232.605pt>
+File: gambarwirausaha(t=1).png Graphic file (type png)
 
-<use gambarwirausaha(t=2).png>
-Package pdftex.def Info: gambarwirausaha(t=2).png used on input line 224.
+<use gambarwirausaha(t=1).png>
+Package pdftex.def Info: gambarwirausaha(t=1).png used on input line 224.
 (pdftex.def)             Requested size: 512.16078pt x 341.42186pt.
 
 Overfull \hbox (42.69029pt too wide) in paragraph at lines 224--225
  [][] 
  []
 
+[25 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
+psi FTIS/gambarwirausaha(t=0).png>]
+<gambarwirausaha(t=2).png, id=610, 2138.99126pt x 1232.605pt>
+File: gambarwirausaha(t=2).png Graphic file (type png)
+
+<use gambarwirausaha(t=2).png>
+Package pdftex.def Info: gambarwirausaha(t=2).png used on input line 246.
+(pdftex.def)             Requested size: 512.16078pt x 341.42186pt.
+
+Overfull \hbox (42.69029pt too wide) in paragraph at lines 246--247
+ [][] 
+ []
+
 [26 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS v12-0/Template Skri
 psi FTIS/gambarwirausaha(t=1).png>]
-<gambarwirausaha(t=3).png, id=606, 2138.99126pt x 1232.605pt>
+<gambarwirausaha(t=3).png, id=620, 2138.99126pt x 1232.605pt>
 File: gambarwirausaha(t=3).png Graphic file (type png)
 
 <use gambarwirausaha(t=3).png>
-Package pdftex.def Info: gambarwirausaha(t=3).png used on input line 245.
+Package pdftex.def Info: gambarwirausaha(t=3).png used on input line 267.
 (pdftex.def)             Requested size: 512.16078pt x 341.42186pt.
 
-Overfull \hbox (42.69029pt too wide) in paragraph at lines 245--246
+Overfull \hbox (42.69029pt too wide) in paragraph at lines 267--268
  [][] 
  []
 
@@ -1593,7 +1601,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
 Package rerunfilecheck Info: File `skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 0B9874514F6B321391FE75CF36F06870;4649.
+(rerunfilecheck)             Checksum: EE56C0DCE6EE763DD9ED62A26B54F6A0;4976.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1607,10 +1615,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
  ) 
 Here is how much of TeX's memory you used:
- 35371 strings out of 493921
- 775183 string characters out of 3147276
- 1311984 words of memory out of 3000000
- 37588 multiletter control sequences out of 15000+200000
+ 35382 strings out of 493921
+ 775295 string characters out of 3147276
+ 1312116 words of memory out of 3000000
+ 37591 multiletter control sequences out of 15000+200000
  77355 words of font info for 137 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  78i,13n,130p,1253b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1632,9 +1640,9 @@ ype1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/lm/lmsy8.pfb>
-Output written on skripsi.pdf (55 pages, 1568378 bytes).
+Output written on skripsi.pdf (55 pages, 1571712 bytes).
 PDF statistics:
- 860 PDF objects out of 1000 (max. 8388607)
- 255 named destinations out of 1000 (max. 500000)
- 24463 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 875 PDF objects out of 1000 (max. 8388607)
+ 263 named destinations out of 1000 (max. 500000)
+ 24471 words of extra memory for PDF output out of 24883 (max. 10000000)
 
