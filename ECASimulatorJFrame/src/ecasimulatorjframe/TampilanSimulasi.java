@@ -42,7 +42,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         nilaiC = new javax.swing.JTextField();
         nilaiThreshold = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        simulateButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -108,15 +108,15 @@ public class TampilanSimulasi extends javax.swing.JFrame {
 
         jLabel7.setText("Periode :");
 
-        jButton1.setText("SIMULATE");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        simulateButton.setText("SIMULATE");
+        simulateButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                simulateButtonMouseClicked(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        simulateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                simulateButtonActionPerformed(evt);
             }
         });
 
@@ -143,7 +143,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1)
+                            .addComponent(simulateButton)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(nilaiC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -180,7 +180,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                             .addComponent(nilaiThreshold, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                        .addComponent(jButton1)
+                        .addComponent(simulateButton)
                         .addGap(21, 21, 21))))
         );
 
@@ -193,9 +193,9 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         double a = Double.parseDouble(masukanA);
     }//GEN-LAST:event_nilaiAActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void simulateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simulateButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_simulateButtonActionPerformed
 
     private void nilaiBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiBActionPerformed
         // TODO add your handling code here:
@@ -221,8 +221,11 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         int p = Integer.parseInt(masukanPeriode);
     }//GEN-LAST:event_nilaiPeriodeActionPerformed
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void simulateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_simulateButtonMouseClicked
         boolean checker = true;
+        double a=0.0;
+        double b=0.0;
+        double c=0.0;
         if (nilaiA.getText().equals("")) {
             InputDataHandler.inputDataSimulasi("nilaiA", null);
             checker = false;
@@ -241,12 +244,15 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         } else {
             if (!nilaiA.getText().equals("")) {
                 InputDataHandler.inputDataSimulasi("nilaiA", nilaiA.getText());
+                a = Double.parseDouble(nilaiA.getText());
                 checker = true;
             } else if (!nilaiB.getText().equals("")) {
                 InputDataHandler.inputDataSimulasi("nilaiB", nilaiB.getText());
+                b = Double.parseDouble(nilaiB.getText());
                 checker = true;
             } else if (!nilaiC.getText().equals("")) {
                 InputDataHandler.inputDataSimulasi("nilaiC", nilaiC.getText());
+                c = Double.parseDouble(nilaiC.getText());
                 checker = true;
             } else if (!nilaiPeriode.getText().equals("")) {
                 InputDataHandler.inputDataSimulasi("periode", nilaiPeriode.getText());
@@ -256,6 +262,9 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                 checker = true;
             }
         }
+        if (a+b+c!=1.0) {
+            JOptionPane.showMessageDialog(null, "The sum of a,b and c's value must 1!");
+        }
         if (checker == true) {
             this.hide();
             TampilanDataWirausaha ks = new TampilanDataWirausaha();
@@ -263,7 +272,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "You must fill the text field first!");
         }
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_simulateButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -301,7 +310,6 @@ public class TampilanSimulasi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -315,5 +323,6 @@ public class TampilanSimulasi extends javax.swing.JFrame {
     private javax.swing.JTextField nilaiC;
     private javax.swing.JTextField nilaiPeriode;
     private javax.swing.JTextField nilaiThreshold;
+    private javax.swing.JButton simulateButton;
     // End of variables declaration//GEN-END:variables
 }

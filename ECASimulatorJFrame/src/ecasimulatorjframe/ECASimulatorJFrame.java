@@ -57,10 +57,23 @@ public class ECASimulatorJFrame {
         double[] RMIm = new double[] {0.2,0.5,0.2,0.7,3.0,10.4,42.1,42.9};
         
         // Faktor Publik
-        double[] pf = new double[] {2.53, 3.92, 3.29, 3.45};
+        double[] pfs = new double[] {2.53, 3.92, 3.29, 3.45};
+        double[] pfw = new double[] {0.1,0.1,0.1,0.1};
         
         //bobot ketetanggaan
-        
+//        double[] nw = new double[] {0.7,0.0,0.3};
+//        int[] nr = new int[] {1,0,0}; // relasi ketetanggaan
+//        
+//        double[] composition = new double[] {0.5,0.3,0.2};
+//        
+//        System.out.println("Entrepreneurial Growth Monitoring");
+//        CA ca = new CA(1000,3,12);
+//        
+//        //setting faktor publik
+//        ca.pub.setFactors(pfs);
+//        ca.pub.setWeights(pfw);
+//        
+//        ca.readSimulationData(null);
     }
     
 }

@@ -15,6 +15,8 @@ import java.util.Map;
 public class InputDataHandler {
 
     private static Map<String, String> data;
+    
+    public static int jmlChecklist;
 
     public static void inputDataInternal(String key, String value) {
         if (data == null) {
@@ -44,6 +46,10 @@ public class InputDataHandler {
         }
         //buat masukin data (key n value)
         data.put(key, value);
+        
+    }
+    public static void jmlChecklist(){
+        jmlChecklist+=1;
     }
 
     public static void inputDataEksternal(String key, String value) {
@@ -52,12 +58,20 @@ public class InputDataHandler {
         }
         //buat masukin data (key n value)
         data.put(key, value);
+//        Map.Entry<String,String> entry =(Map.Entry<String,String>) data.entrySet();
+//        entry.getKey();
+//        entry.getValue();
+    }
+    // method untuk mendapatkan nilai dari satu data map
+    public static String getValue(String key){
+        return data.get(key);
     }
 
     public static void inputDataSimulasi(String key, String value) {
         if (data == null) {
             data = new HashMap<String, String>();
         }
+        
         //buat masukin data (key n value)
         data.put(key, value);
     }

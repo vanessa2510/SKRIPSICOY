@@ -25,10 +25,10 @@
 \contentsline {section}{\numberline {3.2}Analisis Pemodelan Cellular Automata}{22}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Analisis Ruang Sel}{22}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Analisis Fungsi Transisi}{22}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Analisis Kode Entrepreneur Cellular Automata (ECA)}{22}{section.3.3}
-\contentsline {section}{\numberline {3.4}Analisis Model Pertumbuhan Wirausaha dengan Cellular Automata}{23}{section.3.4}
-\contentsline {section}{\numberline {3.5}\textit {Framework} yang Digunakan}{28}{section.3.5}
-\contentsline {section}{\numberline {3.6}Analisis Perangkat Lunak}{28}{section.3.6}
-\contentsline {chapter}{Daftar Referensi}{29}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Kode Program}{31}{appendix.A}
-\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{33}{appendix.B}
+\contentsline {section}{\numberline {3.3}Analisis Model Pertumbuhan Wirausaha dengan Cellular Automata}{23}{section.3.3}
+\contentsline {section}{\numberline {3.4}Analisis Kode Entrepreneur Cellular Automata (ECA)}{29}{section.3.4}
+\contentsline {section}{\numberline {3.5}\textit {Framework} yang Digunakan}{29}{section.3.5}
+\contentsline {section}{\numberline {3.6}Analisis Perangkat Lunak}{30}{section.3.6}
+\contentsline {chapter}{Daftar Referensi}{31}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Kode Program}{33}{appendix.A}
+\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{35}{appendix.B}

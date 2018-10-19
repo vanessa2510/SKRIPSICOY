@@ -12,7 +12,7 @@ package ecasimulatorjframe;
 public class Entrepreneurs {
     int level;
     int age;
-    int sex;
+    boolean sex;
     int b_age;
     int b_category; // bidang usaha, misal makanan
     int b_area;// makanan ringan, makanan berat
@@ -23,7 +23,7 @@ public class Entrepreneurs {
     //penambahan
     
     Entrepreneurs(){
-        sex=0;
+        sex=false;
         age = 0;
         b_age = 0;
         b_category = 0;
@@ -35,7 +35,7 @@ public class Entrepreneurs {
         point = 0.0;
     }
     
-    Entrepreneurs(int s, int a, int ba, int cat,int area, int edu, int loc, int inc, int l, double p){
+    Entrepreneurs(boolean s, int a, int ba, int cat,int area, int edu, int loc, int inc, int l, double p){
         this.sex = s;
         this.age = a;
         this.b_age = ba;
@@ -68,7 +68,7 @@ public class Entrepreneurs {
         this.age = age;
     }
 
-    public void setSex(int sex) {
+    public void setSex(boolean sex) {
         this.sex = sex;
     }
 

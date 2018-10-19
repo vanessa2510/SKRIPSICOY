@@ -693,10 +693,11 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
         boolean checker = true;
-        int jmlCheckList = 0;
+        
         //umur
         if (umurCBNeg.isSelected()) {
-            jmlCheckList += 1;
+            InputDataHandler.jmlChecklist();;
+            //System.out.println(jmlCheckList);
             // kalo radio button umurKrgDr ga diisi, check umurSmDgn
             if (!umurKrgDr.isSelected()) {
                 checker = false;
@@ -727,7 +728,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
         // level
         if (levelCBNeg.isSelected()) {
-            jmlCheckList += 1;
+            InputDataHandler.jmlChecklist();
             // kalo radio button levelKrgDr ga diisi, check levelSmDgn
             if (!levelKrgDr.isSelected()) {
                 // kalo radio button levelSmDgn ga diisi, check levelLbhDr
@@ -754,7 +755,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
         //pendidikan
         if (pendidikanCBNeg.isSelected()) {
-            jmlCheckList += 1;
+            InputDataHandler.jmlChecklist();
             // kalo radio button pendidikanKrgDr ga diisi, check pendidikanSmDgn
             if (!pendidikanKrgDr.isSelected()) {
                 // kalo radio button pendidikanSmDgn ga diisi, check pendidikanLbhDr
@@ -781,7 +782,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
         //pendapatan
         if (pendapatanCBNeg.isSelected()) {
-            jmlCheckList += 1;
+            InputDataHandler.jmlChecklist();
             // kalo radio button pendapatanKrgDr ga diisi, check pendapatanSmDgn
             if (!pendapatanKrgDr.isSelected()) {
                 // kalo radio button pendapatanSmDgn ga diisi, check pendapatanLbhDr
@@ -805,7 +806,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 checker = true;
             }
         }
-        if (jmlCheckList == 0) {
+        if (InputDataHandler.jmlChecklist == 0) {
             checker = false;
             //JOptionPane.showMessageDialog(null, "Check box is empty, you must fill it first!");
         }

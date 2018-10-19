@@ -71,6 +71,11 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
         jLabel2.setText("Data Simulasi :");
 
         openFileButton.setText("OPEN FILE");
+        openFileButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                openFileButtonMouseClicked(evt);
+            }
+        });
         openFileButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 openFileButtonActionPerformed(evt);
@@ -82,7 +87,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
 
             },
             new String [] {
-
+                "Jenis Kelamin", "Umur", "Umur (bulan)", "Kategori", "Sub Kategori", "Pendidikan", "Lokasi", "Pendapatan", "Level", "Point"
             }
         ));
         jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -174,51 +179,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
 
     private void openFileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openFileButtonActionPerformed
         // TODO add your handling code here:
-        int returnValue = openFileChooser.showOpenDialog(this);
-        StringBuilder sb = new StringBuilder();
-        if (returnValue == JFileChooser.APPROVE_OPTION) {
-            try {
-                br = new BufferedReader(new FileReader(openFileChooser.getSelectedFile()));
-                //messageLabel.setText("file successfully loaded!");
-                //                FileReader fr = new FileReader();
-                //                BufferedReader br = new BufferedReader(fr);
-                String firstLine = br.readLine().trim();
-                String[] columnsName = firstLine.split(",");
-                DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-                model.setColumnIdentifiers(columnsName);
-                
-                String[] dataWirausaha;
 
-                Object[] tableLines = br.lines().toArray();
-                for (int i = 0; i < tableLines.length; i++) {
-                    String lines = tableLines[i].toString().trim();
-                    String[] dataRow = lines.split("/");
-                    model.addRow(dataRow);
-                    System.out.println(tableLines[i]);
-                }
-               // dataWirausaha = Object;
-               // System.out.println(dataWirausaha);
-                String line = "";
-                //String simpanData="";
-                //selama isi filenya belom kosong, maka print isi file
-                while ((line = br.readLine()) != null) {
-                    System.out.println(line);
-                    sb.append(line + ";"); // titik koma buat pemisah antar wirausaha
-                    //simpanData = line;
-                }
-                line = sb.toString();
-                System.out.println(line);
-                String[] atribut = line.split(",");
-
-                //int[] atributWirausaha = new int[atribut.length];
-                br.close();
-                // fr.close();
-
-            } catch (IOException e) {
-                //messageLabel.setText("failed to load the file!");
-                Logger.getLogger(TampilanDataWirausaha.class.getName()).log(Level.SEVERE, null, e);
-            }
-        }
     }//GEN-LAST:event_openFileButtonActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
@@ -234,6 +195,61 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
         TampilanKondisiEksternal ke = new TampilanKondisiEksternal();
         ke.setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
+
+    private void openFileButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openFileButtonMouseClicked
+        int returnValue = openFileChooser.showOpenDialog(this);
+        StringBuilder sb = new StringBuilder();
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            try {
+                br = new BufferedReader(new FileReader(openFileChooser.getSelectedFile()));
+                //messageLabel.setText("file successfully loaded!");
+                //                FileReader fr = new FileReader();
+                //                BufferedReader br = new BufferedReader(fr);
+//                String firstLine = br.readLine().trim();
+//                //System.out.println(firstLine);
+//                String[] columnsName = firstLine.split(",");
+                DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+//                model.setColumnIdentifiers(columnsName);
+
+                String[] dataWirausaha;
+
+                Object[] tableLines = br.lines().toArray();
+                int i;
+                for (i = 0; i < tableLines.length; i++) {
+                    String lines = tableLines[i].toString().trim();
+                    String[] dataRow = lines.split(",");
+                    model.addRow(dataRow);
+                    System.out.println(tableLines[i]);
+                }
+               // System.out.println(i);
+                CA ca = new CA(i,InputDataHandler.jmlChecklist,4);
+                ca.readSimulationData(openFileChooser.getSelectedFile().getName());
+                
+                //System.out.println(InputDataHandler.jmlChecklist);
+//               // dataWirausaha = Object;
+//               // System.out.println(dataWirausaha);
+//                String line = "";
+//                //String simpanData="";
+//                //selama isi filenya belom kosong, maka print isi file
+//                while ((line = br.readLine()) != null) {
+//                    System.out.println(line);
+//                    sb.append(line + ";"); // titik koma buat pemisah antar wirausaha
+//                    //simpanData = line;
+//                }
+//                line = sb.toString();
+//                System.out.println(line);
+//                String[] atribut = line.split(",");
+//
+//                //int[] atributWirausaha = new int[atribut.length];
+//                br.close();
+//                // fr.close();
+
+            } catch (IOException e) {
+                //messageLabel.setText("failed to load the file!");
+                Logger.getLogger(TampilanDataWirausaha.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+    }//GEN-LAST:event_openFileButtonMouseClicked
 
     /**
      * @param args the command line arguments

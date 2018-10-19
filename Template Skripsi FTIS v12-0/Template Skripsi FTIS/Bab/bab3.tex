@@ -31,36 +31,50 @@ Dalam pertumbuhan wirausaha tentu ada beberapa faktor yang mempengaruhi keberlan
 Pada penelitian ini akan menggunakan cellular automata berbasis graf. Hal ini dikarenakan jumlah wirausaha di Indonesia yang tidak sedikit, sebab jika menggunakan cellular automata satu atau dua dimensi jumlahnya terbatas.
 
 \subsection{Analisis Ruang Sel}
-Ruang sel dalam pemodelan ini berupa individu wirausahawan. Individu wirausahawan memiliki beberapa atribut (umum dan psikologis), masing-masing atribut memiliki nilai yang didapat dari data GEM.
+Ruang sel dalam pemodelan ini berupa individu wirausahawan. Individu wirausahawan memiliki beberapa atribut (umum dan psikologis), masing-masing atribut memiliki nilai yang didapat dari data GEM 2013.
 
 \subsection{Analisis Fungsi Transisi}
-Fungsi transisi dalam penelitian ini ditentukan oleh beberapa atribut penting atribut inilah yang akan menentukan perkembangan dari kewirausahaan. Selain itu, Continuity Index (CIdx) dari seorang wirausahawan juga dijadikan sebagai penentu perubahan level wirausaha. CIdx dari seorang wirausahawan ditentukan oleh faktor luar dan dalam. Seorang wirausahawan akan meneruskan usahanya jika CIdx nya memenuhi nilai ambang tersebut. Jika nilai dari Continuity Index sudah sama atau lebih dari nilai ambang, level wirausaha akan berubah. Sebaliknya, jika nilai dari Continuity Index kurang dari sama dengan nilai ambang, level wirausaha bisa saja berubah dan bisa saja tidak berubah.
-
-\section{Analisis Kode Entrepreneur Cellular Automata (ECA)}
-\label{sec:analisisKode}
-
-Berdasarkan hasil analisa, berikut adalah penjelasan secara umum mengenai isi kode ECA:
+Fungsi transisi dalam penelitian ini ditentukan oleh : 
 \begin{enumerate}
-	\item Kelas EGM merupakan kelas untuk menjalankan perhitungan CIDx, CIDx merupakan angka yang mengindikasikan kemungkinan seorang wirausahawan untuk meneruskan usahanya. Perhitungan CIDx ini menggunakan data dari GEM 2013.
-	\item Kelas CA merupakan kelas yang merepresentasikan cellular automata.
-	\item Kelas Entrepreneur merupakan kelas untuk merepresentasikan individu wirausahawan.
-	\item Kelas Neighbor merupakan kelas untuk merepresentasikan ketetanggaan untuk satu aspek tertentu. Setiap aspeknya didefinisikan sebagai satu neighbor yang berupa adjacency matrix.
-	\item Kelas Neighborhood merupakan kelas untuk merepresentasikan himpunan ketetanggaan yang tersusun atas sejumlah ketetanggaan.
-	\item Kelas PublicFactor merupakan kelas untuk merepresentasikan faktok publik.
-	\item Kelas State merupakan kelas untuk 
+	\item Atribut Umum
+		\begin{enumerate}
+			\item Umur
+			\item Level Wirausaha
+			\item Bidang Usaha
+			\item Jenis Kelamin
+			\item Pendidikan
+			\item Pendapatan
+			\item Lokasi
+		\end{enumerate}
+	\item Atribut Psikologis
+		 \begin{enumerate}
+			\item Perceived Opportunities
+			\item Perceived Capabilities
+			\item Role Model
+		 \end{enumerate}
+	\item Faktor Publik
+		 \begin{enumerate}
+			\item Program Pemerintah
+			\item Norma, Sosial dan Budaya
+			\item Infrastruktur Fisik dan Akses Layanan
+			\item Dinamika Pasar
+		 \end{enumerate}
 \end{enumerate}
+
+Selain itu, bobot dari masing-masing ketetanggaan juga mempengaruhi perubahan transisi wirausaha. Perubahan transisi dari individu wirausahawan dapat diketahui melalui angka yang disebut Continuity Index (CIdx).
+
+\begin{displaymath}
+\label{RumusCIDx}
+	CIdx_{i}(t) = a.Cint_{i}(t) + b.Cneg_{i}(t) + c.Cpub(t)
+\end{displaymath}
+dimana a,b,c merupakan bilangan riil sedemikian sehingga $0\leq a,b,c \leq 1$ dan $a+b+c=$ 1.0 dan $Cint_{i}(t)$ dan $Cneg_{i}(t)$ melambangkan kondisi internal dan kondisi ketetanggaan dari sebuah individu i pada saat t dan $Cpub(t)$ melambangkan kondisi publik pada saat t nilai dari $CIdx$ dari individu i pada saat t.
+
+CIdx dari seorang wirausahawan ditentukan oleh faktor luar dan dalam. Seorang wirausahawan akan meneruskan usahanya jika CIdx nya memenuhi nilai ambang tersebut. Jika nilai dari Continuity Index sudah sama atau lebih dari nilai ambang, level wirausaha akan berubah. Sebaliknya, jika nilai dari Continuity Index kurang dari sama dengan nilai ambang, level wirausaha bisa saja berubah dan bisa saja tidak berubah.
 
 \section{Analisis Model Pertumbuhan Wirausaha dengan Cellular Automata}
 \label{analisismodelCA}
 
-Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index} dan nilai ambang (\textit{threshold}). Seperti yang sudah dijelaskan pada \ref{chap:teori}, Continuity Index adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu.
-
-Berikut rumus Continuity Index :
-
-\begin{displaymath}
-	CIdx_{i}(t) = a.Cint_{i}(t) + b.Cneg_{i}(t) + c.Cpub(t)
-\end{displaymath}
-dimana a,b,c merupakan bilangan riil sedemikian sehingga $0\leq a,b,c \leq 1$ dan $a+b+c=$ 1.0 dan $Cint_{i}(t)$ dan $Cneg_{i}(t)$ melambangkan kondisi internal dan kondisi ketetanggaan dari sebuah individu i pada saat t dan $Cpub(t)$ melambangkan kondisi publik pada saat t nilai dari $CIdx$ dari individu i pada saat t.
+Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index} dan nilai ambang (\textit{threshold}). Seperti yang sudah dijelaskan pada \ref{chap:teori}, Continuity Index adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu. (Rumus CIDx : \ref{RumusCIDx}).
 
 
 Nilai dari Continuity Index akan dievaluasi terlebih dahulu menggunakan tabel transisi wirausaha (\ref{tabelLW}). Pada tabel \ref{tabelLW} akan dijelaskan mengenai transisi level dengan menggunakan lambang-lambang \textit{CIdx, bl, a ,b} dan \textit{th} untuk menyatakan \textit{Continuity Index, level} , usia individu, usia usaha dan nilai ambang.
@@ -122,8 +136,26 @@ Entrepreneur 3 & 30 tahun (360 bulan) & new\_bm & Female\\
 \end{tabular}
 \end{table}
 
-
 Berikut data bobot untuk masing-masing atribut :
+
+\begin{table} [H]
+\centering
+\caption{Data Bobot Atribut}
+\begin{tabular}{|c|c|}
+\hline
+Atribut & Bobot\\
+\hline
+Umur & \\
+\hline
+(25-34 tahun) & 7.5\\
+\hline
+(35-44 tahun) & 7.8\\
+\hline
+\end{tabular}
+\end{table}
+
+
+Berikut data nilai untuk masing-masing atribut :
 
 \begin{table} [H]
 \centering
@@ -269,6 +301,20 @@ Pada saat t=2 terdapat 1 kondisi publik baru yaitu physical infrastructures and 
 		\label{fig:t0} 
 	\end{figure}
 	
+
+\section{Analisis Kode Entrepreneur Cellular Automata (ECA)}
+\label{sec:analisisKode}
+
+Berdasarkan hasil analisa, berikut adalah penjelasan secara umum mengenai isi kode ECA:
+\begin{enumerate}
+	\item Kelas EGM merupakan kelas untuk menjalankan perhitungan CIDx, CIDx merupakan angka yang mengindikasikan kemungkinan seorang wirausahawan untuk meneruskan usahanya. Perhitungan CIDx ini menggunakan data dari GEM 2013.
+	\item Kelas CA merupakan kelas yang merepresentasikan cellular automata.
+	\item Kelas Entrepreneur merupakan kelas untuk merepresentasikan individu wirausahawan.
+	\item Kelas Neighbor merupakan kelas untuk merepresentasikan ketetanggaan untuk satu aspek tertentu. Setiap aspeknya didefinisikan sebagai satu neighbor yang berupa adjacency matrix.
+	\item Kelas Neighborhood merupakan kelas untuk merepresentasikan himpunan ketetanggaan yang tersusun atas sejumlah ketetanggaan.
+	\item Kelas PublicFactor merupakan kelas untuk merepresentasikan faktok publik.
+	\item Kelas State merupakan kelas untuk 
+\end{enumerate}
 	
 \section{\textit{Framework} yang Digunakan}
 \label{framework}
