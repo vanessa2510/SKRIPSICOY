@@ -66,6 +66,7 @@ public class InputDataHandler {
     public static String getValue(String key){
         return data.get(key);
     }
+    
 
     public static void inputDataSimulasi(String key, String value) {
         if (data == null) {
