@@ -366,7 +366,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton nextButton;
+    public javax.swing.JButton nextButton;
     private javax.swing.JTextField nilaiDP;
     private javax.swing.JTextField nilaiIFA;
     private javax.swing.JTextField nilaiNSB;

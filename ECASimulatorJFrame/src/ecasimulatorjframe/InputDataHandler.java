@@ -15,7 +15,7 @@ import java.util.Map;
 public class InputDataHandler {
 
     private static Map<String, String> data;
-    
+
     public static int jmlChecklist;
 
     public static void inputDataInternal(String key, String value) {
@@ -46,10 +46,11 @@ public class InputDataHandler {
         }
         //buat masukin data (key n value)
         data.put(key, value);
-        
+
     }
-    public static void jmlChecklist(){
-        jmlChecklist+=1;
+
+    public static void jmlChecklist() {
+        jmlChecklist += 1;
     }
 
     public static void inputDataEksternal(String key, String value) {
@@ -62,17 +63,33 @@ public class InputDataHandler {
 //        entry.getKey();
 //        entry.getValue();
     }
+
     // method untuk mendapatkan nilai dari satu data map
-    public static String getValue(String key){
+
+    public static String getValue(String key) {
         return data.get(key);
     }
-    
+
+    public static int[] getRelation(int[] nilaiRelation) {
+        //nilaiRelation = new int[4];
+        for (int i = 0; i < nilaiRelation.length; i++) {
+            System.out.println(nilaiRelation[i]);
+        }
+        return nilaiRelation;
+    }
+
+    public static String getDataWirausaha(String data) {
+        return data;
+    }
+    public static int getPopulation(int jmlData){
+        return jmlData;
+    }
 
     public static void inputDataSimulasi(String key, String value) {
         if (data == null) {
             data = new HashMap<String, String>();
         }
-        
+
         //buat masukin data (key n value)
         data.put(key, value);
     }

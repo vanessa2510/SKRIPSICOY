@@ -695,6 +695,13 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         boolean checker = true;
         String nilaiRB = "";
         int[] kumpulanNilaiRelasi = new int[4];
+        
+        // set relasi 0 kalau ga checkboxnya gadipilih
+        // set relasi 1 kalau kurang dari sama dengan
+        // set relasi 2 kalau sama dengan
+        // set relasi 3 kalau lebih dari sama dengan
+        
+        
         //umur
         if (umurCBNeg.isSelected()) {
             InputDataHandler.jmlChecklist();;
@@ -742,6 +749,9 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 checker = true;
             }
 
+        } else {
+            nilaiRB = "0";
+            kumpulanNilaiRelasi[0] = Integer.parseInt(nilaiRB);
         }
 
         // level
@@ -784,6 +794,9 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 kumpulanNilaiRelasi[1] = Integer.parseInt(nilaiRB);
                 checker = true;
             }
+        } else {
+            nilaiRB = "0";
+            kumpulanNilaiRelasi[1] = Integer.parseInt(nilaiRB);
         }
 
         //pendidikan
@@ -826,6 +839,9 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 kumpulanNilaiRelasi[2] = Integer.parseInt(nilaiRB);
                 checker = true;
             }
+        } else {
+            nilaiRB = "0";
+            kumpulanNilaiRelasi[2] = Integer.parseInt(nilaiRB);
         }
 
         //pendapatan
@@ -868,18 +884,24 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 kumpulanNilaiRelasi[3] = Integer.parseInt(nilaiRB);
                 checker = true;
             }
+        } else {
+            nilaiRB = "0";
+            kumpulanNilaiRelasi[3] = Integer.parseInt(nilaiRB);
         }
         
+        
+        //System.out.println(InputDataHandler.getRelation(kumpulanNilaiRelasi));
+
         if (jenisKelaminCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist +=1;
+            InputDataHandler.jmlChecklist += 1;
         }
         if (lokasiCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist +=1;
+            InputDataHandler.jmlChecklist += 1;
         }
         if (bidangUsahaCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist +=1;
+            InputDataHandler.jmlChecklist += 1;
         }
-        
+
         if (InputDataHandler.jmlChecklist == 0) {
             checker = false;
             //JOptionPane.showMessageDialog(null, "Check box is empty, you must fill it first!");
@@ -891,6 +913,8 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "You cannot move to the other page because you must fill checkbox or radio button first!");
         }
+
+
     }//GEN-LAST:event_nextButtonMouseClicked
 
     /**
@@ -951,7 +975,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
     private javax.swing.JRadioButton levelLbhDr;
     private javax.swing.JRadioButton levelSmDgn;
     private javax.swing.JCheckBox lokasiCBNeg;
-    private javax.swing.JButton nextButton;
+    public javax.swing.JButton nextButton;
     private javax.swing.JCheckBox pendapatanCBNeg;
     private javax.swing.JCheckBox pendapatanCBNeg2;
     private javax.swing.JRadioButton pendapatanKrgDr;

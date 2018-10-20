@@ -211,7 +211,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
                 DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
 //                model.setColumnIdentifiers(columnsName);
 
-                String[] dataWirausaha;
+                //String[] dataWirausaha;
 
                 Object[] tableLines = br.lines().toArray();
                 int i;
@@ -219,11 +219,12 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
                     String lines = tableLines[i].toString().trim();
                     String[] dataRow = lines.split(",");
                     model.addRow(dataRow);
-                    System.out.println(tableLines[i]);
                 }
-               // System.out.println(i);
+                InputDataHandler.getPopulation(tableLines.length);
+                //System.out.println(InputDataHandler.getPopulation(tableLines.length));
+                InputDataHandler.getDataWirausaha(openFileChooser.getSelectedFile().getName());
                 CA ca = new CA(i,InputDataHandler.jmlChecklist,4);
-                ca.readSimulationData(openFileChooser.getSelectedFile().getName());
+                //ca.readSimulationData(openFileChooser.getSelectedFile().getName());
                 
                 //System.out.println(InputDataHandler.jmlChecklist);
 //               // dataWirausaha = Object;
@@ -296,7 +297,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JLabel messageLabel;
-    private javax.swing.JButton nextButton;
+    public javax.swing.JButton nextButton;
     private javax.swing.JButton openFileButton;
     // End of variables declaration//GEN-END:variables
 }

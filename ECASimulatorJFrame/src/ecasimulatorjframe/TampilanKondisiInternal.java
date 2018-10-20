@@ -142,10 +142,10 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
             }
         });
         nilaiUmurInternal.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
             public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
                 nilaiUmurInternalInputMethodTextChanged(evt);
-            }
-            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
             }
         });
         nilaiUmurInternal.addActionListener(new java.awt.event.ActionListener() {
@@ -447,7 +447,6 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"You cannot move to the other page because you must fill checkbox or text field first!");
         }
 
-
     }//GEN-LAST:event_nextButtonMouseClicked
 
     private void umurCBInternalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_umurCBInternalMouseClicked
@@ -572,7 +571,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
     private javax.swing.JCheckBox jenisKelaminCBInternal;
     private javax.swing.JCheckBox levelCBInternal;
     private javax.swing.JCheckBox lokasiCBInternal;
-    private javax.swing.JButton nextButton;
+    public javax.swing.JButton nextButton;
     private javax.swing.JTextField nilaiJenisKelaminInternal;
     private javax.swing.JTextField nilaiLevelInternal;
     private javax.swing.JTextField nilaiLokasiInternal;
