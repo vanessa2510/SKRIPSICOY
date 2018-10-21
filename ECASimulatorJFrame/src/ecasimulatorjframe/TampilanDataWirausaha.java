@@ -220,9 +220,9 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
                     String[] dataRow = lines.split(",");
                     model.addRow(dataRow);
                 }
-                InputDataHandler.getPopulation(tableLines.length);
+                InputDataHandler.setPopulation(tableLines.length);
                 //System.out.println(InputDataHandler.getPopulation(tableLines.length));
-                InputDataHandler.getDataWirausaha(openFileChooser.getSelectedFile().getName());
+                InputDataHandler.setDataWirausaha(openFileChooser.getSelectedFile().getName());
                 CA ca = new CA(i,InputDataHandler.jmlChecklist,4);
                 //ca.readSimulationData(openFileChooser.getSelectedFile().getName());
                 

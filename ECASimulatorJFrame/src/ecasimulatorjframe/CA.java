@@ -78,11 +78,6 @@ public class CA {
         }
         return sum;
     }
-    //penambahan
-    void continuityIndex(double a, double b, double c, double threshold, int periode){
-        Entrepreneurs e = new Entrepreneurs();
-        PublicFactor pf = new PublicFactor(4);
-    }
 
     void nextLevel(Entrepreneurs ne, int i, CA model, double[] composition) {
         //kasus umur yang sudah lebih dari 64th

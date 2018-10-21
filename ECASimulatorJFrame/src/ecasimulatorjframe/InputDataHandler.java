@@ -17,6 +17,8 @@ public class InputDataHandler {
     private static Map<String, String> data;
 
     public static int jmlChecklist;
+    public static int jmlPopulasi;
+    public static String dataWirausaha;
 
     public static void inputDataInternal(String key, String value) {
         if (data == null) {
@@ -65,7 +67,6 @@ public class InputDataHandler {
     }
 
     // method untuk mendapatkan nilai dari satu data map
-
     public static String getValue(String key) {
         return data.get(key);
     }
@@ -78,11 +79,20 @@ public class InputDataHandler {
         return nilaiRelation;
     }
 
-    public static String getDataWirausaha(String data) {
-        return data;
+    public static void setDataWirausaha(String data) {
+        dataWirausaha = data;
     }
-    public static int getPopulation(int jmlData){
-        return jmlData;
+
+    public static String getDataWirausaha() {
+        return dataWirausaha;
+    }
+
+    public static void setPopulation(int jmlData) {
+        jmlPopulasi = jmlData;
+    }
+
+    public static int getPopulation() {
+        return jmlPopulasi;
     }
 
     public static void inputDataSimulasi(String key, String value) {
