@@ -19,6 +19,7 @@ public class InputDataHandler {
     public static int jmlChecklist;
     public static int jmlPopulasi;
     public static String dataWirausaha;
+    public static int[] nilaiRelasi = new int[4];
 
     public static void inputDataInternal(String key, String value) {
         if (data == null) {
@@ -51,9 +52,19 @@ public class InputDataHandler {
 
     }
 
+    // method untuk menghitung jumlah ketetanggaan dari kelas TampilanKondisiKetetanggaan
+
     public static void jmlChecklist() {
         jmlChecklist += 1;
     }
+
+    // method untuk mengembalikan jumlah ketetanggaan
+
+    public static int getKetetanggaan() {
+        return jmlChecklist;
+    }
+
+    //method untuk mengambil data eksternal
 
     public static void inputDataEksternal(String key, String value) {
         if (data == null) {
@@ -71,12 +82,18 @@ public class InputDataHandler {
         return data.get(key);
     }
 
-    public static int[] getRelation(int[] nilaiRelation) {
+    //method untuk mengembalikan relasi dari masing2 tetangga
+
+    public static void setRelation(int[] nilaiRelation) {
         //nilaiRelation = new int[4];
-        for (int i = 0; i < nilaiRelation.length; i++) {
-            System.out.println(nilaiRelation[i]);
+        nilaiRelasi = nilaiRelation;
+    }
+    
+    public static int[] getRelation(){
+        for (int i = 0; i < nilaiRelasi.length; i++) {
+            System.out.println(nilaiRelasi[i]);
         }
-        return nilaiRelation;
+        return nilaiRelasi;
     }
 
     public static void setDataWirausaha(String data) {

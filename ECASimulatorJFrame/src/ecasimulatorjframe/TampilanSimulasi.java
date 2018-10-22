@@ -317,7 +317,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         double[] pfs = new double[] {2.53, 3.92, 3.29, 3.45};
         
         // parameter 1 : jumlah populasi, parameter 2 : jumlah ketetanggaan, parameter 3 : publik faktor
-        //CA ca = new CA(InputDataHandler.getPopulation(WIDTH),3,4);
+        CA ca = new CA(InputDataHandler.getPopulation(),InputDataHandler.getKetetanggaan(),4);
         
         // untuk menghitung Continuity Index
         // 3 untuk data sekarang

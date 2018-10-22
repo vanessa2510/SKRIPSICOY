@@ -913,8 +913,8 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "You cannot move to the other page because you must fill checkbox or radio button first!");
         }
-
-
+//        InputDataHandler.setRelation(kumpulanNilaiRelasi);
+//        System.out.println(InputDataHandler.getRelation());
     }//GEN-LAST:event_nextButtonMouseClicked
 
     /**
