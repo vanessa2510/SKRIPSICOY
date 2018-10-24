@@ -331,7 +331,52 @@ public class CA {
             br = new BufferedReader(new FileReader(fileName));
             System.out.println("proses baca file...");
             line = br.readLine();
+            line = br.readLine();
             this.popSize = Integer.parseInt(line.trim());
+            for (int i = 0; i < this.popSize; i++) {
+                line = br.readLine();
+                jm = line.split(separator);
+
+                this.E[i] = new Entrepreneurs();
+                // sex, false = 0, true = 1
+                if (Integer.parseInt(jm[0].trim()) == 0) {
+                    this.E[i].sex = false;
+                } else {
+                    this.E[i].sex = true;
+                }
+                this.E[i].age = Integer.parseInt(jm[1].trim());
+                this.E[i].b_age = Integer.parseInt(jm[2].trim());
+                this.E[i].b_category = Integer.parseInt(jm[3].trim());
+                this.E[i].b_area = Integer.parseInt(jm[4].trim());
+                this.E[i].education = Integer.parseInt(jm[5].trim());
+                this.E[i].location = Integer.parseInt(jm[6].trim());
+                this.E[i].income = Integer.parseInt(jm[7].trim());
+                this.E[i].level = Integer.parseInt(jm[8].trim());
+                this.E[i].point = 0.0;
+            }
+            br.close();
+
+        } catch (IOException e) {
+            System.out.println("Gagal membaca dari file " + fileName);
+            e.printStackTrace();
+        }
+
+    }
+    
+    // penambahan method baca file
+    void readData(String fileName) {
+        String line = "";
+        String separator = ", ";
+        BufferedReader br = null;
+        String teks = "";
+        String[] jm;
+
+        try {
+            br = new BufferedReader(new FileReader(fileName));
+            System.out.println("proses baca file...");
+            //line = br.readLine();
+            //line = br.readLine();
+            //this.popSize = Integer.parseInt(line.trim());
             for (int i = 0; i < this.popSize; i++) {
                 line = br.readLine();
                 jm = line.split(separator);

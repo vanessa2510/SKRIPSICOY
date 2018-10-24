@@ -16,7 +16,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
     /**
      * Creates new form TampilanKondisiEksternal
      */
-    double[] kumpulanNilaiPF = {2.53, 3.92, 3.29, 3.45}; // Nilai dari GEM 2013
+    //double[] kumpulanNilaiPF = {2.53, 3.92, 3.29, 3.45}; // Nilai dari GEM 2013
     double[] bobotPF;
     PublicFactor pf;
 
@@ -248,7 +248,6 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
     private void nilaiPPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiPPActionPerformed
         // TODO add your handling code here:
-        pf.setFactors(kumpulanNilaiPF);
         String masukanPP = nilaiPP.getText();
         bobotPF[0] = Double.parseDouble(masukanPP);
         pf.setWeights(bobotPF);
@@ -256,7 +255,6 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
     private void nilaiDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiDPActionPerformed
         // TODO add your handling code here:
-        pf.setFactors(kumpulanNilaiPF);
         String masukanDP = nilaiDP.getText();
         bobotPF[1] = Double.parseDouble(masukanDP);
         pf.setWeights(bobotPF);
@@ -264,15 +262,12 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
     private void nilaiNSBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiNSBActionPerformed
         // TODO add your handling code here:
-        pf.setFactors(kumpulanNilaiPF);
         String masukanNSB = nilaiNSB.getText();
         bobotPF[2] = Double.parseDouble(masukanNSB);
         pf.setWeights(bobotPF);
     }//GEN-LAST:event_nilaiNSBActionPerformed
 
     private void nilaiIFAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiIFAActionPerformed
-        // TODO add your handling code here:
-        pf.setFactors(kumpulanNilaiPF);
         String masukanIFA = nilaiPP.getText();
         bobotPF[3] = Double.parseDouble(masukanIFA);
         pf.setWeights(bobotPF);
@@ -280,6 +275,12 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
         boolean checker = true;
+        String isiNilai="";
+        double[] kumpulanNilaiPF = new double[4];
+        double isiNilaiDP = 0.0;
+        double isiNilaiIFA = 0.0;
+        double isiNilaiNSB = 0.0;
+        double isiNilaiPP = 0.0;
         if (nilaiDP.getText().equals("")) {
             InputDataHandler.inputDataEksternal("dinamikaPasar", null);
             checker = false;
@@ -295,17 +296,30 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
         } else {
             if (!nilaiDP.getText().equals("")) {
                 InputDataHandler.inputDataEksternal("dinamikaPasar", nilaiDP.getText());
+                isiNilaiDP = Double.parseDouble(nilaiDP.getText());
+                kumpulanNilaiPF[0] = isiNilaiDP;
                 checker = true;
             } else if (!nilaiIFA.getText().equals("")) {
                 InputDataHandler.inputDataEksternal("InfrastrukturListrik", nilaiIFA.getText());
+                isiNilaiIFA = Double.parseDouble(nilaiIFA.getText());
+                kumpulanNilaiPF[1] = isiNilaiIFA;
                 checker = true;
             } else if (!nilaiNSB.getText().equals("")) {
                 InputDataHandler.inputDataEksternal("NormaSosialBudaya", nilaiNSB.getText());
+                isiNilaiNSB = Double.parseDouble(nilaiNSB.getText());
+                kumpulanNilaiPF[2] = isiNilaiNSB;
                 checker = true;
             } else {
                 InputDataHandler.inputDataEksternal("ProgramPemerintah", nilaiPP.getText());
+                isiNilai = InputDataHandler.getValue("ProgramPemerintah");
+                kumpulanNilaiPF[3] = Double.parseDouble(isiNilai);
+                isiNilaiDP = kumpulanNilaiPF[3];
                 checker = true;
             }
+        }
+        
+        if (isiNilaiDP + isiNilaiIFA + isiNilaiNSB + isiNilaiPP !=100.0) {
+            JOptionPane.showMessageDialog(null, "The sum of text fields must 100.0!");
         }
 
         if (checker == true) {
@@ -315,6 +329,8 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "You must fill the text field first!");
         }
+        InputDataHandler.setDataEksternal(kumpulanNilaiPF);
+        System.out.println(InputDataHandler.getDataEksternal());
     }//GEN-LAST:event_nextButtonMouseClicked
 
     /**
