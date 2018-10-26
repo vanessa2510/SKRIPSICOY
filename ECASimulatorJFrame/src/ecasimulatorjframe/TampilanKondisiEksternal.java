@@ -275,12 +275,15 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
         boolean checker = true;
-        String isiNilai="";
+        String isiNilaiDP;
+        String isiNilaiIFA;
+        String isiNilaiNSB;
+        String isiNilaiPP;
         double[] kumpulanNilaiPF = new double[4];
-        double isiNilaiDP = 0.0;
-        double isiNilaiIFA = 0.0;
-        double isiNilaiNSB = 0.0;
-        double isiNilaiPP = 0.0;
+//        double isiNilaiDP = 0.0;
+//        double isiNilaiIFA = 0.0;
+//        double isiNilaiNSB = 0.0;
+//        double isiNilaiPP = 0.0;
         if (nilaiDP.getText().equals("")) {
             InputDataHandler.inputDataEksternal("dinamikaPasar", null);
             checker = false;
@@ -296,29 +299,30 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
         } else {
             if (!nilaiDP.getText().equals("")) {
                 InputDataHandler.inputDataEksternal("dinamikaPasar", nilaiDP.getText());
-                isiNilaiDP = Double.parseDouble(nilaiDP.getText());
-                kumpulanNilaiPF[0] = isiNilaiDP;
-                checker = true;
-            } else if (!nilaiIFA.getText().equals("")) {
-                InputDataHandler.inputDataEksternal("InfrastrukturListrik", nilaiIFA.getText());
-                isiNilaiIFA = Double.parseDouble(nilaiIFA.getText());
-                kumpulanNilaiPF[1] = isiNilaiIFA;
-                checker = true;
-            } else if (!nilaiNSB.getText().equals("")) {
-                InputDataHandler.inputDataEksternal("NormaSosialBudaya", nilaiNSB.getText());
-                isiNilaiNSB = Double.parseDouble(nilaiNSB.getText());
-                kumpulanNilaiPF[2] = isiNilaiNSB;
-                checker = true;
-            } else {
-                InputDataHandler.inputDataEksternal("ProgramPemerintah", nilaiPP.getText());
-                isiNilai = InputDataHandler.getValue("ProgramPemerintah");
-                kumpulanNilaiPF[3] = Double.parseDouble(isiNilai);
-                isiNilaiDP = kumpulanNilaiPF[3];
-                checker = true;
+                isiNilaiDP = InputDataHandler.getValue("dinamikaPasar");
+                kumpulanNilaiPF[0] = Double.parseDouble(isiNilaiDP);
+
+                if (!nilaiIFA.getText().equals("")) {
+                    InputDataHandler.inputDataEksternal("InfrastrukturListrik", nilaiIFA.getText());
+                    isiNilaiIFA = InputDataHandler.getValue("InfrastrukturListrik");
+                    kumpulanNilaiPF[1] = Double.parseDouble(isiNilaiIFA);
+                    if (!nilaiNSB.getText().equals("")) {
+                        InputDataHandler.inputDataEksternal("NormaSosialBudaya", nilaiNSB.getText());
+                        isiNilaiNSB = InputDataHandler.getValue("NormaSosialBudaya");
+                        kumpulanNilaiPF[2] = Double.parseDouble(isiNilaiNSB);
+
+                        if (!nilaiPP.getText().equals("")) {
+                            InputDataHandler.inputDataEksternal("ProgramPemerintah", nilaiPP.getText());
+                            isiNilaiPP = InputDataHandler.getValue("ProgramPemerintah");
+                            kumpulanNilaiPF[3] = Double.parseDouble(isiNilaiPP);
+                        }
+
+                    }
+                }
             }
+
         }
-        
-        if (isiNilaiDP + isiNilaiIFA + isiNilaiNSB + isiNilaiPP !=100.0) {
+        if (kumpulanNilaiPF[0] + kumpulanNilaiPF[1] + kumpulanNilaiPF[2] + kumpulanNilaiPF[3] != 100.0) {
             JOptionPane.showMessageDialog(null, "The sum of text fields must 100.0!");
         }
 
@@ -327,7 +331,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
             TampilanDataWirausaha ks = new TampilanDataWirausaha();
             ks.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "You must fill the text field first!");
+            JOptionPane.showMessageDialog(null, "You must fill the text field!");
         }
         InputDataHandler.setDataEksternal(kumpulanNilaiPF);
         System.out.println(InputDataHandler.getDataEksternal());

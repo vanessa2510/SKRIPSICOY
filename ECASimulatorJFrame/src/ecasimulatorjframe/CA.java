@@ -5,8 +5,6 @@
  */
 package ecasimulatorjframe;
 
-
-
 import java.util.Random;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -36,13 +34,11 @@ public class CA {
 //    double b;
 //    double c;
 //    int periode;
-    
+
 //    double bobotUmur=0.0;
 //    double bobotLevel=0.0;
 //    double bobotPendidikan=0.0;
 //    double bobotPendapatan=0.0;
-    
-
     CA(int n, int m, int pf) {
         popSize = n;
         neighSize = m;
@@ -362,47 +358,17 @@ public class CA {
         }
 
     }
-    
+
     // penambahan method baca file
-    void readData(String fileName) {
-        String line = "";
-        String separator = ", ";
-        BufferedReader br = null;
-        String teks = "";
-        String[] jm;
+    void readData(Object[] isiDataFile) {
+        int i;
+        for (i = 0; i < isiDataFile.length; i++) {
+            String lines = isiDataFile[i].toString().trim();
+            String[] dataRow = lines.split(",");
+//            model.addRow(dataRow);
 
-        try {
-            br = new BufferedReader(new FileReader(fileName));
-            System.out.println("proses baca file...");
-            //line = br.readLine();
-            //line = br.readLine();
-            //this.popSize = Integer.parseInt(line.trim());
-            for (int i = 0; i < this.popSize; i++) {
-                line = br.readLine();
-                jm = line.split(separator);
 
-                this.E[i] = new Entrepreneurs();
-                // sex, false = 0, true = 1
-                if (Integer.parseInt(jm[0].trim()) == 0) {
-                    this.E[i].sex = false;
-                } else {
-                    this.E[i].sex = true;
-                }
-                this.E[i].age = Integer.parseInt(jm[1].trim());
-                this.E[i].b_age = Integer.parseInt(jm[2].trim());
-                this.E[i].b_category = Integer.parseInt(jm[3].trim());
-                this.E[i].b_area = Integer.parseInt(jm[4].trim());
-                this.E[i].education = Integer.parseInt(jm[5].trim());
-                this.E[i].location = Integer.parseInt(jm[6].trim());
-                this.E[i].income = Integer.parseInt(jm[7].trim());
-                this.E[i].level = Integer.parseInt(jm[8].trim());
-                this.E[i].point = 0.0;
-            }
-            br.close();
-
-        } catch (IOException e) {
-            System.out.println("Gagal membaca dari file " + fileName);
-            e.printStackTrace();
+            // kendala : gimana caranya ngirim data ini ke kelas ECASimulatorJFrame ?
         }
 
     }
@@ -439,7 +405,7 @@ public class CA {
         for (int i = 0; i < this.popSize; i++) {
             int a = getAgeRange(E[i].age);
             if (this.E[i].sex) {
-                E[i].point = (POAm[a] + POEm[E[i].education] + POLm[E[i].location] + POIm[E[i].income]) * 0.25  + (PCAm[a] + PCEm[E[i].education] + PCLm[E[i].location] + PCIm[E[i].income]) * 0.25 + (RMAm[a] + RMIm[E[i].education]) * 0.5;
+                E[i].point = (POAm[a] + POEm[E[i].education] + POLm[E[i].location] + POIm[E[i].income]) * 0.25 + (PCAm[a] + PCEm[E[i].education] + PCLm[E[i].location] + PCIm[E[i].income]) * 0.25 + (RMAm[a] + RMIm[E[i].education]) * 0.5;
             } else {
                 E[i].point = (POAf[a] + POEf[E[i].education] + POLf[E[i].location] + POIf[E[i].income]) * 0.25 + (PCAf[a] + PCEf[E[i].education] + PCLf[E[i].location] + PCIf[E[i].income]) * 0.25 + (RMAf[a] + RMIf[E[i].education]) * 0.5;
             }
@@ -461,9 +427,8 @@ public class CA {
         }
         return ageC;
     }
-    
-    //penambahan
 
+    //penambahan
 //    public void setA(double a) {
 //        this.a = a;
 //    }
@@ -475,11 +440,9 @@ public class CA {
 //    public void setC(double c) {
 //        this.c = c;
 //    }
-
     public void setThreshold(double threshold) {
         this.threshold = threshold;
     }
-    
 
     public double getThreshold() {
         return threshold;
@@ -496,7 +459,6 @@ public class CA {
 //    public double getC() {
 //        return c;
 //    }
-
 //    public double getBobotUmur() {
 //        return bobotUmur;
 //    }
@@ -528,6 +490,4 @@ public class CA {
 //    public void setBobotPendapatan(double bobotPendapatan) {
 //        this.bobotPendapatan = bobotPendapatan;
 //    }
-    
-    
 }

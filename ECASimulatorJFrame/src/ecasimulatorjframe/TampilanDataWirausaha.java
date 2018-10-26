@@ -209,16 +209,16 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
 //                //System.out.println(firstLine);
 //                String[] columnsName = firstLine.split(",");
                 DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-//                int[] dataWirausaha = new int[10];
-                CA ca = new CA(InputDataHandler.getPopulation(), InputDataHandler.getKetetanggaan(), 4);
+
                 Object[] tableLines = br.lines().toArray();
+                CA ca = new CA(tableLines.length, InputDataHandler.getKetetanggaan(),4);
                 int i;
                 for (i = 0; i < tableLines.length; i++) {
                     String lines = tableLines[i].toString().trim();
                     String[] dataRow = lines.split(",");
                     model.addRow(dataRow);
 
-                    // memasukkan data dari fileInput ke kelas Entrepreneurs
+                    //memasukkan data dari fileInput ke kelas Entrepreneurs ca
                     ca.E[i] = new Entrepreneurs();
                     if (dataRow[0].equals("false")) {
                         ca.E[i].sex = false; // pria
@@ -234,15 +234,12 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
                     ca.E[i].income = Integer.parseInt(dataRow[7]);
                     ca.E[i].level = Integer.parseInt(dataRow[8]);
                     ca.E[i].point = 0.0;
-                    
-                    // kendala : gimana caranya ngirim data ini ke kelas ECASimulatorJFrame ?
                 }
-                InputDataHandler.setPopulation(tableLines.length);
+//                InputDataHandler.setPopulation(tableLines.length);
                 //System.out.println(InputDataHandler.getPopulation(tableLines.length));
 
-                InputDataHandler.setDataWirausaha(openFileChooser.getSelectedFile().getName());
+//                InputDataHandler.setDataWirausaha(openFileChooser.getSelectedFile().getName());
 //                CA ca = new CA(InputDataHandler.getPopulation(), InputDataHandler.getKetetanggaan(),4);
-
                 //System.out.println(InputDataHandler.jmlChecklist);
 //               // dataWirausaha = Object;
 //               // System.out.println(dataWirausaha);

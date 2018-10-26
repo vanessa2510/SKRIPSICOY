@@ -60,7 +60,7 @@ public class ECASimulatorJFrame {
         double[] pfs = new double[] {2.53, 3.92, 3.29, 3.45};
         //double[] pfw = new double[] {0.1,0.1,0.1,0.1};
         CA ca = new CA(InputDataHandler.getPopulation(),InputDataHandler.getKetetanggaan(),4);
-        ca.readData(InputDataHandler.getDataWirausaha());
+        
         //bobot ketetanggaan
 //        double[] nw = new double[] {0.7,0.0,0.3};
 //        int[] nr = new int[] {1,0,0}; // relasi ketetanggaan

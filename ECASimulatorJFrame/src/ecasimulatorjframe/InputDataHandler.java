@@ -70,9 +70,6 @@ public class InputDataHandler {
         }
         //buat masukin data (key n value)
         data.put(key, value);
-//        Map.Entry<String,String> entry =(Map.Entry<String,String>) data.entrySet();
-//        entry.getKey();
-//        entry.getValue();
     }
 
     public static void setDataEksternal(double[] kumpulanNilaiPF) {
@@ -81,7 +78,7 @@ public class InputDataHandler {
 
     public static double[] getDataEksternal() {
         for (int i = 0; i < nilaiPF.length; i++) {
-            System.out.println(nilaiRelasi[i]);
+            System.out.println(nilaiPF[i]);
         }
         return nilaiPF;
     }
