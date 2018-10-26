@@ -228,20 +228,6 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
         // TODO add your handling code here:
 
-        if (nilaiPP.getText().trim().isEmpty()) {
-
-        } else if (nilaiDP.getText().trim().isEmpty()) {
-
-        } else if (nilaiNSB.getText().trim().isEmpty()) {
-
-        } else if (nilaiIFA.getText().trim().isEmpty()) {
-
-        } else {
-            //nextButton.setEnabled(true);
-            this.hide();
-            TampilanDataWirausaha ks = new TampilanDataWirausaha();
-            ks.setVisible(true);
-        }
 
 
     }//GEN-LAST:event_nextButtonActionPerformed
@@ -287,6 +273,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
         if (nilaiDP.getText().equals("")) {
             InputDataHandler.inputDataEksternal("dinamikaPasar", null);
             checker = false;
+            
         } else if (nilaiIFA.getText().equals("")) {
             InputDataHandler.inputDataEksternal("InfrastrukturListrik", null);
             checker = false;
@@ -324,8 +311,9 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
         }
         if (kumpulanNilaiPF[0] + kumpulanNilaiPF[1] + kumpulanNilaiPF[2] + kumpulanNilaiPF[3] != 100.0) {
             JOptionPane.showMessageDialog(null, "The sum of text fields must 100.0!");
+            checker = false;
         }
-
+        System.out.println(checker);
         if (checker == true) {
             this.hide();
             TampilanDataWirausaha ks = new TampilanDataWirausaha();

@@ -56,7 +56,7 @@ public class CA {
             model.E[i].copy(nextEnt[i]);
             nextEnt[i].age++;
             nextEnt[i].b_age++;
-            nextLevel(nextEnt[i], i, model, composition);
+            nextLevel(nextEnt[i], i, model);
         }
         return nextEnt;
     }
@@ -74,14 +74,14 @@ public class CA {
         }
         return sum;
     }
-
-    void nextLevel(Entrepreneurs ne, int i, CA model, double[] composition) {
+    //perubahan di double idx = getIndex(i,model)
+    void nextLevel(Entrepreneurs ne, int i, CA model) {
         //kasus umur yang sudah lebih dari 64th
         if (ne.age > (64 * 12)) {
             ne.level = State.RETIRED;
             ne.b_age = 0;
         } else {
-            double idx = getIndex(i, model, composition);
+            double idx = getIndex(i, model);
             if (idx < 10) {
                 ne.level = State.POTENTIAL;
                 ne.b_age = 0;
@@ -104,9 +104,12 @@ public class CA {
             }
         }
     }
-
-    double getIndex(int i, CA model, double[] composition) {
-        return composition[0] * model.E[i].point + composition[1] * this.getNeighborIndex(model, i) + composition[2] * this.pub.getPublicIdx();
+    // perubahan nilai a,b,c
+    double getIndex(int i, CA model) {
+        double a = Double.parseDouble(InputDataHandler.getValue("nilaiA"));
+        double b = Double.parseDouble(InputDataHandler.getValue("nilaiB"));
+        double c = Double.parseDouble(InputDataHandler.getValue("nilaiC"));
+        return a * model.E[i].point + b * this.getNeighborIndex(model, i) + c * this.pub.getPublicIdx();
     }
 
     //pendefinisian ketetanggaan
@@ -359,19 +362,19 @@ public class CA {
 
     }
 
-    // penambahan method baca file
-    void readData(Object[] isiDataFile) {
-        int i;
-        for (i = 0; i < isiDataFile.length; i++) {
-            String lines = isiDataFile[i].toString().trim();
-            String[] dataRow = lines.split(",");
-//            model.addRow(dataRow);
-
-
-            // kendala : gimana caranya ngirim data ini ke kelas ECASimulatorJFrame ?
-        }
-
-    }
+//    // penambahan method baca file
+//    void readData(Object[] isiDataFile) {
+//        int i;
+//        for (i = 0; i < isiDataFile.length; i++) {
+//            String lines = isiDataFile[i].toString().trim();
+//            String[] dataRow = lines.split(",");
+////            model.addRow(dataRow);
+//
+//
+//            // kendala : gimana caranya ngirim data ini ke kelas ECASimulatorJFrame ?
+//        }
+//
+//    }
 
     void print(int iter, PrintWriter out) {
         int l0 = 0;

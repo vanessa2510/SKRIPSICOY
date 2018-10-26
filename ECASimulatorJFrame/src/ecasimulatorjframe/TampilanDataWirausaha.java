@@ -23,6 +23,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
     /**
      * Creates new form TampilanSimulasi
      */
+    CA ca;
     private BufferedReader br;
     private final JFileChooser openFileChooser;
 
@@ -87,7 +88,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Jenis Kelamin", "Umur", "Umur (bulan)", "Kategori", "Sub Kategori", "Pendidikan", "Lokasi", "Pendapatan", "Level", "Point"
+                "Jenis Kelamin", "Umur", "Usia Bisnis (bulan)", "Kategori", "Sub Kategori", "Pendidikan", "Lokasi", "Pendapatan", "Level", "Point"
             }
         ));
         jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -185,7 +186,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
         // TODO add your handling code here:
         this.hide();
-        TampilanSimulasi ts = new TampilanSimulasi();
+        TampilanSimulasi ts = new TampilanSimulasi(this.ca);
         ts.setVisible(true);
     }//GEN-LAST:event_nextButtonActionPerformed
 
@@ -211,7 +212,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
                 DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
 
                 Object[] tableLines = br.lines().toArray();
-                CA ca = new CA(tableLines.length, InputDataHandler.getKetetanggaan(),4);
+                ca = new CA(tableLines.length, InputDataHandler.getKetetanggaan(),4);
                 int i;
                 for (i = 0; i < tableLines.length; i++) {
                     String lines = tableLines[i].toString().trim();

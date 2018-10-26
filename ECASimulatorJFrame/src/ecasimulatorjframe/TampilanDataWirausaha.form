@@ -161,7 +161,7 @@
                   <Table columnCount="10" rowCount="0">
                     <Column editable="true" title="Jenis Kelamin" type="java.lang.Object"/>
                     <Column editable="true" title="Umur" type="java.lang.Object"/>
-                    <Column editable="true" title="Umur (bulan)" type="java.lang.Object"/>
+                    <Column editable="true" title="Usia Bisnis (bulan)" type="java.lang.Object"/>
                     <Column editable="true" title="Kategori" type="java.lang.Object"/>
                     <Column editable="true" title="Sub Kategori" type="java.lang.Object"/>
                     <Column editable="true" title="Pendidikan" type="java.lang.Object"/>

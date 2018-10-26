@@ -58,8 +58,9 @@ public class ECASimulatorJFrame {
         
         // Faktor Publik
         double[] pfs = new double[] {2.53, 3.92, 3.29, 3.45};
-        //double[] pfw = new double[] {0.1,0.1,0.1,0.1};
+        double[] pfw = InputDataHandler.getDataEksternal();
         CA ca = new CA(InputDataHandler.getPopulation(),InputDataHandler.getKetetanggaan(),4);
+        
         
         //bobot ketetanggaan
 //        double[] nw = new double[] {0.7,0.0,0.3};
