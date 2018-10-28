@@ -47,7 +47,7 @@ public class CA {
         pub = new PublicFactor(pf);
     }
 
-    Entrepreneurs[] stateTransition(CA model, double[] composition) {
+    Entrepreneurs[] stateTransition(CA model,double [] composition) {
         int size = model.popSize;
         Entrepreneurs[] nextEnt = new Entrepreneurs[size];
 
@@ -56,7 +56,7 @@ public class CA {
             model.E[i].copy(nextEnt[i]);
             nextEnt[i].age++;
             nextEnt[i].b_age++;
-            nextLevel(nextEnt[i], i, model);
+            nextLevel(nextEnt[i], i, model,composition);
         }
         return nextEnt;
     }
@@ -75,13 +75,13 @@ public class CA {
         return sum;
     }
     //perubahan di double idx = getIndex(i,model)
-    void nextLevel(Entrepreneurs ne, int i, CA model) {
+    void nextLevel(Entrepreneurs ne, int i, CA model,double [] composition) {
         //kasus umur yang sudah lebih dari 64th
         if (ne.age > (64 * 12)) {
             ne.level = State.RETIRED;
             ne.b_age = 0;
         } else {
-            double idx = getIndex(i, model);
+            double idx = getIndex(i, model,composition);
             if (idx < 10) {
                 ne.level = State.POTENTIAL;
                 ne.b_age = 0;
@@ -105,14 +105,15 @@ public class CA {
         }
     }
     // perubahan nilai a,b,c
-    double getIndex(int i, CA model) {
-        double a = Double.parseDouble(InputDataHandler.getValue("nilaiA"));
-        double b = Double.parseDouble(InputDataHandler.getValue("nilaiB"));
-        double c = Double.parseDouble(InputDataHandler.getValue("nilaiC"));
-        return a * model.E[i].point + b * this.getNeighborIndex(model, i) + c * this.pub.getPublicIdx();
+    double getIndex(int i, CA model,double [] composition) {
+//        double a = Double.parseDouble(InputDataHandler.getValue("nilaiA"));
+//        double b = Double.parseDouble(InputDataHandler.getValue("nilaiB"));
+//        double c = Double.parseDouble(InputDataHandler.getValue("nilaiC"));
+        return composition[0] * model.E[i].point + composition[1] * this.getNeighborIndex(model, i) + composition[2] * this.pub.getPublicIdx();
     }
 
     //pendefinisian ketetanggaan
+    //perubahan -> ditambahin casenya
     void NeighborhoodDefinition() {
         int n = this.N.numNeighbor;
         int ng = this.popSize;
@@ -121,20 +122,73 @@ public class CA {
                 for (int k = 0; k < ng; k++) {
                     switch (i) {
                         case 0: // level
-                            if ((this.N.relation[i] == 0) && (this.E[j].level == this.E[k].level)) {
+                            // kalau relasinya sama dengan
+                            if ((this.N.relation[i] == 2) && (this.E[j].level == this.E[k].level)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
+                            // kalau relasinya kurang dari sama dengan
                             if ((this.N.relation[i] == 1) && (this.E[j].level <= this.E[k].level)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya lebih dari sama dengan
+                            if ((this.N.relation[i] == 3) && (this.E[j].level >= this.E[k].level)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             break;
                         case 1: // b_area
-                            if ((this.N.relation[i] == 0) && (this.E[j].b_category == this.E[k].b_category) && (this.E[j].b_area == this.E[k].b_area)) {
+                            // kalau relasinya sama dengan
+                            if ((this.N.relation[i] == 2) && (this.E[j].b_category == this.E[k].b_category) && (this.E[j].b_area == this.E[k].b_area)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             break;
                         case 2: //location
+                            // kalau relasinya sama dengan
                             if ((this.N.relation[i] == 0 && (this.E[j].location == this.E[k].location))) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            break;
+                        case 3: // jenis kelamin
+                            if ((this.N.relation[i] == 0 && (this.E[j].sex == this.E[k].sex))) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            break;
+                        case 4: // umur
+                            if ((this.N.relation[i] == 2) && (this.E[j].age == this.E[k].age)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya kurang dari sama dengan
+                            if ((this.N.relation[i] == 1) && (this.E[j].age <= this.E[k].age)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya lebih dari sama dengan
+                            if ((this.N.relation[i] == 3) && (this.E[j].age >= this.E[k].age)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            break;
+                         
+                        case 5: // pendidikan
+                            if ((this.N.relation[i] == 2) && (this.E[j].education == this.E[k].education)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya kurang dari sama dengan
+                            if ((this.N.relation[i] == 1) && (this.E[j].education <= this.E[k].education)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya lebih dari sama dengan
+                            if ((this.N.relation[i] == 3) && (this.E[j].education >= this.E[k].education)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            break;
+                        case 6: // pendapatan
+                            if ((this.N.relation[i] == 2) && (this.E[j].income == this.E[k].income)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya kurang dari sama dengan
+                            if ((this.N.relation[i] == 1) && (this.E[j].income <= this.E[k].income)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya lebih dari sama dengan
+                            if ((this.N.relation[i] == 3) && (this.E[j].income >= this.E[k].income)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             break;
@@ -421,9 +475,9 @@ public class CA {
             ageC = 0;
         } else if (a >= 45 * 12) {
             ageC = 1;
-        } else if (a >= 44 * 12) {
-            ageC = 2;
         } else if (a >= 34 * 12) {
+            ageC = 2;
+        } else if (a >= 24 * 12) {
             ageC = 3;
         } else {
             ageC = 4;

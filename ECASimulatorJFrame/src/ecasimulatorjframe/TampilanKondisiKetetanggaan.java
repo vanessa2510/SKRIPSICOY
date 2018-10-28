@@ -19,7 +19,8 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
      * Creates new form TampilanKondisiKetetanggaan
      */
     JPanel[] kumpulanJPanel;
-
+    int jmlCheckListInternal = 0;
+    double[] bobot;
     public TampilanKondisiKetetanggaan() {
         initComponents();
 
@@ -43,28 +44,38 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             kumpulanJPanel[i].setVisible(false);
             kumpulanJPanel[i].setLocation(29, 103); //ditumpuk di jUmur
         }
+        bobot = new double[jmlCheckListInternal];
+        int i = 0;
         if (InputDataHandler.checkKey("umurInternal")) {
             kumpulanJPanel[0].setVisible(true);
+            jmlCheckListInternal +=1;
+            //bobot[i] = Double.parseDouble(InputDataHandler.getValue("umurInternal"));
         }
         if (InputDataHandler.checkKey("levelInternal")) {
             kumpulanJPanel[1].setVisible(true);
+            jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("pendidikanInternal")) {
             kumpulanJPanel[2].setVisible(true);
+            jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("pendapatanInternal")) {
             kumpulanJPanel[3].setVisible(true);
+            jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("jenisKelaminInternal")) {
             kumpulanJPanel[4].setVisible(true);
+            jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("lokasiInternal")) {
             kumpulanJPanel[5].setVisible(true);
+            jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("bidangUsahaInternal")) {
             kumpulanJPanel[6].setVisible(true);
+            jmlCheckListInternal +=1;
         }
-
+        
     }
 
     /**
@@ -695,6 +706,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         boolean checker = true;
         String nilaiRB = "";
         int[] kumpulanNilaiRelasi = new int[4];
+        double[] bobot = new double[InputDataHandler.getKetetanggaan()];
         
         // set relasi 0 kalau ga checkboxnya gadipilih
         // set relasi 1 kalau kurang dari sama dengan
@@ -704,7 +716,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         
         //umur
         if (umurCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist();;
+            InputDataHandler.jmlChecklist();
             //System.out.println(jmlCheckList);
             // kalo radio button umurKrgDr ga diisi, check umurSmDgn
             if (!umurKrgDr.isSelected()) {
@@ -913,8 +925,6 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "You cannot move to the other page because you must fill checkbox or radio button first!");
         }
-//        InputDataHandler.setRelation(kumpulanNilaiRelasi);
-//        System.out.println(InputDataHandler.getRelation());
     }//GEN-LAST:event_nextButtonMouseClicked
 
     /**

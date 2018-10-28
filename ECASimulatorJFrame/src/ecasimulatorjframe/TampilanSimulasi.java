@@ -190,9 +190,9 @@ public class TampilanSimulasi extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nilaiAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiAActionPerformed
-        // TODO add your handling code here:
-        String masukanA = nilaiA.getText();
-        double a = Double.parseDouble(masukanA);
+//        // TODO add your handling code here:
+//        String masukanA = nilaiA.getText();
+//        double a = Double.parseDouble(masukanA);
     }//GEN-LAST:event_nilaiAActionPerformed
 
     private void simulateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simulateButtonActionPerformed
@@ -201,26 +201,26 @@ public class TampilanSimulasi extends javax.swing.JFrame {
 
     private void nilaiBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiBActionPerformed
         // TODO add your handling code here:
-        String masukanB = nilaiB.getText();
-        double b = Double.parseDouble(masukanB);
+//        String masukanB = nilaiB.getText();
+//        double b = Double.parseDouble(masukanB);
     }//GEN-LAST:event_nilaiBActionPerformed
 
     private void nilaiCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiCActionPerformed
         // TODO add your handling code here:
-        String masukanC = nilaiC.getText();
-        double c = Double.parseDouble(masukanC);
+//        String masukanC = nilaiC.getText();
+//        double c = Double.parseDouble(masukanC);
     }//GEN-LAST:event_nilaiCActionPerformed
 
     private void nilaiThresholdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiThresholdActionPerformed
         // TODO add your handling code here:
-        String masukanThreshold = nilaiThreshold.getText();
-        double t = Double.parseDouble(masukanThreshold);
+//        String masukanThreshold = nilaiThreshold.getText();
+//        double t = Double.parseDouble(masukanThreshold);
     }//GEN-LAST:event_nilaiThresholdActionPerformed
 
     private void nilaiPeriodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiPeriodeActionPerformed
         // TODO add your handling code here:
-        String masukanPeriode = nilaiPeriode.getText();
-        int p = Integer.parseInt(masukanPeriode);
+//        String masukanPeriode = nilaiPeriode.getText();
+//        int p = Integer.parseInt(masukanPeriode);
     }//GEN-LAST:event_nilaiPeriodeActionPerformed
 
     private void simulateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_simulateButtonMouseClicked
@@ -264,9 +264,11 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                 checker = true;
             }
         }
+        
         if (a+b+c!=1.0) {
             JOptionPane.showMessageDialog(null, "The sum of a,b and c's value must 1!");
         }
+        
         if (checker == true) {
             this.hide();
             TampilanDataWirausaha ks = new TampilanDataWirausaha();
@@ -274,6 +276,8 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "You must fill the text field first!");
         }
+        
+        double[] composition = new double[] {a,b,c};
         
         double[] POAf = new double [] {8.6,17.7,28.4,29.5,15.8}; // female
         double[] POAm = new double [] {8.3,14.5,26.7,36.2,14.3}; // male
@@ -318,8 +322,22 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         double[] pfs = new double[] {2.53, 3.92, 3.29, 3.45};
         double[] pfw = InputDataHandler.getDataEksternal();
         
-        for (int i = 0; i < 10; i++) {
-            
+        ca.pub.setFactors(pfs);
+        ca.pub.setWeights(pfw);
+        
+        int maxIter = 100;
+        for (int i = 0; i < maxIter; i++) {
+            ca.NeighborhoodDefinition();
+            int periode = Integer.parseInt(InputDataHandler.getValue("periode"));
+            if (i % periode == 0) {
+                //ca.print(i, null);
+                ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf);
+               // System.out.println(ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf));
+                Entrepreneurs[] nE;
+                nE = ca.stateTransition(ca,composition);
+                //System.out.println(nE);
+                ca.E = nE;
+            }
         }
     }//GEN-LAST:event_simulateButtonMouseClicked
 

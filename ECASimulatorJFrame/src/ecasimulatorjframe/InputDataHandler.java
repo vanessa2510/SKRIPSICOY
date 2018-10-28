@@ -21,6 +21,7 @@ public class InputDataHandler {
     public static String dataWirausaha;
     public static int[] nilaiRelasi = new int[4];
     public static double[] nilaiPF = new double[4];
+    public static double[] bobot = new double[jmlPopulasi];
 
     public static void inputDataInternal(String key, String value) {
         if (data == null) {
@@ -86,6 +87,17 @@ public class InputDataHandler {
     // method untuk mendapatkan nilai dari satu data map
     public static String getValue(String key) {
         return data.get(key);
+    }
+    
+    public static void setBobot(double[] bobotAtribut){
+        bobot = bobotAtribut;
+    }
+    
+    public double[] getBobot(){
+        for (int i = 0; i < bobot.length; i++) {
+            System.out.println(bobot[i]);
+        }
+        return bobot;
     }
 
     public static void setRelation(int[] nilaiRelation) {

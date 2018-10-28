@@ -16,8 +16,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
     /**
      * Creates new form ECASimulator
      */
-    
-    
+    double[] bobot;
     public TampilanKondisiInternal() {
         initComponents();
         nilaiUmurInternal.setEnabled(false);
@@ -345,12 +344,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
     }//GEN-LAST:event_nextButtonActionPerformed
 
     private void umurCBInternalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_umurCBInternalActionPerformed
-        // kalo check box umur dicheck list berarti ketetanggaannya bertambah 1 dimasukin ke kelas Neighborhoods
-        // pada atribut numNeighbor (jumlah tetangga)
-        if (umurCBInternal.isSelected()) {
-            // kalo ini diisi berarti harus isi textfieldnya juga, kalo ga diisi ada error
-            //Neighborhoods n = new Neighborhoods();
-        }
+
     }//GEN-LAST:event_umurCBInternalActionPerformed
 
     private void nilaiUmurInternalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiUmurInternalActionPerformed
@@ -360,8 +354,8 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
 
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
         //System.out.println("lala");
-        Neighborhoods n;
         int jumlahCheckList = 0;
+        //double[] bobot = new double[jumlahCheckList];
         boolean checker = true;
         if (umurCBInternal.isSelected()) {
             jumlahCheckList+=1;

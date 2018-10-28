@@ -198,6 +198,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
     }//GEN-LAST:event_backButtonActionPerformed
 
     private void openFileButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openFileButtonMouseClicked
+        double[] kumpulanBobot;
         int returnValue = openFileChooser.showOpenDialog(this);
         StringBuilder sb = new StringBuilder();
         if (returnValue == JFileChooser.APPROVE_OPTION) {
@@ -213,6 +214,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
 
                 Object[] tableLines = br.lines().toArray();
                 ca = new CA(tableLines.length, InputDataHandler.getKetetanggaan(),4);
+                kumpulanBobot = new double[InputDataHandler.getKetetanggaan()];
                 int i;
                 for (i = 0; i < tableLines.length; i++) {
                     String lines = tableLines[i].toString().trim();
@@ -236,8 +238,8 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
                     ca.E[i].level = Integer.parseInt(dataRow[8]);
                     ca.E[i].point = 0.0;
                 }
-//                InputDataHandler.setPopulation(tableLines.length);
-                //System.out.println(InputDataHandler.getPopulation(tableLines.length));
+                // memasukkan data bobot masing2 atribut ke kelas Neighborhood
+                
 
 //                InputDataHandler.setDataWirausaha(openFileChooser.getSelectedFile().getName());
 //                CA ca = new CA(InputDataHandler.getPopulation(), InputDataHandler.getKetetanggaan(),4);

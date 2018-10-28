@@ -322,7 +322,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "You must fill the text field!");
         }
         InputDataHandler.setDataEksternal(kumpulanNilaiPF);
-        System.out.println(InputDataHandler.getDataEksternal());
+      //  System.out.println(InputDataHandler.getDataEksternal());
     }//GEN-LAST:event_nextButtonMouseClicked
 
     /**
