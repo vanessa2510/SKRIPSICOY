@@ -705,7 +705,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
         boolean checker = true;
         String nilaiRB = "";
-        int[] kumpulanNilaiRelasi = new int[4];
+        double[] kumpulanNilaiRelasi = new double[4];
         double[] bobot = new double[InputDataHandler.getKetetanggaan()];
         
         // set relasi 0 kalau ga checkboxnya gadipilih

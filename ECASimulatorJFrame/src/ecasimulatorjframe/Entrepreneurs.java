@@ -59,6 +59,10 @@ public class Entrepreneurs {
         e.income = this.income;
         e.level = this.level;
     }
+    
+    public String toString2(){
+        return sex +" , "+ age + " , "+b_age+" , "+b_category+" , "+b_area+" , "+education +" , "+ location+" , "+ income +" , "+ level;
+    }
 
     public void setLevel(int level) {
         this.level = level;

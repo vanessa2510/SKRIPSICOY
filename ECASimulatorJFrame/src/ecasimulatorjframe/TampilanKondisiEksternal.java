@@ -313,7 +313,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "The sum of text fields must 100.0!");
             checker = false;
         }
-        System.out.println(checker);
+       // System.out.println(checker);
         if (checker == true) {
             this.hide();
             TampilanDataWirausaha ks = new TampilanDataWirausaha();

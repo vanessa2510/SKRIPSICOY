@@ -1,4 +1,3 @@
-Jenis Kelamin , Umur , Umur (bulan) , Kategori , Sub Kategori , Pendidikan , Lokasi , Pendapatan , Level , Poin
-1	        / 18	/216		/1		/0	/2		/1	/2	     /1	   /0.0
-0		/ 30	/360		/2		/1	/3		/3	/1	     /2	   /0.0
-0		/ 45	/540		/0		/1	/1		/4	/3	     /2	   /0.0
+true,18,0,1,0,2,1,2,1,0.0
+false,30,0,2,1,3,3,1,2,0.0
+false,45,0,0,1,1,4,3,2,0.0

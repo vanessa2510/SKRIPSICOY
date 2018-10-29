@@ -267,6 +267,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         
         if (a+b+c!=1.0) {
             JOptionPane.showMessageDialog(null, "The sum of a,b and c's value must 1!");
+            checker = false;
         }
         
         if (checker == true) {
@@ -322,21 +323,31 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         double[] pfs = new double[] {2.53, 3.92, 3.29, 3.45};
         double[] pfw = InputDataHandler.getDataEksternal();
         
+        double[] nw = InputDataHandler.getBobot();
+        int[] nr = InputDataHandler.getRelation();
+        
+        
         ca.pub.setFactors(pfs);
         ca.pub.setWeights(pfw);
+        
+        ca.N.setWeight(nw);
+        ca.N.setRelation(nr);
         
         int maxIter = 100;
         for (int i = 0; i < maxIter; i++) {
             ca.NeighborhoodDefinition();
-            int periode = Integer.parseInt(InputDataHandler.getValue("periode"));
-            if (i % periode == 0) {
+           // int periode = Integer.parseInt(InputDataHandler.getValue("periode"));
+            if (i % 12 == 0) {
                 //ca.print(i, null);
                 ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf);
                // System.out.println(ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf));
                 Entrepreneurs[] nE;
                 nE = ca.stateTransition(ca,composition);
-                //System.out.println(nE);
+                for (int j = 0; j < nE.length; j++) {
+                    System.out.println(nE[j].toString2());
+                }
                 ca.E = nE;
+//                System.out.println(nE);
             }
         }
     }//GEN-LAST:event_simulateButtonMouseClicked

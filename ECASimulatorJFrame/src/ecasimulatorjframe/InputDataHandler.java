@@ -93,7 +93,7 @@ public class InputDataHandler {
         bobot = bobotAtribut;
     }
     
-    public double[] getBobot(){
+    public static double[] getBobot(){
         for (int i = 0; i < bobot.length; i++) {
             System.out.println(bobot[i]);
         }
