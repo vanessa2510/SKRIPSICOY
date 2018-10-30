@@ -74,7 +74,7 @@ public class CA {
         }
         return sum;
     }
-    //perubahan di double idx = getIndex(i,model)
+    //perubahan di threshold
     void nextLevel(Entrepreneurs ne, int i, CA model,double [] composition) {
         //kasus umur yang sudah lebih dari 64th
         if (ne.age > (64 * 12)) {
@@ -82,7 +82,8 @@ public class CA {
             ne.b_age = 0;
         } else {
             double idx = getIndex(i, model,composition);
-            if (idx < 10) {
+            double threshold = Double.parseDouble(InputDataHandler.getValue("threshold"));
+            if (idx < threshold ) {
                 ne.level = State.POTENTIAL;
                 ne.b_age = 0;
             } else {
@@ -104,11 +105,7 @@ public class CA {
             }
         }
     }
-    // perubahan nilai a,b,c
     double getIndex(int i, CA model,double [] composition) {
-//        double a = Double.parseDouble(InputDataHandler.getValue("nilaiA"));
-//        double b = Double.parseDouble(InputDataHandler.getValue("nilaiB"));
-//        double c = Double.parseDouble(InputDataHandler.getValue("nilaiC"));
         return composition[0] * model.E[i].point + composition[1] * this.getNeighborIndex(model, i) + composition[2] * this.pub.getPublicIdx();
     }
 
@@ -219,9 +216,9 @@ public class CA {
             this.E[i] = new Entrepreneurs();
             n = r.nextInt(nSim);
             if (n < nSim * 0.6) {
-                //this.E[i].sex = State.FEMALE;
+                this.E[i].sex = State.FEMALE;
             } else {
-                //this.E[i].sex = State.MALE;
+                this.E[i].sex = State.MALE;
             }
 
             //location
@@ -466,6 +463,7 @@ public class CA {
             } else {
                 E[i].point = (POAf[a] + POEf[E[i].education] + POLf[E[i].location] + POIf[E[i].income]) * 0.25 + (PCAf[a] + PCEf[E[i].education] + PCLf[E[i].location] + PCIf[E[i].income]) * 0.25 + (RMAf[a] + RMIf[E[i].education]) * 0.5;
             }
+            System.out.println("i = "+ i + "point = "+E[i].point);
         }
     }
 

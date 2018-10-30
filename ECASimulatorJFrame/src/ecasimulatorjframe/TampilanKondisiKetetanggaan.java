@@ -705,7 +705,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
         boolean checker = true;
         String nilaiRB = "";
-        double[] kumpulanNilaiRelasi = new double[4];
+        
         double[] bobot = new double[InputDataHandler.getKetetanggaan()];
         
         // set relasi 0 kalau ga checkboxnya gadipilih
@@ -713,7 +713,8 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         // set relasi 2 kalau sama dengan
         // set relasi 3 kalau lebih dari sama dengan
         
-        
+        int n = 0;
+        int[] kumpulanNilaiRelasi = new int[InputDataHandler.jmlChecklist];
         //umur
         if (umurCBNeg.isSelected()) {
             InputDataHandler.jmlChecklist();
@@ -735,6 +736,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                             nilaiRB = "3";
                         }
                         kumpulanNilaiRelasi[0] = Integer.parseInt(nilaiRB);
+
                         // System.out.println(kumpulanNilaiRelasi[0]);
                         checker = true;
                     }
@@ -745,7 +747,8 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                     if (nilaiRB.equals("=")) {
                         nilaiRB = "2";
                     }
-                    kumpulanNilaiRelasi[0] = Integer.parseInt(nilaiRB);
+                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                    n++;
                     // System.out.println(kumpulanNilaiRelasi[0]);
                     checker = true;
                 }
@@ -756,14 +759,16 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 if (nilaiRB.equals("<=")) {
                     nilaiRB = "1";
                 }
-                kumpulanNilaiRelasi[0] = Integer.parseInt(nilaiRB);
+                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                n++;
                 //  System.out.println(kumpulanNilaiRelasi[0]);
                 checker = true;
             }
 
         } else {
             nilaiRB = "0";
-            kumpulanNilaiRelasi[0] = Integer.parseInt(nilaiRB);
+            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+            n++;
         }
 
         // level

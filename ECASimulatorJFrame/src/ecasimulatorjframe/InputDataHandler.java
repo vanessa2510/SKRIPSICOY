@@ -78,9 +78,9 @@ public class InputDataHandler {
     }
 
     public static double[] getDataEksternal() {
-        for (int i = 0; i < nilaiPF.length; i++) {
-            System.out.println(nilaiPF[i]);
-        }
+//        for (int i = 0; i < nilaiPF.length; i++) {
+//            System.out.println(nilaiPF[i]);
+//        }
         return nilaiPF;
     }
 
@@ -94,9 +94,9 @@ public class InputDataHandler {
     }
     
     public static double[] getBobot(){
-        for (int i = 0; i < bobot.length; i++) {
-            System.out.println(bobot[i]);
-        }
+//        for (int i = 0; i < bobot.length; i++) {
+//            System.out.println(bobot[i]);
+//        }
         return bobot;
     }
 

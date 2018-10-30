@@ -256,10 +256,10 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                         c = Double.parseDouble(nilaiC.getText());
                         if (!nilaiPeriode.getText().equals("")) {
                             InputDataHandler.inputDataSimulasi("periode", nilaiPeriode.getText());
-                            System.out.println(nilaiPeriode.getText());
+                           // System.out.println(nilaiPeriode.getText());
                             if (!nilaiThreshold.getText().equals("")) {
                                 InputDataHandler.inputDataSimulasi("threshold", nilaiThreshold.getText());
-                                System.out.println(nilaiThreshold.getText());
+                               // System.out.println(nilaiThreshold.getText());
                             }
                         }
                     }
