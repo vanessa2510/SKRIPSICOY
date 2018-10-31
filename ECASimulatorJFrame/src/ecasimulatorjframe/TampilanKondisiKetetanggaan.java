@@ -714,7 +714,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         // set relasi 3 kalau lebih dari sama dengan
         
         int n = 0;
-        int[] kumpulanNilaiRelasi = new int[InputDataHandler.jmlChecklist];
+        int[] kumpulanNilaiRelasi = new int[4];
         //umur
         if (umurCBNeg.isSelected()) {
             InputDataHandler.jmlChecklist();
@@ -735,8 +735,8 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                         if (nilaiRB.equals(">=")) {
                             nilaiRB = "3";
                         }
-                        kumpulanNilaiRelasi[0] = Integer.parseInt(nilaiRB);
-
+                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                        n++;
                         // System.out.println(kumpulanNilaiRelasi[0]);
                         checker = true;
                     }
@@ -906,8 +906,8 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             kumpulanNilaiRelasi[3] = Integer.parseInt(nilaiRB);
         }
         
-        
-        //System.out.println(InputDataHandler.getRelation(kumpulanNilaiRelasi));
+        InputDataHandler.setRelation(kumpulanNilaiRelasi);
+//        System.out.println(InputDataHandler.getRelation());
 
         if (jenisKelaminCBNeg.isSelected()) {
             InputDataHandler.jmlChecklist += 1;

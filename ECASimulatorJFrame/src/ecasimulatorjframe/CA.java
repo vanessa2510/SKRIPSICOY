@@ -25,8 +25,8 @@ public class CA {
     Entrepreneurs[] E;
     Neighborhoods N;
     PublicFactor pub;
-    int[] S;
-    float P;
+    int[] S; // state ?
+    float P; 
     float[] delta;
     float[] sigma;
     //penambahan
@@ -82,7 +82,7 @@ public class CA {
             ne.b_age = 0;
         } else {
             double idx = getIndex(i, model,composition);
-            double threshold = Double.parseDouble(InputDataHandler.getValue("threshold"));
+            threshold = Double.parseDouble(InputDataHandler.getValue("threshold"));
             if (idx < threshold ) {
                 ne.level = State.POTENTIAL;
                 ne.b_age = 0;
@@ -463,7 +463,7 @@ public class CA {
             } else {
                 E[i].point = (POAf[a] + POEf[E[i].education] + POLf[E[i].location] + POIf[E[i].income]) * 0.25 + (PCAf[a] + PCEf[E[i].education] + PCLf[E[i].location] + PCIf[E[i].income]) * 0.25 + (RMAf[a] + RMIf[E[i].education]) * 0.5;
             }
-            System.out.println("i = "+ i + "point = "+E[i].point);
+            System.out.println("i = "+ i + " point = "+E[i].point);
         }
     }
 
@@ -495,13 +495,13 @@ public class CA {
 //    public void setC(double c) {
 //        this.c = c;
 //    }
-    public void setThreshold(double threshold) {
-        this.threshold = threshold;
-    }
-
-    public double getThreshold() {
-        return threshold;
-    }
+//    public void setThreshold(double threshold) {
+//        this.threshold = threshold;
+//    }
+//
+//    public double getThreshold() {
+//        return threshold;
+//    }
 
 //    public double getA() {
 //        return a;

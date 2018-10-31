@@ -16,7 +16,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
     /**
      * Creates new form ECASimulator
      */
-    double[] bobot;
+    
 
     public TampilanKondisiInternal() {
         initComponents();

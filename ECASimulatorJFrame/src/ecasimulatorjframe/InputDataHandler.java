@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -108,9 +108,6 @@ public class InputDataHandler {
     //method untuk mengembalikan relasi dari masing2 tetangga
 
     public static int[] getRelation() {
-        for (int i = 0; i < nilaiRelasi.length; i++) {
-            System.out.println(nilaiRelasi[i]);
-        }
         return nilaiRelasi;
     }
 
