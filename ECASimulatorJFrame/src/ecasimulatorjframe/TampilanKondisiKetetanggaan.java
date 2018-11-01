@@ -19,8 +19,9 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
      * Creates new form TampilanKondisiKetetanggaan
      */
     JPanel[] kumpulanJPanel;
-    int jmlCheckListInternal = 0;
-    double[] bobot;
+
+    //int jmlCheckListInternal = 0;
+    //double[] bobot;
     public TampilanKondisiKetetanggaan() {
         initComponents();
 
@@ -44,38 +45,38 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             kumpulanJPanel[i].setVisible(false);
             kumpulanJPanel[i].setLocation(29, 103); //ditumpuk di jUmur
         }
-        bobot = new double[jmlCheckListInternal];
+        // bobot = new double[jmlCheckListInternal];
         int i = 0;
         if (InputDataHandler.checkKey("umurInternal")) {
             kumpulanJPanel[0].setVisible(true);
-            jmlCheckListInternal +=1;
+            // jmlCheckListInternal +=1;
             //bobot[i] = Double.parseDouble(InputDataHandler.getValue("umurInternal"));
         }
         if (InputDataHandler.checkKey("levelInternal")) {
             kumpulanJPanel[1].setVisible(true);
-            jmlCheckListInternal +=1;
+            //jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("pendidikanInternal")) {
             kumpulanJPanel[2].setVisible(true);
-            jmlCheckListInternal +=1;
+            //jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("pendapatanInternal")) {
             kumpulanJPanel[3].setVisible(true);
-            jmlCheckListInternal +=1;
+            //jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("jenisKelaminInternal")) {
             kumpulanJPanel[4].setVisible(true);
-            jmlCheckListInternal +=1;
+            //jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("lokasiInternal")) {
             kumpulanJPanel[5].setVisible(true);
-            jmlCheckListInternal +=1;
+            //jmlCheckListInternal +=1;
         }
-        if (InputDataHandler.checkKey("bidangUsahaInternal")) {
+        if (InputDataHandler.checkKey("usahaInternal")) {
             kumpulanJPanel[6].setVisible(true);
-            jmlCheckListInternal +=1;
+            //jmlCheckListInternal +=1;
         }
-        
+
     }
 
     /**
@@ -705,19 +706,41 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
         boolean checker = true;
         String nilaiRB = "";
-        
+
         double[] bobot = new double[InputDataHandler.getKetetanggaan()];
-        
+
         // set relasi 0 kalau ga checkboxnya gadipilih
         // set relasi 1 kalau kurang dari sama dengan
         // set relasi 2 kalau sama dengan
         // set relasi 3 kalau lebih dari sama dengan
-        
-        int n = 0;
-        int[] kumpulanNilaiRelasi = new int[4];
-        //umur
         if (umurCBNeg.isSelected()) {
             InputDataHandler.jmlChecklist();
+        }
+        if (levelCBNeg.isSelected()) {
+            InputDataHandler.jmlChecklist();
+        }
+        if (pendapatanCBNeg.isSelected()) {
+            InputDataHandler.jmlChecklist();
+        }
+        if (pendidikanCBNeg.isSelected()) {
+            InputDataHandler.jmlChecklist();
+        }
+        if (jenisKelaminCBNeg.isSelected()) {
+            InputDataHandler.jmlChecklist();
+        }
+        if (lokasiCBNeg.isSelected()) {
+            InputDataHandler.jmlChecklist();
+        }
+        if (bidangUsahaCBNeg.isSelected()) {
+            InputDataHandler.jmlChecklist();
+        }
+
+        int n = 0;
+        //System.out.println(InputDataHandler.getKetetanggaan());
+        int[] kumpulanNilaiRelasi = new int[InputDataHandler.getKetetanggaan()];
+        //umur
+        if (umurCBNeg.isSelected()) {
+//            InputDataHandler.jmlChecklist();
             //System.out.println(jmlCheckList);
             // kalo radio button umurKrgDr ga diisi, check umurSmDgn
             if (!umurKrgDr.isSelected()) {
@@ -733,7 +756,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                         InputDataHandler.inputDataKetetanggaan("umurLbhDr", umurLbhDr.getText());
                         nilaiRB = InputDataHandler.getValue("umurLbhDr");
                         if (nilaiRB.equals(">=")) {
-                            nilaiRB = "3";
+                            nilaiRB = "2";
                         }
                         kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                         n++;
@@ -745,7 +768,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                     InputDataHandler.inputDataKetetanggaan("umurSmDgn", umurSmDgn.getText());
                     nilaiRB = InputDataHandler.getValue("umurSmDgn");
                     if (nilaiRB.equals("=")) {
-                        nilaiRB = "2";
+                        nilaiRB = "0";
                     }
                     kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                     n++;
@@ -765,15 +788,16 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 checker = true;
             }
 
-        } else {
-            nilaiRB = "0";
-            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-            n++;
         }
+//            else {
+//            nilaiRB = "0";
+//            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+//            n++;
+//        }
 
         // level
         if (levelCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist();
+//            InputDataHandler.jmlChecklist();
             // kalo radio button levelKrgDr ga diisi, check levelSmDgn
             if (!levelKrgDr.isSelected()) {
                 // kalo radio button levelSmDgn ga diisi, check levelLbhDr
@@ -786,9 +810,10 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                         InputDataHandler.inputDataKetetanggaan("levelLbhDr", levelLbhDr.getText());
                         nilaiRB = InputDataHandler.getValue("levelLbhDr");
                         if (nilaiRB.equals(">=")) {
-                            nilaiRB = "3";
+                            nilaiRB = "2";
                         }
-                        kumpulanNilaiRelasi[1] = Integer.parseInt(nilaiRB);
+                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                        n++;
                         checker = true;
                     }
                 } // kalo radio button levelSmDgn diisi, lsg masukin datanya ke data handler
@@ -796,9 +821,10 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                     InputDataHandler.inputDataKetetanggaan("levelSmDgn", levelSmDgn.getText());
                     nilaiRB = InputDataHandler.getValue("levelSmDgn");
                     if (nilaiRB.equals("=")) {
-                        nilaiRB = "2";
+                        nilaiRB = "0";
                     }
-                    kumpulanNilaiRelasi[1] = Integer.parseInt(nilaiRB);
+                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                    n++;
                     checker = true;
                 }
             } // kalo radio button levelKrgDr diisi lsg true n nilainya dimasukin ke data handler
@@ -808,17 +834,19 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 if (nilaiRB.equals("<=")) {
                     nilaiRB = "1";
                 }
-                kumpulanNilaiRelasi[1] = Integer.parseInt(nilaiRB);
+                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                n++;
                 checker = true;
             }
-        } else {
-            nilaiRB = "0";
-            kumpulanNilaiRelasi[1] = Integer.parseInt(nilaiRB);
         }
+//            else {
+//            nilaiRB = "0";
+//            kumpulanNilaiRelasi[1] = Integer.parseInt(nilaiRB);
+//        }
 
         //pendidikan
         if (pendidikanCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist();
+//            InputDataHandler.jmlChecklist();
             // kalo radio button pendidikanKrgDr ga diisi, check pendidikanSmDgn
             if (!pendidikanKrgDr.isSelected()) {
                 // kalo radio button pendidikanSmDgn ga diisi, check pendidikanLbhDr
@@ -831,9 +859,10 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                         InputDataHandler.inputDataKetetanggaan("pendidikanLbhDr", pendidikanLbhDr.getText());
                         nilaiRB = InputDataHandler.getValue("pendidikanLbhDr");
                         if (nilaiRB.equals(">=")) {
-                            nilaiRB = "3";
+                            nilaiRB = "2";
                         }
-                        kumpulanNilaiRelasi[2] = Integer.parseInt(nilaiRB);
+                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                        n++;
                         checker = true;
                     }
                 } // kalo radio button pendidikanSmDgn diisi, lsg masukin datanya ke data handler
@@ -841,9 +870,10 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                     InputDataHandler.inputDataKetetanggaan("pendidikanSmDgn", pendidikanSmDgn.getText());
                     nilaiRB = InputDataHandler.getValue("pendidikanSmDgn");
                     if (nilaiRB.equals("=")) {
-                        nilaiRB = "2";
+                        nilaiRB = "0";
                     }
-                    kumpulanNilaiRelasi[2] = Integer.parseInt(nilaiRB);
+                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                    n++;
                     checker = true;
                 }
             } // kalo radio button pendidikanKrgDr diisi lsg true n nilainya dimasukin ke data handler
@@ -853,17 +883,19 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 if (nilaiRB.equals("<=")) {
                     nilaiRB = "1";
                 }
-                kumpulanNilaiRelasi[2] = Integer.parseInt(nilaiRB);
+                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                n++;
                 checker = true;
             }
-        } else {
-            nilaiRB = "0";
-            kumpulanNilaiRelasi[2] = Integer.parseInt(nilaiRB);
         }
+//            else {
+//            nilaiRB = "0";
+//            kumpulanNilaiRelasi[2] = Integer.parseInt(nilaiRB);
+//        }
 
         //pendapatan
         if (pendapatanCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist();
+//            InputDataHandler.jmlChecklist();
             // kalo radio button pendapatanKrgDr ga diisi, check pendapatanSmDgn
             if (!pendapatanKrgDr.isSelected()) {
                 // kalo radio button pendapatanSmDgn ga diisi, check pendapatanLbhDr
@@ -876,9 +908,10 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                         InputDataHandler.inputDataKetetanggaan("pendapatanLbhDr", pendapatanLbhDr.getText());
                         nilaiRB = InputDataHandler.getValue("pendapatanLbhDr");
                         if (nilaiRB.equals(">=")) {
-                            nilaiRB = "3";
+                            nilaiRB = "2";
                         }
-                        kumpulanNilaiRelasi[3] = Integer.parseInt(nilaiRB);
+                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                        n++;
                         checker = true;
                     }
                 } // kalo radio button pendapatanSmDgn diisi, lsg masukin datanya ke data handler
@@ -886,9 +919,10 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                     InputDataHandler.inputDataKetetanggaan("pendapatanSmDgn", pendapatanSmDgn.getText());
                     nilaiRB = InputDataHandler.getValue("pendapatanSmDgn");
                     if (nilaiRB.equals("=")) {
-                        nilaiRB = "2";
+                        nilaiRB = "0";
                     }
-                    kumpulanNilaiRelasi[3] = Integer.parseInt(nilaiRB);
+                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                    n++;
                     checker = true;
                 }
             } // kalo radio button pendapatanKrgDr diisi lsg true n nilainya dimasukin ke data handler
@@ -898,26 +932,34 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 if (nilaiRB.equals("<=")) {
                     nilaiRB = "1";
                 }
-                kumpulanNilaiRelasi[3] = Integer.parseInt(nilaiRB);
+                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                n++;
                 checker = true;
             }
-        } else {
-            nilaiRB = "0";
-            kumpulanNilaiRelasi[3] = Integer.parseInt(nilaiRB);
         }
-        
-        InputDataHandler.setRelation(kumpulanNilaiRelasi);
-//        System.out.println(InputDataHandler.getRelation());
+//        else {
+//            nilaiRB = "0";
+//            kumpulanNilaiRelasi[3] = Integer.parseInt(nilaiRB);
+//        }
 
         if (jenisKelaminCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist += 1;
+//            InputDataHandler.jmlChecklist();
+            kumpulanNilaiRelasi[n] = 0;
+            n++;
         }
         if (lokasiCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist += 1;
+//            InputDataHandler.jmlChecklist();
+            kumpulanNilaiRelasi[n] = 0;
+            n++;
         }
         if (bidangUsahaCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist += 1;
+//            InputDataHandler.jmlChecklist();
+            kumpulanNilaiRelasi[n] = 0;
+            n++;
         }
+
+        InputDataHandler.setRelation(kumpulanNilaiRelasi);
+        //      System.out.println(InputDataHandler.getRelation());
 
         if (InputDataHandler.jmlChecklist == 0) {
             checker = false;

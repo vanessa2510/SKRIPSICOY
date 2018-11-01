@@ -25,6 +25,7 @@ public class Neighborhoods {
         relation = new int[m];
         
         for (int i = 0; i < m; i++) {
+            this.numNeighbor = m;
             neighbors[i] = new Neighbor(n);
             weight[i] = 0.0;
             relation[i] = 0;

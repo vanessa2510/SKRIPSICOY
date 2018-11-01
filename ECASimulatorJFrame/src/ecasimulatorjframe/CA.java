@@ -120,7 +120,7 @@ public class CA {
                     switch (i) {
                         case 0: // level
                             // kalau relasinya sama dengan
-                            if ((this.N.relation[i] == 2) && (this.E[j].level == this.E[k].level)) {
+                            if ((this.N.relation[i] == 0) && (this.E[j].level == this.E[k].level)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             // kalau relasinya kurang dari sama dengan
@@ -128,29 +128,29 @@ public class CA {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             // kalau relasinya lebih dari sama dengan
-                            if ((this.N.relation[i] == 3) && (this.E[j].level >= this.E[k].level)) {
+                            if ((this.N.relation[i] == 2) && (this.E[j].level >= this.E[k].level)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             break;
                         case 1: // b_area
                             // kalau relasinya sama dengan
-                            if ((this.N.relation[i] == 2) && (this.E[j].b_category == this.E[k].b_category) && (this.E[j].b_area == this.E[k].b_area)) {
+                            if ((this.N.relation[i] == 0) && (this.E[j].b_category == this.E[k].b_category) && (this.E[j].b_area == this.E[k].b_area)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             break;
                         case 2: //location
                             // kalau relasinya sama dengan
-                            if ((this.N.relation[i] == 0 && (this.E[j].location == this.E[k].location))) {
+                            if ((this.N.relation[i] == 0) && (this.E[j].location == this.E[k].location)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             break;
                         case 3: // jenis kelamin
-                            if ((this.N.relation[i] == 0 && (this.E[j].sex == this.E[k].sex))) {
+                            if ((this.N.relation[i] == 0) && (this.E[j].sex == this.E[k].sex)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             break;
                         case 4: // umur
-                            if ((this.N.relation[i] == 2) && (this.E[j].age == this.E[k].age)) {
+                            if ((this.N.relation[i] == 0) && (this.E[j].age == this.E[k].age)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             // kalau relasinya kurang dari sama dengan
@@ -158,13 +158,13 @@ public class CA {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             // kalau relasinya lebih dari sama dengan
-                            if ((this.N.relation[i] == 3) && (this.E[j].age >= this.E[k].age)) {
+                            if ((this.N.relation[i] == 2) && (this.E[j].age >= this.E[k].age)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             break;
                          
                         case 5: // pendidikan
-                            if ((this.N.relation[i] == 2) && (this.E[j].education == this.E[k].education)) {
+                            if ((this.N.relation[i] == 0) && (this.E[j].education == this.E[k].education)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             // kalau relasinya kurang dari sama dengan
@@ -172,12 +172,12 @@ public class CA {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             // kalau relasinya lebih dari sama dengan
-                            if ((this.N.relation[i] == 3) && (this.E[j].education >= this.E[k].education)) {
+                            if ((this.N.relation[i] == 2) && (this.E[j].education >= this.E[k].education)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             break;
                         case 6: // pendapatan
-                            if ((this.N.relation[i] == 2) && (this.E[j].income == this.E[k].income)) {
+                            if ((this.N.relation[i] == 0) && (this.E[j].income == this.E[k].income)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             // kalau relasinya kurang dari sama dengan
@@ -185,7 +185,7 @@ public class CA {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             // kalau relasinya lebih dari sama dengan
-                            if ((this.N.relation[i] == 3) && (this.E[j].income >= this.E[k].income)) {
+                            if ((this.N.relation[i] == 2) && (this.E[j].income >= this.E[k].income)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             break;

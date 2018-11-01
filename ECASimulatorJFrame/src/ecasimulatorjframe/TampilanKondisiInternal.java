@@ -360,6 +360,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
         //double[] bobot = new double[jumlahCheckList];
         boolean checker = true;
         if (umurCBInternal.isSelected()) {
+//            InputDataHandler.jmlChecklist();
             jumlahCheckList += 1;
             if (nilaiUmurInternal.getText().equals("")) {
                 InputDataHandler.inputDataInternal("umurInternal", null);
@@ -371,6 +372,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
         }
 
         if (levelCBInternal.isSelected()) {
+//            InputDataHandler.jmlChecklist();
             jumlahCheckList += 1;
             if (nilaiLevelInternal.getText().equals("")) {
                 InputDataHandler.inputDataInternal("levelInternal", null);
@@ -381,6 +383,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
         }
 
         if (pendidikanCBInternal.isSelected()) {
+//            InputDataHandler.jmlChecklist();
             jumlahCheckList += 1;
             if (nilaiPendidikanInternal.getText().equals("")) {
                 InputDataHandler.inputDataInternal("pendidikanInternal", null);
@@ -391,6 +394,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
         }
 
         if (pendapatanCBInternal.isSelected()) {
+//            InputDataHandler.jmlChecklist();
             jumlahCheckList += 1;
             if (nilaiPendapatanInternal.getText().equals("")) {
                 InputDataHandler.inputDataInternal("pendapatanInternal", null);
@@ -401,6 +405,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
         }
 
         if (jenisKelaminCBInternal.isSelected()) {
+//            InputDataHandler.jmlChecklist();
             jumlahCheckList += 1;
             if (nilaiUmurInternal.getText().equals("")) {
                 InputDataHandler.inputDataInternal("jenisKelaminInternal", null);
@@ -411,6 +416,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
         }
 
         if (lokasiCBInternal.isSelected()) {
+//            InputDataHandler.jmlChecklist();
             jumlahCheckList += 1;
             if (nilaiLokasiInternal.getText().equals("")) {
                 InputDataHandler.inputDataInternal("lokasiInternal", null);
@@ -421,6 +427,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
         }
 
         if (bUsahaCBInternal.isSelected()) {
+//            InputDataHandler.jmlChecklist();
             jumlahCheckList += 1;
             if (nilaiUsahaInternal.getText().equals("")) {
                 InputDataHandler.inputDataInternal("usahaInternal", null);
