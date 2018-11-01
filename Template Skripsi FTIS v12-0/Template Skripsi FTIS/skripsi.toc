@@ -29,6 +29,8 @@
 \contentsline {section}{\numberline {3.4}Analisis Kode Entrepreneur Cellular Automata (ECA)}{29}{section.3.4}
 \contentsline {section}{\numberline {3.5}\textit {Framework} yang Digunakan}{29}{section.3.5}
 \contentsline {section}{\numberline {3.6}Analisis Perangkat Lunak}{30}{section.3.6}
-\contentsline {chapter}{Daftar Referensi}{31}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Kode Program}{33}{appendix.A}
-\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{35}{appendix.B}
+\contentsline {chapter}{\numberline {4}Perancangan}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Perancangan Kelas}{31}{section.4.1}
+\contentsline {chapter}{Daftar Referensi}{33}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Kode Program}{35}{appendix.A}
+\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{37}{appendix.B}
