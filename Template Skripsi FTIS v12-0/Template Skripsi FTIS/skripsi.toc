@@ -26,11 +26,13 @@
 \contentsline {subsection}{\numberline {3.2.1}Analisis Ruang Sel}{22}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Analisis Fungsi Transisi}{22}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Analisis Model Pertumbuhan Wirausaha dengan Cellular Automata}{23}{section.3.3}
-\contentsline {section}{\numberline {3.4}Analisis Kode Entrepreneur Cellular Automata (ECA)}{29}{section.3.4}
-\contentsline {section}{\numberline {3.5}\textit {Framework} yang Digunakan}{29}{section.3.5}
-\contentsline {section}{\numberline {3.6}Analisis Perangkat Lunak}{30}{section.3.6}
+\contentsline {section}{\numberline {3.4}\textit {Framework} yang Digunakan}{29}{section.3.4}
+\contentsline {section}{\numberline {3.5}Analisis Perangkat Lunak}{29}{section.3.5}
 \contentsline {chapter}{\numberline {4}Perancangan}{31}{chapter.4}
 \contentsline {section}{\numberline {4.1}Perancangan Kelas}{31}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Kelas TampilanKondisiInternal}{32}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Kelas TampilanKondisiKetetanggaan}{32}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Kelas InputDataHandler}{32}{subsection.4.1.3}
 \contentsline {chapter}{Daftar Referensi}{33}{chapter*.5}
 \contentsline {chapter}{\numberline {A}Kode Program}{35}{appendix.A}
 \contentsline {chapter}{\numberline {B}Hasil Eksperimen}{37}{appendix.B}
