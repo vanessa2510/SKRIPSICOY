@@ -256,10 +256,10 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                         c = Double.parseDouble(nilaiC.getText());
                         if (!nilaiPeriode.getText().equals("")) {
                             InputDataHandler.inputDataSimulasi("periode", nilaiPeriode.getText());
-                           // System.out.println(nilaiPeriode.getText());
+                            // System.out.println(nilaiPeriode.getText());
                             if (!nilaiThreshold.getText().equals("")) {
                                 InputDataHandler.inputDataSimulasi("threshold", nilaiThreshold.getText());
-                               // System.out.println(nilaiThreshold.getText());
+                                // System.out.println(nilaiThreshold.getText());
                             }
                         }
                     }
@@ -286,11 +286,11 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         double[] POAm = new double[]{8.3, 14.5, 26.7, 36.2, 14.3}; // male
 
         // Perceived Opportunities Education
-        double[] POEf = new double[]{1.8 , 17.4, 23.4, 49.8, 7.4, 0.1}; // 0.1, 7.4, 49.8, 23.4, 17.4, 1.8 
-        double[] POEm = new double[]{0.7 , 11.8 , 19.9, 54.7, 12.6, 0.3};// 0.3, 12.6, 54.7, 19.9, 11.8, 0.7
+        double[] POEf = new double[]{1.8, 17.4, 23.4, 49.8, 7.4, 0.1}; // 0.1, 7.4, 49.8, 23.4, 17.4, 1.8 
+        double[] POEm = new double[]{0.7, 11.8, 19.9, 54.7, 12.6, 0.3};// 0.3, 12.6, 54.7, 19.9, 11.8, 0.7
 
         // Perceived Opportunities Location
-        double[] POLf = new double[]{ 0.3, 6.4, 4.8, 2.8, 1.4, 3.5, 1.7, 46.3, 9.6, 6.1, 9.5, 2.5, 1.1, 1.0, 0.6, 2.4 }; //  2.4, 0.6, 1.0, 1.1, 2.5, 9.5, 6.1, 9.6, 46.3, 1.7, 3.5, 1.4, 2.8, 4.8, 6.4, 0.3
+        double[] POLf = new double[]{0.3, 6.4, 4.8, 2.8, 1.4, 3.5, 1.7, 46.3, 9.6, 6.1, 9.5, 2.5, 1.1, 1.0, 0.6, 2.4}; //  2.4, 0.6, 1.0, 1.1, 2.5, 9.5, 6.1, 9.6, 46.3, 1.7, 3.5, 1.4, 2.8, 4.8, 6.4, 0.3
         double[] POLm = new double[]{0.5, 4.4, 4.5, 2.3, 1.9, 3.8, 2.1, 47.6, 11.1, 6.3, 8.4, 2.7, 0.9, 1.1, 0.5, 2.0}; //      2.0, 0.5, 1.1, 0.9, 2.7, 8.4, 6.3, 11.1, 47.6, 2.1, 3.8, 1.9, 2.3, 4.5, 4.4, 0.5
 
         // Perceived Opportunities Income
@@ -299,30 +299,74 @@ public class TampilanSimulasi extends javax.swing.JFrame {
 
         // Perceived Capabilities Age
         double[] PCAf = new double[]{8.9, 16.1, 28.2, 31.6, 15.1}; //    
-        double[] PCAm = new double[]{ 8.5, 17.3, 26.1, 33.4, 14.7}; //   
+        double[] PCAm = new double[]{8.5, 17.3, 26.1, 33.4, 14.7}; //   
 
         // Perceived Capabilities Education
         double[] PCEf = new double[]{1.7, 15.4, 22.8, 51.5, 8.2, 0.4}; //   0.4, 8.2, 51.5, 22.8, 15.4, 1.7
-        double[] PCEm = new double[]{ 0.9, 12.4, 17.4, 56.9, 12.0, 0.5}; //  0.5, 12.0, 56.9, 17.4, 12.4, 0.9
+        double[] PCEm = new double[]{0.9, 12.4, 17.4, 56.9, 12.0, 0.5}; //  0.5, 12.0, 56.9, 17.4, 12.4, 0.9
 
         // Perceived Capabilities Income
-        double[] PCIf = new double[]{41.4, 43.0, 10.2, 3.1, 1.4, 0.2, 0.2, 0.4 }; //    0.4, 0.2, 0.2, 1.4, 3.1, 10.2, 43.0, 41.4
+        double[] PCIf = new double[]{41.4, 43.0, 10.2, 3.1, 1.4, 0.2, 0.2, 0.4}; //    0.4, 0.2, 0.2, 1.4, 3.1, 10.2, 43.0, 41.4
         double[] PCIm = new double[]{42.9, 42.1, 10.5, 3.1, 0.8, 0.3, 0.2, 0.2};//    0.2, 0.2, 0.3, 0.8, 3.1, 10.5, 42.1, 42.9
 
         // Perceived Capabilities Location
-        double[] PCLf = new double[]{0.4, 7.5, 3.9, 2.4, 2.0, 3.2, 1.6, 41.1, 10.8, 6.9, 9.0, 3.7,1.2, 1.0, 0.8, 4.4}; //    4.4, 0.8, 1.0, 1.2, 3.7, 9.0, 6.9, 10.8, 41.1, 1.6, 3.2, 2.0, 2.4, 3.9, 7.5, 0.4
-        double[] PCLm = new double[]{ 0.7, 5.4, 3.4, 2.6, 3.0, 3.8, 1.8, 41.1, 11.5, 7.2, 8.7, 3.5, 1.2, 0.9, 0.7, 4.3}; //   4.3, 0.7, 0.9, 1.2, 3.5, 8.7, 7.2, 11.5, 41.1, 1.8, 3.8, 3.0, 2.6, 3.4, 5.4, 0.7
+        double[] PCLf = new double[]{0.4, 7.5, 3.9, 2.4, 2.0, 3.2, 1.6, 41.1, 10.8, 6.9, 9.0, 3.7, 1.2, 1.0, 0.8, 4.4}; //    4.4, 0.8, 1.0, 1.2, 3.7, 9.0, 6.9, 10.8, 41.1, 1.6, 3.2, 2.0, 2.4, 3.9, 7.5, 0.4
+        double[] PCLm = new double[]{0.7, 5.4, 3.4, 2.6, 3.0, 3.8, 1.8, 41.1, 11.5, 7.2, 8.7, 3.5, 1.2, 0.9, 0.7, 4.3}; //   4.3, 0.7, 0.9, 1.2, 3.5, 8.7, 7.2, 11.5, 41.1, 1.8, 3.8, 3.0, 2.6, 3.4, 5.4, 0.7
 
         // Role Model Age
         double[] RMAf = new double[]{7.5, 17.6, 26.8, 31.0, 17.1}; //   
-        double[] RMAm = new double[]{ 9.1, 16.9, 25.3, 34.4, 14.3}; //  
+        double[] RMAm = new double[]{9.1, 16.9, 25.3, 34.4, 14.3}; //  
 
         // Role Model Income
         double[] RMIf = new double[]{43.1, 41.8, 9.7, 3.0, 1.6, 0.4, 0.1, 0.4}; //   0.4, 0.1, 0.4, 1.6, 3.0, 9.7, 41.8, 43.1
         double[] RMIm = new double[]{42.9, 42.1, 10.4, 3.0, 0.7, 0.2, 0.5, 0.2};//   0.2, 0.5, 0.2, 0.7, 3.0, 10.4, 42.1, 42.9
 
+        // Fear of Failuer Age
+        double[] FFAf = new double[]{8.2, 16.4, 23.5, 32.4, 19.5};
+        double[] FFAm = new double[]{7.2, 14.3, 23.6, 36.4, 18.6};
+
+        // Fear of Failure Education
+        double[] FFEf = new double[]{2.3, 13.9, 22.9, 51.7, 8.7, 0.5};
+        double[] FFEm = new double[]{0.7, 12.1, 18.4, 57.4, 11.3, 0};
+
+        // Fear of Failure Location
+        double[] FFLf = new double[]{0.7, 10.3, 3.4, 3.8, 3.1, 4.2, 2.5, 36.9, 2.6, 7.8, 12.1, 4.6, 1.9, 1.0, 0.4, 4.8};
+        double[] FFLm = new double[]{0.7, 8.9, 3.4, 2.4, 4.2, 5.4, 2.9, 35.4, 1.8, 7.1, 13.2, 4.7, 2.2, 1.0, 0.5, 6.1};
+
+        // Media Attention Location
+        double[] MALf = new double[]{0.7, 9.9, 3.6, 3.5, 5.4, 4.1, 1.9, 41.1, 6.3, 9.1, 4.7, 2.9, 1.1, 1.0, 0.7, 4.0};
+        double[] MALm = new double[]{0.9, 8.1, 3.4, 3.6, 4.7, 4.9, 1.9, 41.8, 6.5, 8.2, 5.8, 2.9, 1.3, 1.1, 0.7, 4.1};
+
+        // Media Attention Income
+        double[] MAIf = new double[]{44.4, 41.6, 9.1, 2.7, 1.4, 0.2, 0.2, 0.4};
+        double[] MAIm = new double[]{44.0, 40.0, 11.4, 3.1, 0.6, 0.2, 0.4, 0.2};
+
+        // Personal Desirability Education
+        double[] PDEf = new double[]{1.7, 16.2, 23.6, 51.0, 7.1, 0.3};
+        double[] PDEm = new double[]{0.9, 12.7, 20.2, 55.7, 10.3, 0.2};
+
+        // Personal Desirability Location
+        double[] PDLf = new double[]{0.5, 9.6, 3.5, 2.5, 4.7, 4.2, 1.2, 34.7, 10.3, 7.4, 11.9, 3.1, 0.9, 0.8, 0.8, 3.8};
+        double[] PFLm = new double[]{0.7, 7.1, 3.5, 2.4, 4.3, 4.3, 1.4, 38.5, 10.2, 6.5, 11.2, 3.0, 1.0, 0.9, 0.9, 4.2};
+
+        // High Status Successful Income
+        double[] HSSIf = new double[]{45.6, 41.7, 8.5, 2.2, 1.2, 0.3, 0.1, 0.3};
+        double[] HSSIm = new double[]{46.2, 39.5, 10.2, 2.8, 0.6, 0.2, 0.4, 0.2};
+
+        //High Status Successful Location
+        double[] HSSLf = new double[]{0.7, 9.0, 2.7, 2.6, 5.4, 4.5, 1.8, 35.0, 9.8, 8.3, 10.8, 2.8, 1.5, 1.0, 0.8, 3.4};
+        double[] HSSLm = new double[]{0.8, 7.2, 2.3, 3.2, 4.8, 4.5, 2.2, 37.0, 10.2, 7.6, 10.7, 2.9, 1.6, 1.1, 0.8, 3.1};
+
+        // High Status Successful Age
+        double[] HSSAf = new double[]{10, 17, 26, 31, 17};
+        double[] HSSAm = new double[]{9, 16, 25, 33, 16};
+
+        // High Status Successful Education
+        double[] HSSEf = new double[]{2, 15, 23, 52, 8, 0};
+        double[] HSSEm = new double[]{1, 12, 19, 56, 11, 0};
+
         // Faktor Publik
-        double[] pfs = new double[]{2.53, 3.92, 3.29, 3.45};
+        double[] pfs = new double[]{3.06, 2.69, 2.22, 2.53, 2.54, 3.3, 2.31, 3.25, 3.92, 2.82, 3.45, 3.29, 3.45};
         double[] pfw = InputDataHandler.getDataEksternal();
 
         double[] nw = InputDataHandler.getBobot();
@@ -334,24 +378,25 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         ca.N.setWeight(nw);
         ca.N.setRelation(nr);
 
-        int maxIter = 100;
+        int maxIter = 100; // masukan periode
         for (int i = 0; i < maxIter; i++) {
             ca.NeighborhoodDefinition();
-             int periode = Integer.parseInt(InputDataHandler.getValue("periode"));
+            int periode = Integer.parseInt(InputDataHandler.getValue("periode"));
             if (i % periode == 0) {
-                //ca.print(i, null);
-                ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf);
-                // System.out.println(ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf));
-                Entrepreneurs[] nE;
-                nE = ca.stateTransition(ca, composition);
-                for (int j = 0; j < nE.length; j++) {
-                    System.out.println(nE[j].toString2());
-                }
-                ca.E = nE;
-//                System.out.println(nE);
+                ca.print(i, null);
             }
+            ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf);
+            // System.out.println(ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf));
+            Entrepreneurs[] nE;
+            nE = ca.stateTransition(ca, composition);
+            for (int j = 0; j < nE.length; j++) {
+                System.out.println(nE[j].toString2());
+            }
+            ca.E = nE;
+//                System.out.println(nE);
+
         }
-        
+
     }//GEN-LAST:event_simulateButtonMouseClicked
 
     /**

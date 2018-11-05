@@ -24,7 +24,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
      * Creates new form TampilanSimulasi
      */
     CA ca;
-    private BufferedReader br;
+    public BufferedReader br;
     private final JFileChooser openFileChooser;
 
     public TampilanDataWirausaha() {

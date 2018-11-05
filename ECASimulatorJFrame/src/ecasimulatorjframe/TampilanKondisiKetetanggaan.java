@@ -93,25 +93,25 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jUmur = new javax.swing.JPanel();
-        umurCBNeg = new javax.swing.JCheckBox();
         umurKrgDr = new javax.swing.JRadioButton();
         umurSmDgn = new javax.swing.JRadioButton();
         umurLbhDr = new javax.swing.JRadioButton();
+        jLabel4 = new javax.swing.JLabel();
         jLevel = new javax.swing.JPanel();
-        levelCBNeg = new javax.swing.JCheckBox();
         levelKrgDr = new javax.swing.JRadioButton();
         levelSmDgn = new javax.swing.JRadioButton();
         levelLbhDr = new javax.swing.JRadioButton();
+        jLabel5 = new javax.swing.JLabel();
         jPendidikan = new javax.swing.JPanel();
-        pendidikanCBNeg = new javax.swing.JCheckBox();
         pendidikanKrgDr = new javax.swing.JRadioButton();
         pendidikanSmDgn = new javax.swing.JRadioButton();
         pendidikanLbhDr = new javax.swing.JRadioButton();
+        jLabel6 = new javax.swing.JLabel();
         jPendapatan = new javax.swing.JPanel();
-        pendapatanCBNeg = new javax.swing.JCheckBox();
         pendapatanKrgDr = new javax.swing.JRadioButton();
         pendapatanSmDgn = new javax.swing.JRadioButton();
         pendapatanLbhDr = new javax.swing.JRadioButton();
+        jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jJenisKelamin = new javax.swing.JPanel();
         jenisKelaminCBNeg = new javax.swing.JCheckBox();
@@ -139,23 +139,13 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
         jUmur.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        umurCBNeg.setText("UMUR");
-        umurCBNeg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                umurCBNegMouseClicked(evt);
-            }
-        });
-        umurCBNeg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                umurCBNegActionPerformed(evt);
-            }
-        });
-
         umurKrgDr.setText("<=");
 
         umurSmDgn.setText("=");
 
         umurLbhDr.setText(">=");
+
+        jLabel4.setText("UMUR");
 
         javax.swing.GroupLayout jUmurLayout = new javax.swing.GroupLayout(jUmur);
         jUmur.setLayout(jUmurLayout);
@@ -163,7 +153,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             jUmurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jUmurLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(umurCBNeg)
+                .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(umurKrgDr)
                 .addGap(26, 26, 26)
@@ -177,26 +167,14 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             .addGroup(jUmurLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jUmurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(umurCBNeg)
                     .addComponent(umurKrgDr)
                     .addComponent(umurSmDgn)
-                    .addComponent(umurLbhDr))
+                    .addComponent(umurLbhDr)
+                    .addComponent(jLabel4))
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
         jLevel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        levelCBNeg.setText("LEVEL");
-        levelCBNeg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                levelCBNegMouseClicked(evt);
-            }
-        });
-        levelCBNeg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                levelCBNegActionPerformed(evt);
-            }
-        });
 
         levelKrgDr.setText("<=");
 
@@ -214,13 +192,15 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setText("LEVEL");
+
         javax.swing.GroupLayout jLevelLayout = new javax.swing.GroupLayout(jLevel);
         jLevel.setLayout(jLevelLayout);
         jLevelLayout.setHorizontalGroup(
             jLevelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLevelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(levelCBNeg)
+                .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(levelKrgDr)
                 .addGap(26, 26, 26)
@@ -232,28 +212,16 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         jLevelLayout.setVerticalGroup(
             jLevelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLevelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(11, Short.MAX_VALUE)
                 .addGroup(jLevelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(levelCBNeg)
                     .addComponent(levelKrgDr)
                     .addComponent(levelSmDgn)
-                    .addComponent(levelLbhDr))
+                    .addComponent(levelLbhDr)
+                    .addComponent(jLabel5))
                 .addContainerGap())
         );
 
         jPendidikan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        pendidikanCBNeg.setText("PENDIDIKAN");
-        pendidikanCBNeg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pendidikanCBNegMouseClicked(evt);
-            }
-        });
-        pendidikanCBNeg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pendidikanCBNegActionPerformed(evt);
-            }
-        });
 
         pendidikanKrgDr.setText("<=");
 
@@ -261,14 +229,16 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
         pendidikanLbhDr.setText(">=");
 
+        jLabel6.setText("PENDIDIKAN");
+
         javax.swing.GroupLayout jPendidikanLayout = new javax.swing.GroupLayout(jPendidikan);
         jPendidikan.setLayout(jPendidikanLayout);
         jPendidikanLayout.setHorizontalGroup(
             jPendidikanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPendidikanLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pendidikanCBNeg)
-                .addGap(95, 95, 95)
+                .addComponent(jLabel6)
+                .addGap(144, 144, 144)
                 .addComponent(pendidikanKrgDr)
                 .addGap(27, 27, 27)
                 .addComponent(pendidikanSmDgn)
@@ -281,26 +251,14 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             .addGroup(jPendidikanLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPendidikanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pendidikanCBNeg)
                     .addComponent(pendidikanKrgDr)
                     .addComponent(pendidikanSmDgn)
-                    .addComponent(pendidikanLbhDr))
+                    .addComponent(pendidikanLbhDr)
+                    .addComponent(jLabel6))
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
         jPendapatan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        pendapatanCBNeg.setText("PENDAPATAN");
-        pendapatanCBNeg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pendapatanCBNegMouseClicked(evt);
-            }
-        });
-        pendapatanCBNeg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pendapatanCBNegActionPerformed(evt);
-            }
-        });
 
         pendapatanKrgDr.setText("<=");
 
@@ -308,30 +266,31 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
         pendapatanLbhDr.setText(">=");
 
+        jLabel7.setText("PENDAPATAN");
+
         javax.swing.GroupLayout jPendapatanLayout = new javax.swing.GroupLayout(jPendapatan);
         jPendapatan.setLayout(jPendapatanLayout);
         jPendapatanLayout.setHorizontalGroup(
             jPendapatanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPendapatanLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pendapatanCBNeg)
-                .addGap(92, 92, 92)
+                .addComponent(jLabel7)
+                .addGap(145, 145, 145)
                 .addComponent(pendapatanKrgDr)
                 .addGap(27, 27, 27)
                 .addComponent(pendapatanSmDgn)
                 .addGap(18, 18, 18)
-                .addComponent(pendapatanLbhDr)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pendapatanLbhDr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPendapatanLayout.setVerticalGroup(
             jPendapatanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPendapatanLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(11, Short.MAX_VALUE)
                 .addGroup(jPendapatanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pendapatanCBNeg)
                     .addComponent(pendapatanKrgDr)
                     .addComponent(pendapatanSmDgn)
-                    .addComponent(pendapatanLbhDr))
+                    .addComponent(pendapatanLbhDr)
+                    .addComponent(jLabel7))
                 .addContainerGap())
         );
 
@@ -373,7 +332,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             .addGroup(jbidangUsahaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(bidangUsahaCBNeg)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(282, Short.MAX_VALUE))
         );
         jbidangUsahaLayout.setVerticalGroup(
             jbidangUsahaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -483,14 +442,13 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jPendapatan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jUmur, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLevel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPendidikan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel3)
-                                .addComponent(jPendapatan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addComponent(jPendidikan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -575,8 +533,8 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(31, Short.MAX_VALUE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -590,10 +548,6 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void levelCBNegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_levelCBNegActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_levelCBNegActionPerformed
 
     private void levelLbhDrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_levelLbhDrActionPerformed
         // TODO add your handling code here:
@@ -610,30 +564,6 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_nextButtonActionPerformed
-
-    private void umurCBNegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_umurCBNegActionPerformed
-        // TODO add your handling code here:
-        ButtonGroup group = new ButtonGroup();
-        group.add(umurKrgDr);
-        group.add(umurSmDgn);
-        group.add(umurLbhDr);
-    }//GEN-LAST:event_umurCBNegActionPerformed
-
-    private void pendidikanCBNegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pendidikanCBNegActionPerformed
-        // TODO add your handling code here:
-        ButtonGroup group = new ButtonGroup();
-        group.add(pendidikanKrgDr);
-        group.add(pendidikanSmDgn);
-        group.add(pendidikanLbhDr);
-    }//GEN-LAST:event_pendidikanCBNegActionPerformed
-
-    private void pendapatanCBNegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pendapatanCBNegActionPerformed
-        // TODO add your handling code here:
-        ButtonGroup group = new ButtonGroup();
-        group.add(pendapatanKrgDr);
-        group.add(pendapatanSmDgn);
-        group.add(pendapatanLbhDr);
-    }//GEN-LAST:event_pendapatanCBNegActionPerformed
 
     private void levelSmDgnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_levelSmDgnActionPerformed
         // TODO add your handling code here:
@@ -655,54 +585,6 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_lokasiCBNegActionPerformed
 
-    private void umurCBNegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_umurCBNegMouseClicked
-        if (umurCBNeg.isSelected()) {
-            umurKrgDr.setEnabled(true);
-            umurSmDgn.setEnabled(true);
-            umurLbhDr.setEnabled(true);
-        } else {
-            umurKrgDr.setEnabled(false);
-            umurSmDgn.setEnabled(false);
-            umurLbhDr.setEnabled(false);
-        }
-    }//GEN-LAST:event_umurCBNegMouseClicked
-
-    private void levelCBNegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_levelCBNegMouseClicked
-        if (levelCBNeg.isSelected()) {
-            levelKrgDr.setEnabled(true);
-            levelSmDgn.setEnabled(true);
-            levelLbhDr.setEnabled(true);
-        } else {
-            levelKrgDr.setEnabled(false);
-            levelSmDgn.setEnabled(false);
-            levelLbhDr.setEnabled(false);
-        }
-    }//GEN-LAST:event_levelCBNegMouseClicked
-
-    private void pendidikanCBNegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pendidikanCBNegMouseClicked
-        if (pendidikanCBNeg.isSelected()) {
-            pendidikanKrgDr.setEnabled(true);
-            pendidikanSmDgn.setEnabled(true);
-            pendidikanLbhDr.setEnabled(true);
-        } else {
-            pendidikanKrgDr.setEnabled(false);
-            pendidikanSmDgn.setEnabled(false);
-            pendidikanLbhDr.setEnabled(false);
-        }
-    }//GEN-LAST:event_pendidikanCBNegMouseClicked
-
-    private void pendapatanCBNegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pendapatanCBNegMouseClicked
-        if (pendapatanCBNeg.isSelected()) {
-            pendapatanKrgDr.setEnabled(true);
-            pendapatanSmDgn.setEnabled(true);
-            pendapatanLbhDr.setEnabled(true);
-        } else {
-            pendapatanKrgDr.setEnabled(false);
-            pendapatanSmDgn.setEnabled(false);
-            pendapatanLbhDr.setEnabled(false);
-        }
-    }//GEN-LAST:event_pendapatanCBNegMouseClicked
-
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
         boolean checker = true;
         String nilaiRB = "";
@@ -713,249 +595,158 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         // set relasi 1 kalau kurang dari sama dengan
         // set relasi 2 kalau sama dengan
         // set relasi 3 kalau lebih dari sama dengan
-        if (umurCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist();
-        }
-        if (levelCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist();
-        }
-        if (pendapatanCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist();
-        }
-        if (pendidikanCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist();
-        }
-        if (jenisKelaminCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist();
-        }
-        if (lokasiCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist();
-        }
-        if (bidangUsahaCBNeg.isSelected()) {
-            InputDataHandler.jmlChecklist();
-        }
-
+//        if (umurCBNeg.isSelected()) {
+//            InputDataHandler.jmlChecklist();
+//        }
+//        if (levelCBNeg.isSelected()) {
+//            InputDataHandler.jmlChecklist();
+//        }
+//        if (pendapatanCBNeg.isSelected()) {
+//            InputDataHandler.jmlChecklist();
+//        }
+//        if (pendidikanCBNeg.isSelected()) {
+//            InputDataHandler.jmlChecklist();
+//        }
+//        if (jenisKelaminCBNeg.isSelected()) {
+//            InputDataHandler.jmlChecklist();
+//        }
+//        if (lokasiCBNeg.isSelected()) {
+//            InputDataHandler.jmlChecklist();
+//        }
+//        if (bidangUsahaCBNeg.isSelected()) {
+//            InputDataHandler.jmlChecklist();
+//        }
         int n = 0;
         //System.out.println(InputDataHandler.getKetetanggaan());
         int[] kumpulanNilaiRelasi = new int[InputDataHandler.getKetetanggaan()];
         //umur
-        if (umurCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-            //System.out.println(jmlCheckList);
-            // kalo radio button umurKrgDr ga diisi, check umurSmDgn
-            if (!umurKrgDr.isSelected()) {
-                checker = false;
-                // kalo radio button umurSmDgn ga diisi, check umurLbhDr
-                if (!umurSmDgn.isSelected()) {
-                    checker = false;
-                    // kalo radio button umurLbhDr ga diisi, checker = false
-                    if (!umurLbhDr.isSelected()) {
-                        checker = false;
-                    } // kalo radio button umurLbhDr diisi lsg dimasukin datanya ke data handler
-                    else {
-                        InputDataHandler.inputDataKetetanggaan("umurLbhDr", umurLbhDr.getText());
-                        nilaiRB = InputDataHandler.getValue("umurLbhDr");
-                        if (nilaiRB.equals(">=")) {
-                            nilaiRB = "2";
-                        }
-                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-                        n++;
-                        // System.out.println(kumpulanNilaiRelasi[0]);
-                        checker = true;
-                    }
-                } // kalo radio button umurSmDgn diisi, lsg masukin datanya ke data handler
-                else {
-                    InputDataHandler.inputDataKetetanggaan("umurSmDgn", umurSmDgn.getText());
-                    nilaiRB = InputDataHandler.getValue("umurSmDgn");
-                    if (nilaiRB.equals("=")) {
-                        nilaiRB = "0";
-                    }
-                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-                    n++;
-                    // System.out.println(kumpulanNilaiRelasi[0]);
-                    checker = true;
-                }
-            } // kalo radio button umurKrgDr diisi lsg true n nilainya dimasukin ke data handler
-            else {
-                InputDataHandler.inputDataKetetanggaan("umurKurangDari", umurKrgDr.getText());
-                nilaiRB = InputDataHandler.getValue("umurKurangDari");
-                if (nilaiRB.equals("<=")) {
-                    nilaiRB = "1";
-                }
-                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-                n++;
-                //  System.out.println(kumpulanNilaiRelasi[0]);
-                checker = true;
-            }
-
+        if (umurLbhDr.isSelected()) {
+            
         }
-//            else {
-//            nilaiRB = "0";
-//            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-//            n++;
-//        }
+        InputDataHandler.inputDataKetetanggaan("umurLbhDr", umurLbhDr.getText());
+        nilaiRB = InputDataHandler.getValue("umurLbhDr");
+        if (nilaiRB.equals(">=")) {
+            nilaiRB = "2";
+        }
+        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+        n++;
+        // System.out.println(kumpulanNilaiRelasi[0]);
+        checker = true;
+
+        InputDataHandler.inputDataKetetanggaan("umurSmDgn", umurSmDgn.getText());
+        nilaiRB = InputDataHandler.getValue("umurSmDgn");
+        if (nilaiRB.equals("=")) {
+            nilaiRB = "0";
+        }
+        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+        n++;
+        // System.out.println(kumpulanNilaiRelasi[0]);
+        checker = true;
+
+        InputDataHandler.inputDataKetetanggaan("umurKurangDari", umurKrgDr.getText());
+        nilaiRB = InputDataHandler.getValue("umurKurangDari");
+        if (nilaiRB.equals("<=")) {
+            nilaiRB = "1";
+        }
+        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+        n++;
+        //  System.out.println(kumpulanNilaiRelasi[0]);
+        checker = true;
 
         // level
-        if (levelCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-            // kalo radio button levelKrgDr ga diisi, check levelSmDgn
-            if (!levelKrgDr.isSelected()) {
-                // kalo radio button levelSmDgn ga diisi, check levelLbhDr
-                if (!levelSmDgn.isSelected()) {
-                    // kalo radio button levelLbhDr ga diisi, checker = false
-                    if (!levelLbhDr.isSelected()) {
-                        checker = false;
-                    } // kalo radio button levelLbhDr diisi lsg dimasukin datanya ke data handler
-                    else {
-                        InputDataHandler.inputDataKetetanggaan("levelLbhDr", levelLbhDr.getText());
-                        nilaiRB = InputDataHandler.getValue("levelLbhDr");
-                        if (nilaiRB.equals(">=")) {
-                            nilaiRB = "2";
-                        }
-                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-                        n++;
-                        checker = true;
-                    }
-                } // kalo radio button levelSmDgn diisi, lsg masukin datanya ke data handler
-                else {
-                    InputDataHandler.inputDataKetetanggaan("levelSmDgn", levelSmDgn.getText());
-                    nilaiRB = InputDataHandler.getValue("levelSmDgn");
-                    if (nilaiRB.equals("=")) {
-                        nilaiRB = "0";
-                    }
-                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-                    n++;
-                    checker = true;
-                }
-            } // kalo radio button levelKrgDr diisi lsg true n nilainya dimasukin ke data handler
-            else {
-                InputDataHandler.inputDataKetetanggaan("levelKurangDari", levelKrgDr.getText());
-                nilaiRB = InputDataHandler.getValue("levelKurangDari");
-                if (nilaiRB.equals("<=")) {
-                    nilaiRB = "1";
-                }
-                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-                n++;
-                checker = true;
+        if (levelLbhDr.isSelected()) {
+            InputDataHandler.inputDataKetetanggaan("levelLbhDr", levelLbhDr.getText());
+            nilaiRB = InputDataHandler.getValue("levelLbhDr");
+            if (nilaiRB.equals(">=")) {
+                nilaiRB = "2";
             }
+            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+            n++;
+            checker = true;
         }
-//            else {
-//            nilaiRB = "0";
-//            kumpulanNilaiRelasi[1] = Integer.parseInt(nilaiRB);
-//        }
+        if (levelSmDgn.isSelected()) {
+            InputDataHandler.inputDataKetetanggaan("levelSmDgn", levelSmDgn.getText());
+            nilaiRB = InputDataHandler.getValue("levelSmDgn");
+            if (nilaiRB.equals("=")) {
+                nilaiRB = "0";
+            }
+            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+            n++;
+            checker = true;
+        }
+        if (levelKrgDr.isSelected()) {
+            InputDataHandler.inputDataKetetanggaan("levelKurangDari", levelKrgDr.getText());
+            nilaiRB = InputDataHandler.getValue("levelKurangDari");
+            if (nilaiRB.equals("<=")) {
+                nilaiRB = "1";
+            }
+            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+            n++;
+            checker = true;
+        }
 
         //pendidikan
-        if (pendidikanCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-            // kalo radio button pendidikanKrgDr ga diisi, check pendidikanSmDgn
-            if (!pendidikanKrgDr.isSelected()) {
-                // kalo radio button pendidikanSmDgn ga diisi, check pendidikanLbhDr
-                if (!pendidikanSmDgn.isSelected()) {
-                    // kalo radio button pendidikanLbhDr ga diisi, checker = false
-                    if (!pendidikanLbhDr.isSelected()) {
-                        checker = false;
-                    } // kalo radio button pendidikanLbhDr diisi lsg dimasukin datanya ke data handler
-                    else {
-                        InputDataHandler.inputDataKetetanggaan("pendidikanLbhDr", pendidikanLbhDr.getText());
-                        nilaiRB = InputDataHandler.getValue("pendidikanLbhDr");
-                        if (nilaiRB.equals(">=")) {
-                            nilaiRB = "2";
-                        }
-                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-                        n++;
-                        checker = true;
-                    }
-                } // kalo radio button pendidikanSmDgn diisi, lsg masukin datanya ke data handler
-                else {
-                    InputDataHandler.inputDataKetetanggaan("pendidikanSmDgn", pendidikanSmDgn.getText());
-                    nilaiRB = InputDataHandler.getValue("pendidikanSmDgn");
-                    if (nilaiRB.equals("=")) {
-                        nilaiRB = "0";
-                    }
-                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-                    n++;
-                    checker = true;
-                }
-            } // kalo radio button pendidikanKrgDr diisi lsg true n nilainya dimasukin ke data handler
-            else {
-                InputDataHandler.inputDataKetetanggaan("pendidikanKurangDari", pendidikanKrgDr.getText());
-                nilaiRB = InputDataHandler.getValue("pendidikanKurangDari");
-                if (nilaiRB.equals("<=")) {
-                    nilaiRB = "1";
-                }
-                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-                n++;
-                checker = true;
+        if (pendidikanLbhDr.isSelected()) {
+            InputDataHandler.inputDataKetetanggaan("pendidikanLbhDr", pendidikanLbhDr.getText());
+            nilaiRB = InputDataHandler.getValue("pendidikanLbhDr");
+            if (nilaiRB.equals(">=")) {
+                nilaiRB = "2";
             }
+            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+            n++;
+            checker = true;
         }
-//            else {
-//            nilaiRB = "0";
-//            kumpulanNilaiRelasi[2] = Integer.parseInt(nilaiRB);
-//        }
-
-        //pendapatan
-        if (pendapatanCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-            // kalo radio button pendapatanKrgDr ga diisi, check pendapatanSmDgn
-            if (!pendapatanKrgDr.isSelected()) {
-                // kalo radio button pendapatanSmDgn ga diisi, check pendapatanLbhDr
-                if (!pendapatanSmDgn.isSelected()) {
-                    // kalo radio button pendapatanLbhDr ga diisi, checker = false
-                    if (!pendapatanLbhDr.isSelected()) {
-                        checker = false;
-                    } // kalo radio button pendapatanLbhDr diisi lsg dimasukin datanya ke data handler
-                    else {
-                        InputDataHandler.inputDataKetetanggaan("pendapatanLbhDr", pendapatanLbhDr.getText());
-                        nilaiRB = InputDataHandler.getValue("pendapatanLbhDr");
-                        if (nilaiRB.equals(">=")) {
-                            nilaiRB = "2";
-                        }
-                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-                        n++;
-                        checker = true;
-                    }
-                } // kalo radio button pendapatanSmDgn diisi, lsg masukin datanya ke data handler
-                else {
-                    InputDataHandler.inputDataKetetanggaan("pendapatanSmDgn", pendapatanSmDgn.getText());
-                    nilaiRB = InputDataHandler.getValue("pendapatanSmDgn");
-                    if (nilaiRB.equals("=")) {
-                        nilaiRB = "0";
-                    }
-                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-                    n++;
-                    checker = true;
-                }
-            } // kalo radio button pendapatanKrgDr diisi lsg true n nilainya dimasukin ke data handler
-            else {
-                InputDataHandler.inputDataKetetanggaan("pendapatanKurangDari", pendapatanKrgDr.getText());
-                nilaiRB = InputDataHandler.getValue("pendapatanKurangDari");
-                if (nilaiRB.equals("<=")) {
-                    nilaiRB = "1";
-                }
-                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-                n++;
-                checker = true;
+        if (pendidikanSmDgn.isSelected()) {
+            InputDataHandler.inputDataKetetanggaan("pendidikanSmDgn", pendidikanSmDgn.getText());
+            nilaiRB = InputDataHandler.getValue("pendidikanSmDgn");
+            if (nilaiRB.equals("=")) {
+                nilaiRB = "0";
             }
+            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+            n++;
+            checker = true;
         }
-//        else {
-//            nilaiRB = "0";
-//            kumpulanNilaiRelasi[3] = Integer.parseInt(nilaiRB);
-//        }
+        if (pendidikanKrgDr.isSelected()) {
+            InputDataHandler.inputDataKetetanggaan("pendidikanKurangDari", pendidikanKrgDr.getText());
+            nilaiRB = InputDataHandler.getValue("pendidikanKurangDari");
+            if (nilaiRB.equals("<=")) {
+                nilaiRB = "1";
+            }
+            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+            n++;
+            checker = true;
+        }
 
-        if (jenisKelaminCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-            kumpulanNilaiRelasi[n] = 0;
+        // pendapatan
+        if (pendapatanLbhDr.isSelected()) {
+            InputDataHandler.inputDataKetetanggaan("pendapatanLbhDr", pendapatanLbhDr.getText());
+            nilaiRB = InputDataHandler.getValue("pendapatanLbhDr");
+            if (nilaiRB.equals(">=")) {
+                nilaiRB = "2";
+            }
+            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
             n++;
+            checker = true;
         }
-        if (lokasiCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-            kumpulanNilaiRelasi[n] = 0;
+        if (pendapatanSmDgn.isSelected()) {
+            InputDataHandler.inputDataKetetanggaan("pendapatanSmDgn", pendapatanSmDgn.getText());
+            nilaiRB = InputDataHandler.getValue("pendapatanSmDgn");
+            if (nilaiRB.equals("=")) {
+                nilaiRB = "0";
+            }
+            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
             n++;
+            checker = true;
         }
-        if (bidangUsahaCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-            kumpulanNilaiRelasi[n] = 0;
+        if (pendapatanKrgDr.isSelected()) {
+            InputDataHandler.inputDataKetetanggaan("pendapatanKurangDari", pendapatanKrgDr.getText());
+            nilaiRB = InputDataHandler.getValue("pendapatanKurangDari");
+            if (nilaiRB.equals("<=")) {
+                nilaiRB = "1";
+            }
+            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
             n++;
+            checker = true;
         }
 
         InputDataHandler.setRelation(kumpulanNilaiRelasi);
@@ -1016,6 +807,10 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jLevel;
     private javax.swing.JPanel jLokasi;
     private javax.swing.JPanel jPanel1;
@@ -1027,13 +822,11 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
     private javax.swing.JPanel jUmur;
     private javax.swing.JPanel jbidangUsaha;
     private javax.swing.JCheckBox jenisKelaminCBNeg;
-    private javax.swing.JCheckBox levelCBNeg;
     private javax.swing.JRadioButton levelKrgDr;
     private javax.swing.JRadioButton levelLbhDr;
     private javax.swing.JRadioButton levelSmDgn;
     private javax.swing.JCheckBox lokasiCBNeg;
     public javax.swing.JButton nextButton;
-    private javax.swing.JCheckBox pendapatanCBNeg;
     private javax.swing.JCheckBox pendapatanCBNeg2;
     private javax.swing.JRadioButton pendapatanKrgDr;
     private javax.swing.JRadioButton pendapatanKrgDr2;
@@ -1041,11 +834,9 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
     private javax.swing.JRadioButton pendapatanLbhDr2;
     private javax.swing.JRadioButton pendapatanSmDgn;
     private javax.swing.JRadioButton pendapatanSmDgn2;
-    private javax.swing.JCheckBox pendidikanCBNeg;
     private javax.swing.JRadioButton pendidikanKrgDr;
     private javax.swing.JRadioButton pendidikanLbhDr;
     private javax.swing.JRadioButton pendidikanSmDgn;
-    private javax.swing.JCheckBox umurCBNeg;
     private javax.swing.JRadioButton umurKrgDr;
     private javax.swing.JRadioButton umurLbhDr;
     private javax.swing.JRadioButton umurSmDgn;
