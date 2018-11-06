@@ -16,8 +16,6 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
     /**
      * Creates new form ECASimulator
      */
-    
-
     public TampilanKondisiInternal() {
         initComponents();
         nilaiUmurInternal.setEnabled(false);
@@ -429,38 +427,59 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
                 InputDataHandler.inputDataInternal("usahaInternal", nilaiUsahaInternal.getText());
             }
         }
+
+        double umur = 0.0;
+        double pendidikan = 0.0;
+        double level = 0.0;
+        double pendapatan = 0.0;
+        double jenisKelamin = 0.0;
+        double lokasi = 0.0;
+        double usaha = 0.0;
+
         double[] kumpulanBobot = new double[InputDataHandler.getKetetanggaan()];
         int m = 0;
-        if (umurCBInternal.isSelected()) {
-            kumpulanBobot[m] = Double.parseDouble(InputDataHandler.getValue("umurInternal"));
+        // kalo umur dichecklist, masukin ke variabel umur
+        if (InputDataHandler.checkKey("umurInternal")) {
+            umur = Double.parseDouble(InputDataHandler.getValue("umurInternal"));
+            kumpulanBobot[m] = umur;
             m++;
         }
-        if (pendidikanCBInternal.isSelected()) {
-            kumpulanBobot[m] = Double.parseDouble(InputDataHandler.getValue("pendidikanInternal"));
+        if (InputDataHandler.checkKey("pendidikanInternal")) {
+            pendidikan = Double.parseDouble(InputDataHandler.getValue("pendidikanInternal"));
+            kumpulanBobot[m] = pendidikan;
             m++;
         }
-        if (levelCBInternal.isSelected()) {
-            kumpulanBobot[m] = Double.parseDouble(InputDataHandler.getValue("levelInternal"));
+        if (InputDataHandler.checkKey("pendapatanInternal")) {
+            pendapatan = Double.parseDouble(InputDataHandler.getValue("pendapatanInternal"));
+            kumpulanBobot[m] = pendapatan;
             m++;
         }
-        if (pendapatanCBInternal.isSelected()) {
-            kumpulanBobot[m] = Double.parseDouble(InputDataHandler.getValue("pendapatanInternal"));
+        if (InputDataHandler.checkKey("levelInternal")) {
+            level = Double.parseDouble(InputDataHandler.getValue("levelInternal"));
+            kumpulanBobot[m] = level;
             m++;
         }
-        if (jenisKelaminCBInternal.isSelected()) {
-            kumpulanBobot[m] = Double.parseDouble(InputDataHandler.getValue("jenisKelaminInternal"));
+        if (InputDataHandler.checkKey("jenisKelaminInternal")) {
+            jenisKelamin = Double.parseDouble(InputDataHandler.getValue("jenisKelaminInternal"));
+            kumpulanBobot[m] = jenisKelamin;
             m++;
         }
-        if (lokasiCBInternal.isSelected()) {
-            kumpulanBobot[m] = Double.parseDouble(InputDataHandler.getValue("lokasiInternal"));
+        if (InputDataHandler.checkKey("lokasiInternal")) {
+            lokasi = Double.parseDouble(InputDataHandler.getValue("lokasiInternal"));
+            kumpulanBobot[m] = lokasi;
             m++;
         }
-        if (bUsahaCBInternal.isSelected()) {
-            kumpulanBobot[m] = Double.parseDouble(InputDataHandler.getValue("usahaInternal"));
+        if (InputDataHandler.checkKey("usahaInternal")) {
+            usaha = Double.parseDouble(InputDataHandler.getValue("usahaInternal"));
+            kumpulanBobot[m] = usaha;
             m++;
         }
-
+        if (umur + pendidikan + pendapatan + level + jenisKelamin + lokasi + usaha != 100.0) {
+            JOptionPane.showMessageDialog(null, "The sum of text fields must 100.0!");
+            checker = false;
+        }
         InputDataHandler.setBobot(kumpulanBobot);
+//        System.out.println(InputDataHandler.getBobot());
         // n.setNumNeighbor(jumlahCheckList);
 
         if (checker == true) {

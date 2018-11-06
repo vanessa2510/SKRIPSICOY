@@ -17,7 +17,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
      * Creates new form TampilanSimulasi
      */
     CA ca;
-
+    TampilanDataWirausaha br;
     public TampilanSimulasi(CA ca) {
         initComponents();
         this.ca = ca;
@@ -341,14 +341,6 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         double[] MAIf = new double[]{44.4, 41.6, 9.1, 2.7, 1.4, 0.2, 0.2, 0.4};
         double[] MAIm = new double[]{44.0, 40.0, 11.4, 3.1, 0.6, 0.2, 0.4, 0.2};
 
-        // Personal Desirability Education
-        double[] PDEf = new double[]{1.7, 16.2, 23.6, 51.0, 7.1, 0.3};
-        double[] PDEm = new double[]{0.9, 12.7, 20.2, 55.7, 10.3, 0.2};
-
-        // Personal Desirability Location
-        double[] PDLf = new double[]{0.5, 9.6, 3.5, 2.5, 4.7, 4.2, 1.2, 34.7, 10.3, 7.4, 11.9, 3.1, 0.9, 0.8, 0.8, 3.8};
-        double[] PFLm = new double[]{0.7, 7.1, 3.5, 2.4, 4.3, 4.3, 1.4, 38.5, 10.2, 6.5, 11.2, 3.0, 1.0, 0.9, 0.9, 4.2};
-
         // High Status Successful Income
         double[] HSSIf = new double[]{45.6, 41.7, 8.5, 2.2, 1.2, 0.3, 0.1, 0.3};
         double[] HSSIm = new double[]{46.2, 39.5, 10.2, 2.8, 0.6, 0.2, 0.4, 0.2};
@@ -378,14 +370,13 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         ca.N.setWeight(nw);
         ca.N.setRelation(nr);
 
-        int maxIter = 100; // masukan periode
+        int maxIter = Integer.parseInt(InputDataHandler.getValue("periode")); // masukan periode
         for (int i = 0; i < maxIter; i++) {
             ca.NeighborhoodDefinition();
-            int periode = Integer.parseInt(InputDataHandler.getValue("periode"));
-            if (i % periode == 0) {
-                ca.print(i, null);
+            if (i % 12 == 0) {
+                ca.print(i);
             }
-            ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf);
+            ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf,FFAf,FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf,HSSIm,HSSLf,HSSLm,HSSAf,HSSAm,HSSEf,HSSEm);
             // System.out.println(ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf));
             Entrepreneurs[] nE;
             nE = ca.stateTransition(ca, composition);

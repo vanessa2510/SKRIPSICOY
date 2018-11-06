@@ -25,19 +25,6 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
     public TampilanKondisiKetetanggaan() {
         initComponents();
 
-        umurKrgDr.setEnabled(false);
-        umurSmDgn.setEnabled(false);
-        umurLbhDr.setEnabled(false);
-        levelKrgDr.setEnabled(false);
-        levelSmDgn.setEnabled(false);
-        levelLbhDr.setEnabled(false);
-        pendidikanKrgDr.setEnabled(false);
-        pendidikanSmDgn.setEnabled(false);
-        pendidikanLbhDr.setEnabled(false);
-        pendapatanKrgDr.setEnabled(false);
-        pendapatanSmDgn.setEnabled(false);
-        pendapatanLbhDr.setEnabled(false);
-
         kumpulanJPanel = new JPanel[]{jUmur, jLevel, jPendidikan, jPendapatan, jJenisKelamin, jLokasi, jbidangUsaha};
         // System.out.println(jUmur.getLocation().getX());
         // System.out.println(jUmur.getLocation().getY());
@@ -591,67 +578,48 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
         double[] bobot = new double[InputDataHandler.getKetetanggaan()];
 
-        // set relasi 0 kalau ga checkboxnya gadipilih
+        // set relasi 0 kalau sama dengan
         // set relasi 1 kalau kurang dari sama dengan
-        // set relasi 2 kalau sama dengan
-        // set relasi 3 kalau lebih dari sama dengan
-//        if (umurCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-//        }
-//        if (levelCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-//        }
-//        if (pendapatanCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-//        }
-//        if (pendidikanCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-//        }
-//        if (jenisKelaminCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-//        }
-//        if (lokasiCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-//        }
-//        if (bidangUsahaCBNeg.isSelected()) {
-//            InputDataHandler.jmlChecklist();
-//        }
+        // set relasi 2 kalau lebih dari sama dengan
         int n = 0;
         //System.out.println(InputDataHandler.getKetetanggaan());
         int[] kumpulanNilaiRelasi = new int[InputDataHandler.getKetetanggaan()];
         //umur
         if (umurLbhDr.isSelected()) {
-            
+            InputDataHandler.inputDataKetetanggaan("umurLbhDr", umurLbhDr.getText());
+            nilaiRB = InputDataHandler.getValue("umurLbhDr");
+            if (nilaiRB.equals(">=")) {
+                nilaiRB = "2";
+            }
+            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+            n++;
+            // System.out.println(kumpulanNilaiRelasi[0]);
+            checker = true;
+        } else {
+            if (umurSmDgn.isSelected()) {
+                InputDataHandler.inputDataKetetanggaan("umurSmDgn", umurSmDgn.getText());
+                nilaiRB = InputDataHandler.getValue("umurSmDgn");
+                if (nilaiRB.equals("=")) {
+                    nilaiRB = "0";
+                }
+                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                n++;
+                // System.out.println(kumpulanNilaiRelasi[0]);
+                checker = true;
+            } else {
+                if (umurKrgDr.isSelected()) {
+                    InputDataHandler.inputDataKetetanggaan("umurKurangDari", umurKrgDr.getText());
+                    nilaiRB = InputDataHandler.getValue("umurKurangDari");
+                    if (nilaiRB.equals("<=")) {
+                        nilaiRB = "1";
+                    }
+                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                    n++;
+                    //  System.out.println(kumpulanNilaiRelasi[0]);
+                    checker = true;
+                }
+            }
         }
-        InputDataHandler.inputDataKetetanggaan("umurLbhDr", umurLbhDr.getText());
-        nilaiRB = InputDataHandler.getValue("umurLbhDr");
-        if (nilaiRB.equals(">=")) {
-            nilaiRB = "2";
-        }
-        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-        n++;
-        // System.out.println(kumpulanNilaiRelasi[0]);
-        checker = true;
-
-        InputDataHandler.inputDataKetetanggaan("umurSmDgn", umurSmDgn.getText());
-        nilaiRB = InputDataHandler.getValue("umurSmDgn");
-        if (nilaiRB.equals("=")) {
-            nilaiRB = "0";
-        }
-        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-        n++;
-        // System.out.println(kumpulanNilaiRelasi[0]);
-        checker = true;
-
-        InputDataHandler.inputDataKetetanggaan("umurKurangDari", umurKrgDr.getText());
-        nilaiRB = InputDataHandler.getValue("umurKurangDari");
-        if (nilaiRB.equals("<=")) {
-            nilaiRB = "1";
-        }
-        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-        n++;
-        //  System.out.println(kumpulanNilaiRelasi[0]);
-        checker = true;
 
         // level
         if (levelLbhDr.isSelected()) {
@@ -663,26 +631,28 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
             n++;
             checker = true;
-        }
-        if (levelSmDgn.isSelected()) {
-            InputDataHandler.inputDataKetetanggaan("levelSmDgn", levelSmDgn.getText());
-            nilaiRB = InputDataHandler.getValue("levelSmDgn");
-            if (nilaiRB.equals("=")) {
-                nilaiRB = "0";
+        } else {
+            if (levelSmDgn.isSelected()) {
+                InputDataHandler.inputDataKetetanggaan("levelSmDgn", levelSmDgn.getText());
+                nilaiRB = InputDataHandler.getValue("levelSmDgn");
+                if (nilaiRB.equals("=")) {
+                    nilaiRB = "0";
+                }
+                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                n++;
+                checker = true;
+            } else {
+                if (levelKrgDr.isSelected()) {
+                    InputDataHandler.inputDataKetetanggaan("levelKurangDari", levelKrgDr.getText());
+                    nilaiRB = InputDataHandler.getValue("levelKurangDari");
+                    if (nilaiRB.equals("<=")) {
+                        nilaiRB = "1";
+                    }
+                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                    n++;
+                    checker = true;
+                }
             }
-            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-            n++;
-            checker = true;
-        }
-        if (levelKrgDr.isSelected()) {
-            InputDataHandler.inputDataKetetanggaan("levelKurangDari", levelKrgDr.getText());
-            nilaiRB = InputDataHandler.getValue("levelKurangDari");
-            if (nilaiRB.equals("<=")) {
-                nilaiRB = "1";
-            }
-            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-            n++;
-            checker = true;
         }
 
         //pendidikan
@@ -695,26 +665,28 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
             n++;
             checker = true;
-        }
-        if (pendidikanSmDgn.isSelected()) {
-            InputDataHandler.inputDataKetetanggaan("pendidikanSmDgn", pendidikanSmDgn.getText());
-            nilaiRB = InputDataHandler.getValue("pendidikanSmDgn");
-            if (nilaiRB.equals("=")) {
-                nilaiRB = "0";
+        } else {
+            if (pendidikanSmDgn.isSelected()) {
+                InputDataHandler.inputDataKetetanggaan("pendidikanSmDgn", pendidikanSmDgn.getText());
+                nilaiRB = InputDataHandler.getValue("pendidikanSmDgn");
+                if (nilaiRB.equals("=")) {
+                    nilaiRB = "0";
+                }
+                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                n++;
+                checker = true;
+            } else {
+                if (pendidikanKrgDr.isSelected()) {
+                    InputDataHandler.inputDataKetetanggaan("pendidikanKurangDari", pendidikanKrgDr.getText());
+                    nilaiRB = InputDataHandler.getValue("pendidikanKurangDari");
+                    if (nilaiRB.equals("<=")) {
+                        nilaiRB = "1";
+                    }
+                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                    n++;
+                    checker = true;
+                }
             }
-            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-            n++;
-            checker = true;
-        }
-        if (pendidikanKrgDr.isSelected()) {
-            InputDataHandler.inputDataKetetanggaan("pendidikanKurangDari", pendidikanKrgDr.getText());
-            nilaiRB = InputDataHandler.getValue("pendidikanKurangDari");
-            if (nilaiRB.equals("<=")) {
-                nilaiRB = "1";
-            }
-            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-            n++;
-            checker = true;
         }
 
         // pendapatan
@@ -727,30 +699,32 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
             n++;
             checker = true;
-        }
-        if (pendapatanSmDgn.isSelected()) {
-            InputDataHandler.inputDataKetetanggaan("pendapatanSmDgn", pendapatanSmDgn.getText());
-            nilaiRB = InputDataHandler.getValue("pendapatanSmDgn");
-            if (nilaiRB.equals("=")) {
-                nilaiRB = "0";
+        } else {
+            if (pendapatanSmDgn.isSelected()) {
+                InputDataHandler.inputDataKetetanggaan("pendapatanSmDgn", pendapatanSmDgn.getText());
+                nilaiRB = InputDataHandler.getValue("pendapatanSmDgn");
+                if (nilaiRB.equals("=")) {
+                    nilaiRB = "0";
+                }
+                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                n++;
+                checker = true;
+            } else {
+                if (pendapatanKrgDr.isSelected()) {
+                    InputDataHandler.inputDataKetetanggaan("pendapatanKurangDari", pendapatanKrgDr.getText());
+                    nilaiRB = InputDataHandler.getValue("pendapatanKurangDari");
+                    if (nilaiRB.equals("<=")) {
+                        nilaiRB = "1";
+                    }
+                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                    n++;
+                    checker = true;
+                }
             }
-            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-            n++;
-            checker = true;
-        }
-        if (pendapatanKrgDr.isSelected()) {
-            InputDataHandler.inputDataKetetanggaan("pendapatanKurangDari", pendapatanKrgDr.getText());
-            nilaiRB = InputDataHandler.getValue("pendapatanKurangDari");
-            if (nilaiRB.equals("<=")) {
-                nilaiRB = "1";
-            }
-            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-            n++;
-            checker = true;
         }
 
         InputDataHandler.setRelation(kumpulanNilaiRelasi);
-        //      System.out.println(InputDataHandler.getRelation());
+              System.out.println(InputDataHandler.getRelation());
 
         if (InputDataHandler.jmlChecklist == 0) {
             checker = false;
