@@ -1,0 +1,97 @@
+%versi 2 (8-10-2016) 
+\chapter{Pendahuluan}
+\label{chap:intro}
+   
+\section{Latar Belakang}
+\label{sec:label}
+
+Pada saat ini, lapangan kerja pada suatu negara tidak bisa kita prediksi, tetapi kenyataan yang kita ketahui adalah lapangan kerja dari tahun ke tahun semakin terbatas \cite{LBwirausaha}. Dengan melihat situasi tersebut maka bisa dipastikan tingkat pengangguran di suatu negara akan semakin tinggi. Solusi terbaik untuk mengurangi permasalahan tersebut adalah dengan berwirausaha. Kewirausahaan adalah kemampuan seseorang untuk membuat suatu usaha yang dimulai dari 0 atau dimulai dari bawah yang dirintis hingga usaha tersebut benar-benar sukses. Tentu saja hal ini memberikan pengaruh positif terhadap pertumbuhan ekonomi suatu negara, karena kewirausahaan juga sekaligus membuka lapangan kerja bagi masyarakat. Jika usaha yang dirintis semakin besar, otomatis perusahaan tersebut akan merekrut tenaga kerja yang semakin banyak lagi. 
+
+ 
+Pada jaman sekarang, sudah banyak sekali orang yang lebih memilih untuk berwirausaha daripada bekerja di kantor atau di sebuah perusahaan. Alasan mengapa banyak orang lebih memilih berwirausaha pun bervariasi contohnya orang tersebut tidak terlalu menyukai waktu kerjanya diatur oleh orang lain melainkan ia lebih menyukai waktu kerjanya diatur oleh dirinya sendiri. Tidak hanya pada jaman sekarang, dari jaman dahulu juga sudah ada wirausaha yang namanya tidak asing lagi didengar oleh telinga kita salah satunya yaitu Bob Sadino. Untuk menjadi wirausaha yang sukses seperti Bob Sadino tidaklah mudah, pasti ada beberapa faktor dari luar maupun dalam yang mempengaruhi keberlangsungan wirausaha. Dalam berwirausaha dibutuhkan usaha yang besar untuk menjadi sukses, usaha tersebut juga harus dijaga kekonsistenannya agar tidak mengalami kebangkrutan.
+
+
+Kewirausahaan sangat diperlukan guna mendorong perekonomian suatu negara karena dapat mengurangi tingkat pengangguran di Indonesia. Secara ekonomis, kewirausahaan akan membantu meningkatkan pendapatan masyarakat atau meningkatkan kesejahteraan melalui penciptaan produk baru, serta mengurangi kemiskinan.  Ideal besarnya populasi wirausaha dalam suatu negara adalah 2\% dari total penduduk suatu negara. Saat ini Indonesia baru mencapai pengusaha dari total penduduk. Maka dari itu, kondisi wirausaha ini perlu dipantau terus-menerus perkembangannya agar dapat memajukan perekonomian di Indonesia. Pemantauan ini dilakukan oleh pemerintah dan lembaga-lembaga swasta yang berkepentingan. Salah satu lembaga yang memantau adalah GEM (Global Entrepreneurship Monitor). GEM merupakan konsorsium yang bertujuan untuk mengukur dan memantau kegiatan kewirausahaan. 
+
+
+GEM mengilustrasikan kewirausahaan menjadi 3 fase \cite{GEM2013}, fase pertama yaitu wirausaha \textit{nascent}, yaitu mereka yang baru memulai suatu usaha (<3 bulan). Fase kedua yaitu pemilik usaha baru (\textit{new business owners}), yaitu wirausaha \textit{nascent} yang sudah menjalani usaha lebih dari tiga bulan tetapi tidak lebih dari tiga setengah tahun. Fase ketiga yaitu wirausaha mapan (\textit{established entrepreneurs}), yaitu wirausaha yang sudah menjalankan sebuah usaha lebih dari tiga setengah tahun.
+
+
+Selain pemantauan terhadap kondisi riil, salah satu kegiatan yang mendukung pemantauan adalah pengamatan secara tidak langsung. Salah satu pengamatan tidak langsung adalah dengan membuat model matematika dari pertumbuhan wirausaha dan kemudian melakukan simulasi terhadap model tersebut. Salah satu model matematika yang dapat digunakan untuk memodelkan pertumbuhan wirausaha adalah Entrepreneurial Cellular Automata (ECA) yang diusulkan oleh Nugraheni dan Natali. ECA adalah pengembangan dari Cellular Automata standar dari Ulam dan New Neuman. Cellular Automata (CA) sendiri merupakan suatu model matematika yang digunakan untuk memodelkan suatu sistem dinamis. Pada \cite{ECA} dijelaskan bagaimana struktur dari ECA dan diberikan illustrasi bagaimana menggunakan ECA untuk memprediksi pertumbuhan wirausaha berdasarkan parameter wirausaha dari GEM. 
+
+
+Dalam hasil penelitian ECA setiap wirausahawan mempunyai beberapa atribut yang bersifat statis maupun dinamis. Contoh atribut yang bersifat statis yaitu bidang usaha, kategori usaha, lokasi geografis dan jenis kelamin. Sementara contoh untuk atribut dinamis adalah usia, level wirausaha dan usia usaha. Diantara atribut dinamis, level wirausaha menjadi atribut penting karena atribut ini yang akan menjadi acuan untuk menentukan perkembangan dari kewirausahaan. \textit{Continuity Index} digunakan untuk menentukan apakah seorang wirausahawan pada suatu saat tertentu akan meneruskan usahanya pada waktu selanjutnya.
+
+
+Skripsi ini bertujuan untuk mengembangkan ECA dengan memperhitungkan beberapa parameter yang belum diperhatikan pada ECA dan mengembangkan perangkat lunak simulator yang dapat menampilkan visualisasi dari simulasi. Selain menambahkan parameter yang berhubungan dengan pertumbuhan wirausaha, pengembangan ini juga akan memperhatikan pertumbuhan penduduk. Di samping itu, simulasi pada data nyata juga perlu dilakukan untuk membuktikan kebenaran dari model yang dibuat.
+
+
+
+
+
+
+
+\section{Rumusan Masalah}
+\label{sec:rumusan}
+Berikut adalah susunan permasalahan yang akan dibahas pada penelitian ini:
+
+
+\begin{enumerate}
+	\item Faktor apa saja yang mempengaruhi keberlangsungan wirausaha?
+	\item Bagaimana memodelkan pertumbuhan wirausaha dengan \textit{cellular automata} ?
+	\item Bagaimana membuat simulator keberlangsungan wirausaha dengan \textit{cellular automata}?
+\end{enumerate}
+
+
+
+\section{Tujuan}
+\label{sec:tujuan}
+Berdasarkan rumusan masalah yang telah dibuat, maka tujuan penelitian ini dijelaskan ke dalam poin-poin sebagai berikut :
+
+
+\begin{enumerate}
+	\item Mempelajari faktor yang berpengaruh pada keberlangsungan wirausaha.
+	\item Memodelkan pertumbuhan wirausaha dengan \textit{cellular automata}.
+	\item Membuat simulator keberlangsungan wirausaha dengan \textit{cellular automata}.
+\end{enumerate}
+
+\section{Batasan Masalah}
+\label{sec:batasan}
+\begin{enumerate}
+	\item Perangkat lunak yang dibuat dijalankan pada komputer.
+	\item Hanya mempelajari perkembangan wirausaha dari GEM.
+	\item Data yang diuji hanya berdasarkan data dari GEM 2013.
+\end{enumerate}
+
+
+\section{Metodologi}
+\label{sec:metlit}
+Langkah-langkah yang akan dijalani untuk menyelesaikan penelitian ini :
+\begin{enumerate}
+	\item Melakukan studi pustaka untuk hal-hal berikut :
+		\begin{enumerate}
+			\item \textit{Cellular Automata} khususnya ECA
+			\item Kewirausahaan khususnya GEM
+		\end{enumerate}
+	\item Menganalisis masalah kewirausahaan untuk mengembangkan model keberlangsungan wirausaha menggunakan \textit{cellular automata}.
+	\item Merancang perangkat lunak berdasarkan hasil pemodelan.
+	\item Mengimplementasikan perangkat lunak sesuai rancangan.
+	\item Menguji perangkat lunak yang dibuat.
+	\item Menulis dokumen skripsi.
+\end{enumerate}
+
+
+\section{Sistematika Pembahasan}
+\label{sec:sispem}
+Setiap bab dalam penelitian ini memiliki sistematika penulisan yang dijelasan ke dalam poin-poin sebagai berikut :
+\begin{enumerate}
+	\item Bab 1: Pendahuluan berisi latar belakang masalah, rumusan masalah, tujuan, batasan masalah, metodologi dan sistematika penulisan.
+	\item Bab 2: Dasar teori yaitu akan membahas mengenai teori-teori yang mendukung berjalannya penulisan ini. Berisi tentang pengertian CA, GEM, ECA dan hal lain yang mendukung implementasi perangkat lunak.
+	\item Bab 3: Analisis, yaitu berisi analisis pemodelan dalam mengembangkan model keberlangsungan wirausaha yang akan dibuat.
+	\item Bab 4: Perancangan, membahas mengenai perancangan yang dilakukan sebelum melakukan tahapan implementasi.
+	\item Bab 5: Implementasi dan Pengujian, pada bab ini berisi hasil implementasi rancangan pemodelan yang telah dibuat yang didasari dasar-dasar teori yang bersangkutan.
+	\item Bab 6: Kesimpulan dan Saran, yaitu membahas hasil kesimpulan dari keseluruhan penelitian ini dan saran-saran yang dapat diberikan untuk penelitian berikutnya.
+\end{enumerate}
+
+
+

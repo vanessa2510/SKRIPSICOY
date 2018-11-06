@@ -1,0 +1,374 @@
+\chapter{Analisis}
+\label{chap:analisis}
+
+
+Pada bab ini akan dilakukan analisis mengenai pembuatan model pertumbuhan wirausaha dengan Cellular Automata. Pembahasan akan dimulai dari analisa pertumbuhan wirausaha di Indonesia yang menjadi pokok permasalahan. Lalu dari analisis ini akan dilanjutkan dengan analisis kebutuhan perangkat lunak agar mampu memodelkan pertumbuhan wirausaha di Indonesia.
+
+\section{Analisis Pertumbuhan Wirausaha}
+\label{sec:analisisPertumbuhanWirausaha}
+
+Seperti yang sudah dijelaskan pada bab \ref{chap:teori} kewirausahaan dalam negara berkembang seperti Indonesia memang sangat diperlukan untuk membantu meningkatkan pertumbuhan ekonomi. GEM melakukan penelitiannya berdasarkan :
+\begin{enumerate}
+	\item Keadaan ekonomi negara,
+	\item Kemampuan dan motivasi individu serta cara pandang masyarakat mengenai wirausaha,
+	\item Pertumbuhan kewirausahaan dan persaingan antar negara tentang seberapa inovatif usaha tersebut.
+\end{enumerate}  
+
+Kewirausahaan menurut GEM merupakan sebuah proses yang memiliki tahapan-tahapan yang berbeda. Tahapan yang pertama yaitu individu yang bisa melihat peluang baik dalam berwirausaha dan memiliki kemampuan untuk berwirausaha (\textit{potential entrepreneur}). Kedua, individu yang sudah menjalankan usahanya dalam waktu kurang dari tiga bulan (\textit{nascent entrepreneur}). Ketiga, individu yang sudah menjalankan usahanya selama lebih dari tiga bulan tetapi tidak lebih dari tiga setengah tahun (\textit{new business manager}). Keempat, individu yang sudah menjalankan usahanya lebih dari tiga setengah tahun (\textit{established entrepreneur}). Penjelasan lebih lanjut dapat dilihat pada gambar \ref{fig:prosesWirausaha}. Digunakan \textit{new\_bm} untuk new business manager dan \textit{est\_bm} untuk established business. 
+
+\begin{figure} [H]
+	\centering  
+	\includegraphics[width=14cm, height=7cm]{tingkatwirausaha} 
+	\label{fig:prosesWirausaha} 
+\end{figure}
+
+
+Dalam pertumbuhan wirausaha tentu ada beberapa faktor yang mempengaruhi keberlangsungan pertumbuhan wirausaha. Secara umum, atribut atau faktor yang mempengaruhi pertumbuhan wirausaha yaitu terbagi menjadi 2 jenis yaitu atribut statis dan dinamis. Atribut dinamis yaitu umur, level wirausaha dan usia usaha. Atribut statis yaitu bidang usaha, kategori usaha, jenis kelamin dan lokasi geografis. Sedangkan atribut secara psikologis menurut GEM yaitu Perceived Opportunities, Perceived Capabilities, Entrepreneurial Intention dan Fear of Failure Rate. 
+
+
+\section{Analisis Pemodelan Cellular Automata}
+\label{analisisCA}
+Pada penelitian ini akan menggunakan cellular automata berbasis graf. Hal ini dikarenakan jumlah wirausaha di Indonesia yang tidak sedikit, sebab jika menggunakan cellular automata satu atau dua dimensi jumlahnya terbatas.
+
+\subsection{Analisis Ruang Sel}
+Ruang sel dalam pemodelan ini berupa individu wirausahawan. Individu wirausahawan memiliki beberapa atribut (umum dan psikologis), masing-masing atribut memiliki nilai yang didapat dari data GEM 2013.
+
+\subsection{Analisis Fungsi Transisi}
+Fungsi transisi dalam penelitian ini ditentukan oleh : 
+\begin{enumerate}
+	\item Atribut Umum
+		\begin{enumerate}
+			\item Umur
+			\item Level Wirausaha
+			\item Bidang Usaha
+			\item Jenis Kelamin
+			\item Pendidikan
+			\item Pendapatan
+			\item Lokasi
+		\end{enumerate}
+	\item Atribut Psikologis
+		 \begin{enumerate}
+			\item Perceived Opportunities
+			\item Perceived Capabilities
+			\item Role Model
+		 \end{enumerate}
+	\item Faktor Publik
+		 \begin{enumerate}
+			\item Program Pemerintah
+			\item Norma, Sosial dan Budaya
+			\item Infrastruktur Fisik dan Akses Layanan
+			\item Dinamika Pasar
+		 \end{enumerate}
+\end{enumerate}
+
+Selain itu, bobot dari masing-masing ketetanggaan juga mempengaruhi perubahan transisi wirausaha. Perubahan transisi dari individu wirausahawan dapat diketahui melalui angka yang disebut Continuity Index (CIdx).
+
+\begin{displaymath}
+\label{RumusCIDx}
+	CIdx_{i}(t) = a.Cint_{i}(t) + b.Cneg_{i}(t) + c.Cpub(t)
+\end{displaymath}
+dimana a,b,c merupakan bilangan riil sedemikian sehingga $0\leq a,b,c \leq 1$ dan $a+b+c=$ 1.0 dan $Cint_{i}(t)$ dan $Cneg_{i}(t)$ melambangkan kondisi internal dan kondisi ketetanggaan dari sebuah individu i pada saat t dan $Cpub(t)$ melambangkan kondisi publik pada saat t nilai dari $CIdx$ dari individu i pada saat t.
+
+CIdx dari seorang wirausahawan ditentukan oleh faktor luar dan dalam. Seorang wirausahawan akan meneruskan usahanya jika CIdx nya memenuhi nilai ambang tersebut. Jika nilai dari Continuity Index sudah sama atau lebih dari nilai ambang, level wirausaha akan berubah. Sebaliknya, jika nilai dari Continuity Index kurang dari sama dengan nilai ambang, level wirausaha bisa saja berubah dan bisa saja tidak berubah.
+
+\section{Analisis Model Pertumbuhan Wirausaha dengan Cellular Automata}
+\label{analisismodelCA}
+
+Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index} dan nilai ambang (\textit{threshold}). Seperti yang sudah dijelaskan pada \ref{chap:teori}, Continuity Index adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu. (Rumus CIDx : \ref{RumusCIDx}).
+
+
+Nilai dari Continuity Index akan dievaluasi terlebih dahulu menggunakan tabel transisi wirausaha (\ref{tabelLW}). Pada tabel \ref{tabelLW} akan dijelaskan mengenai transisi level dengan menggunakan lambang-lambang \textit{CIdx, bl, a ,b} dan \textit{th} untuk menyatakan \textit{Continuity Index, level} , usia individu, usia usaha dan nilai ambang.
+
+
+\begin{table}[H]
+\centering
+\caption{Transisi Level Wirausaha}
+\begin{tabular}{|c|c|}
+\hline
+Waktu sekarang & Waktu berikutnya \\
+\hline
+\textit{bl} = potential, $ \textit{CIdx} < \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = potential \\
+\hline
+\textit{bl} = potential, $\textit{CIdx} \geq \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = nascent \\
+\hline
+\textit{bl} = potential, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
+\hline
+\textit{bl} = nascent, $\textit{CIdx} < \textit{th}, \textit{a} <64 \times 12$ & \textit{bl} = potential \\
+\hline
+\textit{bl} = nascent, $\textit{CIdx} \geq \textit{th}, \textit{b} < 3$ & \textit{bl} = nascent \\
+\hline
+\textit{bl} = nascent, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
+\hline
+\textit{bl} = new\_bm, $\textit{CIdx} < \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = potential \\
+\hline
+\textit{bl} = new\_bm, $\textit{CIdx} \geq \textit{th}, \textit{b} < 42$ & \textit{bl} = potential \\
+\hline
+\textit{bl} = new\_bm, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
+\hline
+\textit{bl} = est\_bm, $\textit{CIdx} < \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = potential \\
+\hline
+\textit{bl} = est\_bm, $\textit{CIdx} \geq \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = est\_bm \\
+\hline
+\textit{bl} = est\_bm, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
+\hline
+\textit{bl} = retired, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
+\hline
+\end{tabular}
+\label{tabelLW}
+\end{table}
+
+
+Untuk mempermudah pemahaman mengenai Continuity Index, akan diberikan contoh simulasi dari data tidak real, yaitu terdapat nilai a = 0.5, b = 0.3 dan c = 0.2 dan nilai ambangnya 10. Nilai dari kondisi internal wirausaha diambil dari Nawangpalupi (Perceived Opportunities = 0.47, Perceived Capabilities = 0.62, Entrepreneurial Intention = 0.35 dan Fear of Failure = 0.35). Diasumsikan terdapat tiga wirausahawan dan masing-masing wirausahawan memiliki tiga atribut yaitu level wirausaha, umur dan jenis kelamin. Penjelasan lebih lanjut yaitu sebagai berikut :
+				
+\begin{table} [H]
+\centering
+\caption{Data wirausahawan}
+\begin{tabular}{|c|c|c|c|}
+\hline
+& Umur & Level Wirausaha & Jenis kelamin\\
+\hline
+Entrepreneur 1 & 19 tahun (228 bulan) & nascent & Male\\
+\hline
+Entrepreneur 2 & 24 tahun (288 bulan) & new\_bm & Male\\
+\hline
+Entrepreneur 3 & 30 tahun (360 bulan) & new\_bm & Female\\
+\hline
+\end{tabular}
+\end{table}
+
+Berikut data bobot untuk masing-masing atribut :
+
+\begin{table} [H]
+\centering
+\caption{Data Bobot Atribut}
+\begin{tabular}{|c|c|}
+\hline
+Atribut & Bobot\\
+\hline
+Umur & \\
+\hline
+(25-34 tahun) & 7.5\\
+\hline
+(35-44 tahun) & 7.8\\
+\hline
+\end{tabular}
+\end{table}
+
+
+Berikut data nilai untuk masing-masing atribut :
+
+\begin{table} [H]
+\centering
+\caption{Data Bobot Atribut Level Usaha}
+\begin{tabular}{|c|c|}
+\hline
+& Bobot\\
+\hline
+Potential & 7.0\\
+\hline
+Nascent & 7.4\\
+\hline
+New\_bm & 7.6\\
+\hline
+Est\_bm & 7.8\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table} [H]
+\centering
+\caption{Data Bobot Atribut Umur}
+\begin{tabular}{|c|c|}
+\hline
+& Bobot\\
+\hline
+(18-24 tahun) & 7.0\\
+\hline
+(25-34 tahun) & 7.5\\
+\hline
+(35-44 tahun) & 7.8\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table} [H]
+\centering
+\caption{Data Bobot Atribut Jenis Kelamin}
+\begin{tabular}{|c|c|}
+\hline
+& Bobot\\
+\hline
+Male & 0.6\\
+\hline
+Female & 0.4\\
+\hline
+\end{tabular}
+\end{table}
+				
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{gambarwirausahaawal} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 0]{Gambar ketetanggaan tiga entrepreneur pada saat t = 0} 
+		\label{fig:t0} 
+	\end{figure}
+
+
+Dalam simulasi ini diasumsikan terdapat dua kondisi publik yaitu financial environment related with entrepreneurship yang memiliki bobot 3.06 dan cultural, social norms and society support yang memiliki bobot 3.29. Perhitungan masing-masing entrepreneur 1, entrepreneur 2 dan entrepreneur 3 (E1,E2,E3) pada saat t=0 yaitu sebagai berikut :
+	
+
+\begin{equation}
+	CIdx_{1}(t=0) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + 0 +  \frac {1} {2}) + 0.2 \times (3.06 + 3.29) = 9.305
+\end{equation}	
+
+\begin{equation}
+	CIdx_{2}(t=0) = 0.5 \times (7.6 + 7.0 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + \frac {1} {2} + \frac {1} {2}) + 0.2 \times (3.06 + 3.29) = 9.63
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=0) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {1} {2} + 0) + 0.2 \times (3.06 + 3.29) = 9.345
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{gambarwirausaha(t=0)} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 0]{Gambar ketetanggaan tiga entrepreneur pada saat t = 0} 
+		\label{fig:t0} 
+	\end{figure}
+
+Perhitungan masing-masing entrepreneur 1, entrepreneur 2 dan entrepreneur 3 (E1,E2,E3) pada saat t=1 yaitu sebagai berikut :
+
+\begin{equation}
+	CIdx_{1}(t=1) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {2} {6}  + 0) + 0.2 \times (3.06 + 3.29) = 9.254
+\end{equation}
+
+\begin{equation}
+	CIdx_{2}(t=1) = 0.5 \times (7.6 + 7.5 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29) = 9.68
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=1) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29) = 9.295
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{gambarwirausaha(t=1)} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 1]{Gambar ketetanggaan tiga entrepreneur pada saat t = 1} 
+		\label{fig:t0} 
+	\end{figure}
+
+Pada saat t=2 terdapat 1 kondisi publik baru yaitu physical infrastructures and services access yang memiliki bobot 3.45.
+
+
+\begin{equation}
+	CIdx_{1}(t=2) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {2} {6}  + 0) + 0.2 \times (3.06 + 3.29 + 3.45) = 9.945
+\end{equation}
+
+\begin{equation}
+	CIdx_{2}(t=2) = 0.5 \times (7.6 + 7.5 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29 + 3.45) = 10.37
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=2) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29+ 3.45) = 9.985
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{gambarwirausaha(t=2)} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 2]{Gambar ketetanggaan tiga entrepreneur pada saat t = 2} 
+		\label{fig:t0} 
+	\end{figure}
+	
+	Pada saat t=3 terdapat satu kondisi publik baru yaitu internal market dynamic yang memiliki bobot 3.92.
+	
+\begin{equation}
+	CIdx_{1}(t=3) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {1} {2}  + 0) + 0.2 \times (3.06 + 3.29 + 3.45 + 3.92) = 10.779
+\end{equation}
+
+\begin{equation}
+	CIdx_{2}(t=3) = 0.5 \times (7.6 + 7.5 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + 0 + 0) + 0.2 \times (3.06 + 3.29 + 3.45 + 3.92) = 11.054
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=3) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {1} {2} + 0) + 0.2 \times (3.06 + 3.29+ 3.45 + 3.92) = 10.819
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{gambarwirausaha(t=3)} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 3]{Gambar ketetanggaan tiga entrepreneur pada saat t = 3} 
+		\label{fig:t0} 
+	\end{figure}
+
+
+\section{\textit{Framework} yang Digunakan}
+\label{framework}
+Framework yang akan dipakai pada penelitian ini yaitu java.
+	
+	
+\section{Analisis Perangkat Lunak}
+\label{analisisPL}
+Pada bagian ini akan diberikan diagram kelas ECA beserta penjelasannya.
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=18cm, height=12cm]{ClassDiagram1} 
+		\caption[Diagram Kelas ECA]{Diagram Kelas ECA} 
+		\label{fig:CD1} 
+	\end{figure}
+	
+	Berdasarkan hasil analisa, berikut adalah penjelasan secara umum mengenai isi kode ECA:
+\begin{enumerate}
+	\item Kelas EGM merupakan kelas untuk menjalankan perhitungan CIDx, CIDx merupakan angka yang mengindikasikan kemungkinan seorang wirausahawan untuk meneruskan usahanya. Perhitungan CIDx ini menggunakan data dari GEM 2013.
+	\item Kelas CA merupakan kelas yang merepresentasikan cellular automata.
+		\begin{enumerate}
+			\item Method stateTransition
+			
+			Merupakan method untuk menentukan perubahan transisi pada seorang wirausaha yang bergantung pada umur dan nilai ambang.
+			\item Method getNeighborIndex
+			
+			Merupakan method untuk menghitung jumlah ketetanggaan antara wirausaha satu dengan wirausaha lainnya.
+			\item Method nextLevel
+			
+			Merupakan method untuk menentukan perubahan level usaha dari seorang wirausaha.
+			
+			\item Method getIndex
+			
+			Merupakan method untuk menghitung CIDx.
+			
+			\item Method NeighborhoodDefinition
+			
+			Merupakan method untuk mendefinisikan jenis-jenis ketetanggaan seperti lebih dari sama dengan, sama dengan dan lebih kecil sama dengan.
+			
+			\item Method genDummyEntrepreneurs
+			
+			Merupakan method untuk membuat data \textit{dummy} wirausaha.
+			\item Method genSimulationData
+			
+			Merupakan method untuk 
+			\item Method writeSimulationData
+			
+			Merupakan method untuk menge-\textit{print} hasil simulasi ke dalam suatu file.
+			\item Method readSimulationData
+			
+			Merupakan method untuk membaca dan memasukkan data file yang akan yang akan disimulasi.
+			\item Method print
+			\item Method calculatePoint
+			
+			Merupakan method untuk menghitung kondisi internal dari seorang wirausaha.
+			\item Method getAgeRange
+			
+			Merupakan method untuk membedakan rentang usia yang telah ditentukan oleh GEM 2013.
+		\end{enumerate}
+	\item Kelas Entrepreneur merupakan kelas untuk merepresentasikan individu wirausahawan.
+	\item Kelas Neighbor merupakan kelas untuk merepresentasikan ketetanggaan untuk satu aspek tertentu. Setiap aspeknya didefinisikan sebagai satu neighbor yang berupa adjacency matrix.
+	\item Kelas Neighborhood merupakan kelas untuk merepresentasikan himpunan ketetanggaan yang tersusun atas sejumlah ketetanggaan.
+	\item Kelas PublicFactor merupakan kelas untuk merepresentasikan faktok publik.
+	\item Kelas State merupakan kelas untuk 
+\end{enumerate}
+	
+
+
+
+
