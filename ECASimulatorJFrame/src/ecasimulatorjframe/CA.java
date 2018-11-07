@@ -427,7 +427,7 @@ public class CA {
 //
 //    }
 
-    void print(int iter) {
+    void print(int iter, PrintWriter out) {
         int l0 = 0;
         int l1 = 0;
         int l2 = 0;
@@ -452,7 +452,7 @@ public class CA {
                     break;
             }
         }
-        System.out.println(iter + ", " + l0 + ", " + l1 + ", " + l2 + ", " + l3 + ", " + l4);
+        out.println(iter + ", " + l0 + ", " + l1 + ", " + l2 + ", " + l3 + ", " + l4);
     }
     // perubahan : ditambahin faktor psikologisnya
     void calculatePoint(double[] POAm, double[] POAf, double[] POEm, double[] POEf, double[] POLm, double[] POLf, double[] POIm, double[] POIf, double[] PCAm, double[] PCAf, double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, double[] PCIm, double[] PCIf, double[] RMAm, double[] RMAf, double[] RMIm, double[] RMIf, double[] FFAf, double[] FFAm, double[] FFEf, double[] FFEm, double[] FFLf, double[] FFLm, double[] MALf, double[] MALm, double[] MAIf, double[] MAIm, double[] HSSIf, double[] HSSIm, double[] HSSLf, double[] HSSLm, double[] HSSAf, double[] HSSAm, double[] HSSEf, double[] HSSEm ) {

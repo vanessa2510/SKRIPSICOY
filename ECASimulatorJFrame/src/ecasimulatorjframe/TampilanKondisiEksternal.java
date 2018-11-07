@@ -518,23 +518,23 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
                                         InputDataHandler.inputDataEksternal("nilaiTransferPenelitian", nilaiTransferPenelitian.getText());
 //                                        isiNilaiTP = InputDataHandler.getValue("nilaiTransferPenelitian");
                                         kumpulanNilaiPF[6] = Double.parseDouble(InputDataHandler.getValue("nilaiTransferPenelitian"));
-                                        if (nilaiInfrastrukturKomersial.getText().equals("")) {
+                                        if (!nilaiInfrastrukturKomersial.getText().equals("")) {
                                             InputDataHandler.inputDataEksternal("nilaiInfrastrukturKomersial", nilaiInfrastrukturKomersial.getText());
 //                                            isiNilaiIK = InputDataHandler.getValue("nilaiInfrastrukturKomersial");
                                             kumpulanNilaiPF[7] = Double.parseDouble(InputDataHandler.getValue("nilaiInfrastrukturKomersial"));
-                                            if (nilaiDP.getText().equals("")) {
+                                            if (!nilaiDP.getText().equals("")) {
                                                 InputDataHandler.inputDataEksternal("DinamikaPasar", nilaiDP.getText());
 //                                                isiNilaiDP = InputDataHandler.getValue("DinamikaPasar");
                                                 kumpulanNilaiPF[8] = Double.parseDouble(InputDataHandler.getValue("DinamikaPasar"));
-                                                if (nilaiKeterbukaanPasar.getText().equals("")) {
+                                                if (!nilaiKeterbukaanPasar.getText().equals("")) {
                                                     InputDataHandler.inputDataEksternal("nilaiKeterbukaanPasar", nilaiKeterbukaanPasar.getText());
 //                                                    isiNilaiKP = InputDataHandler.getValue("nilaiKeterbukaanPasar");
                                                     kumpulanNilaiPF[9] = Double.parseDouble(InputDataHandler.getValue("nilaiKeterbukaanPasar"));
-                                                    if (nilaiIFA.getText().equals("")) {
+                                                    if (!nilaiIFA.getText().equals("")) {
                                                         InputDataHandler.inputDataEksternal("InfrastrukturListrik", nilaiIFA.getText());
 //                                                        isiNilaiIFA = InputDataHandler.getValue("InfrastrukturListrik");
                                                         kumpulanNilaiPF[10] = Double.parseDouble(InputDataHandler.getValue("InfrastrukturListrik"));
-                                                        if (nilaiNSB.getText().equals("")) {
+                                                        if (!nilaiNSB.getText().equals("")) {
                                                             InputDataHandler.inputDataEksternal("NormaSosialBudaya", nilaiNSB.getText());
 //                                                            isiNilaiNSB = InputDataHandler.getValue("NormaSosialBudaya");
                                                             kumpulanNilaiPF[11] = Double.parseDouble(InputDataHandler.getValue("NormaSosialBudaya"));

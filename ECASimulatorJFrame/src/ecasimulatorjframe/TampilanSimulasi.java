@@ -5,6 +5,12 @@
  */
 package ecasimulatorjframe;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +24,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
      */
     CA ca;
     TampilanDataWirausaha br;
+
     public TampilanSimulasi(CA ca) {
         initComponents();
         this.ca = ca;
@@ -269,14 +276,10 @@ public class TampilanSimulasi extends javax.swing.JFrame {
 
         if (a + b + c != 1.0) {
             JOptionPane.showMessageDialog(null, "The sum of a,b and c's value must 1!");
-            checker = false;
+            //checker = false;
         }
 
-        if (checker == true) {
-            this.hide();
-            TampilanDataWirausaha ks = new TampilanDataWirausaha();
-            ks.setVisible(true);
-        } else {
+        if (checker == false) {
             JOptionPane.showMessageDialog(null, "You must fill the text field first!");
         }
 
@@ -358,7 +361,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         double[] HSSEm = new double[]{1, 12, 19, 56, 11, 0};
 
         // Faktor Publik
-        double[] pfs = new double[]{3.06, 2.69, 2.22, 2.53, 2.54, 3.3, 2.31, 3.25, 3.92, 2.82, 3.45, 3.29, 3.45};
+        double[] pfs = new double[]{3.06, 2.69, 2.22, 2.53, 2.54, 3.3, 2.31, 3.25, 3.92, 2.82, 3.45, 3.29};
         double[] pfw = InputDataHandler.getDataEksternal();
 
         double[] nw = InputDataHandler.getBobot();
@@ -370,23 +373,35 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         ca.N.setWeight(nw);
         ca.N.setRelation(nr);
 
+//        String outFile = "D:\\Vanessa\\Data\\outFile.txt";
         int maxIter = Integer.parseInt(InputDataHandler.getValue("periode")); // masukan periode
-        for (int i = 0; i < maxIter; i++) {
-            ca.NeighborhoodDefinition();
-            if (i % 12 == 0) {
-                ca.print(i);
-            }
-            ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf,FFAf,FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf,HSSIm,HSSLf,HSSLm,HSSAf,HSSAm,HSSEf,HSSEm);
-            // System.out.println(ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf));
-            Entrepreneurs[] nE;
-            nE = ca.stateTransition(ca, composition);
+//        PrintWriter out;
+//        try {
+//            out = new PrintWriter(new BufferedWriter(new FileWriter(outFile, true)));
+//            out.println("iter,potential,nascent,new_bm,est_bm,retired");
+        this.hide();
+        TampilanHasil th = new TampilanHasil();
+        th.setVisible(true);
+            for (int i = 0; i < maxIter; i++) {
+                ca.NeighborhoodDefinition();
+                if (i % 12 == 0) {
+//                    ca.print(i, out);
+                }
+                ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf, FFAf, FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf, HSSIm, HSSLf, HSSLm, HSSAf, HSSAm, HSSEf, HSSEm);
+                // System.out.println(ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf));
+                Entrepreneurs[] nE;
+                nE = ca.stateTransition(ca, composition);
             for (int j = 0; j < nE.length; j++) {
                 System.out.println(nE[j].toString2());
             }
-            ca.E = nE;
+                ca.E = nE;
 //                System.out.println(nE);
+            }
+//        } catch (IOException ex) {
+//            System.out.println("Gagal menulis File");
+//            Logger.getLogger(TampilanSimulasi.class.getName()).log(Level.SEVERE, null, ex);
+//        }
 
-        }
 
     }//GEN-LAST:event_simulateButtonMouseClicked
 
