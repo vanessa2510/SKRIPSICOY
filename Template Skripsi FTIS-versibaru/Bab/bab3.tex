@@ -23,7 +23,7 @@ Kewirausahaan menurut GEM merupakan sebuah proses yang memiliki tahapan-tahapan 
 \end{figure}
 
 
-Dalam pertumbuhan wirausaha tentu ada beberapa faktor yang mempengaruhi keberlangsungan pertumbuhan wirausaha. Secara umum, atribut atau faktor yang mempengaruhi pertumbuhan wirausaha yaitu terbagi menjadi 2 jenis yaitu atribut statis dan dinamis. Atribut dinamis yaitu umur, level wirausaha dan usia usaha. Atribut statis yaitu bidang usaha, kategori usaha, jenis kelamin dan lokasi geografis. Sedangkan atribut secara psikologis menurut GEM yaitu Perceived Opportunities, Perceived Capabilities, Entrepreneurial Intention dan Fear of Failure Rate. 
+Dalam pertumbuhan wirausaha tentu ada beberapa faktor yang mempengaruhi keberlangsungan pertumbuhan wirausaha. Secara umum, atribut atau faktor yang mempengaruhi pertumbuhan wirausaha yaitu terbagi menjadi 2 jenis yaitu atribut statis dan dinamis. Atribut dinamis yaitu umur, level wirausaha dan usia usaha. Di antara atribut dinamis, level wirausaha menjadi atribut penting karena atribut ini yang akan dijadikan sebagai acuan untuk menentukan perkembangan dari kewirausahaan. Atribut statis yaitu bidang usaha, kategori usaha, jenis kelamin dan lokasi geografis. Sedangkan atribut secara psikologis menurut GEM yaitu Perceived Opportunities, Perceived Capabilities, Entrepreneurial Intention dan Fear of Failure Rate. 
 
 
 \section{Analisis Pemodelan Cellular Automata}
@@ -56,7 +56,15 @@ Fungsi transisi dalam penelitian ini ditentukan oleh :
 		 \end{enumerate}
 	\item Faktor Publik
 		 \begin{enumerate}
+			\item Keuangan terkait dengan kewirausahaan
+			\item Kebijakan pemerintah terkait ekonomi
+			\item Kebijakan pemerintah terkait pajak
 			\item Program Pemerintah
+			\item Pendidikan kewirausahaan pada SD dan SMP
+			\item Pendidikan kewirausahan pada SMK, professional dan universitas
+			\item Transfer penelitian dan pengembangan
+			\item Infrastruktur komersial dan legal
+			\item Keterbukaan Pasar
 			\item Norma, Sosial dan Budaya
 			\item Infrastruktur Fisik dan Akses Layanan
 			\item Dinamika Pasar
@@ -129,11 +137,11 @@ Untuk mempermudah pemahaman mengenai Continuity Index, akan diberikan contoh sim
 \hline
 & Umur & Level Wirausaha & Jenis kelamin\\
 \hline
-Entrepreneur 1 & 19 tahun (228 bulan) & nascent & Male\\
+Entrepreneur 1 & 20 tahun & Nascent & Male\\
 \hline
-Entrepreneur 2 & 24 tahun (288 bulan) & new\_bm & Male\\
+Entrepreneur 2 & 35 tahun & New\_bm & Male\\
 \hline
-Entrepreneur 3 & 30 tahun (360 bulan) & new\_bm & Female\\
+Entrepreneur 3 & 44 tahun & New\_bm & Female\\
 \hline
 \end{tabular}
 \end{table}
@@ -147,71 +155,18 @@ Berikut data bobot untuk masing-masing atribut :
 \hline
 Atribut & Bobot\\
 \hline
-Umur & \\
+Umur & 40\% \\
 \hline
-(25-34 tahun) & 7.5\\
+Jenis Kelamin & 20\% \\
 \hline
-(35-44 tahun) & 7.8\\
-\hline
-\end{tabular}
-\end{table}
-
-
-Berikut data nilai untuk masing-masing atribut :
-
-\begin{table} [H]
-\centering
-\caption{Data Bobot Atribut Level Usaha}
-\begin{tabular}{|c|c|}
-\hline
-& Bobot\\
-\hline
-Potential & 7.0\\
-\hline
-Nascent & 7.4\\
-\hline
-New\_bm & 7.6\\
-\hline
-Est\_bm & 7.8\\
+Level Wirausaha & 40\% \\
 \hline
 \end{tabular}
 \end{table}
-
-\begin{table} [H]
-\centering
-\caption{Data Bobot Atribut Umur}
-\begin{tabular}{|c|c|}
-\hline
-& Bobot\\
-\hline
-(18-24 tahun) & 7.0\\
-\hline
-(25-34 tahun) & 7.5\\
-\hline
-(35-44 tahun) & 7.8\\
-\hline
-\end{tabular}
-\end{table}
-
-
-\begin{table} [H]
-\centering
-\caption{Data Bobot Atribut Jenis Kelamin}
-\begin{tabular}{|c|c|}
-\hline
-& Bobot\\
-\hline
-Male & 0.6\\
-\hline
-Female & 0.4\\
-\hline
-\end{tabular}
-\end{table}
-				
 
 	\begin{figure} [H]
 		\centering  
-		\includegraphics[width=18cm, height=12cm]{gambarwirausahaawal} 
+		\includegraphics[width=18cm, height=12cm]{wirausaha(t=0)} 
 		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 0]{Gambar ketetanggaan tiga entrepreneur pada saat t = 0} 
 		\label{fig:t0} 
 	\end{figure}
