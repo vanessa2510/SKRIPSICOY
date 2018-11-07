@@ -128,7 +128,7 @@ Waktu sekarang & Waktu berikutnya \\
 \end{table}
 
 
-Untuk mempermudah pemahaman mengenai Continuity Index, akan diberikan contoh simulasi dari data tidak real, yaitu terdapat nilai a = 0.5, b = 0.3 dan c = 0.2 dan nilai ambangnya 10. Nilai dari kondisi internal wirausaha diambil dari Nawangpalupi (Perceived Opportunities = 0.47, Perceived Capabilities = 0.62, High Status of Successful = 0.8, Public Media Attention = 0.75, Role Model = 0.67 dan Fear of Failure = 0.35). Diasumsikan terdapat tiga wirausahawan dan masing-masing wirausahawan memiliki tiga atribut yaitu level wirausaha, umur dan jenis kelamin. Penjelasan lebih lanjut yaitu sebagai berikut :
+Untuk mempermudah pemahaman mengenai Continuity Index, akan diberikan contoh simulasi dari data tidak real, yaitu terdapat nilai a = 0.5, b = 0.4 dan c = 0.1, nilai ambangnya 20, serta periodenya dalam waktu 3 bulan. Nilai dari kondisi internal wirausaha diambil dari Nawangpalupi (Perceived Opportunities = 0.47, Perceived Capabilities = 0.62, High Status of Successful = 0.8, Public Media Attention = 0.75, Role Model = 0.67 dan Fear of Failure = 0.35). Diasumsikan terdapat tiga wirausahawan dan masing-masing wirausahawan memiliki tiga atribut yaitu level wirausaha, umur dan jenis kelamin. Penjelasan lebih lanjut yaitu sebagai berikut :
 				
 \begin{table} [H]
 \centering
@@ -166,98 +166,77 @@ Level Wirausaha & 40\% \\
 
 	\begin{figure} [H]
 		\centering  
+		\includegraphics[width=18cm, height=12cm]{wirausahaAwal} 
+		\caption[Gambar ketetanggaan tiga entrepreneur pada saat awal]{Gambar ketetanggaan tiga entrepreneur pada saat awal} 
+		\label{fig:t0} 
+	\end{figure}
+
+
+Dalam simulasi ini diasumsikan terdapat dua kondisi publik yaitu financial environment related with entrepreneurship yang memiliki nilai 3.06 dan cultural, social norms and society support yang memiliki nilai 3.29, dengan bobot masing-masing 40\% dan 60\%. Perhitungan masing-masing entrepreneur 1, entrepreneur 2 dan entrepreneur 3 (E1,E2,E3) pada saat t=0 yaitu sebagai berikut :
+	
+
+\begin{equation}
+	CIdx_{1}(t=0) = 0.5 \times ((15.8 \times 0.47) + (15.1 \times 0.62) + (17.1 \times 0.67) + (17 \times 0.8) + (19.5 \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.2) + 0 +  0) + 0.1 \times ((3.06 \times 0.4) + (3.29 \times 0.6)) = 24.6948
+\end{equation}	
+
+\begin{equation}
+	CIdx_{2}(t=0) = 0.5 \times ((28.4 \times 0.47) + (28.2 \times 0.62) + (26.8 \times 0.67) + (26 \times 0.8) + (23.5 \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.2) + (\frac {1} {2} \times 0.4) + (\frac {1} {2} \times 0.4)) + (\frac {1} {2} \times 0.4)) + 0.1 \times ((3.06 \times 0.4) + (3.29 \times 0.6)) = 39.4263
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=0) = 0.5 \times ((28.4 \times 0.47) + (28.2 \times 0.62) + (26.8 \times 0.67) + (26 \times 0.8) + (23.5 \times 0.35)) + 0.4 \times (0 + (\frac {1} {2} \times 0.4) + (\frac {1} {2} \times 0.4)) + 0.1 \times ((3.06 \times 0.4) + (3.29 \times 0.6)) = 39.3863
+\end{equation}
+
+	\begin{figure} [H]
+		\centering  
 		\includegraphics[width=18cm, height=12cm]{wirausaha(t=0)} 
 		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 0]{Gambar ketetanggaan tiga entrepreneur pada saat t = 0} 
 		\label{fig:t0} 
 	\end{figure}
 
-
-Dalam simulasi ini diasumsikan terdapat dua kondisi publik yaitu financial environment related with entrepreneurship yang memiliki bobot 3.06 dan cultural, social norms and society support yang memiliki bobot 3.29. Perhitungan masing-masing entrepreneur 1, entrepreneur 2 dan entrepreneur 3 (E1,E2,E3) pada saat t=0 yaitu sebagai berikut :
-	
+Pada saat t=1, Entrepreneur 3 berulang tahun maka umurnya menjadi 45 tahun.
 
 \begin{equation}
-	CIdx_{1}(t=0) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + 0 +  \frac {1} {2}) + 0.2 \times (3.06 + 3.29) = 9.305
-\end{equation}	
-
-\begin{equation}
-	CIdx_{2}(t=0) = 0.5 \times (7.6 + 7.0 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + \frac {1} {2} + \frac {1} {2}) + 0.2 \times (3.06 + 3.29) = 9.63
+	CIdx_{1}(t=1) = 0.5 \times ((15.8 \times 0.47) + (15.1 \times 0.62) + (17.1 \times 0.67) + (17 \times 0.8) + (19.5 \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.2) + 0  + 0) + 0.1 \times ((3.06 \times 0.4) + (3.29 \times 0.6)) = 24.6948
 \end{equation}
 
 \begin{equation}
-	CIdx_{3}(t=0) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {1} {2} + 0) + 0.2 \times (3.06 + 3.29) = 9.345
-\end{equation}
-
-	\begin{figure} [H]
-		\centering  
-		\includegraphics[width=18cm, height=12cm]{gambarwirausaha(t=0)} 
-		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 0]{Gambar ketetanggaan tiga entrepreneur pada saat t = 0} 
-		\label{fig:t0} 
-	\end{figure}
-
-Perhitungan masing-masing entrepreneur 1, entrepreneur 2 dan entrepreneur 3 (E1,E2,E3) pada saat t=1 yaitu sebagai berikut :
-
-\begin{equation}
-	CIdx_{1}(t=1) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {2} {6}  + 0) + 0.2 \times (3.06 + 3.29) = 9.254
+	CIdx_{2}(t=1) = 0.5 \times ((28.4 \times 0.47) + (28.2 \times 0.62) + (26.8 \times 0.67) + (26 \times 0.8) + (23.5 \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.2) + (\frac {1} {2} \times 0.4) + 0) + 0.1 \times ((3.06 \times 0.4) + (3.29 \times 0.6)) = 39.3463
 \end{equation}
 
 \begin{equation}
-	CIdx_{2}(t=1) = 0.5 \times (7.6 + 7.5 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29) = 9.68
-\end{equation}
-
-\begin{equation}
-	CIdx_{3}(t=1) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29) = 9.295
+	CIdx_{3}(t=1) = 0.5 \times ((17.7 \times 0.47) + (16.1 \times 0.62) + (17.6 \times 0.67) + (17 \times 0.8) + (16.4 \times 0.35))+ 0.4 \times (0 + (\frac {1} {2} \times 0.4) + 0) + 0.1 \times ((3.06 \times 0.4) + (3.29 \times 0.6)) = 25.1163
 \end{equation}
 
 	\begin{figure} [H]
 		\centering  
-		\includegraphics[width=18cm, height=12cm]{gambarwirausaha(t=1)} 
+		\includegraphics[width=18cm, height=12cm]{wirausaha(t=1)} 
 		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 1]{Gambar ketetanggaan tiga entrepreneur pada saat t = 1} 
 		\label{fig:t0} 
 	\end{figure}
 
-Pada saat t=2 terdapat 1 kondisi publik baru yaitu physical infrastructures and services access yang memiliki bobot 3.45.
+Pada saat t=2 terdapat 1 kondisi publik baru yaitu physical infrastructures and services access yang memiliki nilai 3.45 dengan bobot 30\%. Kondisi publik sebelumnya bobotnya menjadi 20\% untuk financial environment related with entrepreneurship, 40\% untuk cultural, social norms and society support.
 
 
 \begin{equation}
-	CIdx_{1}(t=2) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {2} {6}  + 0) + 0.2 \times (3.06 + 3.29 + 3.45) = 9.945
+	CIdx_{1}(t=2) =  0.5 \times ((15.8 \times 0.47) + (15.1 \times 0.62) + (17.1 \times 0.67) + (17 \times 0.8) + (19.5 \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.2) + 0  + 0) + 0.1 \times ((3.06 \times 0.2) + (3.29 \times 0.4) + (3.45 \times 0.3)) = 25.7298
 \end{equation}
 
 \begin{equation}
-	CIdx_{2}(t=2) = 0.5 \times (7.6 + 7.5 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29 + 3.45) = 10.37
+	CIdx_{2}(t=2) = 0.5 \times ((28.4 \times 0.47) + (28.2 \times 0.62) + (26.8 \times 0.67) + (26 \times 0.8) + (23.5 \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.2) + (\frac {1} {2} \times 0.4) + 0) + 0.1 \times ((3.06 \times 0.4) + (3.29 \times 0.6) + (3.45 \times 0.3)) = 40.3813
 \end{equation}
 
 \begin{equation}
-	CIdx_{3}(t=2) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {2} {6} + 0) + 0.2 \times (3.06 + 3.29+ 3.45) = 9.985
+	CIdx_{3}(t=2) = 0.5 \times ((17.7 \times 0.47) + (16.1 \times 0.62) + (17.6 \times 0.67) + (17 \times 0.8) + (16.4 \times 0.35))+ 0.4 \times (0 + (\frac {1} {2} \times 0.4) + 0) + 0.1 \times ((3.06 \times 0.4) + (3.29 \times 0.6) +(3.45 \times 0.3) ) = 26.1513
 \end{equation}
 
 	\begin{figure} [H]
 		\centering  
-		\includegraphics[width=18cm, height=12cm]{gambarwirausaha(t=2)} 
+		\includegraphics[width=18cm, height=12cm]{wirausaha(t=1)} 
 		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 2]{Gambar ketetanggaan tiga entrepreneur pada saat t = 2} 
 		\label{fig:t0} 
 	\end{figure}
 	
-	Pada saat t=3 terdapat satu kondisi publik baru yaitu internal market dynamic yang memiliki bobot 3.92.
-	
-\begin{equation}
-	CIdx_{1}(t=3) = 0.5 \times (7.4 + 7.0 + 0.6 + 0.47) + 0.3 \times (\frac {1} {2} + \frac {1} {2}  + 0) + 0.2 \times (3.06 + 3.29 + 3.45 + 3.92) = 10.779
-\end{equation}
-
-\begin{equation}
-	CIdx_{2}(t=3) = 0.5 \times (7.6 + 7.5 + 0.6 + 0.62) + 0.3 \times (\frac {1} {2} + 0 + 0) + 0.2 \times (3.06 + 3.29 + 3.45 + 3.92) = 11.054
-\end{equation}
-
-\begin{equation}
-	CIdx_{3}(t=3) = 0.5 \times (7.6 + 7.5 + 0.4 + 0.35) + 0.3 \times (0 + \frac {1} {2} + 0) + 0.2 \times (3.06 + 3.29+ 3.45 + 3.92) = 10.819
-\end{equation}
-
-	\begin{figure} [H]
-		\centering  
-		\includegraphics[width=18cm, height=12cm]{gambarwirausaha(t=3)} 
-		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 3]{Gambar ketetanggaan tiga entrepreneur pada saat t = 3} 
-		\label{fig:t0} 
-	\end{figure}
-
 
 \section{\textit{Framework} yang Digunakan}
 \label{framework}
