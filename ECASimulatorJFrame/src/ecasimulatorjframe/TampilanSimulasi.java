@@ -23,7 +23,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
      * Creates new form TampilanSimulasi
      */
     CA ca;
-    TampilanDataWirausaha br;
+//    TampilanDataWirausaha br;
 
     public TampilanSimulasi(CA ca) {
         initComponents();
@@ -379,24 +379,26 @@ public class TampilanSimulasi extends javax.swing.JFrame {
 //        try {
 //            out = new PrintWriter(new BufferedWriter(new FileWriter(outFile, true)));
 //            out.println("iter,potential,nascent,new_bm,est_bm,retired");
-        this.hide();
-        TampilanHasil th = new TampilanHasil();
-        th.setVisible(true);
-            for (int i = 0; i < maxIter; i++) {
-                ca.NeighborhoodDefinition();
-                if (i % 12 == 0) {
-//                    ca.print(i, out);
-                }
-                ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf, FFAf, FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf, HSSIm, HSSLf, HSSLm, HSSAf, HSSAm, HSSEf, HSSEm);
-                // System.out.println(ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf));
-                Entrepreneurs[] nE;
-                nE = ca.stateTransition(ca, composition);
-            for (int j = 0; j < nE.length; j++) {
-                System.out.println(nE[j].toString2());
+        
+        Entrepreneurs[][] e = new Entrepreneurs[maxIter][];
+        for (int i = 0; i < maxIter; i++) {
+            ca.NeighborhoodDefinition();
+//                if (i % 12 == 0) {
+//                   // ca.print(i);
+//                }
+            ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf, FFAf, FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf, HSSIm, HSSLf, HSSLm, HSSAf, HSSAm, HSSEf, HSSEm);
+            // System.out.println(ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf));
+            Entrepreneurs[] nE;
+            e[i] = ca.stateTransition(ca, composition);
+            for (int j = 0; j < e[i].length; j++) {
+                System.out.println(e[i][j].toString2());
             }
-                ca.E = nE;
+            ca.E = e[i];
 //                System.out.println(nE);
-            }
+        }
+        this.hide();
+        TampilanHasil th = new TampilanHasil(e);
+        th.setVisible(true);
 //        } catch (IOException ex) {
 //            System.out.println("Gagal menulis File");
 //            Logger.getLogger(TampilanSimulasi.class.getName()).log(Level.SEVERE, null, ex);
