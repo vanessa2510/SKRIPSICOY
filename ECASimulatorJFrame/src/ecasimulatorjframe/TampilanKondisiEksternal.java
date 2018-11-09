@@ -437,19 +437,19 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 //        String isiNilaiIFA;
 //        String isiNilaiNSB;
 //        String isiNilaiPP;
-//        double isiNilaiKK = 0.0;
-//        double isiNilaiIK = 0.0;
-//        double isiNilaiKPE = 0.0;
-//        double isiNilaiKPP = 0.0;
-//        double isiNilaiKP = 0.0;
-//        double isiNilaiPSS = 0.0;
-//        double isiNilaiPS = 0.0;
-//        double isiNilaiTP = 0.0;
+        double isiNilaiKK = 0.0;
+        double isiNilaiIK = 0.0;
+        double isiNilaiKPE = 0.0;
+        double isiNilaiKPP = 0.0;
+        double isiNilaiKP = 0.0;
+        double isiNilaiPSS = 0.0;
+        double isiNilaiPS = 0.0;
+        double isiNilaiTP = 0.0;
         double[] kumpulanNilaiPF = new double[12];
-//        double isiNilaiDP = 0.0;
-//        double isiNilaiIFA = 0.0;
-//        double isiNilaiNSB = 0.0;
-//        double isiNilaiPP = 0.0;
+        double isiNilaiDP = 0.0;
+        double isiNilaiIFA = 0.0;
+        double isiNilaiNSB = 0.0;
+        double isiNilaiPP = 0.0;
         if (nilaiDP.getText().equals("")) {
             InputDataHandler.inputDataEksternal("dinamikaPasar", null);
             checker = false;
@@ -489,53 +489,84 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
             checker = false;
         } else {
             if (!nilaiKeuanganKewirausahaan.equals("")) {
-                InputDataHandler.inputDataEksternal("nilaiKeuanganKewirausahaan", nilaiKeuanganKewirausahaan.getText());
-//                isiNilaiKK = InputDataHandler.getValue("nilaiKeuanganKewirausahaan");
+                isiNilaiKK = Double.parseDouble(nilaiKeuanganKewirausahaan.getText()) / 100.0;
+                String nilaiKK = Double.toString(isiNilaiKK);
+                InputDataHandler.inputDataEksternal("nilaiKeuanganKewirausahaan", nilaiKK);
                 kumpulanNilaiPF[0] = Double.parseDouble(InputDataHandler.getValue("nilaiKeuanganKewirausahaan"));
+//                System.out.println(kumpulanNilaiPF[0]);
                 if (!nilaiKPEkonomi.getText().equals("")) {
-                    InputDataHandler.inputDataEksternal("nilaiKPEkonomi", nilaiKPEkonomi.getText());
-//                    isiNilaiKPE = InputDataHandler.getValue("nilaiKPEkonomi");
+                    isiNilaiKP = Double.parseDouble(nilaiKPEkonomi.getText()) / 100.0;
+                    String nilaiKP = Double.toString(isiNilaiKP);
+                    InputDataHandler.inputDataEksternal("nilaiKPEkonomi", nilaiKP);
                     kumpulanNilaiPF[1] = Double.parseDouble(InputDataHandler.getValue("nilaiKPEkonomi"));
                     if (!nilaiKPPajak.getText().equals("")) {
-                        InputDataHandler.inputDataEksternal("nilaiKPPajak", nilaiKPPajak.getText());
+                        isiNilaiKPP = Double.parseDouble(nilaiKPPajak.getText()) / 100.0;
+                        String nilaiKPP = Double.toString(isiNilaiKPP);
+                        InputDataHandler.inputDataEksternal("nilaiKPPajak", nilaiKPP);
 //                        isiNilaiKPP = InputDataHandler.getValue("nilaiKPPajak");
                         kumpulanNilaiPF[2] = Double.parseDouble(InputDataHandler.getValue("nilaiKPPajak"));
                         if (!nilaiPP.getText().equals("")) {
-                            InputDataHandler.inputDataEksternal("ProgramPemerintah", nilaiPP.getText());
+                            isiNilaiPP = Double.parseDouble(nilaiPP.getText()) / 100.0;
+                            String nilaiPP = Double.toString(isiNilaiPP);
+                            InputDataHandler.inputDataEksternal("ProgramPemerintah", nilaiPP);
 //                            isiNilaiPP = InputDataHandler.getValue("ProgramPemerintah");
                             kumpulanNilaiPF[3] = Double.parseDouble(InputDataHandler.getValue("ProgramPemerintah"));
 
                             if (!nilaiPendidikanSDSMP.getText().equals("")) {
-                                InputDataHandler.inputDataEksternal("nilaiPendidikanSDSMP", nilaiPendidikanSDSMP.getText());
+                                isiNilaiPSS = Double.parseDouble(nilaiPendidikanSDSMP.getText()) / 100.0;
+                                String nilaiPSS = Double.toString(isiNilaiPSS);
+                                InputDataHandler.inputDataEksternal("nilaiPendidikanSDSMP", nilaiPSS);
+//                                InputDataHandler.inputDataEksternal("nilaiPendidikanSDSMP", nilaiPendidikanSDSMP.getText());
 //                                isiNilaiPSS = InputDataHandler.getValue("nilaiPendidikanSDSMP");
                                 kumpulanNilaiPF[4] = Double.parseDouble(InputDataHandler.getValue("nilaiPendidikanSDSMP"));
                                 if (!nilaiPendidikanSMK.getText().equals("")) {
-                                    InputDataHandler.inputDataEksternal("nilaiPendidikanSMK", nilaiPendidikanSMK.getText());
+                                    isiNilaiPS = Double.parseDouble(nilaiPendidikanSMK.getText()) / 100.0;
+                                    String nilaiPS = Double.toString(isiNilaiPS);
+                                    InputDataHandler.inputDataEksternal("nilaiPendidikanSMK", nilaiPS);
+//                                    InputDataHandler.inputDataEksternal("nilaiPendidikanSMK", nilaiPendidikanSMK.getText());
 //                                    isiNilaiPS = InputDataHandler.getValue("nilaiPendidikanSMK");
                                     kumpulanNilaiPF[5] = Double.parseDouble(InputDataHandler.getValue("nilaiPendidikanSMK"));
 
                                     if (!nilaiTransferPenelitian.getText().equals("")) {
-                                        InputDataHandler.inputDataEksternal("nilaiTransferPenelitian", nilaiTransferPenelitian.getText());
+                                        isiNilaiTP = Double.parseDouble(nilaiTransferPenelitian.getText()) / 100.0;
+                                        String nilaiTP = Double.toString(isiNilaiTP);
+                                        InputDataHandler.inputDataEksternal("nilaiTransferPenelitian", nilaiTP);
+//                                        InputDataHandler.inputDataEksternal("nilaiTransferPenelitian", nilaiTransferPenelitian.getText());
 //                                        isiNilaiTP = InputDataHandler.getValue("nilaiTransferPenelitian");
                                         kumpulanNilaiPF[6] = Double.parseDouble(InputDataHandler.getValue("nilaiTransferPenelitian"));
                                         if (!nilaiInfrastrukturKomersial.getText().equals("")) {
-                                            InputDataHandler.inputDataEksternal("nilaiInfrastrukturKomersial", nilaiInfrastrukturKomersial.getText());
+                                            isiNilaiIK = Double.parseDouble(nilaiInfrastrukturKomersial.getText()) / 100.0;
+                                            String nilaiIK = Double.toString(isiNilaiIK);
+                                            InputDataHandler.inputDataEksternal("nilaiInfrastrukturKomersial", nilaiIK);
+//                                            InputDataHandler.inputDataEksternal("nilaiInfrastrukturKomersial", nilaiInfrastrukturKomersial.getText());
 //                                            isiNilaiIK = InputDataHandler.getValue("nilaiInfrastrukturKomersial");
                                             kumpulanNilaiPF[7] = Double.parseDouble(InputDataHandler.getValue("nilaiInfrastrukturKomersial"));
                                             if (!nilaiDP.getText().equals("")) {
-                                                InputDataHandler.inputDataEksternal("DinamikaPasar", nilaiDP.getText());
+                                                isiNilaiDP = Double.parseDouble(nilaiDP.getText()) / 100.0;
+                                                String nilaiDP = Double.toString(isiNilaiDP);
+                                                InputDataHandler.inputDataEksternal("DinamikaPasar", nilaiDP);
+//                                                InputDataHandler.inputDataEksternal("DinamikaPasar", nilaiDP.getText());
 //                                                isiNilaiDP = InputDataHandler.getValue("DinamikaPasar");
                                                 kumpulanNilaiPF[8] = Double.parseDouble(InputDataHandler.getValue("DinamikaPasar"));
                                                 if (!nilaiKeterbukaanPasar.getText().equals("")) {
-                                                    InputDataHandler.inputDataEksternal("nilaiKeterbukaanPasar", nilaiKeterbukaanPasar.getText());
+                                                    isiNilaiKP = Double.parseDouble(nilaiKeterbukaanPasar.getText()) / 100.0;
+                                                    String nilaiKPas = Double.toString(isiNilaiKP);
+                                                    InputDataHandler.inputDataEksternal("nilaiKeterbukaanPasar", nilaiKPas);
+//                                                    InputDataHandler.inputDataEksternal("nilaiKeterbukaanPasar", nilaiKeterbukaanPasar.getText());
 //                                                    isiNilaiKP = InputDataHandler.getValue("nilaiKeterbukaanPasar");
                                                     kumpulanNilaiPF[9] = Double.parseDouble(InputDataHandler.getValue("nilaiKeterbukaanPasar"));
                                                     if (!nilaiIFA.getText().equals("")) {
-                                                        InputDataHandler.inputDataEksternal("InfrastrukturListrik", nilaiIFA.getText());
+                                                        isiNilaiIFA = Double.parseDouble(nilaiIFA.getText()) / 100.0;
+                                                        String nilaiIFA = Double.toString(isiNilaiIFA);
+                                                        InputDataHandler.inputDataEksternal("InfrastrukturListrik", nilaiIFA);
+//                                                        InputDataHandler.inputDataEksternal("InfrastrukturListrik", nilaiIFA.getText());
 //                                                        isiNilaiIFA = InputDataHandler.getValue("InfrastrukturListrik");
                                                         kumpulanNilaiPF[10] = Double.parseDouble(InputDataHandler.getValue("InfrastrukturListrik"));
                                                         if (!nilaiNSB.getText().equals("")) {
-                                                            InputDataHandler.inputDataEksternal("NormaSosialBudaya", nilaiNSB.getText());
+                                                            isiNilaiNSB = Double.parseDouble(nilaiNSB.getText()) / 100.0;
+                                                            String nilaiNSB = Double.toString(isiNilaiNSB);
+//                                                            InputDataHandler.inputDataEksternal("ProgramPemerintah", nilaiPP);
+                                                            InputDataHandler.inputDataEksternal("NormaSosialBudaya", nilaiNSB);
 //                                                            isiNilaiNSB = InputDataHandler.getValue("NormaSosialBudaya");
                                                             kumpulanNilaiPF[11] = Double.parseDouble(InputDataHandler.getValue("NormaSosialBudaya"));
                                                         }
@@ -552,7 +583,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
                 }
             }
         }
-        if (kumpulanNilaiPF[0] + kumpulanNilaiPF[1] + kumpulanNilaiPF[2] + kumpulanNilaiPF[3] + kumpulanNilaiPF[4] + kumpulanNilaiPF[5] + kumpulanNilaiPF[6] + kumpulanNilaiPF[7] + kumpulanNilaiPF[8] + kumpulanNilaiPF[9] + kumpulanNilaiPF[10] + kumpulanNilaiPF[11]!= 100.0) {
+        if (kumpulanNilaiPF[0] + kumpulanNilaiPF[1] + kumpulanNilaiPF[2] + kumpulanNilaiPF[3] + kumpulanNilaiPF[4] + kumpulanNilaiPF[5] + kumpulanNilaiPF[6] + kumpulanNilaiPF[7] + kumpulanNilaiPF[8] + kumpulanNilaiPF[9] + kumpulanNilaiPF[10] + kumpulanNilaiPF[11] != 1.0) {
             JOptionPane.showMessageDialog(null, "The sum of text fields must 100.0!");
             checker = false;
         }

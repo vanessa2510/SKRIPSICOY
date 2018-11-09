@@ -356,6 +356,13 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
 
 //        int jumlahCheckList = 0;
         //double[] bobot = new double[jumlahCheckList];
+        double nilaiUmur = 0.0;
+        double nilaiLevel = 0.0;
+        double nilaiPendidikan = 0.0;
+        double nilaiPendapatan = 0.0;
+        double nilaiLokasi = 0.0;
+        double nilaiUsaha = 0.0;
+        double nilaiJenisKelamin = 0.0;
         boolean checker = true;
         if (umurCBInternal.isSelected()) {
             InputDataHandler.jmlChecklist();
@@ -363,7 +370,10 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
                 InputDataHandler.inputDataInternal("umurInternal", null);
                 checker = false; // false karena nilainya null
             } else {
-                InputDataHandler.inputDataInternal("umurInternal", nilaiUmurInternal.getText());
+                nilaiUmur = Double.parseDouble(nilaiUmurInternal.getText()) / 100.0;
+                String nilaiU = Double.toString(nilaiUmur);
+//                System.out.println(nilaiU);
+                InputDataHandler.inputDataInternal("umurInternal", nilaiU);
             }
 
         }
@@ -374,7 +384,10 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
                 InputDataHandler.inputDataInternal("levelInternal", null);
                 checker = false; // false karena nilainya null
             } else {
-                InputDataHandler.inputDataInternal("levelInternal", nilaiLevelInternal.getText());
+                nilaiLevel = Double.parseDouble(nilaiLevelInternal.getText()) / 100.0;
+                String nilaiL = Double.toString(nilaiLevel);
+//                System.out.println(nilaiL);
+                InputDataHandler.inputDataInternal("levelInternal", nilaiL);
             }
         }
 
@@ -384,7 +397,10 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
                 InputDataHandler.inputDataInternal("pendidikanInternal", null);
                 checker = false; // false karena nilainya null
             } else {
-                InputDataHandler.inputDataInternal("pendidikanInternal", nilaiPendidikanInternal.getText());
+                nilaiPendidikan = Double.parseDouble(nilaiPendidikanInternal.getText()) / 100.0;
+                String nilaiPendi = Double.toString(nilaiPendidikan);
+//                System.out.println(nilaiPendi);
+                InputDataHandler.inputDataInternal("pendidikanInternal", nilaiPendi);
             }
         }
 
@@ -394,7 +410,10 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
                 InputDataHandler.inputDataInternal("pendapatanInternal", null);
                 checker = false; // false karena nilainya null
             } else {
-                InputDataHandler.inputDataInternal("pendapatanInternal", nilaiPendapatanInternal.getText());
+                nilaiPendapatan = Double.parseDouble(nilaiPendapatanInternal.getText()) / 100.0;
+                String nilaiPenda= Double.toString(nilaiPendapatan);
+//                System.out.println(nilaiU);
+                InputDataHandler.inputDataInternal("pendapatanInternal", nilaiPenda);
             }
         }
 
@@ -404,7 +423,10 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
                 InputDataHandler.inputDataInternal("jenisKelaminInternal", null);
                 checker = false; // false karena nilainya null
             } else {
-                InputDataHandler.inputDataInternal("jenisKelaminInternal", nilaiJenisKelaminInternal.getText());
+                nilaiJenisKelamin = Double.parseDouble(nilaiJenisKelaminInternal.getText()) / 100.0;
+                String nilaiJK = Double.toString(nilaiJenisKelamin);
+//                System.out.println(nilaiJK);
+                InputDataHandler.inputDataInternal("jenisKelaminInternal", nilaiJK);
             }
         }
 
@@ -414,7 +436,10 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
                 InputDataHandler.inputDataInternal("lokasiInternal", null);
                 checker = false; // false karena nilainya null
             } else {
-                InputDataHandler.inputDataInternal("lokasiInternal", nilaiLokasiInternal.getText());
+                nilaiLokasi = Double.parseDouble(nilaiLokasiInternal.getText()) / 100.0;
+                String nilaiL = Double.toString(nilaiLokasi);
+//                System.out.println(nilaiU);
+                InputDataHandler.inputDataInternal("lokasiInternal", nilaiL);
             }
         }
 
@@ -424,7 +449,10 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
                 InputDataHandler.inputDataInternal("usahaInternal", null);
                 checker = false; // false karena nilainya null
             } else {
-                InputDataHandler.inputDataInternal("usahaInternal", nilaiUsahaInternal.getText());
+                nilaiUsaha = Double.parseDouble(nilaiUsahaInternal.getText()) / 100.0;
+                String nilaiUs = Double.toString(nilaiUsaha);
+//                System.out.println(nilaiU);
+                InputDataHandler.inputDataInternal("usahaInternal", nilaiUs);
             }
         }
 
@@ -474,7 +502,7 @@ public class TampilanKondisiInternal extends javax.swing.JFrame {
             kumpulanBobot[m] = usaha;
             m++;
         }
-        if (umur + pendidikan + pendapatan + level + jenisKelamin + lokasi + usaha != 100.0) {
+        if (umur + pendidikan + pendapatan + level + jenisKelamin + lokasi + usaha != 1.0) {
             JOptionPane.showMessageDialog(null, "The sum of text fields must 100.0!");
             checker = false;
         }
