@@ -101,11 +101,11 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jJenisKelamin = new javax.swing.JPanel();
-        jenisKelaminCBNeg = new javax.swing.JCheckBox();
+        jLabel8 = new javax.swing.JLabel();
         jbidangUsaha = new javax.swing.JPanel();
-        bidangUsahaCBNeg = new javax.swing.JCheckBox();
+        jLabel10 = new javax.swing.JLabel();
         jLokasi = new javax.swing.JPanel();
-        lokasiCBNeg = new javax.swing.JCheckBox();
+        jLabel9 = new javax.swing.JLabel();
         jPendapatan2 = new javax.swing.JPanel();
         pendapatanCBNeg2 = new javax.swing.JCheckBox();
         pendapatanKrgDr2 = new javax.swing.JRadioButton();
@@ -225,9 +225,9 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             .addGroup(jPendidikanLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6)
-                .addGap(144, 144, 144)
+                .addGap(145, 145, 145)
                 .addComponent(pendidikanKrgDr)
-                .addGap(27, 27, 27)
+                .addGap(26, 26, 26)
                 .addComponent(pendidikanSmDgn)
                 .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(pendidikanLbhDr)
@@ -262,9 +262,9 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             .addGroup(jPendapatanLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7)
-                .addGap(145, 145, 145)
+                .addGap(142, 142, 142)
                 .addComponent(pendapatanKrgDr)
-                .addGap(27, 27, 27)
+                .addGap(30, 30, 30)
                 .addComponent(pendapatanSmDgn)
                 .addGap(18, 18, 18)
                 .addComponent(pendapatanLbhDr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -281,12 +281,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jenisKelaminCBNeg.setText("JENIS KELAMIN");
-        jenisKelaminCBNeg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jenisKelaminCBNegActionPerformed(evt);
-            }
-        });
+        jLabel8.setText("JENIS KELAMIN");
 
         javax.swing.GroupLayout jJenisKelaminLayout = new javax.swing.GroupLayout(jJenisKelamin);
         jJenisKelamin.setLayout(jJenisKelaminLayout);
@@ -294,23 +289,18 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             jJenisKelaminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jJenisKelaminLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jenisKelaminCBNeg)
+                .addComponent(jLabel8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jJenisKelaminLayout.setVerticalGroup(
             jJenisKelaminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jJenisKelaminLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jenisKelaminCBNeg)
-                .addContainerGap())
+            .addGroup(jJenisKelaminLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        bidangUsahaCBNeg.setText("BIDANG USAHA");
-        bidangUsahaCBNeg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bidangUsahaCBNegActionPerformed(evt);
-            }
-        });
+        jLabel10.setText("BIDANG USAHA");
 
         javax.swing.GroupLayout jbidangUsahaLayout = new javax.swing.GroupLayout(jbidangUsaha);
         jbidangUsaha.setLayout(jbidangUsahaLayout);
@@ -318,23 +308,18 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             jbidangUsahaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jbidangUsahaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(bidangUsahaCBNeg)
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addComponent(jLabel10)
+                .addContainerGap(298, Short.MAX_VALUE))
         );
         jbidangUsahaLayout.setVerticalGroup(
             jbidangUsahaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jbidangUsahaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bidangUsahaCBNeg)
+                .addComponent(jLabel10)
                 .addContainerGap())
         );
 
-        lokasiCBNeg.setText("LOKASI");
-        lokasiCBNeg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lokasiCBNegActionPerformed(evt);
-            }
-        });
+        jLabel9.setText("LOKASI");
 
         javax.swing.GroupLayout jLokasiLayout = new javax.swing.GroupLayout(jLokasi);
         jLokasi.setLayout(jLokasiLayout);
@@ -342,34 +327,36 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             jLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLokasiLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lokasiCBNeg)
+                .addComponent(jLabel9)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jLokasiLayout.setVerticalGroup(
             jLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLokasiLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lokasiCBNeg)
-                .addContainerGap())
+                .addGap(0, 11, Short.MAX_VALUE)
+                .addComponent(jLabel9))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jbidangUsaha, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLokasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jJenisKelamin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jbidangUsaha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLokasi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jJenisKelamin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 56, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLokasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(11, 11, 11)
                 .addComponent(jbidangUsaha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         jPendapatan2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -556,21 +543,9 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_levelSmDgnActionPerformed
 
-    private void jenisKelaminCBNegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisKelaminCBNegActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jenisKelaminCBNegActionPerformed
-
     private void pendapatanCBNeg2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pendapatanCBNeg2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pendapatanCBNeg2ActionPerformed
-
-    private void bidangUsahaCBNegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bidangUsahaCBNegActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bidangUsahaCBNegActionPerformed
-
-    private void lokasiCBNegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lokasiCBNegActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lokasiCBNegActionPerformed
 
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
         boolean checker = true;
@@ -617,6 +592,14 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                     n++;
                     //  System.out.println(kumpulanNilaiRelasi[0]);
                     checker = true;
+                }
+            }
+        }
+        
+        if (!umurLbhDr.isSelected()) {
+            if (!umurSmDgn.isSelected()) {
+                if (!umurKrgDr.isSelected()) {
+                    checker = false;
                 }
             }
         }
@@ -724,7 +707,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         }
 
         InputDataHandler.setRelation(kumpulanNilaiRelasi);
-              System.out.println(InputDataHandler.getRelation());
+//              System.out.println(InputDataHandler.getRelation());
 
         if (InputDataHandler.jmlChecklist == 0) {
             checker = false;
@@ -776,15 +759,17 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
-    private javax.swing.JCheckBox bidangUsahaCBNeg;
     private javax.swing.JPanel jJenisKelamin;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jLevel;
     private javax.swing.JPanel jLokasi;
     private javax.swing.JPanel jPanel1;
@@ -795,11 +780,9 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
     private javax.swing.JPanel jPendidikan;
     private javax.swing.JPanel jUmur;
     private javax.swing.JPanel jbidangUsaha;
-    private javax.swing.JCheckBox jenisKelaminCBNeg;
     private javax.swing.JRadioButton levelKrgDr;
     private javax.swing.JRadioButton levelLbhDr;
     private javax.swing.JRadioButton levelSmDgn;
-    private javax.swing.JCheckBox lokasiCBNeg;
     public javax.swing.JButton nextButton;
     private javax.swing.JCheckBox pendapatanCBNeg2;
     private javax.swing.JRadioButton pendapatanKrgDr;
