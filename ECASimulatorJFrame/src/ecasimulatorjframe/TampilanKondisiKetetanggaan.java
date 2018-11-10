@@ -158,7 +158,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                     .addComponent(umurSmDgn)
                     .addComponent(umurLbhDr)
                     .addComponent(jLabel4))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLevel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -199,11 +199,11 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         jLevelLayout.setVerticalGroup(
             jLevelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLevelLayout.createSequentialGroup()
-                .addContainerGap(11, Short.MAX_VALUE)
+                .addGap(11, 11, 11)
                 .addGroup(jLevelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(levelKrgDr)
                     .addComponent(levelSmDgn)
-                    .addComponent(levelLbhDr)
+                    .addComponent(levelLbhDr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel5))
                 .addContainerGap())
         );
@@ -242,7 +242,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                     .addComponent(pendidikanSmDgn)
                     .addComponent(pendidikanLbhDr)
                     .addComponent(jLabel6))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPendapatan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -262,17 +262,18 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             .addGroup(jPendapatanLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7)
-                .addGap(142, 142, 142)
+                .addGap(139, 139, 139)
                 .addComponent(pendapatanKrgDr)
-                .addGap(30, 30, 30)
+                .addGap(27, 27, 27)
                 .addComponent(pendapatanSmDgn)
                 .addGap(18, 18, 18)
-                .addComponent(pendapatanLbhDr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pendapatanLbhDr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPendapatanLayout.setVerticalGroup(
             jPendapatanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPendapatanLayout.createSequentialGroup()
-                .addContainerGap(11, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPendapatanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(pendapatanKrgDr)
                     .addComponent(pendapatanSmDgn)
@@ -280,6 +281,8 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                     .addComponent(jLabel7))
                 .addContainerGap())
         );
+
+        jJenisKelamin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel8.setText("JENIS KELAMIN");
 
@@ -290,7 +293,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             .addGroup(jJenisKelaminLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(283, Short.MAX_VALUE))
         );
         jJenisKelaminLayout.setVerticalGroup(
             jJenisKelaminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -299,6 +302,8 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jbidangUsaha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel10.setText("BIDANG USAHA");
 
@@ -309,7 +314,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             .addGroup(jbidangUsahaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel10)
-                .addContainerGap(298, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jbidangUsahaLayout.setVerticalGroup(
             jbidangUsahaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -318,6 +323,8 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 .addComponent(jLabel10)
                 .addContainerGap())
         );
+
+        jLokasi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel9.setText("LOKASI");
 
@@ -332,9 +339,10 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         );
         jLokasiLayout.setVerticalGroup(
             jLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLokasiLayout.createSequentialGroup()
-                .addGap(0, 11, Short.MAX_VALUE)
-                .addComponent(jLabel9))
+            .addGroup(jLokasiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -342,21 +350,22 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jbidangUsaha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLokasi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jJenisKelamin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 56, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLokasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbidangUsaha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 83, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(7, 7, 7)
+                .addComponent(jJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLokasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbidangUsaha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         jPendapatan2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -437,16 +446,16 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(30, 30, 30)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jUmur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jUmur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPendidikan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPendidikan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPendapatan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPendapatan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3821, 3821, 3821))
@@ -483,17 +492,18 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(backButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
-                .addComponent(nextButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 212, Short.MAX_VALUE)
+                .addComponent(nextButton)
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backButton)
                     .addComponent(nextButton))
-                .addContainerGap())
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -501,22 +511,21 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -560,159 +569,190 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         //System.out.println(InputDataHandler.getKetetanggaan());
         int[] kumpulanNilaiRelasi = new int[InputDataHandler.getKetetanggaan()];
         //umur
-        if (umurLbhDr.isSelected()) {
-            InputDataHandler.inputDataKetetanggaan("umurLbhDr", umurLbhDr.getText());
-            nilaiRB = InputDataHandler.getValue("umurLbhDr");
-            if (nilaiRB.equals(">=")) {
-                nilaiRB = "2";
-            }
-            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-            n++;
-            // System.out.println(kumpulanNilaiRelasi[0]);
-            checker = true;
-        } else {
-            if (umurSmDgn.isSelected()) {
-                InputDataHandler.inputDataKetetanggaan("umurSmDgn", umurSmDgn.getText());
-                nilaiRB = InputDataHandler.getValue("umurSmDgn");
-                if (nilaiRB.equals("=")) {
-                    nilaiRB = "0";
+        if (InputDataHandler.checkKey("umurInternal")) {
+            if (umurLbhDr.isSelected()) {
+                InputDataHandler.inputDataKetetanggaan("umurLbhDr", umurLbhDr.getText());
+                nilaiRB = InputDataHandler.getValue("umurLbhDr");
+                if (nilaiRB.equals(">=")) {
+                    nilaiRB = "2";
                 }
                 kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                 n++;
                 // System.out.println(kumpulanNilaiRelasi[0]);
                 checker = true;
             } else {
-                if (umurKrgDr.isSelected()) {
-                    InputDataHandler.inputDataKetetanggaan("umurKurangDari", umurKrgDr.getText());
-                    nilaiRB = InputDataHandler.getValue("umurKurangDari");
-                    if (nilaiRB.equals("<=")) {
-                        nilaiRB = "1";
+                if (umurSmDgn.isSelected()) {
+                    InputDataHandler.inputDataKetetanggaan("umurSmDgn", umurSmDgn.getText());
+                    nilaiRB = InputDataHandler.getValue("umurSmDgn");
+                    if (nilaiRB.equals("=")) {
+                        nilaiRB = "0";
                     }
                     kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                     n++;
-                    //  System.out.println(kumpulanNilaiRelasi[0]);
+                    // System.out.println(kumpulanNilaiRelasi[0]);
                     checker = true;
+                } else {
+                    if (umurKrgDr.isSelected()) {
+                        InputDataHandler.inputDataKetetanggaan("umurKurangDari", umurKrgDr.getText());
+                        nilaiRB = InputDataHandler.getValue("umurKurangDari");
+                        if (nilaiRB.equals("<=")) {
+                            nilaiRB = "1";
+                        }
+                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                        n++;
+                        //  System.out.println(kumpulanNilaiRelasi[0]);
+                        checker = true;
+                    }
                 }
             }
-        }
-        
-        if (!umurLbhDr.isSelected()) {
-            if (!umurSmDgn.isSelected()) {
-                if (!umurKrgDr.isSelected()) {
-                    checker = false;
+
+            if (!umurLbhDr.isSelected()) {
+                if (!umurSmDgn.isSelected()) {
+                    if (!umurKrgDr.isSelected()) {
+                        checker = false;
+                    }
                 }
             }
         }
 
         // level
-        if (levelLbhDr.isSelected()) {
-            InputDataHandler.inputDataKetetanggaan("levelLbhDr", levelLbhDr.getText());
-            nilaiRB = InputDataHandler.getValue("levelLbhDr");
-            if (nilaiRB.equals(">=")) {
-                nilaiRB = "2";
-            }
-            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-            n++;
-            checker = true;
-        } else {
-            if (levelSmDgn.isSelected()) {
-                InputDataHandler.inputDataKetetanggaan("levelSmDgn", levelSmDgn.getText());
-                nilaiRB = InputDataHandler.getValue("levelSmDgn");
-                if (nilaiRB.equals("=")) {
-                    nilaiRB = "0";
+        if (InputDataHandler.checkKey("levelInternal")) {
+            if (levelLbhDr.isSelected()) {
+                InputDataHandler.inputDataKetetanggaan("levelLbhDr", levelLbhDr.getText());
+                nilaiRB = InputDataHandler.getValue("levelLbhDr");
+                if (nilaiRB.equals(">=")) {
+                    nilaiRB = "2";
                 }
                 kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                 n++;
                 checker = true;
             } else {
-                if (levelKrgDr.isSelected()) {
-                    InputDataHandler.inputDataKetetanggaan("levelKurangDari", levelKrgDr.getText());
-                    nilaiRB = InputDataHandler.getValue("levelKurangDari");
-                    if (nilaiRB.equals("<=")) {
-                        nilaiRB = "1";
+                if (levelSmDgn.isSelected()) {
+                    InputDataHandler.inputDataKetetanggaan("levelSmDgn", levelSmDgn.getText());
+                    nilaiRB = InputDataHandler.getValue("levelSmDgn");
+                    if (nilaiRB.equals("=")) {
+                        nilaiRB = "0";
                     }
                     kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                     n++;
                     checker = true;
+                } else {
+                    if (levelKrgDr.isSelected()) {
+                        InputDataHandler.inputDataKetetanggaan("levelKurangDari", levelKrgDr.getText());
+                        nilaiRB = InputDataHandler.getValue("levelKurangDari");
+                        if (nilaiRB.equals("<=")) {
+                            nilaiRB = "1";
+                        }
+                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                        n++;
+                        checker = true;
+                    }
+                }
+            }
+
+            if (!levelLbhDr.isSelected()) {
+                if (!levelSmDgn.isSelected()) {
+                    if (!levelKrgDr.isSelected()) {
+                        checker = false;
+                    }
                 }
             }
         }
 
         //pendidikan
-        if (pendidikanLbhDr.isSelected()) {
-            InputDataHandler.inputDataKetetanggaan("pendidikanLbhDr", pendidikanLbhDr.getText());
-            nilaiRB = InputDataHandler.getValue("pendidikanLbhDr");
-            if (nilaiRB.equals(">=")) {
-                nilaiRB = "2";
-            }
-            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-            n++;
-            checker = true;
-        } else {
-            if (pendidikanSmDgn.isSelected()) {
-                InputDataHandler.inputDataKetetanggaan("pendidikanSmDgn", pendidikanSmDgn.getText());
-                nilaiRB = InputDataHandler.getValue("pendidikanSmDgn");
-                if (nilaiRB.equals("=")) {
-                    nilaiRB = "0";
+        if (InputDataHandler.checkKey("pendidikanInternal")) {
+            if (pendidikanLbhDr.isSelected()) {
+                InputDataHandler.inputDataKetetanggaan("pendidikanLbhDr", pendidikanLbhDr.getText());
+                nilaiRB = InputDataHandler.getValue("pendidikanLbhDr");
+                if (nilaiRB.equals(">=")) {
+                    nilaiRB = "2";
                 }
                 kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                 n++;
                 checker = true;
             } else {
-                if (pendidikanKrgDr.isSelected()) {
-                    InputDataHandler.inputDataKetetanggaan("pendidikanKurangDari", pendidikanKrgDr.getText());
-                    nilaiRB = InputDataHandler.getValue("pendidikanKurangDari");
-                    if (nilaiRB.equals("<=")) {
-                        nilaiRB = "1";
+                if (pendidikanSmDgn.isSelected()) {
+                    InputDataHandler.inputDataKetetanggaan("pendidikanSmDgn", pendidikanSmDgn.getText());
+                    nilaiRB = InputDataHandler.getValue("pendidikanSmDgn");
+                    if (nilaiRB.equals("=")) {
+                        nilaiRB = "0";
                     }
                     kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                     n++;
                     checker = true;
+                } else {
+                    if (pendidikanKrgDr.isSelected()) {
+                        InputDataHandler.inputDataKetetanggaan("pendidikanKurangDari", pendidikanKrgDr.getText());
+                        nilaiRB = InputDataHandler.getValue("pendidikanKurangDari");
+                        if (nilaiRB.equals("<=")) {
+                            nilaiRB = "1";
+                        }
+                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                        n++;
+                        checker = true;
+                    }
+                }
+            }
+            if (!pendidikanLbhDr.isSelected()) {
+                if (!pendidikanSmDgn.isSelected()) {
+                    if (!pendidikanKrgDr.isSelected()) {
+                        checker = false;
+                    }
                 }
             }
         }
 
         // pendapatan
-        if (pendapatanLbhDr.isSelected()) {
-            InputDataHandler.inputDataKetetanggaan("pendapatanLbhDr", pendapatanLbhDr.getText());
-            nilaiRB = InputDataHandler.getValue("pendapatanLbhDr");
-            if (nilaiRB.equals(">=")) {
-                nilaiRB = "2";
-            }
-            kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
-            n++;
-            checker = true;
-        } else {
-            if (pendapatanSmDgn.isSelected()) {
-                InputDataHandler.inputDataKetetanggaan("pendapatanSmDgn", pendapatanSmDgn.getText());
-                nilaiRB = InputDataHandler.getValue("pendapatanSmDgn");
-                if (nilaiRB.equals("=")) {
-                    nilaiRB = "0";
+        if (InputDataHandler.checkKey("pendapatanInternal")) {
+            if (pendapatanLbhDr.isSelected()) {
+                InputDataHandler.inputDataKetetanggaan("pendapatanLbhDr", pendapatanLbhDr.getText());
+                nilaiRB = InputDataHandler.getValue("pendapatanLbhDr");
+                if (nilaiRB.equals(">=")) {
+                    nilaiRB = "2";
                 }
                 kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                 n++;
                 checker = true;
             } else {
-                if (pendapatanKrgDr.isSelected()) {
-                    InputDataHandler.inputDataKetetanggaan("pendapatanKurangDari", pendapatanKrgDr.getText());
-                    nilaiRB = InputDataHandler.getValue("pendapatanKurangDari");
-                    if (nilaiRB.equals("<=")) {
-                        nilaiRB = "1";
+                if (pendapatanSmDgn.isSelected()) {
+                    InputDataHandler.inputDataKetetanggaan("pendapatanSmDgn", pendapatanSmDgn.getText());
+                    nilaiRB = InputDataHandler.getValue("pendapatanSmDgn");
+                    if (nilaiRB.equals("=")) {
+                        nilaiRB = "0";
                     }
                     kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                     n++;
                     checker = true;
+                } else {
+                    if (pendapatanKrgDr.isSelected()) {
+                        InputDataHandler.inputDataKetetanggaan("pendapatanKurangDari", pendapatanKrgDr.getText());
+                        nilaiRB = InputDataHandler.getValue("pendapatanKurangDari");
+                        if (nilaiRB.equals("<=")) {
+                            nilaiRB = "1";
+                        }
+                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                        n++;
+                        checker = true;
+                    }
+                }
+            }
+            if (!pendapatanLbhDr.isSelected()) {
+                if (!pendapatanSmDgn.isSelected()) {
+                    if (!pendapatanKrgDr.isSelected()) {
+                        checker = false;
+                    }
                 }
             }
         }
 
         InputDataHandler.setRelation(kumpulanNilaiRelasi);
 //              System.out.println(InputDataHandler.getRelation());
-
-        if (InputDataHandler.jmlChecklist == 0) {
-            checker = false;
-            //JOptionPane.showMessageDialog(null, "Check box is empty, you must fill it first!");
-        }
+        // jika jumlah relasi ketetanggaan (radio button)yang dipilih ga sesuai sama jumlah tetangga
+        // ga akan bisa next
+//        if (InputDataHandler.getRelation().length != InputDataHandler.getKetetanggaan()) {
+//            checker = false;
+//            
+//        }
         if (checker == true) {
             this.hide();
             TampilanKondisiEksternal ke = new TampilanKondisiEksternal();

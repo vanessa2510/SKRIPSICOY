@@ -44,6 +44,8 @@
 \contentsline {subsection}{\numberline {4.1.5}Kelas TampilanSimulasi}{40}{subsection.4.1.5}
 \contentsline {subsection}{\numberline {4.1.6}Kelas TampilanHasil}{40}{subsection.4.1.6}
 \contentsline {subsection}{\numberline {4.1.7}Kelas InputDataHandler}{40}{subsection.4.1.7}
-\contentsline {chapter}{Daftar Referensi}{41}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Kode Program}{43}{appendix.A}
-\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{45}{appendix.B}
+\contentsline {section}{\numberline {4.2}Rancangan Antarmuka}{41}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}TampilanKondisiInternal}{41}{subsection.4.2.1}
+\contentsline {chapter}{Daftar Referensi}{43}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Kode Program}{45}{appendix.A}
+\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{47}{appendix.B}

@@ -495,8 +495,8 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
                 kumpulanNilaiPF[0] = Double.parseDouble(InputDataHandler.getValue("nilaiKeuanganKewirausahaan"));
 //                System.out.println(kumpulanNilaiPF[0]);
                 if (!nilaiKPEkonomi.getText().equals("")) {
-                    isiNilaiKP = Double.parseDouble(nilaiKPEkonomi.getText()) / 100.0;
-                    String nilaiKP = Double.toString(isiNilaiKP);
+                    isiNilaiKPE = Double.parseDouble(nilaiKPEkonomi.getText()) / 100.0;
+                    String nilaiKP = Double.toString(isiNilaiKPE);
                     InputDataHandler.inputDataEksternal("nilaiKPEkonomi", nilaiKP);
                     kumpulanNilaiPF[1] = Double.parseDouble(InputDataHandler.getValue("nilaiKPEkonomi"));
                     if (!nilaiKPPajak.getText().equals("")) {
@@ -583,7 +583,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
                 }
             }
         }
-        if (kumpulanNilaiPF[0] + kumpulanNilaiPF[1] + kumpulanNilaiPF[2] + kumpulanNilaiPF[3] + kumpulanNilaiPF[4] + kumpulanNilaiPF[5] + kumpulanNilaiPF[6] + kumpulanNilaiPF[7] + kumpulanNilaiPF[8] + kumpulanNilaiPF[9] + kumpulanNilaiPF[10] + kumpulanNilaiPF[11] != 1.0) {
+        if (kumpulanNilaiPF[0] + kumpulanNilaiPF[1] + kumpulanNilaiPF[2] + kumpulanNilaiPF[3] + kumpulanNilaiPF[4] + kumpulanNilaiPF[5] + kumpulanNilaiPF[6] + kumpulanNilaiPF[7] + kumpulanNilaiPF[8] + kumpulanNilaiPF[9] + kumpulanNilaiPF[10] + kumpulanNilaiPF[11] != 1) {
             JOptionPane.showMessageDialog(null, "The sum of text fields must 100.0!");
             checker = false;
         }
