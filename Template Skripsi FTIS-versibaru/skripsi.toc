@@ -37,7 +37,7 @@
 \contentsline {subsection}{\numberline {3.5.7}Kelas State}{36}{subsection.3.5.7}
 \contentsline {chapter}{\numberline {4}Perancangan}{37}{chapter.4}
 \contentsline {section}{\numberline {4.1}Diagram Kelas}{37}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Kelas TampilanKondisiInternal}{38}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.1}Kelas TampilanBobotKetetanggaan}{38}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Kelas TampilanKondisiKetetanggaan}{38}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Kelas TampilanKondisiEksternal}{38}{subsection.4.1.3}
 \contentsline {subsection}{\numberline {4.1.4}Kelas DataWirausaha}{38}{subsection.4.1.4}
@@ -46,6 +46,11 @@
 \contentsline {subsection}{\numberline {4.1.7}Kelas InputDataHandler}{40}{subsection.4.1.7}
 \contentsline {section}{\numberline {4.2}Rancangan Antarmuka}{41}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}TampilanKondisiInternal}{41}{subsection.4.2.1}
-\contentsline {chapter}{Daftar Referensi}{43}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Kode Program}{45}{appendix.A}
-\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{47}{appendix.B}
+\contentsline {subsection}{\numberline {4.2.2}TampilanKondisiKetetanggaan}{42}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}TampilanKondisiEksternal}{43}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}TampilanDataWirausaha}{44}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}TampilanSimulasi}{45}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}TampilanHasil}{45}{subsection.4.2.6}
+\contentsline {chapter}{Daftar Referensi}{47}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Kode Program}{49}{appendix.A}
+\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{51}{appendix.B}
