@@ -51,6 +51,10 @@
 \contentsline {subsection}{\numberline {4.2.4}TampilanDataWirausaha}{44}{subsection.4.2.4}
 \contentsline {subsection}{\numberline {4.2.5}TampilanSimulasi}{45}{subsection.4.2.5}
 \contentsline {subsection}{\numberline {4.2.6}TampilanHasil}{45}{subsection.4.2.6}
-\contentsline {chapter}{Daftar Referensi}{47}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Kode Program}{49}{appendix.A}
-\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{51}{appendix.B}
+\contentsline {chapter}{\numberline {5}Implementasi dan Pengujian}{47}{chapter.5}
+\contentsline {section}{\numberline {5.1}Implementasi}{47}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Implementasi}{47}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Hasil Implementasi}{47}{subsection.5.1.2}
+\contentsline {chapter}{Daftar Referensi}{57}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Kode Program}{59}{appendix.A}
+\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{61}{appendix.B}
