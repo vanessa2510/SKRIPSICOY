@@ -113,7 +113,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setText("bulan");
+        jLabel8.setText(" bulan");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -151,7 +151,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                 .addComponent(nilaiPeriode, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -257,18 +257,18 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                 }
             }
         }
-
+        
         if (a + b + c != 1.0) {
             JOptionPane.showMessageDialog(null, "The sum of a,b and c's value must 1!");
             //checker = false;
         }
-
+        
         if (checker == false) {
             JOptionPane.showMessageDialog(null, "You must fill the text field first!");
         }
-
+        
         double[] composition = new double[]{a, b, c};
-
+        
         double[] POAf = new double[]{8.6, 17.7, 28.4, 29.5, 15.8}; // female
         double[] POAm = new double[]{8.3, 14.5, 26.7, 36.2, 14.3}; // male
 
@@ -347,13 +347,13 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         // Faktor Publik
         double[] pfs = new double[]{3.06, 2.69, 2.22, 2.53, 2.54, 3.3, 2.31, 3.25, 3.92, 2.82, 3.45, 3.29};
         double[] pfw = InputDataHandler.getDataEksternal();
-
+        
         double[] nw = InputDataHandler.getBobot();
         int[] nr = InputDataHandler.getRelation();
-
+        
         ca.pub.setFactors(pfs);
         ca.pub.setWeights(pfw);
-
+        
         ca.N.setWeight(nw);
         ca.N.setRelation(nr);
 
@@ -367,18 +367,17 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         Entrepreneurs[][] e = new Entrepreneurs[maxIter][];
         for (int i = 0; i < maxIter; i++) {
             ca.NeighborhoodDefinition();
-            if (i % 12 == 0){
+            if (i % 12 == 0) {
                 ca.print(i);
             }
-                ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf, FFAf, FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf, HSSIm, HSSLf, HSSLm, HSSAf, HSSAm, HSSEf, HSSEm);
-                // System.out.println(ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf));
-                Entrepreneurs[] nE;
-                e[i] = ca.stateTransition(ca, composition);
-                for (int j = 0; j < e[i].length; j++) {
-                    System.out.println(e[i][j].toString2());
-                }
-                ca.E = e[i];
-            
+            ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf, FFAf, FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf, HSSIm, HSSLf, HSSLm, HSSAf, HSSAm, HSSEf, HSSEm);
+            Entrepreneurs[] nE;
+            e[i] = ca.stateTransition(ca, composition);
+            for (int j = 0; j < e[i].length; j++) {
+                System.out.println(e[i][j].toString2());
+            }
+            ca.E = e[i];
+
 //                System.out.println(nE);
         }
         this.hide();

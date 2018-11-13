@@ -26,9 +26,10 @@ public class CA {
     Neighborhoods N;
     PublicFactor pub;
     int[] S; // state ?
-    float P; 
+    float P;
     float[] delta;
     float[] sigma;
+    int numOfMonth;
     //penambahan
 //    double a;
 //    double b;
@@ -45,19 +46,25 @@ public class CA {
         E = new Entrepreneurs[n];
         N = new Neighborhoods(n, m);
         pub = new PublicFactor(pf);
+        this.numOfMonth = 1; // bulan ke 1
     }
 
-    Entrepreneurs[] stateTransition(CA model,double [] composition) {
+    Entrepreneurs[] stateTransition(CA model, double[] composition) {
         int size = model.popSize;
         Entrepreneurs[] nextEnt = new Entrepreneurs[size];
 
         for (int i = 0; i < size; i++) {
             nextEnt[i] = new Entrepreneurs();
             model.E[i].copy(nextEnt[i]);
-            nextEnt[i].age++;
+//            int periode = Integer.parseInt(InputDataHandler.getValue("periode"));
+//            //jika periodenya merupakan kelipatan 12 maka umurnya ditambah 1
+            if (this.numOfMonth % 12 == 0) {
+                nextEnt[i].age++;
+            }
             nextEnt[i].b_age++;
-            nextLevel(nextEnt[i], i, model,composition);
+            nextLevel(nextEnt[i], i, model, composition);
         }
+        this.numOfMonth++;
         return nextEnt;
     }
 
@@ -74,16 +81,18 @@ public class CA {
         }
         return sum;
     }
+
     //perubahan di threshold
-    void nextLevel(Entrepreneurs ne, int i, CA model,double [] composition) {
+
+    void nextLevel(Entrepreneurs ne, int i, CA model, double[] composition) {
         //kasus umur yang sudah lebih dari 64th
         if (ne.age > (64 * 12)) {
             ne.level = State.RETIRED;
             ne.b_age = 0;
         } else {
-            double idx = getIndex(i, model,composition);
+            double idx = getIndex(i, model, composition);
             threshold = Double.parseDouble(InputDataHandler.getValue("threshold"));
-            if (idx < threshold ) {
+            if (idx < threshold) {
                 ne.level = State.POTENTIAL;
                 ne.b_age = 0;
             } else {
@@ -105,7 +114,8 @@ public class CA {
             }
         }
     }
-    double getIndex(int i, CA model,double [] composition) {
+
+    double getIndex(int i, CA model, double[] composition) {
         return composition[0] * model.E[i].point + composition[1] * this.getNeighborIndex(model, i) + composition[2] * this.pub.getPublicIdx();
     }
 
@@ -162,7 +172,7 @@ public class CA {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
                             }
                             break;
-                         
+
                         case 5: // pendidikan
                             if ((this.N.relation[i] == 0) && (this.E[j].education == this.E[k].education)) {
                                 this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
@@ -426,7 +436,6 @@ public class CA {
 //        }
 //
 //    }
-
     void print(int iter) {
         int l0 = 0;
         int l1 = 0;
@@ -454,8 +463,10 @@ public class CA {
         }
         System.out.println(iter + ", " + l0 + ", " + l1 + ", " + l2 + ", " + l3 + ", " + l4);
     }
+
     // perubahan : ditambahin faktor psikologisnya
-    void calculatePoint(double[] POAm, double[] POAf, double[] POEm, double[] POEf, double[] POLm, double[] POLf, double[] POIm, double[] POIf, double[] PCAm, double[] PCAf, double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, double[] PCIm, double[] PCIf, double[] RMAm, double[] RMAf, double[] RMIm, double[] RMIf, double[] FFAf, double[] FFAm, double[] FFEf, double[] FFEm, double[] FFLf, double[] FFLm, double[] MALf, double[] MALm, double[] MAIf, double[] MAIm, double[] HSSIf, double[] HSSIm, double[] HSSLf, double[] HSSLm, double[] HSSAf, double[] HSSAm, double[] HSSEf, double[] HSSEm ) {
+
+    void calculatePoint(double[] POAm, double[] POAf, double[] POEm, double[] POEf, double[] POLm, double[] POLf, double[] POIm, double[] POIf, double[] PCAm, double[] PCAf, double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, double[] PCIm, double[] PCIf, double[] RMAm, double[] RMAf, double[] RMIm, double[] RMIf, double[] FFAf, double[] FFAm, double[] FFEf, double[] FFEm, double[] FFLf, double[] FFLm, double[] MALf, double[] MALm, double[] MAIf, double[] MAIm, double[] HSSIf, double[] HSSIm, double[] HSSLf, double[] HSSLm, double[] HSSAf, double[] HSSAm, double[] HSSEf, double[] HSSEm) {
         for (int i = 0; i < this.popSize; i++) {
             int a = getAgeRange(E[i].age);
             if (this.E[i].sex) {
@@ -502,7 +513,6 @@ public class CA {
 //    public double getThreshold() {
 //        return threshold;
 //    }
-
 //    public double getA() {
 //        return a;
 //    }

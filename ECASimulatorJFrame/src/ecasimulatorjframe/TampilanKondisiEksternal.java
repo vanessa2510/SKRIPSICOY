@@ -583,7 +583,15 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
                 }
             }
         }
-        if (kumpulanNilaiPF[0] + kumpulanNilaiPF[1] + kumpulanNilaiPF[2] + kumpulanNilaiPF[3] + kumpulanNilaiPF[4] + kumpulanNilaiPF[5] + kumpulanNilaiPF[6] + kumpulanNilaiPF[7] + kumpulanNilaiPF[8] + kumpulanNilaiPF[9] + kumpulanNilaiPF[10] + kumpulanNilaiPF[11] != 1) {
+        int totalNilai=0;
+        for (int i = 0; i < kumpulanNilaiPF.length; i++) {
+            System.out.println(kumpulanNilaiPF[i]);
+            totalNilai+=kumpulanNilaiPF[i]*100;
+            System.out.println(totalNilai);
+        }
+        
+        if ( totalNilai != 100) {
+//            System.out.println(1.0-totalNilai);
             JOptionPane.showMessageDialog(null, "The sum of text fields must 100.0!");
             checker = false;
         }
