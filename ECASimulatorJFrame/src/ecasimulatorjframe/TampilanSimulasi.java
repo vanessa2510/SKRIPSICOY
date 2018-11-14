@@ -6,6 +6,8 @@
 package ecasimulatorjframe;
 
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -257,18 +259,18 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         if (a + b + c != 1.0) {
             JOptionPane.showMessageDialog(null, "The sum of a,b and c's value must 1!");
             //checker = false;
         }
-        
+
         if (checker == false) {
             JOptionPane.showMessageDialog(null, "You must fill the text field first!");
         }
-        
+
         double[] composition = new double[]{a, b, c};
-        
+
         double[] POAf = new double[]{8.6, 17.7, 28.4, 29.5, 15.8}; // female
         double[] POAm = new double[]{8.3, 14.5, 26.7, 36.2, 14.3}; // male
 
@@ -347,13 +349,13 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         // Faktor Publik
         double[] pfs = new double[]{3.06, 2.69, 2.22, 2.53, 2.54, 3.3, 2.31, 3.25, 3.92, 2.82, 3.45, 3.29};
         double[] pfw = InputDataHandler.getDataEksternal();
-        
+
         double[] nw = InputDataHandler.getBobot();
         int[] nr = InputDataHandler.getRelation();
-        
+
         ca.pub.setFactors(pfs);
         ca.pub.setWeights(pfw);
-        
+
         ca.N.setWeight(nw);
         ca.N.setRelation(nr);
 
@@ -365,24 +367,42 @@ public class TampilanSimulasi extends javax.swing.JFrame {
 //            out.println("iter,potential,nascent,new_bm,est_bm,retired");
 
         Entrepreneurs[][] e = new Entrepreneurs[maxIter][];
-        for (int i = 0; i < maxIter; i++) {
-            ca.NeighborhoodDefinition();
-            if (i % 12 == 0) {
-                ca.print(i);
+        String line = "";
+        try {
+            PrintWriter pw = new PrintWriter(new File("D:\\output.csv"));
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < maxIter; i++) {
+                sb.append("Bulan ke-" + i);
+                sb.append('\n');
+                line = ca.print(i);
+                System.out.println(line);
+                ca.NeighborhoodDefinition();
+                ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf, FFAf, FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf, HSSIm, HSSLf, HSSLm, HSSAf, HSSAm, HSSEf, HSSEm);
+                Entrepreneurs[] nE;
+                e[i] = ca.stateTransition(ca, composition);
+
+                for (int j = 0; j < e[i].length; j++) {
+//                    String lines = e[i][j].toString2();
+//                    System.out.println(e[i][j].toString2());
+                    sb.append(e[i][j].toString2());
+                    sb.append('\n');
+
+                }
+                ca.E = e[i];
+
             }
-            ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf, FFAf, FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf, HSSIm, HSSLf, HSSLm, HSSAf, HSSAm, HSSEf, HSSEm);
-            Entrepreneurs[] nE;
-            e[i] = ca.stateTransition(ca, composition);
-            for (int j = 0; j < e[i].length; j++) {
-                System.out.println(e[i][j].toString2());
-            }
-            ca.E = e[i];
+            pw.write(sb.toString());
+            pw.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TampilanSimulasi.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
 //                System.out.println(nE);
-        }
         this.hide();
-        TampilanHasil th = new TampilanHasil(e);
-        th.setVisible(true);
+        TampilanHasil th = new TampilanHasil(e,ca);
+
+        th.setVisible(
+                true);
 //        } catch (IOException ex) {
 //            System.out.println("Gagal menulis File");
 //            Logger.getLogger(TampilanSimulasi.class.getName()).log(Level.SEVERE, null, ex);
@@ -405,16 +425,21 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TampilanSimulasi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TampilanSimulasi.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TampilanSimulasi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TampilanSimulasi.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TampilanSimulasi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TampilanSimulasi.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TampilanSimulasi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TampilanSimulasi.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 

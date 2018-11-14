@@ -585,9 +585,9 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
         }
         int totalNilai=0;
         for (int i = 0; i < kumpulanNilaiPF.length; i++) {
-            System.out.println(kumpulanNilaiPF[i]);
+//            System.out.println(kumpulanNilaiPF[i]);
             totalNilai+=kumpulanNilaiPF[i]*100;
-            System.out.println(totalNilai);
+//            System.out.println(totalNilai);
         }
         
         if ( totalNilai != 100) {

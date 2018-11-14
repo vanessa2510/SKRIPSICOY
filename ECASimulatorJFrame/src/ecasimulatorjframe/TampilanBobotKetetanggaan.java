@@ -505,9 +505,9 @@ public class TampilanBobotKetetanggaan extends javax.swing.JFrame {
         
         int totalNilai=0;
         for (int i = 0; i < kumpulanBobot.length; i++) {
-            System.out.println(kumpulanBobot[i]);
+//            System.out.println(kumpulanBobot[i]);
             totalNilai+=kumpulanBobot[i]*100;
-            System.out.println(totalNilai);
+//            System.out.println(totalNilai);
         }
         if (totalNilai != 100) {
             JOptionPane.showMessageDialog(null, "The sum of text fields must 100.0!");

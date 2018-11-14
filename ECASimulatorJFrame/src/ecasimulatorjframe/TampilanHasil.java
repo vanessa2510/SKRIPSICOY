@@ -17,10 +17,12 @@ public class TampilanHasil extends javax.swing.JFrame {
      * Creates new form TampilanHasil
      */
     Entrepreneurs[][] e;
+    CA ca;
 
-    public TampilanHasil(Entrepreneurs[][] e) {
+    public TampilanHasil(Entrepreneurs[][] e, CA ca) {
         initComponents();
         this.e = e;
+        this.ca = ca;
     }
 
     /**
@@ -48,7 +50,7 @@ public class TampilanHasil extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Jenis Kelamin", "Umur", "Usia Bisnis", "Kategori", "SubKategori", "Pendidikan", "Lokasi", "Pendapatan", "Level"
+                "Iterasi", "Potential", "Nascent", "New Business Manager", "Established", "Retired"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -85,15 +87,23 @@ public class TampilanHasil extends javax.swing.JFrame {
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         // TODO add your handling code here:
+//        String lines = "";
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+//        int periode = Integer.parseInt(InputDataHandler.getValue("periode"));
         for (int i = 0; i < e.length; i++) {
-            for (int j = 0; j < e[i].length; j++) {
-                String lines = e[i][j].toString2().trim();
-                System.out.println(lines);
-                String[] dataRow = lines.split(",");
-                model.addRow(dataRow);
-            }
+//            ca.print(i);
+            System.out.println(ca.print(i));
+            String[] dataRow1 = ca.print(i).split(",");
+            model.addRow(dataRow1);
+//            for (int j = 0; j < e[i].length; j++) {
+//                String lines = e[i][j].toString2().trim();
+////                System.out.println(lines);
+//                String[] dataRow2 = lines.split(",");
+//                model.addRow(dataRow2);
+//            }
         }
+
+
     }//GEN-LAST:event_formWindowActivated
 
     /**

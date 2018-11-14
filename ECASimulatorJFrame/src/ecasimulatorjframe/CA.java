@@ -56,10 +56,8 @@ public class CA {
         for (int i = 0; i < size; i++) {
             nextEnt[i] = new Entrepreneurs();
             model.E[i].copy(nextEnt[i]);
-//            int periode = Integer.parseInt(InputDataHandler.getValue("periode"));
-//            //jika periodenya merupakan kelipatan 12 maka umurnya ditambah 1
             if (this.numOfMonth % 12 == 0) {
-                nextEnt[i].age++;
+                nextEnt[i].age++; // tiap kelipatan 12 umurnya nambah
             }
             nextEnt[i].b_age++;
             nextLevel(nextEnt[i], i, model, composition);
@@ -83,7 +81,6 @@ public class CA {
     }
 
     //perubahan di threshold
-
     void nextLevel(Entrepreneurs ne, int i, CA model, double[] composition) {
         //kasus umur yang sudah lebih dari 64th
         if (ne.age > (64 * 12)) {
@@ -436,7 +433,8 @@ public class CA {
 //        }
 //
 //    }
-    void print(int iter) {
+    String print(int iter) {
+//        int[] level = new int[5];
         int l0 = 0;
         int l1 = 0;
         int l2 = 0;
@@ -461,11 +459,10 @@ public class CA {
                     break;
             }
         }
-        System.out.println(iter + ", " + l0 + ", " + l1 + ", " + l2 + ", " + l3 + ", " + l4);
+        return (iter + ", " + l0 + ", " + l1 + ", " + l2 + ", " + l3 + ", " + l4);
     }
 
     // perubahan : ditambahin faktor psikologisnya
-
     void calculatePoint(double[] POAm, double[] POAf, double[] POEm, double[] POEf, double[] POLm, double[] POLf, double[] POIm, double[] POIf, double[] PCAm, double[] PCAf, double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, double[] PCIm, double[] PCIf, double[] RMAm, double[] RMAf, double[] RMIm, double[] RMIf, double[] FFAf, double[] FFAm, double[] FFEf, double[] FFEm, double[] FFLf, double[] FFLm, double[] MALf, double[] MALm, double[] MAIf, double[] MAIm, double[] HSSIf, double[] HSSIm, double[] HSSLf, double[] HSSLm, double[] HSSAf, double[] HSSAm, double[] HSSEf, double[] HSSEm) {
         for (int i = 0; i < this.popSize; i++) {
             int a = getAgeRange(E[i].age);

@@ -63,6 +63,26 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             kumpulanJPanel[6].setVisible(true);
             //jmlCheckListInternal +=1;
         }
+        
+        ButtonGroup group1 = new ButtonGroup();
+        group1.add(umurLbhDr);
+        group1.add(umurSmDgn);
+        group1.add(umurKrgDr);
+        
+        ButtonGroup group2 = new ButtonGroup();
+        group2.add(levelLbhDr);
+        group2.add(levelSmDgn);
+        group2.add(levelKrgDr);
+        
+        ButtonGroup group3 = new ButtonGroup();
+        group3.add(pendapatanLbhDr);
+        group3.add(pendapatanSmDgn);
+        group3.add(pendapatanKrgDr);
+        
+        ButtonGroup group4 = new ButtonGroup();
+        group4.add(pendidikanLbhDr);
+        group4.add(pendidikanSmDgn);
+        group4.add(pendidikanKrgDr);
 
     }
 
