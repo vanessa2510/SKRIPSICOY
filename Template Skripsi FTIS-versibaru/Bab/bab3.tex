@@ -237,19 +237,122 @@ Pada saat t=2 terdapat 1 kondisi publik baru yaitu physical infrastructures and 
 		\label{fig:t0} 
 	\end{figure}
 	
+\section{Deskripsi Perangkat Lunak}
+\label{dpl}
 
-\section{\textit{Framework} yang Digunakan}
-\label{framework}
-Framework yang akan dipakai pada penelitian ini yaitu java.
-	
-	
+Perangkat lunak ini dibuat untuk memberi gambaran kepada pemerintah atau lembaga umum mengenai pergerakkan wirausaha dalam waktu tertentu. Perangkat lunak ini dibangun di netbeans dengan menggunakan \textit{JFrame}. Dalam perangkat lunak ini, disetiap tampilannya terdapat \textit{check box} dan \textit{text field}
+
+
 \section{Analisis Perangkat Lunak}
 \label{analisisPL}
+
+\subsection{Diagram \textit{Use Case}}
+
+Pada diagram \textit{use case} hanya terdapat satu aktor yaitu pemerintah sebagai \textit{user}. Diagram \textit{use case} dapat dilihat pada gambar \ref{fig:usecase}.
+
+	\begin{figure} [H]
+		\centering  
+		\includegraphics[width=14cm, height=12cm]{UseCase2} 
+		\caption[Use Case ECA]{Use Case ECA} 
+		\label{fig:usecase} 
+	\end{figure}
+	
+Berdasarkan hasil analisis, dibentuk 3 \textit{use case} dengan 1 aktor, yaitu :
+\begin{enumerate}
+	\item \textbf{Memasukkan parameter simulasi}
+	
+	\textit{User} dapat memasukkan parameter seperti bobot setiap ketetanggaan, relasi ketetanggaan, bobot faktor publik, mengisi nilai a,b,c dan threshold serta periode.
+	\item \textbf{Memasukkan file data wirausaha dalam format text}
+	
+	\textit{User} dapat memasukkan data wirausaha yang akan disimulasikan berupa file text.
+	\item \textbf{Menjalankan simulasi}
+	
+	\textit{User} dapat menjalankan simulasi dan melihat hasil simulasi setiap bulannya.
+\end{enumerate}
+
+\textbf{Skenario \textit{Use Case}}
+\begin{enumerate}
+	\item Memasukkan parameter simulasi
+	
+		\begin{itemize}
+			\item Nama : Memasukkan Parameter Simulasi
+			\item Aktor : \textit{User}
+			\item Deskripsi : Memasukkan bobot untuk setiap atribut dan parameter penting dalam simulasi.
+			\item Kondisi awal : \textit{Checkbox} atau \textit{radio button} dan \textit{Text Field} belum terisi.
+			\item Kondisi akhir : \textit{User} telah mengisi \textit{checkbox} atau \textit{radio button} dan \textit{text field}.
+			\item Skenario utama :
+		\end{itemize}
+		
+\begin{table}[H]
+\centering
+\caption{Tabel Skenario Memasukkan Parameter Simulasi}
+\begin{tabular}{|c|p{7cm}|p{7cm}|}
+\hline
+No & Aksi & Reaksi Sistem\\
+\hline
+1 & \textit{User} memasukkan parameter simulasi & Sistem akan menyimpan masukan parameter dari \textit{user}.\\
+\hline
+\end{tabular}
+\label{tabelSkenario1}
+\end{table}
+
+	\item Memasukkan File Data Wirausaha Dalam Format Text
+	\begin{itemize}
+		\item Nama : Memasukkan file data wirausaha dalam format text.
+		\item Aktor : \textit{User}.
+		\item Deskripsi : Memasukkan file data wirausaha yang akan disimulasikan.
+		\item Kondisi awal : \textit{User} meng-klik \textit{button} "OPEN FILE" dan memasukkan file data wirausaha dalam format text.
+		\item Kondisi akhir : Sistem akan menampilkan isi data pada tabel.
+		\item Skenario utama:
+	\end{itemize}
+	
+	\begin{table}[H]
+\centering
+\caption{Tabel Skenario Memasukkan file data wirausaha dalam format text}
+\begin{tabular}{|c|p{7cm}|p{7cm}|}
+\hline
+No & Aksi & Reaksi Sistem\\
+\hline
+1 & \textit{User} meng-klik \textit{button} "OPEN FILE" dan memasukkan file data wirausaha dalam format text. & Sistem akan menampilkan isi data pada tabel. \\
+\hline
+\end{tabular}
+\label{tabelSkenario2}
+\end{table}
+
+	\item Menjalankan Simulasi
+		\begin{itemize}
+			\item Nama : Menjalankan Simulasi
+			\item Aktor : \textit{User}
+			\item Deskripsi : Menjalankan simulasi dan melihat hasil simulasi
+			\item Kondisi awal : \textit{User} meng-klik \textit{button} "SIMULATE"
+			\item Kondisi akhir : Sistem akan menampilkan hasil di tabel dan juga di excel.
+			\item Skenario utama:
+		\end{itemize}
+		
+\begin{table}[H]
+\centering
+\caption{Tabel Skenario Menjalankan Simulasi}
+\begin{tabular}{|c|p{7cm}|p{7cm}|}
+\hline
+No & Aksi & Reaksi Sistem\\
+\hline
+1 & \textit{User} meng-klik \textit{button} "SIMULATE" & Sistem akan menampilkan hasil pada tabel dan juga di excel. \\
+\hline
+\end{tabular}
+\label{tabelSkenario3}
+\end{table}
+		
+\end{enumerate}
+
+
+\subsection{Diagram Kelas}
+
+
 Pada bagian ini akan diberikan diagram kelas ECA beserta penjelasannya.
 
 	\begin{figure} [H]
 		\centering  
-		\includegraphics[width=18cm, height=12cm]{ClassDiagram3} 
+		\includegraphics[width=18cm, height=12cm]{diagramKelas0} 
 		\caption[Diagram Kelas ECA]{Diagram Kelas ECA} 
 		\label{fig:CD1} 
 	\end{figure}
@@ -261,12 +364,25 @@ Pada bagian ini akan diberikan diagram kelas ECA beserta penjelasannya.
 \subsection{Kelas CA} 
 Kelas CA merupakan kelas yang merepresentasikan cellular automata.
 		\begin{enumerate}
-			\item Method stateTransition
+			\item 
+		\end{enumerate}
+		\begin{enumerate}
+			\item \texttt{public Entrepreneurs[] stateTransition(CA model, double[] composition)}\\
+			Merupakan method untuk menentukan perubahan transisi pada seorang wirausaha yang bergantung pada umur dan nilai ambang.\\			Parameter:
+			\begin{itemize}
+				\item \texttt{model} merupakan objek dari kelas CA.
+				\item \texttt{composition} merupakan nilai a,b dan c.
+			\end{itemize}
 			
-			Merupakan method untuk menentukan perubahan transisi pada seorang wirausaha yang bergantung pada umur dan nilai ambang.
-			\item Method getNeighborIndex
+			\item \texttt{public double getNeighborIndex(CA model, int idxEnt)}\\
+			Merupakan method untuk menghitung jumlah ketetanggaan antara wirausaha satu dengan wirausaha lainnya.\\
+			Parameter:
+			\begin{itemize}
+				\item \texttt{model} merupakan objek dari kelas CA.
+				\item \texttt{idxEnt}
+			\end{itemize}
 			
-			Merupakan method untuk menghitung jumlah ketetanggaan antara wirausaha satu dengan wirausaha lainnya.
+			
 			\item Method nextLevel
 			
 			Merupakan method untuk menentukan perubahan level usaha dari seorang wirausaha.

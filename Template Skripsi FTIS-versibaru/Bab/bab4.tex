@@ -7,11 +7,12 @@ Pada bab ini akan dijelaskan perancangan mengenai simulator yang akan dibangun u
 \section{Diagram Kelas}
 \label{sec:perancangankelas}
 
-Dalam membuat simulator diperlukan sebuah GUI atau Interface untuk bisa menggambarkan kinerja suatu sistem. Berdasarkan hasil pengembangan diagram kelas pada bab analisis \ref{fig:CD1}, dibuatlah diagram kelas rinci untuk memenuhi kebutuhan dalam membangun simulator. Deskripsi kelas beserta fungsinya akan dijelaskan pada subbab selanjutnya.
+Dalam membuat simulator diperlukan sebuah GUI atau Interface untuk bisa menggambarkan kinerja suatu sistem. Berdasarkan hasil pengembangan diagram kelas pada bab analisis \ref{fig:CD1}, dibuatlah diagram kelas rinci untuk memenuhi kebutuhan dalam membangun simulator. Deskripsi kelas beserta fungsinya akan dijelaskan pada subbab selanjutnya. (Gambar \ref{fig:classdiagram2})
 
 \begin{figure} [H]
 	\centering  
-	\includegraphics[width=18cm, height=12cm]{ClassDiagram3} 
+	\includegraphics[width=16cm, height=25cm]{diagramKelas1}
+	\caption[Diagram Kelas Simulator ECA]{Diagram Kelas Simulator ECA} 
 	\label{fig:classdiagram2} 
 \end{figure}
 
@@ -128,11 +129,107 @@ Kelas ini merupakan kelas untuk membuka file data wirausaha yang akan disimulasi
 \end{enumerate}
 
 \subsection{Kelas TampilanSimulasi}
-Kelas ini untuk mengisi nilai a, b, c, threshold dan periode. Nilai a,b,c dan threshold bertipe double, sedangkan periode bertipe integer. Periode ini dihitung dalam bulan. Kelas ini juga untuk menghitung Continuity Index yang hasilnya akan dikirim ke kelas TampilanHasil.
+Kelas ini berfungsi untuk mengisi nilai a, b, c, threshold dan periode. Nilai a,b,c dan threshold bertipe double, sedangkan periode bertipe integer. Periode ini dihitung dalam bulan. Kelas ini juga untuk menghitung Continuity Index yang hasil iterasinya akan dikirim ke kelas TampilanHasil dalam bentuk tabel. Selain itu, kelas ini juga akan menampilkan hasil perubahan setiap individu wirausaha dalam setiap bulannya pada file CSV.
+
 \subsection{Kelas TampilanHasil}
-Kelas ini untuk menampilkan hasil iterasi wirausaha untuk setiap periode (bulan).
+Kelas ini berfungsi untuk menampilkan iterasi (per bulan) banyaknya wirausaha yang berada pada level tertentu dalam bentuk tabel.
+
 \subsection{Kelas InputDataHandler}
 Kelas ini merupakan kelas untuk mengambil dan menyimpan data masukan dari \textit{user} yang nantinya akan dipakai untuk menghitung Continuity Index.
+Berikut penjelasan method-method yang ada di kelas InputDataHandler :
+	\begin{itemize}
+		\item \texttt{public static void inputDataInternal(String key, String value)}\\
+		Berfungsi untuk menyimpan masukan pada kelas TampilanBobotKetetanggaan.\\
+		Parameter :
+		\begin{itemize}
+			\item \texttt{key} merupakan kata kunci dari setiap masukan.
+			\item \texttt{value} merupakan nilai dari kata kunci.
+		\end{itemize}
+		
+		\item \texttt{public static boolean checkKey(String key)}\\
+		Berfungsi untuk memeriksa isi nilai dari kata kunci. Return \textit{true} jika kata kunci tersebut mempunyai nilai. Return \textit{false} jika kata kunci tersebut tidak mempunyai nilai.\\
+		Parameter :
+		\begin{itemize}
+			\item \texttt{key} merupakan kata kunci dari setiap masukan.
+		\end{itemize}
+		
+		\item \texttt{public static void inputDataKetetanggaan(String key, String value)}\\
+		Berfungsi untuk menyimpan masukan pada kelas TampilanKondisiKetetanggaan.\\
+		Parameter :
+		\begin{itemize}
+			\item \texttt{key} merupakan kata kunci dari setiap masukan.
+			\item \texttt{value} merupakan nilai dari kata kunci.
+		\end{itemize}
+		
+		\item \texttt{public static void jmlCheckList()}\\
+		Berfungsi untuk menambahkan jumlah \textit{checklist} pada kelas TampilanBobotKetetanggaan.
+		
+		\item \texttt{public static int getKetetanggaan()}\\
+		Berfungsi untuk mengambil nilai ketetanggaan.
+		
+		\item \texttt{public static void inputDataEksternal(String key, String value)}\\
+		Berfungsi untuk menyimpan masukan dari kelas TampilanKondisiEksternal.\\
+		Parameter:
+		\begin{itemize}
+			\item \texttt{key} merupakan kata kunci dari setiap masukan.
+			\item \texttt{value} merupakan nilai dari kata kunci.
+		\end{itemize}
+		
+		\item \texttt{public static void setDataEksternal(double[] kumpulanNilaiPF)}\\
+		Berfungsi untuk mengubah nilai-nilai dari faktor publik.\\
+		Parameter:
+		\begin{itemize}
+			\item \texttt{kumpulanNilaiPF} merupakan kumpulan nilai faktor publik.
+		\end{itemize}
+		
+		\item \texttt{public static double[] getDataEksternal()}\\
+		Berfungsi untuk mengambil nilai-nilai dari faktor publik.
+		
+		\item \texttt{public static String getValue(String key)}\\
+		Berfungsi untuk mengambil nilai dari kata kunci.\\
+		Parameter:
+		\begin{itemize}
+			\item \texttt{key} merupakan kata kunci dari setiap masukan.
+		\end{itemize}
+		
+		\item \texttt{public static void setBobot(double[] bobotAtribut)}\\
+		Berfungsi untuk mengubah nilai-nilai bobot dari setiap atribut.\\
+		Parameter:
+		\begin{itemize}
+			\item \texttt{bobotAtribut} merupakan kumpulan bobot dari setiap atribut.
+		\end{itemize}
+		
+		\item \texttt{public static void getBobot()}\\
+		Berfungsi untuk mengambil nilai dari bobot.
+		
+		\item \texttt{public static void setRelation(int[] nilaiRelation)}\\
+		Berfungsi untuk mengubah nilai-nilai dari setiap relasi.\\
+		Parameter:
+		\begin{itemize}
+			\item \texttt{nilaiRelation} merupakan kumpulan nilai dari setiap relasi.
+		\end{itemize}
+		
+		\item \texttt{public static int[] getRelation()}\\
+		Berfungsi untuk mengambil nilai dari setiap relasi.
+		
+		\item \texttt{public static void setPopulation(int jmlData)}\\
+		Berfungsi untuk mengubah nilai dari populasi.\\
+		Parameter:
+		\begin{itemize}
+			\item \texttt{jmlData} merupakan jumlah dari data masukan \textit{user}.
+		\end{itemize}
+		
+		\item \texttt{public static int getPopulation()}\\
+		Berfungsi untuk mengembalikan nilai dari populasi.
+		
+		\item \texttt{public static void inputDataSimulasi(String key, String value)}\\
+		Berfungsi untuk menyimpan masukan dari kelas TampilanSimulasi.\\
+		Parameter :
+		\begin{itemize}
+			\item \texttt{key} merupakan kata kunci dari setiap masukan.
+			\item \texttt{value} merupakan nilai dari kata kunci.
+		\end{itemize}
+	\end{itemize}
 
 
 \section{Rancangan Antarmuka}
@@ -172,9 +269,11 @@ Pada tampilan kondisi eksternal terdapat 12 faktor publik berdasarkan GEM 2013. 
 
 \begin{figure} [H]
 	\centering  
-	\includegraphics[width=11cm, height=12cm]{tampilanData} 
+	\includegraphics[width=13cm, height=12cm]{tampilanDataWirausaha1} 
 	\label{fig:kondisiDataWirausaha} 
 \end{figure}
+
+Tampilan ini berfungsi untuk memasukkan file data wirausaha dalam format text.
 
 
 \begin{figure} [H]
@@ -183,7 +282,7 @@ Pada tampilan kondisi eksternal terdapat 12 faktor publik berdasarkan GEM 2013. 
 	\label{fig:bukaFile} 
 \end{figure}
 
-Pada tampilan data wirausaha terdapat \textit{button} "OPEN FILE" yang fungsinya untuk membuka file data wirausaha yang akan disimulasikan. Data wirausaha berisi jenis kelamin, umur, usia bisnis, kategori usaha, subkategori usaha, pendidikan, lokasi, pendapatan, level dan point. Point merupakan hasil perhitungan masing-masing wirausaha pada kondisi internal.
+
 
 \subsection{TampilanSimulasi}
 
@@ -196,4 +295,10 @@ Pada tampilan data wirausaha terdapat \textit{button} "OPEN FILE" yang fungsinya
 Pada tampilan simulasi, \textit{user} diminta untuk mengisi nilai a,b,c, threshold dan periode. Total dari nilai a,b dan c harus 1. Periode merupakan berapa lama iterasi tersebut akan berjalan (dalam bulan). Sedangkan \textit{button} "SIMULATE" berfungsi untuk menjalankan simulasi yang hasilnya akan ditampilkan dalam bentuk tabel.
 
 \subsection{TampilanHasil}
+
+\begin{figure} [H]
+	\centering  
+	\includegraphics[width=11cm, height=7cm]{tampilanHasil1} 
+	\label{fig:tampilanHasil} 
+\end{figure}
 
