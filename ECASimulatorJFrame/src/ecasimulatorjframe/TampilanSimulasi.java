@@ -367,15 +367,15 @@ public class TampilanSimulasi extends javax.swing.JFrame {
 //            out.println("iter,potential,nascent,new_bm,est_bm,retired");
 
         Entrepreneurs[][] e = new Entrepreneurs[maxIter][];
-        String line = "";
+        String[] line = new String[maxIter];
         try {
             PrintWriter pw = new PrintWriter(new File("D:\\output.csv"));
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < maxIter; i++) {
                 sb.append("Bulan ke-" + i);
                 sb.append('\n');
-                line = ca.print(i);
-                System.out.println(line);
+                line[i] = ca.print(i);
+//                System.out.println(line);
                 ca.NeighborhoodDefinition();
                 ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf, FFAf, FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf, HSSIm, HSSLf, HSSLm, HSSAf, HSSAm, HSSEf, HSSEm);
                 Entrepreneurs[] nE;
@@ -399,7 +399,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
 
 //                System.out.println(nE);
         this.hide();
-        TampilanHasil th = new TampilanHasil(e,ca);
+        TampilanHasil th = new TampilanHasil(line);
 
         th.setVisible(
                 true);

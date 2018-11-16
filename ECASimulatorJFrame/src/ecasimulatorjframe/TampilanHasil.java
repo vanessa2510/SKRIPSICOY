@@ -16,13 +16,11 @@ public class TampilanHasil extends javax.swing.JFrame {
     /**
      * Creates new form TampilanHasil
      */
-    Entrepreneurs[][] e;
-    CA ca;
+    String[] res;
 
-    public TampilanHasil(Entrepreneurs[][] e, CA ca) {
+    public TampilanHasil(String[] res) {
         initComponents();
-        this.e = e;
-        this.ca = ca;
+        this.res=res;
     }
 
     /**
@@ -90,10 +88,10 @@ public class TampilanHasil extends javax.swing.JFrame {
 //        String lines = "";
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
 //        int periode = Integer.parseInt(InputDataHandler.getValue("periode"));
-        for (int i = 0; i < e.length; i++) {
+        for (int i = 0; i < res.length; i++) {
 //            ca.print(i);
-            System.out.println(ca.print(i));
-            String[] dataRow1 = ca.print(i).split(",");
+//            System.out.println(ca.print(i));
+            String[] dataRow1 = res[i].split(",");
             model.addRow(dataRow1);
 //            for (int j = 0; j < e[i].length; j++) {
 //                String lines = e[i][j].toString2().trim();
