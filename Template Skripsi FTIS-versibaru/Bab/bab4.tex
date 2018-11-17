@@ -16,6 +16,18 @@ Dalam membuat simulator diperlukan sebuah GUI atau Interface untuk bisa menggamb
 	\label{fig:classdiagram2} 
 \end{figure}
 
+\subsection{Kelas CA}
+Dilakukan perubahan pada tiga method di kelas CA yaitu :
+\begin{itemize}
+	\item \texttt{public Entrepreneur[] stateTransition(CA model, double[] composition)}\\
+	Perubahan yang dilakukan adalah pada saat menambahkan umur wirausaha. Umur wirausaha akan ditambah jika bulannya sudah mencapai 12 bulan atau kelipatan 12 bulan. Dilakukan perubahan agar pada setiap iterasi (bulan), umur wirausaha tidak bertambah secara terus-menerus melainkan ditambah pada saat sudah 1 tahun (12 bulan).
+	\item \texttt{public void NeighborhoodDefinition() }\\
+	Perubahan yang dilakukan adalah penambahan pada faktor (umur, pendidikan, pendapatan dan jenis kelamin) dan relasi (lebih dari sama dengan).
+	\item \texttt{public void calculatePoint(double[] POAm, double[] POAf, double[] POEf, double[] POEm, double[] POLm, double[] POLf, double[] POIm, double[] POIf, double[] PCAf, double[] PCAm, double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, double[] PCIm, double[] PCIf, double[] RMAm, double[] RMAf, double[] RMIm, double[] RMIf, double[] FFAf, double[] FFAm, double[] FFEf, double[] FFEm, double[] FFLf, double[] FFLm, double[] MALf, double[] MALm, double[] MAIf, double[] MAIm, double[] HSSIf, double[] HSSIm, double[] HSSLf, double[] HSSLm, double[] HSSAf, double[] HSSAm, double[] HSSEf, double[] HSSEm)}\\
+	Perubahan yang dilakukan adalah penambahan pada indikator yang mendukung intensi masyarakat untuk memulai usaha. Indikator-indikator tersebut yaitu Entrepreneurial Intentions (High Status Successful Entrepreneurship, Media Attention) dan Fear of Failure.
+\end{itemize}
+
+
 
 \subsection{Kelas TampilanBobotKetetanggaan}
 Kelas ini merupakan kelas untuk menampilkan seluruh atribut umum dari seorang wirausaha yang dapat dipilih menggunakan \textit{checkbox}, atribut yang dipilih nantinya akan mempengaruhi ketetanggaan antara wirausaha yang satu dengan wirausaha lainnya. Setelah itu, \textit{user} diminta mengisi bobot untuk masing-masing atribut yang sudah dichecklist melalui \textit{textfield}.
@@ -56,11 +68,32 @@ Kelas ini merupakan kelas untuk membuka file data wirausaha yang akan disimulasi
 	
 	Tipe data integer, masing-masing angka mendeskripsikan subkategori yang berbeda, yaitu :
 	\begin{enumerate}
-		\item 0 untuk makanan ringan
-		\item 1 untuk makanan berat
-		\item 2 untuk minuman sachet
-		\item 3 untuk tas wanita
+		\item Kategori Makanan
+			\begin{enumerate}
+				\item 0 untuk makanan ringan
+				\item 1 untuk makanan berat
+				\item 2 untuk makanan cepat saji
+			\end{enumerate}
+		\item Kategori Minuman
+			\begin{enumerate}
+				\item 0 untuk minuman sehat
+				\item 1 untuk minuman bersoda
+				\item 2 untuk minuman sachet
+			\end{enumerate}
+		\item Kategori Tas
+			\begin{enumerate}
+				\item 0 untuk tas pria
+				\item 1 untuk tas anak-anak
+				\item 2 untuk tas wanita
+			\end{enumerate}
+		\item Kategori Pakaian
+			\begin{enumerate}
+				\item 0 untuk pakaian pria
+				\item 1 untuk pakaian wanita
+				\item 2 untuk pakaian anak-anak
 	\end{enumerate}
+	\end{enumerate}
+
 		
 		\item Pendidikan
 		

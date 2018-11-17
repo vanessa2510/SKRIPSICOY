@@ -128,25 +128,25 @@ Waktu sekarang & Waktu berikutnya \\
 \end{table}
 
 
-Untuk mempermudah pemahaman mengenai Continuity Index, akan diberikan contoh simulasi dari data tidak real, yaitu terdapat nilai a = 0.5, b = 0.4 dan c = 0.1, nilai ambangnya 20, serta periodenya dalam waktu 3 bulan. Nilai dari kondisi internal wirausaha diambil dari Nawangpalupi (Perceived Opportunities = 0.47, Perceived Capabilities = 0.62, High Status of Successful = 0.8, Public Media Attention = 0.75, Role Model = 0.67 dan Fear of Failure = 0.35). Diasumsikan terdapat tiga wirausahawan dan masing-masing wirausahawan memiliki tiga atribut yaitu level wirausaha, umur dan jenis kelamin. Penjelasan lebih lanjut yaitu sebagai berikut :
+Untuk mempermudah pemahaman mengenai Continuity Index, akan diberikan contoh simulasi dari data tidak real, yaitu terdapat nilai a = 0.5, b = 0.4 dan c = 0.1, nilai ambangnya 20, serta periodenya dalam waktu 5 bulan. Nilai dari kondisi internal wirausaha diambil dari Nawangpalupi (Perceived Opportunities = 0.47, Perceived Capabilities = 0.62, High Status of Successful = 0.8, Public Media Attention = 0.75, Role Model = 0.67 dan Fear of Failure = 0.35). Diasumsikan terdapat tiga wirausahawan dan berikut data dari masing-masing wirausaha :
 				
 \begin{table} [H]
 \centering
 \caption{Data wirausahawan}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \hline
-& Umur & Level Wirausaha & Jenis kelamin\\
+& Jenis Kelamin & Umur & Usia Bisnis & Kategori & Sub Kategori & Pendidikan & Lokasi & Pendapatan & Level Wirausaha\\
 \hline
-Entrepreneur 1 & 20 tahun & Nascent & Male\\
+Entrepreneur 1 & Pria & 18 tahun & 0 bulan & Minuman & Minuman bersoda & Sekolah Menengah Pertama & Medan & 5-7 juta rupiah & Nascent\\
 \hline
-Entrepreneur 2 & 35 tahun & New\_bm & Male\\
+Entrepreneur 2 & Wanita & 30 tahun & 0 bulan & Tas & Tas anak-anak  & Sekolah Menengah Atas & Pekanbaru & 3-5 juta rupiah & New\_bm\\
 \hline
-Entrepreneur 3 & 44 tahun & New\_bm & Female\\
+Entrepreneur 3 & Wanita & 45 tahun & 0 bulan & Makanan & Makanan berat & Sekolah Dasar & Palembang & 7-9 juta rupiah & New\_bm\\
 \hline
 \end{tabular}
 \end{table}
 
-Berikut data bobot untuk masing-masing atribut :
+Asumsi ketetanggaan antara wirausaha satu dengan wirausaha lainnya hanya 3 atribut yaitu :
 
 \begin{table} [H]
 \centering
@@ -155,36 +155,78 @@ Berikut data bobot untuk masing-masing atribut :
 \hline
 Atribut & Bobot\\
 \hline
-Umur & 40\% \\
+Level Wirausaha & 30\% \\
 \hline
-Jenis Kelamin & 20\% \\
+Pendidikan & 40\% \\
 \hline
-Level Wirausaha & 40\% \\
+Jenis Kelamin & 30\% \\
 \hline
 \end{tabular}
 \end{table}
 
+Masing-masing tetangga relasinya yaitu sama dengan.
+
 	\begin{figure} [H]
 		\centering  
-		\includegraphics[width=18cm, height=12cm]{wirausahaAwal} 
+		\includegraphics[width=16cm, height=12cm]{t=0} 
 		\caption[Gambar ketetanggaan tiga entrepreneur pada saat awal]{Gambar ketetanggaan tiga entrepreneur pada saat awal} 
 		\label{fig:t0} 
 	\end{figure}
 
 
-Dalam simulasi ini diasumsikan terdapat dua kondisi publik yaitu financial environment related with entrepreneurship yang memiliki nilai 3.06 dan cultural, social norms and society support yang memiliki nilai 3.29, dengan bobot masing-masing 40\% dan 60\%. Perhitungan masing-masing entrepreneur 1, entrepreneur 2 dan entrepreneur 3 (E1,E2,E3) pada saat t=0 yaitu sebagai berikut :
-	
+Dalam simulasi ini terdapat 12 faktor publik yaitu :
 
+\begin{table} [H]
+\centering
+\caption{Faktor Publik}
+\begin{tabular}{|c|c|}
+\hline
+Faktor Publik & Bobot\\
+\hline
+Keuangan terkait dengan kewirausahaan & 3.06 \\
+\hline
+Kebijakan pemerintah terkait ekonomi & 2.69 \\
+\hline
+Kebijakan pemerintah terkait pajak & 2.22 \\
+\hline
+Program Pemerintah & 2.53\\
+\hline
+Pendidikan kewirausahaan pada SD dan SMP & 2.54\\
+\hline
+Pendidikan kewirausahaan pada SMK, professional dan universitas & 3.3\\
+\hline
+Transfer penelitian dan pengembangan & 2.31\\
+\hline
+Infrastruktur komersial dan legal & 3.25\\
+\hline
+Dinamika Pasar & 3.92\\
+\hline
+Keterbukaan Pasar & 2.82\\
+\hline
+Infrastruktur fisik dan akses layanan & 3.45\\
+\hline 
+Norma sosial dan budaya & 3.29\\
+\hline
+\end{tabular}
+\end{table}
+	
+	
+Untuk perhitungan pada faktor eksternal :
 \begin{equation}
-	CIdx_{1}(t=0) = 0.5 \times ((15.8 \times 0.47) + (15.1 \times 0.62) + (17.1 \times 0.67) + (17 \times 0.8) + (19.5 \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.2) + 0 +  0) + 0.1 \times ((3.06 \times 0.4) + (3.29 \times 0.6)) = 24.6948
+	CIDx(eksternal) = 0.1 \times ((3.06 \times 0.1) + (2.69 \times 0.1) + (2.22 \times 0.1) + (2.53 \times 0.05) + (2.54 \times 0.1) + (3.3 \times 0.1) + (2.31 \times 0.05) + (3.25 \times 0.05) + (3.92 \times 0.1) + (2.82 \times 0.05) + (3.45 \times 0.1) + (3.29 \times 0.1)) = 0.29925
+\end{equation}
+
+Perhitungan CIDx(t=0)\\
+\begin{equation}
+	CIdx_{1}(t=0) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.47) + ((14.7+17.4+5.4+10.5) \times 0.62) + ((14.3+10.4) \times 0.67) + ((16+19+7.2+10.2) \times 0.8) + ((8.1+11.4) \times 0.75) + ((18.6+18.4+8.9) \times 0.35) ) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3)) + 0.29925 = 71.53475
 \end{equation}	
 
 \begin{equation}
-	CIdx_{2}(t=0) = 0.5 \times ((28.4 \times 0.47) + (28.2 \times 0.62) + (26.8 \times 0.67) + (26 \times 0.8) + (23.5 \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.2) + (\frac {1} {2} \times 0.4) + (\frac {1} {2} \times 0.4)) + (\frac {1} {2} \times 0.4)) + 0.1 \times ((3.06 \times 0.4) + (3.29 \times 0.6)) = 39.4263
+	CIdx_{2}(t=0) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.47) + ((31.6+51.5+2.4+43) \times 0.62) + ((31+41.8) \times 0.67) + ((31+52+2.6+41.7) \times 0.8) + ((3.5+41.6) \times 0.75) + ((32.4+51.7) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3)) + 0.29925 = 176.23825
 \end{equation}
 
 \begin{equation}
-	CIdx_{3}(t=0) = 0.5 \times ((28.4 \times 0.47) + (28.2 \times 0.62) + (26.8 \times 0.67) + (26 \times 0.8) + (23.5 \times 0.35)) + 0.4 \times (0 + (\frac {1} {2} \times 0.4) + (\frac {1} {2} \times 0.4)) + 0.1 \times ((3.06 \times 0.4) + (3.29 \times 0.6)) = 39.3863
+	CIdx_{3}(t=0) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.47) + ((16.1+15.4+3.1+2) \times 0.62) + ((17.6+3) \times 0.67) + ((17+15+5.4+2.2) \times 0.8) + ((5.4+2.7) \times 0.75) + ((16.4+13.9) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3)) + 0.29925 = 52.08175
 \end{equation}
 
 	\begin{figure} [H]
@@ -240,7 +282,8 @@ Pada saat t=2 terdapat 1 kondisi publik baru yaitu physical infrastructures and 
 \section{Deskripsi Perangkat Lunak}
 \label{dpl}
 
-Perangkat lunak ini dibuat untuk memberi gambaran kepada pemerintah atau lembaga umum mengenai pergerakkan wirausaha dalam waktu tertentu. Perangkat lunak ini dibangun di netbeans dengan menggunakan \textit{JFrame}. Dalam perangkat lunak ini, disetiap tampilannya terdapat \textit{check box} dan \textit{text field}
+Dalam skripsi ini penulis merancang sebuah simulator dari Entrepreneur Cellular Automata (ECA) yang sebelumnya telah dikembangkan oleh Cecilia Esti Nugraheni dan Vania Natali. Simulator ini dinamakan Simulator Pertumbuhan Wirausaha Berbasis Cellular Automata.\\
+Perangkat lunak ini dibuat untuk memberi gambaran kepada pemerintah atau lembaga umum mengenai pergerakkan wirausaha dalam waktu tertentu. Sebagaimana telah dijelaskan perangkat lunak ini bertujuan untuk mensimulasikan ECA. Untuk membuat simulator ECA, penulis merancang beberapa \textit{form} agar \textit{user} dapat mengisi bobot atau nilai penting yang mempengaruhi simulasi. Dalam perangkat lunak ini, \textit{user} juga dapat memasukkan file data wirausaha dalam format text. Simulator yang dibuat akan menampilkan hasil simulasi ke dalam tabel dan juga ke dalam file CSV yang dapat dibuka di \textit{Microsoft Excel}.
 
 
 \section{Analisis Perangkat Lunak}
@@ -375,46 +418,97 @@ Kelas CA merupakan kelas yang merepresentasikan cellular automata.
 			\end{itemize}
 			
 			\item \texttt{public double getNeighborIndex(CA model, int idxEnt)}\\
-			Merupakan method untuk menghitung jumlah ketetanggaan antara wirausaha satu dengan wirausaha lainnya.\\
+			Merupakan method untuk menghitung nilai dari kondisi ketetanggaan setiap wirausaha.\\
 			Parameter:
 			\begin{itemize}
 				\item \texttt{model} merupakan objek dari kelas CA.
-				\item \texttt{idxEnt}
+				\item \texttt{idxEnt} merupakan indeks dari wirausaha.
+			\end{itemize}
+		
+			\item \texttt{public void nextLevel(Entrepreneurs ne, int i, CA model, double[] composition)}\\
+			Merupakan method untuk menentukan perubahan level usaha dari seorang wirausaha.\\
+			Parameter:
+			\begin{itemize}
+				\item \texttt{ne} merupakan objek dari kelas Entrepreneurs.
+				\item \texttt{i} merupakan indeks.
+				\item \texttt{model} merupakan objek dari kelas CA.
+				\item \texttt{composition} merupakan nilai dari a,b dan c.
 			\end{itemize}
 			
+			\item \texttt{public double getIndex(int i, CA model, double[] composition)}\\
+			Merupakan method untuk menghitung CIDx.\\
+			Parameter:
+			\begin{itemize}
+				\item \texttt{i} merupakan indeks.
+				\item \texttt{model} merupakan objek dari kelas CA.
+				\item \texttt{composition} merupakan nilai dari a,b dan c.
+			\end{itemize}
 			
-			\item Method nextLevel
+			\item \texttt{public void NeighborhoodDefinition()}\\
+			Merupakan method untuk mendefinisikan jenis-jenis ketetanggaan seperti lebih dari sama dengan, sama dengan dan lebih kecil sama dengan.\\
 			
-			Merupakan method untuk menentukan perubahan level usaha dari seorang wirausaha.
-			
-			\item Method getIndex
-			
-			Merupakan method untuk menghitung CIDx.
-			
-			\item Method NeighborhoodDefinition
-			
-			Merupakan method untuk mendefinisikan jenis-jenis ketetanggaan seperti lebih dari sama dengan, sama dengan dan lebih kecil sama dengan.
-			
-			\item Method genDummyEntrepreneurs
-			
+			\item \texttt{public void genDummyEntrepreneurs()}\\
 			Merupakan method untuk membuat data \textit{dummy} wirausaha.
-			\item Method genSimulationData
 			
-			Merupakan method untuk 
-			\item Method writeSimulationData
+			\item \texttt{public void genSimulationData()}\\
+			Merupakan method untuk membuat data wirausaha secara \textit{random}.
 			
-			Merupakan method untuk menge-\textit{print} hasil simulasi ke dalam suatu file.
-			\item Method readSimulationData
+			\item \texttt{public void writeSimulationData(String namaFile)}\\
+			Merupakan method untuk menampilkan hasil simulasi ke dalam suatu file.\\
+			Parameter:
+			\begin{itemize}
+				\item \texttt{namaFile} merupakan file tempat hasil simulasi akan ditampilkan.
+			\end{itemize}
 			
-			Merupakan method untuk membaca dan memasukkan data file yang akan yang akan disimulasi.
-			\item Method print
-			\item Method calculatePoint
+			\item \texttt{public void readSimulationData(String fileName)}\\
+			Merupakan method untuk membaca dan memasukkan data file yang akan yang akan disimulasi.\\
+			Parameter:
+				\begin{itemize}
+				\item \texttt{fileName} merupakan file untuk menyimpan hasil simulasi.
+			\end{itemize}
 			
-			Merupakan method untuk menghitung kondisi internal dari seorang wirausaha.
-			\item Method getAgeRange
+			\item \texttt{public void print(int iter,PrintWriter out)}\\
+			Merupakan method untuk menampilkan jumlah dari masing-masing level wirausaha.\\
+			Parameter:
+			\begin{itemize}
+				\item \texttt{iter} merupakan iterasi per bulan.
+				\item \texttt{out} untuk menge-\textit{print} hasil.
+			\end{itemize}
 			
-			Merupakan method untuk membedakan rentang usia yang telah ditentukan oleh GEM 2013.
+			\item \texttt{calculatePoint(double[] POAm, double[] POAf, double[] POEf, double[] POEm, double[] POLm, double[] POLf, double[] POIm, double[] POIf, double[] PCAf, double[] PCAm, double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, double[] PCIm, double[] PCIf, double[] RMAm, double[] RMAf, double[] RMIm, double[] RMIf)}\\
+			Merupakan method untuk menghitung kondisi internal dari seorang wirausaha.\\
+			Parameter:
+			\begin{itemize}
+				\item \texttt{POAm} merupakan kumpulan nilai dari Perceived Opportunities berdasarkan umur (pria).
+				\item \texttt{POAf} merupakan kumpulan nilai dari Perceived Opportunities berdasarkan umur (wanita).
+				\item \texttt{POEm} merupakan kumpulan nilai dari Perceived Opportunities berdasarkan pendidikan (pria).
+				\item \texttt{POEf} merupakan kumpulan nilai dari Perceived Opportunities berdasarkan pendidikan (wanita).
+				\item \texttt{POLm} merupakan kumpulan nilai dari Perceived Opportunities berdasarkan lokasi (pria).
+				\item \texttt{POLf} merupakan kumpulan nilai dari Perceived Opportunities berdasarkan lokasi (wanita).
+				\item \texttt{POIm} merupakan kumpulan nilai dari Perceived Opportunities berdasarkan pendapatan (pria).
+				\item \texttt{POIf} merupakan kumpulan nilai dari Perceived Opportunities berdasarkan pendapatan (wanita).
+				\item \texttt{PCAm} merupakan kumpulan nilai dari Perceived Capabilities berdasarkan umur (pria).
+				\item \texttt{PCAf} merupakan kumpulan nilai dari Perceived Capabilities berdasarkan umur (wanita).
+				\item \texttt{PCEm} merupakan kumpulan nilai dari Perceived Capabilities berdasarkan pendidikan (pria).
+				\item \texttt{PCEf} merupakan kumpulan nilai dari Perceived Capabilities berdasarkan pendidikan (wanita).
+				\item \texttt{PCLm} merupakan kumpulan nilai dari Perceived Capabilities berdasarkan lokasi (pria).
+				\item \texttt{PCLf} merupakan kumpulan nilai dari Perceived Capabilities berdasarkan lokasi (wanita).
+				\item \texttt{PCIm} merupakan kumpulan nilai dari Perceived Capabilities berdasarkan pendapatan (pria).
+				\item \texttt{PCIf} merupakan kumpulan nilai dari Perceived Capabilities berdasarkan pendapatan (wanita).
+				\item \texttt{RMAm} merupakan kumpulan nilai dari Role Model berdasarkan umur (pria).
+				\item \texttt{RMAf} merupakan kumpulan nilai dari Role Model berdasarkan umur (wanita).
+				\item \texttt{RMIm} merupakan kumpulan nilai dari Role Model berdasarkan pendapatan (pria).
+				\item \texttt{RMIf} merupakan kumpulan nilai dari Role Model berdasarkan pendapatan (wanita).
+			\end{itemize}
+			
+			\item \texttt{public int getAgeRange(int a)}\\
+			Merupakan method untuk membedakan rentang usia yang telah ditentukan oleh GEM 2013.\cite{GEM2013}\\
+			Parameter:
+			\begin{itemize}
+				\item \texttt{a} merupakan umur wirausaha.
+			\end{itemize}
 		\end{enumerate}
+		
 \subsection{Kelas Entrepreneur} 
 	Kelas Entrepreneur merupakan kelas untuk merepresentasikan individu wirausahawan.
 \subsection{Kelas Neighbor}
