@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -30,7 +31,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
     public TampilanDataWirausaha() {
         initComponents();
         openFileChooser = new JFileChooser();
-        openFileChooser.setCurrentDirectory(new File("c:\\temp"));
+        openFileChooser.setSelectedFile(new File("D:\\text.txt"));
     }
 
     /**
@@ -190,6 +191,12 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
         // TODO add your handling code here:
+        
+//        System.out.println(openFileChooser.getSelectedFile().isFile());
+        if (!openFileChooser.getSelectedFile().exists()) {
+            JOptionPane.showMessageDialog(null, "You must choose the file first!");
+            return;
+        }
         this.hide();
         TampilanSimulasi ts = new TampilanSimulasi(this.ca);
         ts.setVisible(true);
@@ -197,6 +204,8 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
+        
+
         this.hide();
         TampilanKondisiEksternal ke = new TampilanKondisiEksternal();
         ke.setVisible(true);
@@ -206,6 +215,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
         double[] kumpulanBobot;
         int returnValue = openFileChooser.showOpenDialog(this);
         StringBuilder sb = new StringBuilder();
+        System.out.println(JFileChooser.APPROVE_OPTION);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             try {
                 br = new BufferedReader(new FileReader(openFileChooser.getSelectedFile()));
@@ -274,9 +284,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
     }//GEN-LAST:event_openFileButtonMouseClicked
 
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
-        if (rootPaneCheckingEnabled) {
-            
-        }
+        
     }//GEN-LAST:event_nextButtonMouseClicked
 
     /**

@@ -204,8 +204,6 @@ Pengujian ini dilakukan agar tidak terjadi kesalahan \textit{input} dari \textit
 \end{figure}
 	\end{itemize}
 	
-	\item Pemilihan file data wirausaha
-	
 	\item Pengisian nilai a,b dan c\\
 	Jika \textit{user} mengisi nilai a,b dan c jumlahnya tidak 1, akan ada pesan kesalahan yaitu "The sum of a,b and c's value must 1!". (Gambar \ref{pesanError5})
 	
@@ -219,4 +217,112 @@ Pengujian ini dilakukan agar tidak terjadi kesalahan \textit{input} dari \textit
 \end{enumerate}
 
 \subsection{Pengujian Pembacaan File}
+
+Pengujian pembacaan file dilakukan agar menghindari kesalahan format pada file data wirausaha yang di\textit{input} oleh \textit{user}. File tersebut untuk setiap barisnya harus berisi jenis kelamin, umur, kategori usaha, sub kategori usaha, pendidikan, lokasi, pendapatan, level wirausaha dan point.
+Tipe dari masing-masing atribut yaitu :
+\begin{enumerate}
+	\item Jenis kelamin bertipe boolean.\\
+	\begin{itemize}
+		\item True untuk pria
+		\item False untuk wanita
+	\end{itemize}
+	\item Umur bertipe bilangan bulat (dalam tahun).
+	\item Kategori usaha bertipe bilangan bulat, masing-masing angka mendeskripsikan kategori usaha yang berbeda, yaitu :
+		\begin{itemize}
+			\item 0 untuk makanan
+			\item 1 untuk minuman
+			\item 2 untuk tas
+			\item 3 untuk pakaian
+		\end{itemize}
+	\item Sub kategori usaha bertipe bilangan bulat.
+		\begin{itemize}
+			\item Kategori makanan :
+				\begin{itemize}
+					\item 0 untuk makanan ringan
+					\item 1 untuk makanan berat
+					\item 2 untuk makanan cepat saji
+				\end{itemize}
+			\item Kategori minuman :
+				\begin{itemize}
+					\item 0 untuk minuman sehat
+					\item 1 untuk minuman bersoda
+					\item 2 untuk minuman \textit{sachet}
+				\end{itemize}
+			\item Kategori tas :
+				\begin{itemize}
+					\item 0 untuk tas pria
+					\item 1 untuk tas anak-anak
+					\item 2 untuk tas wanita
+				\end{itemize}
+		\end{itemize}
+		\item Pendidikan bertipe bilangan bulat, masing-masing angka mendeskripsikan tingkat pendidikan yang berbeda, yaitu :
+		\begin{itemize}
+					\item 0 untuk tingkat pendidikan rendah
+					\item 1 untuk sekolah dasar
+					\item 2 untuk sekolah menengah pertama
+					\item 3 untuk sekolah menengah ke atas
+					\item 4 untuk sarjana (S1)
+					\item 5 untuk diploma (S2)
+					\item 6 untuk profesor (S3)
+				\end{itemize}
+		\item Lokasi, bertipe bilangan bulat yang masing-masing angkanya mendeskripsikan lokasi yang berbeda, yaitu :
+			\begin{itemize}
+				\item 0 untuk Banda Aceh
+				\item 1 untuk Medan
+				\item 2 untuk Padang
+				\item 3 untuk Pekanbaru
+				\item 4 untuk Palembang
+				\item 5 untuk Bandar Lampung
+				\item 6 untuk Serang
+				\item 7 untuk Jakarta
+				\item 8 untuk Bandung
+				\item 9 untuk Semarang dan Surakarta
+				\item 10 untuk Surabaya
+				\item 11 untuk Denpasar
+				\item 12 untuk Mataram
+				\item 13 untuk Kupang
+				\item 14 untuk Pontianak
+				\item 15 untuk Makassar
+			\end{itemize}
+		\item Pendapatan bertipe bilangan bulat, masing-masing angka mendeskripsikan tingkat pendapatan yang berbeda yaitu :
+			\begin{itemize}
+			\item 0 untuk pendapatan dibawah 3 juta rupiah
+			\item 1 untuk pendapatan 3 juta rupiah sampai 5 juta rupiah
+			\item 2 untuk pendapatan 5 juta rupiah sampai 7 juta rupiah
+			\item 3 untuk pendapatan 7 juta rupiah sampai 9 juta rupiah
+			\item 4 untuk pendapatan 9 juta rupiah sampai 11 juta rupiah
+			\item 5 untuk pendapatan 11 juta rupiah sampai 13 juta rupiah
+			\item 6 untuk pendapatan 13 juta rupiah sampai 15 juta rupiah
+			\item 7 untuk pendapatan diatas 15 juta rupiah
+			\end{itemize}
+		\item Level, bertipe bilangan bulat, masing-masing angka mendeskripsikan level yang berbeda yaitu :
+			\begin{itemize}
+			\item 0 untuk level potential
+			\item 1 untuk level nascent
+			\item 2 untuk level new business manager
+			\item 3 untuk level established 
+			\item 4 untuk level retired
+			\end{itemize}
+		\item Point merupakan nilai dari kondisi internal individu wirausaha. Point mempunyai tipe data double.
+\end{enumerate}
+
+Contoh dari file data wirausaha :
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=8cm, height=4cm]{formatFile} 
+		\caption[Contoh format \textit{file} data wirausaha]{Contoh format \textit{file} data wirausaha}
+	\label{formatFile} 
+\end{figure}
+
+Jika \textit{user} tidak memasukkan \textit{file} data wirausaha, akan ada pesan kesalahan berupa "You must choose the file first!". (Gambar \ref{pesanError6})
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=8cm, height=4cm]{pesanError6} 
+		\caption[Tampilan pesan kesalahan apabila \textit{file} data wirausaha belum dipilih]{Tampilan pesan kesalahan apabila \textit{file} data wirausaha belum dipilih}
+	\label{pesanError6} 
+\end{figure}
+
+ 
 \subsection{Pengujian Hasil dari Simulasi}
