@@ -58,7 +58,12 @@
 \contentsline {section}{\numberline {5.1}Implementasi}{53}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Implementasi}{53}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Hasil Implementasi}{53}{subsection.5.1.2}
-\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{63}{chapter.6}
-\contentsline {chapter}{Daftar Referensi}{65}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Kode Program}{67}{appendix.A}
-\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{69}{appendix.B}
+\contentsline {section}{\numberline {5.2}Pengujian}{61}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Pengujian Fungsional}{61}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Pengujian Pembacaan Parameter}{62}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Pengujian Pembacaan File}{64}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Pengujian Hasil dari Simulasi}{64}{subsection.5.2.4}
+\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{65}{chapter.6}
+\contentsline {chapter}{Daftar Referensi}{67}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Kode Program}{69}{appendix.A}
+\contentsline {chapter}{\numberline {B}Hasil Eksperimen}{71}{appendix.B}

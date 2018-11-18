@@ -778,7 +778,7 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
             TampilanKondisiEksternal ke = new TampilanKondisiEksternal();
             ke.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "You cannot move to the other page because you must fill checkbox or radio button first!");
+            JOptionPane.showMessageDialog(null, "You cannot move to the other page because you must fill radio button first!");
         }
     }//GEN-LAST:event_nextButtonMouseClicked
 

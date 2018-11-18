@@ -104,3 +104,119 @@ Berikut merupakan tampilan data wirausaha yang telah dipilih oleh \textit{user}.
 
 	\item TampilanHasil
 \end{enumerate}
+
+\section{Pengujian}
+\subsection{Pengujian Fungsional}
+Pengujian fungsional dilakukan untuk mengetahui kesesuaian reaksi perangkat lunak dengan reaksi yang diharapkan berdasarkan aksi \textit{user} terhadap perangkat lunak. Pengujian ini ditujukan pada 1 pengguna yaitu \textit{user}.\\
+Terdapat 8 tes kasus yang diujikan. Detail dan hasilnya dapat dilihat pada tabel \ref{tabelFungsional}
+
+\begin{table}[H]
+\centering
+\caption{Tabel Pengujian Fungsional \textit{User}}
+\begin{tabular}{|c|p{6cm}|p{4cm}|p{2cm}|}
+\hline
+No & Aksi Pengguna & Reaksi yang diharapkan & Reaksi Perangkat Lunak\\
+\hline
+1 & \textit{User} menjalankan simulator / aplikasi & Tampilan Bobot Ketetanggaan akan ditampilkan & Sesuai\\
+\hline
+2 & \textit{User} melanjutkan pengisian dengan memilih \textit{button} "NEXT" & Tampilan Kondisi Ketetanggaan akan ditampilkan & Sesuai\\
+\hline
+3 & \textit{User} melanjutkan pengisian dengan memilih \textit{button} "NEXT" & Tampilan Kondisi Eksternal akan ditampilkan & Sesuai\\
+\hline
+4 & \textit{User} melanjutkan pengisian dengan memilih \textit{button} "NEXT" & Tampilan Data Wirausaha akan ditampilkan & Sesuai\\
+\hline
+5 & \textit{User} memasukkan data wirausaha dengan memilih \textit{button} "OPEN FILE" & Muncul \textit{pop up windows} yang menyediakan beberapa \textit{file}, salah satu \textit{file} akan dipilih oleh \textit{user} & Sesuai\\
+\hline
+6 & Setelah \textit{User} memilih \textit{file} dan memilih \textit{button} "OPEN" & Data wirausaha akan ditampilkan di tabel & Sesuai\\
+\hline
+7 & \textit{User} melanjutkan proses simulasi dengan memilih \textit{button} "NEXT" & Tampilan Simulasi akan ditampilkan & Sesuai\\
+\hline
+8 & \textit{User} selesai mengisi \textit{text field} dan memilih \textit{button} "SIMULATE" & Hasil simulasi akan ditampilkan di tabel dan pada \textit{file} CSV & Sesuai\\
+\hline 
+
+\end{tabular}
+\label{tabelFungsional}
+\end{table} 
+
+\subsection{Pengujian Pembacaan Parameter}
+Pengujian ini dilakukan agar tidak terjadi kesalahan \textit{input} dari \textit{user} yang mengakibatkan hasil simulasi tidak sesuai dengan yang diharapkan.
+\begin{enumerate}
+	\item Pengisian \textit{Text Field} pada saat mengisi bobot ketetanggaan\\
+	\begin{itemize}
+		\item Jika \textit{user} sudah mengisi \textit{check box} tetapi tidak mengisi \textit{text field}, akan terdapat pesan kesalahan "You cannot move to the other page because you must fill text field first!". (Gambar \ref{pesanError1})
+		
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=12cm, height=4cm]{pesanError2} 
+		\caption[Tampilan Pesan Error pada saat \textit{text field} tidak terisi]{Tampilan Pesan Error pada saat \textit{text field} tidak terisi}
+	\label{pesanError1} 
+\end{figure}
+		
+		\item Jika \textit{user} sudah mengisi \textit{text field} tetapi totalnya tidak 100\%, akan terdapat pesan kesalahan "The sum of text fields must 100\%!". (Gambar \ref{pesanError2})
+		
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=8cm, height=4cm]{pesanError1} 
+		\caption[Tampilan Pesan Error pada saat isi dari \textit{text field} tidak berjumlah 100\%]{Tampilan Pesan Error pada saat isi dari \textit{text field} tidak berjumlah 100\%}
+	\label{pesanError2} 
+\end{figure}
+
+	\end{itemize}
+	
+	\item Pengisian \textit{Radio Button} pada saat mengisi relasi ketetanggaan\\
+	Jika \textit{user} tidak mengisi radio button, akan ada pesan kesalahan yaitu "You cannot move to the other page because you must fill radio button first!". (Gambar \ref{pesanError3})
+	
+		\begin{figure} [H]
+	\centering  
+	\includegraphics[width=11cm, height=4cm]{pesanError3} 
+		\caption[Tampilan Pesan Error pada saat \textit{radio button} tidak terisi]{Tampilan Pesan Error pada saat \textit{radio button} tidak terisi}
+	\label{pesanError3} 
+\end{figure}
+
+\item Pengisian \textit{Text Field} pada saat mengisi bobot faktor eksternal\\
+	\begin{itemize}
+		
+		\item Jika \textit{user} tidak mengisi seluruh \textit{text field}, akan terdapat pesan kesalahan " You must fill the textfield!". (Gambar \ref{pesanError4})
+		
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=8cm, height=4cm]{pesanError4} 
+		\caption[Tampilan Pesan Error pada saat \textit{text field} tidak terisi seluruhnya]{Tampilan Pesan Error pada saat \textit{text field} tidak terisi seluruhnya}
+	\label{pesanError4} 
+\end{figure}
+		
+		\item Jika \textit{user} tidak mengisi \textit{text field}, akan terdapat pesan kesalahan "You cannot move to the other page because you must fill text field first!". (Gambar \ref{pesanError1})
+		
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=12cm, height=4cm]{pesanError2} 
+		\caption[Tampilan Pesan Error pada saat \textit{text field} tidak terisi]{Tampilan Pesan Error pada saat \textit{text field} tidak terisi}
+	\label{pesanError1} 
+	\end{figure}
+	
+	\item Jika \textit{user} sudah mengisi \textit{text field} tetapi totalnya tidak 100\%, akan terdapat pesan kesalahan "The sum of text fields must 100\%!". (Gambar \ref{pesanError2})
+		
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=8cm, height=4cm]{pesanError1} 
+		\caption[Tampilan Pesan Error pada saat isi dari \textit{text field} tidak berjumlah 100\%]{Tampilan Pesan Error pada saat isi dari \textit{text field} tidak berjumlah 100\%}
+	\label{pesanError2} 
+\end{figure}
+	\end{itemize}
+	
+	\item Pemilihan file data wirausaha
+	
+	\item Pengisian nilai a,b dan c\\
+	Jika \textit{user} mengisi nilai a,b dan c jumlahnya tidak 1, akan ada pesan kesalahan yaitu "The sum of a,b and c's value must 1!". (Gambar \ref{pesanError5})
+	
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=8cm, height=4cm]{pesanError5} 
+		\caption[Tampilan Pesan Error pada saat nilai a,b dan c tidak berjumlah 1]{Tampilan Pesan Error pada saat nilai a,b dan c tidak berjumlah 1}
+	\label{pesanError5} 
+\end{figure}
+	
+\end{enumerate}
+
+\subsection{Pengujian Pembacaan File}
+\subsection{Pengujian Hasil dari Simulasi}

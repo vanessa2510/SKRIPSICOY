@@ -375,7 +375,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                 sb.append("Bulan ke-" + i);
                 sb.append('\n');
                 line[i] = ca.print(i);
-//                System.out.println(line);
+                System.out.println(line[i]);
                 ca.NeighborhoodDefinition();
                 ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf, FFAf, FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf, HSSIm, HSSLf, HSSLm, HSSAf, HSSAm, HSSEf, HSSEm);
                 Entrepreneurs[] nE;
@@ -383,7 +383,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
 
                 for (int j = 0; j < e[i].length; j++) {
 //                    String lines = e[i][j].toString2();
-//                    System.out.println(e[i][j].toString2());
+                    System.out.println(e[i][j].toString2());
                     sb.append(e[i][j].toString2());
                     sb.append('\n');
 
@@ -401,8 +401,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         this.hide();
         TampilanHasil th = new TampilanHasil(line);
 
-        th.setVisible(
-                true);
+        th.setVisible(true);
 //        } catch (IOException ex) {
 //            System.out.println("Gagal menulis File");
 //            Logger.getLogger(TampilanSimulasi.class.getName()).log(Level.SEVERE, null, ex);

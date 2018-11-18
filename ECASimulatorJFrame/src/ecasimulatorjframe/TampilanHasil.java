@@ -20,7 +20,7 @@ public class TampilanHasil extends javax.swing.JFrame {
 
     public TampilanHasil(String[] res) {
         initComponents();
-        this.res=res;
+        this.res = res;
     }
 
     /**
@@ -40,6 +40,9 @@ public class TampilanHasil extends javax.swing.JFrame {
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
+            }
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
             }
         });
 
@@ -86,6 +89,26 @@ public class TampilanHasil extends javax.swing.JFrame {
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         // TODO add your handling code here:
 //        String lines = "";
+//        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+//        int periode = Integer.parseInt(InputDataHandler.getValue("periode"));
+//        for (int i = 0; i < res.length; i++) {
+//            ca.print(i);
+//            System.out.println(ca.print(i));
+//            String[] dataRow1 = res[i].split(",");
+//            model.addRow(dataRow1);
+//            for (int j = 0; j < e[i].length; j++) {
+//                String lines = e[i][j].toString2().trim();
+////                System.out.println(lines);
+//                String[] dataRow2 = lines.split(",");
+//                model.addRow(dataRow2);
+//            }
+//        }
+
+
+    }//GEN-LAST:event_formWindowActivated
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
 //        int periode = Integer.parseInt(InputDataHandler.getValue("periode"));
         for (int i = 0; i < res.length; i++) {
@@ -93,20 +116,12 @@ public class TampilanHasil extends javax.swing.JFrame {
 //            System.out.println(ca.print(i));
             String[] dataRow1 = res[i].split(",");
             model.addRow(dataRow1);
-//            for (int j = 0; j < e[i].length; j++) {
-//                String lines = e[i][j].toString2().trim();
-////                System.out.println(lines);
-//                String[] dataRow2 = lines.split(",");
-//                model.addRow(dataRow2);
-//            }
         }
-
-
-    }//GEN-LAST:event_formWindowActivated
+    }//GEN-LAST:event_formWindowOpened
 
     /**
-     * @param args the command line arguments
-     */
+         * @param args the command line arguments
+         */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -145,4 +160,5 @@ public class TampilanHasil extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
 }

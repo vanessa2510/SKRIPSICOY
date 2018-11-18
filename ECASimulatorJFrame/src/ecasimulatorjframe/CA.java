@@ -59,7 +59,7 @@ public class CA {
             if (this.numOfMonth % 12 == 0) {
                 nextEnt[i].age++; // tiap kelipatan 12 umurnya nambah
             }
-            nextEnt[i].b_age++;
+                nextEnt[i].b_age++;
             nextLevel(nextEnt[i], i, model, composition);
         }
         this.numOfMonth++;
@@ -420,19 +420,7 @@ public class CA {
 
     }
 
-//    // penambahan method baca file
-//    void readData(Object[] isiDataFile) {
-//        int i;
-//        for (i = 0; i < isiDataFile.length; i++) {
-//            String lines = isiDataFile[i].toString().trim();
-//            String[] dataRow = lines.split(",");
-////            model.addRow(dataRow);
-//
-//
-//            // kendala : gimana caranya ngirim data ini ke kelas ECASimulatorJFrame ?
-//        }
-//
-//    }
+
     String print(int iter) {
 //        int[] level = new int[5];
         int l0 = 0;
@@ -491,65 +479,5 @@ public class CA {
         return ageC;
     }
 
-    //penambahan
-//    public void setA(double a) {
-//        this.a = a;
-//    }
-//
-//    public void setB(double b) {
-//        this.b = b;
-//    }
-//
-//    public void setC(double c) {
-//        this.c = c;
-//    }
-//    public void setThreshold(double threshold) {
-//        this.threshold = threshold;
-//    }
-//
-//    public double getThreshold() {
-//        return threshold;
-//    }
-//    public double getA() {
-//        return a;
-//    }
-//
-//    public double getB() {
-//        return b;
-//    }
-//
-//    public double getC() {
-//        return c;
-//    }
-//    public double getBobotUmur() {
-//        return bobotUmur;
-//    }
-//
-//    public void setBobotUmur(double bobotUmur) {
-//        this.bobotUmur = bobotUmur;
-//    }
-//
-//    public double getBobotLevel() {
-//        return bobotLevel;
-//    }
-//
-//    public void setBobotLevel(double bobotLevel) {
-//        this.bobotLevel = bobotLevel;
-//    }
-//
-//    public double getBobotPendidikan() {
-//        return bobotPendidikan;
-//    }
-//
-//    public void setBobotPendidikan(double bobotPendidikan) {
-//        this.bobotPendidikan = bobotPendidikan;
-//    }
-//
-//    public double getBobotPendapatan() {
-//        return bobotPendapatan;
-//    }
-//
-//    public void setBobotPendapatan(double bobotPendapatan) {
-//        this.bobotPendapatan = bobotPendapatan;
-//    }
+
 }

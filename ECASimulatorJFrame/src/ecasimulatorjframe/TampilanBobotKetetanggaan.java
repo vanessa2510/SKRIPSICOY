@@ -419,7 +419,7 @@ public class TampilanBobotKetetanggaan extends javax.swing.JFrame {
 
         if (jenisKelaminCBInternal.isSelected()) {
             InputDataHandler.jmlChecklist();
-            if (nilaiUmurInternal.getText().equals("")) {
+            if (nilaiJenisKelaminInternal.getText().equals("")) {
                 InputDataHandler.inputDataInternal("jenisKelaminInternal", null);
                 checker = false; // false karena nilainya null
             } else {
@@ -455,7 +455,9 @@ public class TampilanBobotKetetanggaan extends javax.swing.JFrame {
                 InputDataHandler.inputDataInternal("usahaInternal", nilaiUs);
             }
         }
-
+        if (InputDataHandler.getKetetanggaan() == 0) {
+            checker = false;
+        }
         double umur = 0.0;
         double pendidikan = 0.0;
         double level = 0.0;
@@ -466,6 +468,22 @@ public class TampilanBobotKetetanggaan extends javax.swing.JFrame {
 
         double[] kumpulanBobot = new double[InputDataHandler.getKetetanggaan()];
         int m = 0;
+        
+//        if (InputDataHandler.checkKey("umurInternal") == false) {
+//            if (InputDataHandler.checkKey("pendidikanInternal")==false) {
+//                if (InputDataHandler.checkKey("pendapatanInternal")==false) {
+//                    if (InputDataHandler.checkKey("levelInternal")==false) {
+//                        if (InputDataHandler.checkKey("jenisKelaminInternal")==false) {
+//                            if (InputDataHandler.checkKey("lokasiInternal")==false) {
+//                                if (InputDataHandler.checkKey("usahaInternal")==false) {
+//                                    checker=false;
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
         // kalo umur dichecklist, masukin ke variabel umur
         if (InputDataHandler.checkKey("umurInternal")) {
             umur = Double.parseDouble(InputDataHandler.getValue("umurInternal"));
@@ -505,24 +523,26 @@ public class TampilanBobotKetetanggaan extends javax.swing.JFrame {
         
         int totalNilai=0;
         for (int i = 0; i < kumpulanBobot.length; i++) {
-//            System.out.println(kumpulanBobot[i]);
+            System.out.println(kumpulanBobot[i]);
             totalNilai+=kumpulanBobot[i]*100;
-//            System.out.println(totalNilai);
+            System.out.println(totalNilai);
         }
         if (totalNilai != 100) {
-            JOptionPane.showMessageDialog(null, "The sum of text fields must 100.0!");
+            JOptionPane.showMessageDialog(null, "The sum of text fields must 100%!");
             checker = false;
         }
         InputDataHandler.setBobot(kumpulanBobot);
 //        System.out.println(InputDataHandler.getBobot());
         // n.setNumNeighbor(jumlahCheckList);
-
+        
+        
+        
         if (checker == true) {
             this.hide();
             TampilanKondisiKetetanggaan kk = new TampilanKondisiKetetanggaan();
             kk.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "You cannot move to the other page because you must fill checkbox or text field first!");
+            JOptionPane.showMessageDialog(null, "You cannot move to the other page because you must fill text field first!");
         }
 
     }//GEN-LAST:event_nextButtonMouseClicked

@@ -592,7 +592,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
         
         if ( totalNilai != 100) {
 //            System.out.println(1.0-totalNilai);
-            JOptionPane.showMessageDialog(null, "The sum of text fields must 100.0!");
+            JOptionPane.showMessageDialog(null, "The sum of text fields must 100%!");
             checker = false;
         }
         // System.out.println(checker);

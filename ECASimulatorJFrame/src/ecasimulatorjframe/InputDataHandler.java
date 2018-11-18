@@ -1,4 +1,4 @@
-    /*
+     /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -16,7 +16,7 @@ public class InputDataHandler {
 
     private static Map<String, String> data;
 
-    public static int jmlChecklist;
+    public static int jmlChecklist = 0;
     public static int jmlPopulasi;
     public static String dataWirausaha;
     
@@ -54,7 +54,8 @@ public class InputDataHandler {
 
     }
 
-    // method untuk menghitung jumlah ketetanggaan dari kelas TampilanKondisiKetetanggaan
+    // method untuk menghitung jumlah ketetanggaan dari kelas TampilanBobotKetetanggaan yang akan
+    // diakses pada kelas TampilanKondisiKetetanggaan
     public static void jmlChecklist() {
         jmlChecklist += 1;
     }
@@ -113,13 +114,13 @@ public class InputDataHandler {
         return nilaiRelasi;
     }
 
-    public static void setDataWirausaha(String data) {
-        dataWirausaha = data;
-    }
-
-    public static String getDataWirausaha() {
-        return dataWirausaha;
-    }
+//    public static void setDataWirausaha(String data) {
+//        dataWirausaha = data;
+//    }
+//
+//    public static String getDataWirausaha() {
+//        return dataWirausaha;
+//    }
 
     public static void setPopulation(int jmlData) {
         jmlPopulasi = jmlData;

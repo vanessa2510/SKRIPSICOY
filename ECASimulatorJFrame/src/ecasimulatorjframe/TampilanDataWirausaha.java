@@ -95,6 +95,11 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         nextButton.setText("NEXT");
+        nextButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextButtonMouseClicked(evt);
+            }
+        });
         nextButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextButtonActionPerformed(evt);
@@ -267,6 +272,12 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_openFileButtonMouseClicked
+
+    private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
+        if (rootPaneCheckingEnabled) {
+            
+        }
+    }//GEN-LAST:event_nextButtonMouseClicked
 
     /**
      * @param args the command line arguments
