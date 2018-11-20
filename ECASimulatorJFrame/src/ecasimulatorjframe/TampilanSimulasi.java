@@ -374,8 +374,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
             for (int i = 0; i < maxIter; i++) {
                 sb.append("Bulan ke-" + i);
                 sb.append('\n');
-                line[i] = ca.print(i);
-                System.out.println(line[i]);
+                
                 ca.NeighborhoodDefinition();
                 ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf, FFAf, FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf, HSSIm, HSSLf, HSSLm, HSSAf, HSSAm, HSSEf, HSSEm);
                 Entrepreneurs[] nE;
@@ -383,12 +382,16 @@ public class TampilanSimulasi extends javax.swing.JFrame {
 
                 for (int j = 0; j < e[i].length; j++) {
 //                    String lines = e[i][j].toString2();
-                    System.out.println(e[i][j].toString2());
+//                    System.out.println(e[i][j].toString2());
                     sb.append(e[i][j].toString2());
                     sb.append('\n');
 
                 }
+                // perubahan disimpan dulu
                 ca.E = e[i];
+                // lalu baru diprint
+                line[i] = ca.print(i);
+//                System.out.println(line[i]);
 
             }
             pw.write(sb.toString());

@@ -103,6 +103,16 @@ Berikut merupakan tampilan data wirausaha yang telah dipilih oleh \textit{user}.
 \end{figure}
 
 	\item TampilanHasil
+	
+	Pada tampilan ini akan ditampilkan hasil dari simulasi berupa tabel yang isi setiap kolomnya adalah iterasi (bulan), jumlah wirausaha yang berada pada level \textit{potential}, jumlah wirausaha yang berada pada level \textit{nascent}, jumlah wirausaha yang berada pada level \textit{new\_bm}, jumlah wirausaha yang berada pada level \textit{est\_bm} dan jumlah wirausaha yang berada pada level \textit{retired}. (Gambar \ref{fig:tampilanHasil})
+	
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=14cm, height=8cm]{hasil2} 
+		\caption[Gambar TampilanHasil]{Gambar TampilanHasil}
+	\label{fig:tampilanHasil} 
+\end{figure}
+
 \end{enumerate}
 
 \section{Pengujian}
@@ -326,3 +336,145 @@ Jika \textit{user} tidak memasukkan \textit{file} data wirausaha, akan ada pesan
 
  
 \subsection{Pengujian Hasil dari Simulasi}
+
+Pengujian ini dilakukan agar hasil dari simulasi mendapatkan hasil yang akurat. Pengujian ini dilakukan dengan membandingkan hasil simulasi program dengan hasil perhitungan simulasi secara manual.\\
+Contoh perhitungan menggunakan hasil perhitungan dari bab \ref{chap:analisis} pada subbab \ref{analisismodelCA}.\\
+\begin{itemize}
+\item Hasil Simulasi Program\\
+	Berikut hasil perhitungan \textit{Continuity Index} :\\
+	\begin{itemize}
+		\item Iterasi pada bulan pertama
+		
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=6cm, height=3cm]{hasilIterasi0} 
+		\caption[Hasil Iterasi bulan pertama]{Hasil iterasi bulan pertama}
+	\label{hasilIterasi0} 
+\end{figure}
+		\item Iterasi pada bulan kedua
+		
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=6cm, height=3cm]{hasilIterasi1} 
+		\caption[Hasil Iterasi bulan kedua]{Hasil iterasi bulan kedua}
+	\label{hasilIterasi1} 
+\end{figure}
+		\item Iterasi pada bulan ketiga
+		
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=6cm, height=3cm]{hasilIterasi2} 
+		\caption[Hasil Iterasi bulan ketiga]{Hasil iterasi bulan ketiga}
+	\label{hasilIterasi2} 
+\end{figure}
+		\item Iterasi pada bulan keempat
+		
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=6cm, height=3cm]{hasilIterasi3} 
+		\caption[Hasil Iterasi bulan keempat]{Hasil iterasi bulan keempat}
+	\label{hasilIterasi3} 
+\end{figure}
+
+		\item Iterasi pada bulan kelima
+		
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=6cm, height=3cm]{hasilIterasi4} 
+		\caption[Hasil Iterasi bulan kelima]{Hasil iterasi bulan kelima}
+	\label{hasilIterasi4} 
+\end{figure}
+		
+	\end{itemize}
+	Berikut hasil simulasi yang dihitung dari program : (Gambar \ref{hasil1})
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=12cm, height=10cm]{hasil1} 
+		\caption[Hasil dari simulasi]{Hasil dari simulasi}
+	\label{hasil1} 
+\end{figure}
+
+	Berikut rincian hasil simulasi yang ditampilkan pada Microsoft Excel (file CSV) : (Gambar \ref{hasil2})
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=10cm, height=8cm]{hasilExcel} 
+		\caption[Hasil dari rincian simulasi]{Hasil dari rincian simulasi}
+	\label{hasil2} 
+\end{figure}
+
+\item Hasil Simulasi Manual\\
+Berikut hasil dari perhitungan manual :
+	\begin{itemize}
+		\item Iterasi pada bulan pertama
+		
+		\begin{equation}
+	CIdx_{1}(t=0) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.47) + ((14.7+17.4+5.4+10.5) \times 0.62) + ((14.3+10.4) \times 0.67) + ((16+19+7.2+10.2) \times 0.8) + ((8.1+11.4) \times 0.75) + ((18.6+18.4+8.9) \times 0.35) ) + 0.4 \times (0 + 0 + 0) + 0.29925 = 71.41475
+\end{equation}	
+
+\begin{equation}
+	CIdx_{2}(t=0) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.47) + ((31.6+51.5+2.4+43) \times 0.62) + ((31+41.8) \times 0.67) + ((31+52+2.6+41.7) \times 0.8) + ((3.5+41.6) \times 0.75) + ((32.4+51.7 + 3.8) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3)) + 0.29925 = 176.23825
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=0) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.47) + ((16.1+15.4+3.1+2) \times 0.62) + ((17.6+3) \times 0.67) + ((17+15+5.4+2.2) \times 0.8) + ((5.4+2.7) \times 0.75) + ((16.4+13.9) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3)) + 0.29925 = 52.08175
+\end{equation}
+
+	\item Iterasi pada bulan kedua
+	
+	\begin{equation}
+	CIdx_{1}(t=1) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.47) + ((14.7+17.4+5.4+10.5) \times 0.62) + ((14.3+10.4) \times 0.67) + ((16+19+7.2+10.2) \times 0.8) + ((8.1+11.4) \times 0.75) + ((18.6+18.4+8.9) \times 0.35) ) + 0.4 \times (0 + 0 + 0) + 0.29925 = 71.41475
+\end{equation}	
+
+\begin{equation}
+	CIdx_{2}(t=1) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.47) + ((31.6+51.5+2.4+43) \times 0.62) + ((31+41.8) \times 0.67) + ((31+52+2.6+41.7) \times 0.8) + ((3.5+41.6) \times 0.75) + ((32.4+51.7 + 3.8) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3)) + 0.29925 = 176.23825
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=1) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.47) + ((16.1+15.4+3.1+2) \times 0.62) + ((17.6+3) \times 0.67) + ((17+15+5.4+2.2) \times 0.8) + ((5.4+2.7) \times 0.75) + ((16.4+13.9) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3)) + 0.29925 = 52.08175
+\end{equation}
+
+	\item Iterasi pada bulan ketiga
+	
+	\begin{equation}
+	CIdx_{1}(t=2) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.47) + ((14.7+17.4+5.4+10.5) \times 0.62) + ((14.3+10.4) \times 0.67) + ((16+19+7.2+10.2) \times 0.8) + ((8.1+11.4) \times 0.75) + ((18.6+18.4+8.9) \times 0.35) ) + 0.4 \times (0 + 0 + 0) + 0.29925 = 71.41475
+\end{equation}	
+
+\begin{equation}
+	CIdx_{2}(t=2) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.47) + ((31.6+51.5+2.4+43) \times 0.62) + ((31+41.8) \times 0.67) + ((31+52+2.6+41.7) \times 0.8) + ((3.5+41.6) \times 0.75) + ((32.4+51.7 + 3.8) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3)) + 0.29925 = 176.23825
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=2) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.47) + ((16.1+15.4+3.1+2) \times 0.62) + ((17.6+3) \times 0.67) + ((17+15+5.4+2.2) \times 0.8) + ((5.4+2.7) \times 0.75) + ((16.4+13.9) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3)) + 0.29925 = 52.08175
+\end{equation}
+
+	\item Iterasi pada bulan keempat
+	
+	\begin{equation}
+	CIdx_{1}(t=3) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.47) + ((14.7+17.4+5.4+10.5) \times 0.62) + ((14.3+10.4) \times 0.67) + ((16+19+7.2+10.2) \times 0.8) + ((8.1+11.4) \times 0.75) + ((18.6+18.4+8.9) \times 0.35) ) + 0.4 \times (0 + 0 + \frac{2}{4} \times 0.3) + 0.29925 = 71.47475
+\end{equation}
+
+\begin{equation}
+	CIdx_{2}(t=3) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.47) + ((31.6+51.5+2.4+43) \times 0.62) + ((31+41.8) \times 0.67) + ((31+52+2.6+41.7) \times 0.8) + ((3.5+41.6) \times 0.75) + ((32.4+51.7 + 3.8) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {4} \times 0.3)) + 0.29925 = 176.23825
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=3) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.47) + ((16.1+15.4+3.1+2) \times 0.62) + ((17.6+3) \times 0.67) + ((17+15+5.4+2.2) \times 0.8) + ((5.4+2.7) \times 0.75) + ((16.4+13.9) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {4} \times 0.3)) + 0.29925 = 52.08175
+\end{equation}
+
+	\item Iterasi pada bulan kelima
+	
+	\begin{equation}
+	CIdx_{1}(t=4) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.47) + ((14.7+17.4+5.4+10.5) \times 0.62) + ((14.3+10.4) \times 0.67) + ((16+19+7.2+10.2) \times 0.8) + ((8.1+11.4) \times 0.75) + ((18.6+18.4+8.9) \times 0.35) ) + 0.4 \times (0 + 0 + \frac{2}{4} \times 0.3) + 0.29925 = 71.47475
+\end{equation}
+
+\begin{equation}
+	CIdx_{2}(t=4) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.47) + ((31.6+51.5+2.4+43) \times 0.62) + ((31+41.8) \times 0.67) + ((31+52+2.6+41.7) \times 0.8) + ((3.5+41.6) \times 0.75) + ((32.4+51.7 + 3.8) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {4} \times 0.3)) + 0.29925 = 176.23825
+\end{equation}
+
+\begin{equation}
+	CIdx_{3}(t=4) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.47) + ((16.1+15.4+3.1+2) \times 0.62) + ((17.6+3) \times 0.67) + ((17+15+5.4+2.2) \times 0.8) + ((5.4+2.7) \times 0.75) + ((16.4+13.9) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {4} \times 0.3)) + 0.29925 = 52.08175
+\end{equation}
+	\end{itemize}
+\end{itemize}

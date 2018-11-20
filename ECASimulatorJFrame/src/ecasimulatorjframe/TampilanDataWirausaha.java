@@ -215,7 +215,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
         double[] kumpulanBobot;
         int returnValue = openFileChooser.showOpenDialog(this);
         StringBuilder sb = new StringBuilder();
-        System.out.println(JFileChooser.APPROVE_OPTION);
+//        System.out.println(JFileChooser.APPROVE_OPTION);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             try {
                 br = new BufferedReader(new FileReader(openFileChooser.getSelectedFile()));

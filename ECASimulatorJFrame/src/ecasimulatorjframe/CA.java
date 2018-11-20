@@ -59,7 +59,7 @@ public class CA {
             if (this.numOfMonth % 12 == 0) {
                 nextEnt[i].age++; // tiap kelipatan 12 umurnya nambah
             }
-                nextEnt[i].b_age++;
+            nextEnt[i].b_age++;
             nextLevel(nextEnt[i], i, model, composition);
         }
         this.numOfMonth++;
@@ -74,21 +74,25 @@ public class CA {
             double sum1 = 0.0;
             for (int j = 0; j < model.popSize; j++) {
                 sum1 = sum1 + model.N.neighbors[i].neighborMatrix[idxEnt][j];
+//                System.out.println(sum1);
             }
             sum = sum + sum1 / (model.popSize - 1) * model.N.weight[i];
+//            System.out.println(sum);
         }
+//        System.out.println(sum);
         return sum;
     }
 
     //perubahan di threshold
     void nextLevel(Entrepreneurs ne, int i, CA model, double[] composition) {
         //kasus umur yang sudah lebih dari 64th
-        if (ne.age > (64 * 12)) {
+        if (ne.age > (64)) {
             ne.level = State.RETIRED;
             ne.b_age = 0;
         } else {
             double idx = getIndex(i, model, composition);
             threshold = Double.parseDouble(InputDataHandler.getValue("threshold"));
+//            System.out.println(threshold + ";" + idx);
             if (idx < threshold) {
                 ne.level = State.POTENTIAL;
                 ne.b_age = 0;
@@ -113,7 +117,12 @@ public class CA {
     }
 
     double getIndex(int i, CA model, double[] composition) {
-        return composition[0] * model.E[i].point + composition[1] * this.getNeighborIndex(model, i) + composition[2] * this.pub.getPublicIdx();
+        double hasil = composition[0] * model.E[i].point + composition[1] * this.getNeighborIndex(model, i) + composition[2] * this.pub.getPublicIdx();
+//        System.out.println("hasil tetangga : "+composition[1] * this.getNeighborIndex(model, i));
+//        System.out.println("hasil faktor publik : "+composition[2] * this.pub.getPublicIdx());
+//        System.out.println("=====================");
+        System.out.println("total hasil : "+hasil);
+        return hasil;
     }
 
     //pendefinisian ketetanggaan
@@ -420,7 +429,6 @@ public class CA {
 
     }
 
-
     String print(int iter) {
 //        int[] level = new int[5];
         int l0 = 0;
@@ -455,29 +463,82 @@ public class CA {
         for (int i = 0; i < this.popSize; i++) {
             int a = getAgeRange(E[i].age);
             if (this.E[i].sex) {
+//                System.out.println("PO");
+//                System.out.println(POAm[a]);
+//                System.out.println(POEm[E[i].education]);
+//                System.out.println(POLm[E[i].location]);
+//                System.out.println(POIm[E[i].income]);
+//                System.out.println("PC");
+//                System.out.println(PCAm[a]);
+//                System.out.println(PCEm[E[i].education]);
+//                System.out.println(PCLm[E[i].location]);
+//                System.out.println(PCIm[E[i].income]);
+//                System.out.println("RM");
+//                System.out.println(RMAm[a]);
+//                System.out.println(RMIm[E[i].income]);
+//                System.out.println("HSS");
+//                System.out.println(HSSAm[a]);
+//                System.out.println(HSSEm[E[i].education]);
+//                System.out.println(HSSLm[E[i].location]);
+//                System.out.println(HSSIm[E[i].income]);
+//                System.out.println("MA");
+//                System.out.println(MALm[E[i].location]);
+//                System.out.println(MAIm[E[i].income]);
+//                System.out.println("FF");
+//                System.out.println(FFAm[a]);
+//                System.out.println(FFEm[E[i].education]);
+//                System.out.println(FFLm[E[i].location]);
                 E[i].point = (POAm[a] + POEm[E[i].education] + POLm[E[i].location] + POIm[E[i].income]) * 0.47 + (PCAm[a] + PCEm[E[i].education] + PCLm[E[i].location] + PCIm[E[i].income]) * 0.62 + (RMAm[a] + RMIm[E[i].income]) * 0.67 + (FFAm[a] + FFEm[E[i].education] + FFLm[E[i].location]) * 0.35 + (MALm[E[i].location] + MAIm[E[i].income]) * 0.75 + (HSSAm[a] + HSSIm[E[i].income] + HSSLm[E[i].location] + HSSEm[E[i].education]) * 0.8;
             } else {
+//                System.out.println("PO");
+//                System.out.println(POAf[a]);
+//                System.out.println(POEf[E[i].education]);
+//                System.out.println(POLf[E[i].location]);
+//                System.out.println(POIf[E[i].income]);
+//                System.out.println("PC");
+//                System.out.println(PCAf[a]);
+//                System.out.println(PCEf[E[i].education]);
+//                System.out.println(PCLf[E[i].location]);
+//                System.out.println(PCIf[E[i].income]);
+//                System.out.println("RM");
+//                System.out.println(RMAf[a]);
+//                System.out.println(RMIf[E[i].income]);
+//                System.out.println("HSS");
+//                System.out.println(HSSAf[a]);
+//                System.out.println(HSSEf[E[i].education]);
+//                System.out.println(HSSLf[E[i].location]);
+//                System.out.println(HSSIf[E[i].income]);
+//                System.out.println("MA");
+//                System.out.println(MALf[E[i].location]);
+//                System.out.println(MAIf[E[i].income]);
+//                System.out.println("FF");
+//                System.out.println(FFAf[a]);
+//                System.out.println(FFEf[E[i].education]);
+//                System.out.println(FFLf[E[i].location]);
                 E[i].point = (POAf[a] + POEf[E[i].education] + POLf[E[i].location] + POIf[E[i].income]) * 0.47 + (PCAf[a] + PCEf[E[i].education] + PCLf[E[i].location] + PCIf[E[i].income]) * 0.62 + (RMAf[a] + RMIf[E[i].income]) * 0.67 + (FFAf[a] + FFEf[E[i].education] + FFLf[E[i].location]) * 0.35 + (MALf[E[i].location] + MAIf[E[i].income]) * 0.75 + (HSSAf[a] + HSSIf[E[i].income] + HSSLf[E[i].location] + HSSEf[E[i].education]) * 0.8;
             }
-            //System.out.println("i = "+ i + " point = "+E[i].point);
+//            System.out.println("internal ke "+ i + " point = "+E[i].point);
         }
     }
 
     int getAgeRange(int a) {
         int ageC = -1;
-        if (a >= 55 * 12 && a <= 64 * 12) {
+        if (a >= 55 && a <= 64) {
             ageC = 0;
-        } else if (a >= 45 * 12) {
+        }
+        if (a >= 45 && a <= 54 ) {
             ageC = 1;
-        } else if (a >= 34 * 12) {
+        }
+        if (a >= 35  && a <= 44 ) {
             ageC = 2;
-        } else if (a >= 24 * 12) {
+        }
+        if (a >= 25  && a <= 34 ) {
             ageC = 3;
-        } else {
+        }
+        if (a >= 18  && a <= 24) {
             ageC = 4;
         }
         return ageC;
     }
-
 
 }
