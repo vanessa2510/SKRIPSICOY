@@ -26,15 +26,15 @@
 \contentsline {subsection}{\numberline {3.2.1}Analisis Ruang Sel}{28}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Analisis Fungsi Transisi}{28}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Analisis Model Pertumbuhan Wirausaha dengan Cellular Automata}{29}{section.3.3}
-\contentsline {section}{\numberline {3.4}Deskripsi Perangkat Lunak}{36}{section.3.4}
+\contentsline {section}{\numberline {3.4}Deskripsi Perangkat Lunak}{37}{section.3.4}
 \contentsline {section}{\numberline {3.5}Analisis Perangkat Lunak}{37}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Diagram \textit {Use Case}}{37}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Diagram Kelas}{39}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}Kelas EGM}{39}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Kelas CA}{39}{subsection.3.5.4}
-\contentsline {subsection}{\numberline {3.5.5}Kelas Entrepreneur}{41}{subsection.3.5.5}
-\contentsline {subsection}{\numberline {3.5.6}Kelas Neighbor}{41}{subsection.3.5.6}
-\contentsline {subsection}{\numberline {3.5.7}Kelas Neighborhood}{41}{subsection.3.5.7}
+\contentsline {subsection}{\numberline {3.5.4}Kelas CA}{40}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}Kelas Entrepreneur}{42}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.6}Kelas Neighbor}{42}{subsection.3.5.6}
+\contentsline {subsection}{\numberline {3.5.7}Kelas Neighborhood}{42}{subsection.3.5.7}
 \contentsline {subsection}{\numberline {3.5.8}Kelas PublicFactor}{42}{subsection.3.5.8}
 \contentsline {subsection}{\numberline {3.5.9}Kelas State}{42}{subsection.3.5.9}
 \contentsline {chapter}{\numberline {4}Perancangan}{43}{chapter.4}

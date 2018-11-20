@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  20 NOV 2018 14:48
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.9.25)  20 NOV 2018 18:30
 entering extended mode
 **skripsi.tex
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS-versibaru\skripsi.tex"
@@ -551,11 +551,69 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 \pgffor@stack=\toks31
 \pgffor@toks=\toks32
 ))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip98
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks33
+\ex@=\dimen148
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen149
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count135
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count136
+\leftroot@=\count137
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count138
+\DOTSCASE@=\count139
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box34
+\strutbox@=\box35
+\big@size=\dimen150
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count140
+\c@MaxMatrixCols=\count141
+\dotsspace@=\muskip11
+\c@parentequation=\count142
+\dspbrk@lvl=\count143
+\tag@help=\toks34
+\row@=\count144
+\column@=\count145
+\maxfields@=\count146
+\andhelp@=\toks35
+\eqnshift@=\dimen151
+\alignsep@=\dimen152
+\tagshift@=\dimen153
+\tagwidth@=\dimen154
+\totwidth@=\dimen155
+\lineht@=\dimen156
+\@envbody=\toks36
+\multlinegap=\skip99
+\multlinetaggap=\skip100
+\mathdisplay@stack=\toks37
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
 \@input{dosen.aux}
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS-versibaru\dosen.tex")
-Package hyperref Info: Option `unicode' set `true' on input line 199.
-Package hyperref Info: Option `colorlinks' set `true' on input line 199.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 207.
+Package hyperref Info: Option `unicode' set `true' on input line 200.
+Package hyperref Info: Option `colorlinks' set `true' on input line 200.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 208.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -564,48 +622,47 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS-versibaru\data.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen148
-\lightrulewidth=\dimen149
-\cmidrulewidth=\dimen150
-\belowrulesep=\dimen151
-\belowbottomsep=\dimen152
-\aboverulesep=\dimen153
-\abovetopsep=\dimen154
-\cmidrulesep=\dimen155
-\cmidrulekern=\dimen156
-\defaultaddspace=\dimen157
-\@cmidla=\count135
-\@cmidlb=\count136
-\@aboverulesep=\dimen158
-\@belowrulesep=\dimen159
-\@thisruleclass=\count137
-\@lastruleclass=\count138
-\@thisrulewidth=\dimen160
+\heavyrulewidth=\dimen157
+\lightrulewidth=\dimen158
+\cmidrulewidth=\dimen159
+\belowrulesep=\dimen160
+\belowbottomsep=\dimen161
+\aboverulesep=\dimen162
+\abovetopsep=\dimen163
+\cmidrulesep=\dimen164
+\cmidrulekern=\dimen165
+\defaultaddspace=\dimen166
+\@cmidla=\count147
+\@cmidlb=\count148
+\@aboverulesep=\dimen167
+\@belowrulesep=\dimen168
+\@thisruleclass=\count149
+\@lastruleclass=\count150
+\@thisrulewidth=\dimen169
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip98
-\LTright=\skip99
-\LTpre=\skip100
-\LTpost=\skip101
-\LTchunksize=\count139
-\LTcapwidth=\dimen161
-\LT@head=\box34
-\LT@firsthead=\box35
-\LT@foot=\box36
-\LT@lastfoot=\box37
-\LT@cols=\count140
-\LT@rows=\count141
-\c@LT@tables=\count142
-\c@LT@chunks=\count143
-\LT@p@ftn=\toks33
+\LTleft=\skip101
+\LTright=\skip102
+\LTpre=\skip103
+\LTpost=\skip104
+\LTchunksize=\count151
+\LTcapwidth=\dimen170
+\LT@head=\box36
+\LT@firsthead=\box37
+\LT@foot=\box38
+\LT@lastfoot=\box39
+\LT@cols=\count152
+\LT@rows=\count153
+\c@LT@tables=\count154
+\c@LT@chunks=\count155
+\LT@p@ftn=\toks38
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks34
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
@@ -613,13 +670,13 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\todo\todo.sty"
 Package: todo 2010/03/31 v2.4142 To-do list (Federico Garcia)
-\@todotoks=\toks35
-\c@todo=\count144
+\@todotoks=\toks39
+\c@todo=\count156
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks36
-\verbatim@line=\toks37
+\every@verbatim=\toks40
+\verbatim@line=\toks41
 \verbatim@in@stream=\read1
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgfplots\pgfplots.sty"
@@ -636,23 +693,23 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex")
-\pgf@x=\dimen162
-\pgf@y=\dimen163
-\pgf@xa=\dimen164
-\pgf@ya=\dimen165
-\pgf@xb=\dimen166
-\pgf@yb=\dimen167
-\pgf@xc=\dimen168
-\pgf@yc=\dimen169
+\pgf@x=\dimen171
+\pgf@y=\dimen172
+\pgf@xa=\dimen173
+\pgf@ya=\dimen174
+\pgf@xb=\dimen175
+\pgf@yb=\dimen176
+\pgf@xc=\dimen177
+\pgf@yc=\dimen178
 \w@pgf@writea=\write4
 \r@pgf@reada=\read2
-\c@pgf@counta=\count145
-\c@pgf@countb=\count146
-\c@pgf@countc=\count147
-\c@pgf@countd=\count148
-\t@pgf@toka=\toks38
-\t@pgf@tokb=\toks39
-\t@pgf@tokc=\toks40
+\c@pgf@counta=\count157
+\c@pgf@countb=\count158
+\c@pgf@countc=\count159
+\c@pgf@countd=\count160
+\t@pgf@toka=\toks42
+\t@pgf@tokb=\toks43
+\t@pgf@tokc=\toks44
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -669,8 +726,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.t
 ex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count149
-\pgfsyssoftpath@bigbuffer@items=\count150
+\pgfsyssoftpath@smallbuffer@items=\count161
+\pgfsyssoftpath@bigbuffer@items=\count162
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.t
 ex"
@@ -681,52 +738,52 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
 "
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen170
-\pgf@picmaxx=\dimen171
-\pgf@picminy=\dimen172
-\pgf@picmaxy=\dimen173
-\pgf@pathminx=\dimen174
-\pgf@pathmaxx=\dimen175
-\pgf@pathminy=\dimen176
-\pgf@pathmaxy=\dimen177
-\pgf@xx=\dimen178
-\pgf@xy=\dimen179
-\pgf@yx=\dimen180
-\pgf@yy=\dimen181
-\pgf@zx=\dimen182
-\pgf@zy=\dimen183
+\pgf@picminx=\dimen179
+\pgf@picmaxx=\dimen180
+\pgf@picminy=\dimen181
+\pgf@picmaxy=\dimen182
+\pgf@pathminx=\dimen183
+\pgf@pathmaxx=\dimen184
+\pgf@pathminy=\dimen185
+\pgf@pathmaxy=\dimen186
+\pgf@xx=\dimen187
+\pgf@xy=\dimen188
+\pgf@yx=\dimen189
+\pgf@yy=\dimen190
+\pgf@zx=\dimen191
+\pgf@zy=\dimen192
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.c
 ode.tex"
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen184
-\pgf@path@lasty=\dimen185
+\pgf@path@lastx=\dimen193
+\pgf@path@lasty=\dimen194
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.
 tex"
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen186
-\pgf@shorten@start@additional=\dimen187
+\pgf@shorten@end@additional=\dimen195
+\pgf@shorten@start@additional=\dimen196
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
 "
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box38
-\pgf@hbox=\box39
-\pgf@layerbox@main=\box40
-\pgf@picture@serial@count=\count151
+\pgfpic=\box40
+\pgf@hbox=\box41
+\pgf@layerbox@main=\box42
+\pgf@picture@serial@count=\count163
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.co
 de.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen188
+\pgflinewidth=\dimen197
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations
 .code.tex"
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen189
-\pgf@pt@y=\dimen190
-\pgf@pt@temp=\dimen191
+\pgf@pt@x=\dimen198
+\pgf@pt@y=\dimen199
+\pgf@pt@temp=\dimen200
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -742,12 +799,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
 "
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen192
+\pgfarrowsep=\dimen201
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen193
-\pgf@sys@shading@range@num=\count152
+\pgf@max=\dimen202
+\pgf@sys@shading@range@num=\count164
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.te
 x"
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -755,7 +812,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.t
 ex"
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box41
+\pgfexternal@startupbox=\box43
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
 "
@@ -771,15 +828,15 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box42
+\pgfnodeparttextbox=\box44
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex"
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.
 sty"
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen194
-\pgf@nodesepend=\dimen195
+\pgf@nodesepstart=\dimen203
+\pgf@nodesepend=\dimen204
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.
 sty"
@@ -791,31 +848,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.
 code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count153
-\pgfplotmarksize=\dimen196
+\pgf@plot@mark@count=\count165
+\pgfplotmarksize=\dimen205
 )
-\tikz@lastx=\dimen197
-\tikz@lasty=\dimen198
-\tikz@lastxsaved=\dimen199
-\tikz@lastysaved=\dimen200
-\tikzleveldistance=\dimen201
-\tikzsiblingdistance=\dimen202
-\tikz@figbox=\box43
-\tikz@figbox@bg=\box44
-\tikz@tempbox=\box45
-\tikz@tempbox@bg=\box46
-\tikztreelevel=\count154
-\tikznumberofchildren=\count155
-\tikznumberofcurrentchild=\count156
-\tikz@fig@count=\count157
+\tikz@lastx=\dimen206
+\tikz@lasty=\dimen207
+\tikz@lastxsaved=\dimen208
+\tikz@lastysaved=\dimen209
+\tikzleveldistance=\dimen210
+\tikzsiblingdistance=\dimen211
+\tikz@figbox=\box45
+\tikz@figbox@bg=\box46
+\tikz@tempbox=\box47
+\tikz@tempbox@bg=\box48
+\tikztreelevel=\count166
+\tikznumberofchildren=\count167
+\tikznumberofcurrentchild=\count168
+\tikz@fig@count=\count169
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count158
-\pgfmatrixcurrentcolumn=\count159
-\pgf@matrix@numberofcolumns=\count160
+\pgfmatrixcurrentrow=\count170
+\pgfmatrixcurrentcolumn=\count171
+\pgf@matrix@numberofcolumns=\count172
 )
-\tikz@expandcount=\count161
+\tikz@expandcount=\count173
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 librarytopaths.code.tex"
@@ -823,12 +880,12 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotscore.code.tex"
-\t@pgfplots@toka=\toks41
-\t@pgfplots@tokb=\toks42
-\t@pgfplots@tokc=\toks43
-\pgfplots@tmpa=\dimen203
-\c@pgfplots@coordindex=\count162
-\c@pgfplots@scanlineindex=\count163
+\t@pgfplots@toka=\toks45
+\t@pgfplots@tokb=\toks46
+\t@pgfplots@tokc=\toks47
+\pgfplots@tmpa=\dimen212
+\c@pgfplots@coordindex=\count174
+\c@pgfplots@scanlineindex=\count175
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgfplotssysgeneric.code.
 tex"))
@@ -844,7 +901,7 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 fsupp_pgflibraryfpu.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpg
 fsupp_pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count164
+\c@pgfmathroundto@lastzeros=\count176
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsutil.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotslistst
@@ -853,14 +910,14 @@ ructure.code.tex")
 ructureext.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsarray.
 code.tex"
-\c@pgfplotsarray@tmp=\count165
+\c@pgfplotsarray@tmp=\count177
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsmatrix
 .code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\numtable\pgfplotstableshared
 .code.tex"
-\c@pgfplotstable@counta=\count166
-\t@pgfplotstable@a=\toks44
+\c@pgfplotstable@counta=\count178
+\t@pgfplotstable@a=\toks48
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsdeque.
 code.tex")
@@ -872,7 +929,7 @@ e.tex"))
 tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\pgflibrarypgfplots.surf
 shading.code.tex"
-\c@pgfplotslibrarysurf@no=\count167
+\c@pgfplotslibrarysurf@no=\count179
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgflibrarypgfplots.surfs
 hading.pgfsys-pdftex.def")))
@@ -899,16 +956,16 @@ ex")))
 librarydecorations.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecorations.code
 .tex"
-\pgfdecoratedcompleteddistance=\dimen204
-\pgfdecoratedremainingdistance=\dimen205
-\pgfdecoratedinputsegmentcompleteddistance=\dimen206
-\pgfdecoratedinputsegmentremainingdistance=\dimen207
-\pgf@decorate@distancetomove=\dimen208
-\pgf@decorate@repeatstate=\count168
-\pgfdecorationsegmentamplitude=\dimen209
-\pgfdecorationsegmentlength=\dimen210
+\pgfdecoratedcompleteddistance=\dimen213
+\pgfdecoratedremainingdistance=\dimen214
+\pgfdecoratedinputsegmentcompleteddistance=\dimen215
+\pgfdecoratedinputsegmentremainingdistance=\dimen216
+\pgf@decorate@distancetomove=\dimen217
+\pgf@decorate@repeatstate=\count180
+\pgfdecorationsegmentamplitude=\dimen218
+\pgfdecorationsegmentlength=\dimen219
 )
-\tikz@lib@dec@box=\box47
+\tikz@lib@dec@box=\box49
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 librarydecorations.pathmorphing.code.tex"
@@ -918,13 +975,13 @@ ecorations.pathmorphing.code.tex"))
 librarydecorations.pathreplacing.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
 ecorations.pathreplacing.code.tex"))
-\pgfplots@numplots=\count169
-\pgfplots@xmin@reg=\dimen211
-\pgfplots@xmax@reg=\dimen212
-\pgfplots@ymin@reg=\dimen213
-\pgfplots@ymax@reg=\dimen214
-\pgfplots@zmin@reg=\dimen215
-\pgfplots@zmax@reg=\dimen216
+\pgfplots@numplots=\count181
+\pgfplots@xmin@reg=\dimen220
+\pgfplots@xmax@reg=\dimen221
+\pgfplots@ymin@reg=\dimen222
+\pgfplots@ymax@reg=\dimen223
+\pgfplots@zmin@reg=\dimen224
+\pgfplots@zmax@reg=\dimen225
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 libraryplotmarks.code.tex"
@@ -971,22 +1028,22 @@ LaTeX Warning: Label `pesanError2' multiply defined.
 pA.aux")
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS-versibaru\Lampiran/lam
 pB.aux"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1022,7 +1079,7 @@ LaTeX Font Info:    ... okay on input line 242.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 242.
+LaTeX Info: Redefining \microtypecontext on input line 243.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1036,8 +1093,8 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-\AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring ON on input line 242.
+\AtBeginShipoutBox=\box50
+Package hyperref Info: Link coloring ON on input line 243.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1045,11 +1102,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count170
+\c@section@level=\count182
 )
-LaTeX Info: Redefining \ref on input line 242.
-LaTeX Info: Redefining \pageref on input line 242.
-LaTeX Info: Redefining \nameref on input line 242.
+LaTeX Info: Redefining \ref on input line 243.
+LaTeX Info: Redefining \pageref on input line 243.
+LaTeX Info: Redefining \nameref on input line 243.
 
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS-versibaru\skripsi.out"
 ) ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS-versibaru\skripsi.ou
@@ -1057,19 +1114,19 @@ t")
 \@outlinefile=\write5
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count171
-\scratchdimen=\dimen217
-\scratchbox=\box49
-\nofMPsegments=\count172
-\nofMParguments=\count173
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count174
-\MPscratchDim=\dimen218
-\MPnumerator=\count175
-\makeMPintoPDFobject=\count176
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count183
+\scratchdimen=\dimen226
+\scratchbox=\box51
+\nofMPsegments=\count184
+\nofMParguments=\count185
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count186
+\MPscratchDim=\dimen227
+\MPnumerator=\count187
+\makeMPintoPDFobject=\count188
+\everyMPtoPDFconversion=\toks50
 )
-\c@lstlisting=\count177
+\c@lstlisting=\count189
  ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
@@ -1077,7 +1134,7 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 <Logo-UNPAR.png, id=278, 226.8475pt x 223.83624pt>
 File: Logo-UNPAR.png Graphic file (type png)
  <use Logo-UNPAR.png>
-Package pdftex.def Info: Logo-UNPAR.png used on input line 401.
+Package pdftex.def Info: Logo-UNPAR.png used on input line 402.
 (pdftex.def)             Requested size: 226.84694pt x 223.8357pt.
 
 [1
@@ -1093,44 +1150,44 @@ IPSICOY/Template Skripsi FTIS-versibaru/Logo-UNPAR.png>] [2
 File: Logo-UNPAR.png Graphic file (type png)
 
 <use Logo-UNPAR.png>
-Package pdftex.def Info: Logo-UNPAR.png used on input line 401.
+Package pdftex.def Info: Logo-UNPAR.png used on input line 402.
 (pdftex.def)             Requested size: 226.84694pt x 223.8357pt.
  [3] [4
 
 ] [5] [6
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 401.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 402.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 401.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 402.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 401
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 402
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 401
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 402
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 401.
+(Font)              <10.95> on input line 402.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 401.
+(Font)              <8> on input line 402.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 401.
-LaTeX Font Info:    Try loading font information for U+msa on input line 401.
+(Font)              <6> on input line 402.
+LaTeX Font Info:    Try loading font information for U+msa on input line 402.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1138,7 +1195,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 401.
+LaTeX Font Info:    Try loading font information for U+msb on input line 402.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1529,31 +1586,20 @@ File: t=0.png Graphic file (type png)
 Package pdftex.def Info: t=0.png used on input line 171.
 (pdftex.def)             Requested size: 455.25111pt x 341.43063pt.
  [30]
-Overfull \hbox (427.50446pt too wide) detected at line 217
-[]\OML/lmm/m/it/10.95 CIDx\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 eksternal\OT1
-/lmr/m/n/10.95 ) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 \OMS/lmsy/m/n/10.
-95  \OT1/lmr/m/n/10.95 ((3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 06 \OMS/lmsy
-/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1) + (
-2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 69 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/
-10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1) + (2\OML/lmm/m/it/10.95 :\OT1
-/lmr/m/n/10.95 22 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95
- :\OT1/lmr/m/n/10.95 1) + (2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 53 \OMS/lms
-y/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 05) +
- (2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 54 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/
-n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1) + (3\OML/lmm/m/it/10.95 :\O
-T1/lmr/m/n/10.95 3 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 1) + (2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 31 \OMS/lm
-sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 05) 
-+ (3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 25 \OMS/lmsy/m/n/10.95  \OT1/lmr/m
-/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 05) + (3\OML/lmm/m/it/10.95 :
-\OT1/lmr/m/n/10.95 92 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 1) + (2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 82 \OMS
-/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 0
-5) + (3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 45 \OMS/lmsy/m/n/10.95  \OT1/lm
-r/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1) + (3\OML/lmm/m/it/10.95
- :\OT1/lmr/m/n/10.95 29 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it
-/10.95 :\OT1/lmr/m/n/10.95 1)) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 29925
-[]
+Overfull \hbox (12.27657pt too wide) detected at line 217
+ []$[]  \OML/lmm/m/it/10.95 CIDx\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 ekstern
+al\OT1/lmr/m/n/10.95 ) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 \OMS/lmsy/m
+/n/10.95  \OT1/lmr/m/n/10.95 ((3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 06 \OM
+S/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
+1) + (2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 69 \OMS/lmsy/m/n/10.95  \OT1/lm
+r/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1) + (2\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 22 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it
+/10.95 :\OT1/lmr/m/n/10.95 1) + (2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 53 \O
+MS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95
+ 05) + (2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 54 \OMS/lmsy/m/n/10.95  \OT1/
+lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1) + (3\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 3 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 1)$ 
  []
 
 
@@ -1562,472 +1608,384 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--220
  []
 
 
-Overfull \hbox (547.94011pt too wide) detected at line 222
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\OML/lm
-m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 10
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.95 :\O
-T1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n
-/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67) + ((16
- + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2 + 10\OML/lmm/m/it/10.95 :\OT
-1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 11\OM
-L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.9
-5 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + ((18\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 8\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm
-/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95
- 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 + 0 + 0) + 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 29925 = 71\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 41475[]
+Overfull \hbox (32.33554pt too wide) detected at line 222
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\
+OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
+4 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$
+ 
  []
 
 [31 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS-versibaru/t=0.png>]
 
-Overfull \hbox (611.74893pt too wide) detected at line 226
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
-/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/it/10.
-95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 2\OML/
-lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 67) + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/
-n/10.95 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  
-\OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/
-it/10.95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \
-OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
-5 75) + ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :
-\OT1/lmr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/
-n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\
-OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it
-/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 29925
- = 176\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 23825[]
+Overfull \hbox (23.81888pt too wide) detected at line 226
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \O
+T1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/
+it/10.95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 
+2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
  []
 
 
-Overfull \hbox (556.39044pt too wide) detected at line 230
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/
-m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95 :\OT1
-/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 67) + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
-0.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/l
-msy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75)
- + ((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy
-/m/n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10
-.95 :\OT1/lmr/m/n/10.95 29925 = 52\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 08175
-[]
+Overfull \hbox (22.60934pt too wide) detected at line 226
+ []$[] \OT1/lmr/m/n/10.95 + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (([
+] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
+0.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 3))$ 
+ []
+
+
+Overfull \hbox (7.3939pt too wide) detected at line 231
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT
+1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m
+/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/
+m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
  []
 
 File: t=0.png Graphic file (type png)
 <use t=0.png>
-Package pdftex.def Info: t=0.png used on input line 234.
+Package pdftex.def Info: t=0.png used on input line 235.
 (pdftex.def)             Requested size: 512.15475pt x 341.43063pt.
 
-Overfull \hbox (42.68427pt too wide) in paragraph at lines 234--235
+Overfull \hbox (42.68427pt too wide) in paragraph at lines 235--236
  [][] 
  []
 
 
-Overfull \hbox (547.94011pt too wide) detected at line 243
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 1) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\OML/lm
-m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 10
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.95 :\O
-T1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n
-/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67) + ((16
- + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2 + 10\OML/lmm/m/it/10.95 :\OT
-1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 11\OM
-L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.9
-5 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + ((18\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 8\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm
-/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95
- 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 + 0 + 0) + 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 29925 = 71\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 41475[]
- []
-
-
-Overfull \hbox (611.74893pt too wide) detected at line 247
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 1) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
-/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/it/10.
-95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 2\OML/
-lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 67) + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/
-n/10.95 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  
-\OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/
-it/10.95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \
-OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
-5 75) + ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :
-\OT1/lmr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/
-n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\
-OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it
-/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 29925
- = 176\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 23825[]
- []
-
-
-Overfull \hbox (556.39044pt too wide) detected at line 251
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 1) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/
-m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95 :\OT1
-/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 67) + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
-0.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/l
-msy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75)
- + ((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy
-/m/n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10
-.95 :\OT1/lmr/m/n/10.95 29925 = 52\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 08175
-[]
- []
-
-File: t=0.png Graphic file (type png)
-<use t=0.png>
-Package pdftex.def Info: t=0.png used on input line 255.
-(pdftex.def)             Requested size: 512.15475pt x 341.43063pt.
-
-Overfull \hbox (42.68427pt too wide) in paragraph at lines 255--256
- [][] 
+Overfull \hbox (32.33554pt too wide) detected at line 244
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 1) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\
+OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
+4 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$
+ 
  []
 
 [32]
-Overfull \hbox (547.94011pt too wide) detected at line 265
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 2) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\OML/lm
-m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 10
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.95 :\O
-T1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n
-/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67) + ((16
- + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2 + 10\OML/lmm/m/it/10.95 :\OT
-1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 11\OM
-L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.9
-5 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + ((18\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 8\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm
-/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95
- 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 + 0 + 0) + 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 29925 = 71\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 41475[]
+Overfull \hbox (23.81888pt too wide) detected at line 248
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 1) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \O
+T1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/
+it/10.95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 
+2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
  []
 
 
-Overfull \hbox (608.36504pt too wide) detected at line 269
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 2) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
-/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/it/10.
-95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 2\OML/
-lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8)\OML/lmm/m/it/10.95 s\OT1/lmr/m/n/10.95 0\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 67) + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
-10.95 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  \O
-T1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/it
-/10.95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \OM
-S/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-75) + ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :\O
-T1/lmr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/
-10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OM
-L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95
- (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m
-/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 29925 =
- 176\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 23825[]
+Overfull \hbox (22.60934pt too wide) detected at line 248
+ []$[] \OT1/lmr/m/n/10.95 + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (([
+] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
+0.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 3))$ 
  []
 
 
-Overfull \hbox (556.39044pt too wide) detected at line 273
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 2) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/
-m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95 :\OT1
-/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 67) + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
-0.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/l
-msy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75)
- + ((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy
-/m/n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10
-.95 :\OT1/lmr/m/n/10.95 29925 = 52\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 08175
-[]
+Overfull \hbox (7.3939pt too wide) detected at line 252
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 1) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT
+1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m
+/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/
+m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
  []
 
 File: t=0.png Graphic file (type png)
 <use t=0.png>
-Package pdftex.def Info: t=0.png used on input line 277.
+Package pdftex.def Info: t=0.png used on input line 256.
 (pdftex.def)             Requested size: 512.15475pt x 341.43063pt.
 
-Overfull \hbox (42.68427pt too wide) in paragraph at lines 277--278
+Overfull \hbox (42.68427pt too wide) in paragraph at lines 256--257
  [][] 
+ []
+
+
+Overfull \hbox (32.33554pt too wide) detected at line 266
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 2) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\
+OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
+4 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$
+ 
  []
 
 [33]
-Overfull \hbox (572.84845pt too wide) detected at line 286
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 3) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\OML/lm
-m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 10
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.95 :\O
-T1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n
-/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67) + ((16
- + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2 + 10\OML/lmm/m/it/10.95 :\OT
-1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 11\OM
-L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.9
-5 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + ((18\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 8\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm
-/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95
- 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 + 0 + [] \OMS/lmsy/m/n/10.95  \
-OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 29925 = 71\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 474
-75[]
+Overfull \hbox (20.43498pt too wide) detected at line 270
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 2) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \O
+T1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/
+it/10.95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 
+2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 8)\OML/lmm/m/it/10.95 s\OT1/lmr/m/n/10.95 0\OML/lmm
+/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
  []
 
 
-Overfull \hbox (611.74893pt too wide) detected at line 290
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 3) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
-/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/it/10.
-95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 2\OML/
-lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 67) + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/
-n/10.95 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  
-\OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/
-it/10.95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \
-OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
-5 75) + ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :
-\OT1/lmr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/
-n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\
-OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it
-/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 29925
- = 176\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 23825[]
+Overfull \hbox (22.60934pt too wide) detected at line 270
+ []$[] \OT1/lmr/m/n/10.95 + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (([
+] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
+0.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 3))$ 
  []
 
 
-Overfull \hbox (556.39044pt too wide) detected at line 294
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 3) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/
-m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95 :\OT1
-/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 67) + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
-0.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/l
-msy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75)
- + ((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy
-/m/n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10
-.95 :\OT1/lmr/m/n/10.95 29925 = 52\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 08175
-[]
+Overfull \hbox (7.3939pt too wide) detected at line 274
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 2) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT
+1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m
+/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/
+m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
  []
 
-<t=3.png, id=970, 723.70375pt x 563.10374pt>
-File: t=3.png Graphic file (type png)
- <use t=3.png>
-Package pdftex.def Info: t=3.png used on input line 298.
+File: t=0.png Graphic file (type png)
+<use t=0.png>
+Package pdftex.def Info: t=0.png used on input line 278.
 (pdftex.def)             Requested size: 512.15475pt x 341.43063pt.
 
-Overfull \hbox (42.68427pt too wide) in paragraph at lines 298--299
+Overfull \hbox (42.68427pt too wide) in paragraph at lines 278--279
  [][] 
  []
 
+
+Overfull \hbox (32.33554pt too wide) detected at line 287
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 3) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\
+OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
+4 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$
+ 
+ []
+
 [34]
-Overfull \hbox (572.84845pt too wide) detected at line 307
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 4) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\OML/lm
-m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 10
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.95 :\O
-T1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n
-/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67) + ((16
- + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2 + 10\OML/lmm/m/it/10.95 :\OT
-1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 11\OM
-L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.9
-5 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + ((18\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 8\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm
-/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95
- 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 + 0 + [] \OMS/lmsy/m/n/10.95  \
-OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 29925 = 71\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 474
-75[]
+Overfull \hbox (23.81888pt too wide) detected at line 291
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 3) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \O
+T1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/
+it/10.95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 
+2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
  []
 
 
-Overfull \hbox (611.74893pt too wide) detected at line 311
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 4) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
-/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/it/10.
-95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 2\OML/
-lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 67) + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/
-n/10.95 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  
-\OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/
-it/10.95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \
-OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
-5 75) + ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :
-\OT1/lmr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/
-n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\
-OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it
-/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 29925
- = 176\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 23825[]
+Overfull \hbox (22.60934pt too wide) detected at line 291
+ []$[] \OT1/lmr/m/n/10.95 + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (([
+] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
+0.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 3))$ 
  []
 
 
-Overfull \hbox (556.39044pt too wide) detected at line 315
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 4) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/
-m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95 :\OT1
-/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 67) + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
-0.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/l
-msy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75)
- + ((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy
-/m/n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10
-.95 :\OT1/lmr/m/n/10.95 29925 = 52\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 08175
-[]
+Overfull \hbox (7.3939pt too wide) detected at line 295
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 3) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT
+1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m
+/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/
+m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
+ []
+
+<t=3.png, id=974, 723.70375pt x 563.10374pt>
+File: t=3.png Graphic file (type png)
+ <use t=3.png>
+Package pdftex.def Info: t=3.png used on input line 299.
+(pdftex.def)             Requested size: 512.15475pt x 341.43063pt.
+
+Overfull \hbox (42.68427pt too wide) in paragraph at lines 299--300
+ [][] 
+ []
+
+
+Overfull \hbox (32.33554pt too wide) detected at line 308
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 4) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\
+OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
+4 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$
+ 
+ []
+
+[35 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS-versibaru/t=3.png>]
+
+Overfull \hbox (23.81888pt too wide) detected at line 312
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 4) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \O
+T1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/
+it/10.95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 
+2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
+ []
+
+
+Overfull \hbox (22.60934pt too wide) detected at line 312
+ []$[] \OT1/lmr/m/n/10.95 + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (([
+] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
+0.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 3))$ 
+ []
+
+
+Overfull \hbox (7.3939pt too wide) detected at line 316
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 4) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT
+1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m
+/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/
+m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
  []
 
 File: t=3.png Graphic file (type png)
 <use t=3.png>
-Package pdftex.def Info: t=3.png used on input line 319.
+Package pdftex.def Info: t=3.png used on input line 320.
 (pdftex.def)             Requested size: 512.15475pt x 341.43063pt.
 
-Overfull \hbox (42.68427pt too wide) in paragraph at lines 319--320
+Overfull \hbox (42.68427pt too wide) in paragraph at lines 320--321
  [][] 
  []
 
-[35 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS-versibaru/t=3.png>]
-<UseCase2.png, id=987, 500.62032pt x 563.10374pt>
+[36] <UseCase2.png, id=991, 500.62032pt x 563.10374pt>
 File: UseCase2.png Graphic file (type png)
  <use UseCase2.png>
-Package pdftex.def Info: UseCase2.png used on input line 342.
+Package pdftex.def Info: UseCase2.png used on input line 343.
 (pdftex.def)             Requested size: 398.35793pt x 341.43063pt.
- [36]
+
 [37 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS-versibaru/UseCase2.
-png>] <diagramKelas0.png, id=1002, 2090.56032pt x 922.94812pt>
+png>] [38] <diagramKelas0.png, id=1008, 2090.56032pt x 922.94812pt>
 File: diagramKelas0.png Graphic file (type png)
 
 <use diagramKelas0.png>
-Package pdftex.def Info: diagramKelas0.png used on input line 442.
+Package pdftex.def Info: diagramKelas0.png used on input line 443.
 (pdftex.def)             Requested size: 512.14392pt x 341.42912pt.
 
-Overfull \hbox (42.67343pt too wide) in paragraph at lines 442--443
+Overfull \hbox (42.67343pt too wide) in paragraph at lines 443--444
  [][] 
  []
 
-[38]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 457.
+[39 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS-versibaru/diagramKe
+las0.png>]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 458.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2036,37 +1994,36 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [39 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS-versibaru/diagramK
-elas0.png>]
-Overfull \hbox (6.30579pt too wide) in paragraph at lines 472--475
+
+Overfull \hbox (6.30579pt too wide) in paragraph at lines 473--476
 []\T1/lmtt/m/n/10.95 public void nextLevel(Entrepreneurs ne, int i, CA model, d
 ouble[] composition) 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--493
+Underfull \hbox (badness 10000) in paragraph at lines 492--494
 
  []
 
-
-Overfull \hbox (35.04945pt too wide) in paragraph at lines 522--525
+[40]
+Overfull \hbox (35.04945pt too wide) in paragraph at lines 523--526
 []\T1/lmtt/m/n/10.95 calculatePoint(double[] POAm, double[] POAf, double[] POEf
 , double[] POEm, double[]
  []
 
 
-Overfull \hbox (14.92888pt too wide) in paragraph at lines 522--525
+Overfull \hbox (14.92888pt too wide) in paragraph at lines 523--526
 \T1/lmtt/m/n/10.95 POLm, double[] POLf, double[] POIm, double[] POIf, double[] 
 PCAf, double[] PCAm,
  []
 
 
-Overfull \hbox (35.04945pt too wide) in paragraph at lines 522--525
+Overfull \hbox (35.04945pt too wide) in paragraph at lines 523--526
 \T1/lmtt/m/n/10.95 double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, 
 double[] PCIm, double[]
  []
 
-[40] [41]) [42]
+[41]) [42]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS-versibaru\Bab/bab4.tex
 "
 Bab 4.
@@ -2179,8 +2136,8 @@ sibaru/tampilanBukaFile.png>]
 <hasil1.png, id=1107, 510.40688pt x 428.35031pt>
 File: hasil1.png Graphic file (type png)
  <use hasil1.png>
-Package pdftex.def Info: hasil1.png used on input line 226.
-(pdftex.def)             Requested size: 312.99883pt x 199.16776pt.
+Package pdftex.def Info: hasil1.png used on input line 227.
+(pdftex.def)             Requested size: 341.44902pt x 284.5291pt.
 ) [52 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS-versibaru/tampila
 nSimulasii.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS-versiba
 ru/hasil1.png>]
@@ -2262,7 +2219,7 @@ ImplementasiData1.png>]
 File: hasil2.png Graphic file (type png)
  <use hasil2.png>
 Package pdftex.def Info: hasil2.png used on input line 111.
-(pdftex.def)             Requested size: 398.35289pt x 227.6258pt.
+(pdftex.def)             Requested size: 341.4509pt x 284.53224pt.
  [61 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS-versibaru/tampilan
 ImplementasiSimulasi1.png> <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi F
 TIS-versibaru/hasil2.png>]
@@ -2405,414 +2362,472 @@ File: hasilExcel.png Graphic file (type png)
 Package pdftex.def Info: hasilExcel.png used on input line 402.
 (pdftex.def)             Requested size: 284.53447pt x 227.62033pt.
 
-Overfull \hbox (599.4052pt too wide) detected at line 414
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\OML/lm
-m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 10
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.95 :\O
-T1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n
-/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67) + ((16
- + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2 + 10\OML/lmm/m/it/10.95 :\OT
-1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 11\OM
-L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.9
-5 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + ((18\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 8\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm
-/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95
- 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 + 0 + 0) + 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 29925 = 71\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 41475[]
+Overfull \hbox (83.80063pt too wide) detected at line 414
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\
+OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
+4 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$
+ 
+ []
+
+
+Overfull \hbox (7.22394pt too wide) detected at line 414
+ []$[] \OT1/lmr/m/n/10.95 + ((16 + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 2 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 1 + 11\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 4 + 8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 
++ 0 + 0)$ 
  []
 
 [69 <D:/Vanessa/Data/SMT 8/SKRIPSICOY/Template Skripsi FTIS-versibaru/hasilExce
 l.png>]
-Overfull \hbox (663.21402pt too wide) detected at line 418
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
-/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/it/10.
-95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 2\OML/
-lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 67) + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/
-n/10.95 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  
-\OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/
-it/10.95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \
-OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
-5 75) + ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :
-\OT1/lmr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/
-n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\
-OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it
-/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 29925
- = 176\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 23825[]
+Overfull \hbox (75.28397pt too wide) detected at line 418
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \O
+T1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/
+it/10.95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 
+2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
  []
 
 
-Overfull \hbox (607.85553pt too wide) detected at line 422
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/
-m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95 :\OT1
-/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 67) + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
-0.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/l
-msy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75)
- + ((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy
-/m/n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10
-.95 :\OT1/lmr/m/n/10.95 29925 = 52\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 08175
-[]
+Overfull \hbox (74.07443pt too wide) detected at line 418
+ []$[] \OT1/lmr/m/n/10.95 + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (([
+] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
+0.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 3))$ 
  []
 
 
-Overfull \hbox (599.4052pt too wide) detected at line 428
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 1) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\OML/lm
-m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 10
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.95 :\O
-T1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n
-/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67) + ((16
- + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2 + 10\OML/lmm/m/it/10.95 :\OT
-1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 11\OM
-L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.9
-5 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + ((18\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 8\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm
-/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95
- 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 + 0 + 0) + 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 29925 = 71\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 41475[]
+Overfull \hbox (58.859pt too wide) detected at line 422
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 0) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT
+1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m
+/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/
+m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
  []
 
 
-Overfull \hbox (663.21402pt too wide) detected at line 432
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 1) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
-/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/it/10.
-95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 2\OML/
-lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 67) + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/
-n/10.95 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  
-\OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/
-it/10.95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \
-OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
-5 75) + ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :
-\OT1/lmr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/
-n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\
-OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it
-/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 29925
- = 176\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 23825[]
+Overfull \hbox (40.6159pt too wide) detected at line 422
+ []$[] \OT1/lmr/m/n/10.95 + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lm
+r/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/10.9
+5 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy
+/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + 
+((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/lmr
+/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/
+n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OM
+L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lm
+r/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3))$ 
  []
 
 
-Overfull \hbox (607.85553pt too wide) detected at line 436
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 1) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/
-m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95 :\OT1
-/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 67) + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
-0.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/l
-msy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75)
- + ((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy
-/m/n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10
-.95 :\OT1/lmr/m/n/10.95 29925 = 52\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 08175
-[]
+Overfull \hbox (83.80063pt too wide) detected at line 428
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 1) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\
+OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
+4 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$
+ 
  []
 
 
-Overfull \hbox (599.4052pt too wide) detected at line 442
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 2) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\OML/lm
-m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 10
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.95 :\O
-T1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n
-/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67) + ((16
- + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2 + 10\OML/lmm/m/it/10.95 :\OT
-1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 11\OM
-L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.9
-5 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + ((18\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 8\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm
-/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95
- 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 + 0 + 0) + 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 29925 = 71\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 41475[]
+Overfull \hbox (7.22394pt too wide) detected at line 428
+ []$[] \OT1/lmr/m/n/10.95 + ((16 + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 2 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 1 + 11\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 4 + 8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 
++ 0 + 0)$ 
  []
 
 
-Overfull \hbox (663.21402pt too wide) detected at line 446
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 2) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
-/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/it/10.
-95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 2\OML/
-lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 67) + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/
-n/10.95 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  
-\OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/
-it/10.95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \
-OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
-5 75) + ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :
-\OT1/lmr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/
-n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\
-OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it
-/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 29925
- = 176\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 23825[]
+Overfull \hbox (75.28397pt too wide) detected at line 432
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 1) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \O
+T1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/
+it/10.95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 
+2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
  []
 
 
-Overfull \hbox (607.85553pt too wide) detected at line 450
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 2) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/
-m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95 :\OT1
-/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 67) + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
-0.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/l
-msy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75)
- + ((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy
-/m/n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10
-.95 :\OT1/lmr/m/n/10.95 29925 = 52\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 08175
-[]
+Overfull \hbox (74.07443pt too wide) detected at line 432
+ []$[] \OT1/lmr/m/n/10.95 + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (([
+] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
+0.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 3))$ 
  []
 
 
-Overfull \hbox (624.31354pt too wide) detected at line 456
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 3) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\OML/lm
-m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 10
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.95 :\O
-T1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n
-/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67) + ((16
- + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2 + 10\OML/lmm/m/it/10.95 :\OT
-1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 11\OM
-L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.9
-5 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + ((18\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 8\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm
-/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95
- 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 + 0 + [] \OMS/lmsy/m/n/10.95  \
-OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 29925 = 71\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 474
-75[]
+Overfull \hbox (58.859pt too wide) detected at line 436
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 1) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT
+1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m
+/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/
+m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
  []
 
 
-Overfull \hbox (663.21402pt too wide) detected at line 460
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 3) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
-/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/it/10.
-95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 2\OML/
-lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 67) + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/
-n/10.95 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  
-\OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/
-it/10.95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \
-OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
-5 75) + ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :
-\OT1/lmr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/
-n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\
-OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it
-/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 29925
- = 176\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 23825[]
+Overfull \hbox (40.6159pt too wide) detected at line 436
+ []$[] \OT1/lmr/m/n/10.95 + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lm
+r/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/10.9
+5 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy
+/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + 
+((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/lmr
+/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/
+n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OM
+L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lm
+r/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3))$ 
  []
 
 
-Overfull \hbox (607.85553pt too wide) detected at line 464
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 3) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/
-m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95 :\OT1
-/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 67) + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
-0.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/l
-msy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75)
- + ((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy
-/m/n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10
-.95 :\OT1/lmr/m/n/10.95 29925 = 52\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 08175
-[]
+Overfull \hbox (83.80063pt too wide) detected at line 442
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 2) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\
+OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
+4 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$
+ 
  []
 
 
-Overfull \hbox (624.31354pt too wide) detected at line 470
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 4) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\OML/lm
-m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 10
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.95 :\O
-T1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n
-/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67) + ((16
- + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2 + 10\OML/lmm/m/it/10.95 :\OT
-1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 11\OM
-L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.9
-5 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + ((18\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 8\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm
-/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95
- 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 + 0 + [] \OMS/lmsy/m/n/10.95  \
-OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0\OML/lmm/m/it/
-10.95 :\OT1/lmr/m/n/10.95 29925 = 71\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 474
-75[]
+Overfull \hbox (7.22394pt too wide) detected at line 442
+ []$[] \OT1/lmr/m/n/10.95 + ((16 + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 2 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 1 + 11\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 4 + 8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 
++ 0 + 0)$ 
+ []
+
+
+Overfull \hbox (75.28397pt too wide) detected at line 446
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 2) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \O
+T1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/
+it/10.95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 
+2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
+ []
+
+
+Overfull \hbox (74.07443pt too wide) detected at line 446
+ []$[] \OT1/lmr/m/n/10.95 + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (([
+] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
+0.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 3))$ 
+ []
+
+
+Overfull \hbox (58.859pt too wide) detected at line 450
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 2) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT
+1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m
+/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/
+m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
+ []
+
+
+Overfull \hbox (40.6159pt too wide) detected at line 450
+ []$[] \OT1/lmr/m/n/10.95 + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lm
+r/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/10.9
+5 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy
+/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + 
+((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/lmr
+/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/
+n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OM
+L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lm
+r/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3))$ 
  []
 
 [70]
-Overfull \hbox (663.21402pt too wide) detected at line 474
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 4) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
-/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/it/10.
-95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 2\OML/
-lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/1
-0.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/i
-t/10.95 :\OT1/lmr/m/n/10.95 67) + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/
-n/10.95 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  
-\OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/
-it/10.95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \
-OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
-5 75) + ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :
-\OT1/lmr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/
-n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\
-OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr
-/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it
-/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 29925
- = 176\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 23825[]
+Overfull \hbox (83.80063pt too wide) detected at line 456
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 3) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\
+OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
+4 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$
+ 
  []
 
 
-Overfull \hbox (607.85553pt too wide) detected at line 478
-[]\OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT1/lmr/
-m/n/10.95 = 4) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n/10.95
-  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
-4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/
-m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/it/10.9
-5 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3\OML/l
-mm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.
-95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95 :\OT1
-/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 67) + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
-0.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/1
-0.95 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/l
-msy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75)
- + ((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/
-lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 
-:\OT1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy
-/m/n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0
-\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1
-/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3)) + 0\OML/lmm/m/it/10
-.95 :\OT1/lmr/m/n/10.95 29925 = 52\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 08175
-[]
+Overfull \hbox (32.13228pt too wide) detected at line 456
+ []$[] \OT1/lmr/m/n/10.95 + ((16 + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 2 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 1 + 11\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 4 + 8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 
++ 0 + [] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lm
+r/m/n/10.95 3)$ 
  []
 
-) [71]
+
+Overfull \hbox (75.28397pt too wide) detected at line 460
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 3) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \O
+T1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/
+it/10.95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 
+2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
+ []
+
+
+Overfull \hbox (74.07443pt too wide) detected at line 460
+ []$[] \OT1/lmr/m/n/10.95 + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (([
+] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
+0.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 3))$ 
+ []
+
+
+Overfull \hbox (58.859pt too wide) detected at line 464
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 3) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT
+1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m
+/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/
+m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
+ []
+
+
+Overfull \hbox (40.6159pt too wide) detected at line 464
+ []$[] \OT1/lmr/m/n/10.95 + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lm
+r/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/10.9
+5 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy
+/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + 
+((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/lmr
+/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/
+n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OM
+L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lm
+r/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3))$ 
+ []
+
+
+Overfull \hbox (83.80063pt too wide) detected at line 470
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 4) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3 + 4\
+OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 19\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 9 + 11) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 47) + ((14\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 
+4 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((14\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 3 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$
+ 
+ []
+
+
+Overfull \hbox (32.13228pt too wide) detected at line 470
+ []$[] \OT1/lmr/m/n/10.95 + ((16 + 19 + 7\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 2 + 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((8\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 1 + 11\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((18\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6 + 18\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 4 + 8\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 9) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (0 
++ 0 + [] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lm
+r/m/n/10.95 3)$ 
+ []
+
+
+Overfull \hbox (75.28397pt too wide) detected at line 474
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 4) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((29\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 49
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 8 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5) \OMS/lmsy/m/n/10.95  \O
+T1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((31\OML/lmm/m/
+it/10.95 :\OT1/lmr/m/n/10.95 6 + 51\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 + 
+2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 43) \OMS/lmsy/m/n/10.95  \OT1/lmr
+/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((31 + 41\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/l
+mm/m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
+ []
+
+
+Overfull \hbox (74.07443pt too wide) detected at line 474
+ []$[] \OT1/lmr/m/n/10.95 + ((31 + 52 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 6 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy/m/n/10.95  \OT1/l
+mr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((3\OML/lmm/m/it/10.
+95 :\OT1/lmr/m/n/10.95 5 + 41\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 6) \OMS/lm
+sy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) 
++ ((32\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 51\OML/lmm/m/it/10.95 :\OT1/l
+mr/m/n/10.95 7 + 3\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.9
+5  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 35)) + 0\OML/lm
+m/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 (([
+] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/1
+0.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 3))$ 
+ []
+
+
+Overfull \hbox (58.859pt too wide) detected at line 478
+ []$[]  \OML/lmm/m/it/10.95 CIdx[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 t \OT
+1/lmr/m/n/10.95 = 4) = 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 5 \OMS/lmsy/m/n
+/10.95  \OT1/lmr/m/n/10.95 (((17\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7 + 17
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 1\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/
+10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) \OMS/lmsy/m/n/10.95  \OT
+1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 47) + ((16\OML/lmm/m/i
+t/10.95 :\OT1/lmr/m/n/10.95 1 + 15\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 3
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 1 + 2) \OMS/lmsy/m/n/10.95  \OT1/lmr/m
+/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 62) + ((17\OML/lmm/m/it/10.95
+ :\OT1/lmr/m/n/10.95 6 + 3) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/
+m/it/10.95 :\OT1/lmr/m/n/10.95 67)$ 
+ []
+
+
+Overfull \hbox (40.6159pt too wide) detected at line 478
+ []$[] \OT1/lmr/m/n/10.95 + ((17 + 15 + 5\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.9
+5 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 2) \OMS/lmsy/m/n/10.95  \OT1/lm
+r/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 8) + ((5\OML/lmm/m/it/10.9
+5 :\OT1/lmr/m/n/10.95 4 + 2\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7) \OMS/lmsy
+/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 75) + 
+((16\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 + 13\OML/lmm/m/it/10.95 :\OT1/lmr
+/m/n/10.95 9) \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 35)) + 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 4 \OMS/lmsy/m/
+n/10.95  \OT1/lmr/m/n/10.95 (([] \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 0\OM
+L/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3) + 0 + ([] \OMS/lmsy/m/n/10.95  \OT1/lm
+r/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 3))$ 
+ []
+
+) [71] [72]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS-versibaru\Bab/bab6.tex
-" [72
+"
+Bab 6.
+) [73
 
 
 
 ]
-Bab 6.
-) [73]
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS-versibaru\skripsi.bbl"
 [74
 
@@ -2897,8 +2912,8 @@ pB.tex" [78
 ]
 Lampiran B.
 ) [79]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 439.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 439.
 
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS-versibaru\skripsi.aux"
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS-versibaru\Bab/bab1.aux
@@ -2917,8 +2932,8 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
 pA.aux")
 ("D:\Vanessa\Data\SMT 8\SKRIPSICOY\Template Skripsi FTIS-versibaru\Lampiran/lam
 pB.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 439.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 439.
 Package rerunfilecheck Info: File `skripsi.out' has not changed.
 (rerunfilecheck)             Checksum: F44BD4BDEB2A2B443CF34D3DEB8FBDD6;10314.
 
@@ -2928,16 +2943,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 439.
  ) 
 Here is how much of TeX's memory you used:
- 35983 strings out of 493921
- 784989 string characters out of 3147276
- 1319541 words of memory out of 3000000
- 37889 multiletter control sequences out of 15000+200000
- 83422 words of font info for 150 fonts, out of 3000000 for 9000
+ 36565 strings out of 493921
+ 791594 string characters out of 3147276
+ 1330187 words of memory out of 3000000
+ 38450 multiletter control sequences out of 15000+200000
+ 95076 words of font info for 154 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 78i,13n,130p,1253b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 78i,13n,130p,1253b,2113s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files/MiKTeX 2.9/font
 s/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mat
@@ -2957,9 +2972,9 @@ ype1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8
 Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /lm/lmtt10.pfb>
-Output written on skripsi.pdf (101 pages, 1956076 bytes).
+Output written on skripsi.pdf (101 pages, 1967460 bytes).
 PDF statistics:
  1603 PDF objects out of 1728 (max. 8388607)
  481 named destinations out of 1000 (max. 500000)
- 25980 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 27516 words of extra memory for PDF output out of 29859 (max. 10000000)
 
