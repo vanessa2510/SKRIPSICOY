@@ -64,6 +64,7 @@
 \contentsline {subsection}{\numberline {5.2.3}Pengujian Pembacaan File}{65}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Pengujian Hasil dari Simulasi}{67}{subsection.5.2.4}
 \contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{73}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{73}{section.6.1}
 \contentsline {chapter}{Daftar Referensi}{75}{chapter*.5}
 \contentsline {chapter}{\numberline {A}Kode Program}{77}{appendix.A}
 \contentsline {chapter}{\numberline {B}Hasil Eksperimen}{79}{appendix.B}
