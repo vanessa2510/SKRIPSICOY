@@ -6,11 +6,11 @@ Pada bab ini akan diberikan kesimpulan terhadap simulator yang telah dibuat, jug
 \section{Kesimpulan}
 Berdasarkan hasil penelitian yang telah dilakukan, didapatkan kesimpulan-kesimpulan sebagai berikut :
 \begin{enumerate}
-	\item Faktor yang mempengaruhi keberlangsungan wirausaha terdiri dari faktor luar dan faktor dalam. Faktor luar dibagi menjadi dua yaitu faktor publik dan faktor tetangga.\\
+	\item Faktor yang mempengaruhi keberlangsungan wirausaha terdiri dari faktor luar dan faktor internal. Faktor luar dibagi menjadi dua yaitu faktor publik dan faktor tetangga.\\
 Berikut akan dijelaskan secara detail :
 	\begin{itemize}
-		\item Faktor Dalam\\
-		Faktor dalam berasal dari atribut wirausaha itu sendiri, atribut wirausaha dibagi menjadi dua macam yaitu atribut umum (jenis kelamin, umur, level wirausaha, pendapatan, pendidikan, bidang usaha, lokasi) dan atribut psikologis (\textit{Perceived Opportunities, Perceived Capabilities, Role Model, Fear of Failure, Entrepreneurial of Intention}).
+		\item Faktor Internal\\
+		Faktor yang berasal dari atribut wirausaha itu sendiri, atribut wirausaha dibagi menjadi dua macam yaitu atribut umum (jenis kelamin, umur, level wirausaha, pendapatan, pendidikan, bidang usaha, lokasi) dan atribut psikologis (Perceived Opportunities, Perceived Capabilities, Role Model, Fear of Failure, Entrepreneurial of Intention).
 		\item Faktor Luar
 		\begin{itemize}
 			\item Faktor publik\\
@@ -33,12 +33,25 @@ Berikut akan dijelaskan secara detail :
 			Faktor tetangga berasal dari relasi individu wirausaha dengan wirausaha lainnya. Relasi tersebut yaitu lebih dari sama dengan, sama dengan dan kurang dari sama dengan. 
 		\end{itemize}
 	\end{itemize}
-	\item Dalam memodelkan pertumbuhan wirausaha dengan \textit{Entrepreneur Cellular Automata} dibutuhkan beberapa proses yaitu :\\
+	
+	\item Dalam memodelkan pertumbuhan wirausaha dengan \textit{Entrepreneurial Cellular Automata} dibutuhkan beberapa proses yaitu :\\
 	\begin{enumerate}
 		\item Menyesuaikan data wirausaha yang diberikan dengan nilai masing-masing atribut yang ada di GEM 2013.
-		\item Menghitung nilai \textit{Continuity Index} yang dibagi menjadi 3 bagian yaitu:\\
+		\item Menghitung nilai \textit{Continuity Index} yang dibagi menjadi 3 bagian yaitu:
 		\begin{itemize}
-			\item Menghitung faktor dalam dengan cara menjumlahkan nilai atribut pada setiap atribut psikologis lalu dikali dengan bobot atribut psikologis.
+			\item Menghitung faktor internal dengan cara menjumlahkan nilai atribut pada setiap atribut psikologis lalu dikali dengan bobot atribut psikologis, hasilnya akan dijumlahkan dengan jumlah atribut psikologis lainnya lalu dikali dengan nilai a.
+			\item Menghitung hubungan ketetanggaan dengan melihat relasi antara wirausaha yang satu dengan wirausaha yang lain. Hasilnya dikalikan dengan nilai b.
+			\item Menghitung faktor publik dengan cara mengalikan bobot faktor publik (masukan \textit{user}) dengan nilai faktor publik yang ada di GEM 2013. Hasilnya dikalikan dengan nilai c.
 		\end{itemize}
+		\item Memeriksa hasil dari perhitungan \textit{Continuity Index} dengan tabel transisi pada subbab \ref{tabelLW} untuk menentukan wirausaha tersebut mengalami perubahan pada level wirausaha atau tidak. Jika iya, akan terjadi perubahan ketetanggaan pada level wirausaha yang mempengaruhi perhitungan \textit{Continuity Index} selanjutnya.
 	\end{enumerate}
+	\item Telah berhasil membangun Simulator Pertumbuhan Wirausaha berbasis \textit{Cellular Automata}. Simulator ini dibangun dengan menggunakan JFrame. Simulator ini telah diuji menggunakan pengujian fungsional dengan hasil fitur yang sesuai dengan hasil yang diharapkan. Selain pengujian fungsional, sistem ini juga diuji mengenai pembacaan parameter, pengujian pembacaan \textit{file} dan pengujian hasil dari simulasi.
+\end{enumerate}
+
+\section{Saran}
+Berdasarkan hasil penelitian yang dilakukan, berikut adalah beberapa saran untuk mengembangkan perangkat lunak :
+\begin{enumerate}
+	\item Memasukkan lebih banyak atribut atau faktor yang mempengaruhi pertumbuhan kewirausahaan.
+	\item Penelitian ini belum memperhatikan masalah pertumbuhan penduduk.
+	\item Simulasi ini juga belum diuji dengan data nyata.
 \end{enumerate}

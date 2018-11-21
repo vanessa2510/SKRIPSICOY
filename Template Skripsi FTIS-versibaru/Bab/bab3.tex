@@ -2,7 +2,7 @@
 \label{chap:analisis}
 
 
-Pada bab ini akan dilakukan analisis mengenai pembuatan model pertumbuhan wirausaha dengan Cellular Automata. Pembahasan akan dimulai dari analisa pertumbuhan wirausaha di Indonesia yang menjadi pokok permasalahan. Lalu dari analisis ini akan dilanjutkan dengan analisis kebutuhan perangkat lunak agar mampu memodelkan pertumbuhan wirausaha di Indonesia.
+Pada bab ini akan dilakukan analisis mengenai pembuatan simulator pertumbuhan wirausaha dengan \textit{Entrepreneurial Cellular Automata}. Pembahasan akan dimulai dari analisa pertumbuhan wirausaha di Indonesia yang menjadi pokok permasalahan. Lalu dari analisis ini akan dilanjutkan dengan analisis kebutuhan perangkat lunak agar mampu memodelkan pertumbuhan wirausaha di Indonesia.
 
 \section{Analisis Pertumbuhan Wirausaha}
 \label{sec:analisisPertumbuhanWirausaha}
@@ -14,27 +14,34 @@ Seperti yang sudah dijelaskan pada bab \ref{chap:teori} kewirausahaan dalam nega
 	\item Pertumbuhan kewirausahaan dan persaingan antar negara tentang seberapa inovatif usaha tersebut.
 \end{enumerate}  
 
-Kewirausahaan menurut GEM merupakan sebuah proses yang memiliki tahapan-tahapan yang berbeda. Tahapan yang pertama yaitu individu yang bisa melihat peluang baik dalam berwirausaha dan memiliki kemampuan untuk berwirausaha (\textit{potential entrepreneur}). Kedua, individu yang sudah menjalankan usahanya dalam waktu kurang dari tiga bulan (\textit{nascent entrepreneur}). Ketiga, individu yang sudah menjalankan usahanya selama lebih dari tiga bulan tetapi tidak lebih dari tiga setengah tahun (\textit{new business manager}). Keempat, individu yang sudah menjalankan usahanya lebih dari tiga setengah tahun (\textit{established entrepreneur}). Penjelasan lebih lanjut dapat dilihat pada gambar \ref{fig:prosesWirausaha}. Digunakan \textit{new\_bm} untuk new business manager dan \textit{est\_bm} untuk established business. 
+Kewirausahaan menurut GEM merupakan sebuah proses yang memiliki tahapan-tahapan yang berbeda. Tahapan yang pertama yaitu individu yang bisa melihat peluang baik dalam berwirausaha dan memiliki kemampuan untuk berwirausaha (wirausaha \textit{potential}). Kedua, individu yang sudah menjalankan usahanya dalam waktu kurang dari tiga bulan (wirausaha \textit{nascent}). Ketiga, individu yang sudah menjalankan usahanya selama lebih dari tiga bulan tetapi tidak lebih dari tiga setengah tahun (wirausaha \textit{new business manager}). Keempat, individu yang sudah menjalankan usahanya lebih dari tiga setengah tahun (wirausaha \textit{established}). Penjelasan lebih lanjut dapat dilihat pada gambar \ref{fig:prosesWirausaha}. Digunakan \textit{new\_bm} untuk new business manager dan \textit{est\_bm} untuk established business. 
 
 \begin{figure} [H]
 	\centering  
 	\includegraphics[width=14cm, height=7cm]{tingkatwirausaha} 
 	\label{fig:prosesWirausaha} 
+	\caption{Diagram Transisi Level Wirausaha}
 \end{figure}
 
 
 Dalam pertumbuhan wirausaha tentu ada beberapa faktor yang mempengaruhi keberlangsungan pertumbuhan wirausaha. Secara umum, atribut atau faktor yang mempengaruhi pertumbuhan wirausaha yaitu terbagi menjadi 2 jenis yaitu atribut statis dan dinamis. Atribut dinamis yaitu umur, level wirausaha dan usia usaha. Di antara atribut dinamis, level wirausaha menjadi atribut penting karena atribut ini yang akan dijadikan sebagai acuan untuk menentukan perkembangan dari kewirausahaan. Atribut statis yaitu bidang usaha, kategori usaha, jenis kelamin dan lokasi geografis. Sedangkan atribut secara psikologis menurut GEM yaitu Perceived Opportunities, Perceived Capabilities, Entrepreneurial Intention dan Fear of Failure Rate. 
 
 
-\section{Analisis Pemodelan Cellular Automata}
+\section{Analisis Pemodelan Entrepreneurial Cellular Automata}
 \label{analisisCA}
-Pada penelitian ini akan menggunakan cellular automata berbasis graf. Hal ini dikarenakan jumlah wirausaha di Indonesia yang tidak sedikit, sebab jika menggunakan cellular automata satu atau dua dimensi jumlahnya terbatas.
+Pada penelitian ini akan menggunakan cellular automata berbasis graf. Hal ini dikarenakan jumlah wirausaha di Indonesia yang tidak sedikit, sebab jika menggunakan cellular automata satu atau dua dimensi jumlahnya terbatas.\\
+Sel dalam ECA direpresentasikan sebagai satu wirausaha, sedangkan ketetanggaan merepresentasikan hubungan antar wirausaha satu dengan wirausaha lainnya. Hubungan antar wirausaha ada 3 jenis yaitu kurang dari sama dengan, sama dengan dan lebih dari sama dengan.
 
-\subsection{Analisis Ruang Sel}
-Ruang sel dalam pemodelan ini berupa individu wirausahawan. Individu wirausahawan memiliki beberapa atribut (umum dan psikologis), masing-masing atribut memiliki nilai yang didapat dari data GEM 2013.
+\subsection{Analisis Perubahan Transisi Wirausaha}
 
-\subsection{Analisis Fungsi Transisi}
-Fungsi transisi dalam penelitian ini ditentukan oleh : 
+Perubahan transisi dari individu wirausahawan dapat diketahui melalui angka yang disebut \textit{Continuity Index} (CIdx).
+
+\begin{displaymath}
+\label{RumusCIDx}
+	CIdx_{i}(t) = a.Cint_{i}(t) + b.Cneg_{i}(t) + c.Cpub(t)
+\end{displaymath}
+dimana a,b,c merupakan bilangan riil sedemikian sehingga $0\leq a,b,c \leq 1$ dan $a+b+c=$ 1.0 dan $Cint_{i}(t)$ dan $Cneg_{i}(t)$ melambangkan kondisi internal dan kondisi ketetanggaan dari sebuah individu i pada saat t dan $Cpub(t)$ melambangkan kondisi publik pada saat t nilai dari $CIdx$ dari individu i pada saat t.\\
+Kondisi internal dari wirausaha berisi atribut-atribut sebagai berikut :\\
 \begin{enumerate}
 	\item Atribut Umum
 		\begin{enumerate}
@@ -54,8 +61,11 @@ Fungsi transisi dalam penelitian ini ditentukan oleh :
 			\item Entrepreneurial of Intention (High Status Successful Entrepreneurship dan Public Media Attention for Entrepreneurship)
 			\item Fear of Failure
 		 \end{enumerate}
-	\item Faktor Publik
-		 \begin{enumerate}
+		\end{enumerate}
+		
+Kondisi ketetanggaan wirausaha berisi tentang hasil relasi  wirausaha dengan wirausaha lainnya. Relasinya yaitu lebih dari sama dengan, kurang dari sama dengan dan sama dengan.\\
+Kondisi faktor publik berisi tentang :
+\begin{enumerate}
 			\item Keuangan terkait dengan kewirausahaan
 			\item Kebijakan pemerintah terkait ekonomi
 			\item Kebijakan pemerintah terkait pajak
@@ -69,25 +79,16 @@ Fungsi transisi dalam penelitian ini ditentukan oleh :
 			\item Infrastruktur Fisik dan Akses Layanan
 			\item Dinamika Pasar
 		 \end{enumerate}
-\end{enumerate}
 
-Selain itu, bobot dari masing-masing ketetanggaan juga mempengaruhi perubahan transisi wirausaha. Perubahan transisi dari individu wirausahawan dapat diketahui melalui angka yang disebut Continuity Index (CIdx).
+Seorang wirausahawan akan meneruskan usahanya jika nilai CIdx nya memenuhi nilai ambang tersebut. Jika nilai dari \textit{Continuity Index} sudah sama atau lebih dari nilai ambang, level wirausaha akan berubah. Sebaliknya, jika nilai dari \textit{Continuity Index }kurang dari sama dengan nilai ambang, level wirausaha bisa saja berubah dan bisa saja tidak berubah.
 
-\begin{displaymath}
-\label{RumusCIDx}
-	CIdx_{i}(t) = a.Cint_{i}(t) + b.Cneg_{i}(t) + c.Cpub(t)
-\end{displaymath}
-dimana a,b,c merupakan bilangan riil sedemikian sehingga $0\leq a,b,c \leq 1$ dan $a+b+c=$ 1.0 dan $Cint_{i}(t)$ dan $Cneg_{i}(t)$ melambangkan kondisi internal dan kondisi ketetanggaan dari sebuah individu i pada saat t dan $Cpub(t)$ melambangkan kondisi publik pada saat t nilai dari $CIdx$ dari individu i pada saat t.
-
-CIdx dari seorang wirausahawan ditentukan oleh faktor luar dan dalam. Seorang wirausahawan akan meneruskan usahanya jika CIdx nya memenuhi nilai ambang tersebut. Jika nilai dari Continuity Index sudah sama atau lebih dari nilai ambang, level wirausaha akan berubah. Sebaliknya, jika nilai dari Continuity Index kurang dari sama dengan nilai ambang, level wirausaha bisa saja berubah dan bisa saja tidak berubah.
-
-\section{Analisis Model Pertumbuhan Wirausaha dengan Cellular Automata}
+\section{Analisis Model Pertumbuhan Wirausaha dengan Entrepreneurial Cellular Automata}
 \label{analisismodelCA}
 
-Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index} dan nilai ambang (\textit{threshold}). Seperti yang sudah dijelaskan pada \ref{chap:teori}, Continuity Index adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu. (Rumus CIDx : \ref{RumusCIDx}).
+Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index} dan nilai ambang (\textit{threshold}). Seperti yang sudah dijelaskan pada \ref{chap:teori}, \textit{Continuity Index} adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu. (Rumus CIDx : \ref{RumusCIDx}).
 
 
-Nilai dari Continuity Index akan dievaluasi terlebih dahulu menggunakan tabel transisi wirausaha (\ref{tabelLW}). Pada tabel \ref{tabelLW} akan dijelaskan mengenai transisi level dengan menggunakan lambang-lambang \textit{CIdx, bl, a ,b} dan \textit{th} untuk menyatakan \textit{Continuity Index, level} , usia individu, usia usaha dan nilai ambang.
+Nilai dari \textit{Continuity Index} akan dievaluasi terlebih dahulu menggunakan tabel transisi wirausaha (\ref{tabelLW}). Pada tabel \ref{tabelLW} akan dijelaskan mengenai transisi level dengan menggunakan lambang-lambang \textit{CIdx, bl, a ,b} dan \textit{th} untuk menyatakan \textit{Continuity Index}, level , usia individu, usia usaha dan nilai ambang.
 
 
 \begin{table}[H]
@@ -128,20 +129,20 @@ Waktu sekarang & Waktu berikutnya \\
 \end{table}
 
 
-Untuk mempermudah pemahaman mengenai Continuity Index, akan diberikan contoh simulasi dari data tidak real, yaitu terdapat nilai a = 0.5, b = 0.4 dan c = 0.1, nilai ambangnya 20, serta periodenya dalam waktu 5 bulan. Nilai dari kondisi internal wirausaha diambil dari Nawangpalupi (Perceived Opportunities = 0.47, Perceived Capabilities = 0.62, High Status of Successful = 0.8, Public Media Attention = 0.75, Role Model = 0.67 dan Fear of Failure = 0.35). Diasumsikan terdapat tiga wirausahawan dan berikut data dari masing-masing wirausaha :
+Untuk mempermudah pemahaman mengenai \textit{Continuity Index}, akan diberikan contoh simulasi dari data tidak real, yaitu terdapat nilai a = 0.5, b = 0.4 dan c = 0.1, nilai ambangnya 15, serta periodenya dalam waktu 5 bulan. Nilai dari atribut kondisi internal wirausaha diambil dari Nawangpalupi\cite{GEM2013}. Nilai dari faktor psikologis diasumsikan Perceived Opportunities bernilai 0.2, Perceived Capabilities bernilai 0.25, High Status of Successful bernilai 0.1, Public Media Attention bernilai 0.05, Role Model bernilai 0.3 dan Fear of Failure bernilai 0.1. Diasumsikan terdapat tiga wirausahawan dan berikut data dari masing-masing wirausaha :
 				
 \begin{table} [H]
 \centering
 \caption{Data wirausahawan}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|p{1cm}|p{1cm}|p{1cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{1cm}|c|}
 \hline
-& Jenis Kelamin & Umur & Usia Bisnis & Kategori & Sub Kategori & Pendidikan & Lokasi & Pendapatan & Level Wirausaha\\
+& Jenis Kelamin & Umur & Usia Bisnis & Kategori & Sub Kategori & Pendidikan & Lokasi & \textit{Income} & Level\\
 \hline
-Entrepreneur 1 & Pria & 18 tahun & 0 bulan & Minuman & Minuman bersoda & Sekolah Menengah Pertama & Medan & 5-7 juta rupiah & Nascent\\
+E1 & P & 18th & 0 bulan & Minuman & Minuman bersoda & SMP & Medan & 5-7jt & Nascent\\
 \hline
-Entrepreneur 2 & Wanita & 30 tahun & 0 bulan & Tas & Tas anak-anak  & Sekolah Menengah Atas & Pekanbaru & 3-5 juta rupiah & New\_bm\\
+E2 & W & 30th & 0 bulan & Tas & Tas anak-anak  & SMA & Pekanbaru & 3-5jt & New\_bm\\
 \hline
-Entrepreneur 3 & Wanita & 45 tahun & 0 bulan & Makanan & Makanan berat & Sekolah Dasar & Palembang & 7-9 juta rupiah & New\_bm\\
+E3 & W & 45th & 0 bulan & Makanan & Makanan berat & SD & Palembang & 7-9jt & New\_bm\\
 \hline
 \end{tabular}
 \end{table}
@@ -218,16 +219,16 @@ Untuk perhitungan pada faktor eksternal :
 
 Perhitungan CIDx(t=0)\\
 \begin{multline}
-	CIdx_{1}(t=0) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.47) + ((14.7+17.4+5.4+10.5) \times 0.62) + ((14.3+10.4) \times 0.67) \\ + ((16+19+7.2+10.2) \times 0.8) + ((8.1+11.4) \times 0.75) + ((18.6+18.4+8.9) \times 0.35) ) + 0.4 \times (0 + 0 + 0)\\ + 0.29925 = 71.41475
+	CIdx_{1}(t=0) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3) \\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + 0)\\ + 0.29925 = 20.36675
 \end{multline}	
 
 \begin{multline}
-	CIdx_{2}(t=0) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.47) + ((31.6+51.5+2.4+43) \times 0.62) + ((31+41.8) \times 0.67)\\ + ((31+52+2.6+41.7) \times 0.8) + ((3.5+41.6) \times 0.75) + ((32.4+51.7 + 3.8) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 176.23825
+	CIdx_{2}(t=0) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 51.64925
 \end{multline}
 
 
 \begin{multline}
-	CIdx_{3}(t=0) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.47) + ((16.1+15.4+3.1+2) \times 0.62) + ((17.6+3) \times 0.67)\\ + ((17+15+5.4+2.2) \times 0.8) + ((5.4+2.7) \times 0.75) + ((16.4+13.9) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 52.08175
+	CIdx_{3}(t=0) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 15.71175
 \end{multline}
 
 	\begin{figure} [H]
@@ -240,15 +241,15 @@ Perhitungan CIDx(t=0)\\
 Perhitungan CIDx (t=1)
 
 \begin{multline}
-	CIdx_{1}(t=1) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.47) + ((14.7+17.4+5.4+10.5) \times 0.62) + ((14.3+10.4) \times 0.67)\\ + ((16+19+7.2+10.2) \times 0.8) + ((8.1+11.4) \times 0.75) + ((18.6+18.4+8.9) \times 0.35) ) + 0.4 \times (0 + 0 + 0)\\ + 0.29925 = 71.41475
+	CIdx_{1}(t=1) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3) \\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + 0)\\ + 0.29925 = 20.36675
 \end{multline}
 
 \begin{multline}
-	CIdx_{2}(t=1) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.47) + ((31.6+51.5+2.4+43) \times 0.62) + ((31+41.8) \times 0.67)\\ + ((31+52+2.6+41.7) \times 0.8) + ((3.5+41.6) \times 0.75) + ((32.4+51.7 + 3.8) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 176.23825
+	CIdx_{2}(t=1) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 51.64925
 \end{multline}
 
 \begin{multline}
-	CIdx_{3}(t=1) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.47) + ((16.1+15.4+3.1+2) \times 0.62) + ((17.6+3) \times 0.67)\\ + ((17+15+5.4+2.2) \times 0.8) + ((5.4+2.7) \times 0.75) + ((16.4+13.9) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 52.08175
+	CIdx_{3}(t=1) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 15.71175
 \end{multline}
 
 	\begin{figure} [H]
@@ -262,15 +263,15 @@ Perhitungan CIDx (t=2)
 
 
 \begin{multline}
-	CIdx_{1}(t=2) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.47) + ((14.7+17.4+5.4+10.5) \times 0.62) + ((14.3+10.4) \times 0.67)\\ + ((16+19+7.2+10.2) \times 0.8) + ((8.1+11.4) \times 0.75) + ((18.6+18.4+8.9) \times 0.35) ) + 0.4 \times (0 + 0 + 0)\\ + 0.29925 = 71.41475
+	CIdx_{1}(t=2) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3) \\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + 0)\\ + 0.29925 = 20.36675
 \end{multline}
 
 \begin{multline}
-	CIdx_{2}(t=2) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.47) + ((31.6+51.5+2.4+43) \times 0.62) + ((31+41.8) \time2s 0.67)\\+ ((31+52+2.6+41.7) \times 0.8) + ((3.5+41.6) \times 0.75) + ((32.4+51.7 + 3.8) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 176.23825
+	CIdx_{2}(t=2) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 51.64925
 \end{multline}
 
 \begin{multline}
-	CIdx_{3}(t=2) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.47) + ((16.1+15.4+3.1+2) \times 0.62) + ((17.6+3) \times 0.67)\\+ ((17+15+5.4+2.2) \times 0.8) + ((5.4+2.7) \times 0.75) + ((16.4+13.9) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 52.08175
+	CIdx_{3}(t=2) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 15.71175
 \end{multline}
 
 	\begin{figure} [H]
@@ -283,15 +284,15 @@ Perhitungan CIDx (t=2)
 Perhitungan CIDx (t=3)
 
 \begin{multline}
-	CIdx_{1}(t=3) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.47) + ((14.7+17.4+5.4+10.5) \times 0.62) + ((14.3+10.4) \times 0.67)\\ + ((16+19+7.2+10.2) \times 0.8) + ((8.1+11.4) \times 0.75) + ((18.6+18.4+8.9) \times 0.35) ) + 0.4 \times (0 + 0 + \frac{2}{4} \times 0.3)\\ + 0.29925 = 71.47475
+	CIdx_{1}(t=3) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3)\\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + \frac{2}{2} \times 0.3)\\ + 0.29925 = 20.48675
 \end{multline}
 
 \begin{multline}
-	CIdx_{2}(t=3) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.47) + ((31.6+51.5+2.4+43) \times 0.62) + ((31+41.8) \times 0.67)\\ + ((31+52+2.6+41.7) \times 0.8) + ((3.5+41.6) \times 0.75) + ((32.4+51.7 + 3.8) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {4} \times 0.3))\\ + 0.29925 = 176.23825
+	CIdx_{2}(t=3) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {2} \times 0.3))\\ + 0.29925 = 51.70925
 \end{multline}
 
 \begin{multline}
-	CIdx_{3}(t=3) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.47) + ((16.1+15.4+3.1+2) \times 0.62) + ((17.6+3) \times 0.67)\\ + ((17+15+5.4+2.2) \times 0.8) + ((5.4+2.7) \times 0.75) + ((16.4+13.9) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {4} \times 0.3))\\ + 0.29925 = 52.08175
+	CIdx_{3}(t=3) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {2} \times 0.3))\\ + 0.29925 = 15.77175
 \end{multline}
 
 	\begin{figure} [H]
@@ -304,15 +305,15 @@ Perhitungan CIDx (t=3)
 	Perhitungan CIDx (t=4)
 
 \begin{multline}
-	CIdx_{1}(t=4) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.47) + ((14.7+17.4+5.4+10.5) \times 0.62) + ((14.3+10.4) \times 0.67)\\ + ((16+19+7.2+10.2) \times 0.8) + ((8.1+11.4) \times 0.75) + ((18.6+18.4+8.9) \times 0.35) ) + 0.4 \times (0 + 0 + \frac{2}{4} \times 0.3)\\ + 0.29925 = 71.47475
+	CIdx_{1}(t=4) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3)\\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + \frac{2}{2} \times 0.3)\\ + 0.29925 = 20.48675
 \end{multline}
 
 \begin{multline}
-	CIdx_{2}(t=4) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.47) + ((31.6+51.5+2.4+43) \times 0.62) + ((31+41.8) \times 0.67)\\ + ((31+52+2.6+41.7) \times 0.8) + ((3.5+41.6) \times 0.75) + ((32.4+51.7 + 3.8) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {4} \times 0.3))\\ + 0.29925 = 176.23825
+	CIdx_{2}(t=4) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {2} \times 0.3))\\ + 0.29925 = 51.70925
 \end{multline}
 
 \begin{multline}
-	CIdx_{3}(t=4) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.47) + ((16.1+15.4+3.1+2) \times 0.62) + ((17.6+3) \times 0.67)\\ + ((17+15+5.4+2.2) \times 0.8) + ((5.4+2.7) \times 0.75) + ((16.4+13.9) \times 0.35)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {4} \times 0.3))\\ + 0.29925 = 52.08175
+	CIdx_{3}(t=4) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {2} \times 0.3))\\ + 0.29925 = 15.77175
 \end{multline}
 
 	\begin{figure} [H]
@@ -327,8 +328,8 @@ Jadi hasil dari simulasi ini adalah pada bulan pertama wirausaha 1 berada pada l
 \section{Deskripsi Perangkat Lunak}
 \label{dpl}
 
-Dalam skripsi ini penulis merancang sebuah simulator dari Entrepreneur Cellular Automata (ECA) yang sebelumnya telah dikembangkan oleh Cecilia Esti Nugraheni dan Vania Natali. Simulator ini dinamakan Simulator Pertumbuhan Wirausaha Berbasis Cellular Automata.\\
-Perangkat lunak ini dibuat untuk memberi gambaran kepada pemerintah atau lembaga umum mengenai pergerakkan wirausaha dalam waktu tertentu. Sebagaimana telah dijelaskan perangkat lunak ini bertujuan untuk mensimulasikan ECA. Untuk membuat simulator ECA, penulis merancang beberapa \textit{form} agar \textit{user} dapat mengisi bobot atau nilai penting yang mempengaruhi simulasi. Dalam perangkat lunak ini, \textit{user} juga dapat memasukkan file data wirausaha dalam format text. Simulator yang dibuat akan menampilkan hasil simulasi ke dalam tabel dan juga ke dalam file CSV yang dapat dibuka di \textit{Microsoft Excel}.
+Dalam skripsi ini penulis merancang sebuah simulator dari Entrepreneurial Cellular Automata (ECA) yang sebelumnya telah dikembangkan oleh Cecilia Esti Nugraheni dan Vania Natali \cite{ECA}. Simulator ini dinamakan Simulator Pertumbuhan Wirausaha Berbasis Cellular Automata.\\
+Perangkat lunak ini dibuat untuk memberi gambaran kepada pemerintah atau lembaga umum mengenai pergerakkan wirausaha dalam waktu tertentu. Masukan dari simulator ECA ini yaitu berupa parameter-parameter simulasi yang terdiri dari bobot atribut, relasi antar wirausaha dan nilai a,b,c, \textit{threshold} dan periode. Proses yang dijalankan yaitu pada perhitungan \textit{Continuity Index} yang perhitungannya terbagi menjadi 3 tahap yaitu perhitungan pada faktor internal, perhitungan pada faktor ketetanggaan dan perhitungan pada faktor publik. Hasil keluaran dari simulator ini yaitu berupa jumlah wirausaha pada level tertentu yang ditampilkan per bulan.
 
 
 \section{Analisis Perangkat Lunak}
@@ -349,10 +350,10 @@ Berdasarkan hasil analisis, dibentuk 3 \textit{use case} dengan 1 aktor, yaitu :
 \begin{enumerate}
 	\item \textbf{Memasukkan parameter simulasi}
 	
-	\textit{User} dapat memasukkan parameter seperti bobot setiap ketetanggaan, relasi ketetanggaan, bobot faktor publik, mengisi nilai a,b,c dan threshold serta periode.
+	\textit{User} dapat memasukkan parameter seperti bobot setiap ketetanggaan, relasi ketetanggaan, bobot faktor publik, mengisi nilai a,b,c dan \textit{threshold} serta periode.
 	\item \textbf{Memasukkan file data wirausaha dalam format text}
 	
-	\textit{User} dapat memasukkan data wirausaha yang akan disimulasikan berupa file text.
+	\textit{User} dapat memasukkan data wirausaha yang akan disimulasikan berupa \textit{file} text.
 	\item \textbf{Menjalankan simulasi}
 	
 	\textit{User} dapat menjalankan simulasi dan melihat hasil simulasi setiap bulannya.
@@ -366,8 +367,8 @@ Berdasarkan hasil analisis, dibentuk 3 \textit{use case} dengan 1 aktor, yaitu :
 			\item Nama : Memasukkan Parameter Simulasi
 			\item Aktor : \textit{User}
 			\item Deskripsi : Memasukkan bobot untuk setiap atribut dan parameter penting dalam simulasi.
-			\item Kondisi awal : \textit{Checkbox} atau \textit{radio button} dan \textit{Text Field} belum terisi.
-			\item Kondisi akhir : \textit{User} telah mengisi \textit{checkbox} atau \textit{radio button} dan \textit{text field}.
+			\item Kondisi awal : \textit{User} belum mengisi bobot untuk setiap atribut dan parameter dalam simulasi.
+			\item Kondisi akhir : \textit{User} telah mengisi bobot untuk setiap atribut dan parameter dalam simulasi.
 			\item Skenario utama :
 		\end{itemize}
 		
@@ -384,24 +385,24 @@ No & Aksi & Reaksi Sistem\\
 \label{tabelSkenario1}
 \end{table}
 
-	\item Memasukkan File Data Wirausaha Dalam Format Text
+	\item Memasukkan \textit{File} Data Wirausaha Dalam Format Text
 	\begin{itemize}
-		\item Nama : Memasukkan file data wirausaha dalam format text.
+		\item Nama : Memasukkan \textit{file} data wirausaha dalam format text.
 		\item Aktor : \textit{User}.
-		\item Deskripsi : Memasukkan file data wirausaha yang akan disimulasikan.
-		\item Kondisi awal : \textit{User} meng-klik \textit{button} "OPEN FILE" dan memasukkan file data wirausaha dalam format text.
+		\item Deskripsi : Memasukkan \textit{file} data wirausaha yang akan disimulasikan.
+		\item Kondisi awal : \textit{User} memasukkan \textit{file} data wirausaha dalam format text.
 		\item Kondisi akhir : Sistem akan menampilkan isi data pada tabel.
 		\item Skenario utama:
 	\end{itemize}
 	
 	\begin{table}[H]
 \centering
-\caption{Tabel Skenario Memasukkan file data wirausaha dalam format text}
+\caption{Tabel Skenario Memasukkan \textit{file} data wirausaha dalam format text}
 \begin{tabular}{|c|p{7cm}|p{7cm}|}
 \hline
 No & Aksi & Reaksi Sistem\\
 \hline
-1 & \textit{User} meng-klik \textit{button} "OPEN FILE" dan memasukkan file data wirausaha dalam format text. & Sistem akan menampilkan isi data pada tabel. \\
+1 & \textit{User} memilih \textit{file} dan memasukkan \textit{file} data wirausaha dalam format text. & Sistem akan menampilkan isi data pada tabel. \\
 \hline
 \end{tabular}
 \label{tabelSkenario2}
@@ -412,7 +413,7 @@ No & Aksi & Reaksi Sistem\\
 			\item Nama : Menjalankan Simulasi
 			\item Aktor : \textit{User}
 			\item Deskripsi : Menjalankan simulasi dan melihat hasil simulasi
-			\item Kondisi awal : \textit{User} meng-klik \textit{button} "SIMULATE"
+			\item Kondisi awal : \textit{User} menjalankan program
 			\item Kondisi akhir : Sistem akan menampilkan hasil di tabel dan juga di excel.
 			\item Skenario utama:
 		\end{itemize}
@@ -424,7 +425,7 @@ No & Aksi & Reaksi Sistem\\
 \hline
 No & Aksi & Reaksi Sistem\\
 \hline
-1 & \textit{User} meng-klik \textit{button} "SIMULATE" & Sistem akan menampilkan hasil pada tabel dan juga di excel. \\
+1 & \textit{User} menjalankan program & Sistem akan menampilkan hasil pada tabel dan juga di excel. \\
 \hline
 \end{tabular}
 \label{tabelSkenario3}

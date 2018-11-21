@@ -14,20 +14,16 @@ Pada jaman sekarang, sudah banyak sekali orang yang lebih memilih untuk berwirau
 Kewirausahaan sangat diperlukan guna mendorong perekonomian suatu negara karena dapat mengurangi tingkat pengangguran di Indonesia. Secara ekonomis, kewirausahaan akan membantu meningkatkan pendapatan masyarakat atau meningkatkan kesejahteraan melalui penciptaan produk baru, serta mengurangi kemiskinan.  Ideal besarnya populasi wirausaha dalam suatu negara adalah 2\% dari total penduduk suatu negara. Saat ini Indonesia baru mencapai pengusaha dari total penduduk. Maka dari itu, kondisi wirausaha ini perlu dipantau terus-menerus perkembangannya agar dapat memajukan perekonomian di Indonesia. Pemantauan ini dilakukan oleh pemerintah dan lembaga-lembaga swasta yang berkepentingan. Salah satu lembaga yang memantau adalah GEM (Global Entrepreneurship Monitor). GEM merupakan konsorsium yang bertujuan untuk mengukur dan memantau kegiatan kewirausahaan. 
 
 
-GEM mengilustrasikan kewirausahaan menjadi 3 fase \cite{GEM2013}, fase pertama yaitu wirausaha \textit{nascent}, yaitu mereka yang baru memulai suatu usaha (<3 bulan). Fase kedua yaitu pemilik usaha baru (\textit{new business owners}), yaitu wirausaha \textit{nascent} yang sudah menjalani usaha lebih dari tiga bulan tetapi tidak lebih dari tiga setengah tahun. Fase ketiga yaitu wirausaha mapan (\textit{established entrepreneurs}), yaitu wirausaha yang sudah menjalankan sebuah usaha lebih dari tiga setengah tahun.
+GEM memodelkan kewirausahaan menjadi 4 fase \cite{GEM2013}, fase pertama yaitu wirausaha \textit{potential} merupakan wirausaha yang akan memulai usahanya. Fase kedua yaitu wirausaha \textit{nascent} merupakan mereka yang baru memulai suatu usaha (<3 bulan). Fase ketiga yaitu wirausaha \textit{new business owners}, yaitu wirausaha \textit{nascent} yang sudah menjalani usaha lebih dari tiga bulan tetapi tidak lebih dari tiga setengah tahun. Fase keempat yaitu wirausaha \textit{established}, yaitu wirausaha yang sudah menjalankan sebuah usaha lebih dari tiga setengah tahun.
 
 
-Selain pemantauan terhadap kondisi riil, salah satu kegiatan yang mendukung pemantauan adalah pengamatan secara tidak langsung. Salah satu pengamatan tidak langsung adalah dengan membuat model matematika dari pertumbuhan wirausaha dan kemudian melakukan simulasi terhadap model tersebut. Salah satu model matematika yang dapat digunakan untuk memodelkan pertumbuhan wirausaha adalah Entrepreneurial Cellular Automata (ECA) yang diusulkan oleh Nugraheni dan Natali. ECA adalah pengembangan dari Cellular Automata standar dari Ulam dan New Neuman. Cellular Automata (CA) sendiri merupakan suatu model matematika yang digunakan untuk memodelkan suatu sistem dinamis. Pada \cite{ECA} dijelaskan bagaimana struktur dari ECA dan diberikan illustrasi bagaimana menggunakan ECA untuk memprediksi pertumbuhan wirausaha berdasarkan parameter wirausaha dari GEM. 
+Selain pemantauan terhadap kondisi riil, salah satu kegiatan yang mendukung pemantauan adalah pengamatan secara tidak langsung. Salah satu pengamatan tidak langsung adalah dengan membuat model matematika dari pertumbuhan wirausaha dan kemudian melakukan simulasi terhadap model tersebut. Salah satu model matematika yang dapat digunakan untuk memodelkan pertumbuhan wirausaha adalah Entrepreneurial Cellular Automata (ECA) yang diusulkan oleh Nugraheni dan Natali \cite{ECA}. ECA adalah pengembangan dari Cellular Automata standar dari Ulam dan New Neuman. Cellular Automata (CA) sendiri merupakan suatu model matematika yang digunakan untuk memodelkan suatu sistem dinamis. Pada \cite{ECA} dijelaskan bagaimana struktur dari ECA dan diberikan illustrasi bagaimana menggunakan ECA untuk memprediksi pertumbuhan wirausaha berdasarkan parameter wirausaha dari GEM. 
 
 
 Dalam hasil penelitian ECA setiap wirausahawan mempunyai beberapa atribut yang bersifat statis maupun dinamis. Contoh atribut yang bersifat statis yaitu bidang usaha, kategori usaha, lokasi geografis dan jenis kelamin. Sementara contoh untuk atribut dinamis adalah usia, level wirausaha dan usia usaha. Diantara atribut dinamis, level wirausaha menjadi atribut penting karena atribut ini yang akan menjadi acuan untuk menentukan perkembangan dari kewirausahaan. \textit{Continuity Index} digunakan untuk menentukan apakah seorang wirausahawan pada suatu saat tertentu akan meneruskan usahanya pada waktu selanjutnya.
 
 
-Skripsi ini bertujuan untuk mengembangkan ECA dengan memperhitungkan beberapa parameter yang belum diperhatikan pada ECA dan mengembangkan perangkat lunak simulator yang dapat menampilkan visualisasi dari simulasi. Selain menambahkan parameter yang berhubungan dengan pertumbuhan wirausaha, pengembangan ini juga akan memperhatikan pertumbuhan penduduk. Di samping itu, simulasi pada data nyata juga perlu dilakukan untuk membuktikan kebenaran dari model yang dibuat.
-
-
-
-
+Skripsi ini bertujuan untuk membangun sebuah simulator ECA dengan memperhitungkan beberapa parameter yang belum diperhatikan pada ECA dan mengembangkan perangkat lunak simulator yang dapat menampilkan visualisasi dari simulasi.
 
 
 
@@ -38,8 +34,8 @@ Berikut adalah susunan permasalahan yang akan dibahas pada penelitian ini:
 
 \begin{enumerate}
 	\item Faktor apa saja yang mempengaruhi keberlangsungan wirausaha?
-	\item Bagaimana memodelkan pertumbuhan wirausaha dengan \textit{Entrepreneur Cellular Automata} ?
-	\item Bagaimana membuat simulator keberlangsungan wirausaha dengan \textit{Cellular Automata}?
+	\item Bagaimana memodelkan pertumbuhan wirausaha dengan \textit{Entrepreneurial Cellular Automata} ?
+	\item Bagaimana membuat simulator keberlangsungan wirausaha dengan \textit{Entrepreneurial Cellular Automata}?
 \end{enumerate}
 
 
@@ -51,17 +47,20 @@ Berdasarkan rumusan masalah yang telah dibuat, maka tujuan penelitian ini dijela
 
 \begin{enumerate}
 	\item Mempelajari faktor yang berpengaruh pada keberlangsungan wirausaha.
-	\item Memodelkan pertumbuhan wirausaha dengan \textit{ Entrepreneur Cellular Automata}.
-	\item Membuat simulator keberlangsungan wirausaha dengan \textit{Cellular Automata}.
+	\item Memodelkan pertumbuhan wirausaha dengan \textit{ Entrepreneurial Cellular Automata}.
+	\item Membuat simulator keberlangsungan wirausaha dengan \textit{Entrepreneurial Cellular Automata}.
 \end{enumerate}
 
 \section{Batasan Masalah}
 \label{sec:batasan}
 \begin{enumerate}
-	\item Perangkat lunak yang dibuat dijalankan pada komputer.
+	\item Perangkat lunak yang dibuat hanya bisa dijalankan pada komputer / \textit{laptop}.
 	\item Hanya mempelajari perkembangan wirausaha dari GEM.
 	\item Data yang diuji hanya berdasarkan data dari GEM 2013.
-	\item Data bersifat statis artinya hanya menangani wirausaha yang sudah ada, tidak menangani wirausaha baru yang muncul pada saat periode tertentu.   
+	\item Data bersifat statis artinya hanya menangani wirausaha yang sudah ada, tidak menangani wirausaha baru yang muncul pada saat periode tertentu. 
+	\item Tidak bertujuan untuk menguji kualitas atau kebenaran dari ECA, tetapi hanya membangun simulator untuk ECA saja.
+	\item Data wirausaha yang diuji bukan data nyata.
+	\item Pengujian fungsionalitas hanya dilakukan pada simulator.
 \end{enumerate}
 
 
@@ -74,7 +73,7 @@ Langkah-langkah yang akan dijalani untuk menyelesaikan penelitian ini :
 			\item \textit{Cellular Automata} khususnya ECA
 			\item Kewirausahaan khususnya GEM
 		\end{enumerate}
-	\item Menganalisis masalah kewirausahaan untuk mengembangkan model keberlangsungan wirausaha menggunakan \textit{cellular automata}.
+	\item Menganalisis masalah kewirausahaan untuk membangun simulator pertumbuhan wirausaha menggunakan \textit{Entrepreneurial Cellular Automata}.
 	\item Merancang perangkat lunak berdasarkan hasil pemodelan.
 	\item Mengimplementasikan perangkat lunak sesuai rancangan.
 	\item Menguji perangkat lunak yang dibuat.
@@ -86,11 +85,11 @@ Langkah-langkah yang akan dijalani untuk menyelesaikan penelitian ini :
 \label{sec:sispem}
 Setiap bab dalam penelitian ini memiliki sistematika penulisan yang dijelasan ke dalam poin-poin sebagai berikut :
 \begin{enumerate}
-	\item Bab 1: Pendahuluan berisi latar belakang masalah, rumusan masalah, tujuan, batasan masalah, metodologi dan sistematika penulisan.
-	\item Bab 2: Dasar teori yaitu akan membahas mengenai teori-teori yang mendukung berjalannya penulisan ini. Berisi tentang pengertian CA, GEM, ECA dan hal lain yang mendukung implementasi perangkat lunak.
-	\item Bab 3: Analisis, yaitu berisi analisis pemodelan dalam mengembangkan model keberlangsungan wirausaha yang akan dibuat.
-	\item Bab 4: Perancangan, membahas mengenai perancangan yang dilakukan sebelum melakukan tahapan implementasi.
-	\item Bab 5: Implementasi dan Pengujian, pada bab ini berisi hasil implementasi rancangan pemodelan yang telah dibuat yang didasari dasar-dasar teori yang bersangkutan.
+	\item Bab 1: Pendahuluan berisi latar belakang masalah, rumusan masalah, tujuan, batasan masalah, metodologi dan sistematika pembahasan.
+	\item Bab 2: Dasar teori yaitu akan membahas mengenai arti kewirausahaan, penjelasan \textit{cellular automata}, penjelasan \textit{entrepreneurial cellular automata} dan penjelasan tentang graf.
+	\item Bab 3: Analisis, yaitu berisi analisis pertumbuhan wirausaha, analisis pemodelan \textit{entrepreneurial cellular automata}, analisis model pertumbuhan wirausaha dengan \textit{entrepreneurial cellular automata}, deskripsi perangkat lunak dan analisis perangkat lunak.
+	\item Bab 4: Perancangan, membahas mengenai diagram kelas, rancangan antarmuka dan rancangan \textit{file} input.
+	\item Bab 5: Implementasi dan Pengujian, pada bab ini berisi tentang implementasi dan hasil implementasi. Dalam pengujian akan dijelaskan pengujian fungsional, pengujian pembacaan parameter, pengujian pembacaan \textit{file} dan pengujian hasil dari simulasi.
 	\item Bab 6: Kesimpulan dan Saran, yaitu membahas hasil kesimpulan dari keseluruhan penelitian ini dan saran-saran yang dapat diberikan untuk penelitian berikutnya.
 \end{enumerate}
 

@@ -68,7 +68,7 @@ public class TampilanBobotKetetanggaan extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("SIMULATOR ECA");
 
-        jLabel2.setText("Bobot Masing-Masing Parameter Wirausaha :");
+        jLabel2.setText("Bobot Ketetanggaan Wirausaha :");
 
         umurCBInternal.setText("UMUR :");
         umurCBInternal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -140,10 +140,10 @@ public class TampilanBobotKetetanggaan extends javax.swing.JFrame {
             }
         });
         nilaiUmurInternal.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
             public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
                 nilaiUmurInternalInputMethodTextChanged(evt);
-            }
-            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
             }
         });
         nilaiUmurInternal.addActionListener(new java.awt.event.ActionListener() {

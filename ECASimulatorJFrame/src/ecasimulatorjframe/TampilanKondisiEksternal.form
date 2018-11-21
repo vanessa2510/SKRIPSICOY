@@ -156,7 +156,7 @@
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="87" max="32767" attributes="0"/>
+                  <EmptySpace pref="86" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -373,7 +373,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel15">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Infrastruktur Komersial dan legal : "/>
+            <Property name="text" type="java.lang.String" value="Infrastruktur Komersial dan Legal : "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="nilaiInfrastrukturKomersial">
@@ -400,7 +400,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel19">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Pendidikan Kewirausahaan pada SMK, profesional dan universitas : "/>
+            <Property name="text" type="java.lang.String" value="Pendidikan Kewirausahaan pada SMK, Profesional dan Universitas : "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="nilaiPendidikanSMK">

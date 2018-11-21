@@ -4,7 +4,7 @@
 
 
  
-Pada bab ini akan dibahas mengenai dasar teori yang digunakan pada penyusunan tugas akhir. Pembahasan pertama mencakup hal-hal yang berkaitan dengan pengertian kewirausahaan dari umum sampai khusus yaitu kewirausahaan menurut GEM. Pembahasan kedua yaitu tentang teori dan aplikasi dari CA (Cellular Automata) khususnya tentang ECA (Entrepreneur Cellular Automata). Pembahasan terakhir tentang hal-hal lain yang mendukung implementasi perangkat lunak seperti bahasa pemrograman java.
+Pada bab ini akan dibahas mengenai dasar teori yang digunakan pada penyusunan tugas akhir. Pembahasan pertama mencakup hal-hal yang berkaitan dengan pengertian kewirausahaan dari umum sampai khusus yaitu kewirausahaan menurut GEM. Pembahasan kedua yaitu tentang teori dan aplikasi dari CA (Cellular Automata) khususnya tentang ECA (Entrepreneurial Cellular Automata). Pembahasan terakhir tentang hal-hal lain yang mendukung implementasi perangkat lunak seperti bahasa pemrograman java.
 
 
 \section{Arti Kewirausahaan}
@@ -17,13 +17,13 @@ Wirausaha berasal dari kata wira dan usaha. Wira artinya unggul, mulia, luhur se
 
 %Kewirausahaan menurut GEM merupakan proses yang terdiri dari fase-fase berbeda mulai dari niat mendirikan suatu usaha, menjalankan suatu usaha baru atau sudah berdiri dan sampai usaha tersebut berhenti. Proses ini dimulai dengan keterlibatan individu yang berpotensi untuk menjadi wirausaha, yaitu mereka yang percaya bahwa mereka mempunyai kemampuan untuk memulai suatu usaha, individu yang melihat kesempatan untuk berwirausaha dan individu yang tidak takut gagal dalam memulai suatu usaha. \cite{wirausahaGEM}
 
-Kewirausahaan menurut GEM merupakan sebuah proses yang memiliki tahapan-tahapan yang berbeda (Gambar \ref{fig:fasewirausaha}). Tahapan-tahapannya antara lain adalah dimulai dari niat mendirikan usaha, menjalankan usaha dan yang terakhir adalah berhentinya usaha yang dibuat. Tahapan pertama yaitu wirausaha \textit{nascent}. Wirausaha \textit{nascent} ini merupakan tahapan dimana seseorang memulai usahanya yang waktunya kurang dari tiga bulan. Tahapan kedua yaitu wirausaha yang sedang menjalankan usahanya dan sudah bisa menggaji orang lain, waktunya lebih dari tiga bulan tetapi kurang dari tiga tahun. Wirausaha \textit{nascent} dan wirausaha yang sedang menjalankan usahanya masuk ke dalam TEA (Total Early-Stage Entrepreneurial Activity). TEA merupakan persentase populasi antara usia 18 sampai 64 tahun yang berada pada tahap memulai usaha maupun pemilik bisnis yang waktunya kurang dari 42 bulan \cite{wirausahaGEM}. Tahapan terakhir adalah wirausaha mapan (\textit{established entrepreneur}) yaitu seseorang yang sudah menjalankan usahanya lebih dari tiga tahun dan tentunya sudah bisa menggaji orang.\cite{GEM2013}
+Kewirausahaan menurut GEM merupakan sebuah proses yang memiliki tahapan-tahapan yang berbeda (Gambar \ref{fig:fasewirausaha}). Tahapan-tahapannya antara lain adalah dimulai dari niat mendirikan usaha, menjalankan usaha dan yang terakhir adalah berhentinya usaha yang dibuat. Tahapan pertama yaitu wirausaha \textit{nascent}. Wirausaha \textit{nascent} ini merupakan tahapan dimana seseorang memulai usahanya yang waktunya kurang dari tiga bulan. Tahapan kedua yaitu wirausaha yang sedang menjalankan usahanya dan sudah bisa menggaji orang lain, waktunya lebih dari tiga bulan tetapi kurang dari tiga tahun. Wirausaha \textit{nascent} dan wirausaha yang sedang menjalankan usahanya masuk ke dalam TEA (Total Early-Stage Entrepreneurial Activity). TEA merupakan persentase populasi antara usia 18 sampai 64 tahun yang berada pada tahap memulai usaha maupun pemilik bisnis yang waktunya kurang dari 42 bulan \cite{wirausahaGEM}. Tahapan terakhir adalah wirausaha \textit{established} yaitu seseorang yang sudah menjalankan usahanya lebih dari tiga tahun dan tentunya sudah bisa menggaji orang.\cite{GEM2013}
 
-GEM melakukan penelitiannya berdasarkan pada beberapa premis.Pertama, keadaan ekonomi suatu negara. Jika keadaan ekonomi suatu negara sedang sulit itu artinya dengan adanya wirausaha dapat membantu memperluas lapangan pekerjaan (memotivasi orang untuk menjadi seorang wirausaha juga lebih meningkat), sedangkan jika keadaan ekonomi suatu negara sudah baik keberadaan wirausaha tidak terlalu dibutuhkan (memotivasi orang untuk menjadi seorang wirausaha sudah kurang menarik). Kedua, kemampuan dan motivasi individu untuk memulai sebuah usaha dan pandangan masyarakat tentang wirausaha. Ketiga, pertumbuhan tinggi kewirausahaan dan persaingan antar negara tentang seberapa inovatif usaha tersebut. \cite{GEM2013}
+GEM melakukan penelitiannya berdasarkan pada beberapa premis. Pertama, keadaan ekonomi suatu negara. Jika keadaan ekonomi suatu negara sedang sulit itu artinya dengan adanya wirausaha dapat membantu memperluas lapangan pekerjaan (memotivasi orang untuk menjadi seorang wirausaha juga lebih meningkat), sedangkan jika keadaan ekonomi suatu negara sudah baik keberadaan wirausaha tidak terlalu dibutuhkan (memotivasi orang untuk menjadi seorang wirausaha sudah kurang menarik). Kedua, kemampuan dan motivasi individu untuk memulai sebuah usaha dan pandangan masyarakat tentang wirausaha. Ketiga, pertumbuhan tinggi kewirausahaan dan persaingan antar negara tentang seberapa inovatif usaha tersebut. \cite{GEM2013}
 %GEM melakukan penelitiannya dengan didasarkan pada premis-premis berikut. Pertama, kemakmuran sebuah ekonomi sangat tergantung pada sektor kewirausahaan yang dinamis. Sifat dari kegiatan ini dapat beragam karakter dan dampaknya. Kewirausahaan yang didorong oleh kebutuhan khususnya di wilayah yang kurang berkembang atau wilayah yang sedang mengalami penurunan lapangan kerja, dapat membantu ekonomi suatu negara jika memang lapangan pekerjaan terbatas. Di sisi lain, pada wilayah yang lebih berkembang kesempatan wirausaha terjadi lebih akibat dari kemakmuran dan kemampuan inovasi mereka. Kedua, kapasitas kewirausahaan sebuah ekonomi didasarkan pada kemampuan dan motivasi individunya untuk memulai suatu usaha dan dapat diperkuat oleh persepsi positif masyarakat tentang kewirausahaan. Terakhir, pertumbuhan tinggi kewirausahaan adalah kontributor utama untuk penyedia lapangan pekerjaan dan persaingan antar negara bergantung pada usaha yang inovatif.
 \begin{figure} [H]
 	\centering  
-	\includegraphics[width=14cm, height=6cm]{GEM2016-wirausaha}  
+	\includegraphics[width=14cm, height=8cm]{faseWirausaha}  
 	\caption[Fase Wirausaha]{Fase Wirausaha} 
 	\label{fig:fasewirausaha} 
 \end{figure}
@@ -64,7 +64,7 @@ Know Startup Entrepreneur Rate & persentase dari populasi berusia 18-64 yang ken
 
 
 
-Indikator-indikator menurut GEM yang mempengaruhi perkembangan kewirausahaan di Indonesia yaitu Perceived Capabilities, Role Model, Perceived Opportunity, High Status of Successful dan Fear of Failure. Berikut data usia, pendidikan, pendapatan dan lokasi dari GEM tentang Perceived Capabilities yang diambil pada tahun 2013 \cite{dataGEM}.
+Indikator-indikator menurut GEM yang mempengaruhi perkembangan kewirausahaan di Indonesia yaitu Perceived Capabilities, Role Model, Perceived Opportunity, High Status of Successful dan Fear of Failure. Berikut contoh data usia, pendidikan, pendapatan dan lokasi dari GEM tentang Perceived Capabilities yang diambil pada tahun 2013 \cite{dataGEM}.
 
 
 \begin{figure} [H]
@@ -93,7 +93,7 @@ Dapat dilihat pada gambar \ref{fig:PCPendidikan} dijelaskan bahwa individu yang 
 \end{figure}
 
 
-Dapat dilihat pada gambar \ref{fig:PCPendapatan} bahwa Perceived Capabilities tertinggi terletak pada mereka yang memiliki pendapatan dibawah 7 juta. Perceived Capabilities terendah terletak pada mereka yang pendapatannya diatas 11 juta.
+Dapat dilihat pada gambar \ref{fig:PCPendapatan} bahwa Perceived Capabilities tertinggi terletak pada mereka yang memiliki pendapatan di bawah 7 juta. Perceived Capabilities terendah terletak pada mereka yang pendapatannya diatas 11 juta.
 
 
 \begin{figure} [H]
@@ -125,7 +125,7 @@ Pada gambar \ref{fig:RMUmur} dijelaskan individu yang memahami Role Model tertin
 \end{figure}  
 
 
-Pada gambar \ref{fig:RMpendapatan} dijelaskan Role Model memiliki peran penting terhadap tingkat pendapatan dibawah 7 juta rupiah. Pada tingkat pendapatan diatas 15 juta rupiah, wanita lebih mempertimbangkan Role Model dibandingkan pria.
+Pada gambar \ref{fig:RMpendapatan} dijelaskan Role Model memiliki peran penting terhadap tingkat pendapatan dibawah 7 juta rupiah. Pada tingkat pendapatan di atas 15 juta rupiah, wanita lebih mempertimbangkan Role Model dibandingkan pria.
 
 \begin{figure} [H]
 	\centering  
@@ -134,7 +134,7 @@ Pada gambar \ref{fig:RMpendapatan} dijelaskan Role Model memiliki peran penting 
 	\label{fig:POUmur} 
 \end{figure} 
 
-Seperti dapat dilihat pada gambar \ref{fig:POUmur}, diantara semuanya yang melihat adanya peluang baik untuk memulai usaha baru yaitu pria berusia antara 25 sampai 34 tahun sebesar 36.2\%, nilai untuk pria memiliki nilai lebih tinggi dibandingkan wanita. Sedangkan pada umur diatas 34 tahun, wanita memiliki nilai yang lebih tinggi dibandingkan pria.
+Seperti dapat dilihat pada gambar \ref{fig:POUmur}, diantara semuanya yang melihat adanya peluang baik untuk memulai usaha baru yaitu pria berusia antara 25 sampai 34 tahun sebesar 36.2\%, nilai untuk pria memiliki nilai lebih tinggi dibandingkan wanita. Sedangkan pada umur di atas 34 tahun, wanita memiliki nilai yang lebih tinggi dibandingkan pria.
 
 \begin{figure} [H]
 	\centering  
@@ -161,7 +161,7 @@ Gambar \ref{fig:lokasiPO} menjelaskan bahwa orang-orang yang tinggal di wilayah 
 	\label{fig:pendapatanPO} 
 \end{figure} 
 
-Gambar \ref{fig:pendapatanPO} memperlihatkan bahwa mereka yang pendapatannya dibawah 7 juta rupiah memiliki Perceived Opportunities lebih tinggi dibandingkan pendapatan diatas 7 juta rupiah. Rata-rata, wanita dengan pendapatan lebih dari 15 juta rupiah lebih bisa melihat adanya kesempatan memulai usaha baru dibandingkan pria.
+Gambar \ref{fig:pendapatanPO} memperlihatkan bahwa mereka yang pendapatannya di bawah 7 juta rupiah memiliki Perceived Opportunities lebih tinggi dibandingkan pendapatan di atas 7 juta rupiah. Rata-rata, wanita dengan pendapatan lebih dari 15 juta rupiah lebih bisa melihat adanya kesempatan memulai usaha baru dibandingkan pria.
 
 \begin{figure} [H]
 	\centering  
@@ -170,7 +170,7 @@ Gambar \ref{fig:pendapatanPO} memperlihatkan bahwa mereka yang pendapatannya dib
 	\label{fig:umurFF} 
 \end{figure} 
 
-Dapat dilihat pada gambar \ref{fig:umurFF}, Fear of Failure tertinggi dimiliki oleh pria berumur antara 25 sampai 34 tahun. Wanita pada usia diatas 44 tahun memiliki Fear of Failure lebih tinggi dibandingkan pria.
+Dapat dilihat pada gambar \ref{fig:umurFF}, Fear of Failure tertinggi dimiliki oleh pria berumur antara 25 sampai 34 tahun. Wanita pada usia di atas 44 tahun memiliki Fear of Failure lebih tinggi dibandingkan pria.
 
 \begin{figure} [H]
 	\centering  
@@ -224,7 +224,7 @@ Pada gambar \ref{fig:lokasiHS}, orang-orang yang tinggal di kota Jakarta memilik
 	\label{fig:pendapatanHS} 
 \end{figure} 
 
-Dapat dilihat pada gambar \ref{fig:pendapatanHS}, orang-orang dengan pendapatan dibawah 7 juta rupiah memiliki persepsi lebih tinggi mengenai High Status of Successful dibandingkan mereka yang memiliki pendapatan lebih dari 7 juta rupiah. Data selanjutnya yaitu dari Media Attention.
+Dapat dilihat pada gambar \ref{fig:pendapatanHS}, orang-orang dengan pendapatan di bawah 7 juta rupiah memiliki persepsi lebih tinggi mengenai High Status of Successful dibandingkan mereka yang memiliki pendapatan lebih dari 7 juta rupiah. Data selanjutnya yaitu dari Media Attention.
 
 
 \begin{figure} [H]
@@ -234,7 +234,7 @@ Dapat dilihat pada gambar \ref{fig:pendapatanHS}, orang-orang dengan pendapatan 
 	\label{fig:lokasiPMA} 
 \end{figure} 
 
-Dilihat pada gambar \ref{fig:lokasiPMA}, dapat disimpulkan walaupun orang-orang yang berada di Jakarta memiliki persepsi lebih tinggi pada niat media untuk melaporkan cerita usaha yang sukses, persepsi tertinggi kedua justru terletak pada daerah diluar pulau jawa yaitu kota Medan.
+Dilihat pada gambar \ref{fig:lokasiPMA}, dapat disimpulkan walaupun orang-orang yang berada di Jakarta memiliki persepsi lebih tinggi pada niat media untuk melaporkan cerita usaha yang sukses, persepsi tertinggi kedua justru terletak pada daerah di luar pulau jawa yaitu kota Medan.
 
 \begin{figure} [H]
 	\centering  
@@ -243,12 +243,12 @@ Dilihat pada gambar \ref{fig:lokasiPMA}, dapat disimpulkan walaupun orang-orang 
 	\label{fig:pendapatanPMA} 
 \end{figure} 
 
-Pada gambar \ref{fig:pendapatanPMA}, dapat disimpulkan bahwa mereka yang memiliki pendapatan dibawah 7 juta rupiah memiliki persepsi lebih tinggi pada niat media untuk melaporkan cerita usaha yang sukses dibandingkan dengan mereka yang memiliki pendapatan diatas 7 juta rupiah.
+Pada gambar \ref{fig:pendapatanPMA}, dapat disimpulkan bahwa mereka yang memiliki pendapatan di bawah 7 juta rupiah memiliki persepsi lebih tinggi pada niat media untuk melaporkan cerita usaha yang sukses dibandingkan dengan mereka yang memiliki pendapatan di atas 7 juta rupiah.
 
 \section{Cellular Automata}
 \label{sec:cellularautomata}
 
-Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada tahun 1940. Cellular Automata sendiri merupakan model matematis untuk sistem dimana banyak komponen sederhana bertindak bersama untuk menghasilkan pola perilaku yang rumit \cite{referensiCA2}. Sebuah CA terdiri atas sekumpulan sel, tersusun dalam larik-larik (\textit{grid}). Setiap sel mempunyai satu dari sejumlah \textit{state} (kondisi) yang mungkin. \textit{State} dapat berubah sesuai dengan aturan tertentu. Perubahan \textit{state} dari sebuah sel dipengaruhi oleh \textit{state} dari sel-sel di sekitarnya atau disebut dengan sel tetangga.
+Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada tahun 1940. Cellular Automata sendiri merupakan model matematis untuk sistem yang terdapat banyak komponen sederhana bertindak bersama untuk menghasilkan pola perilaku yang rumit \cite{referensiCA2}. Sebuah CA terdiri atas sekumpulan sel, tersusun dalam larik-larik (\textit{grid}). Setiap sel mempunyai satu dari sejumlah \textit{state} (kondisi) yang mungkin. \textit{State} dapat berubah sesuai dengan aturan tertentu. Perubahan \textit{state} dari sebuah sel dipengaruhi oleh \textit{state} dari sel-sel di sekitarnya atau disebut dengan sel tetangga.
 
 \subsection{Dimensi CA}
 		\begin{enumerate}
@@ -317,23 +317,7 @@ Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada
 		\begin{enumerate}
 			\item Bidang Transportasi
 			
-			CA banyak digunakan untuk memodelkan lalu lintas, dengan tujuan utama biasanya adalah untuk mempelajari beban dari jalan-jalan di area tertentu. Contoh aplikasi CA dibidang transportasi ini adalah simulasi pengaturan lampu lalu lintas. Model dalam penelitian ini menggunakan CA 1 dimensi. Pada pergerakan  atau perpindahan lajur kendaraan, terdapat beberapa aturan yaitu : 
-
-	\begin{figure} [H]
-		\centering  
-		\includegraphics[width=12cm, height=4cm]{aplikasi1} 
-		\caption[Ilustrasi dua jalur]{Ilustrasi dua jalur} 
-		\label{fig:aplikasiCA1} 
-	\end{figure}
-				\begin{enumerate}
-				\item Kendaraan di depannya terlalu dekat (kecepatan >   \textit{gap}).
-				\item Jalur di sebelahnya kosong.
-				\item f\_gap $\geq$ kecepatan.
-				\item b\_gap $\geq$ kecepatan\_maksimum.
-				\item Peluang untuk pindah terpenuhi (rand() $\leq$ peluang\_pindah). \cite{referensiCA3}
-			
-			\end{enumerate}
-			
+			CA banyak digunakan untuk memodelkan lalu lintas, dengan tujuan utama biasanya adalah untuk mempelajari beban dari jalan-jalan di area tertentu. Contoh aplikasi CA dibidang transportasi ini adalah simulasi pengaturan lampu lalu lintas. Model dalam penelitian ini menggunakan CA 1 dimensi.
 			
 			\item Bidang Kesehatan
 			
@@ -341,21 +325,7 @@ Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada
 			
 			\item Bidang Lingkungan / Ekologi
 			
-			CA juga dapat digunakan untuk pemodelan pada bidang lingkungan. Contoh penerapan cellular automata pada bidang lingkungan adalah simulasi dan pemodelan perubahan penggunaan lahan. Penelitian ini menggunakan algoritma DINAMICA, algoritma ini merupakan algoritma cellular automata hibrida yang mendukung pemodelan statistik untuk menemukan area yang berpotensi mengalami perubahan berdasarkan faktor pemicu yang telah ditentukan. Algoritma DINAMICA ini memerlukan beberapa parameter berupa :
-			\begin{enumerate}
-				\item Variabel statis dan dinamis
-				
-				Variabel statis yang dimaksud adalah data penggunaan lahan multiwaktu yang dijadikan referensi fakta dalam pemodelan. Variabel dinamis adalah jarak setiap piksel dari penggunaan lahan perkotaan ke lahan bukan perkotaan terdekat.
-				\item Matriks transisi
-				
-				Matriks transisi diperoleh dari persilangan tabulasi penggunaan lahan. Hasil dari persilangan ini adalah tingkat perubahan penggunaan lahan dalam satuan persen yang memperlihatkan banyaknya piksel yang terkonversi dari penggunaan lahan yang satu ke penggunaan lahan yang lain (bukan perkotaan ke perkotaan).
-				\item Probabilitas Transisi Spasial
-				
-				Probabilitas Transisi Spasial adalah kemungkinan perubahan dari penggunaan lahan bukan perkotaan ke penggunaan lahan perkotaan.
-				\item Fungsi Transisi
-				
-				Fungsi kalkulasi melakukan kalkulasi pemilihan piksel yang akan berubah dalam dua prosedur yaitu fungsi perluasan yang diaplikasikan pada \textit{path dependent} dan fungsi tapak yang diaplikasikan pada kejadian spontan (random). \cite{referensiCA4}
-			\end{enumerate}
+			CA juga dapat digunakan untuk pemodelan pada bidang lingkungan. Contoh penerapan cellular automata pada bidang lingkungan adalah simulasi dan pemodelan perubahan penggunaan lahan. Penelitian ini menggunakan algoritma DINAMICA, algoritma ini merupakan algoritma cellular automata hibrida yang mendukung pemodelan statistik untuk menemukan area yang berpotensi mengalami perubahan berdasarkan faktor pemicu yang telah ditentukan.
 			
 			\item Bidang Sains
 			
@@ -372,7 +342,7 @@ Perubahan atribut dinamis dari waktu ke waktu didefinisikan dengan fungsi transi
 
 Atribut dari seorang wirausahawan dapat berubah dari waktu ke waktu, hal ini menyebabkan ketetanggaan juga dapat berubah dari waktu ke waktu. Sebagai contoh, diasumsikan terdapat wirausahawan $e1$ dan $e2$ bertetanggaan pada waktu $t$, jika $e1$ berubah keadaannya pada $t+1$ maka $e1$ dan $e2$ tidak lagi bertetanggaan pada saat $t+1$.
 
-\subsection{Definisi ECA}
+Berikut definisi ECA :\\
 Diberikan \textit{p} himpunan nilai atribut: $A_{1}, ..., A_{p}$ dan sebuah indikator $Pub$ = ${p_{1}, ..., p_{m}}$, sebuah ECA $M$ adalah sebuah tupel
 \begin{displaymath}
 	M = (E, \alpha, N, \omega, \rho, \delta, \sigma)

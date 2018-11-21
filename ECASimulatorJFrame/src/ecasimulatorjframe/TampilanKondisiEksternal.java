@@ -155,7 +155,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
         jLabel13.setText("%");
 
-        jLabel15.setText("Infrastruktur Komersial dan legal : ");
+        jLabel15.setText("Infrastruktur Komersial dan Legal : ");
 
         nilaiInfrastrukturKomersial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,7 +169,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
         jLabel18.setText("%");
 
-        jLabel19.setText("Pendidikan Kewirausahaan pada SMK, profesional dan universitas : ");
+        jLabel19.setText("Pendidikan Kewirausahaan pada SMK, Profesional dan Universitas : ");
 
         jLabel20.setText("%");
 
@@ -290,7 +290,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel2)))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

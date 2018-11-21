@@ -463,59 +463,9 @@ public class CA {
         for (int i = 0; i < this.popSize; i++) {
             int a = getAgeRange(E[i].age);
             if (this.E[i].sex) {
-//                System.out.println("PO");
-//                System.out.println(POAm[a]);
-//                System.out.println(POEm[E[i].education]);
-//                System.out.println(POLm[E[i].location]);
-//                System.out.println(POIm[E[i].income]);
-//                System.out.println("PC");
-//                System.out.println(PCAm[a]);
-//                System.out.println(PCEm[E[i].education]);
-//                System.out.println(PCLm[E[i].location]);
-//                System.out.println(PCIm[E[i].income]);
-//                System.out.println("RM");
-//                System.out.println(RMAm[a]);
-//                System.out.println(RMIm[E[i].income]);
-//                System.out.println("HSS");
-//                System.out.println(HSSAm[a]);
-//                System.out.println(HSSEm[E[i].education]);
-//                System.out.println(HSSLm[E[i].location]);
-//                System.out.println(HSSIm[E[i].income]);
-//                System.out.println("MA");
-//                System.out.println(MALm[E[i].location]);
-//                System.out.println(MAIm[E[i].income]);
-//                System.out.println("FF");
-//                System.out.println(FFAm[a]);
-//                System.out.println(FFEm[E[i].education]);
-//                System.out.println(FFLm[E[i].location]);
-                E[i].point = (POAm[a] + POEm[E[i].education] + POLm[E[i].location] + POIm[E[i].income]) * 0.47 + (PCAm[a] + PCEm[E[i].education] + PCLm[E[i].location] + PCIm[E[i].income]) * 0.62 + (RMAm[a] + RMIm[E[i].income]) * 0.67 + (FFAm[a] + FFEm[E[i].education] + FFLm[E[i].location]) * 0.35 + (MALm[E[i].location] + MAIm[E[i].income]) * 0.75 + (HSSAm[a] + HSSIm[E[i].income] + HSSLm[E[i].location] + HSSEm[E[i].education]) * 0.8;
+                E[i].point = (POAm[a] + POEm[E[i].education] + POLm[E[i].location] + POIm[E[i].income]) * 0.2 + (PCAm[a] + PCEm[E[i].education] + PCLm[E[i].location] + PCIm[E[i].income]) * 0.25 + (RMAm[a] + RMIm[E[i].income]) * 0.3 + (FFAm[a] + FFEm[E[i].education] + FFLm[E[i].location]) * 0.1 + (MALm[E[i].location] + MAIm[E[i].income]) * 0.05 + (HSSAm[a] + HSSIm[E[i].income] + HSSLm[E[i].location] + HSSEm[E[i].education]) * 0.1;
             } else {
-//                System.out.println("PO");
-//                System.out.println(POAf[a]);
-//                System.out.println(POEf[E[i].education]);
-//                System.out.println(POLf[E[i].location]);
-//                System.out.println(POIf[E[i].income]);
-//                System.out.println("PC");
-//                System.out.println(PCAf[a]);
-//                System.out.println(PCEf[E[i].education]);
-//                System.out.println(PCLf[E[i].location]);
-//                System.out.println(PCIf[E[i].income]);
-//                System.out.println("RM");
-//                System.out.println(RMAf[a]);
-//                System.out.println(RMIf[E[i].income]);
-//                System.out.println("HSS");
-//                System.out.println(HSSAf[a]);
-//                System.out.println(HSSEf[E[i].education]);
-//                System.out.println(HSSLf[E[i].location]);
-//                System.out.println(HSSIf[E[i].income]);
-//                System.out.println("MA");
-//                System.out.println(MALf[E[i].location]);
-//                System.out.println(MAIf[E[i].income]);
-//                System.out.println("FF");
-//                System.out.println(FFAf[a]);
-//                System.out.println(FFEf[E[i].education]);
-//                System.out.println(FFLf[E[i].location]);
-                E[i].point = (POAf[a] + POEf[E[i].education] + POLf[E[i].location] + POIf[E[i].income]) * 0.47 + (PCAf[a] + PCEf[E[i].education] + PCLf[E[i].location] + PCIf[E[i].income]) * 0.62 + (RMAf[a] + RMIf[E[i].income]) * 0.67 + (FFAf[a] + FFEf[E[i].education] + FFLf[E[i].location]) * 0.35 + (MALf[E[i].location] + MAIf[E[i].income]) * 0.75 + (HSSAf[a] + HSSIf[E[i].income] + HSSLf[E[i].location] + HSSEf[E[i].education]) * 0.8;
+                E[i].point = (POAf[a] + POEf[E[i].education] + POLf[E[i].location] + POIf[E[i].income]) * 0.2 + (PCAf[a] + PCEf[E[i].education] + PCLf[E[i].location] + PCIf[E[i].income]) * 0.25 + (RMAf[a] + RMIf[E[i].income]) * 0.3 + (FFAf[a] + FFEf[E[i].education] + FFLf[E[i].location]) * 0.1 + (MALf[E[i].location] + MAIf[E[i].income]) * 0.05 + (HSSAf[a] + HSSIf[E[i].income] + HSSLf[E[i].location] + HSSEf[E[i].education]) * 0.1;
             }
 //            System.out.println("internal ke "+ i + " point = "+E[i].point);
         }
