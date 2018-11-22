@@ -29,7 +29,7 @@ GEM melakukan penelitiannya berdasarkan pada beberapa premis. Pertama, keadaan e
 \end{figure}
 
 
-GEM mempertimbangkan beberapa atribut atau indikator yang mempengaruhi berlangsungnya kegiatan berwirausaha. Atribut-atributnya yaitu Perceived Opportunities, Perceived Capabilities, Entreprenurial Intention dan Fear of Failure Rate \cite{wirausahaGEM}. Penjelasan beberapa indikator akan dijelaskan pada tabel \ref{tabelindikator}
+GEM mempertimbangkan beberapa atribut atau indikator yang mempengaruhi berlangsungnya kegiatan berwirausaha. Atribut-atributnya yaitu Perceived Opportunities, Perceived Capabilities, Entreprenurial Intention dan Fear of Failure Rate \cite{GEM2013}. Penjelasan beberapa indikator akan dijelaskan pada tabel \ref{tabelindikator}
 
 \begin{table}[H]
 \centering
@@ -64,7 +64,7 @@ Know Startup Entrepreneur Rate & persentase dari populasi berusia 18-64 yang ken
 
 
 
-Indikator-indikator menurut GEM yang mempengaruhi perkembangan kewirausahaan di Indonesia yaitu Perceived Capabilities, Role Model, Perceived Opportunity, High Status of Successful dan Fear of Failure. Berikut contoh data usia, pendidikan, pendapatan dan lokasi dari GEM tentang Perceived Capabilities yang diambil pada tahun 2013 \cite{dataGEM}.
+Indikator-indikator menurut GEM yang mempengaruhi perkembangan kewirausahaan di Indonesia yaitu Perceived Capabilities, Role Model, Perceived Opportunity, High Status of Successful dan Fear of Failure. Berikut contoh data usia, pendidikan, pendapatan dan lokasi dari GEM tentang Perceived Capabilities yang diambil pada tahun 2013 \cite{GEM2013}.
 
 
 \begin{figure} [H]
@@ -138,7 +138,7 @@ Seperti dapat dilihat pada gambar \ref{fig:POUmur}, diantara semuanya yang melih
 
 \begin{figure} [H]
 	\centering  
-	\includegraphics[width=14cm, height=6cm]{pendidikanPO2013} 
+	\includegraphics[width=14cm, height=7cm]{pendidikanPO2013} 
 	\caption[Komposisi perceived opportunities untuk tingkat pendidikan yang berbeda]{Komposisi perceived opportunities untuk tingkat pendidikan yang berbeda} 
 	\label{fig:POpendidikan} 
 \end{figure}  
@@ -147,7 +147,7 @@ Gambar \ref{fig:POpendidikan} menjelaskan yang memiliki Perceived Opportunities 
 
 \begin{figure} [H]
 	\centering  
-	\includegraphics[width=13cm, height=8cm]{lokasiPO2013} 
+	\includegraphics[width=13cm, height=9cm]{lokasiPO2013} 
 	\caption[Komposisi Perceived Opportunities untuk wilayah Indonesia]{Komposisi Perceived Opportunities untuk wilayah Indonesia} 
 	\label{fig:lokasiPO} 
 \end{figure}  
@@ -336,9 +336,9 @@ Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada
 
 \section{Entrepreneurial Cellular Automata}
 \label{sec:ECA}
-Entrepreneurial Cellular Automata merupakan pengembangan model dari Cellular Automata yang digunakan untuk mensimulasikan pertumbuhan kewirausahaan di Indonesia. Dalam kasus Entrepreneurial Cellular Automata (ECA), sel akan merepresentasikan wirausahawan dan ketetanggaannya akan merepresentasikan hubungan antar wirausahawan. Setiap wirausahawan mempunyai dua sifat atribut yaitu statis (nilainya tidak berubah) dan dinamis (nilainya dapat berubah). Contoh atribut statis adalah bidang usaha, kategori usaha, lokasi geografis dan jenis kelamin. Contoh atribut dinamis adalah usia, level wirausaha dan usia usaha.  
+\textit{Entrepreneurial Cellular Automata} merupakan pengembangan model dari \textit{Cellular Automata} yang digunakan untuk mensimulasikan pertumbuhan kewirausahaan di Indonesia. Dalam kasus \textit{Entrepreneurial Cellular Automata} (ECA), sel akan merepresentasikan wirausahawan dan ketetanggaannya akan merepresentasikan hubungan antar wirausahawan. Setiap wirausahawan mempunyai dua sifat atribut yaitu statis (nilainya tidak berubah) dan dinamis (nilainya dapat berubah). Contoh atribut statis adalah bidang usaha, kategori usaha, lokasi geografis dan jenis kelamin. Contoh atribut dinamis adalah usia, level wirausaha dan usia usaha.  
 
-Perubahan atribut dinamis dari waktu ke waktu didefinisikan dengan fungsi transisi. Fungsi transisi terdiri dari beberapa aturan. Atribut penting dalam kewirausahaan yaitu level wirausaha karena atribut ini digunakan untuk menentukan perkembangan dari kewirausahaan. Cara menentukan seorang wirausaha akan meneruskan usahanya diketahui dari sebuah angka yang disebut \textit{Continuity Index} (\textit{CIdx}). \textit{CIdx} dari seorang wirausaha tidak hanya dipengaruhi oleh faktor dari dalam tetapi juga dipengaruhi oleh faktor dari luar. Faktor luar dipengaruhi oleh tetangga-tetangganya seperti kebijakan pemerintah, kondisi perekonomian dunia, dsb. Seorang wirausahawan akan meneruskan usahanya jika \textit{CIdx}-nya memenuhi nilai ambang tertentu.
+Perubahan atribut dinamis dari waktu ke waktu didefinisikan dengan fungsi transisi. Fungsi transisi terdiri dari beberapa aturan. Atribut penting dalam kewirausahaan yaitu level wirausaha karena atribut ini digunakan untuk menentukan perkembangan dari kewirausahaan. Cara menentukan seorang wirausaha akan meneruskan usahanya diketahui dari sebuah angka yang disebut \textit{Continuity Index} CIdx. CIdx dari seorang wirausaha tidak hanya dipengaruhi oleh faktor dari dalam tetapi juga dipengaruhi oleh faktor dari luar. Faktor luar dipengaruhi oleh tetangga-tetangganya seperti kebijakan pemerintah, kondisi perekonomian dunia, dsb. Seorang wirausahawan akan meneruskan usahanya jika CIdx-nya memenuhi nilai ambang tertentu.
 
 Atribut dari seorang wirausahawan dapat berubah dari waktu ke waktu, hal ini menyebabkan ketetanggaan juga dapat berubah dari waktu ke waktu. Sebagai contoh, diasumsikan terdapat wirausahawan $e1$ dan $e2$ bertetanggaan pada waktu $t$, jika $e1$ berubah keadaannya pada $t+1$ maka $e1$ dan $e2$ tidak lagi bertetanggaan pada saat $t+1$.
 
@@ -368,46 +368,6 @@ Berdasarkan model kewirausahaan terdapat empat tingkatan wirausaha yaitu \textit
 		\caption[Diagram Transisi Level Wirausaha]{Diagram Transisi Level Wirausaha} 
 		\label{fig:tingkatwirausaha} 
 	\end{figure}
-
-
-Perubahan dari satu level ke level yang lain berdasarkan pada sebuah nilai yang dinamakan Continuity Index, selain usia usaha dan usia individu. Pada tabel \ref{tabelLW} akan dijelaskan mengenai transisi level dengan menggunakan lambang-lambang \textit{CIdx, bl, a ,b} dan \textit{th} untuk menyatakan \textit{Continuity Index, level} , usia individu, usia usaha dan nilai ambang. Nilai ambang ini digunakan sebagai syarat minimal yang harus dipenuhi wirausahawan untuk dapat meneruskan usahanya. Sebagai satu waktu digunakan bulan.
-
-\begin{table}[H]
-\centering
-\caption{Transisi Level Wirausaha}
-\begin{tabular}{|c|c|}
-\hline
-Waktu sekarang & Waktu berikutnya \\
-\hline
-\textit{bl} = potential, $ \textit{CIdx} < \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = potential \\
-\hline
-\textit{bl} = potential, $\textit{CIdx} \geq \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = nascent \\
-\hline
-\textit{bl} = potential, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
-\hline
-\textit{bl} = nascent, $\textit{CIdx} < \textit{th}, \textit{a} <64 \times 12$ & \textit{bl} = potential \\
-\hline
-\textit{bl} = nascent, $\textit{CIdx} \geq \textit{th}, \textit{b} < 3$ & \textit{bl} = nascent \\
-\hline
-\textit{bl} = nascent, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
-\hline
-\textit{bl} = new\_bm, $\textit{CIdx} < \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = potential \\
-\hline
-\textit{bl} = new\_bm, $\textit{CIdx} \geq \textit{th}, \textit{b} < 42$ & \textit{bl} = potential \\
-\hline
-\textit{bl} = new\_bm, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
-\hline
-\textit{bl} = est\_bm, $\textit{CIdx} < \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = potential \\
-\hline
-\textit{bl} = est\_bm, $\textit{CIdx} \geq \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = est\_bm \\
-\hline
-\textit{bl} = est\_bm, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
-\hline
-\textit{bl} = retired, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
-\hline
-\end{tabular}
-\label{tabelLW}
-\end{table}
 
 
 \section{Graf}
