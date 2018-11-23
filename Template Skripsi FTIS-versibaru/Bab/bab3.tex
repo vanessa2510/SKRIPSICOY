@@ -26,6 +26,7 @@ Pada penelitian ini akan menggunakan cellular automata berbasis graf. Hal ini di
 Dalam ECA, sel akan direpresentasikan sebagai satu wirausaha, sedangkan ketetanggaan merepresentasikan hubungan antar wirausaha satu dengan wirausaha lainnya. Hubungan antar wirausaha ada 3 jenis yaitu kurang dari sama dengan, sama dengan dan lebih dari sama dengan.
 
 \subsection{Analisis Perubahan Transisi Wirausaha}
+\label{analisistransisi}
 Perubahan transisi dari individu wirausahawan dapat diketahui melalui angka yang disebut \textit{Continuity Index} (CIdx).
 
 \begin{displaymath}
@@ -33,7 +34,7 @@ Perubahan transisi dari individu wirausahawan dapat diketahui melalui angka yang
 	CIdx_{i}(t) = a.Cint_{i}(t) + b.Cneg_{i}(t) + c.Cpub(t)
 \end{displaymath}
 dimana a,b,c merupakan bilangan riil sedemikian sehingga $0\leq a,b,c \leq 1$ dan $a+b+c=$ 1.0 dan $Cint_{i}(t)$ dan $Cneg_{i}(t)$ melambangkan kondisi internal dan kondisi ketetanggaan dari sebuah individu i pada saat t dan $Cpub(t)$ melambangkan kondisi publik pada saat t nilai dari $CIdx$ dari individu i pada saat t.\\
-Kondisi internal dari wirausaha berisi atribut-atribut sebagai berikut :\\
+Kondisi internal dari wirausaha berisi atribut-atribut sebagai berikut :
 \begin{enumerate}
 	\item Atribut Umum
 		\begin{enumerate}
@@ -72,7 +73,7 @@ Kondisi faktor publik berisi tentang :
 			\item Dinamika Pasar
 		 \end{enumerate}
 		
-Seperti yang sudah dijelaskan bahwa nilai dari \textit{Continuity Index} sangat berpengaruh pada perubahan level wirausaha. Selain nilai \textit{Continuity Index} , umur wirausaha dan usia bisnis juga berpengaruh. Berikut akan dijelaskan lebih lanjut pada tabel \ref{tabelLW}.
+Seperti yang sudah dijelaskan bahwa nilai dari \textit{Continuity Index} sangat berpengaruh pada perubahan level wirausaha. Nilai dari \textit{Continuity Index} akan dievaluasi terlebih dahulu menggunakan tabel transisi wirausaha (\ref{tabelLW}). Pada tabel \ref{tabelLW} akan dijelaskan mengenai transisi level dengan menggunakan lambang-lambang \textit{CIdx, bl, a ,b} dan \textit{th} untuk menyatakan \textit{Continuity Index}, level , usia individu, usia usaha dan nilai ambang.
 \begin{table}[H]
 \centering
 \caption{Transisi Level Wirausaha}
@@ -110,53 +111,14 @@ Waktu sekarang & Waktu berikutnya \\
 \label{tabelLW}
 \end{table}
 
-Seorang wirausahawan akan meneruskan usahanya jika nilai CIdx nya memenuhi nilai ambang tersebut. Jika nilai dari \textit{Continuity Index} sudah sama atau lebih dari nilai ambang, level wirausaha akan berubah. Sebaliknya, jika nilai dari \textit{Continuity Index }kurang dari sama dengan nilai ambang, level wirausaha bisa saja berubah dan bisa saja tidak berubah.
+Dapat disimpulkan bahwa perubahan level wirausaha bukan hanya ditentukan oleh nilai \textit{Continuity Index} melainkan ditentukan juga oleh umur wirausaha dan usia bisnisnya.
+
+% Seorang wirausahawan akan meneruskan usahanya jika nilai CIdx nya memenuhi nilai ambang. Jika nilai dari \textit{Continuity Index} sudah sama atau lebih dari nilai ambang, level wirausaha akan berubah. Sebaliknya, jika nilai dari \textit{Continuity Index }kurang dari sama dengan nilai ambang, level wirausaha bisa saja berubah dan bisa saja tidak berubah.
 
 \section{Analisis Model Pertumbuhan Wirausaha dengan Entrepreneurial Cellular Automata}
 \label{analisismodelCA}
 
-Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index} dan nilai ambang (\textit{threshold}). Seperti yang sudah dijelaskan pada \ref{chap:teori}, \textit{Continuity Index} adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu. (Rumus CIDx : \ref{RumusCIDx}).
-
-
-Nilai dari \textit{Continuity Index} akan dievaluasi terlebih dahulu menggunakan tabel transisi wirausaha (\ref{tabelLW}). Pada tabel \ref{tabelLW} akan dijelaskan mengenai transisi level dengan menggunakan lambang-lambang \textit{CIdx, bl, a ,b} dan \textit{th} untuk menyatakan \textit{Continuity Index}, level , usia individu, usia usaha dan nilai ambang.
-
-
-\begin{table}[H]
-\centering
-\caption{Transisi Level Wirausaha}
-\begin{tabular}{|c|c|}
-\hline
-Waktu sekarang & Waktu berikutnya \\
-\hline
-\textit{bl} = potential, $ \textit{CIdx} < \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = potential \\
-\hline
-\textit{bl} = potential, $\textit{CIdx} \geq \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = nascent \\
-\hline
-\textit{bl} = potential, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
-\hline
-\textit{bl} = nascent, $\textit{CIdx} < \textit{th}, \textit{a} <64 \times 12$ & \textit{bl} = potential \\
-\hline
-\textit{bl} = nascent, $\textit{CIdx} \geq \textit{th}, \textit{b} < 3$ & \textit{bl} = nascent \\
-\hline
-\textit{bl} = nascent, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
-\hline
-\textit{bl} = new\_bm, $\textit{CIdx} < \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = potential \\
-\hline
-\textit{bl} = new\_bm, $\textit{CIdx} \geq \textit{th}, \textit{b} < 42$ & \textit{bl} = potential \\
-\hline
-\textit{bl} = new\_bm, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
-\hline
-\textit{bl} = est\_bm, $\textit{CIdx} < \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = potential \\
-\hline
-\textit{bl} = est\_bm, $\textit{CIdx} \geq \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = est\_bm \\
-\hline
-\textit{bl} = est\_bm, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
-\hline
-\textit{bl} = retired, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
-\hline
-\end{tabular}
-\label{tabelLW}
-\end{table}
+Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index}, nilai ambang (\textit{threshold}), umur dan usia bisnis. Seperti yang sudah dijelaskan pada \ref{chap:teori}, \textit{Continuity Index} adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu. (Rumus CIDx : \ref{RumusCIDx}).
 
 
 Untuk mempermudah pemahaman mengenai \textit{Continuity Index}, akan diberikan contoh simulasi dari data tidak real, yaitu terdapat nilai a = 0.5, b = 0.4 dan c = 0.1, nilai ambangnya 15, serta periodenya dalam waktu 5 bulan. Nilai dari atribut kondisi internal wirausaha diambil dari Nawangpalupi\cite{GEM2013}. Nilai dari faktor psikologis diasumsikan Perceived Opportunities bernilai 0.2, Perceived Capabilities bernilai 0.25, High Status of Successful bernilai 0.1, Public Media Attention bernilai 0.05, Role Model bernilai 0.3 dan Fear of Failure bernilai 0.1. Diasumsikan terdapat tiga wirausahawan dan berikut data dari masing-masing wirausaha :
@@ -481,7 +443,7 @@ Pada bagian ini akan diberikan diagram kelas ECA beserta penjelasannya.
 	Kelas EGM merupakan kelas untuk menjalankan perhitungan CIDx, CIDx merupakan angka yang mengindikasikan kemungkinan seorang wirausahawan untuk meneruskan usahanya. Perhitungan CIDx ini menggunakan data dari GEM 2013.
 	
 \subsection{Kelas CA} 
-Kelas CA merupakan kelas yang merepresentasikan cellular automata.
+Kelas CA merupakan kelas yang merepresentasikan \textit{cellular automata}.
 		\begin{enumerate}
 			\item 
 		\end{enumerate}
