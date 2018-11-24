@@ -2,7 +2,7 @@
 \label{chap:analisis}
 
 
-Pada bab ini akan dilakukan analisis mengenai pembuatan simulator pertumbuhan wirausaha dengan \textit{Entrepreneurial Cellular Automata}. Pembahasan akan dimulai dari analisa pertumbuhan wirausaha di Indonesia yang menjadi pokok permasalahan. Lalu dari analisis ini akan dilanjutkan dengan analisis kebutuhan perangkat lunak agar mampu memodelkan pertumbuhan wirausaha di Indonesia.
+Pada bab ini akan dilakukan analisis mengenai pembangunan simulator pertumbuhan wirausaha dengan \textit{Entrepreneurial Cellular Automata}. Pembahasan akan dimulai dari analisa pertumbuhan wirausaha di Indonesia yang menjadi pokok permasalahan. Lalu dari analisis ini akan dilanjutkan dengan analisis kebutuhan perangkat lunak agar mampu memodelkan pertumbuhan wirausaha di Indonesia.
 
 \section{Analisis Pertumbuhan Wirausaha}
 \label{sec:analisisPertumbuhanWirausaha}
@@ -25,8 +25,7 @@ Dalam pertumbuhan wirausaha tentu ada beberapa faktor yang mempengaruhi keberlan
 Pada penelitian ini akan menggunakan cellular automata berbasis graf. Hal ini dikarenakan jumlah wirausaha di Indonesia yang tidak sedikit, sebab jika menggunakan cellular automata satu atau dua dimensi jumlahnya terbatas.\\
 Dalam ECA, sel akan direpresentasikan sebagai satu wirausaha, sedangkan ketetanggaan merepresentasikan hubungan antar wirausaha satu dengan wirausaha lainnya. Hubungan antar wirausaha ada 3 jenis yaitu kurang dari sama dengan, sama dengan dan lebih dari sama dengan.
 
-\subsection{Analisis Perubahan Transisi Wirausaha}
-\label{analisistransisi}
+
 Perubahan transisi dari individu wirausahawan dapat diketahui melalui angka yang disebut \textit{Continuity Index} (CIdx).
 
 \begin{displaymath}
@@ -56,7 +55,7 @@ Kondisi internal dari wirausaha berisi atribut-atribut sebagai berikut :
 		 \end{enumerate}
 		\end{enumerate}
 		
-Kondisi ketetanggaan wirausaha berisi tentang hasil relasi  wirausaha dengan wirausaha lainnya. Relasinya yaitu lebih dari sama dengan, kurang dari sama dengan dan sama dengan.\\
+Kondisi ketetanggaan wirausaha berisi tentang hasil relasi  wirausaha dengan wirausaha lainnya. Relasinya yaitu lebih dari sama dengan, kurang dari sama dengan dan sama dengan. Relasi antar wirausaha berdasarkan pada atribut umum dari wirausahawan yaitu umur, level wirausaha, pendapatan dan pendidikan.\\ Contoh relasi kurang dari sama dengan adalah wirausaha A mempunyai umur 24 tahun, sedangkan wirausaha B mempunyai umur 30 tahun. Artinya yaitu wirausaha A mempunyai relasi umur kurang dari sama dengan wirausaha B, hal ini dikarenakan umur wirausaha A kurang dari umur wirausaha B. Contoh relasi sama dengan adalah wirausaha A mempunyai level wirausaha \textit{nascent}, sedangkan wirausaha B mempunyai level wirausaha \textit{nascent}. Artinya wirausaha A memiliki relasi level sama dengan wirausaha B, hal ini dikarenakan mereka berada pada kedudukan level wirausaha yang sama. Contoh relasi lebih dari sama dengan adalah wirausaha A berada pada tingkat pendidikan SMP, sedangkan wirausaha B berada pada tingkat pendidikan SMA. Artinya wirausaha B memiliki relasi pendidikan lebih besar sama dengan wirausaha A, hal ini dikarenakan wirausaha B memiliki tingkat pendidikan lebih besar atau lebih tinggi dibandingkan wirausaha A.\\
 Kondisi faktor publik berisi tentang :
 \begin{enumerate}
 			\item Keuangan terkait dengan kewirausahaan
@@ -121,7 +120,7 @@ Dapat disimpulkan bahwa perubahan level wirausaha bukan hanya ditentukan oleh ni
 Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index}, nilai ambang (\textit{threshold}), umur dan usia bisnis. Seperti yang sudah dijelaskan pada \ref{chap:teori}, \textit{Continuity Index} adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu. (Rumus CIDx : \ref{RumusCIDx}).
 
 
-Untuk mempermudah pemahaman mengenai \textit{Continuity Index}, akan diberikan contoh simulasi dari data tidak real, yaitu terdapat nilai a = 0.5, b = 0.4 dan c = 0.1, nilai ambangnya 15, serta periodenya dalam waktu 5 bulan. Nilai dari atribut kondisi internal wirausaha diambil dari Nawangpalupi\cite{GEM2013}. Nilai dari faktor psikologis diasumsikan Perceived Opportunities bernilai 0.2, Perceived Capabilities bernilai 0.25, High Status of Successful bernilai 0.1, Public Media Attention bernilai 0.05, Role Model bernilai 0.3 dan Fear of Failure bernilai 0.1. Diasumsikan terdapat tiga wirausahawan dan berikut data dari masing-masing wirausaha :
+Untuk mempermudah pemahaman mengenai \textit{Continuity Index}, akan diberikan contoh simulasi dari data tidak real, yaitu terdapat nilai a = 0.5, b = 0.4 dan c = 0.1, nilai ambangnya 15, serta periodenya dalam waktu 5 bulan. Nilai dari faktor psikologis diasumsikan Perceived Opportunities bernilai 0.2, Perceived Capabilities bernilai 0.25, High Status of Successful bernilai 0.1, Public Media Attention bernilai 0.05, Role Model bernilai 0.3 dan Fear of Failure bernilai 0.1. Diasumsikan terdapat tiga wirausahawan dan berikut data dari masing-masing wirausaha :
 				
 \begin{table} [H]
 \centering
@@ -321,7 +320,7 @@ Jadi hasil dari simulasi ini adalah pada bulan pertama wirausaha 1 berada pada l
 \label{dpl}
 
 Dalam skripsi ini penulis merancang sebuah simulator dari Entrepreneurial Cellular Automata (ECA) yang sebelumnya telah dikembangkan oleh Cecilia Esti Nugraheni dan Vania Natali \cite{ECA}. Simulator ini dinamakan Simulator Pertumbuhan Wirausaha Berbasis Cellular Automata.\\
-Perangkat lunak ini dibuat untuk memberi gambaran kepada pemerintah atau lembaga umum mengenai pergerakkan wirausaha dalam waktu tertentu. Masukan dari simulator ECA ini yaitu berupa parameter-parameter simulasi yang terdiri dari bobot atribut, relasi antar wirausaha dan nilai a,b,c, \textit{threshold} dan periode. Proses yang dijalankan yaitu pada perhitungan \textit{Continuity Index} yang perhitungannya terbagi menjadi 3 tahap yaitu perhitungan pada faktor internal, perhitungan pada faktor ketetanggaan dan perhitungan pada faktor publik. Hasil keluaran dari simulator ini yaitu berupa jumlah wirausaha pada level tertentu yang ditampilkan per bulan.
+Perangkat lunak ini dibuat untuk memberi gambaran kepada pemerintah atau lembaga umum mengenai pergerakkan wirausaha dalam waktu tertentu. Masukan dari simulator ECA ini yaitu berupa parameter-parameter simulasi yang terdiri dari bobot atribut, relasi antar wirausaha dan nilai a,b,c, \textit{threshold} dan periode. Proses yang dijalankan yaitu pada perhitungan \textit{Continuity Index} yang perhitungannya terbagi menjadi 3 tahap yaitu perhitungan pada faktor internal, perhitungan pada faktor ketetanggaan dan perhitungan pada faktor publik. Hasil keluaran dari simulator ini terdiri dari dua keluaran yaitu keluaran yang ditampilkan pada layar yang berupa jumlah wirausaha pada level tertentu yang ditampilkan per bulan, hasil keluaran kedua yaitu berupa perubahan setiap individu wirausaha dalam setiap bulannya pada \textit{file} CSV yang dapat dibuka pada Microsoft Excel.
 
 
 \section{Analisis Perangkat Lunak}
@@ -333,7 +332,7 @@ Pada diagram \textit{use case} hanya terdapat satu aktor yaitu pemerintah sebaga
 
 	\begin{figure} [H]
 		\centering  
-		\includegraphics[width=14cm, height=12cm]{UseCase2} 
+		\includegraphics[width=14cm, height=14cm]{UseCase2} 
 		\caption[Use Case ECA]{Use Case ECA} 
 		\label{fig:usecase} 
 	\end{figure}

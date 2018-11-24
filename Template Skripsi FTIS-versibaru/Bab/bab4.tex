@@ -39,7 +39,7 @@ Kelas ini merupakan kelas untuk menampilkan atribut yang sudah dipilih dari kela
 Kelas ini merupakan kelas untuk menampilkan faktor eksternal yang mempengaruhi pertumbuhan wirausaha. Dalam kasus ini ditetapkan 4 faktor saja yaitu program pemerintah, dinamika pasar, norma,sosial dan budaya, serta infrastruktur fisik dan akses layanan. \textit{User} diminta untuk mengisi bobot untuk setiap faktor dan total dari semua bobot harus 100\%.
 
 \subsection{Kelas DataWirausaha}
-Kelas ini merupakan kelas untuk membuka file data wirausaha yang akan disimulasikan, lalu menampilkannya ke tabel. Isi datanya berupa :
+Kelas ini merupakan kelas untuk membuka \textit{file} data wirausaha yang akan disimulasikan, lalu menampilkannya ke tabel. Isi datanya berupa :
 \begin{enumerate}
 	\item Jenis Kelamin
 	\item Umur
@@ -54,13 +54,13 @@ Kelas ini merupakan kelas untuk membuka file data wirausaha yang akan disimulasi
 \end{enumerate}
 
 \subsection{Kelas TampilanSimulasi}
-Kelas ini berfungsi untuk mengisi nilai a, b, c, threshold dan periode. Nilai a,b,c dan threshold bertipe double, sedangkan periode bertipe integer. Periode ini dihitung dalam bulan. Kelas ini juga untuk menghitung Continuity Index yang hasil iterasinya akan dikirim ke kelas TampilanHasil dalam bentuk tabel. Selain itu, kelas ini juga akan menampilkan hasil perubahan setiap individu wirausaha dalam setiap bulannya pada file CSV.
+Kelas ini berfungsi untuk mengisi nilai a, b, c, \textit{threshold} dan periode. Nilai a,b,c dan \textit{threshold} bertipe double, sedangkan periode bertipe integer. Periode ini dihitung dalam bulan. Kelas ini juga untuk menghitung \textit{Continuity Index} yang hasil iterasinya akan dikirim ke kelas TampilanHasil dalam bentuk tabel. Selain itu, kelas ini juga akan menampilkan hasil perubahan setiap individu wirausaha dalam setiap bulannya pada \textit{file} CSV.
 
 \subsection{Kelas TampilanHasil}
-Kelas ini berfungsi untuk menampilkan iterasi (per bulan) banyaknya wirausaha yang berada pada level tertentu dalam bentuk tabel.
+Kelas ini berfungsi untuk menampilkan iterasi (per bulan) banyaknya wirausaha yang berada pada level tertentu dalam bentuk tabel. Untuk hasil keluaran yang dikeluarkan pada \textit{file} CSV dapat dibuka pada Microsoft Excel.
 
 \subsection{Kelas InputDataHandler}
-Kelas ini merupakan kelas untuk mengambil dan menyimpan data masukan dari \textit{user} yang nantinya akan dipakai untuk menghitung Continuity Index.
+Kelas ini merupakan kelas untuk mengambil dan menyimpan data masukan dari \textit{user} yang nantinya akan dipakai untuk menghitung \textit{Continuity Index}.
 Berikut penjelasan method-method yang ada di kelas InputDataHandler :
 	\begin{itemize}
 		\item \texttt{public static void inputDataInternal(String key, String value)}\\
@@ -194,7 +194,7 @@ Pada tampilan kondisi eksternal terdapat 12 faktor publik berdasarkan GEM 2013. 
 
 \begin{figure} [H]
 	\centering  
-	\includegraphics[width=15cm, height=12cm]{mockup4} 
+	\includegraphics[width=16cm, height=12cm]{mockup4} 
 	\label{fig:kondisiDataWirausaha} 
 \end{figure}
 
@@ -202,23 +202,23 @@ Pada tampilan kondisi eksternal terdapat 12 faktor publik berdasarkan GEM 2013. 
 
 \begin{figure} [H]
 	\centering  
-	\includegraphics[width=11cm, height=7cm]{mockup5} 
+	\includegraphics[width=12cm, height=7cm]{mockup5} 
 	\label{fig:simulasi} 
 \end{figure}
 
-Pada tampilan simulasi, \textit{user} diminta untuk mengisi nilai a,b,c, threshold dan periode. Total dari nilai a,b dan c harus 1. Periode merupakan berapa lama iterasi tersebut akan berjalan (dalam bulan). Sedangkan \textit{button} "SIMULATE" berfungsi untuk menjalankan simulasi yang hasilnya akan ditampilkan dalam bentuk tabel.
+Pada tampilan simulasi, \textit{user} diminta untuk mengisi nilai a,b,c, \textit{threshold} dan periode. Total dari nilai a,b dan c harus 1. Periode merupakan berapa lama iterasi tersebut akan berjalan (dalam bulan). Sedangkan \textit{button} "SIMULATE" berfungsi untuk menjalankan simulasi yang hasilnya akan ditampilkan dalam bentuk tabel.
 
 \subsection{TampilanHasil}
 
 Pada tampilan hasil, akan ditampilkan hasil simulasi berupa tabel, yang masing-masing kolomnya berisi iterasi (bulan), jumlah wirausaha pada level \textit{potential}, jumlah wirausaha pada level \textit{nascent}, jumlah wirausaha pada level \textit{new\_bm}, jumlah wirausaha pada level \textit{est\_bm}, jumlah wirausaha pada level \textit{retired}.
 \begin{figure} [H]
 	\centering  
-	\includegraphics[width=12cm, height=10cm]{mockup6} 
+	\includegraphics[width=13cm, height=11cm]{mockup6} 
 	\label{fig:tampilanHasil} 
 \end{figure}
 
 \section{Rancangan File Input}
-Perancangan file input yang akan disimulasikan terdiri dari jenis kelamin, umur, kategori usaha, sub kategori usaha, pendidikan, lokasi, pendapatan, level wirausaha dan point untuk setiap barisnya.
+Perancangan \textit{file} input yang akan disimulasikan terdiri dari jenis kelamin, umur, kategori usaha, sub kategori usaha, pendidikan, lokasi, pendapatan, level wirausaha dan point untuk setiap barisnya.
 Tipe dari masing-masing atribut yaitu :
 \begin{enumerate}
 	\item Jenis kelamin bertipe boolean.

@@ -31,8 +31,8 @@
 % Isilah dengan 0 atau 1 (e.g. \daftarIsiError{1}). 
 % Pemilihan 0 atau 1 silahkan disesuaikan dengan hasil PDF yang dihasilkan.
 %=============================================================================
-%\daftarIsiError{0}   
-\daftarIsiError{1}   
+\daftarIsiError{0}   
+%\daftarIsiError{1}   
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -75,7 +75,7 @@
 %=============================================================================
 %\mode{bimbingan} 		% untuk keperluan bimbingan
 %\mode{sidang} 			% untuk sidang 1
-%\mode{sidangakhir} 	% untuk sidang 2 / sidang pada Skripsi 2(IF)
+\mode{sidangakhir} 	% untuk sidang 2 / sidang pada Skripsi 2(IF)
 %\mode{final} 			% untuk mencetak buku skripsi 
 %=============================================================================
 
@@ -195,7 +195,7 @@
 % !!Lihat singkatan pembimbing dan penguji anda di file dosen.tex!!
 % Petunjuk: hilangkan tanda << & >>, dan isi sesuai dengan data anda
 %=============================================================================
-\namanpm{<<Nama Lengkap>>}{<<10 digit NPM UNPAR>>}
+\namanpm{Vanessa Sukamto}{2014730010}
 \tanggal{<<tanggal>>}{<<bulan>>}{<<tahun>>}
 \pembimbing{<<pembimbing utama/1>>}{<<pembimbing pendamping/2>>}    
 \penguji{<<penguji 1>>}{<<penguji 2>>} 
@@ -214,8 +214,8 @@
 % - gunakan \texorpdfstring{\\}{} untuk pindah ke baris baru
 % - judul TIDAK ditulis dengan menggunakan huruf besar seluruhnya !!
 %=============================================================================
-\judulINA{<<Judul Bahasa Indonesia>>}
-\judulENG{<<Judul Bahasa Inggris>>}
+\judulINA{Simulator Pertumbuhan Wirausaha Berbasis Cellular Automata}
+\judulENG{Simulator of Entrepreneurial Growth Based on Cellular Automata}
 %_____________________________________________________________________________
 %=============================================================================
 % 								BAGIAN X
@@ -227,8 +227,26 @@
 % - hilangkan tanda << & >>, dan isi sesuai dengan data anda
 % - langsung mulai setelah '{' awal, jangan mulai menulis di baris bawahnya
 %=============================================================================
-\abstrakINA{<<Tuliskan abstrak anda di sini, dalam bahasa Indonesia>>}
-\abstrakENG{<<Tuliskan abstrak anda di sini, dalam bahasa Inggris>>} 
+\abstrakINA{Kewirausahaan sangat diperlukan guna mendorong pertumbuhan ekonomi suatu negara. Idealnya besar populasi wirausaha adalah 2\% dari total penduduk suatu negara. Akan tetapi kewirausahaan di Indonesia belum mencapai angka 2\%, oleh karena itu kewirausahaan di Indonesia harus terus menerus dipantau pertumbuhannya. Penelitian ini bertujuan untuk membantu pemerintah dalam memantau pertumbuhan wirausaha dengan cara membangun simulator berbasis ECA.\\
+	ECA (\textit{Entrepreneurial Cellular Automata}) merupakan pengembangan dari \textit{Cellular Automata} standar yang diusulkan oleh Ulam dan von Neumann. Pengembangan model dari ECA ini yaitu pada sel, ketetanggaan, fungsi transisi state dan fungsi transformasi. ECA ini diusulkan oleh Nugraheni dan Natali \cite{ECA}. ECA dikembangkan dengan mengacu pada model kewirausahaan dari Global Entrepreneurship Monitor (GEM).\\
+	Untuk fungsi transisi pada wirausaha dapat dilihat dari nilai \textit{Continuity Index}. \textit{Continuity Index} adalah indikator untuk menunjukkan kemungkinan seorang wirausaha akan meneruskan usahanya. Berikut rumus CIDx :\\
+	\begin{displaymath}
+\label{RumusCIDx}
+	CIdx_{i}(t) = a.Cint_{i}(t) + b.Cneg_{i}(t) + c.Cpub(t)
+\end{displaymath}
+dimana a,b,c merupakan bilangan riil sedemikian sehingga $0\leq a,b,c \leq 1$ dan $a+b+c=$ 1.0. $Cint_{i}(t)$ dan $Cneg_{i}(t)$ melambangkan kondisi internal dan kondisi ketetanggaan dari sebuah individu i pada saat t dan $Cpub(t)$ melambangkan kondisi publik pada saat t nilai dari $CIdx$ dari individu i pada saat t.\\
+Simulator ini diimplementasikan dalam sebuah komputer. Pengujian simulator dilakukan dengan pengujian fungsional, pengujian pembacaan parameter, pengujian \textit{file} masukan dan pengujian hasil dari simulasi. Hasil dari pengujian tersebut, simulator ini dapat berjalan dengan baik dan sesuai dengan yang diharapkan.}
+
+\abstrakENG{Entrepreneurship is needed to encourage economic growth of a country. Ideally the large of entrepreneur population is 2\% from the total population of a country. Unfortunately, entrepreneurship in Indonesia hasn't reach 2\%, so entrepreneurship in Indonesia must be monitored continuously. This study aims to help the government to monitor entrepreneurial growth by building a simulator based on ECA.\\
+		ECA (\textit{Entrepreneurial Cellular Automata}) is a development of the standard \textit{Cellular Automata} proposed by Ulam and von Neumann. This development lies on cells, neighborhood, the function of state transition and the function of transformation. This ECA proposed by Nugraheni and Natali. ECA is developed by referring to the entrepreneurial model from Global Entrepreneurship Monitor (GEM).\\
+		For the function of transition in entrepreneur can be seen from the value of \textit{Continuity Index}. \textit{Continuity Index} is an indicator to indicate the possibility of an entrepreneur will continue her/his business.\\
+		CIDx formula :
+		\begin{displaymath}
+\label{RumusCIDx}
+	CIdx_{i}(t) = a.Cint_{i}(t) + b.Cneg_{i}(t) + c.Cpub(t)
+\end{displaymath}
+ a,b,c are real numbers through $0 \leq a,b,c \leq 1 $ and $ a+b+c = $1.0. $Cint_{i}(t)$ and $Cneg_{i}(t)$ represents the internal condition and the neighborhood conditions of the individual when t and $Cpub(t)$ represents the public condition when the value of $CIdx$ from the individual i at t. \\
+This simulator is implemented in a computer. Simulator testing is done with functional testing, parameter reading testing, file input testing and the result of the simulation testing. The result of these tests, the simulator can run well and as expected.} 
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -240,8 +258,8 @@
 % - kunciENG: keywords in english
 % Petunjuk: hilangkan tanda << & >>, dan isi sesuai dengan data anda.
 %=============================================================================
-\kunciINA{<<Tuliskan di sini kata-kata kunci yang anda gunakan, dalam bahasa Indonesia>>}
-\kunciENG{<<Tuliskan di sini kata-kata kunci yang anda gunakan, dalam bahasa Inggris>>}
+\kunciINA{Kata-kata kunci: Entrepreneurial Cellular Automata, Cellular Automata, GEM, Pertumbuhan Wirausaha}
+\kunciENG{Keywords: Entrepreneurial Cellular Automata, Cellular Automata, The Growth of Entrepreneurship, GEM}
 %=============================================================================
 
 %_____________________________________________________________________________
