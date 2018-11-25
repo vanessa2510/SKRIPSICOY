@@ -4,7 +4,7 @@
 
 
  
-Pada bab ini akan dibahas mengenai dasar teori yang digunakan pada penyusunan tugas akhir. Pembahasan pertama mencakup hal-hal yang berkaitan dengan pengertian kewirausahaan dari umum sampai khusus yaitu kewirausahaan menurut GEM. Pembahasan kedua yaitu tentang teori dan aplikasi dari CA (Cellular Automata) khususnya tentang ECA (Entrepreneurial Cellular Automata). Pembahasan terakhir tentang hal-hal lain yang mendukung implementasi perangkat lunak seperti bahasa pemrograman java.
+Pada bab ini akan dibahas mengenai landasan teori yang digunakan pada penyusunan tugas akhir. Pembahasan pertama mencakup hal-hal yang berkaitan dengan pengertian kewirausahaan dari umum sampai khusus yaitu kewirausahaan menurut GEM. Pembahasan kedua yaitu tentang teori dan aplikasi dari CA (Cellular Automata) khususnya tentang ECA (Entrepreneurial Cellular Automata). Pembahasan terakhir tentang graf.
 
 
 \section{Arti Kewirausahaan}
@@ -21,7 +21,7 @@ GEM (Global Entrepreneurship Monitor) merupakan lembaga yang memantau dan menguk
 
 GEM melakukan penelitiannya berdasarkan pada beberapa premis. Pertama, keadaan ekonomi suatu negara. Jika keadaan ekonomi suatu negara sedang sulit itu artinya dengan adanya wirausaha dapat membantu memperluas lapangan pekerjaan (memotivasi orang untuk menjadi seorang wirausaha juga lebih meningkat), sedangkan jika keadaan ekonomi suatu negara sudah baik keberadaan wirausaha tidak terlalu dibutuhkan (memotivasi orang untuk menjadi seorang wirausaha sudah kurang menarik). Kedua, kemampuan dan motivasi individu untuk memulai sebuah usaha dan pandangan masyarakat tentang wirausaha. Ketiga, pertumbuhan tinggi kewirausahaan dan persaingan antar negara tentang seberapa inovatif usaha tersebut. \cite{GEM2013}
 
-Kewirausahaan menurut GEM merupakan sebuah proses yang memiliki tahapan-tahapan yang berbeda (Gambar \ref{fig:fasewirausaha}). Tahapan-tahapannya antara lain adalah dimulai dari niat mendirikan usaha, menjalankan usaha dan yang terakhir adalah berhentinya usaha yang dibuat. Tahapan pertama yaitu wirausaha \textit{nascent}. Wirausaha \textit{nascent} ini merupakan tahapan dimana seseorang memulai usahanya yang waktunya kurang dari tiga bulan. Tahapan kedua yaitu wirausaha yang sedang menjalankan usahanya dan sudah bisa menggaji orang lain, waktunya lebih dari tiga bulan tetapi kurang dari tiga tahun.
+Kewirausahaan menurut GEM merupakan sebuah proses yang memiliki tahapan-tahapan yang berbeda (Gambar \ref{fig:fasewirausaha}). Tahapan-tahapannya antara lain adalah dimulai dari niat mendirikan usaha, menjalankan usaha dan yang terakhir adalah berhentinya usaha yang dibuat. Tahapan pertama yaitu wirausaha \textit{potential}. Wirausaha \textit{potential} merupakan individu yang berpotensi untuk menjadi wirausaha, mereka percaya bahwa mereka memiliki kemampuan untuk memulai usaha, individu yang melihat kesempatan untuk berwirausaha, dan individu yang tidak takut gagal dalam memulai suatu usaha. Tahapan kedua yaitu wirausaha \textit{nascent}. Wirausaha \textit{nascent} ini merupakan tahapan dimana seseorang memulai usahanya dalam waktu kurang dari tiga bulan. Tahapan ketiga yaitu wirausaha \textit{new business owner}. Wirausaha \textit{new business owner} merupakan wirausaha \textit{nascent} yang usia bisnisnya sudah lebih dari 3 bulan tetapi kurang dari tiga tahun.
 
 \begin{figure} [H]
 	\centering  
@@ -30,9 +30,9 @@ Kewirausahaan menurut GEM merupakan sebuah proses yang memiliki tahapan-tahapan 
 	\label{fig:fasewirausaha} 
 \end{figure}
 
-Wirausaha \textit{nascent} dan wirausaha yang sedang menjalankan usahanya masuk ke dalam TEA (Total Early-Stage Entrepreneurial Activity). TEA merupakan persentase populasi antara usia 18 sampai 64 tahun yang berada pada tahap memulai usaha maupun pemilik bisnis yang waktunya kurang dari 42 bulan \cite{GEM2017}. Tahapan terakhir adalah wirausaha \textit{established} yaitu seseorang yang sudah menjalankan usahanya lebih dari tiga tahun dan tentunya sudah bisa menggaji orang.\cite{GEM2013}
+Wirausaha \textit{nascent} dan wirausaha \textit{new business owner} masuk ke dalam TEA (Total Early-Stage Entrepreneurial Activity). TEA merupakan persentase populasi antara usia 18 sampai 64 tahun yang berada pada tahap memulai usaha maupun pemilik bisnis yang waktunya kurang dari 42 bulan \cite{GEM2017}. Tahapan terakhir adalah wirausaha \textit{established} yaitu seseorang yang sudah menjalankan usahanya lebih dari tiga tahun dan tentunya sudah bisa menggaji orang.\cite{GEM2013}
 
-Di setiap fase terdapat kemungkinan seorang wirausaha berhenti menjalankan usahanya. Berbagai faktor dapat mempengaruhi keberlangsungan wirausaha ini, diantaranya yaitu kondisi sosio-demografi, sektor industri, pertumbuhan wirausaha, inovasi,dll. Terdapat dua tipe atribut internal yang dimiliki setiap wirausahawan. Tipe pertama yaitu atribut umum seperti umur, pendapatan, pendidikan, bidang usaha, dll. Tipe kedua yaitu atribut individual dari GEM yang digunakan sebagai indikator kewirausahaan \cite{ECA}. Penjelasan beberapa indikator akan dijelaskan pada tabel \ref{tabelIndikator1}, tabel \ref{tabelindikator2} dan tabel \ref{tabelindikator3}
+Di setiap fase terdapat kemungkinan seorang wirausaha berhenti menjalankan usahanya. Berbagai faktor dapat mempengaruhi keberlangsungan wirausaha ini, diantaranya yaitu kondisi sosio-demografi, sektor industri, pertumbuhan wirausaha, inovasi,dll. Terdapat dua tipe atribut internal yang dimiliki setiap wirausahawan. Tipe pertama yaitu atribut umum seperti umur, pendapatan, pendidikan, bidang usaha, dll. Tipe kedua yaitu atribut individual dari GEM yang digunakan sebagai indikator kewirausahaan \cite{ECA}. Penjelasan beberapa indikator akan dijelaskan pada tabel \ref{tabelindikator2} dan tabel \ref{tabelindikator3}
 
 
 \begin{table}[H]
@@ -45,15 +45,6 @@ Indikator & Deskripsi\\
 New Product Early-stage Entrepreneurial (TEA) Activity & persentase dari TEA yang mengindikasikan bahwa produk atau jasa mereka masih baru\\
 \hline
 Growth Expectation Early-stage Entrepreneurial Activity : Relative Prevalence & persentase dari TEA yang berharap untuk meperkerjakan paling sedikit lima karyawan dalam waktu lima tahun kedepan\\
-\hline
-\end{tabular}
-\label{tabelIndikator1}
-\end{table}
-
-\begin{table}[H]
-\centering
-\caption{Lanjutan Indikator Kewiausahaan}
-\begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
 Informal Investors Rate & persentase dari populasi berusia 18-64 yang telah menyediakan dana untuk sebuah usaha baru, didirikan oleh orang lain, dalam waktu 3 tahun terakhir.\\
 \hline
@@ -397,7 +388,7 @@ Cellular Automata (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada
 \label{sec:ECA}
 \textit{Entrepreneurial Cellular Automata} merupakan pengembangan model dari \textit{Cellular Automata} yang digunakan untuk mensimulasikan pertumbuhan kewirausahaan di Indonesia. Dalam kasus \textit{Entrepreneurial Cellular Automata} (ECA), sel akan merepresentasikan wirausahawan dan ketetanggaannya akan merepresentasikan hubungan antar wirausahawan. Setiap wirausahawan mempunyai dua sifat atribut yaitu statis (nilainya tidak berubah) dan dinamis (nilainya dapat berubah). Contoh atribut statis adalah bidang usaha, kategori usaha, lokasi geografis dan jenis kelamin. Contoh atribut dinamis adalah usia, level wirausaha dan usia usaha.  
 
-Perubahan atribut dinamis dari waktu ke waktu didefinisikan dengan fungsi transisi. Fungsi transisi terdiri dari beberapa aturan. Atribut penting dalam kewirausahaan yaitu level wirausaha karena atribut ini digunakan untuk menentukan perkembangan dari kewirausahaan. Cara menentukan seorang wirausaha akan meneruskan usahanya diketahui dari sebuah angka yang disebut \textit{Continuity Index} CIdx. CIdx dari seorang wirausaha tidak hanya dipengaruhi oleh faktor dari dalam tetapi juga dipengaruhi oleh faktor dari luar. Faktor luar dipengaruhi oleh tetangga-tetangganya seperti kebijakan pemerintah, kondisi perekonomian dunia, dsb. Seorang wirausahawan akan meneruskan usahanya jika CIdx-nya memenuhi nilai ambang tertentu.
+Perubahan atribut dinamis dari waktu ke waktu didefinisikan dengan fungsi transisi. Fungsi transisi terdiri dari beberapa aturan. Atribut penting dalam kewirausahaan yaitu level wirausaha karena atribut ini digunakan untuk menentukan perkembangan dari kewirausahaan. Cara menentukan seorang wirausaha akan meneruskan usahanya diketahui dari sebuah angka yang disebut \textit{Continuity Index} (CIdx). CIdx dari seorang wirausaha tidak hanya dipengaruhi oleh faktor dari dalam tetapi juga dipengaruhi oleh faktor dari luar. Faktor luar dipengaruhi oleh tetangganya dan faktor publik seperti kebijakan pemerintah, kondisi perekonomian dunia, dsb. Seorang wirausahawan akan meneruskan usahanya jika CIdx-nya memenuhi nilai ambang tertentu.
 
 Atribut dari seorang wirausahawan dapat berubah dari waktu ke waktu, hal ini menyebabkan ketetanggaan juga dapat berubah dari waktu ke waktu. Sebagai contoh, diasumsikan terdapat wirausahawan $e1$ dan $e2$ bertetanggaan pada waktu $t$, jika $e1$ berubah keadaannya pada $t+1$ maka $e1$ dan $e2$ tidak lagi bertetanggaan pada saat $t+1$.
 

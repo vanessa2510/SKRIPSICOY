@@ -1,7 +1,7 @@
 \chapter{Perancangan}
 \label{chap:perancangan}
 
-Pada bab ini akan dijelaskan perancangan mengenai simulator yang akan dibangun untuk pertumbuhan wirausaha. Perancangan yang dibuat akan meliputi diagram kelas beserta penjelasannya dan rancangan antarmuka dari perangkat lunak.
+Pada bab ini akan dijelaskan perancangan mengenai simulator yang akan dibangun untuk pertumbuhan wirausaha. Perancangan yang dibuat akan meliputi diagram kelas beserta penjelasannya, rancangan antarmuka dari perangkat lunak, serta rancangan \textit{file} input.
 
 
 \section{Diagram Kelas}
@@ -36,7 +36,7 @@ Kelas ini merupakan kelas untuk menampilkan seluruh atribut umum dari seorang wi
 Kelas ini merupakan kelas untuk menampilkan atribut yang sudah dipilih dari kelas TampilanKondisiInternal. \textit{User} dapat memilih atribut mana saja yang akan ditetapkan menjadi kondisi ketetanggaan untuk satu wirausaha ke wirausaha lainnya. Selain itu, \textit{user} diminta untuk mengisi hubungan ketetanggaan khusus untuk 4 atribut yaitu umur, level, pendapatan dan pendidikan jika \textit{user} men-checklist salah satu atau bahkan keempat-empatnya dari atribut tersebut. Untuk atribut jenis kelamin, lokasi usaha dan bidang usaha tidak dapat ditetapkan menjadi 3 jenis karena jenisnya hanya satu yaitu sama dengan. Alasan ketiga atribut tersebut tidak bisa ditetapkan menjadi 3 jenis karena ketiga atribut tersebut tidak bisa diurutkan atau dibandingkan seperti atribut a lebih besar dari atribut b.
 
 \subsection{Kelas TampilanKondisiEksternal}
-Kelas ini merupakan kelas untuk menampilkan faktor eksternal yang mempengaruhi pertumbuhan wirausaha. Dalam kasus ini ditetapkan 4 faktor saja yaitu program pemerintah, dinamika pasar, norma,sosial dan budaya, serta infrastruktur fisik dan akses layanan. \textit{User} diminta untuk mengisi bobot untuk setiap faktor dan total dari semua bobot harus 100\%.
+Kelas ini merupakan kelas untuk menampilkan faktor eksternal yang mempengaruhi pertumbuhan wirausaha. Dalam kasus ini ditetapkan 12 faktor publik yaitu keuangan terkait dengan kewirausahaan, kebijakan pemerintah terkait ekonomi, kebijakan pemerintah terkait pajak, program pemerintah, pendidikan kewirausahaan pada SD dan SMP, pendidikan kewirausahaan pada SMK, professional dan universitas, transfer penelitian dan pengembangan, infrastruktur komersial dan legal, dinamika pasar, keterbukaan pasar, infrastruktur fisik dan akses layanan, serta norma sosial dan budaya. \textit{User} diminta untuk mengisi bobot untuk setiap faktor dan total dari semua bobot harus 100\%.
 
 \subsection{Kelas DataWirausaha}
 Kelas ini merupakan kelas untuk membuka \textit{file} data wirausaha yang akan disimulasikan, lalu menampilkannya ke tabel. Isi datanya berupa :
@@ -194,10 +194,11 @@ Pada tampilan kondisi eksternal terdapat 12 faktor publik berdasarkan GEM 2013. 
 
 \begin{figure} [H]
 	\centering  
-	\includegraphics[width=16cm, height=12cm]{mockup4} 
+	\includegraphics[width=16cm, height=12cm]{mockup4-1} 
 	\label{fig:kondisiDataWirausaha} 
 \end{figure}
 
+Pada tampilan ini, \textit{user} akan memasukkan \textit{file} masukan data wirausaha dalam format text. Setelah \textit{file} dipilih, data wirausaha akan ditampilkan pada tabel.
 \subsection{TampilanSimulasi}
 
 \begin{figure} [H]

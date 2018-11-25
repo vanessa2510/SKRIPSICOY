@@ -7,7 +7,7 @@ Pada bab ini akan dilakukan analisis mengenai pembangunan simulator pertumbuhan 
 \section{Analisis Pertumbuhan Wirausaha}
 \label{sec:analisisPertumbuhanWirausaha}
 
-Seperti yang sudah dijelaskan pada bab \ref{chap:teori} kewirausahaan dalam negara berkembang seperti Indonesia memang sangat diperlukan untuk membantu meningkatkan pertumbuhan ekonomi. GEM melakukan penelitiannya berdasarkan :
+Seperti yang sudah dijelaskan pada bab \ref{chap:teori}, kewirausahaan dalam negara berkembang seperti Indonesia memang sangat diperlukan untuk membantu meningkatkan pertumbuhan ekonomi. GEM melakukan penelitiannya berdasarkan :
 \begin{enumerate}
 	\item Keadaan ekonomi negara,
 	\item Kemampuan dan motivasi individu serta cara pandang masyarakat mengenai wirausaha,
@@ -17,7 +17,7 @@ Seperti yang sudah dijelaskan pada bab \ref{chap:teori} kewirausahaan dalam nega
 Kewirausahaan menurut GEM merupakan sebuah proses yang memiliki tahapan-tahapan yang berbeda. Tahapan yang pertama yaitu individu yang bisa melihat peluang baik dalam berwirausaha dan memiliki kemampuan untuk berwirausaha (wirausaha \textit{potential}). Kedua, individu yang sudah menjalankan usahanya dalam waktu kurang dari tiga bulan (wirausaha \textit{nascent}). Ketiga, individu yang sudah menjalankan usahanya selama lebih dari tiga bulan tetapi tidak lebih dari tiga setengah tahun (wirausaha \textit{new business manager}). Keempat, individu yang sudah menjalankan usahanya lebih dari tiga setengah tahun (wirausaha \textit{established}). Penjelasan lebih lanjut dapat dilihat pada bab \ref{chap:teori} subbab \ref{sec:ECA}. Digunakan \textit{new\_bm} untuk new business manager dan \textit{est\_bm} untuk established business. 
 
 
-Dalam pertumbuhan wirausaha tentu ada beberapa faktor yang mempengaruhi keberlangsungan pertumbuhan wirausaha. Secara umum, atribut atau faktor yang mempengaruhi pertumbuhan wirausaha yaitu terbagi menjadi 2 jenis yaitu atribut statis dan dinamis. Atribut dinamis yaitu umur, level wirausaha dan usia usaha. Di antara atribut dinamis, level wirausaha menjadi atribut penting karena atribut ini yang akan dijadikan sebagai acuan untuk menentukan perkembangan dari kewirausahaan. Atribut statis yaitu bidang usaha, kategori usaha, jenis kelamin dan lokasi geografis. Sedangkan atribut secara psikologis menurut GEM yaitu Perceived Opportunities, Perceived Capabilities, Entrepreneurial Intention dan Fear of Failure Rate. 
+Dalam pertumbuhan wirausaha tentu ada beberapa faktor yang mempengaruhi keberlangsungan pertumbuhan wirausaha. Secara umum, atribut atau faktor yang mempengaruhi pertumbuhan wirausaha yaitu terbagi menjadi 2 jenis yaitu atribut statis dan dinamis. Atribut dinamis yaitu umur, level wirausaha dan usia usaha. Di antara atribut dinamis, level wirausaha menjadi atribut penting karena atribut ini yang akan dijadikan sebagai acuan untuk menentukan perkembangan dari kewirausahaan. Atribut statis yaitu bidang usaha, kategori usaha, jenis kelamin dan lokasi geografis. Sedangkan atribut secara psikologis menurut GEM yaitu Perceived Opportunities, Perceived Capabilities, Entrepreneurial Intention  (High Status of Successful dan Media Attention)dan Fear of Failure Rate. 
 
 
 \section{Analisis Pemodelan Entrepreneurial Cellular Automata}
@@ -117,7 +117,7 @@ Dapat disimpulkan bahwa perubahan level wirausaha bukan hanya ditentukan oleh ni
 \section{Analisis Model Pertumbuhan Wirausaha dengan Entrepreneurial Cellular Automata}
 \label{analisismodelCA}
 
-Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index}, nilai ambang (\textit{threshold}), umur dan usia bisnis. Seperti yang sudah dijelaskan pada \ref{chap:teori}, \textit{Continuity Index} adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu. (Rumus CIDx : \ref{RumusCIDx}).
+Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index}, nilai ambang (\textit{threshold}), umur dan usia bisnis. Seperti yang sudah dijelaskan pada bab \ref{chap:teori}, \textit{Continuity Index} adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu. (Rumus CIDx : \ref{RumusCIDx}).
 
 
 Untuk mempermudah pemahaman mengenai \textit{Continuity Index}, akan diberikan contoh simulasi dari data tidak real, yaitu terdapat nilai a = 0.5, b = 0.4 dan c = 0.1, nilai ambangnya 15, serta periodenya dalam waktu 5 bulan. Nilai dari faktor psikologis diasumsikan Perceived Opportunities bernilai 0.2, Perceived Capabilities bernilai 0.25, High Status of Successful bernilai 0.1, Public Media Attention bernilai 0.05, Role Model bernilai 0.3 dan Fear of Failure bernilai 0.1. Diasumsikan terdapat tiga wirausahawan dan berikut data dari masing-masing wirausaha :
@@ -205,21 +205,21 @@ Norma sosial dan budaya & 3.29\\
 	
 Untuk perhitungan pada faktor eksternal :
 \begin{multline}
-	CIDx(eksternal) = 0.1 \times ((3.06 \times 0.1) + (2.69 \times 0.1) + (2.22 \times 0.1) + (2.53 \times 0.05) + (2.54 \times 0.1) + (3.3 \times 0.1) \\ + (2.31 \times 0.05) + (3.25 \times 0.05) + (3.92 \times 0.1) + (2.82 \times 0.05) + (3.45 \times 0.1) + (3.29 \times 0.1)) = 0.29925 
+	CIDx(eksternal) = 0.1 \times ((3.06 \times 0.1) + (2.69 \times 0.1) + (2.22 \times 0.1) + (2.53 \times 0.05) + (2.54 \times 0.1) + (3.3 \times 0.1) \\ + (2.31 \times 0.05) + (3.25 \times 0.05) + (3.92 \times 0.1) + (2.82 \times 0.05) + (3.45 \times 0.1) + (3.29 \times 0.1)) = 0.29925 / 12 = 0.0249375 
 \end{multline}
 
 Perhitungan CIDx(t=0)\\
 \begin{multline}
-	CIdx_{1}(t=0) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3) \\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + 0)\\ + 0.29925 = 20.36675
+	CIdx_{1}(t=0) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3) \\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + 0)\\ + 0.0249375 = 20.09243
 \end{multline}	
 
 \begin{multline}
-	CIdx_{2}(t=0) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 51.64925
+	CIdx_{2}(t=0) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.0249375 = 51.3749
 \end{multline}
 
 
 \begin{multline}
-	CIdx_{3}(t=0) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 15.71175
+	CIdx_{3}(t=0) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.0249375 = 15.4374
 \end{multline}
 
 	\begin{figure} [H]
@@ -232,15 +232,15 @@ Perhitungan CIDx(t=0)\\
 Perhitungan CIDx (t=1)
 
 \begin{multline}
-	CIdx_{1}(t=1) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3) \\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + 0)\\ + 0.29925 = 20.36675
+	CIdx_{1}(t=1) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3) \\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + 0)\\ +  0.0249375 = 20.09243
 \end{multline}
 
 \begin{multline}
-	CIdx_{2}(t=1) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 51.64925
+	CIdx_{2}(t=1) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ +  0.0249375 = 51.3749
 \end{multline}
 
 \begin{multline}
-	CIdx_{3}(t=1) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 15.71175
+	CIdx_{3}(t=1) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ +  0.0249375 = 15.4374
 \end{multline}
 
 	\begin{figure} [H]
@@ -254,15 +254,15 @@ Perhitungan CIDx (t=2)
 
 
 \begin{multline}
-	CIdx_{1}(t=2) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3) \\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + 0)\\ + 0.29925 = 20.36675
+	CIdx_{1}(t=2) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3) \\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + 0)\\ +  0.0249375 = 20.09243
 \end{multline}
 
 \begin{multline}
-	CIdx_{2}(t=2) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 51.64925
+	CIdx_{2}(t=2) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ +  0.0249375 = 51.3749
 \end{multline}
 
 \begin{multline}
-	CIdx_{3}(t=2) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.29925 = 15.71175
+	CIdx_{3}(t=2) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ +  0.0249375 = 15.4374
 \end{multline}
 
 	\begin{figure} [H]
@@ -275,15 +275,15 @@ Perhitungan CIDx (t=2)
 Perhitungan CIDx (t=3)
 
 \begin{multline}
-	CIdx_{1}(t=3) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3)\\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + \frac{2}{2} \times 0.3)\\ + 0.29925 = 20.48675
+	CIdx_{1}(t=3) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3)\\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + \frac{2}{2} \times 0.3)\\ +  0.0249375 = 20.2124
 \end{multline}
 
 \begin{multline}
-	CIdx_{2}(t=3) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {2} \times 0.3))\\ + 0.29925 = 51.70925
+	CIdx_{2}(t=3) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {2} \times 0.3))\\ +  0.0249375 = 51.4349
 \end{multline}
 
 \begin{multline}
-	CIdx_{3}(t=3) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {2} \times 0.3))\\ + 0.29925 = 15.77175
+	CIdx_{3}(t=3) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {2} \times 0.3))\\ +  0.0249375 = 15.4974
 \end{multline}
 
 	\begin{figure} [H]
@@ -296,15 +296,15 @@ Perhitungan CIDx (t=3)
 	Perhitungan CIDx (t=4)
 
 \begin{multline}
-	CIdx_{1}(t=4) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3)\\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + \frac{2}{2} \times 0.3)\\ + 0.29925 = 20.48675
+	CIdx_{1}(t=4) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3)\\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + \frac{2}{2} \times 0.3)\\ +  0.0249375 = 20.48675
 \end{multline}
 
 \begin{multline}
-	CIdx_{2}(t=4) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {2} \times 0.3))\\ + 0.29925 = 51.70925
+	CIdx_{2}(t=4) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {2} \times 0.3))\\ +  0.0249375 = 51.70925
 \end{multline}
 
 \begin{multline}
-	CIdx_{3}(t=4) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {2} \times 0.3))\\ + 0.29925 = 15.77175
+	CIdx_{3}(t=4) = 0.5 \times (((17.7+17.4+1.4+2.8) \times 0.2) + ((16.1+15.4+3.1+2) \times 0.25) + ((17.6+3) \times 0.3)\\ + ((17+15+5.4+2.2) \times 0.1) + ((5.4+2.7) \times 0.05) + ((16.4+13.9) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {2} {2} \times 0.3))\\ +  0.0249375 = 15.77175
 \end{multline}
 
 	\begin{figure} [H]
@@ -405,7 +405,7 @@ No & Aksi & Reaksi Sistem\\
 			\item Aktor : \textit{User}
 			\item Deskripsi : Menjalankan simulasi dan melihat hasil simulasi
 			\item Kondisi awal : \textit{User} menjalankan program
-			\item Kondisi akhir : Sistem akan menampilkan hasil di tabel dan juga di excel.
+			\item Kondisi akhir : Sistem akan menampilkan hasil di tabel dan sistem juga akan mengeluarkan hasil rincian perubahan individu wirausaha pada \textit{file} CSV.
 			\item Skenario utama:
 		\end{itemize}
 		
@@ -416,7 +416,7 @@ No & Aksi & Reaksi Sistem\\
 \hline
 No & Aksi & Reaksi Sistem\\
 \hline
-1 & \textit{User} menjalankan program & Sistem akan menampilkan hasil pada tabel dan juga di excel. \\
+1 & \textit{User} menjalankan program & Sistem akan menampilkan hasil di tabel dan sistem juga akan mengeluarkan hasil rincian perubahan individu wirausaha pada \textit{file} CSV \\
 \hline
 \end{tabular}
 \label{tabelSkenario3}
@@ -442,10 +442,7 @@ Pada bagian ini akan diberikan diagram kelas ECA beserta penjelasannya.
 	Kelas EGM merupakan kelas untuk menjalankan perhitungan CIDx, CIDx merupakan angka yang mengindikasikan kemungkinan seorang wirausahawan untuk meneruskan usahanya. Perhitungan CIDx ini menggunakan data dari GEM 2013.
 	
 \subsection{Kelas CA} 
-Kelas CA merupakan kelas yang merepresentasikan \textit{cellular automata}.
-		\begin{enumerate}
-			\item 
-		\end{enumerate}
+Kelas CA merupakan kelas yang merepresentasikan \textit{cellular automata}. Berikut akan dijelaskan beberapa \textit{method} yang ada di kelas CA :
 		\begin{enumerate}
 			\item \texttt{public Entrepreneurs[] stateTransition(CA model, double[] composition)}\\
 			Merupakan method untuk menentukan perubahan transisi pada seorang wirausaha yang bergantung pada umur dan nilai ambang.\\			Parameter:

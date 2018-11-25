@@ -74,7 +74,7 @@ Implementasi dilakukan dengan menggunakan laptop dengan spesifikasi sebagai beri
 
 	\item TampilanDataWirausaha
 	
- 	Pada tampilan data wirausaha \textit{user} dapat meng-klik \textit{button} "OPEN FILE" yang fungsinya untuk membuka file data wirausaha yang akan disimulasikan. Data wirausaha berisi jenis kelamin, umur, usia bisnis, kategori usaha, subkategori usaha, pendidikan, lokasi, pendapatan, level dan point. Point merupakan hasil perhitungan masing-masing wirausaha pada kondisi internal. (Gambar \ref{fig:tampilandata})
+ 	Pada tampilan data wirausaha \textit{user} dapat meng-klik \textit{button} "OPEN FILE" yang fungsinya untuk membuka \textit{file} data wirausaha yang akan disimulasikan. Data wirausaha berisi jenis kelamin, umur, usia bisnis, kategori usaha, subkategori usaha, pendidikan, lokasi, pendapatan, level dan point. Point merupakan hasil perhitungan masing-masing wirausaha pada kondisi internal. (Gambar \ref{fig:tampilandata})
 	
 		\begin{figure} [H]
 	\centering  
@@ -167,7 +167,7 @@ No & Aksi Pengguna & Reaksi yang diharapkan & Reaksi Perangkat Lunak\\
 \subsection{Pengujian Pembacaan Parameter}
 Pengujian ini dilakukan agar tidak terjadi kesalahan \textit{input} dari \textit{user} yang mengakibatkan hasil simulasi tidak sesuai dengan yang diharapkan.
 \begin{enumerate}
-	\item Pengisian \textit{Text Field} pada saat mengisi bobot ketetanggaan\\
+	\item Pengisian \textit{Text Field} pada saat mengisi bobot ketetanggaan
 	\begin{itemize}
 		\item Jika \textit{user} sudah mengisi \textit{check box} tetapi tidak mengisi \textit{text field}, akan terdapat pesan kesalahan "You cannot move to the other page because you must fill text field first!". (Gambar \ref{pesanError1})
 		
@@ -199,7 +199,7 @@ Pengujian ini dilakukan agar tidak terjadi kesalahan \textit{input} dari \textit
 	\label{pesanError3} 
 \end{figure}
 
-\item Pengisian \textit{Text Field} pada saat mengisi bobot faktor eksternal\\
+\item Pengisian \textit{Text Field} pada saat mengisi bobot faktor eksternal
 	\begin{itemize}
 		
 		\item Jika \textit{user} tidak mengisi seluruh \textit{text field}, akan terdapat pesan kesalahan " You must fill the textfield!". (Gambar \ref{pesanError4})
@@ -275,10 +275,10 @@ Pada pengujian pembacaan \textit{file} jika \textit{user} tidak memasukkan \text
 \subsection{Pengujian Hasil dari Simulasi}
 
 Pengujian ini dilakukan agar hasil dari simulasi mendapatkan hasil yang akurat. Pengujian ini dilakukan dengan membandingkan hasil simulasi program dengan hasil perhitungan simulasi secara manual.\\
-Contoh perhitungan menggunakan hasil perhitungan dari bab \ref{chap:analisis} pada subbab \ref{analisismodelCA}.\\
+Contoh perhitungan menggunakan hasil perhitungan dari bab \ref{chap:analisis} pada subbab \ref{analisismodelCA}.
 \begin{itemize}
 \item Hasil Simulasi Program\\
-	Berikut hasil perhitungan \textit{Continuity Index} :\\
+	Berikut hasil perhitungan \textit{Continuity Index} :
 	\begin{itemize}
 		\item Iterasi pada bulan pertama
 		
@@ -349,15 +349,15 @@ Berikut hasil dari perhitungan manual :
 	\hline
 	& Entrepreneur 1 & Entrepreneur 2 & Entrepreneur 3\\
 	\hline
-	Bulan pertama & 20.36675 & 51.64925 & 15.71175\\
+	Bulan pertama & 20.09243 & 51.3749 & 15.4374\\
 	\hline
-	Bulan kedua & 20.36675 & 51.64925 & 15.71175\\
+	Bulan kedua & 20.09243 & 51.3749 & 15.4374\\
 	\hline
-	Bulan ketiga & 20.36675 & 51.64925 & 15.71175\\
+	Bulan ketiga & 20.09243 & 51.3749 & 15.4374\\
 	\hline
-	Bulan keempat & 20.48675 & 51.70925 & 15.77175\\
+	Bulan keempat & 20.2124 & 51.4349 & 15.4974\\
 	\hline
-	Bulan kelima & 20.48675 & 51.70925 & 15.77175\\
+	Bulan kelima & 20.2124 & 51.4349 & 15.4974\\
 	\hline
 	\end{tabular}
 	\end{table}

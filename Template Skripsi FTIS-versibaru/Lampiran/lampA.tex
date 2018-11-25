@@ -14,33 +14,3820 @@
 % Perhatian: Abaikan warning tentang textasteriskcentered!!
 %
 
+\begin{lstlisting}[language=Java, caption=CA.java]
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ecasimulatorjframe;
 
-\begin{lstlisting}[language=Java, caption=MyCode.c]
+import java.util.Random;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-// This does not make algorithmic sense, 
-// but it shows off significant programming characters.
+/**
+ *
+ * @author Vanessa
+ */
+public class CA {
 
-#include<stdio.h>
+    int popSize;
+    int neighSize;
+    double threshold; //ambang minimum untuk usaha berlanjut
+    Entrepreneurs[] E;
+    Neighborhoods N;
+    PublicFactor pub;
+    int[] S; 
+    float P;
+    float[] delta;
+    float[] sigma;
+    int numOfMonth;
+    CA(int n, int m, int pf) {
+        popSize = n;
+        neighSize = m;
+        E = new Entrepreneurs[n];
+        N = new Neighborhoods(n, m);
+        pub = new PublicFactor(pf);
+        this.numOfMonth = 1; // bulan ke 1
+    }
+    /*
+    * Method untuk menentukan perubahan individu wirausaha
+    */
+    Entrepreneurs[] stateTransition(CA model, double[] composition) {
+        int size = model.popSize;
+        Entrepreneurs[] nextEnt = new Entrepreneurs[size];
 
-void myFunction( int input, float* output ) {
-	switch ( array[i] ) {
-		case 1: // This is silly code
-			if ( a >= 0 || b <= 3 && c != x )
-				*output += 0.005 + 20050;
-			char = 'g';
-			b = 2^n + ~right_size - leftSize * MAX_SIZE;
-			c = (--aaa + &daa) / (bbb++ - ccc % 2 );
-			strcpy(a,"hello $@?"); 
-	}
-	count = ~mask | 0x00FF00AA;
+        for (int i = 0; i < size; i++) {
+            nextEnt[i] = new Entrepreneurs();
+            model.E[i].copy(nextEnt[i]);
+            if (this.numOfMonth % 12 == 0) {
+                nextEnt[i].age++; // tiap kelipatan 12 umurnya nambah
+            }
+            nextEnt[i].b_age++;
+            nextLevel(nextEnt[i], i, model, composition);
+        }
+        this.numOfMonth++;
+        return nextEnt;
+    }
+
+    /*
+    * Method untuk menghitung kondisi ketetanggaan
+    */
+    double getNeighborIndex(CA model, int idxEnt) {
+        int size = model.neighSize;
+        double sum = 0.0;
+        for (int i = 0; i < size; i++) {
+            double sum1 = 0.0;
+            for (int j = 0; j < model.popSize; j++) {
+                sum1 = sum1 + model.N.neighbors[i].neighborMatrix[idxEnt][j];
+            }
+            sum = sum + sum1 / (model.popSize - 1) * model.N.weight[i];
+        }
+        return sum;
+    }
+    /*
+    * Method untuk menentukan level wirausaha
+    */
+    void nextLevel(Entrepreneurs ne, int i, CA model, double[] composition) {
+        //kasus umur yang sudah lebih dari 64th
+        if (ne.age > (64)) {
+            ne.level = State.RETIRED;
+            ne.b_age = 0;
+        } else {
+            double idx = getIndex(i, model, composition);
+            threshold = Double.parseDouble(InputDataHandler.getValue("threshold"));
+            if (idx < threshold) {
+                ne.level = State.POTENTIAL;
+                ne.b_age = 0;
+            } else {
+                switch (ne.level) {
+                    case 0: //potential
+                        ne.level = State.NASCENT;
+                        break;
+                    case 1: //nascent
+                        if (ne.b_age > 3) {
+                            ne.level = State.NEW_BOM;
+                            break;
+                        }
+                    case 2: //new_bm
+                        if (ne.b_age > 42) {
+                            ne.level = State.ESTABLISH_BOM;
+                            break;
+                        }
+                }
+            }
+        }
+    }
+    /*
+    * Method untuk menghitung Continuity Index
+    */
+    double getIndex(int i, CA model, double[] composition) {
+        double hasil = composition[0] * model.E[i].point + composition[1] * this.getNeighborIndex(model, i) + composition[2] * this.pub.getPublicIdx();
+        System.out.println("total hasil : "+hasil);
+        return hasil;
+    }
+
+    /*
+    * Method untuk mendefinisikan ketetanggaan
+    * 0 jika sama dengan
+    * 1 jika kurang dari sama dengan
+    * 2 jika lebih dari sama dengan
+    */
+    //perubahan -> ditambahin casenya
+    void NeighborhoodDefinition() {
+        int n = this.N.numNeighbor;
+        int ng = this.popSize;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < ng; j++) {
+                for (int k = 0; k < ng; k++) {
+                    switch (i) {
+                        case 0: // level
+                            // kalau relasinya sama dengan
+                            if ((this.N.relation[i] == 0) && (this.E[j].level == this.E[k].level)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya kurang dari sama dengan
+                            if ((this.N.relation[i] == 1) && (this.E[j].level <= this.E[k].level)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya lebih dari sama dengan
+                            if ((this.N.relation[i] == 2) && (this.E[j].level >= this.E[k].level)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            break;
+                        case 1: // b_area
+                            // kalau relasinya sama dengan
+                            if ((this.N.relation[i] == 0) && (this.E[j].b_category == this.E[k].b_category) && (this.E[j].b_area == this.E[k].b_area)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            break;
+                        case 2: //location
+                            // kalau relasinya sama dengan
+                            if ((this.N.relation[i] == 0) && (this.E[j].location == this.E[k].location)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            break;
+                        case 3: // jenis kelamin
+                            if ((this.N.relation[i] == 0) && (this.E[j].sex == this.E[k].sex)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            break;
+                        case 4: // umur
+                            if ((this.N.relation[i] == 0) && (this.E[j].age == this.E[k].age)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya kurang dari sama dengan
+                            if ((this.N.relation[i] == 1) && (this.E[j].age <= this.E[k].age)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya lebih dari sama dengan
+                            if ((this.N.relation[i] == 2) && (this.E[j].age >= this.E[k].age)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            break;
+
+                        case 5: // pendidikan
+                            if ((this.N.relation[i] == 0) && (this.E[j].education == this.E[k].education)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya kurang dari sama dengan
+                            if ((this.N.relation[i] == 1) && (this.E[j].education <= this.E[k].education)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya lebih dari sama dengan
+                            if ((this.N.relation[i] == 2) && (this.E[j].education >= this.E[k].education)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            break;
+                        case 6: // pendapatan
+                            if ((this.N.relation[i] == 0) && (this.E[j].income == this.E[k].income)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya kurang dari sama dengan
+                            if ((this.N.relation[i] == 1) && (this.E[j].income <= this.E[k].income)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            // kalau relasinya lebih dari sama dengan
+                            if ((this.N.relation[i] == 2) && (this.E[j].income >= this.E[k].income)) {
+                                this.N.neighbors[i].neighborMatrix[j][k] = 1.0;
+                            }
+                            break;
+                    }
+                }
+            }
+        }
+    }
+
+    void genDummyEntrepreneurs() {
+        this.E[0] = new Entrepreneurs(false, 18 * 12, 0, 0, 3, 4, 3, 4, 0, 0.0);
+        this.E[1] = new Entrepreneurs(true, 35 * 12, 0, 0, 2, 4, 0, 4, 1, 0.0);
+        this.E[2] = new Entrepreneurs(false, 55 * 12, 0, 0, 1, 4, 0, 4, 2, 0.0);
+        this.E[3] = new Entrepreneurs(true, 27 * 12, 0, 0, 3, 4, 1, 4, 1, 0.0);
+        this.E[4] = new Entrepreneurs(true, 30 * 12, 0, 0, 1, 4, 1, 4, 0, 0.0);
+        this.E[5] = new Entrepreneurs(false, 45 * 12, 0, 0, 1, 4, 2, 4, 4, 0.0);
+        this.E[6] = new Entrepreneurs(false, 33 * 12, 0, 0, 2, 4, 3, 4, 2, 0.0);
+        this.E[7] = new Entrepreneurs(true, 20 * 12, 0, 0, 3, 4, 2, 4, 0, 0.0);
+        this.E[8] = new Entrepreneurs(false, 38 * 12, 0, 0, 5, 4, 3, 4, 1, 0.0);
+        this.E[9] = new Entrepreneurs(false, 41 * 12, 0, 0, 5, 4, 0, 4, 0, 0.0);
+    }
+
+    void genSimulationData() {
+        int nSim = this.popSize;
+        Random r = new Random();
+        int n;
+        for (int i = 0; i < nSim; i++) {
+            this.E[i] = new Entrepreneurs();
+            n = r.nextInt(nSim);
+            if (n < nSim * 0.6) {
+                this.E[i].sex = State.FEMALE;
+            } else {
+                this.E[i].sex = State.MALE;
+            }
+
+            //location
+            n = r.nextInt(16);
+            this.E[i].location = n;
+            //category business, ada 3 dan area bisnis
+            n = r.nextInt();
+            this.E[i].b_category = n;
+            switch (this.E[i].b_category) {
+                case 0:
+                    this.E[i].b_area = r.nextInt(3);
+                    break;
+                case 1:
+                    this.E[i].b_area = r.nextInt(12);
+                    break;
+                case 2:
+                    this.E[i].b_area = r.nextInt(16);
+                    break;
+            }
+
+            //income
+            n = r.nextInt(6);
+            this.E[i].income = n;
+
+            //education
+            n = r.nextInt(6);
+            this.E[i].education = n;
+
+            int m = r.nextInt(100);
+            if (m > 80) { // 18-24
+                this.E[i].age = (r.nextInt(7) + 18) * 12;
+            } else if (m > 60) { // 25-34
+                this.E[i].age = (r.nextInt(10) + 25) * 12;
+            } else if (m > 40) { // 35-44
+                this.E[i].age = (r.nextInt(10) + 35) * 12;
+            } else if (m > 20) { // 45-54
+                this.E[i].age = (r.nextInt(10) + 45) * 12;
+            } else if (m > 5) { // 55-64
+                this.E[i].age = (r.nextInt(10) + 55) * 12;
+            } else {
+                this.E[i].age = 65 * 12;
+            }
+
+            if (this.E[i].age > 64 * 12) {
+                this.E[i].level = State.RETIRED;
+            } else {
+                if (this.E[i].age < 25 * 12) {
+                    n = r.nextInt(100);
+                    if (n < 70) {
+                        this.E[i].level = State.POTENTIAL;
+                    } else if (n < 90) {
+                        this.E[i].level = State.NASCENT;
+                    } else {
+                        this.E[i].level = State.NEW_BOM;
+                    }
+                } else {
+                    if (this.E[i].age < 35 * 12) {
+                        n = r.nextInt(100);
+                        if (n < 60) {
+                            this.E[i].level = State.POTENTIAL;
+                        } else if (n < 85) {
+                            this.E[i].level = State.NASCENT;
+                        } else if (n < 95) {
+                            this.E[i].level = State.NEW_BOM;
+                        } else {
+                            this.E[i].level = State.ESTABLISH_BOM;
+                        }
+                    } else {
+                        if (this.E[i].age < 45 * 12) {
+                            n = r.nextInt(100);
+                            if (n < 45) {
+                                this.E[i].level = State.POTENTIAL;
+                            } else if (n < 60) {
+                                this.E[i].level = State.NASCENT;
+                            } else if (n < 80) {
+                                this.E[i].level = State.NEW_BOM;
+                            } else {
+                                this.E[i].level = State.ESTABLISH_BOM;
+                            }
+                        } else {
+                            if (this.E[i].age < 55 * 12) {
+                                n = r.nextInt(100);
+                                if (n < 25) {
+                                    this.E[i].level = State.POTENTIAL;
+                                } else if (n < 55) {
+                                    this.E[i].level = State.NASCENT;
+                                } else if (n < 75) {
+                                    this.E[i].level = State.NEW_BOM;
+                                } else {
+                                    this.E[i].level = State.ESTABLISH_BOM;
+                                }
+                            } else {
+                                n = r.nextInt(100);
+                                if (n < 10) {
+                                    this.E[i].level = State.POTENTIAL;
+                                } else if (n < 20) {
+                                    this.E[i].level = State.NASCENT;
+                                } else if (n < 50) {
+                                    this.E[i].level = State.NEW_BOM;
+                                } else {
+                                    this.E[i].level = State.ESTABLISH_BOM;
+                                }
+                            }
+                            //umur bisnis
+                            switch (this.E[i].level) {
+                                case 1:
+                                    this.E[i].b_age = r.nextInt(3) + 1;
+                                    break;
+                                case 2:
+                                    this.E[i].b_age = r.nextInt(39) + 4;
+                                    break;
+                                case 3:
+                                    this.E[i].b_age = r.nextInt(this.E[i].age = 18 * 12) + 1;
+                                    break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    void writeSimulationData(String namaFile) {
+        String teks = "";
+        try {
+            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(namaFile, true)));
+            System.out.println(this.popSize);
+            for (int i = 0; i < this.popSize; i++) {
+                teks = "";
+                if (this.E[i].sex) {
+                    teks = teks + "1, ";
+                } else {
+                    teks = teks + "0, ";
+                }
+                teks = teks + this.E[i].age + ", ";
+                teks = teks + this.E[i].b_age + ", ";
+                teks = teks + this.E[i].b_category + ", ";
+                teks = teks + this.E[i].b_area + ", ";
+                teks = teks + this.E[i].education + ", ";
+                teks = teks + this.E[i].location + ", ";
+                teks = teks + this.E[i].income + ", ";
+                teks = teks + this.E[i].level;
+                System.out.println(teks);
+            }
+            System.out.close();
+        } catch (IOException e) {
+            System.out.println("Gagal menulis ke file " + namaFile);
+            e.printStackTrace();
+        }
+    }
+
+    void readSimulationData(String fileName) {
+        String line = "";
+        String separator = ", ";
+        BufferedReader br = null;
+        String teks = "";
+        String[] jm;
+
+        try {
+            br = new BufferedReader(new FileReader(fileName));
+            System.out.println("proses baca file...");
+            line = br.readLine();
+            line = br.readLine();
+            this.popSize = Integer.parseInt(line.trim());
+            for (int i = 0; i < this.popSize; i++) {
+                line = br.readLine();
+                jm = line.split(separator);
+
+                this.E[i] = new Entrepreneurs();
+                // sex, false = 0, true = 1
+                if (Integer.parseInt(jm[0].trim()) == 0) {
+                    this.E[i].sex = false;
+                } else {
+                    this.E[i].sex = true;
+                }
+                this.E[i].age = Integer.parseInt(jm[1].trim());
+                this.E[i].b_age = Integer.parseInt(jm[2].trim());
+                this.E[i].b_category = Integer.parseInt(jm[3].trim());
+                this.E[i].b_area = Integer.parseInt(jm[4].trim());
+                this.E[i].education = Integer.parseInt(jm[5].trim());
+                this.E[i].location = Integer.parseInt(jm[6].trim());
+                this.E[i].income = Integer.parseInt(jm[7].trim());
+                this.E[i].level = Integer.parseInt(jm[8].trim());
+                this.E[i].point = 0.0;
+            }
+            br.close();
+
+        } catch (IOException e) {
+            System.out.println("Gagal membaca dari file " + fileName);
+            e.printStackTrace();
+        }
+
+    }
+    /*
+    * Method untuk mengeluarkan jumlah wirausaha pada level tertentu
+    */
+    String print(int iter) {
+        int l0 = 0;
+        int l1 = 0;
+        int l2 = 0;
+        int l3 = 0;
+        int l4 = 0;
+        for (int i = 0; i < this.popSize; i++) {
+            switch (this.E[i].level) {
+                case 0:
+                    l0++;
+                    break;
+                case 1:
+                    l1++;
+                    break;
+                case 2:
+                    l2++;
+                    break;
+                case 3:
+                    l3++;
+                    break;
+                case 4:
+                    l4++;
+                    break;
+            }
+        }
+        return (iter + ", " + l0 + ", " + l1 + ", " + l2 + ", " + l3 + ", " + l4);
+    }
+    /*
+    * Method untuk menghitung kondisi internal wirausaha
+    * parameternya berisi dengan nilai-nilai atribut psikologis dari GEM 2013
+    */
+    // perubahan : ditambahin faktor psikologisnya
+    void calculatePoint(double[] POAm, double[] POAf, double[] POEm, double[] POEf, double[] POLm, double[] POLf, double[] POIm, double[] POIf, double[] PCAm, double[] PCAf, double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, double[] PCIm, double[] PCIf, double[] RMAm, double[] RMAf, double[] RMIm, double[] RMIf, double[] FFAf, double[] FFAm, double[] FFEf, double[] FFEm, double[] FFLf, double[] FFLm, double[] MALf, double[] MALm, double[] MAIf, double[] MAIm, double[] HSSIf, double[] HSSIm, double[] HSSLf, double[] HSSLm, double[] HSSAf, double[] HSSAm, double[] HSSEf, double[] HSSEm) {
+        for (int i = 0; i < this.popSize; i++) {
+            int a = getAgeRange(E[i].age);
+            if (this.E[i].sex) {
+                E[i].point = (POAm[a] + POEm[E[i].education] + POLm[E[i].location] + POIm[E[i].income]) * 0.2 + (PCAm[a] + PCEm[E[i].education] + PCLm[E[i].location] + PCIm[E[i].income]) * 0.25 + (RMAm[a] + RMIm[E[i].income]) * 0.3 + (FFAm[a] + FFEm[E[i].education] + FFLm[E[i].location]) * 0.1 + (MALm[E[i].location] + MAIm[E[i].income]) * 0.05 + (HSSAm[a] + HSSIm[E[i].income] + HSSLm[E[i].location] + HSSEm[E[i].education]) * 0.1;
+            } else {
+                E[i].point = (POAf[a] + POEf[E[i].education] + POLf[E[i].location] + POIf[E[i].income]) * 0.2 + (PCAf[a] + PCEf[E[i].education] + PCLf[E[i].location] + PCIf[E[i].income]) * 0.25 + (RMAf[a] + RMIf[E[i].income]) * 0.3 + (FFAf[a] + FFEf[E[i].education] + FFLf[E[i].location]) * 0.1 + (MALf[E[i].location] + MAIf[E[i].income]) * 0.05 + (HSSAf[a] + HSSIf[E[i].income] + HSSLf[E[i].location] + HSSEf[E[i].education]) * 0.1;
+            }
+        }
+    }
+    /*
+    * Method untuk mengelompokkan rentang umur sesuai dengan GEM 2013
+    * a merupakan umur dari wirausaha
+    */
+    int getAgeRange(int a) {
+        int ageC = -1;
+        if (a >= 55 && a <= 64) {
+            ageC = 0;
+        }
+        if (a >= 45 && a <= 54 ) {
+            ageC = 1;
+        }
+        if (a >= 35  && a <= 44 ) {
+            ageC = 2;
+        }
+        if (a >= 25  && a <= 34 ) {
+            ageC = 3;
+        }
+        if (a >= 18  && a <= 24) {
+            ageC = 4;
+        }
+        return ageC;
+    }
+
 }
 
-// Fonts for Displaying Program Code in LATEX
-// Adrian P. Robson, nepsweb.co.uk
-// 8 October 2012
-// http://nepsweb.co.uk/docs/progfonts.pdf
+\end{lstlisting}
+\begin{lstlisting}[language=Java, caption=Entrepreneurs.java]
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ecasimulatorjframe;
+
+/**
+ *
+ * @author Vanessa
+ */
+public class Entrepreneurs {
+    int level;
+    int age;
+    boolean sex;
+    int b_age;
+    int b_category; // bidang usaha, misal makanan
+    int b_area;// makanan ringan, makanan berat
+    int education;
+    int location;
+    int income;
+    double point;
+    //penambahan
+    
+    Entrepreneurs(){
+        sex=false;
+        age = 0;
+        b_age = 0;
+        b_category = 0;
+        b_area = 0;
+        education = 0;
+        location = 0;
+        income = 0;
+        level = 0;
+        point = 0.0;
+    }
+    
+    Entrepreneurs(boolean s, int a, int ba, int cat,int area, int edu, int loc, int inc, int l, double p){
+        this.sex = s;
+        this.age = a;
+        this.b_age = ba;
+        this.b_category = cat;
+        this.b_area = area;
+        this.education = edu;
+        this.location = loc;
+        this.income = inc; //pendapatan
+        this.level = l;
+        this.point = p;
+    }
+    
+    void copy(Entrepreneurs e){
+        e.sex = this.sex;
+        e.age = this.age;
+        e.b_age = this.b_age;
+        e.b_category = this.b_category;
+        e.b_area = this.b_area;
+        e.education = this.education;
+        e.location = this.location;
+        e.income = this.income;
+        e.level = this.level;
+    }
+    /*
+    * method untuk mengeluarkan hasil perubahan individu wirausahawan
+    */
+    public String toString2(){
+        return sex +" , "+ age + " , "+b_age+" , "+b_category+" , "+b_area+" , "+education +" , "+ location+" , "+ income +" , "+ level;
+    }  
+    
+    void genDummy(CA model){
+    
+    }
+}
+
 
 \end{lstlisting}
 
-\lstinputlisting[language=Java, caption=MyCode.java]{./Lampiran/MyCode.java} 
+\begin{lstlisting}[language=Java, caption=Neighbor.java]
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ecasimulatorjframe;
+
+/**
+ *
+ * @author Vanessa
+ */
+public class Neighbor {
+    double[][] neighborMatrix;
+    /*
+    * Method untuk membuat matriks berdasarkan atribut tetangga
+    * n merupakan jumlah wirausaha
+    */
+    Neighbor(int n){
+        neighborMatrix = new double[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                neighborMatrix[i][j] = 0.0; 
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java, caption=Neighborhoods.java]
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ecasimulatorjframe;
+
+/**
+ *
+ * @author Vanessa
+ * himpunan ketetanggaan tersusun atas sejumlah ketetanggaan
+ */
+public class Neighborhoods {
+    int numNeighbor; // banyaknya ketetanggaan
+    Neighbor[] neighbors;
+    double[] weight;
+    int[] relation; // jenis hubungan ketetanggaan, sama dengan, lebih kecil atau yang lain --> perlu didefinisikan
+    /*
+    * konstruktor untuk membuat matriks neighbor berdasarkan banyaknya tetangga
+    * n untuk jumlah wirausaha
+    * m untuk banyaknya tetangga
+    */
+    Neighborhoods(int n, int m){
+        this.numNeighbor = m;
+        neighbors = new Neighbor[m];
+        weight = new double[m];
+        relation = new int[m];
+        
+        for (int i = 0; i < m; i++) {
+            this.numNeighbor = m;
+            neighbors[i] = new Neighbor(n);
+            weight[i] = 0.0;
+            relation[i] = 0;
+        }
+    }
+
+    public void setWeight(double[] weight) {
+        this.weight = weight;
+    }
+
+    public void setRelation(int[] relation) {
+        this.relation = relation;
+    }
+
+    public void setNumNeighbor(int numNeighbor) {
+        this.numNeighbor = numNeighbor;
+    }
+    
+    
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java, caption=PublicFactor.java]
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ecasimulatorjframe;
+
+/**
+ *
+ * @author Vanessa
+ */
+public class PublicFactor {
+    
+    double[] factors;
+    double[] weights;
+
+    PublicFactor(int n) {
+        factors = new double[n];
+        weights = new double[n];
+    }
+
+    public void setFactors(double[] f) {
+        this.factors = f;
+    }
+
+    public void setWeights(double[] w) {
+        this.weights = w;
+    }
+    /*
+    * Method untuk menghitung hasil faktor publik
+    */
+    double getPublicIdx() {
+        double idx = 0.0;
+        for (int i = 0; i < factors.length; i++) {
+            idx = idx + factors[i] * weights[i];
+        }
+        return idx / factors.length;
+    }
+
+}
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java, caption=State.java]
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ecasimulatorjframe;
+
+/**
+ *
+ * @author Vanessa
+ */
+public class State {
+    public static int POTENTIAL = 0;
+    public static int NASCENT = 1;
+    public static int NEW_BOM = 2;
+    public static int ESTABLISH_BOM = 3;
+    public static int RETIRED = 4;
+    public static boolean FEMALE = false;
+    public static boolean MALE = true;
+}
+
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java, caption=TampilanBobotKetetanggaan.java]
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ecasimulatorjframe;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Vanessa
+ */
+public class TampilanBobotKetetanggaan extends javax.swing.JFrame {
+
+    /**
+     * Creates new form ECASimulator
+     */
+    public TampilanBobotKetetanggaan() {
+        initComponents();
+        nilaiUmurInternal.setEnabled(false);
+        nilaiLokasiInternal.setEnabled(false);
+        nilaiPendapatanInternal.setEnabled(false);
+        nilaiPendidikanInternal.setEnabled(false);
+        nilaiUsahaInternal.setEnabled(false);
+        nilaiJenisKelaminInternal.setEnabled(false);
+        nilaiLevelInternal.setEnabled(false);
+
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        umurCBInternal = new javax.swing.JCheckBox();
+        levelCBInternal = new javax.swing.JCheckBox();
+        pendidikanCBInternal = new javax.swing.JCheckBox();
+        pendapatanCBInternal = new javax.swing.JCheckBox();
+        jenisKelaminCBInternal = new javax.swing.JCheckBox();
+        lokasiCBInternal = new javax.swing.JCheckBox();
+        bUsahaCBInternal = new javax.swing.JCheckBox();
+        nilaiUmurInternal = new javax.swing.JTextField();
+        nilaiLevelInternal = new javax.swing.JTextField();
+        nilaiPendidikanInternal = new javax.swing.JTextField();
+        nilaiPendapatanInternal = new javax.swing.JTextField();
+        nilaiJenisKelaminInternal = new javax.swing.JTextField();
+        nilaiLokasiInternal = new javax.swing.JTextField();
+        nilaiUsahaInternal = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        nextButton = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("SIMULATOR ECA");
+
+        jLabel2.setText("Bobot Ketetanggaan Wirausaha :");
+
+        umurCBInternal.setText("UMUR :");
+        umurCBInternal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                umurCBInternalMouseClicked(evt);
+            }
+        });
+        umurCBInternal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                umurCBInternalActionPerformed(evt);
+            }
+        });
+
+        levelCBInternal.setText("LEVEL :");
+        levelCBInternal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                levelCBInternalMouseClicked(evt);
+            }
+        });
+
+        pendidikanCBInternal.setText("PENDIDIKAN :");
+        pendidikanCBInternal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pendidikanCBInternalMouseClicked(evt);
+            }
+        });
+
+        pendapatanCBInternal.setText("PENDAPATAN :");
+        pendapatanCBInternal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pendapatanCBInternalMouseClicked(evt);
+            }
+        });
+        pendapatanCBInternal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pendapatanCBInternalActionPerformed(evt);
+            }
+        });
+
+        jenisKelaminCBInternal.setText("JENIS KELAMIN :");
+        jenisKelaminCBInternal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jenisKelaminCBInternalMouseClicked(evt);
+            }
+        });
+
+        lokasiCBInternal.setText("LOKASI :");
+        lokasiCBInternal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lokasiCBInternalMouseClicked(evt);
+            }
+        });
+
+        bUsahaCBInternal.setText("BIDANG USAHA :");
+        bUsahaCBInternal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bUsahaCBInternalMouseClicked(evt);
+            }
+        });
+
+        nilaiUmurInternal.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                nilaiUmurInternalComponentAdded(evt);
+            }
+        });
+        nilaiUmurInternal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nilaiUmurInternalMouseClicked(evt);
+            }
+        });
+        nilaiUmurInternal.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiUmurInternalInputMethodTextChanged(evt);
+            }
+        });
+        nilaiUmurInternal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiUmurInternalActionPerformed(evt);
+            }
+        });
+
+        nilaiLevelInternal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiLevelInternalActionPerformed(evt);
+            }
+        });
+
+        nilaiPendapatanInternal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiPendapatanInternalActionPerformed(evt);
+            }
+        });
+
+        nilaiLokasiInternal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiLokasiInternalActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("%");
+
+        jLabel4.setText("%");
+
+        jLabel5.setText("%");
+
+        jLabel6.setText("%");
+
+        jLabel7.setText("%");
+
+        jLabel8.setText("%");
+
+        jLabel9.setText("%");
+
+        nextButton.setText("NEXT");
+        nextButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextButtonMouseClicked(evt);
+            }
+        });
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel2))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(nilaiLevelInternal, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(umurCBInternal)
+                                                .addComponent(levelCBInternal)
+                                                .addComponent(pendidikanCBInternal)
+                                                .addComponent(pendapatanCBInternal))
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                                    .addGap(34, 34, 34)
+                                                    .addComponent(nilaiUmurInternal, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(nilaiPendidikanInternal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(nilaiPendapatanInternal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(nilaiJenisKelaminInternal, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(nilaiLokasiInternal, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(nilaiUsahaInternal, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jenisKelaminCBInternal)
+                                            .addGap(68, 68, 68))
+                                        .addComponent(lokasiCBInternal)
+                                        .addComponent(bUsahaCBInternal)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel9)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(131, 131, 131)
+                                .addComponent(jLabel1)))
+                        .addGap(0, 129, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(nextButton)))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(36, 36, 36)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(umurCBInternal)
+                    .addComponent(nilaiUmurInternal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(levelCBInternal)
+                    .addComponent(nilaiLevelInternal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pendidikanCBInternal)
+                    .addComponent(nilaiPendidikanInternal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pendapatanCBInternal)
+                    .addComponent(nilaiPendapatanInternal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jenisKelaminCBInternal)
+                    .addComponent(nilaiJenisKelaminInternal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lokasiCBInternal)
+                    .addComponent(nilaiLokasiInternal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bUsahaCBInternal)
+                    .addComponent(nilaiUsahaInternal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(nextButton)
+                .addGap(21, 21, 21))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void nilaiPendapatanInternalActionPerformed(java.awt.event.ActionEvent evt) {                                                        
+        // TODO add your handling code here:
+    }                                                       
+
+    private void nilaiLevelInternalActionPerformed(java.awt.event.ActionEvent evt) {                                                   
+        // TODO add your handling code here:
+    }                                                  
+
+    private void pendapatanCBInternalActionPerformed(java.awt.event.ActionEvent evt) {                                                     
+        // TODO add your handling code here:
+    }                                                    
+
+    private void nilaiLokasiInternalActionPerformed(java.awt.event.ActionEvent evt) {                                                    
+        // TODO add your handling code here:
+    }                                                   
+
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+
+
+    }                                          
+
+    private void umurCBInternalActionPerformed(java.awt.event.ActionEvent evt) {                                               
+
+    }                                              
+
+    private void nilaiUmurInternalActionPerformed(java.awt.event.ActionEvent evt) {                                                  
+
+    }                                                 
+
+    private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {                                        
+        double nilaiUmur = 0.0;
+        double nilaiLevel = 0.0;
+        double nilaiPendidikan = 0.0;
+        double nilaiPendapatan = 0.0;
+        double nilaiLokasi = 0.0;
+        double nilaiUsaha = 0.0;
+        double nilaiJenisKelamin = 0.0;
+        boolean checker = true;
+        if (umurCBInternal.isSelected()) {
+            InputDataHandler.jmlChecklist();
+            if (nilaiUmurInternal.getText().equals("")) {
+                InputDataHandler.inputDataInternal("umurInternal", null);
+                checker = false; // false karena nilainya null
+            } else {
+                nilaiUmur = Double.parseDouble(nilaiUmurInternal.getText()) / 100.0;
+                String nilaiU = Double.toString(nilaiUmur);
+//                System.out.println(nilaiU);
+                InputDataHandler.inputDataInternal("umurInternal", nilaiU);
+            }
+
+        }
+
+        if (levelCBInternal.isSelected()) {
+            InputDataHandler.jmlChecklist();
+            if (nilaiLevelInternal.getText().equals("")) {
+                InputDataHandler.inputDataInternal("levelInternal", null);
+                checker = false; // false karena nilainya null
+            } else {
+                nilaiLevel = Double.parseDouble(nilaiLevelInternal.getText()) / 100.0;
+                String nilaiL = Double.toString(nilaiLevel);
+//                System.out.println(nilaiL);
+                InputDataHandler.inputDataInternal("levelInternal", nilaiL);
+            }
+        }
+
+        if (pendidikanCBInternal.isSelected()) {
+            InputDataHandler.jmlChecklist();
+            if (nilaiPendidikanInternal.getText().equals("")) {
+                InputDataHandler.inputDataInternal("pendidikanInternal", null);
+                checker = false; // false karena nilainya null
+            } else {
+                nilaiPendidikan = Double.parseDouble(nilaiPendidikanInternal.getText()) / 100.0;
+                String nilaiPendi = Double.toString(nilaiPendidikan);
+//                System.out.println(nilaiPendi);
+                InputDataHandler.inputDataInternal("pendidikanInternal", nilaiPendi);
+            }
+        }
+
+        if (pendapatanCBInternal.isSelected()) {
+            InputDataHandler.jmlChecklist();
+            if (nilaiPendapatanInternal.getText().equals("")) {
+                InputDataHandler.inputDataInternal("pendapatanInternal", null);
+                checker = false; // false karena nilainya null
+            } else {
+                nilaiPendapatan = Double.parseDouble(nilaiPendapatanInternal.getText()) / 100.0;
+                String nilaiPenda= Double.toString(nilaiPendapatan);
+//                System.out.println(nilaiU);
+                InputDataHandler.inputDataInternal("pendapatanInternal", nilaiPenda);
+            }
+        }
+
+        if (jenisKelaminCBInternal.isSelected()) {
+            InputDataHandler.jmlChecklist();
+            if (nilaiJenisKelaminInternal.getText().equals("")) {
+                InputDataHandler.inputDataInternal("jenisKelaminInternal", null);
+                checker = false; // false karena nilainya null
+            } else {
+                nilaiJenisKelamin = Double.parseDouble(nilaiJenisKelaminInternal.getText()) / 100.0;
+                String nilaiJK = Double.toString(nilaiJenisKelamin);
+//                System.out.println(nilaiJK);
+                InputDataHandler.inputDataInternal("jenisKelaminInternal", nilaiJK);
+            }
+        }
+
+        if (lokasiCBInternal.isSelected()) {
+            InputDataHandler.jmlChecklist();
+            if (nilaiLokasiInternal.getText().equals("")) {
+                InputDataHandler.inputDataInternal("lokasiInternal", null);
+                checker = false; // false karena nilainya null
+            } else {
+                nilaiLokasi = Double.parseDouble(nilaiLokasiInternal.getText()) / 100.0;
+                String nilaiL = Double.toString(nilaiLokasi);
+//                System.out.println(nilaiU);
+                InputDataHandler.inputDataInternal("lokasiInternal", nilaiL);
+            }
+        }
+
+        if (bUsahaCBInternal.isSelected()) {
+            InputDataHandler.jmlChecklist();
+            if (nilaiUsahaInternal.getText().equals("")) {
+                InputDataHandler.inputDataInternal("usahaInternal", null);
+                checker = false; // false karena nilainya null
+            } else {
+                nilaiUsaha = Double.parseDouble(nilaiUsahaInternal.getText()) / 100.0;
+                String nilaiUs = Double.toString(nilaiUsaha);
+//                System.out.println(nilaiU);
+                InputDataHandler.inputDataInternal("usahaInternal", nilaiUs);
+            }
+        }
+        if (InputDataHandler.getKetetanggaan() == 0) {
+            checker = false;
+        }
+        double umur = 0.0;
+        double pendidikan = 0.0;
+        double level = 0.0;
+        double pendapatan = 0.0;
+        double jenisKelamin = 0.0;
+        double lokasi = 0.0;
+        double usaha = 0.0;
+
+        double[] kumpulanBobot = new double[InputDataHandler.getKetetanggaan()];
+        int m = 0;
+        // kalau umur dichecklist, dimasukkan ke variabel umur
+        if (InputDataHandler.checkKey("umurInternal")) {
+            umur = Double.parseDouble(InputDataHandler.getValue("umurInternal"));
+            kumpulanBobot[m] = umur;
+            m++;
+        }
+        if (InputDataHandler.checkKey("pendidikanInternal")) {
+            pendidikan = Double.parseDouble(InputDataHandler.getValue("pendidikanInternal"));
+            kumpulanBobot[m] = pendidikan;
+            m++;
+        }
+        if (InputDataHandler.checkKey("pendapatanInternal")) {
+            pendapatan = Double.parseDouble(InputDataHandler.getValue("pendapatanInternal"));
+            kumpulanBobot[m] = pendapatan;
+            m++;
+        }
+        if (InputDataHandler.checkKey("levelInternal")) {
+            level = Double.parseDouble(InputDataHandler.getValue("levelInternal"));
+            kumpulanBobot[m] = level;
+            m++;
+        }
+        if (InputDataHandler.checkKey("jenisKelaminInternal")) {
+            jenisKelamin = Double.parseDouble(InputDataHandler.getValue("jenisKelaminInternal"));
+            kumpulanBobot[m] = jenisKelamin;
+            m++;
+        }
+        if (InputDataHandler.checkKey("lokasiInternal")) {
+            lokasi = Double.parseDouble(InputDataHandler.getValue("lokasiInternal"));
+            kumpulanBobot[m] = lokasi;
+            m++;
+        }
+        if (InputDataHandler.checkKey("usahaInternal")) {
+            usaha = Double.parseDouble(InputDataHandler.getValue("usahaInternal"));
+            kumpulanBobot[m] = usaha;
+            m++;
+        }
+        
+        int totalNilai=0;
+        for (int i = 0; i < kumpulanBobot.length; i++) {
+            totalNilai+=kumpulanBobot[i]*100;
+
+        }
+        if (totalNilai != 100) {
+            JOptionPane.showMessageDialog(null, "The sum of text fields must 100%!");
+            checker = false;
+        }
+        InputDataHandler.setBobot(kumpulanBobot);
+        
+        
+        
+        if (checker == true) {
+            this.hide();
+            TampilanKondisiKetetanggaan kk = new TampilanKondisiKetetanggaan();
+            kk.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "You cannot move to the other page because you must fill text field first!");
+        }
+
+    }                                       
+
+    private void umurCBInternalMouseClicked(java.awt.event.MouseEvent evt) {                                            
+        if (umurCBInternal.isSelected()) {
+            nilaiUmurInternal.setEnabled(true);
+        } else {
+            nilaiUmurInternal.setEnabled(false);
+        }
+    }                                           
+
+    private void levelCBInternalMouseClicked(java.awt.event.MouseEvent evt) {                                             
+        if (levelCBInternal.isSelected()) {
+            nilaiLevelInternal.setEnabled(true);
+        } else {
+            nilaiLevelInternal.setEnabled(false);
+        }
+    }                                            
+
+    private void pendidikanCBInternalMouseClicked(java.awt.event.MouseEvent evt) {                                                  
+
+        if (pendidikanCBInternal.isSelected()) {
+            nilaiPendidikanInternal.setEnabled(true);
+        } else {
+            nilaiPendidikanInternal.setEnabled(false);
+        }
+    }                                                 
+
+    private void pendapatanCBInternalMouseClicked(java.awt.event.MouseEvent evt) {                                                  
+
+        if (pendapatanCBInternal.isSelected()) {
+            nilaiPendapatanInternal.setEnabled(true);
+        } else {
+            nilaiPendapatanInternal.setEnabled(false);
+        }
+    }                                                 
+
+    private void jenisKelaminCBInternalMouseClicked(java.awt.event.MouseEvent evt) {                                                    
+        if (jenisKelaminCBInternal.isSelected()) {
+            nilaiJenisKelaminInternal.setEnabled(true);
+        } else {
+            nilaiJenisKelaminInternal.setEnabled(false);
+        }
+    }                                                   
+
+    private void lokasiCBInternalMouseClicked(java.awt.event.MouseEvent evt) {                                              
+        if (lokasiCBInternal.isSelected()) {
+            nilaiLokasiInternal.setEnabled(true);
+        } else {
+            nilaiLokasiInternal.setEnabled(false);
+        }
+
+    }                                             
+
+    private void bUsahaCBInternalMouseClicked(java.awt.event.MouseEvent evt) {                                              
+        if (bUsahaCBInternal.isSelected()) {
+            nilaiUsahaInternal.setEnabled(true);
+        } else {
+            nilaiUsahaInternal.setEnabled(false);
+        }
+    }                                             
+
+    private void nilaiUmurInternalInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {                                                         
+
+    }                                                        
+
+    private void nilaiUmurInternalMouseClicked(java.awt.event.MouseEvent evt) {                                               
+
+    }                                              
+
+    private void nilaiUmurInternalComponentAdded(java.awt.event.ContainerEvent evt) {                                                 
+
+    }                                                
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(TampilanBobotKetetanggaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(TampilanBobotKetetanggaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(TampilanBobotKetetanggaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(TampilanBobotKetetanggaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TampilanBobotKetetanggaan().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JCheckBox bUsahaCBInternal;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JCheckBox jenisKelaminCBInternal;
+    private javax.swing.JCheckBox levelCBInternal;
+    private javax.swing.JCheckBox lokasiCBInternal;
+    public javax.swing.JButton nextButton;
+    private javax.swing.JTextField nilaiJenisKelaminInternal;
+    private javax.swing.JTextField nilaiLevelInternal;
+    private javax.swing.JTextField nilaiLokasiInternal;
+    private javax.swing.JTextField nilaiPendapatanInternal;
+    private javax.swing.JTextField nilaiPendidikanInternal;
+    private javax.swing.JTextField nilaiUmurInternal;
+    private javax.swing.JTextField nilaiUsahaInternal;
+    private javax.swing.JCheckBox pendapatanCBInternal;
+    private javax.swing.JCheckBox pendidikanCBInternal;
+    private javax.swing.JCheckBox umurCBInternal;
+    // End of variables declaration                   
+}
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java, caption=TampilanKondisiKetetanggaan.java]
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ecasimulatorjframe;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+/**
+ *
+ * @author Vanessa
+ */
+public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
+
+    /**
+     * Creates new form TampilanKondisiKetetanggaan
+     */
+    JPanel[] kumpulanJPanel;
+
+    //int jmlCheckListInternal = 0;
+    //double[] bobot;
+    public TampilanKondisiKetetanggaan() {
+        initComponents();
+
+        kumpulanJPanel = new JPanel[]{jUmur, jLevel, jPendidikan, jPendapatan, jJenisKelamin, jLokasi, jbidangUsaha};
+        for (int i = 0; i < kumpulanJPanel.length; i++) {
+            kumpulanJPanel[i].setVisible(false);
+            kumpulanJPanel[i].setLocation(29, 103); //ditumpuk di jUmur
+        }
+        int i = 0;
+        if (InputDataHandler.checkKey("umurInternal")) {
+            kumpulanJPanel[0].setVisible(true);
+        }
+        if (InputDataHandler.checkKey("levelInternal")) {
+            kumpulanJPanel[1].setVisible(true);
+        }
+        if (InputDataHandler.checkKey("pendidikanInternal")) {
+            kumpulanJPanel[2].setVisible(true);
+        }
+        if (InputDataHandler.checkKey("pendapatanInternal")) {
+            kumpulanJPanel[3].setVisible(true);
+        }
+        if (InputDataHandler.checkKey("jenisKelaminInternal")) {
+            kumpulanJPanel[4].setVisible(true);
+        }
+        if (InputDataHandler.checkKey("lokasiInternal")) {
+            kumpulanJPanel[5].setVisible(true);
+        }
+        if (InputDataHandler.checkKey("usahaInternal")) {
+            kumpulanJPanel[6].setVisible(true);
+        }
+        
+        ButtonGroup group1 = new ButtonGroup();
+        group1.add(umurLbhDr);
+        group1.add(umurSmDgn);
+        group1.add(umurKrgDr);
+        
+        ButtonGroup group2 = new ButtonGroup();
+        group2.add(levelLbhDr);
+        group2.add(levelSmDgn);
+        group2.add(levelKrgDr);
+        
+        ButtonGroup group3 = new ButtonGroup();
+        group3.add(pendapatanLbhDr);
+        group3.add(pendapatanSmDgn);
+        group3.add(pendapatanKrgDr);
+        
+        ButtonGroup group4 = new ButtonGroup();
+        group4.add(pendidikanLbhDr);
+        group4.add(pendidikanSmDgn);
+        group4.add(pendidikanKrgDr);
+
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jUmur = new javax.swing.JPanel();
+        umurKrgDr = new javax.swing.JRadioButton();
+        umurSmDgn = new javax.swing.JRadioButton();
+        umurLbhDr = new javax.swing.JRadioButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLevel = new javax.swing.JPanel();
+        levelKrgDr = new javax.swing.JRadioButton();
+        levelSmDgn = new javax.swing.JRadioButton();
+        levelLbhDr = new javax.swing.JRadioButton();
+        jLabel5 = new javax.swing.JLabel();
+        jPendidikan = new javax.swing.JPanel();
+        pendidikanKrgDr = new javax.swing.JRadioButton();
+        pendidikanSmDgn = new javax.swing.JRadioButton();
+        pendidikanLbhDr = new javax.swing.JRadioButton();
+        jLabel6 = new javax.swing.JLabel();
+        jPendapatan = new javax.swing.JPanel();
+        pendapatanKrgDr = new javax.swing.JRadioButton();
+        pendapatanSmDgn = new javax.swing.JRadioButton();
+        pendapatanLbhDr = new javax.swing.JRadioButton();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jJenisKelamin = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jbidangUsaha = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLokasi = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jPendapatan2 = new javax.swing.JPanel();
+        pendapatanCBNeg2 = new javax.swing.JCheckBox();
+        pendapatanKrgDr2 = new javax.swing.JRadioButton();
+        pendapatanSmDgn2 = new javax.swing.JRadioButton();
+        pendapatanLbhDr2 = new javax.swing.JRadioButton();
+        jPanel4 = new javax.swing.JPanel();
+        backButton = new javax.swing.JButton();
+        nextButton = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("SIMULATOR ECA");
+
+        jLabel2.setText("Parameter Setting Kondisi Ketetanggaan :");
+
+        jLabel3.setText("Berdasarkan Relasi :");
+
+        jUmur.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        umurKrgDr.setText("<=");
+
+        umurSmDgn.setText("=");
+
+        umurLbhDr.setText(">=");
+
+        jLabel4.setText("UMUR");
+
+        javax.swing.GroupLayout jUmurLayout = new javax.swing.GroupLayout(jUmur);
+        jUmur.setLayout(jUmurLayout);
+        jUmurLayout.setHorizontalGroup(
+            jUmurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jUmurLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(umurKrgDr)
+                .addGap(26, 26, 26)
+                .addComponent(umurSmDgn)
+                .addGap(18, 18, 18)
+                .addComponent(umurLbhDr)
+                .addContainerGap())
+        );
+        jUmurLayout.setVerticalGroup(
+            jUmurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jUmurLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jUmurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(umurKrgDr)
+                    .addComponent(umurSmDgn)
+                    .addComponent(umurLbhDr)
+                    .addComponent(jLabel4))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLevel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        levelKrgDr.setText("<=");
+
+        levelSmDgn.setText("=");
+        levelSmDgn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                levelSmDgnActionPerformed(evt);
+            }
+        });
+
+        levelLbhDr.setText(">=");
+        levelLbhDr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                levelLbhDrActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("LEVEL");
+
+        javax.swing.GroupLayout jLevelLayout = new javax.swing.GroupLayout(jLevel);
+        jLevel.setLayout(jLevelLayout);
+        jLevelLayout.setHorizontalGroup(
+            jLevelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLevelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(levelKrgDr)
+                .addGap(26, 26, 26)
+                .addComponent(levelSmDgn)
+                .addGap(18, 18, 18)
+                .addComponent(levelLbhDr)
+                .addContainerGap())
+        );
+        jLevelLayout.setVerticalGroup(
+            jLevelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLevelLayout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addGroup(jLevelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(levelKrgDr)
+                    .addComponent(levelSmDgn)
+                    .addComponent(levelLbhDr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel5))
+                .addContainerGap())
+        );
+
+        jPendidikan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        pendidikanKrgDr.setText("<=");
+
+        pendidikanSmDgn.setText("=");
+
+        pendidikanLbhDr.setText(">=");
+
+        jLabel6.setText("PENDIDIKAN");
+
+        javax.swing.GroupLayout jPendidikanLayout = new javax.swing.GroupLayout(jPendidikan);
+        jPendidikan.setLayout(jPendidikanLayout);
+        jPendidikanLayout.setHorizontalGroup(
+            jPendidikanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPendidikanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addGap(145, 145, 145)
+                .addComponent(pendidikanKrgDr)
+                .addGap(26, 26, 26)
+                .addComponent(pendidikanSmDgn)
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(pendidikanLbhDr)
+                .addContainerGap())
+        );
+        jPendidikanLayout.setVerticalGroup(
+            jPendidikanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPendidikanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPendidikanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pendidikanKrgDr)
+                    .addComponent(pendidikanSmDgn)
+                    .addComponent(pendidikanLbhDr)
+                    .addComponent(jLabel6))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPendapatan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        pendapatanKrgDr.setText("<=");
+
+        pendapatanSmDgn.setText("=");
+
+        pendapatanLbhDr.setText(">=");
+
+        jLabel7.setText("PENDAPATAN");
+
+        javax.swing.GroupLayout jPendapatanLayout = new javax.swing.GroupLayout(jPendapatan);
+        jPendapatan.setLayout(jPendapatanLayout);
+        jPendapatanLayout.setHorizontalGroup(
+            jPendapatanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPendapatanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addGap(139, 139, 139)
+                .addComponent(pendapatanKrgDr)
+                .addGap(27, 27, 27)
+                .addComponent(pendapatanSmDgn)
+                .addGap(18, 18, 18)
+                .addComponent(pendapatanLbhDr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPendapatanLayout.setVerticalGroup(
+            jPendapatanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPendapatanLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPendapatanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pendapatanKrgDr)
+                    .addComponent(pendapatanSmDgn)
+                    .addComponent(pendapatanLbhDr)
+                    .addComponent(jLabel7))
+                .addContainerGap())
+        );
+
+        jJenisKelamin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel8.setText("JENIS KELAMIN");
+
+        javax.swing.GroupLayout jJenisKelaminLayout = new javax.swing.GroupLayout(jJenisKelamin);
+        jJenisKelamin.setLayout(jJenisKelaminLayout);
+        jJenisKelaminLayout.setHorizontalGroup(
+            jJenisKelaminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jJenisKelaminLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8)
+                .addContainerGap(283, Short.MAX_VALUE))
+        );
+        jJenisKelaminLayout.setVerticalGroup(
+            jJenisKelaminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jJenisKelaminLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jbidangUsaha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel10.setText("BIDANG USAHA");
+
+        javax.swing.GroupLayout jbidangUsahaLayout = new javax.swing.GroupLayout(jbidangUsaha);
+        jbidangUsaha.setLayout(jbidangUsahaLayout);
+        jbidangUsahaLayout.setHorizontalGroup(
+            jbidangUsahaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jbidangUsahaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jbidangUsahaLayout.setVerticalGroup(
+            jbidangUsahaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jbidangUsahaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel10)
+                .addContainerGap())
+        );
+
+        jLokasi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel9.setText("LOKASI");
+
+        javax.swing.GroupLayout jLokasiLayout = new javax.swing.GroupLayout(jLokasi);
+        jLokasi.setLayout(jLokasiLayout);
+        jLokasiLayout.setHorizontalGroup(
+            jLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLokasiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jLokasiLayout.setVerticalGroup(
+            jLokasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLokasiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLokasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbidangUsaha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 83, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addComponent(jJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLokasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jbidangUsaha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
+
+        jPendapatan2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        pendapatanCBNeg2.setText("PENDAPATAN");
+        pendapatanCBNeg2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pendapatanCBNeg2ActionPerformed(evt);
+            }
+        });
+
+        pendapatanKrgDr2.setText("<=");
+
+        pendapatanSmDgn2.setText("=");
+
+        pendapatanLbhDr2.setText(">=");
+
+        javax.swing.GroupLayout jPendapatan2Layout = new javax.swing.GroupLayout(jPendapatan2);
+        jPendapatan2.setLayout(jPendapatan2Layout);
+        jPendapatan2Layout.setHorizontalGroup(
+            jPendapatan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPendapatan2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pendapatanCBNeg2)
+                .addGap(92, 92, 92)
+                .addComponent(pendapatanKrgDr2)
+                .addGap(27, 27, 27)
+                .addComponent(pendapatanSmDgn2)
+                .addGap(18, 18, 18)
+                .addComponent(pendapatanLbhDr2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPendapatan2Layout.setVerticalGroup(
+            jPendapatan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPendapatan2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPendapatan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pendapatanCBNeg2)
+                    .addComponent(pendapatanKrgDr2)
+                    .addComponent(pendapatanSmDgn2)
+                    .addComponent(pendapatanLbhDr2))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jPendapatan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jUmur, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLevel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPendidikan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(131, 131, 131)
+                    .addComponent(jPendapatan2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jUmur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPendidikan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPendapatan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3821, 3821, 3821))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(2122, 2122, 2122)
+                    .addComponent(jPendapatan2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(2122, Short.MAX_VALUE)))
+        );
+
+        backButton.setText("BACK");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+
+        nextButton.setText("NEXT");
+        nextButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextButtonMouseClicked(evt);
+            }
+        });
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(backButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 212, Short.MAX_VALUE)
+                .addComponent(nextButton)
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backButton)
+                    .addComponent(nextButton))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void levelLbhDrActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+    }                                          
+
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+        this.hide();
+        TampilanBobotKetetanggaan ki = new TampilanBobotKetetanggaan();
+        ki.setVisible(true);
+    }                                          
+
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+
+    }                                          
+
+    private void levelSmDgnActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+    }                                          
+
+    private void pendapatanCBNeg2ActionPerformed(java.awt.event.ActionEvent evt) {                                                 
+        // TODO add your handling code here:
+    }                                                
+
+    private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {                                        
+        boolean checker = true;
+        String nilaiRB = "";
+
+        double[] bobot = new double[InputDataHandler.getKetetanggaan()];
+
+        // set relasi 0 kalau sama dengan
+        // set relasi 1 kalau kurang dari sama dengan
+        // set relasi 2 kalau lebih dari sama dengan
+        int n = 0;
+        int[] kumpulanNilaiRelasi = new int[InputDataHandler.getKetetanggaan()];
+        
+        //umur
+        if (InputDataHandler.checkKey("umurInternal")) {
+            if (umurLbhDr.isSelected()) {
+                InputDataHandler.inputDataKetetanggaan("umurLbhDr", umurLbhDr.getText());
+                nilaiRB = InputDataHandler.getValue("umurLbhDr");
+                if (nilaiRB.equals(">=")) {
+                    nilaiRB = "2";
+                }
+                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                n++;
+                checker = true;
+            } else {
+                if (umurSmDgn.isSelected()) {
+                    InputDataHandler.inputDataKetetanggaan("umurSmDgn", umurSmDgn.getText());
+                    nilaiRB = InputDataHandler.getValue("umurSmDgn");
+                    if (nilaiRB.equals("=")) {
+                        nilaiRB = "0";
+                    }
+                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                    n++;
+                    checker = true;
+                } else {
+                    if (umurKrgDr.isSelected()) {
+                        InputDataHandler.inputDataKetetanggaan("umurKurangDari", umurKrgDr.getText());
+                        nilaiRB = InputDataHandler.getValue("umurKurangDari");
+                        if (nilaiRB.equals("<=")) {
+                            nilaiRB = "1";
+                        }
+                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                        n++;
+                        checker = true;
+                    }
+                }
+            }
+
+            if (!umurLbhDr.isSelected()) {
+                if (!umurSmDgn.isSelected()) {
+                    if (!umurKrgDr.isSelected()) {
+                        checker = false;
+                    }
+                }
+            }
+        }
+
+        // level
+        if (InputDataHandler.checkKey("levelInternal")) {
+            if (levelLbhDr.isSelected()) {
+                InputDataHandler.inputDataKetetanggaan("levelLbhDr", levelLbhDr.getText());
+                nilaiRB = InputDataHandler.getValue("levelLbhDr");
+                if (nilaiRB.equals(">=")) {
+                    nilaiRB = "2";
+                }
+                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                n++;
+                checker = true;
+            } else {
+                if (levelSmDgn.isSelected()) {
+                    InputDataHandler.inputDataKetetanggaan("levelSmDgn", levelSmDgn.getText());
+                    nilaiRB = InputDataHandler.getValue("levelSmDgn");
+                    if (nilaiRB.equals("=")) {
+                        nilaiRB = "0";
+                    }
+                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                    n++;
+                    checker = true;
+                } else {
+                    if (levelKrgDr.isSelected()) {
+                        InputDataHandler.inputDataKetetanggaan("levelKurangDari", levelKrgDr.getText());
+                        nilaiRB = InputDataHandler.getValue("levelKurangDari");
+                        if (nilaiRB.equals("<=")) {
+                            nilaiRB = "1";
+                        }
+                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                        n++;
+                        checker = true;
+                    }
+                }
+            }
+
+            if (!levelLbhDr.isSelected()) {
+                if (!levelSmDgn.isSelected()) {
+                    if (!levelKrgDr.isSelected()) {
+                        checker = false;
+                    }
+                }
+            }
+        }
+
+        //pendidikan
+        if (InputDataHandler.checkKey("pendidikanInternal")) {
+            if (pendidikanLbhDr.isSelected()) {
+                InputDataHandler.inputDataKetetanggaan("pendidikanLbhDr", pendidikanLbhDr.getText());
+                nilaiRB = InputDataHandler.getValue("pendidikanLbhDr");
+                if (nilaiRB.equals(">=")) {
+                    nilaiRB = "2";
+                }
+                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                n++;
+                checker = true;
+            } else {
+                if (pendidikanSmDgn.isSelected()) {
+                    InputDataHandler.inputDataKetetanggaan("pendidikanSmDgn", pendidikanSmDgn.getText());
+                    nilaiRB = InputDataHandler.getValue("pendidikanSmDgn");
+                    if (nilaiRB.equals("=")) {
+                        nilaiRB = "0";
+                    }
+                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                    n++;
+                    checker = true;
+                } else {
+                    if (pendidikanKrgDr.isSelected()) {
+                        InputDataHandler.inputDataKetetanggaan("pendidikanKurangDari", pendidikanKrgDr.getText());
+                        nilaiRB = InputDataHandler.getValue("pendidikanKurangDari");
+                        if (nilaiRB.equals("<=")) {
+                            nilaiRB = "1";
+                        }
+                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                        n++;
+                        checker = true;
+                    }
+                }
+            }
+            if (!pendidikanLbhDr.isSelected()) {
+                if (!pendidikanSmDgn.isSelected()) {
+                    if (!pendidikanKrgDr.isSelected()) {
+                        checker = false;
+                    }
+                }
+            }
+        }
+
+        // pendapatan
+        if (InputDataHandler.checkKey("pendapatanInternal")) {
+            if (pendapatanLbhDr.isSelected()) {
+                InputDataHandler.inputDataKetetanggaan("pendapatanLbhDr", pendapatanLbhDr.getText());
+                nilaiRB = InputDataHandler.getValue("pendapatanLbhDr");
+                if (nilaiRB.equals(">=")) {
+                    nilaiRB = "2";
+                }
+                kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                n++;
+                checker = true;
+            } else {
+                if (pendapatanSmDgn.isSelected()) {
+                    InputDataHandler.inputDataKetetanggaan("pendapatanSmDgn", pendapatanSmDgn.getText());
+                    nilaiRB = InputDataHandler.getValue("pendapatanSmDgn");
+                    if (nilaiRB.equals("=")) {
+                        nilaiRB = "0";
+                    }
+                    kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                    n++;
+                    checker = true;
+                } else {
+                    if (pendapatanKrgDr.isSelected()) {
+                        InputDataHandler.inputDataKetetanggaan("pendapatanKurangDari", pendapatanKrgDr.getText());
+                        nilaiRB = InputDataHandler.getValue("pendapatanKurangDari");
+                        if (nilaiRB.equals("<=")) {
+                            nilaiRB = "1";
+                        }
+                        kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
+                        n++;
+                        checker = true;
+                    }
+                }
+            }
+            if (!pendapatanLbhDr.isSelected()) {
+                if (!pendapatanSmDgn.isSelected()) {
+                    if (!pendapatanKrgDr.isSelected()) {
+                        checker = false;
+                    }
+                }
+            }
+        }
+
+        InputDataHandler.setRelation(kumpulanNilaiRelasi);
+        if (checker == true) {
+            this.hide();
+            TampilanKondisiEksternal ke = new TampilanKondisiEksternal();
+            ke.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "You cannot move to the other page because you must fill radio button first!");
+        }
+    }                                       
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(TampilanKondisiKetetanggaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(TampilanKondisiKetetanggaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(TampilanKondisiKetetanggaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(TampilanKondisiKetetanggaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TampilanKondisiKetetanggaan().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton backButton;
+    private javax.swing.JPanel jJenisKelamin;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jLevel;
+    private javax.swing.JPanel jLokasi;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPendapatan;
+    private javax.swing.JPanel jPendapatan2;
+    private javax.swing.JPanel jPendidikan;
+    private javax.swing.JPanel jUmur;
+    private javax.swing.JPanel jbidangUsaha;
+    private javax.swing.JRadioButton levelKrgDr;
+    private javax.swing.JRadioButton levelLbhDr;
+    private javax.swing.JRadioButton levelSmDgn;
+    public javax.swing.JButton nextButton;
+    private javax.swing.JCheckBox pendapatanCBNeg2;
+    private javax.swing.JRadioButton pendapatanKrgDr;
+    private javax.swing.JRadioButton pendapatanKrgDr2;
+    private javax.swing.JRadioButton pendapatanLbhDr;
+    private javax.swing.JRadioButton pendapatanLbhDr2;
+    private javax.swing.JRadioButton pendapatanSmDgn;
+    private javax.swing.JRadioButton pendapatanSmDgn2;
+    private javax.swing.JRadioButton pendidikanKrgDr;
+    private javax.swing.JRadioButton pendidikanLbhDr;
+    private javax.swing.JRadioButton pendidikanSmDgn;
+    private javax.swing.JRadioButton umurKrgDr;
+    private javax.swing.JRadioButton umurLbhDr;
+    private javax.swing.JRadioButton umurSmDgn;
+    // End of variables declaration                   
+}
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java, caption=TampilanKondisiEksternal.java]
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ecasimulatorjframe;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Vanessa
+ */
+public class TampilanKondisiEksternal extends javax.swing.JFrame {
+
+    /**
+     * Creates new form TampilanKondisiEksternal
+     */
+    double[] bobotPF;
+    PublicFactor pf;
+
+    public TampilanKondisiEksternal() {
+        initComponents();
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        nilaiPP = new javax.swing.JTextField();
+        nilaiDP = new javax.swing.JTextField();
+        nilaiNSB = new javax.swing.JTextField();
+        nilaiIFA = new javax.swing.JTextField();
+        nextButton = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        backButton = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        nilaiKeterbukaanPasar = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        nilaiInfrastrukturKomersial = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        nilaiTransferPenelitian = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        nilaiPendidikanSMK = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        nilaiPendidikanSDSMP = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        nilaiKPPajak = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        nilaiKPEkonomi = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        nilaiKeuanganKewirausahaan = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("SIMULATOR ECA");
+
+        jLabel2.setText("Parameter Setting Kondisi Eksternal :");
+
+        jLabel3.setText("Faktor Publik :");
+
+        jLabel4.setText("Program Pemerintah :");
+
+        jLabel5.setText("Dinamika Pasar :");
+
+        jLabel6.setText("Norma, Sosial dan Budaya :");
+
+        jLabel7.setText("Infrastruktur Fisik dan Akses Layanan :");
+
+        nilaiPP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiPPActionPerformed(evt);
+            }
+        });
+
+        nilaiDP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiDPActionPerformed(evt);
+            }
+        });
+
+        nilaiNSB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiNSBActionPerformed(evt);
+            }
+        });
+
+        nilaiIFA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiIFAActionPerformed(evt);
+            }
+        });
+
+        nextButton.setText("NEXT");
+        nextButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextButtonMouseClicked(evt);
+            }
+        });
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("%");
+
+        jLabel9.setText("%");
+
+        jLabel10.setText("%");
+
+        jLabel11.setText("%");
+
+        backButton.setText("BACK");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("Keterbukaan Pasar : ");
+
+        nilaiKeterbukaanPasar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiKeterbukaanPasarActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setText("%");
+
+        jLabel15.setText("Infrastruktur Komersial dan Legal : ");
+
+        nilaiInfrastrukturKomersial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiInfrastrukturKomersialActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setText("%");
+
+        jLabel17.setText("Transfer Penelitian dan Pengembangan : ");
+
+        jLabel18.setText("%");
+
+        jLabel19.setText("Pendidikan Kewirausahaan pada SMK, Profesional dan Universitas : ");
+
+        jLabel20.setText("%");
+
+        jLabel21.setText("Pendidikan Kewirausahaan pada SD dan SMP :");
+
+        nilaiPendidikanSDSMP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiPendidikanSDSMPActionPerformed(evt);
+            }
+        });
+
+        jLabel22.setText("%");
+
+        jLabel23.setText("Kebijakan Pemerintah terkait Pajak :");
+
+        jLabel24.setText("%");
+
+        jLabel25.setText("Kebijakan Pemerintah terkait Ekonomi :");
+
+        jLabel26.setText("%");
+
+        jLabel27.setText("Keuangan terkait Kewirausahaan :");
+
+        jLabel28.setText("%");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(nextButton)
+                .addGap(29, 29, 29))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
+                                    .addComponent(backButton))
+                                .addGap(18, 18, 18)
+                                .addComponent(nilaiIFA, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel11))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addGap(18, 18, 18)
+                                .addComponent(nilaiNSB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel10))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel12)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nilaiKeterbukaanPasar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel13))
+                            .addComponent(jLabel14)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(18, 18, 18)
+                                .addComponent(nilaiDP, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel9))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel15)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nilaiInfrastrukturKomersial, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel16))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(nilaiTransferPenelitian, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel18))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nilaiPP, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel8))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(162, 162, 162)
+                                .addComponent(jLabel1))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel21)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(nilaiPendidikanSDSMP, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel22))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel19)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(nilaiPendidikanSMK, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel20))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel23)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(nilaiKPPajak, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel25)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(nilaiKPEkonomi, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel26))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel27)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nilaiKeuanganKewirausahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel28))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2)))
+                .addContainerGap(86, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(nilaiKeuanganKewirausahaan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel28))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(nilaiKPEkonomi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel26))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(nilaiKPPajak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel24))
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(nilaiPP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(nilaiPendidikanSDSMP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel22))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(nilaiPendidikanSMK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(nilaiTransferPenelitian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18))
+                .addGap(16, 16, 16)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(nilaiInfrastrukturKomersial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel16)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(nilaiDP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(nilaiKeterbukaanPasar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(nilaiIFA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(nilaiNSB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nextButton)
+                    .addComponent(backButton))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+        this.hide();
+        TampilanKondisiKetetanggaan ki = new TampilanKondisiKetetanggaan();
+        ki.setVisible(true);
+    }                                          
+
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+
+
+    }                                          
+
+    private void nilaiPPActionPerformed(java.awt.event.ActionEvent evt) {                                        
+
+    }                                       
+
+    private void nilaiDPActionPerformed(java.awt.event.ActionEvent evt) {                                        
+
+    }                                       
+
+    private void nilaiNSBActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+
+    }                                        
+
+    private void nilaiIFAActionPerformed(java.awt.event.ActionEvent evt) {                                         
+
+    }                                        
+
+    private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {                                        
+        boolean checker = true;
+//        String isiNilaiDP;
+//        String isiNilaiIFA;
+//        String isiNilaiNSB;
+//        String isiNilaiPP;
+        double isiNilaiKK = 0.0;
+        double isiNilaiIK = 0.0;
+        double isiNilaiKPE = 0.0;
+        double isiNilaiKPP = 0.0;
+        double isiNilaiKP = 0.0;
+        double isiNilaiPSS = 0.0;
+        double isiNilaiPS = 0.0;
+        double isiNilaiTP = 0.0;
+        double[] kumpulanNilaiPF = new double[12];
+        double isiNilaiDP = 0.0;
+        double isiNilaiIFA = 0.0;
+        double isiNilaiNSB = 0.0;
+        double isiNilaiPP = 0.0;
+        if (nilaiDP.getText().equals("")) {
+            InputDataHandler.inputDataEksternal("dinamikaPasar", null);
+            checker = false;
+
+        } else if (nilaiIFA.getText().equals("")) {
+            InputDataHandler.inputDataEksternal("InfrastrukturListrik", null);
+            checker = false;
+        } else if (nilaiNSB.getText().equals("")) {
+            InputDataHandler.inputDataEksternal("NormaSosialBudaya", null);
+            checker = false;
+        } else if (nilaiPP.getText().equals("")) {
+            InputDataHandler.inputDataEksternal("ProgramPemerintah", null);
+            checker = false;
+        } else if (nilaiInfrastrukturKomersial.getText().equals("")) {
+            InputDataHandler.inputDataEksternal("InfrastrukturKomersial", null);
+            checker = false;
+        } else if (nilaiKPEkonomi.getText().equals("")) {
+            InputDataHandler.inputDataEksternal("NilaiKPEkonomi", null);
+            checker = false;
+        } else if (nilaiKPPajak.getText().equals("")) {
+            InputDataHandler.inputDataEksternal("nilaiKPPajak", null);
+            checker = false;
+        } else if (nilaiKeterbukaanPasar.getText().equals("")) {
+            InputDataHandler.inputDataEksternal("nilaiKeterbukaanPasar", null);
+            checker = false;
+        } else if (nilaiKeuanganKewirausahaan.getText().equals("")) {
+            InputDataHandler.inputDataEksternal("nilaiKeuanganKewirausahaan", null);
+            checker = false;
+        } else if (nilaiPendidikanSDSMP.getText().equals("")) {
+            InputDataHandler.inputDataEksternal("nilaiPendidikanSDSMP", null);
+            checker = false;
+        } else if (nilaiPendidikanSMK.getText().equals("")) {
+            InputDataHandler.inputDataEksternal("nilaiPendidikanSMK", null);
+            checker = false;
+        } else if (nilaiTransferPenelitian.getText().equals("")) {
+            InputDataHandler.inputDataEksternal("nilaiTransferPenelitian", null);
+            checker = false;
+        } else {
+            if (!nilaiKeuanganKewirausahaan.equals("")) {
+                isiNilaiKK = Double.parseDouble(nilaiKeuanganKewirausahaan.getText()) / 100.0;
+                String nilaiKK = Double.toString(isiNilaiKK);
+                InputDataHandler.inputDataEksternal("nilaiKeuanganKewirausahaan", nilaiKK);
+                kumpulanNilaiPF[0] = Double.parseDouble(InputDataHandler.getValue("nilaiKeuanganKewirausahaan"));
+                if (!nilaiKPEkonomi.getText().equals("")) {
+                    isiNilaiKPE = Double.parseDouble(nilaiKPEkonomi.getText()) / 100.0;
+                    String nilaiKP = Double.toString(isiNilaiKPE);
+                    InputDataHandler.inputDataEksternal("nilaiKPEkonomi", nilaiKP);
+                    kumpulanNilaiPF[1] = Double.parseDouble(InputDataHandler.getValue("nilaiKPEkonomi"));
+                    if (!nilaiKPPajak.getText().equals("")) {
+                        isiNilaiKPP = Double.parseDouble(nilaiKPPajak.getText()) / 100.0;
+                        String nilaiKPP = Double.toString(isiNilaiKPP);
+                        InputDataHandler.inputDataEksternal("nilaiKPPajak", nilaiKPP);
+                        kumpulanNilaiPF[2] = Double.parseDouble(InputDataHandler.getValue("nilaiKPPajak"));
+                        if (!nilaiPP.getText().equals("")) {
+                            isiNilaiPP = Double.parseDouble(nilaiPP.getText()) / 100.0;
+                            String nilaiPP = Double.toString(isiNilaiPP);
+                            InputDataHandler.inputDataEksternal("ProgramPemerintah", nilaiPP);
+                            kumpulanNilaiPF[3] = Double.parseDouble(InputDataHandler.getValue("ProgramPemerintah"));
+
+                            if (!nilaiPendidikanSDSMP.getText().equals("")) {
+                                isiNilaiPSS = Double.parseDouble(nilaiPendidikanSDSMP.getText()) / 100.0;
+                                String nilaiPSS = Double.toString(isiNilaiPSS);
+                                InputDataHandler.inputDataEksternal("nilaiPendidikanSDSMP", nilaiPSS);
+                                kumpulanNilaiPF[4] = Double.parseDouble(InputDataHandler.getValue("nilaiPendidikanSDSMP"));
+                                if (!nilaiPendidikanSMK.getText().equals("")) {
+                                    isiNilaiPS = Double.parseDouble(nilaiPendidikanSMK.getText()) / 100.0;
+                                    String nilaiPS = Double.toString(isiNilaiPS);
+                                    InputDataHandler.inputDataEksternal("nilaiPendidikanSMK", nilaiPS);
+                                    kumpulanNilaiPF[5] = Double.parseDouble(InputDataHandler.getValue("nilaiPendidikanSMK"));
+                                    if (!nilaiTransferPenelitian.getText().equals("")) {
+                                        isiNilaiTP = Double.parseDouble(nilaiTransferPenelitian.getText()) / 100.0;
+                                        String nilaiTP = Double.toString(isiNilaiTP);
+                                        InputDataHandler.inputDataEksternal("nilaiTransferPenelitian", nilaiTP);
+                                        kumpulanNilaiPF[6] = Double.parseDouble(InputDataHandler.getValue("nilaiTransferPenelitian"));
+                                        if (!nilaiInfrastrukturKomersial.getText().equals("")) {
+                                            isiNilaiIK = Double.parseDouble(nilaiInfrastrukturKomersial.getText()) / 100.0;
+                                            String nilaiIK = Double.toString(isiNilaiIK);
+                                            InputDataHandler.inputDataEksternal("nilaiInfrastrukturKomersial", nilaiIK);
+                                            kumpulanNilaiPF[7] = Double.parseDouble(InputDataHandler.getValue("nilaiInfrastrukturKomersial"));
+                                            if (!nilaiDP.getText().equals("")) {
+                                                isiNilaiDP = Double.parseDouble(nilaiDP.getText()) / 100.0;
+                                                String nilaiDP = Double.toString(isiNilaiDP);
+                                                InputDataHandler.inputDataEksternal("DinamikaPasar", nilaiDP);
+                                                kumpulanNilaiPF[8] = Double.parseDouble(InputDataHandler.getValue("DinamikaPasar"));
+                                                if (!nilaiKeterbukaanPasar.getText().equals("")) {
+                                                    isiNilaiKP = Double.parseDouble(nilaiKeterbukaanPasar.getText()) / 100.0;
+                                                    String nilaiKPas = Double.toString(isiNilaiKP);
+                                                    InputDataHandler.inputDataEksternal("nilaiKeterbukaanPasar", nilaiKPas);
+                                                    kumpulanNilaiPF[9] = Double.parseDouble(InputDataHandler.getValue("nilaiKeterbukaanPasar"));
+                                                    if (!nilaiIFA.getText().equals("")) {
+                                                        isiNilaiIFA = Double.parseDouble(nilaiIFA.getText()) / 100.0;
+                                                        String nilaiIFA = Double.toString(isiNilaiIFA);
+                                                        InputDataHandler.inputDataEksternal("InfrastrukturListrik", nilaiIFA);
+                                                        kumpulanNilaiPF[10] = Double.parseDouble(InputDataHandler.getValue("InfrastrukturListrik"));
+                                                        if (!nilaiNSB.getText().equals("")) {
+                                                            isiNilaiNSB = Double.parseDouble(nilaiNSB.getText()) / 100.0;
+                                                            String nilaiNSB = Double.toString(isiNilaiNSB);
+                                                            InputDataHandler.inputDataEksternal("NormaSosialBudaya", nilaiNSB);
+                                                            kumpulanNilaiPF[11] = Double.parseDouble(InputDataHandler.getValue("NormaSosialBudaya"));
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        int totalNilai=0;
+        for (int i = 0; i < kumpulanNilaiPF.length; i++) {
+            totalNilai+=kumpulanNilaiPF[i]*100;
+        }
+        
+        if ( totalNilai != 100) {
+            JOptionPane.showMessageDialog(null, "The sum of text fields must 100%!");
+            checker = false;
+        }
+        if (checker == true) {
+            this.hide();
+            TampilanDataWirausaha ks = new TampilanDataWirausaha();
+            ks.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "You must fill the text field!");
+        }
+        InputDataHandler.setDataEksternal(kumpulanNilaiPF);
+    }                                       
+
+    private void nilaiKeterbukaanPasarActionPerformed(java.awt.event.ActionEvent evt) {                                                      
+        // TODO add your handling code here:
+    }                                                     
+
+    private void nilaiInfrastrukturKomersialActionPerformed(java.awt.event.ActionEvent evt) {                                                            
+        // TODO add your handling code here:
+    }                                                           
+
+    private void nilaiPendidikanSDSMPActionPerformed(java.awt.event.ActionEvent evt) {                                                     
+        // TODO add your handling code here:
+    }                                                    
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(TampilanKondisiEksternal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(TampilanKondisiEksternal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(TampilanKondisiEksternal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(TampilanKondisiEksternal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TampilanKondisiEksternal().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton backButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    public javax.swing.JButton nextButton;
+    private javax.swing.JTextField nilaiDP;
+    private javax.swing.JTextField nilaiIFA;
+    private javax.swing.JTextField nilaiInfrastrukturKomersial;
+    private javax.swing.JTextField nilaiKPEkonomi;
+    private javax.swing.JTextField nilaiKPPajak;
+    private javax.swing.JTextField nilaiKeterbukaanPasar;
+    private javax.swing.JTextField nilaiKeuanganKewirausahaan;
+    private javax.swing.JTextField nilaiNSB;
+    private javax.swing.JTextField nilaiPP;
+    private javax.swing.JTextField nilaiPendidikanSDSMP;
+    private javax.swing.JTextField nilaiPendidikanSMK;
+    private javax.swing.JTextField nilaiTransferPenelitian;
+    // End of variables declaration                   
+}
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java, caption=TampilanDataWirausaha.java]
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ecasimulatorjframe;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+/**
+ *
+ * @author Vanessa
+ */
+public class TampilanDataWirausaha extends javax.swing.JFrame {
+
+    /**
+     * Creates new form TampilanSimulasi
+     */
+    CA ca;
+    public BufferedReader br;
+    private final JFileChooser openFileChooser;
+
+    public TampilanDataWirausaha() {
+        initComponents();
+        openFileChooser = new JFileChooser();
+        openFileChooser.setSelectedFile(new File("D:\\text.txt"));
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        openFileButton = new javax.swing.JButton();
+        messageLabel = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        nextButton = new javax.swing.JButton();
+        backButton = new javax.swing.JButton();
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("SIMULATOR ECA");
+
+        jLabel2.setText("Data Simulasi :");
+
+        openFileButton.setText("OPEN FILE");
+        openFileButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                openFileButtonMouseClicked(evt);
+            }
+        });
+        openFileButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                openFileButtonActionPerformed(evt);
+            }
+        });
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Jenis Kelamin", "Umur", "Usia Bisnis (bulan)", "Kategori", "Sub Kategori", "Pendidikan", "Lokasi", "Pendapatan", "Level", "Point"
+            }
+        ));
+        jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jScrollPane1.setViewportView(jTable1);
+
+        nextButton.setText("NEXT");
+        nextButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextButtonMouseClicked(evt);
+            }
+        });
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextButtonActionPerformed(evt);
+            }
+        });
+
+        backButton.setText("BACK");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(openFileButton)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(111, 111, 111)
+                                        .addComponent(messageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 579, Short.MAX_VALUE))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addGap(235, 235, 235))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(backButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(nextButton)
+                .addGap(53, 53, 53))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(23, 23, 23)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(openFileButton)
+                    .addComponent(messageLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nextButton)
+                    .addComponent(backButton))
+                .addGap(31, 31, 31))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void openFileButtonActionPerformed(java.awt.event.ActionEvent evt) {                                               
+
+    }                                              
+
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+
+        if (!openFileChooser.getSelectedFile().exists()) {
+            JOptionPane.showMessageDialog(null, "You must choose the file first!");
+            return;
+        }
+        this.hide();
+        TampilanSimulasi ts = new TampilanSimulasi(this.ca);
+        ts.setVisible(true);
+    }                                          
+
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        this.hide();
+        TampilanKondisiEksternal ke = new TampilanKondisiEksternal();
+        ke.setVisible(true);
+    }                                          
+
+    private void openFileButtonMouseClicked(java.awt.event.MouseEvent evt) {                                            
+        double[] kumpulanBobot;
+        int returnValue = openFileChooser.showOpenDialog(this);
+        StringBuilder sb = new StringBuilder();
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            try {
+                br = new BufferedReader(new FileReader(openFileChooser.getSelectedFile()));
+                DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+
+                Object[] tableLines = br.lines().toArray();
+                ca = new CA(tableLines.length, InputDataHandler.getKetetanggaan(), 4);
+                kumpulanBobot = new double[InputDataHandler.getKetetanggaan()];
+                int i;
+                for (i = 0; i < tableLines.length; i++) {
+                    String lines = tableLines[i].toString().trim();
+                    String[] dataRow = lines.split(",");
+                    model.addRow(dataRow);
+
+                    //memasukkan data dari fileInput ke kelas Entrepreneurs ca
+                    ca.E[i] = new Entrepreneurs();
+                    if (dataRow[0].equals("false")) {
+                        ca.E[i].sex = false; // pria
+                    } else {
+                        ca.E[i].sex = true; //wanita
+                    }
+                    ca.E[i].age = Integer.parseInt(dataRow[1]);
+                    ca.E[i].b_age = Integer.parseInt(dataRow[2]);
+                    ca.E[i].b_category = Integer.parseInt(dataRow[3]);
+                    ca.E[i].b_area = Integer.parseInt(dataRow[4]);
+                    ca.E[i].education = Integer.parseInt(dataRow[5]);
+                    ca.E[i].location = Integer.parseInt(dataRow[6]);
+                    ca.E[i].income = Integer.parseInt(dataRow[7]);
+                    ca.E[i].level = Integer.parseInt(dataRow[8]);
+                    ca.E[i].point = 0.0;
+                }
+            } catch (IOException e) {
+                //messageLabel.setText("failed to load the file!");
+                Logger.getLogger(TampilanDataWirausaha.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+    }                                           
+
+    private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {                                        
+
+    }                                       
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(TampilanDataWirausaha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(TampilanDataWirausaha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(TampilanDataWirausaha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(TampilanDataWirausaha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TampilanDataWirausaha().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton backButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel messageLabel;
+    public javax.swing.JButton nextButton;
+    private javax.swing.JButton openFileButton;
+    // End of variables declaration                   
+}
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java, caption=Entrepreneurs.java]
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ecasimulatorjframe;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Vanessa
+ */
+public class TampilanSimulasi extends javax.swing.JFrame {
+
+    /**
+     * Creates new form TampilanSimulasi
+     */
+    CA ca;
+
+    public TampilanSimulasi(CA ca) {
+        initComponents();
+        this.ca = ca;
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        nilaiA = new javax.swing.JTextField();
+        nilaiB = new javax.swing.JTextField();
+        nilaiC = new javax.swing.JTextField();
+        nilaiThreshold = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        simulateButton = new javax.swing.JButton();
+        nilaiPeriode = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("SIMULATOR ECA");
+
+        jLabel2.setText("Simulasi :");
+
+        jLabel3.setText("a :");
+
+        jLabel4.setText("b :");
+
+        jLabel5.setText("c :");
+
+        jLabel6.setText("Threshold :");
+
+        nilaiA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiAActionPerformed(evt);
+            }
+        });
+
+        nilaiB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiBActionPerformed(evt);
+            }
+        });
+
+        nilaiC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiCActionPerformed(evt);
+            }
+        });
+
+        nilaiThreshold.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiThresholdActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Periode :");
+
+        simulateButton.setText("SIMULATE");
+        simulateButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                simulateButtonMouseClicked(evt);
+            }
+        });
+        simulateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                simulateButtonActionPerformed(evt);
+            }
+        });
+
+        nilaiPeriode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nilaiPeriodeActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText(" bulan");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nilaiA)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nilaiB, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(simulateButton)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(nilaiC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel6)))
+                        .addGap(13, 13, 13)
+                        .addComponent(nilaiThreshold, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel7)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nilaiPeriode, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(nilaiA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nilaiB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nilaiC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nilaiThreshold, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(nilaiPeriode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(simulateButton)
+                .addGap(21, 21, 21))
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void nilaiAActionPerformed(java.awt.event.ActionEvent evt) {                                       
+
+    }                                      
+
+    private void simulateButtonActionPerformed(java.awt.event.ActionEvent evt) {                                               
+
+    }                                              
+
+    private void nilaiBActionPerformed(java.awt.event.ActionEvent evt) {                                       
+
+    }                                      
+
+    private void nilaiCActionPerformed(java.awt.event.ActionEvent evt) {                                       
+
+    }                                      
+
+    private void nilaiThresholdActionPerformed(java.awt.event.ActionEvent evt) {                                               
+
+    }                                              
+
+    private void nilaiPeriodeActionPerformed(java.awt.event.ActionEvent evt) {                                             
+
+    }                                            
+
+    private void simulateButtonMouseClicked(java.awt.event.MouseEvent evt) {                                            
+        boolean checker = true;
+        double a = 0.0;
+        double b = 0.0;
+        double c = 0.0;
+        double[] kumpulanBobot = new double[3];
+        int m = 0;
+        if (nilaiA.getText().equals("")) {
+            InputDataHandler.inputDataSimulasi("nilaiA", null);
+            checker = false;
+        } else if (nilaiB.getText().equals("")) {
+            InputDataHandler.inputDataSimulasi("nilaiB", null);
+            checker = false;
+        } else if (nilaiC.getText().equals("")) {
+            InputDataHandler.inputDataSimulasi("nilaiC", null);
+            checker = false;
+        } else if (nilaiPeriode.getText().equals("")) {
+            InputDataHandler.inputDataSimulasi("periode", null);
+            checker = false;
+        } else if (nilaiThreshold.getText().equals("")) {
+            InputDataHandler.inputDataSimulasi("threshold", null);
+            checker = false;
+        } else {
+            if (!nilaiA.getText().equals("")) {
+                InputDataHandler.inputDataSimulasi("nilaiA", nilaiA.getText());
+                a = Double.parseDouble(nilaiA.getText());
+                kumpulanBobot[m] = a;
+                m++;
+                if (!nilaiB.getText().equals("")) {
+                    InputDataHandler.inputDataSimulasi("nilaiB", nilaiB.getText());
+                    b = Double.parseDouble(nilaiB.getText());
+                    kumpulanBobot[m] = b;
+                    m++;
+                    if (!nilaiC.getText().equals("")) {
+                        InputDataHandler.inputDataSimulasi("nilaiC", nilaiC.getText());
+                        c = Double.parseDouble(nilaiC.getText());
+                        kumpulanBobot[m] = c;
+                        m++;
+                        if (!nilaiPeriode.getText().equals("")) {
+                            InputDataHandler.inputDataSimulasi("periode", nilaiPeriode.getText());
+                            if (!nilaiThreshold.getText().equals("")) {
+                                InputDataHandler.inputDataSimulasi("threshold", nilaiThreshold.getText());
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        int totalNilai = 0;
+        for (int i = 0; i < kumpulanBobot.length; i++) {
+            totalNilai += kumpulanBobot[i]*100;
+        }
+        if (totalNilai!=100) {
+            JOptionPane.showMessageDialog(null, "The sum of a,b and c's value must 1!");
+        }
+
+        if (checker == false) {
+            JOptionPane.showMessageDialog(null, "You must fill the text field first!");
+        }
+
+        double[] composition = new double[]{a, b, c};
+
+        double[] POAf = new double[]{8.6, 17.7, 28.4, 29.5, 15.8}; // female
+        double[] POAm = new double[]{8.3, 14.5, 26.7, 36.2, 14.3}; // male
+
+        // Perceived Opportunities Education
+        double[] POEf = new double[]{1.8, 17.4, 23.4, 49.8, 7.4, 0.1};
+        double[] POEm = new double[]{0.7, 11.8, 19.9, 54.7, 12.6, 0.3};
+
+        // Perceived Opportunities Location
+        double[] POLf = new double[]{0.3, 6.4, 4.8, 2.8, 1.4, 3.5, 1.7, 46.3, 9.6, 6.1, 9.5, 2.5, 1.1, 1.0, 0.6, 2.4}; 
+        double[] POLm = new double[]{0.5, 4.4, 4.5, 2.3, 1.9, 3.8, 2.1, 47.6, 11.1, 6.3, 8.4, 2.7, 0.9, 1.1, 0.5, 2.0};
+
+        // Perceived Opportunities Income
+        double[] POIf = new double[]{42.7, 41.5, 10.8, 2.8, 1.5, 0.3, 0, 0.5}; 
+        double[] POIm = new double[]{42.1, 41.7, 11.0, 3.4, 0.7, 0.3, 0.5, 0.2};
+
+        // Perceived Capabilities Age
+        double[] PCAf = new double[]{8.9, 16.1, 28.2, 31.6, 15.1}; 
+        double[] PCAm = new double[]{8.5, 17.3, 26.1, 33.4, 14.7};    
+
+        // Perceived Capabilities Education
+        double[] PCEf = new double[]{1.7, 15.4, 22.8, 51.5, 8.2, 0.4}; 
+        double[] PCEm = new double[]{0.9, 12.4, 17.4, 56.9, 12.0, 0.5}; 
+
+        // Perceived Capabilities Income
+        double[] PCIf = new double[]{41.4, 43.0, 10.2, 3.1, 1.4, 0.2, 0.2, 0.4}; 
+        double[] PCIm = new double[]{42.9, 42.1, 10.5, 3.1, 0.8, 0.3, 0.2, 0.2};
+
+        // Perceived Capabilities Location
+        double[] PCLf = new double[]{0.4, 7.5, 3.9, 2.4, 2.0, 3.2, 1.6, 41.1, 10.8, 6.9, 9.0, 3.7, 1.2, 1.0, 0.8, 4.4}; 
+        double[] PCLm = new double[]{0.7, 5.4, 3.4, 2.6, 3.0, 3.8, 1.8, 41.1, 11.5, 7.2, 8.7, 3.5, 1.2, 0.9, 0.7, 4.3}; 
+        // Role Model Age
+        double[] RMAf = new double[]{7.5, 17.6, 26.8, 31.0, 17.1};    
+        double[] RMAm = new double[]{9.1, 16.9, 25.3, 34.4, 14.3};   
+
+        // Role Model Income
+        double[] RMIf = new double[]{43.1, 41.8, 9.7, 3.0, 1.6, 0.4, 0.1, 0.4}; 
+        double[] RMIm = new double[]{42.9, 42.1, 10.4, 3.0, 0.7, 0.2, 0.5, 0.2};
+
+        // Fear of Failuer Age
+        double[] FFAf = new double[]{8.2, 16.4, 23.5, 32.4, 19.5};
+        double[] FFAm = new double[]{7.2, 14.3, 23.6, 36.4, 18.6};
+
+        // Fear of Failure Education
+        double[] FFEf = new double[]{2.3, 13.9, 22.9, 51.7, 8.7, 0.5};
+        double[] FFEm = new double[]{0.7, 12.1, 18.4, 57.4, 11.3, 0};
+
+        // Fear of Failure Location
+        double[] FFLf = new double[]{0.7, 10.3, 3.4, 3.8, 3.1, 4.2, 2.5, 36.9, 2.6, 7.8, 12.1, 4.6, 1.9, 1.0, 0.4, 4.8};
+        double[] FFLm = new double[]{0.7, 8.9, 3.4, 2.4, 4.2, 5.4, 2.9, 35.4, 1.8, 7.1, 13.2, 4.7, 2.2, 1.0, 0.5, 6.1};
+
+        // Media Attention Location
+        double[] MALf = new double[]{0.7, 9.9, 3.6, 3.5, 5.4, 4.1, 1.9, 41.1, 6.3, 9.1, 4.7, 2.9, 1.1, 1.0, 0.7, 4.0};
+        double[] MALm = new double[]{0.9, 8.1, 3.4, 3.6, 4.7, 4.9, 1.9, 41.8, 6.5, 8.2, 5.8, 2.9, 1.3, 1.1, 0.7, 4.1};
+
+        // Media Attention Income
+        double[] MAIf = new double[]{44.4, 41.6, 9.1, 2.7, 1.4, 0.2, 0.2, 0.4};
+        double[] MAIm = new double[]{44.0, 40.0, 11.4, 3.1, 0.6, 0.2, 0.4, 0.2};
+
+        // High Status Successful Income
+        double[] HSSIf = new double[]{45.6, 41.7, 8.5, 2.2, 1.2, 0.3, 0.1, 0.3};
+        double[] HSSIm = new double[]{46.2, 39.5, 10.2, 2.8, 0.6, 0.2, 0.4, 0.2};
+
+        //High Status Successful Location
+        double[] HSSLf = new double[]{0.7, 9.0, 2.7, 2.6, 5.4, 4.5, 1.8, 35.0, 9.8, 8.3, 10.8, 2.8, 1.5, 1.0, 0.8, 3.4};
+        double[] HSSLm = new double[]{0.8, 7.2, 2.3, 3.2, 4.8, 4.5, 2.2, 37.0, 10.2, 7.6, 10.7, 2.9, 1.6, 1.1, 0.8, 3.1};
+
+        // High Status Successful Age
+        double[] HSSAf = new double[]{10, 17, 26, 31, 17};
+        double[] HSSAm = new double[]{9, 16, 25, 33, 16};
+
+        // High Status Successful Education
+        double[] HSSEf = new double[]{2, 15, 23, 52, 8, 0};
+        double[] HSSEm = new double[]{1, 12, 19, 56, 11, 0};
+
+        // Faktor Publik
+        double[] pfs = new double[]{3.06, 2.69, 2.22, 2.53, 2.54, 3.3, 2.31, 3.25, 3.92, 2.82, 3.45, 3.29};
+        double[] pfw = InputDataHandler.getDataEksternal();
+
+        double[] nw = InputDataHandler.getBobot();
+        int[] nr = InputDataHandler.getRelation();
+
+        ca.pub.setFactors(pfs);
+        ca.pub.setWeights(pfw);
+
+        ca.N.setWeight(nw);
+        ca.N.setRelation(nr);
+
+        int maxIter = Integer.parseInt(InputDataHandler.getValue("periode")); // masukan periode
+
+        Entrepreneurs[][] e = new Entrepreneurs[maxIter][];
+        String[] line = new String[maxIter];
+        try {
+            PrintWriter pw = new PrintWriter(new File("D:\\output.csv"));
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < maxIter; i++) {
+                sb.append("Bulan ke-" + i);
+                sb.append('\n');
+
+                ca.NeighborhoodDefinition();
+                ca.calculatePoint(POAm, POAf, POEm, POEf, POLm, POLf, POIm, POIf, PCAm, PCAf, PCEm, PCEf, PCLm, PCLf, PCIm, PCIf, RMAm, RMAf, RMIm, RMIf, FFAf, FFAm, FFEf, FFEm, FFLf, FFLm, MALf, MALm, MAIf, MAIm, HSSIf, HSSIm, HSSLf, HSSLm, HSSAf, HSSAm, HSSEf, HSSEm);
+                Entrepreneurs[] nE;
+                e[i] = ca.stateTransition(ca, composition);
+
+                for (int j = 0; j < e[i].length; j++) {
+                    sb.append(e[i][j].toString2());
+                    sb.append('\n');
+
+                }
+                // perubahan disimpan dulu
+                ca.E = e[i];
+                // lalu baru diprint
+                line[i] = ca.print(i);
+
+            }
+            pw.write(sb.toString());
+            pw.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TampilanSimulasi.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.hide();
+        TampilanHasil th = new TampilanHasil(line);
+
+        th.setVisible(true);
+    }                                           
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(TampilanSimulasi.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(TampilanSimulasi.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(TampilanSimulasi.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(TampilanSimulasi.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+//                new TampilanSimulasi(this.ca).setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JTextField nilaiA;
+    private javax.swing.JTextField nilaiB;
+    private javax.swing.JTextField nilaiC;
+    private javax.swing.JTextField nilaiPeriode;
+    private javax.swing.JTextField nilaiThreshold;
+    public javax.swing.JButton simulateButton;
+    // End of variables declaration                   
+}
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java, caption=TampilanHasil.java]
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ecasimulatorjframe;
+
+import javax.swing.table.DefaultTableModel;
+
+/**
+ *
+ * @author Vanessa
+ */
+public class TampilanHasil extends javax.swing.JFrame {
+
+    /**
+     * Creates new form TampilanHasil
+     */
+    String[] res;
+
+    public TampilanHasil(String[] res) {
+        initComponents();
+        this.res = res;
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Iterasi", "Potential", "Nascent", "New Business Manager", "Established", "Retired"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setText("HASIL SIMULASI");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 632, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(267, 267, 267)
+                        .addComponent(jLabel1)))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {                                     
+
+    }                                    
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {                                  
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        for (int i = 0; i < res.length; i++) {
+            String[] dataRow1 = res[i].split(",");
+            model.addRow(dataRow1);
+        }
+    }                                 
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(TampilanHasil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(TampilanHasil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(TampilanHasil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(TampilanHasil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+//                new TampilanHasil().setVisible(true);
+            }
+        });
+
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    // End of variables declaration                   
+
+}
+
+\end{lstlisting}
+%\lstinputlisting[language=Java, caption=MyCode.java]{./Lampiran/MyCode.java} 
 
