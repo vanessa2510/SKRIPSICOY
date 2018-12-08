@@ -1,7 +1,7 @@
 \chapter{Implementasi dan Pengujian}
 \label{chap:implementasi}
 
-Pada bab ini terdapat dua bagian, yaitu Implementasi Perangkat Lunak dan Pengujian Perangkat Lunak. Bagian implementasi akan menjelaskan tentang lingkungan pengembangan perangkat lunak dan hasil implementasi. Bagian pengujian akan berisi hasil pengujian fungsional terhadap perangkat lunak yang telah dibangun.
+Pada bab ini terdapat tiga bagian, yaitu Implementasi Perangkat Lunak, Pengujian Perangkat Lunak dan contoh simulasi. Bagian implementasi akan menjelaskan tentang lingkungan pengembangan perangkat lunak dan hasil implementasi. Bagian pengujian akan berisi hasil pengujian fungsional terhadap perangkat lunak yang telah dibangun dan bagian terakhir yaitu contoh simulasi.
 
 \section{Implementasi}
 \label{sec:implementasi}
@@ -362,3 +362,105 @@ Berikut hasil dari perhitungan manual :
 	\end{tabular}
 	\end{table}
 \end{itemize}
+
+\section{Contoh Simulasi}
+Diberikan contoh simulasi untuk penelitian ini yaitu sebagai berikut :\\
+Sebuah populasi yang terdiri dari 60 wirausaha. Pada simulasi ini digunakan tiga buah kriteria ketetanggaan, yaitu: level wirausaha, bidang usaha dan lokasi usaha. Masing-masing bobotnya yaitu 30\%, 40\% dan 30\%. Contoh simulasi ini mengacu pada \cite{GEM2013} untuk perhitungan kondisi publik. Tujuan dari contoh simulasi ini adalah untuk menunjukkan pengaruh dari komposisi a,b,c dan \textit{threshold}. Masing-masing simulasi sebanyak enam kali dengan parameter yang diberikan pada tabel \ref{tabelParameter}. Masing-masing simulasi terdiri atas 36 iterasi yang merepresentasikan 36 bulan atau 3 tahun.
+\begin{table}[H]
+\centering
+\caption{Tabel Parameter Settings}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Simulasi & a & b & c & \textit{threshold}\\
+\hline
+1 & 0.7 & 0.2 & 0.1 & 20\\
+\hline 
+2 & 0.6 & 0.3 & 0.1 & 20\\
+\hline
+3 & 0.5 & 0.4 & 0.1 & 20\\
+\hline
+4 & 0.5 & 0.3 & 0.2 & 20\\
+\hline
+5 & 0.5 & 0.3 & 0.2 & 15\\
+\hline
+6 & 0.5 & 0.3 & 0.2 & 10\\
+\hline
+7 & 0.6 & 0.2 & 0.2 & 20\\
+\hline
+8 & 0.5 & 0.2 & 0.3 & 20\\
+\hline
+9 & 0.4 & 0.2 & 0.4 & 20\\
+\hline 
+\end{tabular}
+\label{tabelParameter}
+\end{table}
+Hasil simulasi akan diberikan pada gambar \ref{grafik1}, \ref{grafik2}, \ref{grafik3}, \ref{grafik4}, \ref{grafik5}, \ref{grafik6}, \ref{grafik7}, \ref{grafik8} dan \ref{grafik9}
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=12cm, height=10cm]{grafik1} 
+		\caption[Hasil dari simulasi]{Hasil dari simulasi 1}
+	\label{grafik1} 
+\end{figure}
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=12cm, height=10cm]{grafik2} 
+		\caption[Hasil dari simulasi]{Hasil dari simulasi 2}
+	\label{grafik2} 
+\end{figure}
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=12cm, height=10cm]{grafik3} 
+		\caption[Hasil dari simulasi]{Hasil dari simulasi 3}
+	\label{grafik3} 
+\end{figure}
+
+Dapat dilihat pada gambar \ref{grafik1}, \ref{grafik2} dan \ref{grafik3} menunjukkan bahwa semakin besar pengaruh tetangga maka pertumbuhan wirausaha semakin melambat hal ini dapat dibuktikan pada jumlah wirausaha \textit{est\_bm} yang menurun dari tahun pertama sampai tahun ketiga.
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=12cm, height=10cm]{grafik4} 
+		\caption[Hasil dari simulasi]{Hasil dari simulasi 4}
+	\label{grafik4} 
+\end{figure}
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=12cm, height=10cm]{grafik5} 
+		\caption[Hasil dari simulasi]{Hasil dari simulasi 5}
+	\label{grafik5} 
+\end{figure}
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=12cm, height=10cm]{grafik6} 
+		\caption[Hasil dari simulasi]{Hasil dari simulasi 6}
+	\label{grafik6} 
+\end{figure}
+
+Dapat dilihat pada gambar \ref{grafik4}, \ref{grafik5} dan \ref{grafik6} menunjukkan bahwa wirausaha \textit{new\_bm} dan \textit{est\_bm} berbanding terbalik dengan nilai \textit{threshold}.
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=12cm, height=10cm]{grafik7} 
+		\caption[Hasil dari simulasi]{Hasil dari simulasi 7}
+	\label{grafik7} 
+\end{figure}
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=12cm, height=10cm]{grafik8} 
+		\caption[Hasil dari simulasi]{Hasil dari simulasi 8}
+	\label{grafik8} 
+\end{figure}
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=12cm, height=10cm]{grafik9} 
+		\caption[Hasil dari simulasi]{Hasil dari simulasi 9}
+	\label{grafik9} 
+\end{figure}
+
+Dapat dilihat pada gambar \ref{grafik7}, \ref{grafik8} dan \ref{grafik9} menunjukkan bahwa semakin besar faktor publik maka pertumbuhan wirausaha semakin melambat hal ini dapat dilihat dari menurunnya jumlah wirausaha \textit{new\_bm}, wirausaha \textit{nascent} dan wirausaha \textit{est\_bm}.
+%wirausaha \textit{potential} yang menjadi wirausaha \textit{nascent} menurun, hal ini dibuktikan dengan menurunnya jumlah wirausaha \textit{nascent} dan meningkatnya jumlah wirausaha \textit{potential}. Tetapi semakin banyak jumlah wirausaha \textit{nascent} yang menjadi wirausaha \textit{new_bm}, hal ini dibuktikan dengan meningkatnya jumlah wirausaha \textit{new_bm} dari tahun 1 sampai tahun ketiga. Wirausaha \textit{est_bm} jumlahnya juga menurun.

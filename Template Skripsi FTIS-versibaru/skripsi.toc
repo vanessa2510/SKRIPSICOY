@@ -1,7 +1,8 @@
 \select@language {bahasa}
-\contentsline {chapter}{Daftar Isi}{ix}{section*.1}
-\contentsline {chapter}{Daftar Gambar}{xi}{section*.2}
-\contentsline {chapter}{Daftar Tabel}{xiii}{section*.3}
+\contentsline {chapter}{Kata Pengantar}{xv}{chapter*.1}
+\contentsline {chapter}{Daftar Isi}{xvii}{section*.2}
+\contentsline {chapter}{Daftar Gambar}{xix}{section*.3}
+\contentsline {chapter}{Daftar Tabel}{xxi}{section*.4}
 \contentsline {chapter}{\numberline {1}Pendahuluan}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Rumusan Masalah}{2}{section.1.2}
@@ -14,54 +15,55 @@
 \contentsline {section}{\numberline {2.2}Cellular Automata}{19}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Dimensi CA}{19}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Aplikasi CA}{21}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Entrepreneurial Cellular Automata}{22}{section.2.3}
-\contentsline {section}{\numberline {2.4}Graf}{23}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Adjacency List}{24}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Adjacency Matrix}{25}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.3}Graf}{22}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Adjacency List}{23}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Adjacency Matriks}{23}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Entrepreneurial Cellular Automata}{24}{section.2.4}
 \contentsline {chapter}{\numberline {3}Analisis}{27}{chapter.3}
 \contentsline {section}{\numberline {3.1}Analisis Pertumbuhan Wirausaha}{27}{section.3.1}
-\contentsline {section}{\numberline {3.2}Analisis Pemodelan Entrepreneurial Cellular Automata}{28}{section.3.2}
-\contentsline {section}{\numberline {3.3}Analisis Model Pertumbuhan Wirausaha dengan Entrepreneurial Cellular Automata}{30}{section.3.3}
-\contentsline {section}{\numberline {3.4}Deskripsi Perangkat Lunak}{38}{section.3.4}
-\contentsline {section}{\numberline {3.5}Analisis Perangkat Lunak}{39}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Diagram \textit {Use Case}}{39}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Diagram Kelas}{41}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Kelas EGM}{42}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Kelas CA}{42}{subsection.3.5.4}
-\contentsline {subsection}{\numberline {3.5.5}Kelas Entrepreneur}{44}{subsection.3.5.5}
-\contentsline {subsection}{\numberline {3.5.6}Kelas Neighbor}{44}{subsection.3.5.6}
-\contentsline {subsection}{\numberline {3.5.7}Kelas Neighborhood}{44}{subsection.3.5.7}
-\contentsline {subsection}{\numberline {3.5.8}Kelas PublicFactor}{44}{subsection.3.5.8}
-\contentsline {subsection}{\numberline {3.5.9}Kelas State}{44}{subsection.3.5.9}
+\contentsline {section}{\numberline {3.2}Analisis Pemodelan Entrepreneurial Cellular Automata}{27}{section.3.2}
+\contentsline {section}{\numberline {3.3}Analisis Model Pertumbuhan Wirausaha dengan Entrepreneurial Cellular Automata}{29}{section.3.3}
+\contentsline {section}{\numberline {3.4}Deskripsi Perangkat Lunak}{37}{section.3.4}
+\contentsline {section}{\numberline {3.5}Analisis Perangkat Lunak}{37}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Diagram \textit {Use Case}}{37}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Diagram Kelas}{40}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Kelas EGM}{40}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Kelas CA}{40}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}Kelas Entrepreneur}{42}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.6}Kelas Neighbor}{42}{subsection.3.5.6}
+\contentsline {subsection}{\numberline {3.5.7}Kelas Neighborhood}{42}{subsection.3.5.7}
+\contentsline {subsection}{\numberline {3.5.8}Kelas PublicFactor}{43}{subsection.3.5.8}
+\contentsline {subsection}{\numberline {3.5.9}Kelas State}{43}{subsection.3.5.9}
 \contentsline {chapter}{\numberline {4}Perancangan}{45}{chapter.4}
 \contentsline {section}{\numberline {4.1}Diagram Kelas}{45}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Kelas CA}{47}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Kelas TampilanBobotKetetanggaan}{47}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Kelas TampilanKondisiKetetanggaan}{47}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Kelas TampilanKondisiEksternal}{48}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.4}Kelas TampilanKondisiEksternal}{47}{subsection.4.1.4}
 \contentsline {subsection}{\numberline {4.1.5}Kelas DataWirausaha}{48}{subsection.4.1.5}
 \contentsline {subsection}{\numberline {4.1.6}Kelas TampilanSimulasi}{48}{subsection.4.1.6}
 \contentsline {subsection}{\numberline {4.1.7}Kelas TampilanHasil}{48}{subsection.4.1.7}
-\contentsline {subsection}{\numberline {4.1.8}Kelas InputDataHandler}{49}{subsection.4.1.8}
-\contentsline {section}{\numberline {4.2}Rancangan Antarmuka}{51}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}TampilanKondisiInternal}{51}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}TampilanKondisiKetetanggaan}{52}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}TampilanKondisiEksternal}{53}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}TampilanDataWirausaha}{54}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}TampilanSimulasi}{54}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}TampilanHasil}{55}{subsection.4.2.6}
-\contentsline {section}{\numberline {4.3}Rancangan File Input}{55}{section.4.3}
-\contentsline {chapter}{\numberline {5}Implementasi dan Pengujian}{59}{chapter.5}
-\contentsline {section}{\numberline {5.1}Implementasi}{59}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Implementasi}{59}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Hasil Implementasi}{59}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Pengujian}{68}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Pengujian Fungsional}{68}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Pengujian Pembacaan Parameter}{69}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Pengujian Pembacaan File}{71}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Pengujian Hasil dari Simulasi}{73}{subsection.5.2.4}
-\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{77}{chapter.6}
-\contentsline {section}{\numberline {6.1}Kesimpulan}{77}{section.6.1}
-\contentsline {section}{\numberline {6.2}Saran}{78}{section.6.2}
-\contentsline {chapter}{Daftar Referensi}{79}{chapter*.4}
-\contentsline {chapter}{\numberline {A}Kode Program}{81}{appendix.A}
+\contentsline {subsection}{\numberline {4.1.8}Kelas InputDataHandler}{48}{subsection.4.1.8}
+\contentsline {section}{\numberline {4.2}Rancangan Antarmuka}{50}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}TampilanKondisiInternal}{50}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}TampilanKondisiKetetanggaan}{51}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}TampilanKondisiEksternal}{52}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}TampilanDataWirausaha}{53}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}TampilanSimulasi}{53}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}TampilanHasil}{54}{subsection.4.2.6}
+\contentsline {section}{\numberline {4.3}Rancangan File Input}{54}{section.4.3}
+\contentsline {chapter}{\numberline {5}Implementasi dan Pengujian}{57}{chapter.5}
+\contentsline {section}{\numberline {5.1}Implementasi}{57}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Implementasi}{57}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Hasil Implementasi}{57}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Pengujian}{66}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Pengujian Fungsional}{66}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Pengujian Pembacaan Parameter}{67}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Pengujian Pembacaan File}{69}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Pengujian Hasil dari Simulasi}{71}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Contoh Simulasi}{73}{section.5.3}
+\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{79}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{79}{section.6.1}
+\contentsline {section}{\numberline {6.2}Saran}{80}{section.6.2}
+\contentsline {chapter}{Daftar Referensi}{81}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Kode Program}{83}{appendix.A}
