@@ -4,7 +4,7 @@
 
 
  
-Pada bab ini akan dibahas mengenai landasan teori yang digunakan pada penyusunan tugas akhir. Pembahasan pertama mencakup hal-hal yang berkaitan dengan pengertian kewirausahaan dari umum sampai khusus yaitu kewirausahaan menurut GEM. Pembahasan kedua yaitu tentang teori dan aplikasi dari CA (Cellular Automata) khususnya tentang ECA (Entrepreneurial Cellular Automata). Pembahasan terakhir tentang graf.
+Pada bab ini akan dibahas mengenai landasan teori yang digunakan pada penyusunan tugas akhir. Pembahasan pertama mencakup hal-hal yang berkaitan dengan pengertian kewirausahaan dari umum sampai khusus yaitu kewirausahaan menurut GEM. Pembahasan kedua yaitu tentang graf. Pembahasan terakhir yaitu tentang teori dan aplikasi dari CA (Cellular Automata) khususnya tentang ECA (Entrepreneurial Cellular Automata).
 
 
 \section{Arti Kewirausahaan}
@@ -15,7 +15,6 @@ Pada bab ini akan dibahas mengenai landasan teori yang digunakan pada penyusunan
 Wirausaha berasal dari kata wira dan usaha. Wira artinya unggul, mulia, luhur sedangkan usaha berarti kemampuan melakukan usaha atas kekuatan diri sendiri. Jadi wirausahawan adalah manusia yang unggul yang memiliki kemampuan membangun usaha sendiri. Kewirausahaan sendiri merupakan kepribadian wirausahawan. Wirausahawan merupakan orang atau manusia yang memperjuangkan kemajuan terutama pada bidang ekonomi demi masyarakat seperti menciptakan lapangan pekerjaan, membantu memenuhi kebutuhan masyarakat yang semakin meningkat dan berusaha mengurangi ketergantungan dari luar negeri. Istilah kewirausahaan pada umumnya merupakan suatu ilmu yang mempelajari tentang kemampuan seseorang dalam menghadapi tantangan hidup untuk memperoleh peluang dan menghadapi segala risiko yang ada dengan mengandalkan kekuatan diri sendiri tanpa bergantung pada orang lain. \cite{artiwirausaha} 
 
 
-%Kewirausahaan menurut GEM merupakan proses yang terdiri dari fase-fase berbeda mulai dari niat mendirikan suatu usaha, menjalankan suatu usaha baru atau sudah berdiri dan sampai usaha tersebut berhenti. Proses ini dimulai dengan keterlibatan individu yang berpotensi untuk menjadi wirausaha, yaitu mereka yang percaya bahwa mereka mempunyai kemampuan untuk memulai suatu usaha, individu yang melihat kesempatan untuk berwirausaha dan individu yang tidak takut gagal dalam memulai suatu usaha. \cite{wirausahaGEM}
 GEM (Global Entrepreneurship Monitor) merupakan lembaga yang memantau dan mengukur pertumbuhan wirausaha di berbagai negara yang didirikan pada tahun 1997 oleh Michael Hay dan Bill Bygrave. GEM telah memantau kewirausahaan di 104 ekonomi negara dan telah mendapat pengakuan luas sebagai penelitian kewirausahaan secara longitudinal yang memiliki kewenangan kuat di dunia . Pada tahun 2006, Indonesia sempat bergabung dengan GEM untuk mempelajari kewirausahaan. Setelah absen selama 6 tahun, Indonesia kembali bergabung dengan GEM pada tahun 2013.\cite{ECA}
 
 
@@ -296,10 +295,46 @@ Dilihat pada gambar \ref{fig:lokasiPMA}, dapat disimpulkan walaupun orang-orang 
 Pada gambar \ref{fig:pendapatanPMA}, dapat disimpulkan bahwa mereka yang memiliki pendapatan di bawah 7 juta rupiah memiliki persepsi lebih tinggi pada niat media untuk melaporkan cerita usaha yang sukses dibandingkan dengan mereka yang memiliki pendapatan di atas 7 juta rupiah.
 \end{enumerate}
 
+Selain indikator wirausahawan, faktor publik juga mempengaruhi pertumbuhan wirausaha di Indonesia. Berikut data dari faktor publik yang diambil dari GEM 2013.
+\begin{table} [H]
+\centering
+\caption{Faktor Publik}
+\begin{tabular}{|c|c|}
+\hline
+Faktor Publik & Bobot\\
+\hline
+Keuangan terkait dengan kewirausahaan & 3.06 \\
+\hline
+Kebijakan pemerintah terkait ekonomi & 2.69 \\
+\hline
+Kebijakan pemerintah terkait pajak & 2.22 \\
+\hline
+Program Pemerintah & 2.53\\
+\hline
+Pendidikan kewirausahaan pada SD dan SMP & 2.54\\
+\hline
+Pendidikan kewirausahaan pada SMK, professional dan universitas & 3.3\\
+\hline
+Transfer penelitian dan pengembangan & 2.31\\
+\hline
+Infrastruktur komersial dan legal & 3.25\\
+\hline
+Dinamika Pasar & 3.92\\
+\hline
+Keterbukaan Pasar & 2.82\\
+\hline
+Infrastruktur fisik dan akses layanan & 3.45\\
+\hline 
+Norma sosial dan budaya & 3.29\\
+\hline
+\end{tabular}
+\label{dataPublik}
+\end{table}
+
 \section{Cellular Automata}
 \label{sec:cellularautomata}
 
-\textit{Cellular Automata} (CA) diperkenalkan pertama kali oleh Ulam dan von Neumann pada tahun 1940. \textit{Cellular Automata} sendiri merupakan model matematis untuk sistem yang terdapat banyak komponen sederhana bertindak bersama untuk menghasilkan pola perilaku yang rumit \cite{referensiCA2}. Sebuah CA terdiri atas sekumpulan sel, tersusun dalam larik-larik (\textit{grid}). Setiap sel mempunyai satu dari sejumlah \textit{state} (kondisi) yang mungkin. \textit{State} dapat berubah sesuai dengan aturan tertentu. Perubahan \textit{state} dari sebuah sel dipengaruhi oleh \textit{state} dari sel-sel di sekitarnya atau disebut dengan sel tetangga.
+Pertama-tama kita akan membahas tentang \textit{Cellular Automata} agar dapat memahami dasar dari \textit{Entrepreneurial Cellular Automata}. \textit{Cellular Automata} (CA)  diperkenalkan pertama kali oleh Ulam dan von Neumann pada tahun 1940. \textit{Cellular Automata} sendiri merupakan model matematis untuk sistem yang terdapat banyak komponen sederhana bertindak bersama untuk menghasilkan pola perilaku yang rumit \cite{referensiCA2}. Sebuah CA terdiri atas sekumpulan sel, tersusun dalam larik-larik (\textit{grid}). Setiap sel mempunyai satu dari sejumlah \textit{state} (kondisi) yang mungkin. \textit{State} dapat berubah sesuai dengan aturan tertentu. Perubahan \textit{state} dari sebuah sel dipengaruhi oleh \textit{state} dari sel-sel di sekitarnya atau disebut dengan sel tetangga.
 
 \subsection{Dimensi CA}
 		\begin{enumerate}
@@ -385,7 +420,7 @@ Pada gambar \ref{fig:pendapatanPMA}, dapat disimpulkan bahwa mereka yang memilik
 		
 \section{Graf}
 \label{sec:graf}
-Graf dalam matematika dan ilmu komputer adalah himpunan benda-benda yang disebut simpul (\textit{vertex} atau \textit{node}) yang terhubung oleh sisi (\textit{edge}). Sebuah graf biasanya digambarkan dengan sekumpulan titik-titik yang dihubungkan oleh garis-garis. Suatu sisi dapat menghubungkan suatu simpul dengan simpul yang sama, sisi ini disebut dengan \textit{loop}.
+Pembahasan ketiga yaitu tentang graf, hal ini dikarenakan struktur yang dipakai pada \textit{Entrepreneurial Cellular Automata} adalah graf. Graf dalam matematika dan ilmu komputer adalah himpunan benda-benda yang disebut simpul (\textit{vertex} atau \textit{node}) yang terhubung oleh sisi (\textit{edge}). Sebuah graf biasanya digambarkan dengan sekumpulan titik-titik yang dihubungkan oleh garis-garis. Suatu sisi dapat menghubungkan suatu simpul dengan simpul yang sama, sisi ini disebut dengan \textit{loop}.
 
 Graf biasanya dinyatakan sebagai $G = <V,E>$, dimana V adalah simpul pada graf sedangkan E adalah sisi pada graf. Sebagai contoh definisi dari graf terdapat $V = {A,B,C,D,E,F,G,H,I}$ dan $E = {(A,B),(A,C),(B,D),(C,D),(C,E),(E,F),(E,G),(H,I)}$ berikut gambar graf sesuai dengan pernyataan V dan E di atas :
 
@@ -522,10 +557,6 @@ v & 1 & 2 & 3 & 4 & 5 & 6 \\
 \label{sec:ECA}
 \textit{Entrepreneurial Cellular Automata} merupakan pengembangan model dari \textit{Cellular Automata} yang digunakan untuk mensimulasikan pertumbuhan kewirausahaan di Indonesia. Dalam kasus \textit{Entrepreneurial Cellular Automata} (ECA), sel akan merepresentasikan wirausahawan dan ketetanggaannya akan merepresentasikan hubungan antar wirausahawan. Setiap wirausahawan mempunyai dua sifat atribut yaitu statis (nilainya tidak berubah) dan dinamis (nilainya dapat berubah). Contoh atribut statis adalah bidang usaha, kategori usaha, lokasi geografis dan jenis kelamin. Contoh atribut dinamis adalah usia, level wirausaha dan usia usaha.  
 
-Perubahan atribut dinamis dari waktu ke waktu didefinisikan dengan fungsi transisi. Fungsi transisi terdiri dari beberapa aturan. Atribut penting dalam kewirausahaan yaitu level wirausaha karena atribut ini digunakan untuk menentukan perkembangan dari kewirausahaan. Cara menentukan seorang wirausaha akan meneruskan usahanya diketahui dari sebuah angka yang disebut \textit{Continuity Index} (CIdx). CIdx dari seorang wirausaha tidak hanya dipengaruhi oleh faktor dari dalam tetapi juga dipengaruhi oleh faktor dari luar. Faktor luar dipengaruhi oleh tetangganya dan faktor publik seperti kebijakan pemerintah, kondisi perekonomian dunia, dsb. Seorang wirausahawan akan meneruskan usahanya jika CIdx-nya memenuhi nilai ambang tertentu.
-
-Atribut dari seorang wirausahawan dapat berubah dari waktu ke waktu, hal ini menyebabkan ketetanggaan juga dapat berubah dari waktu ke waktu. Sebagai contoh, diasumsikan terdapat wirausahawan $e1$ dan $e2$ bertetanggaan pada waktu $t$, jika $e1$ berubah keadaannya pada $t+1$ maka $e1$ dan $e2$ tidak lagi bertetanggaan pada saat $t+1$.
-
 Berikut definisi ECA :\\
 Diberikan \textit{p} himpunan nilai atribut: $A_{1}, ..., A_{p}$ dan sebuah indikator $Pub$ = ${p_{1}, ..., p_{m}}$, sebuah ECA $M$ adalah sebuah tupel
 \begin{displaymath}
@@ -539,18 +570,103 @@ dimana :
 	\item $\omega = {\omega_{1}, ..., \omega_{k}}$ adalah himpunan fungsi bobot atau nilai ketetanggaan dimana $\omega_{i} : N_{i} \rightarrow \Re$ memetakan setiap fungsi ketetanggaan ke sebuah bilangan riil,
 	\item $\rho = {\rho_{1}, ..., \rho_{p}}$ adalah himpunan indikator publik dimana setiap $\rho_{i}$ didefinisikan sebagai $\rho_{i} : p_{i} \rightarrow \Re$,
 	\item $\delta : \beta \rightarrow \beta$ adalah fungsi transisi state, dan
-	\item $\sigma : N \rightarrow N$ adalah sebuah fungsi transformasi ketetanggaan.
+	\item $\sigma : N \rightarrow N$ adalah sebuah fungsi transformasi ketetanggaan. Contohnya, diasumsikan terdapat wirausahawan $e1$ dan $e2$ bertetanggaan pada waktu $t$, jika $e1$ berubah keadaannya pada $t+1$ maka $e1$ dan $e2$ tidak lagi bertetanggaan pada saat $t+1$.
+
 \end{itemize}
 
+Perubahan atribut dinamis dari waktu ke waktu didefinisikan dengan fungsi transisi atau $\delta$. Fungsi transisi adalah aturan yang mengubah kondisi level wirausaha dari waktu sekarang dan waktu selanjutnya, aturan tersebut dapat dilihat pada tabel \ref{tabelLW}. Dalam fungsi transisi, atribut yang paling penting adalah level wirausaha karena atribut ini digunakan untuk menentukan perkembangan dari kewirausahaan. Selain itu fungsi transisi juga ditentukan oleh sebuah angka yang disebut \textit{Continuity Index} (CIDx). CIDx adalah cara menentukan seorang wirausahawan akan meneruskan usahanya dalam waktu tertentu. CIDx dari seorang wirausahawan tidak hanya dipengaruhi oleh faktor dari dalam tetapi juga dipengaruhi oleh faktor dari luar. Faktor luar dipengaruhi oleh tetangganya dan faktor publik seperti kebijakan pemerintah, kondisi perekonomian dunia, dsb. Seorang wirausahawan akan meneruskan usahanya jika CIDx-nya memenuhi nilai ambang tertentu.\\
+Berikut rumus \textit{continuity index} :
+\begin{displaymath}
+\label{RumusCIDx}
+	CIdx_{i}(t) = a.Cint_{i}(t) + b.Cneg_{i}(t) + c.Cpub(t)
+\end{displaymath}
+dimana a,b,c merupakan bilangan riil sedemikian sehingga $0\leq a,b,c \leq 1$ dan $a+b+c=$ 1.0.\\
+Berikut penjelasan mengenai rumus \textit{Continuity Index} :
+\begin{enumerate}
+	\item $CIdx_{i}(t)$ merupakan perhitungan CIDx untuk individu wirausahawan dalam waktu tertentu (t).
+	\item $Cint_{i}(t)$ merupakan perhitungan dari kondisi internal dari individu wirausahawan yang berisi penjumlahan nilai dari atribut individual seperti :
+	\begin{itemize}
+			\item Perceived Opportunities
+			\item Perceived Capabilities
+			\item Role Model
+			\item Entrepreneurial of Intention (High Status Successful Entrepreneurship dan Public Media Attention for Entrepreneurship)
+			\item Fear of Failure
+	\end{itemize}
+Dari masing-masing atribut individual terdapat data umur, pendapatan, pendidikan, dll. Data tersebut dapat dilihat pada subbab \ref{sec:artiwirausaha}. Dari data tersebut terdapat persentase untuk wanita dan pria berdasarkan atribut tertentu. Nilai itulah yang akan digunakan untuk menghitung kondisi internal individu wirausahawan.
+	\item $Cneg_{i}(t)$ merupakan perhitungan ketetanggaan dari setiap individu wirausahawan dengan wirausahawan lainnya bergantung pada relasi ketetanggaannya pada saat waktu tertentu. Relasinya yaitu lebih dari sama dengan, kurang dari sama dengan dan sama dengan. Relasi antar wirausaha berdasarkan pada atribut umum dari wirausahawan yaitu umur, level wirausaha, pendapatan dan pendidikan.\\ Contoh relasi kurang dari sama dengan adalah wirausaha A mempunyai umur 24 tahun, sedangkan wirausaha B mempunyai umur 30 tahun. Artinya yaitu wirausaha A mempunyai relasi umur kurang dari sama dengan wirausaha B, hal ini dikarenakan umur wirausaha A kurang dari umur wirausaha B.\\ Contoh relasi sama dengan adalah wirausaha A mempunyai level wirausaha \textit{nascent}, sedangkan wirausaha B mempunyai level wirausaha \textit{nascent}. Artinya wirausaha A memiliki relasi level sama dengan wirausaha B, hal ini dikarenakan mereka berada pada kedudukan level wirausaha yang sama.\\ Contoh relasi lebih dari sama dengan adalah wirausaha A berada pada tingkat pendidikan SMP, sedangkan wirausaha B berada pada tingkat pendidikan SMA. Artinya wirausaha B memiliki relasi pendidikan lebih besar sama dengan wirausaha A, hal ini dikarenakan wirausaha B memiliki tingkat pendidikan lebih besar atau lebih tinggi dibandingkan wirausaha A.
+		\item $Cpub(t)$ merupakan perhitungan dari kondisi publik seperti :
+		\begin{itemize}
+			\item Keuangan terkait dengan kewirausahaan
+			\item Kebijakan pemerintah terkait ekonomi
+			\item Kebijakan pemerintah terkait pajak
+			\item Program Pemerintah
+			\item Pendidikan kewirausahaan pada SD dan SMP
+			\item Pendidikan kewirausahan pada SMK, professional dan universitas
+			\item Transfer penelitian dan pengembangan
+			\item Infrastruktur komersial dan legal
+			\item Keterbukaan Pasar
+			\item Norma, Sosial dan Budaya
+			\item Infrastruktur Fisik dan Akses Layanan
+			\item Dinamika Pasar
+		\end{itemize}
+		Perhitungannya berisi penjumlahan nilai dari kondisi publik yang masing-masing nilainya dapat dilihat pada data GEM 2013 yang dapat dilihat pada tabel \ref{dataPublik} pada saat waktu tertentu.
 
-Berdasarkan model kewirausahaan terdapat empat tingkatan wirausaha yaitu \textit{potential}, \textit{nascent}, \textit{new business manager} dan \textit{manager of established business}. Akan ditambahkan pula tingkatan wirausaha yang menyatakan wirausahawan di atas umur 64 tahun yaitu \textit{retired}. Pada gambar \ref{fig:tingkatwirausaha} akan ditunjukkan secara lebih lanjut, \textit{new\_bm} dan \textit{est\_bm} dinyatakan sebagai \textit{new business manager} dan \textit{manager of established business}.
+\end{enumerate}    
 
+Seperti yang sudah dijelaskan fungsi transisi merupakan sekumpulan aturan yang bertujuan untuk melakukan perubahan level wirausaha pada individu wirausahawan. Pada tabel \ref{tabelLW} akan dijelaskan mengenai transisi level dengan menggunakan lambang-lambang \textit{CIdx, bl, a ,b} dan \textit{th} untuk menyatakan \textit{Continuity Index}, level , usia individu, usia usaha dan nilai ambang.
+
+	\begin{table}[H]
+\centering
+\caption{Transisi Level Wirausaha}
+\begin{tabular}{|c|c|c|}
+\hline
+No & Waktu sekarang & Waktu berikutnya \\
+\hline
+1 & \textit{bl} = potential, $ \textit{CIdx} < \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = potential \\
+\hline
+2 & \textit{bl} = potential, $\textit{CIdx} \geq \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = nascent \\
+\hline
+3 & \textit{bl} = potential, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
+\hline
+4 & \textit{bl} = nascent, $\textit{CIdx} < \textit{th}, \textit{a} <64 \times 12$ & \textit{bl} = potential \\
+\hline
+5 & \textit{bl} = nascent, $\textit{CIdx} \geq \textit{th}, \textit{b} < 3$ & \textit{bl} = nascent \\
+\hline
+6 & \textit{bl} = nascent, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
+\hline
+7 & \textit{bl} = new\_bm, $\textit{CIdx} < \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = potential \\
+\hline
+8 & \textit{bl} = new\_bm, $\textit{CIdx} \geq \textit{th}, \textit{b} < 42$ & \textit{bl} = potential \\
+\hline
+9 & \textit{bl} = new\_bm, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
+\hline
+10 & \textit{bl} = est\_bm, $\textit{CIdx} < \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = potential \\
+\hline
+11 & \textit{bl} = est\_bm, $\textit{CIdx} \geq \textit{th}, \textit{a} < 64 \times 12$ & \textit{bl} = est\_bm \\
+\hline
+12 & \textit{bl} = est\_bm, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
+\hline
+13 & \textit{bl} = retired, $\textit{a} \geq 64 \times 12$ & \textit{bl} = retired \\
+\hline
+\end{tabular}
+\label{tabelLW}
+\end{table}
+
+Berikut diagram transisi level wirausaha sesuai dengan fungsi transisinya masing-masing :
 
 	\begin{figure} [H]
 		\centering  
-		\includegraphics[width=9cm, height=5cm]{tingkatwirausaha} 
+		\includegraphics[width=9cm, height=6cm]{tingkatwirausaha} 
 		\caption[Diagram Transisi Level Wirausaha]{Diagram Transisi Level Wirausaha} 
 		\label{fig:tingkatwirausaha} 
 	\end{figure}
+Berdasarkan diagram \ref{fig:tingkatwirausaha} selain keempat model kewirausahaan GEM, ditambahkan pula tingkatan wirausaha yang menyatakan wirausahawan di atas umur 64 tahun yaitu \textit{retired}. \textit{New business manager} akan dinyatakan sebagai \textit{new\_bm} dan \textit{est\_bm} dinyatakan sebagai  dan \textit{manager of established business}.
+
+
+
+	
+	
+
+
 
 
