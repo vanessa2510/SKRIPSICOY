@@ -9,7 +9,7 @@ Pada bab ini akan dilakukan analisis mengenai pembangunan simulator pertumbuhan 
 \section{Analisis Model Pertumbuhan Wirausaha dengan Entrepreneurial Cellular Automata}
 \label{analisismodelCA}
 
-Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index}, nilai ambang (\textit{threshold}), umur dan usia bisnis. Seperti yang sudah dijelaskan pada bab \ref{chap:teori}, \textit{Continuity Index} adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu. (Rumus CIDx : \ref{RumusCIDx}).
+Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index}, nilai ambang (\textit{threshold}), umur (a) dan usia bisnis (\textit{bl}). Seperti yang sudah dijelaskan pada bab \ref{chap:teori}, \textit{Continuity Index} adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu. (Rumus CIDx : \ref{RumusCIDx}).
 
 
 Untuk mempermudah pemahaman mengenai \textit{Continuity Index}, akan diberikan contoh simulasi dari data tidak real, yaitu terdapat nilai a = 0.5, b = 0.4 dan c = 0.1, nilai ambangnya 15, serta periodenya dalam waktu 5 bulan. Nilai dari faktor psikologis diasumsikan Perceived Opportunities bernilai 0.2, Perceived Capabilities bernilai 0.25, High Status of Successful bernilai 0.1, Public Media Attention bernilai 0.05, Role Model bernilai 0.3 dan Fear of Failure bernilai 0.1. Diasumsikan terdapat tiga wirausahawan dan berikut data dari masing-masing wirausaha :
@@ -58,52 +58,44 @@ Masing-masing tetangga relasinya yaitu sama dengan.
 	\end{figure}
 
 
-Dalam simulasi ini terdapat 12 faktor publik yaitu :
+Dalam simulasi ini terdapat 12 faktor publik yang dapat dilihat pada bab \ref{chap:teori} pada tabel \ref{dataPublik}.\\
+Berikut rumus CIDx :
+\begin{displaymath}
+\label{RumusCIDx}
+	CIdx_{i}(t) = a.Cint_{i}(t) + b.Cneg_{i}(t) + c.Cpub(t)
+\end{displaymath}
 
-\begin{table} [H]
-\centering
-\caption{Faktor Publik}
-\begin{tabular}{|c|c|}
-\hline
-Faktor Publik & Bobot\\
-\hline
-Keuangan terkait dengan kewirausahaan & 3.06 \\
-\hline
-Kebijakan pemerintah terkait ekonomi & 2.69 \\
-\hline
-Kebijakan pemerintah terkait pajak & 2.22 \\
-\hline
-Program Pemerintah & 2.53\\
-\hline
-Pendidikan kewirausahaan pada SD dan SMP & 2.54\\
-\hline
-Pendidikan kewirausahaan pada SMK, professional dan universitas & 3.3\\
-\hline
-Transfer penelitian dan pengembangan & 2.31\\
-\hline
-Infrastruktur komersial dan legal & 3.25\\
-\hline
-Dinamika Pasar & 3.92\\
-\hline
-Keterbukaan Pasar & 2.82\\
-\hline
-Infrastruktur fisik dan akses layanan & 3.45\\
-\hline 
-Norma sosial dan budaya & 3.29\\
-\hline
-\end{tabular}
-\end{table}
-	
-	
-Untuk perhitungan pada faktor eksternal :
-\begin{multline}
-	CIDx(eksternal) = 0.1 \times ((3.06 \times 0.1) + (2.69 \times 0.1) + (2.22 \times 0.1) + (2.53 \times 0.05) + (2.54 \times 0.1) + (3.3 \times 0.1) \\ + (2.31 \times 0.05) + (3.25 \times 0.05) + (3.92 \times 0.1) + (2.82 \times 0.05) + (3.45 \times 0.1) + (3.29 \times 0.1)) = 0.29925 / 12 = 0.0249375 
+Untuk lebih jelasnya berikut contoh perhitungan \textit{continuity index} untuk E2 :
+\begin{enumerate}
+\item Perhitungan $Cint_{2}(0)$ atau bulan ke 1 :
+\begin{enumerate}
+	\item Mengambil nilai dari data GEM 2013 sesuai dengan data wirausahawan. Contoh untuk data wirausahawan 1 (E1), terdapat data wanita, 30 tahun, pendidikannya SMA, lokasi di Pekanbaru, pendapatan 3-5 juta rupiah dan level wirausahanya \textit{new\_bm}. Untuk data atribut individual \textit{Perceived Opportunities} nilai untuk wanita 30 tahun adalah 29.5\%, nilai untuk wanita berpendidikan SMA adalah 49.8\%, nilai untuk wanita berlokasi di Pekanbaru adalah 2.8\% dan wanita berpendapatan 3-5juta adalah 41.5\%.
+	\item Setelah mendapatkan nilai-nilai dari GEM 2013, nilai-nilai tersebut dijumlahkan lalu dikalikan dengan bobot masing-masing atribut individual. Dalam contoh langkah sebelumnya akan dikalikan dengan 0.2 (\textit{Perceived Opportunities}), berikut penjumlahannya $((29.5+49.8+2.8+41.5) \times 0.2$.
+	\item Lakukan langkah pertama dan kedua untuk atribut individual lainnya (\textit{Perceived Capabilities, Role Model, High Status of Successful, Media Attention} dan \textit{Fear of Failure}).
+	\item Setelah itu hasil dari masing-masing atribut individual akan dijumlahkan dan dikalikan dengan nilai a (0.5). Berikut perhitungannya :
+	\begin{multline}
+	CIdx_{2}(t=0) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) +\\ ((31+41.8) \times 0.3) + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1))
 \end{multline}
+\end{enumerate}
 
-Perhitungan CIDx(t=0)\\
-\begin{multline}
+\item Perhitungan untuk $Cneg_{2}(0)$, kondisi ketetanggaan pada saat awal dapat dilihat pada \ref{fig:t0}. Dapat dilihat bahwa E2 memiliki ketetanggaan berdasarkan jenis kelamin dan level wirausaha dengan E3, sedangkan E2 tidak memiliki ketetanggaan berdasarkan pendidikan maka akan diberi nilai 0. Untuk nilai ketetanggaan berdasarkan jenis kelamin akan diberikan nilai $\frac {1} {2}$, 1 didapat dari jumlah wirausahawan yang bertetanggaan dengan E2 yaitu E3, sedangkan 2 didapat dari total wirausahawan dikurangi 1. Untuk nilai ketetanggaan berdasarkan level wirausaha sama dengan nilai ketetanggaan berdasarkan jenis kelamin. Setelah nilai tersebut didapatkan, nilai tersebut akan dikalikan dengan bobot masing-masing ketetanggaan. Berikut perhitungannya : $(\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3)$.
+
+\item Perhitungan pada $Cpub(0)$ :
+\begin{enumerate}
+	\item Mengalikan nilai-nilai yang ada di tabel \ref{dataPublik} dengan bobot masing-masing faktor publik. Bobot didapatkan dari masukan \textit{user}. Contoh nilai dari faktor publik keuangan terkait dengan kewirausahaan adalah 3.06 lalu dikali dengan bobotnya, sebagai contoh bobotnya 10\%. Maka perkaliannya adalah $3.06 \times 0.1$.
+	\item Menjumlahkan hasil perkalian dari langkah pertama. Setelah dijumlahkan hasilnya dibagi dengan banyaknya faktor publik (12) lalu hasilnya dikali dengan nilai c (0.1).\\
+	Berikut perhitungannya :
+	\begin{multline}
+	Cpub(0) = 0.1 \times ((3.06 \times 0.1) + (2.69 \times 0.	1) + (2.22 \times 0.1) + (2.53 \times 0.05) + (2.54 \times 0.1) + (3.3 \times 0.1) \\ + (2.31 \times 0.05) + (3.25 \times 0.05) + (3.92 \times 0.1) + (2.82 \times 0.05) + (3.45 \times 0.1) + (3.29 \times 0.1))\\ = 0.29925 / 12 = 0.0249375 
+\end{multline}
+\end{enumerate}
+\end{enumerate}
+
+Berikut perhitungan CIDx(t=0) :
+	\begin{multline}
 	CIdx_{1}(t=0) = 0.5 \times (((14.3+4.4+19.9+11) \times 0.2) + ((14.7+17.4+5.4+10.5) \times 0.25) + ((14.3+10.4) \times 0.3) \\ + ((16+19+7.2+10.2) \times 0.1) + ((8.1+11.4) \times 0.05) + ((18.6+18.4+8.9) \times 0.1) ) + 0.4 \times (0 + 0 + 0)\\ + 0.0249375 = 20.09243
-\end{multline}	
+\end{multline}
+	
 
 \begin{multline}
 	CIdx_{2}(t=0) = 0.5 \times (((29.5+49.8+2.8+41.5) \times 0.2) + ((31.6+51.5+2.4+43) \times 0.25) + ((31+41.8) \times 0.3)\\ + ((31+52+2.6+41.7) \times 0.1) + ((3.5+41.6) \times 0.05) + ((32.4+51.7 + 3.8) \times 0.1)) + 0.4 \times ((\frac {1} {2} \times 0.3) + 0 +  (\frac {1} {2} \times 0.3))\\ + 0.0249375 = 51.3749
@@ -118,7 +110,7 @@ Perhitungan CIDx(t=0)\\
 		\centering  
 		\includegraphics[width=18cm, height=12cm]{t=0} 
 		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 0]{Gambar ketetanggaan tiga entrepreneur pada saat t = 0} 
-		\label{fig:t0} 
+		\label{fig:t1} 
 	\end{figure}
 
 Perhitungan CIDx (t=1)
@@ -139,7 +131,7 @@ Perhitungan CIDx (t=1)
 		\centering  
 		\includegraphics[width=18cm, height=12cm]{t=0} 
 		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 1]{Gambar ketetanggaan tiga entrepreneur pada saat t = 1} 
-		\label{fig:t1} 
+		\label{fig:t2} 
 	\end{figure}
 
 Perhitungan CIDx (t=2)
@@ -161,7 +153,7 @@ Perhitungan CIDx (t=2)
 		\centering  
 		\includegraphics[width=18cm, height=12cm]{t=0} 
 		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 2]{Gambar ketetanggaan tiga entrepreneur pada saat t = 2} 
-		\label{fig:t2} 
+		\label{fig:t3} 
 	\end{figure}
 	
 Perhitungan CIDx (t=3)
@@ -182,7 +174,7 @@ Perhitungan CIDx (t=3)
 		\centering  
 		\includegraphics[width=18cm, height=12cm]{t=3} 
 		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 3]{Gambar ketetanggaan tiga entrepreneur pada saat t = 3} 
-		\label{fig:t3} 
+		\label{fig:t4} 
 	\end{figure}
 	
 	Perhitungan CIDx (t=4)
@@ -203,7 +195,7 @@ Perhitungan CIDx (t=3)
 		\centering  
 		\includegraphics[width=18cm, height=12cm]{t=3} 
 		\caption[Gambar ketetanggaan tiga entrepreneur pada saat t = 4]{Gambar ketetanggaan tiga entrepreneur pada saat t = 4} 
-		\label{fig:t3} 
+		\label{fig:t5} 
 	\end{figure}
 	
 Jadi hasil dari simulasi ini adalah pada bulan pertama wirausaha 1 berada pada level \textit{nascent} dan wirausaha 2 dan 3 berada pada level \textit{new\_bm}. Bulan kedua dan ketiga masih sama, bulan keempat mengalami perubahan pada level wirausaha 1 yaitu dari \textit{nascent} berubah menjadi \textit{new\_bm} sehingga ketiga wirausaha pada bulan keempat berada pada level wirausaha yang sama, begitu juga pada bulan kelima.
@@ -224,7 +216,7 @@ Pada diagram \textit{use case} hanya terdapat satu aktor yaitu pemerintah sebaga
 
 	\begin{figure} [H]
 		\centering  
-		\includegraphics[width=14cm, height=14cm]{UseCase2} 
+		\includegraphics[width=14cm, height=14cm]{usecase1} 
 		\caption[Use Case ECA]{Use Case ECA} 
 		\label{fig:usecase} 
 	\end{figure}
