@@ -25,21 +25,12 @@ public class CA {
     Entrepreneurs[] E;
     Neighborhoods N;
     PublicFactor pub;
-    int[] S; // state ?
+    int[] S;
     float P;
     float[] delta;
     float[] sigma;
     int numOfMonth;
-    //penambahan
-//    double a;
-//    double b;
-//    double c;
-//    int periode;
 
-//    double bobotUmur=0.0;
-//    double bobotLevel=0.0;
-//    double bobotPendidikan=0.0;
-//    double bobotPendapatan=0.0;
     CA(int n, int m, int pf) {
         popSize = n;
         neighSize = m;
@@ -48,6 +39,9 @@ public class CA {
         pub = new PublicFactor(pf);
         this.numOfMonth = 1; // bulan ke 1
     }
+    /*
+     * Method untuk menentukan perubahan individu wirausaha
+     */
 
     Entrepreneurs[] stateTransition(CA model, double[] composition) {
         int size = model.popSize;
@@ -55,6 +49,7 @@ public class CA {
 
         for (int i = 0; i < size; i++) {
             nextEnt[i] = new Entrepreneurs();
+            // buat ambil data dari entrepreneur
             model.E[i].copy(nextEnt[i]);
             if (this.numOfMonth % 12 == 0) {
                 nextEnt[i].age++; // tiap kelipatan 12 umurnya nambah
@@ -66,7 +61,9 @@ public class CA {
         return nextEnt;
     }
 
-    //menghitung index tetangga
+    /*
+     * Method untuk menghitung kondisi ketetanggaan
+     */
     double getNeighborIndex(CA model, int idxEnt) {
         int size = model.neighSize;
         double sum = 0.0;
@@ -74,16 +71,15 @@ public class CA {
             double sum1 = 0.0;
             for (int j = 0; j < model.popSize; j++) {
                 sum1 = sum1 + model.N.neighbors[i].neighborMatrix[idxEnt][j];
-//                System.out.println(sum1);
             }
             sum = sum + sum1 / (model.popSize - 1) * model.N.weight[i];
-//            System.out.println(sum);
         }
-//        System.out.println(sum);
         return sum;
     }
+    /*
+     * Method untuk menentukan level wirausaha
+     */
 
-    //perubahan di threshold
     void nextLevel(Entrepreneurs ne, int i, CA model, double[] composition) {
         //kasus umur yang sudah lebih dari 64th
         if (ne.age > (64)) {
@@ -92,21 +88,20 @@ public class CA {
         } else {
             double idx = getIndex(i, model, composition);
             threshold = Double.parseDouble(InputDataHandler.getValue("threshold"));
-//            System.out.println(threshold + ";" + idx);
             if (idx < threshold) {
                 ne.level = State.POTENTIAL;
                 ne.b_age = 0;
             } else {
                 switch (ne.level) {
-                    case 0: //potential
+                    case 0: // nascent
                         ne.level = State.NASCENT;
                         break;
-                    case 1: //nascent
+                    case 1: //new_bm
                         if (ne.b_age > 3) {
                             ne.level = State.NEW_BOM;
                             break;
                         }
-                    case 2: //new_bm
+                    case 2: //est_bm
                         if (ne.b_age > 42) {
                             ne.level = State.ESTABLISH_BOM;
                             break;
@@ -115,17 +110,22 @@ public class CA {
             }
         }
     }
+    /*
+     * Method untuk menghitung Continuity Index
+     */
 
     double getIndex(int i, CA model, double[] composition) {
         double hasil = composition[0] * model.E[i].point + composition[1] * this.getNeighborIndex(model, i) + composition[2] * this.pub.getPublicIdx();
-//        System.out.println("hasil tetangga : "+composition[1] * this.getNeighborIndex(model, i));
-//        System.out.println("hasil faktor publik : "+composition[2] * this.pub.getPublicIdx());
-//        System.out.println("=====================");
-        System.out.println("total hasil : "+hasil);
+//        System.out.println("total hasil : " + hasil);
         return hasil;
     }
 
-    //pendefinisian ketetanggaan
+    /*
+     * Method untuk mendefinisikan ketetanggaan
+     * 0 jika sama dengan
+     * 1 jika kurang dari sama dengan
+     * 2 jika lebih dari sama dengan
+     */
     //perubahan -> ditambahin casenya
     void NeighborhoodDefinition() {
         int n = this.N.numNeighbor;
@@ -428,9 +428,11 @@ public class CA {
         }
 
     }
+    /*
+     * Method untuk mengeluarkan jumlah wirausaha pada level tertentu
+     */
 
     String print(int iter) {
-//        int[] level = new int[5];
         int l0 = 0;
         int l1 = 0;
         int l2 = 0;
@@ -457,35 +459,63 @@ public class CA {
         }
         return (iter + ", " + l0 + ", " + l1 + ", " + l2 + ", " + l3 + ", " + l4);
     }
+    /*
+     * Method untuk menghitung kondisi internal wirausaha
+     * parameternya berisi dengan nilai-nilai atribut psikologis dari GEM 2013
+     */
 
     // perubahan : ditambahin faktor psikologisnya
+
     void calculatePoint(double[] POAm, double[] POAf, double[] POEm, double[] POEf, double[] POLm, double[] POLf, double[] POIm, double[] POIf, double[] PCAm, double[] PCAf, double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, double[] PCIm, double[] PCIf, double[] RMAm, double[] RMAf, double[] RMIm, double[] RMIf, double[] FFAf, double[] FFAm, double[] FFEf, double[] FFEm, double[] FFLf, double[] FFLm, double[] MALf, double[] MALm, double[] MAIf, double[] MAIm, double[] HSSIf, double[] HSSIm, double[] HSSLf, double[] HSSLm, double[] HSSAf, double[] HSSAm, double[] HSSEf, double[] HSSEm) {
         for (int i = 0; i < this.popSize; i++) {
             int a = getAgeRange(E[i].age);
             if (this.E[i].sex) {
                 E[i].point = (POAm[a] + POEm[E[i].education] + POLm[E[i].location] + POIm[E[i].income]) * 0.2 + (PCAm[a] + PCEm[E[i].education] + PCLm[E[i].location] + PCIm[E[i].income]) * 0.25 + (RMAm[a] + RMIm[E[i].income]) * 0.3 + (FFAm[a] + FFEm[E[i].education] + FFLm[E[i].location]) * 0.1 + (MALm[E[i].location] + MAIm[E[i].income]) * 0.05 + (HSSAm[a] + HSSIm[E[i].income] + HSSLm[E[i].location] + HSSEm[E[i].education]) * 0.1;
             } else {
+//                System.out.println("vanessa" + a);
+//                System.out.println(POAf[a]);
+//                System.out.println(POEf[E[i].education]);
+//                System.out.println(POLf[E[i].location]);
+//                System.out.println(POIf[E[i].income]);
+//                System.out.println(PCAf[a]);
+//                System.out.println(PCEf[E[i].education]);
+//                System.out.println(PCLf[E[i].location]);
+//                System.out.println(PCIf[E[i].income]);
+//                System.out.println(RMAf[a]);
+//                System.out.println(RMIf[E[i].income]);
+//                System.out.println(FFAf[a]);
+//                System.out.println(FFEf[E[i].education]);
+//                System.out.println(FFLf[E[i].location]);
+//                System.out.println(MALf[E[i].location]);
+//                System.out.println(MAIf[E[i].income]);
+//                System.out.println(HSSAf[a]);
+//                System.out.println(HSSIf[E[i].income]);
+//                System.out.println(HSSLf[E[i].location]);
+//                System.out.println(HSSEf[E[i].education]);
                 E[i].point = (POAf[a] + POEf[E[i].education] + POLf[E[i].location] + POIf[E[i].income]) * 0.2 + (PCAf[a] + PCEf[E[i].education] + PCLf[E[i].location] + PCIf[E[i].income]) * 0.25 + (RMAf[a] + RMIf[E[i].income]) * 0.3 + (FFAf[a] + FFEf[E[i].education] + FFLf[E[i].location]) * 0.1 + (MALf[E[i].location] + MAIf[E[i].income]) * 0.05 + (HSSAf[a] + HSSIf[E[i].income] + HSSLf[E[i].location] + HSSEf[E[i].education]) * 0.1;
             }
-//            System.out.println("internal ke "+ i + " point = "+E[i].point);
         }
     }
+    /*
+     * Method untuk mengelompokkan rentang umur sesuai dengan GEM 2013
+     * a merupakan umur dari wirausaha
+     */
 
     int getAgeRange(int a) {
-        int ageC = -1;
+        int ageC = 0;
         if (a >= 55 && a <= 64) {
             ageC = 0;
         }
-        if (a >= 45 && a <= 54 ) {
+        if (a >= 45 && a <= 54) {
             ageC = 1;
         }
-        if (a >= 35  && a <= 44 ) {
+        if (a >= 35 && a <= 44) {
             ageC = 2;
         }
-        if (a >= 25  && a <= 34 ) {
+        if (a >= 25 && a <= 34) {
             ageC = 3;
         }
-        if (a >= 18  && a <= 24) {
+        if (a >= 18 && a <= 24) {
             ageC = 4;
         }
         return ageC;

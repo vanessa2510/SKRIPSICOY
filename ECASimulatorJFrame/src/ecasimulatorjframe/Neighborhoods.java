@@ -5,8 +5,6 @@
  */
 package ecasimulatorjframe;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Vanessa
@@ -17,7 +15,11 @@ public class Neighborhoods {
     Neighbor[] neighbors;
     double[] weight;
     int[] relation; // jenis hubungan ketetanggaan, sama dengan, lebih kecil atau yang lain --> perlu didefinisikan
-    
+    /*
+    * konstruktor untuk membuat matriks neighbor berdasarkan banyaknya tetangga
+    * n untuk jumlah wirausaha
+    * m untuk banyaknya tetangga
+    */
     Neighborhoods(int n, int m){
         this.numNeighbor = m;
         neighbors = new Neighbor[m];
@@ -29,9 +31,6 @@ public class Neighborhoods {
             neighbors[i] = new Neighbor(n);
             weight[i] = 0.0;
             relation[i] = 0;
-//            System.out.println(neighbors[i]);
-//            System.out.println(weight[i]);
-//            System.out.println(relation[i]);
         }
     }
 

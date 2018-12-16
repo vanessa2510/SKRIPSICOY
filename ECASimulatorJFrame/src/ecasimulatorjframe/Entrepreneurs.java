@@ -59,53 +59,12 @@ public class Entrepreneurs {
         e.income = this.income;
         e.level = this.level;
     }
-    
+    /*
+    * method untuk mengeluarkan hasil perubahan individu wirausahawan
+    */
     public String toString2(){
         return sex +" , "+ age + " , "+b_age+" , "+b_category+" , "+b_area+" , "+education +" , "+ location+" , "+ income +" , "+ level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setSex(boolean sex) {
-        this.sex = sex;
-    }
-
-    public void setB_age(int b_age) {
-        this.b_age = b_age;
-    }
-
-    public void setB_category(int b_category) {
-        this.b_category = b_category;
-    }
-
-
-    public void setB_area(int b_area) {
-        this.b_area = b_area;
-    }
-
-    public void setEducation(int education) {
-        this.education = education;
-    }
-
-    public void setLocation(int location) {
-        this.location = location;
-    }
-
-    public void setIncome(int income) {
-        this.income = income;
-    }
-
-    public void setPoint(double point) {
-        this.point = point;
-    }
-    
-    
+    }  
     
     void genDummy(CA model){
     

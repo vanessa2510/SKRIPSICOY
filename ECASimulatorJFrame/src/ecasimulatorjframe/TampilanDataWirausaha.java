@@ -185,14 +185,11 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void openFileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openFileButtonActionPerformed
-        // TODO add your handling code here:
 
     }//GEN-LAST:event_openFileButtonActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
-        // TODO add your handling code here:
-        
-//        System.out.println(openFileChooser.getSelectedFile().isFile());
+
         if (!openFileChooser.getSelectedFile().exists()) {
             JOptionPane.showMessageDialog(null, "You must choose the file first!");
             return;
@@ -203,9 +200,6 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
     }//GEN-LAST:event_nextButtonActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
-        
-
         this.hide();
         TampilanKondisiEksternal ke = new TampilanKondisiEksternal();
         ke.setVisible(true);
@@ -215,20 +209,13 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
         double[] kumpulanBobot;
         int returnValue = openFileChooser.showOpenDialog(this);
         StringBuilder sb = new StringBuilder();
-//        System.out.println(JFileChooser.APPROVE_OPTION);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             try {
                 br = new BufferedReader(new FileReader(openFileChooser.getSelectedFile()));
-                //messageLabel.setText("file successfully loaded!");
-                //                FileReader fr = new FileReader();
-                //                BufferedReader br = new BufferedReader(fr);
-//                String firstLine = br.readLine().trim();
-//                //System.out.println(firstLine);
-//                String[] columnsName = firstLine.split(",");
                 DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
 
                 Object[] tableLines = br.lines().toArray();
-                ca = new CA(tableLines.length, InputDataHandler.getKetetanggaan(),4);
+                ca = new CA(tableLines.length, InputDataHandler.getKetetanggaan(), 4);
                 kumpulanBobot = new double[InputDataHandler.getKetetanggaan()];
                 int i;
                 for (i = 0; i < tableLines.length; i++) {
@@ -253,29 +240,6 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
                     ca.E[i].level = Integer.parseInt(dataRow[8]);
                     ca.E[i].point = 0.0;
                 }
-                // memasukkan data bobot masing2 atribut ke kelas Neighborhood
-                
-
-//                InputDataHandler.setDataWirausaha(openFileChooser.getSelectedFile().getName());
-//                CA ca = new CA(InputDataHandler.getPopulation(), InputDataHandler.getKetetanggaan(),4);
-                //System.out.println(InputDataHandler.jmlChecklist);
-//               // dataWirausaha = Object;
-//               // System.out.println(dataWirausaha);
-//                String line = "";
-//                //String simpanData="";
-//                //selama isi filenya belom kosong, maka print isi file
-//                while ((line = br.readLine()) != null) {
-//                    System.out.println(line);
-//                    sb.append(line + ";"); // titik koma buat pemisah antar wirausaha
-//                    //simpanData = line;
-//                }
-//                line = sb.toString();
-//                System.out.println(line);
-//                String[] atribut = line.split(",");
-//
-//                //int[] atributWirausaha = new int[atribut.length];
-//                br.close();
-//                // fr.close();
             } catch (IOException e) {
                 //messageLabel.setText("failed to load the file!");
                 Logger.getLogger(TampilanDataWirausaha.class.getName()).log(Level.SEVERE, null, e);
@@ -284,7 +248,7 @@ public class TampilanDataWirausaha extends javax.swing.JFrame {
     }//GEN-LAST:event_openFileButtonMouseClicked
 
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
-        
+
     }//GEN-LAST:event_nextButtonMouseClicked
 
     /**

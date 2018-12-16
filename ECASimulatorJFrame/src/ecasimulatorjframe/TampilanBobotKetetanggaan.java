@@ -347,15 +347,10 @@ public class TampilanBobotKetetanggaan extends javax.swing.JFrame {
     }//GEN-LAST:event_umurCBInternalActionPerformed
 
     private void nilaiUmurInternalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiUmurInternalActionPerformed
-        // nilai dari umur ini nanti dimasukin ke atribut weight di kelas Neighborhoods
 
     }//GEN-LAST:event_nilaiUmurInternalActionPerformed
 
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
-        //System.out.println("lala");
-
-//        int jumlahCheckList = 0;
-        //double[] bobot = new double[jumlahCheckList];
         double nilaiUmur = 0.0;
         double nilaiLevel = 0.0;
         double nilaiPendidikan = 0.0;
@@ -468,23 +463,7 @@ public class TampilanBobotKetetanggaan extends javax.swing.JFrame {
 
         double[] kumpulanBobot = new double[InputDataHandler.getKetetanggaan()];
         int m = 0;
-        
-//        if (InputDataHandler.checkKey("umurInternal") == false) {
-//            if (InputDataHandler.checkKey("pendidikanInternal")==false) {
-//                if (InputDataHandler.checkKey("pendapatanInternal")==false) {
-//                    if (InputDataHandler.checkKey("levelInternal")==false) {
-//                        if (InputDataHandler.checkKey("jenisKelaminInternal")==false) {
-//                            if (InputDataHandler.checkKey("lokasiInternal")==false) {
-//                                if (InputDataHandler.checkKey("usahaInternal")==false) {
-//                                    checker=false;
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-        // kalo umur dichecklist, masukin ke variabel umur
+        // kalau umur dichecklist, dimasukkan ke variabel umur
         if (InputDataHandler.checkKey("umurInternal")) {
             umur = Double.parseDouble(InputDataHandler.getValue("umurInternal"));
             kumpulanBobot[m] = umur;
@@ -523,17 +502,14 @@ public class TampilanBobotKetetanggaan extends javax.swing.JFrame {
         
         int totalNilai=0;
         for (int i = 0; i < kumpulanBobot.length; i++) {
-//            System.out.println(kumpulanBobot[i]);
             totalNilai+=kumpulanBobot[i]*100;
-//            System.out.println(totalNilai);
+
         }
         if (totalNilai != 100) {
             JOptionPane.showMessageDialog(null, "The sum of text fields must 100%!");
             checker = false;
         }
         InputDataHandler.setBobot(kumpulanBobot);
-//        System.out.println(InputDataHandler.getBobot());
-        // n.setNumNeighbor(jumlahCheckList);
         
         
         

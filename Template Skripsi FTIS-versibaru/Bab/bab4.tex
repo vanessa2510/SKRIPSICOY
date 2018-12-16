@@ -7,17 +7,17 @@ Pada bab ini akan dijelaskan perancangan mengenai simulator yang akan dibangun u
 \section{Diagram Kelas}
 \label{sec:perancangankelas}
 
-Dalam membuat simulator diperlukan sebuah GUI atau Interface untuk bisa menggambarkan kinerja suatu sistem. Berdasarkan hasil pengembangan diagram kelas pada bab analisis \ref{fig:CD1}, dibuatlah diagram kelas rinci untuk memenuhi kebutuhan dalam membangun simulator. Deskripsi kelas beserta fungsinya akan dijelaskan pada subbab selanjutnya. (Gambar \ref{fig:classdiagram2})
+Dalam membuat simulator diperlukan sebuah GUI atau Interface untuk bisa menggambarkan kinerja suatu sistem. Berdasarkan diagram kelas pada bab analisis \ref{fig:CD1}, dibuatlah perubahan diagram kelas rinci yang dibuat oleh penulis untuk memenuhi kebutuhan dalam membangun simulator. Perubahan pada diagram kelas berupa penambahan kelas baru yaitu kelas InputDataHandler dan perubahan pada kelas ECA dan kelas Entrepreneurs. Deskripsi kelas beserta fungsinya akan dijelaskan pada subbab selanjutnya. (Gambar \ref{fig:classdiagram2})
 
 \begin{figure} [H]
 	\centering  
-	\includegraphics[width=16cm, height=25cm]{diagramKelas1}
+	\includegraphics[width=18cm, height=14cm]{diagramKelas1}
 	\caption[Diagram Kelas Simulator ECA]{Diagram Kelas Simulator ECA} 
 	\label{fig:classdiagram2} 
 \end{figure}
 
 \subsection{Kelas CA}
-Dilakukan perubahan pada tiga method di kelas CA yaitu :
+Pada kelas CA, \textit{method} \texttt{calculatePoint()} di kelas diagram \ref{fig:classdiagram2}tidak dituliskan parameternya karena sangat banyak, maka dari itu akan dijelaskan lebih lanjut pada nomor ke 3. Dilakukan perubahan pada tiga method di kelas CA yaitu :
 \begin{itemize}
 	\item \texttt{public Entrepreneur[] stateTransition(CA model, double[] composition)}\\
 	Perubahan yang dilakukan adalah pada saat menambahkan umur wirausaha. Umur wirausaha akan ditambah jika bulannya sudah mencapai 12 bulan atau kelipatan 12 bulan. Dilakukan perubahan agar pada setiap iterasi (bulan), umur wirausaha tidak bertambah secara terus-menerus melainkan ditambah pada saat sudah 1 tahun (12 bulan).
@@ -29,16 +29,16 @@ Dilakukan perubahan pada tiga method di kelas CA yaitu :
 
 
 
-\subsection{Kelas TampilanBobotKetetanggaan}
+\subsection{Kelas Tampilan Bobot Ketetanggaan}
 Kelas ini merupakan kelas untuk menampilkan seluruh atribut umum dari seorang wirausaha yang dapat dipilih menggunakan \textit{checkbox}, atribut yang dipilih nantinya akan mempengaruhi ketetanggaan antara wirausaha yang satu dengan wirausaha lainnya. Setelah itu, \textit{user} diminta mengisi bobot untuk masing-masing atribut yang sudah dichecklist melalui \textit{textfield}.
 
-\subsection{Kelas TampilanKondisiKetetanggaan}
+\subsection{Kelas Tampilan Kondisi Ketetanggaan}
 Kelas ini merupakan kelas untuk menampilkan atribut yang sudah dipilih dari kelas TampilanKondisiInternal. \textit{User} dapat memilih atribut mana saja yang akan ditetapkan menjadi kondisi ketetanggaan untuk satu wirausaha ke wirausaha lainnya. Selain itu, \textit{user} diminta untuk mengisi hubungan ketetanggaan khusus untuk 4 atribut yaitu umur, level, pendapatan dan pendidikan jika \textit{user} men-checklist salah satu atau bahkan keempat-empatnya dari atribut tersebut. Untuk atribut jenis kelamin, lokasi usaha dan bidang usaha tidak dapat ditetapkan menjadi 3 jenis karena jenisnya hanya satu yaitu sama dengan. Alasan ketiga atribut tersebut tidak bisa ditetapkan menjadi 3 jenis karena ketiga atribut tersebut tidak bisa diurutkan atau dibandingkan seperti atribut a lebih besar dari atribut b.
 
-\subsection{Kelas TampilanKondisiEksternal}
+\subsection{Kelas Tampilan Kondisi Eksternal}
 Kelas ini merupakan kelas untuk menampilkan faktor eksternal yang mempengaruhi pertumbuhan wirausaha. Dalam kasus ini ditetapkan 12 faktor publik yaitu keuangan terkait dengan kewirausahaan, kebijakan pemerintah terkait ekonomi, kebijakan pemerintah terkait pajak, program pemerintah, pendidikan kewirausahaan pada SD dan SMP, pendidikan kewirausahaan pada SMK, professional dan universitas, transfer penelitian dan pengembangan, infrastruktur komersial dan legal, dinamika pasar, keterbukaan pasar, infrastruktur fisik dan akses layanan, serta norma sosial dan budaya. \textit{User} diminta untuk mengisi bobot untuk setiap faktor dan total dari semua bobot harus 100\%.
 
-\subsection{Kelas DataWirausaha}
+\subsection{Kelas Data Wirausaha}
 Kelas ini merupakan kelas untuk membuka \textit{file} data wirausaha yang akan disimulasikan, lalu menampilkannya ke tabel. Isi datanya berupa :
 \begin{enumerate}
 	\item Jenis Kelamin
@@ -53,13 +53,13 @@ Kelas ini merupakan kelas untuk membuka \textit{file} data wirausaha yang akan d
 	\item Point
 \end{enumerate}
 
-\subsection{Kelas TampilanSimulasi}
+\subsection{Kelas Tampilan Simulasi}
 Kelas ini berfungsi untuk mengisi nilai a, b, c, \textit{threshold} dan periode. Nilai a,b,c dan \textit{threshold} bertipe double, sedangkan periode bertipe integer. Periode ini dihitung dalam bulan. Kelas ini juga untuk menghitung \textit{Continuity Index} yang hasil iterasinya akan dikirim ke kelas TampilanHasil dalam bentuk tabel. Selain itu, kelas ini juga akan menampilkan hasil perubahan setiap individu wirausaha dalam setiap bulannya pada \textit{file} CSV.
 
-\subsection{Kelas TampilanHasil}
+\subsection{Kelas Tampilan Hasil}
 Kelas ini berfungsi untuk menampilkan iterasi (per bulan) banyaknya wirausaha yang berada pada level tertentu dalam bentuk tabel. Untuk hasil keluaran yang dikeluarkan pada \textit{file} CSV dapat dibuka pada Microsoft Excel.
 
-\subsection{Kelas InputDataHandler}
+\subsection{Kelas Input Data Handler}
 Kelas ini merupakan kelas untuk mengambil dan menyimpan data masukan dari \textit{user} yang nantinya akan dipakai untuk menghitung \textit{Continuity Index}.
 Berikut penjelasan method-method yang ada di kelas InputDataHandler :
 	\begin{itemize}
@@ -160,61 +160,67 @@ Berikut penjelasan method-method yang ada di kelas InputDataHandler :
 \section{Rancangan Antarmuka}
 \label{sec:rancanganantarmuka}
 
-\subsection{TampilanKondisiInternal}
+\subsection{Tampilan Bobot Ketetanggaan}
 
 \begin{figure} [H]
 	\centering  
 	\includegraphics[width=11cm, height=12cm]{mockup1} 
+	\caption[Gambar Tampilan Bobot Ketetanggaan]{Gambar Tampilan Bobot Ketetanggaan}
 	\label{fig:kondisiInternal} 
 \end{figure}
 
 Dapat dilihat pada gambar \ref{fig:kondisiInternal}, pada kondisi awal terdapat 7 atribut umum dari seorang wirausahawan yang dapat dipilih oleh \textit{user} melalui \textit{checkbox}. Jika \textit{user} tidak mengisi \textit{checkbox} terlebih dahulu, \textit{user} tidak akan bisa mengisi bobot atribut. Atribut yang dipilih melalui \textit{checkbox}, akan menjadi ketetanggaan dari wirausaha satu dengan wirausaha lainnya. Setelah \textit{user} memilih atribut wirausaha, \textit{user} harus mengisi bobot dari masing-masing atribut melalui \textit{text field}. Total dari bobot atribut yang dipilih jumlahnya harus 100\%. Jika \textit{user} tidak mengisi seluruh  \textit{checkbox}, \textit{user} tidak akan bisa melanjutkan ke proses selanjutnya. Begitu juga jika \textit{user} tidak mengisi bobot berdasarkan atribut yang sudah dipilih, \textit{user} tidak dapat melanjutkan ke proses selanjutnya.
 
-\subsection{TampilanKondisiKetetanggaan}
+\subsection{Tampilan Kondisi Ketetanggaan}
 
 \begin{figure} [H]
 	\centering  
 	\includegraphics[width=11cm, height=12cm]{mockup2} 
+	\caption[Gambar Tampilan Kondisi Ketetanggaan]{Gambar Tampilan Kondisi Ketetanggaan}
 	\label{fig:kondisiTetangga} 
 \end{figure}
 
 Dapat dilihat pada gambar \ref{fig:kondisiTetangga}, terdapat 7 atribut tetangga yang telah dipilih oleh \textit{user} pada kelas TampilanBobotKetetanggaan. Pada tampilan ini \textit{user} diminta untuk mengisi relasi ketetanggaan khususnya pada atribut umur, level, pendapatan dan pendidikan. 3 atribut lainnya tidak terdapat relasi ketetanggaan, hal ini dikarenakan ketiga atribut tersebut tidak bisa dibanding-bandingkan. Contohnya seperti lokasi, wirausaha A membangun usahanya di kota Jakarta, sedangkan wirausaha B membangun usahanya di kota Bandung. Tentu saja hal ini tidak dapat ditetapkan sebagai kota Jakarta lebih dari kota Bandung atau kota Bandung kurang dari kota Jakarta.
 
-\subsection{TampilanKondisiEksternal}
+\subsection{Tampilan Kondisi Eksternal}
 
 \begin{figure} [H]
 	\centering  
 	\includegraphics[width=11cm, height=13cm]{mockup3} 
+	\caption[Gambar Tampilan Kondisi Eksternal]{Gambar Tampilan Kondisi Eksternal}
 	\label{fig:kondisiEksternal} 
 \end{figure}
 
 Pada tampilan kondisi eksternal terdapat 12 faktor publik berdasarkan GEM 2013. Untuk keduabelas faktor ini, \textit{user} harus mengisi bobot setiap faktor publik yang total bobotnya harus 100\%. 
 
-\subsection{TampilanDataWirausaha}
+\subsection{Tampilan Data Wirausaha}
 
 \begin{figure} [H]
 	\centering  
 	\includegraphics[width=16cm, height=12cm]{mockup4-1} 
+	\caption[Gambar Tampilan Data Wirausaha]{Gambar Tampilan Data Wirausaha}
 	\label{fig:kondisiDataWirausaha} 
 \end{figure}
 
 Pada tampilan ini, \textit{user} akan memasukkan \textit{file} masukan data wirausaha dalam format text. Setelah \textit{file} dipilih, data wirausaha akan ditampilkan pada tabel.
-\subsection{TampilanSimulasi}
+\subsection{Tampilan Simulasi}
 
 \begin{figure} [H]
 	\centering  
 	\includegraphics[width=12cm, height=7cm]{mockup5} 
+	\caption[Gambar Tampilan Simulasi]{Gambar Tampilan Simulasi}
 	\label{fig:simulasi} 
 \end{figure}
 
 Pada tampilan simulasi, \textit{user} diminta untuk mengisi nilai a,b,c, \textit{threshold} dan periode. Total dari nilai a,b dan c harus 1. Periode merupakan berapa lama iterasi tersebut akan berjalan (dalam bulan). Sedangkan \textit{button} "SIMULATE" berfungsi untuk menjalankan simulasi yang hasilnya akan ditampilkan dalam bentuk tabel.
 
-\subsection{TampilanHasil}
+\subsection{Tampilan Hasil}
 
 Pada tampilan hasil, akan ditampilkan hasil simulasi berupa tabel, yang masing-masing kolomnya berisi iterasi (bulan), jumlah wirausaha pada level \textit{potential}, jumlah wirausaha pada level \textit{nascent}, jumlah wirausaha pada level \textit{new\_bm}, jumlah wirausaha pada level \textit{est\_bm}, jumlah wirausaha pada level \textit{retired}.
 \begin{figure} [H]
 	\centering  
 	\includegraphics[width=13cm, height=11cm]{mockup6} 
+	\caption[Gambar Tampilan Hasil]{Gambar Tampilan Hasil}
 	\label{fig:tampilanHasil} 
 \end{figure}
 

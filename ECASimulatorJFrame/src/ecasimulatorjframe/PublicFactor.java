@@ -26,7 +26,9 @@ public class PublicFactor {
     public void setWeights(double[] w) {
         this.weights = w;
     }
-
+    /*
+    * Method untuk menghitung hasil faktor publik
+    */
     double getPublicIdx() {
         double idx = 0.0;
         for (int i = 0; i < factors.length; i++) {

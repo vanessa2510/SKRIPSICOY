@@ -25,7 +25,6 @@ public class TampilanSimulasi extends javax.swing.JFrame {
      * Creates new form TampilanSimulasi
      */
     CA ca;
-//    TampilanDataWirausaha br;
 
     public TampilanSimulasi(CA ca) {
         initComponents();
@@ -184,37 +183,27 @@ public class TampilanSimulasi extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nilaiAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiAActionPerformed
-//        // TODO add your handling code here:
-//        String masukanA = nilaiA.getText();
-//        double a = Double.parseDouble(masukanA);
+
     }//GEN-LAST:event_nilaiAActionPerformed
 
     private void simulateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simulateButtonActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_simulateButtonActionPerformed
 
     private void nilaiBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiBActionPerformed
-        // TODO add your handling code here:
-//        String masukanB = nilaiB.getText();
-//        double b = Double.parseDouble(masukanB);
+
     }//GEN-LAST:event_nilaiBActionPerformed
 
     private void nilaiCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiCActionPerformed
-        // TODO add your handling code here:
-//        String masukanC = nilaiC.getText();
-//        double c = Double.parseDouble(masukanC);
+
     }//GEN-LAST:event_nilaiCActionPerformed
 
     private void nilaiThresholdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiThresholdActionPerformed
-        // TODO add your handling code here:
-//        String masukanThreshold = nilaiThreshold.getText();
-//        double t = Double.parseDouble(masukanThreshold);
+
     }//GEN-LAST:event_nilaiThresholdActionPerformed
 
     private void nilaiPeriodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiPeriodeActionPerformed
-        // TODO add your handling code here:
-//        String masukanPeriode = nilaiPeriode.getText();
-//        int p = Integer.parseInt(masukanPeriode);
+
     }//GEN-LAST:event_nilaiPeriodeActionPerformed
 
     private void simulateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_simulateButtonMouseClicked
@@ -222,6 +211,8 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         double a = 0.0;
         double b = 0.0;
         double c = 0.0;
+        double[] kumpulanBobot = new double[3];
+        int m = 0;
         if (nilaiA.getText().equals("")) {
             InputDataHandler.inputDataSimulasi("nilaiA", null);
             checker = false;
@@ -241,32 +232,40 @@ public class TampilanSimulasi extends javax.swing.JFrame {
             if (!nilaiA.getText().equals("")) {
                 InputDataHandler.inputDataSimulasi("nilaiA", nilaiA.getText());
                 a = Double.parseDouble(nilaiA.getText());
+                kumpulanBobot[m] = a;
+                m++;
                 if (!nilaiB.getText().equals("")) {
                     InputDataHandler.inputDataSimulasi("nilaiB", nilaiB.getText());
                     b = Double.parseDouble(nilaiB.getText());
+                    kumpulanBobot[m] = b;
+                    m++;
                     if (!nilaiC.getText().equals("")) {
                         InputDataHandler.inputDataSimulasi("nilaiC", nilaiC.getText());
                         c = Double.parseDouble(nilaiC.getText());
+                        kumpulanBobot[m] = c;
+                        m++;
                         if (!nilaiPeriode.getText().equals("")) {
                             InputDataHandler.inputDataSimulasi("periode", nilaiPeriode.getText());
-                            // System.out.println(nilaiPeriode.getText());
                             if (!nilaiThreshold.getText().equals("")) {
                                 InputDataHandler.inputDataSimulasi("threshold", nilaiThreshold.getText());
-                                // System.out.println(nilaiThreshold.getText());
                             }
                         }
                     }
                 }
             }
         }
-
-        if (a + b + c != 1.0) {
-            JOptionPane.showMessageDialog(null, "The sum of a,b and c's value must 1!");
-            //checker = false;
+        int totalNilai = 0;
+        for (int i = 0; i < kumpulanBobot.length; i++) {
+            totalNilai += kumpulanBobot[i]*100;
+        }
+        if (totalNilai!=100) {
+            JOptionPane.showMessageDialog(null, "The sum of a,b and c's value must 1! or you haven't fill the text field!");
+            return;
         }
 
         if (checker == false) {
             JOptionPane.showMessageDialog(null, "You must fill the text field first!");
+            return;
         }
 
         double[] composition = new double[]{a, b, c};
@@ -275,40 +274,39 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         double[] POAm = new double[]{8.3, 14.5, 26.7, 36.2, 14.3}; // male
 
         // Perceived Opportunities Education
-        double[] POEf = new double[]{1.8, 17.4, 23.4, 49.8, 7.4, 0.1}; // 0.1, 7.4, 49.8, 23.4, 17.4, 1.8 
-        double[] POEm = new double[]{0.7, 11.8, 19.9, 54.7, 12.6, 0.3};// 0.3, 12.6, 54.7, 19.9, 11.8, 0.7
+        double[] POEf = new double[]{1.8, 17.4, 23.4, 49.8, 7.4, 0.1};
+        double[] POEm = new double[]{0.7, 11.8, 19.9, 54.7, 12.6, 0.3};
 
         // Perceived Opportunities Location
-        double[] POLf = new double[]{0.3, 6.4, 4.8, 2.8, 1.4, 3.5, 1.7, 46.3, 9.6, 6.1, 9.5, 2.5, 1.1, 1.0, 0.6, 2.4}; //  2.4, 0.6, 1.0, 1.1, 2.5, 9.5, 6.1, 9.6, 46.3, 1.7, 3.5, 1.4, 2.8, 4.8, 6.4, 0.3
-        double[] POLm = new double[]{0.5, 4.4, 4.5, 2.3, 1.9, 3.8, 2.1, 47.6, 11.1, 6.3, 8.4, 2.7, 0.9, 1.1, 0.5, 2.0}; //      2.0, 0.5, 1.1, 0.9, 2.7, 8.4, 6.3, 11.1, 47.6, 2.1, 3.8, 1.9, 2.3, 4.5, 4.4, 0.5
+        double[] POLf = new double[]{0.3, 6.4, 4.8, 2.8, 1.4, 3.5, 1.7, 46.3, 9.6, 6.1, 9.5, 2.5, 1.1, 1.0, 0.6, 2.4}; 
+        double[] POLm = new double[]{0.5, 4.4, 4.5, 2.3, 1.9, 3.8, 2.1, 47.6, 11.1, 6.3, 8.4, 2.7, 0.9, 1.1, 0.5, 2.0};
 
         // Perceived Opportunities Income
-        double[] POIf = new double[]{42.7, 41.5, 10.8, 2.8, 1.5, 0.3, 0, 0.5}; //    0.5, 0, 0.3, 1.5, 2.8, 10.8, 41.5, 42.7
-        double[] POIm = new double[]{42.1, 41.7, 11.0, 3.4, 0.7, 0.3, 0.5, 0.2};//    0.2, 0.5, 0.3, 0.7, 3.4, 11.0, 41.7, 42.1
+        double[] POIf = new double[]{42.7, 41.5, 10.8, 2.8, 1.5, 0.3, 0, 0.5}; 
+        double[] POIm = new double[]{42.1, 41.7, 11.0, 3.4, 0.7, 0.3, 0.5, 0.2};
 
         // Perceived Capabilities Age
-        double[] PCAf = new double[]{8.9, 16.1, 28.2, 31.6, 15.1}; //    
-        double[] PCAm = new double[]{8.5, 17.3, 26.1, 33.4, 14.7}; //   
+        double[] PCAf = new double[]{8.9, 16.1, 28.2, 31.6, 15.1}; 
+        double[] PCAm = new double[]{8.5, 17.3, 26.1, 33.4, 14.7};    
 
         // Perceived Capabilities Education
-        double[] PCEf = new double[]{1.7, 15.4, 22.8, 51.5, 8.2, 0.4}; //   0.4, 8.2, 51.5, 22.8, 15.4, 1.7
-        double[] PCEm = new double[]{0.9, 12.4, 17.4, 56.9, 12.0, 0.5}; //  0.5, 12.0, 56.9, 17.4, 12.4, 0.9
+        double[] PCEf = new double[]{1.7, 15.4, 22.8, 51.5, 8.2, 0.4}; 
+        double[] PCEm = new double[]{0.9, 12.4, 17.4, 56.9, 12.0, 0.5}; 
 
         // Perceived Capabilities Income
-        double[] PCIf = new double[]{41.4, 43.0, 10.2, 3.1, 1.4, 0.2, 0.2, 0.4}; //    0.4, 0.2, 0.2, 1.4, 3.1, 10.2, 43.0, 41.4
-        double[] PCIm = new double[]{42.9, 42.1, 10.5, 3.1, 0.8, 0.3, 0.2, 0.2};//    0.2, 0.2, 0.3, 0.8, 3.1, 10.5, 42.1, 42.9
+        double[] PCIf = new double[]{41.4, 43.0, 10.2, 3.1, 1.4, 0.2, 0.2, 0.4}; 
+        double[] PCIm = new double[]{42.9, 42.1, 10.5, 3.1, 0.8, 0.3, 0.2, 0.2};
 
         // Perceived Capabilities Location
-        double[] PCLf = new double[]{0.4, 7.5, 3.9, 2.4, 2.0, 3.2, 1.6, 41.1, 10.8, 6.9, 9.0, 3.7, 1.2, 1.0, 0.8, 4.4}; //    4.4, 0.8, 1.0, 1.2, 3.7, 9.0, 6.9, 10.8, 41.1, 1.6, 3.2, 2.0, 2.4, 3.9, 7.5, 0.4
-        double[] PCLm = new double[]{0.7, 5.4, 3.4, 2.6, 3.0, 3.8, 1.8, 41.1, 11.5, 7.2, 8.7, 3.5, 1.2, 0.9, 0.7, 4.3}; //   4.3, 0.7, 0.9, 1.2, 3.5, 8.7, 7.2, 11.5, 41.1, 1.8, 3.8, 3.0, 2.6, 3.4, 5.4, 0.7
-
+        double[] PCLf = new double[]{0.4, 7.5, 3.9, 2.4, 2.0, 3.2, 1.6, 41.1, 10.8, 6.9, 9.0, 3.7, 1.2, 1.0, 0.8, 4.4}; 
+        double[] PCLm = new double[]{0.7, 5.4, 3.4, 2.6, 3.0, 3.8, 1.8, 41.1, 11.5, 7.2, 8.7, 3.5, 1.2, 0.9, 0.7, 4.3}; 
         // Role Model Age
-        double[] RMAf = new double[]{7.5, 17.6, 26.8, 31.0, 17.1}; //   
-        double[] RMAm = new double[]{9.1, 16.9, 25.3, 34.4, 14.3}; //  
+        double[] RMAf = new double[]{7.5, 17.6, 26.8, 31.0, 17.1};    
+        double[] RMAm = new double[]{9.1, 16.9, 25.3, 34.4, 14.3};   
 
         // Role Model Income
-        double[] RMIf = new double[]{43.1, 41.8, 9.7, 3.0, 1.6, 0.4, 0.1, 0.4}; //   0.4, 0.1, 0.4, 1.6, 3.0, 9.7, 41.8, 43.1
-        double[] RMIm = new double[]{42.9, 42.1, 10.4, 3.0, 0.7, 0.2, 0.5, 0.2};//   0.2, 0.5, 0.2, 0.7, 3.0, 10.4, 42.1, 42.9
+        double[] RMIf = new double[]{43.1, 41.8, 9.7, 3.0, 1.6, 0.4, 0.1, 0.4}; 
+        double[] RMIm = new double[]{42.9, 42.1, 10.4, 3.0, 0.7, 0.2, 0.5, 0.2};
 
         // Fear of Failuer Age
         double[] FFAf = new double[]{8.2, 16.4, 23.5, 32.4, 19.5};
@@ -359,12 +357,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         ca.N.setWeight(nw);
         ca.N.setRelation(nr);
 
-//        String outFile = "D:\\Vanessa\\Data\\outFile.txt";
         int maxIter = Integer.parseInt(InputDataHandler.getValue("periode")); // masukan periode
-//        PrintWriter out;
-//        try {
-//            out = new PrintWriter(new BufferedWriter(new FileWriter(outFile, true)));
-//            out.println("iter,potential,nascent,new_bm,est_bm,retired");
 
         Entrepreneurs[][] e = new Entrepreneurs[maxIter][];
         String[] line = new String[maxIter];
@@ -381,8 +374,6 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                 e[i] = ca.stateTransition(ca, composition);
 
                 for (int j = 0; j < e[i].length; j++) {
-//                    String lines = e[i][j].toString2();
-//                    System.out.println(e[i][j].toString2());
                     sb.append(e[i][j].toString2());
                     sb.append('\n');
 
@@ -391,7 +382,7 @@ public class TampilanSimulasi extends javax.swing.JFrame {
                 ca.E = e[i];
                 // lalu baru diprint
                 line[i] = ca.print(i);
-//                System.out.println(line[i]);
+//                System.out.println("tommy " + line[i]);
 
             }
             pw.write(sb.toString());
@@ -399,18 +390,10 @@ public class TampilanSimulasi extends javax.swing.JFrame {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TampilanSimulasi.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-//                System.out.println(nE);
         this.hide();
         TampilanHasil th = new TampilanHasil(line);
 
         th.setVisible(true);
-//        } catch (IOException ex) {
-//            System.out.println("Gagal menulis File");
-//            Logger.getLogger(TampilanSimulasi.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-
-
     }//GEN-LAST:event_simulateButtonMouseClicked
 
     /**

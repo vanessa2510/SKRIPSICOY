@@ -11,7 +11,10 @@ package ecasimulatorjframe;
  */
 public class Neighbor {
     double[][] neighborMatrix;
-    
+    /*
+    * Method untuk membuat matriks berdasarkan atribut tetangga
+    * n merupakan jumlah wirausaha
+    */
     Neighbor(int n){
         neighborMatrix = new double[n][n];
         for (int i = 0; i < n; i++) {

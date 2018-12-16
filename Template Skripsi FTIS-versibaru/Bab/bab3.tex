@@ -2,11 +2,11 @@
 \label{chap:analisis}
 
 
-Pada bab ini akan dilakukan analisis mengenai pembangunan simulator pertumbuhan wirausaha dengan \textit{Entrepreneurial Cellular Automata}. Pembahasan akan dimulai dari analisa pertumbuhan wirausaha di Indonesia yang menjadi pokok permasalahan. Lalu dari analisis ini akan dilanjutkan dengan analisis kebutuhan perangkat lunak agar mampu memodelkan pertumbuhan wirausaha di Indonesia.
+Pada bab ini akan dilakukan analisis mengenai pembangunan simulator pertumbuhan wirausaha dengan \textit{Entrepreneurial Cellular Automata} (ECA). Pembahasan akan dimulai dari analisa pertumbuhan wirausaha di Indonesia yang menjadi pokok permasalahan. Lalu dari analisis ini akan dilanjutkan dengan analisis kebutuhan perangkat lunak agar mampu memodelkan pertumbuhan wirausaha di Indonesia.
 
 % Seorang wirausahawan akan meneruskan usahanya jika nilai CIdx nya memenuhi nilai ambang. Jika nilai dari \textit{Continuity Index} sudah sama atau lebih dari nilai ambang, level wirausaha akan berubah. Sebaliknya, jika nilai dari \textit{Continuity Index }kurang dari sama dengan nilai ambang, level wirausaha bisa saja berubah dan bisa saja tidak berubah.
 
-\section{Analisis Model Pertumbuhan Wirausaha dengan Entrepreneurial Cellular Automata}
+\section{Analisis Model Pertumbuhan Wirausaha dengan ECA}
 \label{analisismodelCA}
 
 Analisis model pertumbuhan wirausaha bergantung terhadap nilai \textit{Continuity Index}, nilai ambang (\textit{threshold}), umur (a) dan usia bisnis (\textit{bl}). Seperti yang sudah dijelaskan pada bab \ref{chap:teori}, \textit{Continuity Index} adalah angka yang menentukan seorang wirausaha akan meneruskan usahanya atau tidak. Sedangkan nilai ambang berfungsi untuk acuan (patokan) perubahan wirausaha dari waktu ke waktu. (Rumus CIDx : \ref{RumusCIDx}).
@@ -204,7 +204,7 @@ Jadi hasil dari simulasi ini adalah pada bulan pertama wirausaha 1 berada pada l
 \label{dpl}
 
 Dalam skripsi ini penulis merancang sebuah simulator dari Entrepreneurial Cellular Automata (ECA) yang sebelumnya telah dikembangkan oleh Cecilia Esti Nugraheni dan Vania Natali \cite{ECA}. Simulator ini dinamakan Simulator Pertumbuhan Wirausaha Berbasis Cellular Automata.\\
-Perangkat lunak ini dibuat untuk memberi gambaran kepada pemerintah atau lembaga umum mengenai pergerakkan wirausaha dalam waktu tertentu. Masukan dari simulator ECA ini yaitu berupa parameter-parameter simulasi yang terdiri dari bobot atribut, relasi antar wirausaha dan nilai a,b,c, \textit{threshold} dan periode. Proses yang dijalankan yaitu pada perhitungan \textit{Continuity Index} yang perhitungannya terbagi menjadi 3 tahap yaitu perhitungan pada faktor internal, perhitungan pada faktor ketetanggaan dan perhitungan pada faktor publik. Hasil keluaran dari simulator ini terdiri dari dua keluaran yaitu keluaran yang ditampilkan pada layar yang berupa jumlah wirausaha pada level tertentu yang ditampilkan per bulan, hasil keluaran kedua yaitu berupa perubahan setiap individu wirausaha dalam setiap bulannya pada \textit{file} CSV yang dapat dibuka pada Microsoft Excel.
+Perangkat lunak ini dibuat untuk memberi gambaran kepada pemerintah atau lembaga umum mengenai pergerakan wirausaha dalam waktu tertentu. Masukan dari simulator ECA ini yaitu berupa parameter-parameter simulasi yang terdiri dari bobot atribut, relasi antar wirausaha dan nilai a,b,c, \textit{threshold} dan periode. Proses yang dijalankan yaitu pada perhitungan \textit{Continuity Index} yang perhitungannya terbagi menjadi 3 tahap yaitu perhitungan pada faktor internal, perhitungan pada faktor ketetanggaan dan perhitungan pada faktor publik. Hasil keluaran dari simulator ini terdiri dari dua keluaran yaitu keluaran yang ditampilkan pada layar yang berupa jumlah wirausaha pada level tertentu yang ditampilkan per bulan, hasil keluaran kedua yaitu berupa perubahan setiap individu wirausaha dalam setiap bulannya pada \textit{file} CSV yang dapat dibuka pada Microsoft Excel.
 
 
 \section{Analisis Perangkat Lunak}
@@ -312,11 +312,11 @@ No & Aksi & Reaksi Sistem\\
 \subsection{Diagram Kelas}
 
 
-Pada bagian ini akan diberikan diagram kelas ECA beserta penjelasannya.
+Pada bagian ini akan diberikan diagram kelas ECA yang merupakan hasil akhir dari penelitian Nugraheni dan Natali.
 
 	\begin{figure} [H]
 		\centering  
-		\includegraphics[width=18cm, height=12cm]{diagramKelas0} 
+		\includegraphics[width=18cm, height=13cm]{diagramKelas0} 
 		\caption[Diagram Kelas ECA]{Diagram Kelas ECA} 
 		\label{fig:CD1} 
 	\end{figure}
@@ -326,7 +326,7 @@ Pada bagian ini akan diberikan diagram kelas ECA beserta penjelasannya.
 	Kelas EGM merupakan kelas untuk menjalankan perhitungan CIDx, CIDx merupakan angka yang mengindikasikan kemungkinan seorang wirausahawan untuk meneruskan usahanya. Perhitungan CIDx ini menggunakan data dari GEM 2013.
 	
 \subsection{Kelas CA} 
-Kelas CA merupakan kelas yang merepresentasikan \textit{cellular automata}. Berikut akan dijelaskan beberapa \textit{method} yang ada di kelas CA :
+Kelas CA merupakan kelas yang merepresentasikan \textit{cellular automata}. Untuk \textit{method} \texttt{calculatePoint()} pada diagram kelas \ref{fig:CD1} tidak dituliskan parameternya karena parameternya sangat banyak, maka dari itu akan dijelaskan lebih lanjut pada nomor ke 11. Berikut akan dijelaskan beberapa \textit{method} yang ada di kelas CA :
 		\begin{enumerate}
 			\item \texttt{public Entrepreneurs[] stateTransition(CA model, double[] composition)}\\
 			Merupakan method untuk menentukan perubahan transisi pada seorang wirausaha yang bergantung pada umur dan nilai ambang.\\			Parameter:
@@ -393,7 +393,7 @@ Kelas CA merupakan kelas yang merepresentasikan \textit{cellular automata}. Beri
 				\item \texttt{out} untuk menge-\textit{print} hasil.
 			\end{itemize}
 			
-			\item \texttt{calculatePoint(double[] POAm, double[] POAf, double[] POEf, double[] POEm, double[] POLm, double[] POLf, double[] POIm, double[] POIf, double[] PCAf, double[] PCAm, double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, double[] PCIm, double[] PCIf, double[] RMAm, double[] RMAf, double[] RMIm, double[] RMIf)}\\
+			\item \texttt{ public void calculatePoint(double[] POAm, double[] POAf, double[] POEf, double[] POEm, double[] POLm, double[] POLf, double[] POIm, double[] POIf, double[] PCAf, double[] PCAm, double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, double[] PCIm, double[] PCIf, double[] RMAm, double[] RMAf, double[] RMIm, double[] RMIf)}\\
 			Merupakan method untuk menghitung kondisi internal dari seorang wirausaha.\\
 			Parameter:
 			\begin{itemize}
@@ -427,13 +427,13 @@ Kelas CA merupakan kelas yang merepresentasikan \textit{cellular automata}. Beri
 			\end{itemize}
 		\end{enumerate}
 		
-\subsection{Kelas Entrepreneur} 
+\subsection{Kelas Entrepreneurs} 
 	Kelas Entrepreneur merupakan kelas untuk merepresentasikan individu wirausahawan.
 \subsection{Kelas Neighbor}
 	Kelas Neighbor merupakan kelas untuk merepresentasikan ketetanggaan untuk satu aspek tertentu. Setiap aspeknya didefinisikan sebagai satu neighbor yang berupa adjacency matrix.
 \subsection{Kelas Neighborhood}
 	Kelas Neighborhood merupakan kelas untuk merepresentasikan himpunan ketetanggaan yang tersusun atas sejumlah ketetanggaan.
-\subsection{Kelas PublicFactor}
+\subsection{Kelas Public Factor}
 	Kelas PublicFactor merupakan kelas untuk merepresentasikan faktok publik.
 \subsection{Kelas State}
 	Kelas State merupakan kelas untuk memberi nilai untuk setiap level wirausaha.

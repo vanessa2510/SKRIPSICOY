@@ -26,42 +26,31 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         initComponents();
 
         kumpulanJPanel = new JPanel[]{jUmur, jLevel, jPendidikan, jPendapatan, jJenisKelamin, jLokasi, jbidangUsaha};
-        // System.out.println(jUmur.getLocation().getX());
-        // System.out.println(jUmur.getLocation().getY());
         for (int i = 0; i < kumpulanJPanel.length; i++) {
             kumpulanJPanel[i].setVisible(false);
             kumpulanJPanel[i].setLocation(29, 103); //ditumpuk di jUmur
         }
-        // bobot = new double[jmlCheckListInternal];
         int i = 0;
         if (InputDataHandler.checkKey("umurInternal")) {
             kumpulanJPanel[0].setVisible(true);
-            // jmlCheckListInternal +=1;
-            //bobot[i] = Double.parseDouble(InputDataHandler.getValue("umurInternal"));
         }
         if (InputDataHandler.checkKey("levelInternal")) {
             kumpulanJPanel[1].setVisible(true);
-            //jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("pendidikanInternal")) {
             kumpulanJPanel[2].setVisible(true);
-            //jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("pendapatanInternal")) {
             kumpulanJPanel[3].setVisible(true);
-            //jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("jenisKelaminInternal")) {
             kumpulanJPanel[4].setVisible(true);
-            //jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("lokasiInternal")) {
             kumpulanJPanel[5].setVisible(true);
-            //jmlCheckListInternal +=1;
         }
         if (InputDataHandler.checkKey("usahaInternal")) {
             kumpulanJPanel[6].setVisible(true);
-            //jmlCheckListInternal +=1;
         }
         
         ButtonGroup group1 = new ButtonGroup();
@@ -586,8 +575,8 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         // set relasi 1 kalau kurang dari sama dengan
         // set relasi 2 kalau lebih dari sama dengan
         int n = 0;
-        //System.out.println(InputDataHandler.getKetetanggaan());
         int[] kumpulanNilaiRelasi = new int[InputDataHandler.getKetetanggaan()];
+        
         //umur
         if (InputDataHandler.checkKey("umurInternal")) {
             if (umurLbhDr.isSelected()) {
@@ -598,7 +587,6 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                 }
                 kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                 n++;
-                // System.out.println(kumpulanNilaiRelasi[0]);
                 checker = true;
             } else {
                 if (umurSmDgn.isSelected()) {
@@ -609,7 +597,6 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                     }
                     kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                     n++;
-                    // System.out.println(kumpulanNilaiRelasi[0]);
                     checker = true;
                 } else {
                     if (umurKrgDr.isSelected()) {
@@ -620,7 +607,6 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
                         }
                         kumpulanNilaiRelasi[n] = Integer.parseInt(nilaiRB);
                         n++;
-                        //  System.out.println(kumpulanNilaiRelasi[0]);
                         checker = true;
                     }
                 }
@@ -766,13 +752,6 @@ public class TampilanKondisiKetetanggaan extends javax.swing.JFrame {
         }
 
         InputDataHandler.setRelation(kumpulanNilaiRelasi);
-//              System.out.println(InputDataHandler.getRelation());
-        // jika jumlah relasi ketetanggaan (radio button)yang dipilih ga sesuai sama jumlah tetangga
-        // ga akan bisa next
-//        if (InputDataHandler.getRelation().length != InputDataHandler.getKetetanggaan()) {
-//            checker = false;
-//            
-//        }
         if (checker == true) {
             this.hide();
             TampilanKondisiEksternal ke = new TampilanKondisiEksternal();

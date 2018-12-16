@@ -42,43 +42,49 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Diagram Kelas ECA}}{39}{figure.3.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Diagram Kelas Simulator ECA}}{44}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Gambar Tampilan Bobot Ketetanggaan}}{48}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Gambar Tampilan Kondisi Ketetanggaan}}{49}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Gambar Tampilan Kondisi Eksternal}}{50}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Gambar Tampilan Data Wirausaha}}{51}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Gambar Tampilan Simulasi}}{52}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Gambar Tampilan Hasil}}{53}{figure.4.7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Gambar TampilanBobotKetetanggaan}}{56}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Gambar TampilanBobotKetetanggaan}}{57}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Gambar TampilanKondisiKetetanggaan}}{58}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Gambar TampilanKetetanggaan}}{59}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Gambar TampilanKetetanggaan}}{60}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Gambar TampilanDataWirausaha}}{61}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Gambar TampilanDataWirausaha}}{62}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Gambar TampilanSimulasi}}{63}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Hasil keluaran perubahan individu wirausaha pada \textit {file} CSV}}{63}{figure.5.9}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Hasil keluaran perubahan individu wirausaha pada \textit {file} CSV}}{64}{figure.5.10}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Gambar TampilanHasil}}{64}{figure.5.11}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Tampilan Pesan Error pada saat \textit {text field} tidak terisi}}{65}{figure.5.12}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Tampilan Pesan Error pada saat isi dari \textit {text field} tidak berjumlah 100\%}}{66}{figure.5.13}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Tampilan Pesan Error pada saat \textit {radio button} tidak terisi}}{66}{figure.5.14}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Tampilan Pesan Error pada saat \textit {text field} tidak terisi seluruhnya}}{66}{figure.5.15}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Tampilan Pesan Error pada saat \textit {text field} tidak terisi}}{67}{figure.5.16}
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Tampilan Pesan Error pada saat isi dari \textit {text field} tidak berjumlah 100\%}}{67}{figure.5.17}
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Tampilan Pesan Error pada saat nilai a,b dan c tidak berjumlah 1}}{67}{figure.5.18}
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Contoh format \textit {file} data wirausaha}}{68}{figure.5.19}
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Contoh format \textit {file} data wirausaha}}{68}{figure.5.20}
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Tampilan pesan kesalahan apabila \textit {file} data wirausaha belum dipilih}}{69}{figure.5.21}
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Hasil Iterasi bulan pertama}}{69}{figure.5.22}
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Hasil Iterasi bulan kedua}}{69}{figure.5.23}
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Hasil Iterasi bulan ketiga}}{69}{figure.5.24}
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Hasil Iterasi bulan keempat}}{70}{figure.5.25}
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Hasil Iterasi bulan kelima}}{70}{figure.5.26}
-\contentsline {figure}{\numberline {5.27}{\ignorespaces Hasil dari simulasi}}{70}{figure.5.27}
-\contentsline {figure}{\numberline {5.28}{\ignorespaces Hasil dari rincian simulasi}}{71}{figure.5.28}
-\contentsline {figure}{\numberline {5.29}{\ignorespaces Hasil dari simulasi}}{72}{figure.5.29}
-\contentsline {figure}{\numberline {5.30}{\ignorespaces Hasil dari simulasi}}{72}{figure.5.30}
-\contentsline {figure}{\numberline {5.31}{\ignorespaces Hasil dari simulasi}}{73}{figure.5.31}
-\contentsline {figure}{\numberline {5.32}{\ignorespaces Hasil dari simulasi}}{73}{figure.5.32}
-\contentsline {figure}{\numberline {5.33}{\ignorespaces Hasil dari simulasi}}{74}{figure.5.33}
-\contentsline {figure}{\numberline {5.34}{\ignorespaces Hasil dari simulasi}}{74}{figure.5.34}
-\contentsline {figure}{\numberline {5.35}{\ignorespaces Hasil dari simulasi}}{75}{figure.5.35}
-\contentsline {figure}{\numberline {5.36}{\ignorespaces Hasil dari simulasi}}{75}{figure.5.36}
-\contentsline {figure}{\numberline {5.37}{\ignorespaces Hasil dari simulasi}}{76}{figure.5.37}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Gambar TampilanBobotKetetanggaan}}{58}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Gambar TampilanBobotKetetanggaan}}{59}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Gambar TampilanKondisiKetetanggaan}}{60}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Gambar TampilanKetetanggaan}}{61}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Gambar TampilanKetetanggaan}}{62}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Gambar TampilanDataWirausaha}}{63}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Gambar TampilanDataWirausaha}}{64}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Gambar TampilanSimulasi}}{65}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Hasil keluaran perubahan individu wirausaha pada \textit {file} CSV}}{65}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Hasil keluaran perubahan individu wirausaha pada \textit {file} CSV}}{66}{figure.5.10}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Gambar TampilanHasil}}{66}{figure.5.11}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Tampilan Pesan Error pada saat \textit {text field} tidak terisi}}{67}{figure.5.12}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Tampilan Pesan Error pada saat isi dari \textit {text field} tidak berjumlah 100\%}}{68}{figure.5.13}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Tampilan Pesan Error pada saat \textit {radio button} tidak terisi}}{68}{figure.5.14}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Tampilan Pesan Error pada saat \textit {text field} tidak terisi seluruhnya}}{68}{figure.5.15}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Tampilan Pesan Error pada saat \textit {text field} tidak terisi}}{69}{figure.5.16}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Tampilan Pesan Error pada saat isi dari \textit {text field} tidak berjumlah 100\%}}{69}{figure.5.17}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Tampilan Pesan Error pada saat nilai a,b dan c tidak berjumlah 1}}{69}{figure.5.18}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Contoh format \textit {file} data wirausaha}}{70}{figure.5.19}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Contoh format \textit {file} data wirausaha}}{70}{figure.5.20}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Tampilan pesan kesalahan apabila \textit {file} data wirausaha belum dipilih}}{71}{figure.5.21}
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Hasil Iterasi bulan pertama}}{71}{figure.5.22}
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Hasil Iterasi bulan kedua}}{71}{figure.5.23}
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Hasil Iterasi bulan ketiga}}{71}{figure.5.24}
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Hasil Iterasi bulan keempat}}{72}{figure.5.25}
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Hasil Iterasi bulan kelima}}{72}{figure.5.26}
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Hasil dari simulasi}}{72}{figure.5.27}
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Hasil dari rincian simulasi}}{73}{figure.5.28}
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Hasil dari simulasi}}{74}{figure.5.29}
+\contentsline {figure}{\numberline {5.30}{\ignorespaces Hasil dari simulasi}}{74}{figure.5.30}
+\contentsline {figure}{\numberline {5.31}{\ignorespaces Hasil dari simulasi}}{75}{figure.5.31}
+\contentsline {figure}{\numberline {5.32}{\ignorespaces Hasil dari simulasi}}{75}{figure.5.32}
+\contentsline {figure}{\numberline {5.33}{\ignorespaces Hasil dari simulasi}}{76}{figure.5.33}
+\contentsline {figure}{\numberline {5.34}{\ignorespaces Hasil dari simulasi}}{76}{figure.5.34}
+\contentsline {figure}{\numberline {5.35}{\ignorespaces Hasil dari simulasi}}{77}{figure.5.35}
+\contentsline {figure}{\numberline {5.36}{\ignorespaces Hasil dari simulasi}}{77}{figure.5.36}
+\contentsline {figure}{\numberline {5.37}{\ignorespaces Hasil dari simulasi}}{78}{figure.5.37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
