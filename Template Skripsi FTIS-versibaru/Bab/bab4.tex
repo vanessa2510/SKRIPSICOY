@@ -169,7 +169,7 @@ Berikut penjelasan method-method yang ada di kelas InputDataHandler :
 	\label{fig:kondisiInternal} 
 \end{figure}
 
-Dapat dilihat pada gambar \ref{fig:kondisiInternal}, pada kondisi awal terdapat 7 atribut umum dari seorang wirausahawan yang dapat dipilih oleh \textit{user} melalui \textit{checkbox}. Jika \textit{user} tidak mengisi \textit{checkbox} terlebih dahulu, \textit{user} tidak akan bisa mengisi bobot atribut. Atribut yang dipilih melalui \textit{checkbox}, akan menjadi ketetanggaan dari wirausaha satu dengan wirausaha lainnya. Setelah \textit{user} memilih atribut wirausaha, \textit{user} harus mengisi bobot dari masing-masing atribut melalui \textit{text field}. Total dari bobot atribut yang dipilih jumlahnya harus 100\%. Jika \textit{user} tidak mengisi seluruh  \textit{checkbox}, \textit{user} tidak akan bisa melanjutkan ke proses selanjutnya. Begitu juga jika \textit{user} tidak mengisi bobot berdasarkan atribut yang sudah dipilih, \textit{user} tidak dapat melanjutkan ke proses selanjutnya.
+Dapat dilihat pada gambar \ref{fig:kondisiInternal}, pada kondisi awal terdapat 7 atribut umum (umur, level wirausaha, pendidikan, pendapatan, jenis kelamin, lokasi dan bidang usaha) dari seorang wirausahawan yang dapat dipilih oleh \textit{user} melalui \textit{checkbox}. \textit{User} dapat memilih lebih dari 1 atribut. Jika \textit{user} tidak mengisi \textit{checkbox} terlebih dahulu, \textit{user} tidak akan bisa mengisi bobot atribut. Atribut yang dipilih melalui \textit{checkbox}, akan menjadi atribut ketetanggaan dari wirausahawan satu dengan wirausahawan lainnya. Setelah \textit{user} memilih atribut wirausaha, \textit{user} harus mengisi bobot dari masing-masing atribut melalui \textit{text field}. Total dari bobot atribut yang dipilih jumlahnya harus 100\%. Jika \textit{user} tidak mengisi seluruh \textit{checkbox}, \textit{user} tidak akan bisa melanjutkan ke proses selanjutnya. Begitu juga jika \textit{user} tidak mengisi bobot berdasarkan atribut yang sudah dipilih, \textit{user} tidak dapat melanjutkan ke proses selanjutnya.
 
 \subsection{Tampilan Kondisi Ketetanggaan}
 
@@ -180,7 +180,7 @@ Dapat dilihat pada gambar \ref{fig:kondisiInternal}, pada kondisi awal terdapat 
 	\label{fig:kondisiTetangga} 
 \end{figure}
 
-Dapat dilihat pada gambar \ref{fig:kondisiTetangga}, terdapat 7 atribut tetangga yang telah dipilih oleh \textit{user} pada kelas TampilanBobotKetetanggaan. Pada tampilan ini \textit{user} diminta untuk mengisi relasi ketetanggaan khususnya pada atribut umur, level, pendapatan dan pendidikan. 3 atribut lainnya tidak terdapat relasi ketetanggaan, hal ini dikarenakan ketiga atribut tersebut tidak bisa dibanding-bandingkan. Contohnya seperti lokasi, wirausaha A membangun usahanya di kota Jakarta, sedangkan wirausaha B membangun usahanya di kota Bandung. Tentu saja hal ini tidak dapat ditetapkan sebagai kota Jakarta lebih dari kota Bandung atau kota Bandung kurang dari kota Jakarta.
+Dapat dilihat pada gambar \ref{fig:kondisiTetangga}, terdapat 7 atribut tetangga yang telah dipilih oleh \textit{user} pada kelas TampilanBobotKetetanggaan. Atribut yang ditampilkan pada kondisi ketetanggaan bergantung pada pemilihan atribut pada tampilan sebelumnya \ref{fig:kondisiInternal}. Contohnya jika \textit{user} memilih 3 atribut (level wirausaha, jenis kelamin dan lokasi) pada tampilan sebelumnya, atribut yang akan ditampilkan pada kondisi ketetanggaan hanya 3 atribut (level wirausaha, jenis kelamin dan lokasi). Pada tampilan ini \textit{user} diminta untuk mengisi relasi ketetanggaan khususnya pada atribut umur, level, pendapatan dan pendidikan. 3 atribut lainnya tidak terdapat relasi ketetanggaan, hal ini dikarenakan ketiga atribut tersebut tidak bisa dibanding-bandingkan. Contohnya seperti lokasi, wirausaha A membangun usahanya di kota Jakarta, sedangkan wirausaha B membangun usahanya di kota Bandung. Tentu saja hal ini tidak dapat ditetapkan sebagai kota Jakarta lebih dari kota Bandung atau kota Bandung kurang dari kota Jakarta.
 
 \subsection{Tampilan Kondisi Eksternal}
 
@@ -191,7 +191,7 @@ Dapat dilihat pada gambar \ref{fig:kondisiTetangga}, terdapat 7 atribut tetangga
 	\label{fig:kondisiEksternal} 
 \end{figure}
 
-Pada tampilan kondisi eksternal terdapat 12 faktor publik berdasarkan GEM 2013. Untuk keduabelas faktor ini, \textit{user} harus mengisi bobot setiap faktor publik yang total bobotnya harus 100\%. 
+Pada tampilan kondisi eksternal terdapat 12 faktor publik yang mempengaruhi pertumbuhan wirausaha di Indonesia. Keduabelas faktor publik ini didapatkan dari data GEM 2013. Untuk keduabelas faktor ini, \textit{user} harus mengisi bobot setiap faktor publik yang total bobotnya harus 100\%. 
 
 \subsection{Tampilan Data Wirausaha}
 
@@ -202,7 +202,7 @@ Pada tampilan kondisi eksternal terdapat 12 faktor publik berdasarkan GEM 2013. 
 	\label{fig:kondisiDataWirausaha} 
 \end{figure}
 
-Pada tampilan ini, \textit{user} akan memasukkan \textit{file} masukan data wirausaha dalam format text. Setelah \textit{file} dipilih, data wirausaha akan ditampilkan pada tabel.
+Pada tampilan ini, \textit{user} akan memasukkan \textit{file} masukan data wirausaha dalam format teks, rancangan \textit{file input} akan dibahas pada subbab \ref{rancanganFile}. Setelah \textit{file} dipilih, data wirausaha akan ditampilkan pada tabel.
 \subsection{Tampilan Simulasi}
 
 \begin{figure} [H]
@@ -212,11 +212,11 @@ Pada tampilan ini, \textit{user} akan memasukkan \textit{file} masukan data wira
 	\label{fig:simulasi} 
 \end{figure}
 
-Pada tampilan simulasi, \textit{user} diminta untuk mengisi nilai a,b,c, \textit{threshold} dan periode. Total dari nilai a,b dan c harus 1. Periode merupakan berapa lama iterasi tersebut akan berjalan (dalam bulan). Sedangkan \textit{button} "SIMULATE" berfungsi untuk menjalankan simulasi yang hasilnya akan ditampilkan dalam bentuk tabel.
+Pada tampilan simulasi, \textit{user} diminta untuk mengisi nilai a,b,c, \textit{threshold} dan periode. Nilai-nilai tersebut digunakan untuk menghitung CIDx wirausahawan. Total dari nilai a,b dan c harus 1. Periode merupakan berapa lama iterasi tersebut akan berjalan (dalam bulan). Sedangkan \textit{button} "SIMULATE" berfungsi untuk menjalankan simulasi yang hasilnya akan ditampilkan dalam bentuk tabel.
 
 \subsection{Tampilan Hasil}
 
-Pada tampilan hasil, akan ditampilkan hasil simulasi berupa tabel, yang masing-masing kolomnya berisi iterasi (bulan), jumlah wirausaha pada level \textit{potential}, jumlah wirausaha pada level \textit{nascent}, jumlah wirausaha pada level \textit{new\_bm}, jumlah wirausaha pada level \textit{est\_bm}, jumlah wirausaha pada level \textit{retired}.
+Pada tampilan hasil, akan ditampilkan hasil simulasi berupa tabel, yang masing-masing kolomnya berisi iterasi (bulan), jumlah wirausaha pada level \textit{potential}, jumlah wirausaha pada level \textit{nascent}, jumlah wirausaha pada level \textit{new\_bm}, jumlah wirausaha pada level \textit{est\_bm}, jumlah wirausaha pada level \textit{retired}. Untuk kolom pertama, di setiap barisnya akan berisi lamanya iterasi (dalam bulan). Contoh periode 5 bulan maka setiap barisnya berisi bulan ke-0, bulan ke-1, bulan ke-2 sampai bulan ke-4. Iterasi dimulai dari bulan ke-0 yang artinya bulan ke-1, bulan ke-1 yang artinya bulan ke-2, dst.
 \begin{figure} [H]
 	\centering  
 	\includegraphics[width=13cm, height=11cm]{mockup6} 
@@ -225,6 +225,7 @@ Pada tampilan hasil, akan ditampilkan hasil simulasi berupa tabel, yang masing-m
 \end{figure}
 
 \section{Rancangan File Input}
+\label{rancanganFile}
 Perancangan \textit{file} input yang akan disimulasikan terdiri dari jenis kelamin, umur, kategori usaha, sub kategori usaha, pendidikan, lokasi, pendapatan, level wirausaha dan point untuk setiap barisnya.
 Tipe dari masing-masing atribut yaitu :
 \begin{enumerate}
@@ -234,6 +235,7 @@ Tipe dari masing-masing atribut yaitu :
 		\item False untuk wanita
 	\end{itemize}
 	\item Umur bertipe bilangan bulat (dalam tahun).
+	\item Usia bisnis bertipe bilangan bulat (dalam bulan).
 	\item Kategori usaha bertipe bilangan bulat, masing-masing angka mendeskripsikan kategori usaha yang berbeda, yaitu :
 		\begin{itemize}
 			\item 0 untuk makanan
@@ -312,4 +314,13 @@ Tipe dari masing-masing atribut yaitu :
 			\end{itemize}
 		\item Point merupakan nilai dari kondisi internal individu wirausaha. Point mempunyai tipe data double.
 \end{enumerate}
+Berikut contoh untuk \textit{file input} :
 
+\begin{figure} [H]
+	\centering  
+	\includegraphics[width=6cm, height=4cm]{formatFile} 
+	\caption[Contoh Format File Data Wirausaha]{Contoh Format File Data Wirausaha}
+	\label{fig:formatFile} 
+\end{figure}
+
+Berdasarkan contoh di atas \ref{fig:formatFile}, terdapat 3 data wirausahawan. Baris pertama berisi pria, berumur 18 tahun, usia bisnisnya 0 bulan, kategori atau bidang usahanya minuman, sub kategori minuman bersoda, pendidikan SMP, usahanya berlokasi di Medan, pendapatan 5 sampai 7 juta rupiah, level usahanya \textit{nascent} dan nilai dari kondisi internalnya masih 0.

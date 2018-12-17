@@ -54,14 +54,14 @@
 \contentsline {section}{\numberline {5.1}Implementasi}{57}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Implementasi}{57}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Hasil Implementasi}{57}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Pengujian}{66}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Pengujian Fungsional}{66}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Pengujian Pembacaan Parameter}{67}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Pengujian Pembacaan File}{69}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Pengujian Hasil dari Simulasi}{71}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Contoh Simulasi}{73}{section.5.3}
-\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{79}{chapter.6}
-\contentsline {section}{\numberline {6.1}Kesimpulan}{79}{section.6.1}
-\contentsline {section}{\numberline {6.2}Saran}{80}{section.6.2}
-\contentsline {chapter}{Daftar Referensi}{81}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Kode Program}{83}{appendix.A}
+\contentsline {section}{\numberline {5.2}Pengujian}{63}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Pengujian Fungsional}{63}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Pengujian Pembacaan Parameter}{64}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Pengujian Pembacaan File}{66}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Pengujian Hasil dari Simulasi}{68}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Contoh Simulasi}{70}{section.5.3}
+\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{77}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{77}{section.6.1}
+\contentsline {section}{\numberline {6.2}Saran}{78}{section.6.2}
+\contentsline {chapter}{Daftar Referensi}{79}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Kode Program}{81}{appendix.A}
