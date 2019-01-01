@@ -9,6 +9,17 @@ Pada bab ini akan dijelaskan perancangan mengenai simulator yang akan dibangun u
 
 Dalam membuat simulator diperlukan sebuah GUI atau Interface untuk bisa menggambarkan kinerja suatu sistem. Berdasarkan diagram kelas pada bab analisis \ref{fig:CD1}, dibuatlah perubahan diagram kelas rinci yang dibuat oleh penulis untuk memenuhi kebutuhan dalam membangun simulator. Perubahan pada diagram kelas berupa penambahan kelas baru yaitu kelas InputDataHandler dan perubahan pada kelas ECA dan kelas Entrepreneurs. Deskripsi kelas beserta fungsinya akan dijelaskan pada subbab selanjutnya. (Gambar \ref{fig:classdiagram2})
 
+\subsection{Kelas CA}
+Pada kelas CA, \textit{method} \texttt{calculatePoint()} di kelas diagram \ref{fig:classdiagram2}tidak dituliskan parameternya karena sangat banyak, maka dari itu akan dijelaskan lebih lanjut pada nomor ke 3. Dilakukan perubahan pada tiga \textit{method} di kelas CA yaitu :
+\begin{itemize}
+	\item \texttt{public Entrepreneur[] stateTransition(CA model, double[] composition)}\\
+	Perubahan yang dilakukan adalah pada saat menambahkan umur wirausaha. Umur wirausaha akan ditambah jika bulannya sudah mencapai 12 bulan atau kelipatan 12 bulan. Dilakukan perubahan agar pada setiap iterasi (bulan), umur wirausaha tidak bertambah secara terus-menerus melainkan ditambah pada saat sudah 1 tahun (12 bulan).
+	\item \texttt{public void NeighborhoodDefinition() }\\
+	Perubahan yang dilakukan adalah penambahan pada faktor (umur, pendidikan, pendapatan dan jenis kelamin) dan relasi (lebih dari sama dengan).
+	\item \texttt{public void calculatePoint(double[] POAm, double[] POAf, double[] POEf, double[] POEm, double[] POLm, double[] POLf, double[] POIm, double[] POIf, double[] PCAf, double[] PCAm, double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, double[] PCIm, double[] PCIf, double[] RMAm, double[] RMAf, double[] RMIm, double[] RMIf, double[] FFAf, double[] FFAm, double[] FFEf, double[] FFEm, double[] FFLf, double[] FFLm, double[] MALf, double[] MALm, double[] MAIf, double[] MAIm, double[] HSSIf, double[] HSSIm, double[] HSSLf, double[] HSSLm, double[] HSSAf, double[] HSSAm, double[] HSSEf, double[] HSSEm)}\\
+		Perubahan yang dilakukan adalah penambahan pada indikator yang mendukung intensi masyarakat untuk memulai usaha. Indikator-indikator tersebut yaitu Entrepreneurial Intentions (High Status Successful Entrepreneurship, Media Attention) dan Fear of Failure.
+\end{itemize}
+
 \begin{figure} [H]
 	\centering  
 	\includegraphics[width=18cm, height=14cm]{diagramKelas1}
@@ -16,16 +27,8 @@ Dalam membuat simulator diperlukan sebuah GUI atau Interface untuk bisa menggamb
 	\label{fig:classdiagram2} 
 \end{figure}
 
-\subsection{Kelas CA}
-Pada kelas CA, \textit{method} \texttt{calculatePoint()} di kelas diagram \ref{fig:classdiagram2}tidak dituliskan parameternya karena sangat banyak, maka dari itu akan dijelaskan lebih lanjut pada nomor ke 3. Dilakukan perubahan pada tiga method di kelas CA yaitu :
-\begin{itemize}
-	\item \texttt{public Entrepreneur[] stateTransition(CA model, double[] composition)}\\
-	Perubahan yang dilakukan adalah pada saat menambahkan umur wirausaha. Umur wirausaha akan ditambah jika bulannya sudah mencapai 12 bulan atau kelipatan 12 bulan. Dilakukan perubahan agar pada setiap iterasi (bulan), umur wirausaha tidak bertambah secara terus-menerus melainkan ditambah pada saat sudah 1 tahun (12 bulan).
-	\item \texttt{public void NeighborhoodDefinition() }\\
-	Perubahan yang dilakukan adalah penambahan pada faktor (umur, pendidikan, pendapatan dan jenis kelamin) dan relasi (lebih dari sama dengan).
-	\item \texttt{public void calculatePoint(double[] POAm, double[] POAf, double[] POEf, double[] POEm, double[] POLm, double[] POLf, double[] POIm, double[] POIf, double[] PCAf, double[] PCAm, double[] PCEm, double[] PCEf, double[] PCLm, double[] PCLf, double[] PCIm, double[] PCIf, double[] RMAm, double[] RMAf, double[] RMIm, double[] RMIf, double[] FFAf, double[] FFAm, double[] FFEf, double[] FFEm, double[] FFLf, double[] FFLm, double[] MALf, double[] MALm, double[] MAIf, double[] MAIm, double[] HSSIf, double[] HSSIm, double[] HSSLf, double[] HSSLm, double[] HSSAf, double[] HSSAm, double[] HSSEf, double[] HSSEm)}\\
-	Perubahan yang dilakukan adalah penambahan pada indikator yang mendukung intensi masyarakat untuk memulai usaha. Indikator-indikator tersebut yaitu Entrepreneurial Intentions (High Status Successful Entrepreneurship, Media Attention) dan Fear of Failure.
-\end{itemize}
+
+
 
 
 
