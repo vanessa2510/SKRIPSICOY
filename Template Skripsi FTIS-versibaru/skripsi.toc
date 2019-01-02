@@ -59,9 +59,9 @@
 \contentsline {subsection}{\numberline {5.2.2}Pengujian Pembacaan Parameter}{62}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Pengujian Pembacaan File}{64}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Pengujian Hasil dari Simulasi}{65}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Contoh Simulasi}{66}{section.5.3}
-\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{71}{chapter.6}
-\contentsline {section}{\numberline {6.1}Kesimpulan}{71}{section.6.1}
-\contentsline {section}{\numberline {6.2}Saran}{72}{section.6.2}
-\contentsline {chapter}{Daftar Referensi}{73}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Kode Program}{75}{appendix.A}
+\contentsline {section}{\numberline {5.3}Eksperimen dan Analisis Hasil}{66}{section.5.3}
+\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{75}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{75}{section.6.1}
+\contentsline {section}{\numberline {6.2}Saran}{76}{section.6.2}
+\contentsline {chapter}{Daftar Referensi}{77}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Kode Program}{79}{appendix.A}

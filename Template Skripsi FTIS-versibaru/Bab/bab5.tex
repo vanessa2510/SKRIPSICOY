@@ -348,9 +348,9 @@ Berikut hasil dari perhitungan CIDx manual :
 	\end{table}
 \end{itemize}
 
-\section{Contoh Simulasi}
-Diberikan contoh simulasi untuk penelitian ini yaitu sebagai berikut :\\
-Sebuah populasi yang terdiri dari 60 wirausaha. Pada simulasi ini digunakan tiga buah kriteria ketetanggaan, yaitu: level wirausaha, bidang usaha dan lokasi usaha. Masing-masing bobotnya yaitu 30\%, 40\% dan 30\%. Contoh simulasi ini mengacu pada \cite{GEM2013} untuk perhitungan kondisi publik. Tujuan dari contoh simulasi ini adalah untuk menunjukkan pengaruh dari komposisi a,b,c dan \textit{threshold}. Masing-masing simulasi sebanyak enam kali dengan parameter yang diberikan pada tabel \ref{tabelParameter}. Masing-masing simulasi terdiri atas 36 iterasi yang merepresentasikan 36 bulan atau 3 tahun. Pada penelitian ini dimisalkan 1 iterasi adalah 1 bulan.
+\section{Eksperimen dan Analisis Hasil}
+Diberikan eksperimen untuk penelitian ini yaitu sebagai berikut :\\
+Sebuah populasi yang terdiri dari 60 wirausaha. Pada eksperimen ini digunakan tiga buah kriteria ketetanggaan, yaitu: level wirausaha, bidang usaha dan lokasi usaha. Masing-masing bobotnya yaitu 30\%, 40\% dan 30\%. Eksperimen ini mengacu pada \cite{GEM2013} untuk perhitungan kondisi publik. Tujuan dari eksperimen ini adalah untuk menunjukkan pengaruh dari komposisi a,b,c dan \textit{threshold}. Masing-masing simulasi sebanyak enam kali dengan parameter yang diberikan pada tabel \ref{tabelParameter}. Masing-masing simulasi terdiri atas 36 iterasi yang merepresentasikan 36 bulan atau 3 tahun. Pada penelitian ini dimisalkan 1 iterasi adalah 1 bulan.
 \begin{table}[H]
 \centering
 \caption{Tabel Parameter Settings}
@@ -376,6 +376,36 @@ Simulasi & a & b & c & \textit{threshold}\\
 \hline
 9 & 0.4 & 0.2 & 0.4 & 20\\
 \hline 
+10 & 0.3 & 0.2 & 0.5 & 20\\
+\hline
+11 & 0.4 & 0.2 & 0.4 & 20\\
+\hline
+12 & 0.5 & 0.2 & 0.3 & 20\\
+\hline
+13 & 0.3 & 0.2 & 0.5 & 20\\
+\hline
+14 & 0.3 & 0.3 & 0.4 & 20\\
+\hline
+15 & 0.3 & 0.4 & 0.3 & 20\\
+\hline
+16 & 0.3 & 0.5 & 0.2 & 20\\
+\hline
+17 & 0.3 & 0.4 & 0.3 & 20\\
+\hline
+18 & 0.3 & 0.3 & 0.4 & 20\\
+\hline
+19 & 0.6 & 0.3 & 0.1 & 20\\
+\hline
+20 & 0.7 & 0.2 & 0.1 & 20\\
+\hline
+21 & 0.8 & 0.1 & 0.1 & 20\\
+\hline
+22 & 0.5 & 0.3 & 0.2 & 10\\
+\hline
+23 & 0.5 & 0.3 & 0.2 & 15\\
+\hline
+24 & 0.5 & 0.3 & 0.2 & 20\\
+\hline
 \end{tabular}
 \label{tabelParameter}
 \end{table}
@@ -383,69 +413,146 @@ Hasil simulasi akan diberikan pada gambar \ref{grafik1}, \ref{grafik2}, \ref{gra
 	\begin{figure} [H]
 	\centering  
 	\includegraphics[width=10cm, height=6cm]{grafik1} 
-		\caption[Hasil dari simulasi]{Hasil dari simulasi 1}
+		\caption[Hasil dari simulasi 1]{Hasil dari simulasi 1}
 	\label{grafik1} 
 \end{figure}
 
 	\begin{figure} [H]
 	\centering  
 	\includegraphics[width=10cm, height=6cm]{grafik2} 
-		\caption[Hasil dari simulasi]{Hasil dari simulasi 2}
+		\caption[Hasil dari simulasi 2]{Hasil dari simulasi 2}
 	\label{grafik2} 
 \end{figure}
 
 	\begin{figure} [H]
 	\centering  
 	\includegraphics[width=10cm, height=6cm]{grafik3} 
-		\caption[Hasil dari simulasi]{Hasil dari simulasi 3}
+		\caption[Hasil dari simulasi 3]{Hasil dari simulasi 3}
 	\label{grafik3} 
 \end{figure}
 
-Dapat dilihat pada gambar \ref{grafik1}, \ref{grafik2} dan \ref{grafik3} menunjukkan bahwa semakin besar pengaruh tetangga maka pertumbuhan wirausaha semakin melambat hal ini dapat dibuktikan pada jumlah wirausaha \textit{est\_bm} yang menurun dari tahun pertama sampai tahun ketiga.
+Analisis hasil pada simulasi 1,2 dan 3 yaitu pada gambar \ref{grafik1}, \ref{grafik2} dan \ref{grafik3} menunjukkan bahwa semakin besar pengaruh tetangga maka pertumbuhan wirausaha semakin melambat hal ini dapat dibuktikan pada jumlah wirausaha \textit{est\_bm} yang menurun dari tahun pertama sampai tahun ketiga.
 
 	\begin{figure} [H]
 	\centering  
 	\includegraphics[width=10cm, height=6cm]{grafik4} 
-		\caption[Hasil dari simulasi]{Hasil dari simulasi 4}
+		\caption[Hasil dari simulasi 4]{Hasil dari simulasi 4}
 	\label{grafik4} 
 \end{figure}
 
 	\begin{figure} [H]
 	\centering  
 	\includegraphics[width=10cm, height=6cm]{grafik5} 
-		\caption[Hasil dari simulasi]{Hasil dari simulasi 5}
+		\caption[Hasil dari simulasi 5]{Hasil dari simulasi 5}
 	\label{grafik5} 
 \end{figure}
 
 	\begin{figure} [H]
 	\centering  
 	\includegraphics[width=10cm, height=6cm]{grafik6} 
-		\caption[Hasil dari simulasi]{Hasil dari simulasi 6}
+		\caption[Hasil dari simulasi 6]{Hasil dari simulasi 6}
 	\label{grafik6} 
 \end{figure}
 
-Dapat dilihat pada gambar \ref{grafik4}, \ref{grafik5} dan \ref{grafik6} menunjukkan bahwa wirausaha \textit{new\_bm} dan \textit{est\_bm} berbanding terbalik dengan nilai \textit{threshold}.
+Analisis hasil pada simulasi 4,5 dan 6 yaitu pada gambar \ref{grafik4}, \ref{grafik5} dan \ref{grafik6} menunjukkan bahwa wirausaha \textit{new\_bm} dan \textit{est\_bm} berbanding terbalik dengan nilai \textit{threshold}.
 
 	\begin{figure} [H]
 	\centering  
 	\includegraphics[width=10cm, height=6cm]{grafik7} 
-		\caption[Hasil dari simulasi]{Hasil dari simulasi 7}
+		\caption[Hasil dari simulasi 7]{Hasil dari simulasi 7}
 	\label{grafik7} 
 \end{figure}
 
 	\begin{figure} [H]
 	\centering  
 	\includegraphics[width=10cm, height=6cm]{grafik8} 
-		\caption[Hasil dari simulasi]{Hasil dari simulasi 8}
+		\caption[Hasil dari simulasi 8]{Hasil dari simulasi 8}
 	\label{grafik8} 
 \end{figure}
 
 	\begin{figure} [H]
 	\centering  
 	\includegraphics[width=10cm, height=6cm]{grafik9} 
-		\caption[Hasil dari simulasi]{Hasil dari simulasi 9}
+		\caption[Hasil dari simulasi 9]{Hasil dari simulasi 9}
 	\label{grafik9} 
 \end{figure}
 
-Dapat dilihat pada gambar \ref{grafik7}, \ref{grafik8} dan \ref{grafik9} menunjukkan bahwa semakin besar faktor publik maka pertumbuhan wirausaha semakin melambat hal ini dapat dilihat dari menurunnya jumlah wirausaha \textit{new\_bm}, wirausaha \textit{nascent} dan wirausaha \textit{est\_bm}.
+Analisis hasil pada simulasi 7,8 dan 9 yaitu pada gambar \ref{grafik7}, \ref{grafik8} dan \ref{grafik9} menunjukkan bahwa semakin besar faktor publik maka pertumbuhan wirausaha semakin melambat hal ini dapat dilihat dari menurunnya jumlah wirausaha \textit{new\_bm}, wirausaha \textit{nascent} dan wirausaha \textit{est\_bm}.
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=10cm, height=6cm]{grafik10} 
+		\caption[Hasil dari simulasi 10]{Hasil dari simulasi 10}
+	\label{grafik10} 
+\end{figure}
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=10cm, height=6cm]{grafik11} 
+		\caption[Hasil dari simulasi 11]{Hasil dari simulasi 11}
+	\label{grafik11} 
+\end{figure}
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=10cm, height=6cm]{grafik12} 
+		\caption[Hasil dari simulasi 12]{Hasil dari simulasi 12}
+	\label{grafik12} 
+\end{figure}
+
+Analisis hasil pada simulasi 10,11 dan 12 yaitu pada gambar \ref{grafik10}, \ref{grafik11} dan \ref{grafik12} menunjukkan bahwa semakin besar pengaruh kondisi internal wirausahawan dan semakin menurunnya pengaruh kondisi publik, pertumbuhan wirausaha akan semakin meningkat. Hal ini dapat dilihat dari simulasi 10,11 dan 12 jumlah wirausahawan pada level new\_bm, nascent dan est\_bm menaik hal ini berarti banyak wirausahawan yang sudah berhasil dalam menjalankan usahanya.
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=10cm, height=6cm]{grafik13} 
+		\caption[Hasil dari simulasi 13]{Hasil dari simulasi 13}
+	\label{grafik13} 
+\end{figure}
+Untuk hasil simulasi 13 sampai 18 grafiknya sama yaitu gambar \ref{grafik13}. Hal ini menunjukkan bahwa walaupun nilai kondisi tetangga dan kondisi publik diubah, hal ini tidak berpengaruh pada pertumbuhan wirausaha. 
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=10cm, height=6cm]{grafik19} 
+		\caption[Hasil dari simulasi 19]{Hasil dari simulasi 19}
+	\label{grafik19} 
+\end{figure}
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=10cm, height=6cm]{grafik20} 
+		\caption[Hasil dari simulasi 20]{Hasil dari simulasi 20}
+	\label{grafik20} 
+\end{figure}
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=10cm, height=6cm]{grafik21} 
+		\caption[Hasil dari simulasi 21]{Hasil dari simulasi 21}
+	\label{grafik21} 
+\end{figure}
+
+Analisis hasil pada simulasi 19,20 dan 21 yaitu pada gambar \ref{grafik19}, \ref{grafik20} dan \ref{grafik21} menunjukkan bahwa semakin besar pengaruh kondisi internal wirausahawan dan semakin kecil pengaruh kondisi tetangga, pertumbuhan wirausaha semakin meningkat. Hal ini dapat dilihat bahwa jumlah wirausahawan pada level new\_bm dan est\_bm meningkat.
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=10cm, height=6cm]{grafik22} 
+		\caption[Hasil dari simulasi 22]{Hasil dari simulasi 22}
+	\label{grafik22} 
+\end{figure}
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=10cm, height=6cm]{grafik23} 
+		\caption[Hasil dari simulasi 23]{Hasil dari simulasi 23}
+	\label{grafik23} 
+\end{figure}
+
+	\begin{figure} [H]
+	\centering  
+	\includegraphics[width=10cm, height=6cm]{grafik24} 
+		\caption[Hasil dari simulasi 24]{Hasil dari simulasi 24}
+	\label{grafik24} 
+\end{figure}
+
+Analisis hasil pada simulasi 22,23 dan 24 yaitu pada gambar \ref{grafik22}, \ref{grafik23} dan \ref{grafik24} menunjukkan bahwa semakin besar pengaruh nilai ambang maka semakin menghambat pertumbuhan wirausaha. Hal ini dapat dilihat bahwa jumlah wirausahawan pada level new\_bm dan est\_bm menurun.
 %wirausaha \textit{potential} yang menjadi wirausaha \textit{nascent} menurun, hal ini dibuktikan dengan menurunnya jumlah wirausaha \textit{nascent} dan meningkatnya jumlah wirausaha \textit{potential}. Tetapi semakin banyak jumlah wirausaha \textit{nascent} yang menjadi wirausaha \textit{new_bm}, hal ini dibuktikan dengan meningkatnya jumlah wirausaha \textit{new_bm} dari tahun 1 sampai tahun ketiga. Wirausaha \textit{est_bm} jumlahnya juga menurun.
