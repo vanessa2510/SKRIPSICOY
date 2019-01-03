@@ -116,7 +116,7 @@ public class CA {
 
     double getIndex(int i, CA model, double[] composition) {
         double hasil = composition[0] * model.E[i].point + composition[1] * this.getNeighborIndex(model, i) + composition[2] * this.pub.getPublicIdx();
-//        System.out.println("total hasil : " + hasil);
+//        System.out.println("total hasil "+(i+1)+": " + hasil);
         return hasil;
     }
 

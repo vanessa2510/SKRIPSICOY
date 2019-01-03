@@ -18,6 +18,18 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
      */
     double[] bobotPF;
     PublicFactor pf;
+    double isiNilaiKK = 0.0;
+    double isiNilaiIK = 0.0;
+    double isiNilaiKPE = 0.0;
+    double isiNilaiKPP = 0.0;
+    double isiNilaiKP = 0.0;
+    double isiNilaiPSS = 0.0;
+    double isiNilaiPS = 0.0;
+    double isiNilaiTP = 0.0;
+    double isiNilaiDP = 0.0;
+    double isiNilaiIFA = 0.0;
+    double isiNilaiNSB = 0.0;
+    double isiNilaiPP = 0.0;
 
     public TampilanKondisiEksternal() {
         initComponents();
@@ -75,6 +87,9 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         nilaiKeuanganKewirausahaan = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,27 +108,79 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
         jLabel7.setText("Infrastruktur Fisik dan Akses Layanan :");
 
+        nilaiPP.setText("0");
+        nilaiPP.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiPPInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
         nilaiPP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nilaiPPActionPerformed(evt);
             }
         });
+        nilaiPP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                nilaiPPKeyReleased(evt);
+            }
+        });
 
+        nilaiDP.setText("0");
+        nilaiDP.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiDPInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
         nilaiDP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nilaiDPActionPerformed(evt);
             }
         });
+        nilaiDP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                nilaiDPKeyReleased(evt);
+            }
+        });
 
+        nilaiNSB.setText("0");
+        nilaiNSB.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiNSBInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
         nilaiNSB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nilaiNSBActionPerformed(evt);
             }
         });
+        nilaiNSB.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                nilaiNSBKeyReleased(evt);
+            }
+        });
 
+        nilaiIFA.setText("0");
+        nilaiIFA.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiIFAInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
         nilaiIFA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nilaiIFAActionPerformed(evt);
+            }
+        });
+        nilaiIFA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                nilaiIFAKeyReleased(evt);
             }
         });
 
@@ -146,9 +213,22 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
         jLabel12.setText("Keterbukaan Pasar : ");
 
+        nilaiKeterbukaanPasar.setText("0");
+        nilaiKeterbukaanPasar.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiKeterbukaanPasarInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
         nilaiKeterbukaanPasar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nilaiKeterbukaanPasarActionPerformed(evt);
+            }
+        });
+        nilaiKeterbukaanPasar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                nilaiKeterbukaanPasarKeyReleased(evt);
             }
         });
 
@@ -156,9 +236,22 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
         jLabel15.setText("Infrastruktur Komersial dan Legal : ");
 
+        nilaiInfrastrukturKomersial.setText("0");
+        nilaiInfrastrukturKomersial.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiInfrastrukturKomersialInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
         nilaiInfrastrukturKomersial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nilaiInfrastrukturKomersialActionPerformed(evt);
+            }
+        });
+        nilaiInfrastrukturKomersial.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                nilaiInfrastrukturKomersialKeyReleased(evt);
             }
         });
 
@@ -166,17 +259,58 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
         jLabel17.setText("Transfer Penelitian dan Pengembangan : ");
 
+        nilaiTransferPenelitian.setText("0");
+        nilaiTransferPenelitian.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiTransferPenelitianInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
+        nilaiTransferPenelitian.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                nilaiTransferPenelitianKeyReleased(evt);
+            }
+        });
+
         jLabel18.setText("%");
 
         jLabel19.setText("Pendidikan Kewirausahaan pada SMK, Profesional dan Universitas : ");
+
+        nilaiPendidikanSMK.setText("0");
+        nilaiPendidikanSMK.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiPendidikanSMKInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
+        nilaiPendidikanSMK.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                nilaiPendidikanSMKKeyReleased(evt);
+            }
+        });
 
         jLabel20.setText("%");
 
         jLabel21.setText("Pendidikan Kewirausahaan pada SD dan SMP :");
 
+        nilaiPendidikanSDSMP.setText("0");
+        nilaiPendidikanSDSMP.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiPendidikanSDSMPInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
         nilaiPendidikanSDSMP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nilaiPendidikanSDSMPActionPerformed(evt);
+            }
+        });
+        nilaiPendidikanSDSMP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                nilaiPendidikanSDSMPKeyReleased(evt);
             }
         });
 
@@ -184,13 +318,40 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
         jLabel23.setText("Kebijakan Pemerintah terkait Pajak :");
 
+        nilaiKPPajak.setText("0");
+        nilaiKPPajak.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiKPPajakInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
+        nilaiKPPajak.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                nilaiKPPajakKeyReleased(evt);
+            }
+        });
+
         jLabel24.setText("%");
 
         jLabel25.setText("Kebijakan Pemerintah terkait Ekonomi :");
 
+        nilaiKPEkonomi.setText("0");
+        nilaiKPEkonomi.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiKPEkonomiInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
         nilaiKPEkonomi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nilaiKPEkonomiActionPerformed(evt);
+            }
+        });
+        nilaiKPEkonomi.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                nilaiKPEkonomiKeyReleased(evt);
             }
         });
 
@@ -198,7 +359,31 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
 
         jLabel27.setText("Keuangan terkait Kewirausahaan :");
 
+        nilaiKeuanganKewirausahaan.setText("0");
+        nilaiKeuanganKewirausahaan.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                nilaiKeuanganKewirausahaanInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
+        nilaiKeuanganKewirausahaan.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                nilaiKeuanganKewirausahaanKeyReleased(evt);
+            }
+        });
+
         jLabel28.setText("%");
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel29.setText("Total :");
+
+        jLabel30.setText("%");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -215,47 +400,47 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
                                 .addGap(162, 162, 162)
                                 .addComponent(jLabel1))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(8, 8, 8)
-                                        .addComponent(backButton))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel27)
-                                            .addComponent(jLabel25)
-                                            .addComponent(jLabel23)
-                                            .addComponent(jLabel4))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(nilaiPP)
-                                            .addComponent(nilaiKPPajak)
-                                            .addComponent(nilaiKPEkonomi)
-                                            .addComponent(nilaiKeuanganKewirausahaan, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel21)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(nilaiPendidikanSDSMP, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel19)
-                                            .addComponent(jLabel17)
-                                            .addComponent(jLabel15)
-                                            .addComponent(jLabel5)
-                                            .addComponent(jLabel12)
-                                            .addComponent(jLabel7)
-                                            .addComponent(jLabel6))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(nilaiNSB)
-                                            .addComponent(nilaiIFA)
-                                            .addComponent(nilaiKeterbukaanPasar)
-                                            .addComponent(nilaiDP)
-                                            .addComponent(nilaiInfrastrukturKomersial)
-                                            .addComponent(nilaiTransferPenelitian)
-                                            .addComponent(nilaiPendidikanSMK, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGap(8, 8, 8)
+                                            .addComponent(backButton))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabel27)
+                                                .addComponent(jLabel25)
+                                                .addComponent(jLabel23)
+                                                .addComponent(jLabel4))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(nilaiPP)
+                                                .addComponent(nilaiKPPajak)
+                                                .addComponent(nilaiKPEkonomi)
+                                                .addComponent(nilaiKeuanganKewirausahaan, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jLabel21)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(nilaiPendidikanSDSMP, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabel19)
+                                                .addComponent(jLabel17)
+                                                .addComponent(jLabel15)
+                                                .addComponent(jLabel5)
+                                                .addComponent(jLabel12)
+                                                .addComponent(jLabel7))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(nilaiNSB)
+                                                .addComponent(nilaiIFA)
+                                                .addComponent(nilaiKeterbukaanPasar)
+                                                .addComponent(nilaiDP)
+                                                .addComponent(nilaiInfrastrukturKomersial)
+                                                .addComponent(nilaiTransferPenelitian)
+                                                .addComponent(nilaiPendidikanSMK, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))))
+                                    .addComponent(jLabel6))
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel11)
                                     .addComponent(jLabel13)
                                     .addComponent(jLabel9)
@@ -267,11 +452,20 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
                                     .addComponent(jLabel26)
                                     .addComponent(jLabel28)
                                     .addComponent(nextButton)
-                                    .addComponent(jLabel20)))))
+                                    .addComponent(jLabel20)
+                                    .addComponent(jLabel10)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel2)))
                 .addContainerGap(40, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel30)
+                .addGap(206, 206, 206))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -337,18 +531,27 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(nilaiIFA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 15, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLabel14)
+                            .addGap(18, 18, 18)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel30)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel29)))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(46, 46, 46)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(backButton)
+                                .addComponent(nextButton))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
                             .addComponent(nilaiNSB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel10))
-                        .addGap(29, 29, 29)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(backButton)
-                            .addComponent(nextButton))))
+                        .addGap(69, 69, 69)))
                 .addGap(12, 12, 12))
         );
 
@@ -401,26 +604,36 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
     private void nilaiIFAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiIFAActionPerformed
 
     }//GEN-LAST:event_nilaiIFAActionPerformed
-
+    public void setLabel() {
+        double[] arr = new double[12];
+        arr[0] = this.nilaiKeuanganKewirausahaan.getText().isEmpty() ? 0: Double.parseDouble(this.nilaiKeuanganKewirausahaan.getText());
+        arr[1] = this.nilaiKPEkonomi.getText().isEmpty() ? 0: Double.parseDouble(this.nilaiKPEkonomi.getText());
+        arr[2] = this.nilaiKPPajak.getText().isEmpty() ? 0: Double.parseDouble(this.nilaiKPPajak.getText());
+        arr[3] = this.nilaiPP.getText().isEmpty() ? 0: Double.parseDouble(this.nilaiPP.getText());
+        arr[4] = this.nilaiPendidikanSDSMP.getText().isEmpty() ? 0: Double.parseDouble(this.nilaiPendidikanSDSMP.getText());
+        arr[5] = this.nilaiPendidikanSMK.getText().isEmpty() ? 0: Double.parseDouble(this.nilaiPendidikanSMK.getText());
+        arr[6] = this.nilaiTransferPenelitian.getText().isEmpty() ? 0: Double.parseDouble(this.nilaiTransferPenelitian.getText());
+        arr[7] = this.nilaiInfrastrukturKomersial.getText().isEmpty() ? 0: Double.parseDouble(this.nilaiInfrastrukturKomersial.getText());
+        arr[8] = this.nilaiDP.getText().isEmpty() ? 0: Double.parseDouble(this.nilaiDP.getText());
+        arr[9] = this.nilaiKeterbukaanPasar.getText().isEmpty() ? 0: Double.parseDouble(this.nilaiKeterbukaanPasar.getText());
+        arr[10] = this.nilaiIFA.getText().isEmpty() ? 0: Double.parseDouble(this.nilaiIFA.getText());
+        arr[11] = this.nilaiNSB.getText().isEmpty() ? 0: Double.parseDouble(this.nilaiNSB.getText());
+        double total = 0;
+        for (int i = 0; i < arr.length; i++) {
+            total += arr[i];
+        }
+        this.jTextField1.setText(Double.toString(total));
+        
+    }
     private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
         boolean checker = true;
 //        String isiNilaiDP;
 //        String isiNilaiIFA;
 //        String isiNilaiNSB;
 //        String isiNilaiPP;
-        double isiNilaiKK = 0.0;
-        double isiNilaiIK = 0.0;
-        double isiNilaiKPE = 0.0;
-        double isiNilaiKPP = 0.0;
-        double isiNilaiKP = 0.0;
-        double isiNilaiPSS = 0.0;
-        double isiNilaiPS = 0.0;
-        double isiNilaiTP = 0.0;
+
         double[] kumpulanNilaiPF = new double[12];
-        double isiNilaiDP = 0.0;
-        double isiNilaiIFA = 0.0;
-        double isiNilaiNSB = 0.0;
-        double isiNilaiPP = 0.0;
+
         if (nilaiDP.getText().equals("")) {
             InputDataHandler.inputDataEksternal("dinamikaPasar", null);
             checker = false;
@@ -534,12 +747,12 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
                 }
             }
         }
-        int totalNilai=0;
+        int totalNilai = 0;
         for (int i = 0; i < kumpulanNilaiPF.length; i++) {
-            totalNilai+=kumpulanNilaiPF[i]*100;
+            totalNilai += kumpulanNilaiPF[i] * 100;
         }
-        
-        if ( totalNilai != 100) {
+
+        if (totalNilai != 100) {
             JOptionPane.showMessageDialog(null, "The sum of text fields must 100%!");
             checker = false;
         }
@@ -568,6 +781,130 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
     private void nilaiKPEkonomiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nilaiKPEkonomiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nilaiKPEkonomiActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void nilaiKeuanganKewirausahaanInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nilaiKeuanganKewirausahaanInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nilaiKeuanganKewirausahaanInputMethodTextChanged
+
+    private void nilaiKPEkonomiInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nilaiKPEkonomiInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nilaiKPEkonomiInputMethodTextChanged
+
+    private void nilaiKPPajakInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nilaiKPPajakInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nilaiKPPajakInputMethodTextChanged
+
+    private void nilaiPPInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nilaiPPInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nilaiPPInputMethodTextChanged
+
+    private void nilaiPendidikanSDSMPInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nilaiPendidikanSDSMPInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nilaiPendidikanSDSMPInputMethodTextChanged
+
+    private void nilaiPendidikanSMKInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nilaiPendidikanSMKInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nilaiPendidikanSMKInputMethodTextChanged
+
+    private void nilaiTransferPenelitianInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nilaiTransferPenelitianInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nilaiTransferPenelitianInputMethodTextChanged
+
+    private void nilaiInfrastrukturKomersialInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nilaiInfrastrukturKomersialInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nilaiInfrastrukturKomersialInputMethodTextChanged
+
+    private void nilaiDPInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nilaiDPInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nilaiDPInputMethodTextChanged
+
+    private void nilaiKeterbukaanPasarInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nilaiKeterbukaanPasarInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nilaiKeterbukaanPasarInputMethodTextChanged
+
+    private void nilaiIFAInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nilaiIFAInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nilaiIFAInputMethodTextChanged
+
+    private void nilaiNSBInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nilaiNSBInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nilaiNSBInputMethodTextChanged
+
+    private void nilaiKeuanganKewirausahaanKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nilaiKeuanganKewirausahaanKeyReleased
+        // TODO add your handling code here:
+        this.setLabel();
+    }//GEN-LAST:event_nilaiKeuanganKewirausahaanKeyReleased
+
+    private void nilaiKPEkonomiKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nilaiKPEkonomiKeyReleased
+        // TODO add your handling code here:
+        this.setLabel();
+    }//GEN-LAST:event_nilaiKPEkonomiKeyReleased
+
+    private void nilaiKPPajakKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nilaiKPPajakKeyReleased
+        // TODO add your handling code here:
+        this.setLabel();
+    }//GEN-LAST:event_nilaiKPPajakKeyReleased
+
+    private void nilaiPPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nilaiPPKeyReleased
+        // TODO add your handling code here:
+        this.setLabel();
+    }//GEN-LAST:event_nilaiPPKeyReleased
+
+    private void nilaiPendidikanSDSMPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nilaiPendidikanSDSMPKeyReleased
+        // TODO add your handling code here:
+        this.setLabel();
+    }//GEN-LAST:event_nilaiPendidikanSDSMPKeyReleased
+
+    private void nilaiPendidikanSMKKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nilaiPendidikanSMKKeyReleased
+        // TODO add your handling code here:
+        this.setLabel();
+    }//GEN-LAST:event_nilaiPendidikanSMKKeyReleased
+
+    private void nilaiTransferPenelitianKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nilaiTransferPenelitianKeyReleased
+        // TODO add your handling code here:
+        this.setLabel();
+    }//GEN-LAST:event_nilaiTransferPenelitianKeyReleased
+
+    private void nilaiInfrastrukturKomersialKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nilaiInfrastrukturKomersialKeyReleased
+        // TODO add your handling code here:
+        this.setLabel();
+    }//GEN-LAST:event_nilaiInfrastrukturKomersialKeyReleased
+
+    private void nilaiDPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nilaiDPKeyReleased
+        // TODO add your handling code here:
+        this.setLabel();
+    }//GEN-LAST:event_nilaiDPKeyReleased
+
+    private void nilaiKeterbukaanPasarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nilaiKeterbukaanPasarKeyReleased
+        // TODO add your handling code here:
+        this.setLabel();
+    }//GEN-LAST:event_nilaiKeterbukaanPasarKeyReleased
+
+    private void nilaiIFAKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nilaiIFAKeyReleased
+        // TODO add your handling code here:
+        this.setLabel();
+    }//GEN-LAST:event_nilaiIFAKeyReleased
+
+    private void nilaiNSBKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nilaiNSBKeyReleased
+        // TODO add your handling code here:
+        this.setLabel();
+    }//GEN-LAST:event_nilaiNSBKeyReleased
 
     /**
      * @param args the command line arguments
@@ -627,7 +964,9 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -635,6 +974,7 @@ public class TampilanKondisiEksternal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     public javax.swing.JButton nextButton;
     private javax.swing.JTextField nilaiDP;
     private javax.swing.JTextField nilaiIFA;
